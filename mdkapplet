@@ -186,8 +186,8 @@ sub silentCheck {
 sub cronUpdate {
     my ($to) = shift;
     $timeout = Glib::Timeout->add(60*60*1000, sub {
-				      checkUpdates
-				      1;
+				      checkUpdates()
+					1;
 				  });
 }
 sub checkUpdates {
