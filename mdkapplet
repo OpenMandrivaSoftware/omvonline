@@ -132,6 +132,7 @@ if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') };
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet";
 
+checkConfig();
 checkUpdates();
 cronUpdate();
 
@@ -285,7 +286,10 @@ sub is_running {
     } `ps -o '%P %p %c' -u $ENV{USER}`;
 }
 sub cronUpdate {
-    my ($to) = shift;
+    Glib::Timeout->add(5*1000, sub {
+	checkConfig();
+	1;
+    });
     $timeout = Glib::Timeout->add(3*60*60*1000, sub {
 				      checkUpdates();
 				      1;
@@ -307,16 +311,19 @@ sub setLastTime {
     my $date = getTime() ;
     setVar($localfile, 'LASTCHECK', $date);
 }
-sub checkUpdates {
+sub checkConfig {
     if (!isNetwork()) {
 	logIt(N("Checking Network: seems disabled\n"));
 	go2State('disconnected')
     } elsif (!-e $conffile) {
 	logIt(N("Checking config file: Not present\n"));
 	go2State('noconfig')
-    } else {
-	silentCheck();
+    } elsif (member($state_global, qw(disconnected noconfig))) {
+	silentCheck(); #- state has changed, update
     }
+}
+sub checkUpdates {
+    silentCheck() unless member($state_global, qw(disconnected noconfig));
 }
 sub go2State {
     my $state = shift;
