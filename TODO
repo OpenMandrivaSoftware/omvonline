@@ -1,0 +1,38 @@
+$Id$
+Things to do on mdkonline
+-------------------------------------------------------------------------------
+
+ * mdkonline, mdkupdate:
+   ajouter de l'animation graphique pour l'attente (pingouin animé tournant
+   sur lui-même, dansant)
+ 
+ * mdkapplet: possibilité de lancer mdkapplet depuis le menu système
+
+ * mdkapplet: l'applet n'apparait qu'en cas de non config, ou d'alerte.
+   si tout va bien, pas besoin de la voir.
+
+ * mdkapplet: affiche en popup le nombre de mises à jour à faire.
+
+ * mdkupdate: au lancement, vérifier d'abord s'il y a quelquechose à faire,
+   avant de lancer tout le reste (urpmi, etc.)
+
+ * mdkupdate: lancé toutes les 2 heures +/- sel ?
+
+
+
+Pour version pro:
+
+ * changer le dialogue client <-> serveur.
+   le client demande au serveur les tâches (parmi celles préétablies) qu'il
+   a à faire, les exécute, et renvoie le résultat au serveur.
+
+   les tâches peuvent être : mettre à jour (cas actuel), installer,
+   désinstaller, modifier fichier de config, exécuter un programme, traiter
+   un paquet de données, etc.
+
+ * passer en appels SOAP ou REST.
+
+
+
+-------------------------------------------------------------------------------
+$Id$
