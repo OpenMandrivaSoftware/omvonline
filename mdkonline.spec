@@ -15,7 +15,7 @@ Source3:	%{name}48.png.bz2
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
-Requires:	popt >= 1.6, 
+Requires:	popt >= 1.6, perl-libwww-perl 
 #Requires: expect
 #Requires: openssh-clients
 BuildRoot:	%{_tmppath}/%{name}-buildroot
