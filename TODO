@@ -6,61 +6,59 @@ Things to do on mdkonline
    force package update if available, before any other update,
    then restart update process (mdkapplet/mdkupdate)
 
- * mdkapplet:
-   several releases of the same package may be installed along each other
-   (seen for libaspell15, ~december); check that at least the most up to
-   date available package is installed.
-   Should it be handled by rpm instead?
+ * kernel updates:
+   applet should notify if kernel security updates are available, and give
+   an option to install it (and to restart host, then).
 
- * mdkonline, mdkupdate:
-   add animated fluffy tux for waiting during computations?
+ * pro/v2: move to SOAP/REST queries.
+   Client queries for higher level tasks.
 
+ * v2: move auth/reg calls to my (remove expert/online calls)
+ 
  * mdkapplet:
-   a launch system menu item should appear in System > ?
+   
+   * several releases of the same package may be installed along each other
+     (seen for libaspell15, ~december); check that at least the most up to
+     date available package is installed.
+     Should it be handled by rpm instead?
 
- * mdkapplet:
-   should appear only for notification (no config, config problem, available
-   updates), not when everything is fine?
+   * a launch system menu item should appear in System > ?
+     or the applet should be always started as a service, not being
+     necessary visible all the time (not configure, up to date)
 
- * mdkapplet:
-   when minimizing applet, minimize to icon, not to task bar
+   * > applet icon should appear only for notifications:
+     no config, config problem, available updates.
+     when minimizing applet, minimize to icon, not to task bar
 
- * mdkapplet:
-   applet popup display the number of available updates (requires full diff
-   check, changes silentCheck() )
+   * applet should display the number of available updates, per type
+     (security, bug, update, kernel) ; requires full diff check.
+
+   * configuration: should allow to supersed env vars such as PROXY_*,
+     should include online help
+
+ * mdkonline:
+   
+   * add animated fluffy tux for waiting periods.
+
+   * should separate host registration and applet configuration
+
+   * configuration should allow to change mdkupdate cron
+
+   * should allow to supersede env vars such as PROXY_*
 
  * mdkupdate:
-   at start, first query the server to check if anything should be done;
-   if nothing, don't run urpmi, just upload the config.
-   if not in command-line mode, an alert box should inform that no update
-   is available.
+ 
+   * at start, first query the server to check if anything should be done;
+     if nothing, do not run urpmi, just upload the config.
+     if not in command-line mode, an alert box should inform that no update
+     is available.
 
- * mdkupdate:
-   should exit, if another mdkupdate is running (done),
-   or if the urpmi db is locked.
+   * (command line, --auto)
+     when failing, informative feedback should be displayed: not authenticated,
+     not subscribed, not activated, st like that; system name, account name,
+     steps.
 
- * mdkupdate:
-   - started every 2 hours +/- salt ?
-   - should compare system mandrake-release with the one on the server to detect if system was updated without starting mdkonline wizard.
-
- * mdkupdate --auto 
-   when failing, informative feedback should be displayed (not authenticated,
-   not subscribed, not activated, st like that) (command line)
-
- * mdkupdate --auto
-   MAILTO to the email of the user instead of root.
-   output the system name and account name.
-
- * for pro version (v2)
-   changer server/client protocol:
-     - move to SOAP or REST,
-     - client queries server for higher-level tasks (from a predefined list)
-       (package update, install, uninstall, config setting, data processing)
-
-
- * move authentication calls to new customer db (remove expert/online calls
-   for that purpose).
-
+   * MAILTO to the email of the user instead of root, if possible.
 
 -------------------------------------------------------------------------------
 $Id$
