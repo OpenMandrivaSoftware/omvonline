@@ -1,6 +1,6 @@
-%define version 1.1
+%define version 1.2
 %define name mdkonline
-%define release 32mdk
+%define release 0.1mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -116,6 +116,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 
 %changelog
+* Wed Apr  6 2005 Daouda LO <daouda@mandrakesoft.com> 1.2-0.1mdk
+- better error handling and log messages when server is down or broken
+- po updates
+
 * Thu Mar 24 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-32mdk
 - best browwser is now handled by /usr/bin/www-browser (#14847)
 
