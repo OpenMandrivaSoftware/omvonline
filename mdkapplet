@@ -95,15 +95,15 @@ my %state = (
 			  changes => [ 'okay', 'busy', 'critical', 'error' ],
 			  menu => [ 'configureApplet', 'weblink' ],
 			  tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
-			 }
+			 },
 	     notsupported => {
 			colour => [ 'disabled' ],
 			changes => [ 'okay', 'busy', 'critical', 'error' ],
 			menu => [ 'weblink' ],
 			tt => [ N_("Release not supported (too old release, or development release)") ]
-		}
-																    
+			}
 	    );
+
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
