@@ -66,13 +66,14 @@ my %stage = (
 	     1 => sub { $o->{nb}->next_page() }, 
 	     2 => sub { testPasswd() },
 	     3 => sub { sendConfig() },
-	     4 => sub { setConf() },
+	     4 => sub { setConf() }
 	    );
 $o->{actions} = {
 		 Next => sub {
 		     $p = $o->{nb}->get_current_page;
 		     $stage{$p}->();
-		     $p <= 0 and $o->{Prev}->set_sensitive(1)
+		     $p <= 0 and $o->{Prev}->set_sensitive(1);
+		     $p == 4 and mainQuit()
 		 },
 		 SkipWiz => sub {
 		     mainQuit()
@@ -151,7 +152,7 @@ gtkappend_page($o->{nb},
 					  ))));
 
 init(1);
-$o->{country}->set_popdown_strings(sort(getCountry()));
+$o->{country}->set_popdown_strings(sort(getAllCountries()));
 $o->{mw}{rwindow}->show_all;
 
 Gtk2->main;
@@ -197,9 +198,9 @@ sub checkErrors {
 sub sendConfig {
     # When we arrive here, we're sure the login/passwd is correct
     # print STDERR "Sending config\n";
-    my $result = -1;
-    my ($login, $passwd, $boxname, $key, $mirror);
-    my $w = wait_msg(N("Sending configuration..."));
+    my $result = -1; 
+    my ($login, $boxname, $passwd);
+    $login = $o->{login}->get_text; $boxname = $o->{machine}->get_text; my $passwd = md5_hex($o->{passwd}->get_text);
     reportConfig("/root/$login.$passwd.$boxname.online.log");
     `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$boxname.online.log`;
     # Turn the binary file into a uuencoded ascii file
@@ -214,7 +215,8 @@ sub sendConfig {
     close (FILEOUT);
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
+    my $w = wait_msg(N("Sending configuration..."));
+    my $response = $ua->request(POST 'http://www.mandrakeonline.net/wizard.php',
 
                                 Content_Type => 'form-data',
                                 Content => [submit => "upload_wizard",
@@ -226,8 +228,8 @@ sub sendConfig {
     remove_wait_msg($w);
     if ($response->is_success) {
 	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
-	#print("key is $1\n");
-	$key = $1; 
+	printf("Send Config :\nNEWKEY=%s\nRESPONSE=%s", $1, $response->content);
+	$o->{currentkey} = $1; 
     } else {
 	# pb with the connection ?
 	$result = -1;
@@ -235,16 +237,15 @@ sub sendConfig {
     # if information were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $result) {
 	# go to last page
-	$o->{nb}->set_current_page(4); 
+	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide
     } else {
 	# if incorrect, go/stay on page 4 to retry sending data
 	# pb with the connection ?
 	raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
-	$o->{nb}->set_current_page(4);
     }
 }
 sub setConf {
-    
+    if ($o->{autoup}->get_active) { automatedUpgrades() }
 }
 sub init {
     my $i = shift;
@@ -297,7 +298,7 @@ sub testPasswd () {
     if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
-	my $w = wait_msg($o->{mw}{window}, N("Connecting ...\n")); $w->show;
+	my $w = wait_msg(("Connecting ...\n"));
 	$passwd = md5_hex($passwd); # or md5 () or md5_base64 ()
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
@@ -309,7 +310,7 @@ sub testPasswd () {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
-	    raiseError(N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	    raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
 	    return;
 	}
     } else {
@@ -350,16 +351,28 @@ join '', map { chomp; print FILE "$_\n" }
     header("/etc/modules.conf"), cat_("/etc/modules.conf"),
     header("rpm -qa"), join ('', sort `rpm -qa`),
     header("mandrake version"), cat_('/etc/mandrake-release');
-close(FILE);
+    close(FILE);
     remove_wait_msg($w);
 }
+sub wait_msg {
+    my ($msg, %options) = @_;
+    my $mainw = ugtk2->new('club', grab => 1, if_(exists $options{transient}, transient => $options{transient}));
+    $mainw->{rwindow}->set_position($options{transient} ? 'center_on_parent' : 'center_always') if !$::isEmbedded;
+    my $label = ref($msg) =~ /^Gtk/ ? $msg : Gtk2::Label->new($msg);
+    gtkadd($mainw->{window}, gtkpack__(gtkadd(Gtk2::VBox->new(0, 5), $label, if_(exists $options{widgets}, @{$options{widgets}}))));
+    $label->signal_connect(expose_event => sub { $mainw->{displayed} = 1; 0 });
+    $mainw->sync until $mainw->{displayed};
+    gtkset_mousecursor_wait($mainw->{rwindow}->window);
+    $mainw->flush;
+    $mainw;
+}
+sub remove_wait_msg { $_[0]->destroy }
 sub automatedUpgrades {
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
     my $login = $o->{login}->get_text;
     my $passwd = md5_hex($o->{passwd}->get_text);
-    my $boxname = $o->{machine}->get_text;
+    my $boxname = $o->{machine}->get_text; my $country = getCountry($o->{country}->entry->get_text);
     my $key = $o->{currentkey};
-    my $mirror = $o->{mirror};
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
@@ -367,15 +380,17 @@ PASS=$passwd
 BOX=$boxname
 VER=$r
 CURRENTKEY=$key 
+COUNTRY=$country
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
 if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate --auto; fi
 );
-my $date = chomp_(`date`);
+    my $date = chomp_(`date`);
     output_with_perm "/etc/sysconfig/mdkonline", 644,
     qq(LOGIN=$login
 BOX=$boxname
+COUNTRY=$country
 LASTCHECK=$date
 );
 
