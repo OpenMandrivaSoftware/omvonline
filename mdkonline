@@ -383,7 +383,7 @@ sub step_wizard {
     writ_on_pixmaps($vbox_ident, 'identity', "MandrakeOnline" . " " . N("Authentification"));
     my $label_log = new Gtk2::Label("\n\n" . N("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
-    pack_box_identity($vbox_ident, N("Login:"), $login_user, N("Password:"), $passwd_user, N("Machine name:"), $box_user);
+    pack_box_identity($vbox_ident, N("Login:") . '  ', $login_user, N("Password:") . '   ', $passwd_user, N("Machine name:") . '       ', $box_user);
     set_boxname($box_user) if -e "/root/.mdkupdate";
     $notebook_global->append_page($vbox_ident, new Gtk2::Label("login"));
 
