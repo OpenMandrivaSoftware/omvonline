@@ -130,6 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-13mdk
+- use correct mdkonline version/release to track down useragent connections
 - po updates
 - mdkapplet: decrease timeout for network config check (oblin)
 
