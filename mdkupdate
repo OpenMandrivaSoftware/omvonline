@@ -82,7 +82,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
 			  if ($c2h->{FTP}) { 
 			      # for debugging purpose
-			      $c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
+			      #$c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
 			      addMedia($c2h->{FTP})
 			  }
 			  $scheduled = join(',',@{$c2h->{sched}});
