@@ -108,7 +108,7 @@ $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
-shouldStart();
+shouldStart() or c::_exit(0);
 checkUpdates();
 cronUpdate();
 
@@ -267,7 +267,7 @@ sub displayLogs {
 }
 sub shouldStart() {
     my %p = getVarsFromSh($confpers);
-    $p{AUTOSTART} eq 'FALSE' and mainQuit();
+    my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
 }
 sub setState {
     my $state_type = shift;
