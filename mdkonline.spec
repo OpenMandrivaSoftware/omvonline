@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Wed Apr 28 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-3mdk
-- fix wrong path in cron entry
+- fix wrong path in cron entry (#9547)
 - po updates
 - don't show the window asking for network connection
 
