@@ -9,18 +9,18 @@
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 
-%define version 0.91
+%define version 0.92
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	2mdk
+Release: 	0.1mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakfirsttime >= 0.91-4mdk
+Requires:	drakfirsttime >= 0.92-4mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -30,7 +30,7 @@ The Mandrake Online tool is designed for registered users
 who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
-Since 9.1 MandrakeClub and MandrakeOnline have been merged.
+The mdkupdate daemon allows you to install security updates automatically. 
 
 %prep
 %setup -q
@@ -43,7 +43,7 @@ make prefix=$RPM_BUILD_ROOT install
 
 #symbolic link to drakonline and older path
 mkdir -p %buildroot%_prefix/X11R6/bin/
-ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakclub
+#ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakclub
 ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakonline
 ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
 
@@ -76,13 +76,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/*
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
-#%{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 
 %changelog
+* Fri Oct 17 2003 Daouda LO <daouda@mandrakesoft.com> 0.92-0.1mdk
+- Mandrake Online Resurrection
+- Wizard for club users is still valid but separated (drakclub executable)
+
 * Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-2mdk
 - add urpmi source for club member.
 - remove icon on gnome desktop (handled in mandrake-galaxy)

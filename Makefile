@@ -20,8 +20,8 @@ clean:
 	find . -name '*~' | xargs rm -f
 
 install: all
-#	$(MAKE) -C po $@
-	install -d $(RPM_BUILD_ROOT)/usr/{sbin/,bin,share/icons/{mini,large},share/nautilus/default-desktop}
+	$(MAKE) -C po $@
+	install -d $(RPM_BUILD_ROOT)/usr/{sbin/,bin,share/icons/{mini,large}}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/sbin/
 	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
 #	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
