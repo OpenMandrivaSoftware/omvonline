@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-29 15:47+0200\n"
-"PO-Revision-Date: 2004-09-22 16:05+0300\n"
+"POT-Creation-Date: 2004-09-29 18:14+0200\n"
+"PO-Revision-Date: 2004-09-29 18:23+0300\n"
 "Last-Translator: Ovidiu Constantin <ovidiusoft@gmail.com>\n"
 "Language-Team: Romanian <rtfs-project@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -281,8 +281,8 @@ msgstr "Înapoi"
 
 #: ../mdkonline:90
 #, c-format
-msgid "Skip Wizard"
-msgstr "Fără asistent"
+msgid "Cancel"
+msgstr "Renunţă"
 
 #: ../mdkonline:90
 #, c-format
@@ -311,9 +311,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Creează un cont Mandrakeonline"
 
 #: ../mdkonline:108
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Nu am un cont la Mandrakeonline şi vreau să"
+msgstr "Nu am un cont la Mandrakeonline şi vreau să mă înscriu"
 
 #: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:113 ../mdkonline_tui:144
 #, c-format
@@ -516,27 +516,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Login-ul şi parola trebuie să fie mai mici de 12 caractere\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Caracterele speciale nu sunt permise\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Vă rog completaţi poate câmpurile\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Email-ul nu este valid\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Contul există deja\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -544,19 +544,19 @@ msgid "Problem connecting to server \n"
 msgstr "Am întâmpinat probleme la contactarea serverului \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Bun venit la Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Am deja un cont"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Doresc să mă înscriu"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -566,22 +566,22 @@ msgstr "Vă rog să aşteptaţi"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Creare cont sau autentificare"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Bun venit la Mandrakeonline"
+msgstr "Conectare la situl Mandrakeonline..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "sau"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Parolă greşită"
+msgstr "parolă greşită:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -589,11 +589,14 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Contul Mandrakeonline a fost creat cu succes.\n"
+"Vă rog apăsaţi \"Înainte\" pentru a vă autentifica şi a transmite "
+"configuraţia dumneavoastră\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Ţara:"
+msgstr "Ţara"
 
 #: ../mdkupdate:50
 #, c-format
@@ -635,17 +638,17 @@ msgstr "  --update          -actualizeaza cheile\n"
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
 msgstr ""
+"Nu a fost găsit fişierul %s. Vă rog rulaţi înainte asistentul mdkonline"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr ""
-"Mandrakeonline nu a putut fi contactat, vă rog încercaţi din nou mai târziu"
+msgstr "Mandrakeupdaet nu a putut să contacteze situl, vom încerca din nou."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Nu pot actualiza pachetele de pe mediul mdkupdate.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -653,6 +656,8 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate nu a putut uploada fişierele diff. Trimiteţi un mail la "
+"support [at] mandrakeonline [dot] net"
 
-#~ msgid "Subscribe"
-#~ msgstr "Mă înscriu"
+#~ msgid "Skip Wizard"
+#~ msgstr "Fără asistent"
