@@ -37,6 +37,8 @@ use MIME::Base64 qw(encode_base64);
 use Sys::Hostname;
 use my_gtk qw(:helpers :wrappers :ask);
 
+my $VERSION = '0.17';
+
 $::isStandalone = 1;
 
 my $in = 'interactive'->vnew('su', 'default');
@@ -286,7 +288,7 @@ sub test_passwd () {
 	$passwd = md5_hex ($passwd); # or md5 () or md5_base64 ()
 	
 	my $ua = LWP::UserAgent->new;
-	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+	$ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
 	my $w = $in->wait_message('',_("Connecting ...\n"),1);
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u='.$login.'&p='.$passwd);
 	my $response = $ua->request($request);
@@ -317,6 +319,11 @@ sub send_config {
 #    print STDERR "Sending config\n";
     my $result = -1;
     
+    #- added to allow .mdkupdate.rpms file creation.
+    open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
+    print FILE join ('', sort `rpm -qa`);
+    close FILE;
+
     report_config("/root/$login.$passwd.$box_name.online.log");
     `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
 
@@ -332,7 +339,7 @@ sub send_config {
     close (FILEOUT);
 
     my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
     my $w = $in->wait_message('',"Sending configuration...");
     my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
 
@@ -369,7 +376,7 @@ sub step_wizard {
     writ_on_pixmaps($vbox_welc,"default.png",_("Welcome to MandrakeOnline"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
-    $label_welc->set_justify(left);
+    $label_welc->set_justify('left');
     $vbox_welc->pack_start($label_welc,0,0,1);
     my $hbox_subs= new Gtk::HBox(0,0);
     $hbox_subs->set_uposition(50,300);
@@ -400,7 +407,7 @@ sub step_wizard {
     writ_on_pixmaps($vbox_rev,"default.png",_("Sending your Configuration"),540,100);
     my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
-    $label_rev->set_justify(left);
+    $label_rev->set_justify('left');
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
 
@@ -415,7 +422,7 @@ sub step_wizard {
     my $vbox_oksend= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_oksend,"default.png",_("Finished"),540,100);
     my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"));
-    $label_oksend->set_justify(left);
+    $label_oksend->set_justify('left');
     $vbox_oksend->pack_start($label_oksend,$true ,$true,1);
 
 #automated mode
@@ -451,7 +458,7 @@ sub header { "
 ********************************************************************************";
 	 }
 open (FILE,"> $file") || die "Couldn't open $file : $!"; 
-join '', map { chomp; print FILE "$_\n" }
+map { chomp; print FILE "$_\n" }
     header("scsi"), cat_("/proc/scsi/scsi"),
     header("lsmod"), cat_("/proc/modules"),
     header("cmdline"), cat_("/proc/cmdline"),
@@ -558,9 +565,9 @@ sub pack_box_identity {
     my $Label_wg1=new Gtk::Label($label1);
     my $Label_wg2=new Gtk::Label($label2);
     my $Label_wg3=new Gtk::Label($label3);
-    Gtk::Label::set_justify($Label_wg1,right);
-    Gtk::Label::set_justify($Label_wg2,right);
-    Gtk::Label::set_justify($Label_wg3,right);
+    Gtk::Label::set_justify($Label_wg1,'right');
+    Gtk::Label::set_justify($Label_wg2,'right');
+    Gtk::Label::set_justify($Label_wg3,'right');
     $table->attach_defaults( $Label_wg1, 0, 1, 0, 1);
     $table->attach_defaults( $entry1, 1, 2, 0, 1);
     $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);

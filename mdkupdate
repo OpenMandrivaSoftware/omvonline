@@ -25,6 +25,8 @@ use Digest::MD5  qw(md5 md5_hex md5_base64);
 use HTTP::Request;
 use HTTP::Request::Common;
 use LWP::UserAgent;
+use Net::HTTPS; #for https connections 
+use MIME::Base64 qw(encode_base64);
 use MDK::Common;
 use lib qw(/usr/lib/libDrakX);
 use Locale::gettext;
@@ -42,8 +44,9 @@ $logfile = "/var/log/mdkupdate.log";
 my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
 my $url_get_rpms = "https://www.mandrakeonline.net/online_update.php";
 my $rpms_rep = "/root/tmp/";
-my $VERSION = "0.16";
-my $security = 0;
+my $VERSION = "0.17";
+my $security = grep { /^-?-security$/ } @ARGV;
+my $update = grep { /^-?-update$/ } @ARGV;
 
 sub usage {
     print STDERR _("mdkupdate version %s
@@ -51,29 +54,115 @@ Copyright (C) 2002 MandrakeSoft.
 This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
-") . _("  --help         - print this help message.
+", $VERSION) . _("  --help         - print this help message.
 ") . _("  --security     - use only security media.
+") . _("  --update       - update all information.
 ") . _("  -v             - verbose mode.
-", $VERSION );
+");
     exit(0);
 }
 
+grep { $_ !~ /^-?-(v|update|security)$/ } @ARGV and usage;
+
 my %o = getVarsFromSh("/root/.mdkupdate");
-rpm_qa("/root/rpm_qa_installed_before");
+if (! -s "/root/.mdkupdate.rpms" || $update) {
+    #- added to allow .mdkupdate.rpms file creation.
+    open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
+    print FILE join ('', sort `rpm -qa`);
+    close FILE;
+    #- send configuration and get back key to use...
+    $o{CURRENTKEY} = send_config($o{LOGIN},$o{PASS},$o{BOX});
+}
+#rpm_qa("/root/rpm_qa_installed_before");
 update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
 rpm_qa("/root/rpm_qa_installed_after");
 my %new = getVarsFromSh("/root/.mdkupdate");
 send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
 clean_dir();
 
-sub update_rpms () {
+################################################################################
+# taken from mdkonline to perform complete update of rpm list (by diff), it has
+# been decided to do exactly what mdkonline does the first time to update the db.
+################################################################################
+sub report_config {
+    my ($file) = @_;
+sub header { "
+********************************************************************************
+* $_[0]
+********************************************************************************";
+	 }
+open (FILE,"> $file") || die "Couldn't open $file : $!";
+map { chomp; print FILE "$_\n" }
+    header("scsi"), cat_("/proc/scsi/scsi"),
+    header("lsmod"), cat_("/proc/modules"),
+    header("cmdline"), cat_("/proc/cmdline"),
+    header("pcmcia: stab"), cat_("$prefix/var/lib/pcmcia/stab") || cat_("$prefix/var/run/stab"),
+    header("usb"), cat_("/proc/bus/usb/devices"),
+    header("partitions"), cat_("/proc/partitions"),
+    header("cpuinfo"), cat_("/proc/cpuinfo"),
+    header("install.log"), cat_("$prefix/root/drakx/install.log"),
+    header("fstab"), cat_("$prefix/etc/fstab"),
+    header("lilo.conf"), cat_("$prefix/etc/lilo.conf"),
+    header("menu.lst"), cat_("$prefix/boot/grub/menu.lst"),
+    header("/etc/modules.conf"), cat_("$prefix/etc/modules.conf"),
+    header("rpm -qa"), join ('', sort `rpm -qa`),
+    header("mandrake version"), cat_('/etc/redhat-release');
+close(FILE);
+}
+sub send_config {
+    # When we arrive here, we're sure the login/passwd is correct
+    my ($login, $passwd, $box_name) = @_;
+#    print STDERR "Sending config\n";
+    my $result = -1;
+    
+    report_config("/root/$login.$passwd.$box_name.online.log");
+    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
+
+    # Turn the binary file into a uuencoded ascii file
+    open (FILE, "/root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
+    my ($chunk, $buffer);
+    while (read(FILE, $chunk, 60*57)) {
+	$buffer .= $chunk;
+    }
+    close (FILE);
+    open (FILEOUT, "> /root/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
+	print FILEOUT encode_base64($buffer);
+    close (FILEOUT);
+
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
+    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
+
+				Content_Type => 'form-data',
+				Content => [submit => "upload_wizard",
+					    wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
+					    ]);
+    # Check the outcome of the response
+    #print "REPONSE: ".$response->content."\n";
+    if ($response->is_success) {
+	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
+	#print("key is $1\n");
+	$key = $1; 
+    } else {
+	# pb with the connection ?
+	$result = -1;
+    }
+
+    unlink "/root/$login.$passwd.$box_name.online.log.bz2";
+    unlink "/root/$login.$passwd.$box_name.online.log.bz2.uue";
+
+    $result == 0 && $key;
+}
+################################################################################
+
+sub update_rpms {
     my ($login,$password,$box_name,$curkey) =@_;
     my $result = -1;
     my $string;
     
     if ($login && $password && $login !~ /\s+/ && $password !~ /\s+/) {
 	my $ua = LWP::UserAgent->new;
-	$ua->agent("MdkUpdateAgent/0.15" . $ua->agent);
+	$ua->agent("MdkUpdateAgent/$VERSION" . $ua->agent);
 	my $request = HTTP::Request->new(GET => $url_get_rpms.'?log='.$login.'&pass='.$password.'&host='.$box_name.'&key='.$curkey);
 	my $response = $ua->request($request);
 	$string = $response->content;
@@ -82,7 +171,7 @@ sub update_rpms () {
 	} else {
 	    log_it(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
 	    clean_dir();
-	    exit -1;
+	    exit 1;
 	}
     } else {
 	$result = -1; 
@@ -102,37 +191,47 @@ sub update_rpms () {
 		LOGIN => $l{LOGIN} ,
 	    });
 	    my @junk= splice(@str_m,0,3);
-	    my $mir_full = "ftp://" . $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS"."/";
+	    my $mir_full = "ftp://$l{MIRROR}/$l{VER}/RPMS/";
 	    update_packages($mir_full,@str_m);
-	} else { log_it("problem occur $str_m\n");}
+	} else { log_it("problem occur $str_m\n"); }
 	    	    
     } else {
 	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
 	clean_dir();
-	exit -1;
+	exit 1;
     }
 }
 
 sub update_packages {
     my ($mir,@str) = @_;
-    chdir($rpms_rep) or log_it("\ncannot chdir to $rpms_rep\n");
-    $full_rpm = join(' ',@str);
-    print "@str\n";
-    foreach (@str) {
-	-x "/usr/bin/wget" or die _("wget is missing\n");
-	`/usr/bin/wget -nc $mir$_`;
-    }
-    `urpmi $full_rpm`;
-    foreach $pack (@str) {
-	system("rm -f $pack");
-    }	
+    @str or return;
+    eval {
+	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
+	system "/usr/sbin/urpmi.addmedia", "-c", "mdkupdate", $mir, "with", "../base/hdlist.cz";
+	$? == 0 or die _("unable to create mdkupdate medium\n");
+	system "/usr/sbin/urpmi", "--auto", "--clean", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
+	$? == 0 or die _("unable to update packages from mdkupdate medium\n");
+    };
+    $@ and die;
+#    chdir($rpms_rep) or log_it("\ncannot chdir to $rpms_rep\n");
+#    $full_rpm = join(' ',@str);
+#    print "@str\n";
+#    foreach (@str) {
+#	-x "/usr/bin/wget" or die _("wget is missing\n");
+#	`/usr/bin/wget -nc $mir$_`;
+#    }
+#    `urpmi $full_rpm`;
+#    foreach $pack (@str) {
+#	system("rm -f $pack");
+#    }	
 }
 
 sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
-    `sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
+    #`sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
+    `sdiff -s /root/rpm_qa_installed_after /root/.mdkupdate.rpms >/root/$login.$password.$box_name.$oldkey.dif`;
     my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
     my $response = $ua->request(POST "https://www.mandrakeonline.net/online_dif.php",
 
 				Content_Type => 'form-data',
@@ -143,9 +242,11 @@ sub send_rpm_dif {
     print "REPONSE: ".$response->content."\n";
 }
 
-sub clean_dir() {
+sub clean_dir {
+    unlink "/root/.mdkupdate.rpms";
+    rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
+
     system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
-    exit 1;
 }
 
 sub rpm_qa {

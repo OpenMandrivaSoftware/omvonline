@@ -1,11 +1,11 @@
 # Changed by Makefile of cvs.
-%define version 0.16
+%define version 0.17
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	5mdk
+Release: 	1mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -82,6 +82,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Oct  9 2002 François Pons <fpons@mandrakesoft.com> 0.17-1mdk
+- fixed to make sure the list of rpm is always sent to server.
+- use urpmi media for update in order to use non scheduled packages.
+- fixed to propagate version to user agent.
+- removed most of perl warnings of mdkonline and mdkupdate.
+
 * Thu Sep 12 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-5mdk
 - Use cvs spec file to update package (for Pablo and co)
 
