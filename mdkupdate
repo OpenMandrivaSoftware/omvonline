@@ -210,9 +210,9 @@ sub update_packages {
     @str or return;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "-c", "mdkupdate", $mir, "with", "../base/hdlist.cz";
+	system "/usr/sbin/urpmi.addmedia", "mdkupdate", $mir;
 	$? == 0 or die _("Unable to create mdkupdate medium.\n");
-	system "/usr/sbin/urpmi", "--auto", "--clean", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
+	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
 	$? == 0 or die _("Unable to update packages from mdkupdate medium.\n");
     };
     $@ and die;
