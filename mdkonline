@@ -67,8 +67,8 @@ my %stage = (
 	     0 => sub { if ($o->{account_cb}->get_active) { subsOnline() } else { $o->{nb}->next_page} },
 	     1 => sub { $o->{nb}->next_page(); setEntryWithConf() }, 
 	     2 => sub { testPasswd() },
-	     3 => sub { sendConfig() },
-	     4 => sub { setConf() }
+	     3 => sub { log::l("[mdkonline] Sending configuration to remote server"); sendConfig() },
+	     4 => sub { log::l("[mdkonline] Writing local configuration dir"); setConf() }
 	    );
 $o->{actions} = {
 		 Next => sub {
