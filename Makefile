@@ -2,7 +2,6 @@ PACKAGE = mdkonline
 VERSION:=$(shell rpm -q --qf %{VERSION} --specfile $(PACKAGE).spec)
 RELEASE:=$(shell rpm -q --qf %{RELEASE} --specfile $(PACKAGE).spec)
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
-RPM = $(HOME)/rpm
 
 NAME = mdkonline
 MDKUPDATE = mdkupdate
@@ -66,9 +65,6 @@ tar:
 	rm -rf $(PACKAGE)-$(VERSION)
 
 buildrpm:
-	(echo "# !! DON'T MODIFY HERE, MODIFY IN THE CVS !!" ; \
-		cat $(PACKAGE).spec \
-	) > $(RPM)/SPECS/$(PACKAGE).spec
 	rpm -ta ../$(PACKAGE)-$(VERSION).tar.bz2
 	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
 
