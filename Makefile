@@ -51,6 +51,9 @@ tar:
 	rm -rf $(PACKAGE)-$(VERSION)
 
 buildrpm:
+	(echo "# !! DON'T MODIFY HERE, MODIFY IN THE CVS !!" ; \
+		cat $(project).spec \
+	) > $(RPM)/SPECS/$(project).spec
 	rpm -ta $(PACKAGE)-$(VERSION).tar.bz2
 
 # rules to build a distributable rpm
