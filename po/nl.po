@@ -1,16 +1,16 @@
 # translation of mdkonline-nl.po to Nederlands
-# Copyright (C) 2004 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
 # Peter Bosch <peter.bosch@hccnet.nl>, 2002.
 # Reinout van Schouwen <reinout@cs.vu.nl>, 2002-2004.
 # Hendrik-Jan Heins <hjh@passys.nl>, 2003.
-# Rob Teng <mandrake.tips@free.fr>, 2004.
+# Rob Teng <mandrake.tips@free.fr>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2004-10-11 19:56+0200\n"
+"PO-Revision-Date: 2005-01-31 22:52+0100\n"
 "Last-Translator: Rob Teng <mandrake.tips@free.fr>\n"
 "Language-Team: Nederlands\n"
 "MIME-Version: 1.0\n"
@@ -189,14 +189,14 @@ msgid "Connecting to"
 msgstr "Verbinding aan het maken met"
 
 #: ../mdkapplet:247
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Welkom bij MandrakeOnline"
+msgstr "Antwoord van Mandrakeonline server\n"
 
 #: ../mdkapplet:265
 #, c-format
 msgid "Checking... Updates are available\n"
-msgstr "Bezig met controleren... Herzieningen zijn beschikbaar\n"
+msgstr "Bezig met nagaan... Herzieningen zijn beschikbaar\n"
 
 #: ../mdkapplet:270
 #, c-format
@@ -243,6 +243,8 @@ msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
+"Er heeft zich een probleem voorgedaan bij het maken van de verbinding met de "
+"server, neem alstublieft contact op met het ondersteuningsteam"
 
 #: ../mdkapplet:280
 #, c-format
@@ -334,7 +336,7 @@ msgstr "Aanmaken van account of aanmeldingscontrole"
 #: ../mdkonline:119
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr "Voer uw MandrakeOnline gebruikersnaam, wachtwoord en computernaam in:"
+msgstr "Voer uw Mandrakeonline gebruikersnaam, wachtwoord en computernaam in:"
 
 #: ../mdkonline:125 ../mdkonline:156
 #, c-format
@@ -506,14 +508,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Uw Mandrakeonline account is met succes geconfigureerd\n"
 
 #: ../mdkonline:219
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Het versturen is gelukt!"
+msgstr "Het versturen van de configuratie is gelukt!"
 
 #: ../mdkonline:220
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Lezen instellingen\n"
+msgstr "Probleem met versturen van de configuratie"
 
 #: ../mdkonline:221
 #, c-format
@@ -521,6 +523,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"Niet in staat verbinding te maken met de Mandrakeonline website: onjuiste "
+"gebruikersnaam/wachtwoord of router/firewall instelling"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -601,64 +605,3 @@ msgstr ""
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Niet in staat pakketten bij te werken vanaf het mdkupdate-medium\n"
-
-#~ msgid ""
-#~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
-#~ "[at] mandrakeonline [dot] net"
-#~ msgstr ""
-#~ "Mandrakeupdate kan de diff-bestanden niet uploaden. Stuur een e-mailtje "
-#~ "naar support [at] mandrakeonline [punt] net"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Even geduld"
-
-#~ msgid "Next"
-#~ msgstr "Volgende"
-
-#~ msgid "Cancel"
-#~ msgstr "Annuleren"
-
-#~ msgid "Previous"
-#~ msgstr "Vorige"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Ik heb geen MandrakeOnline account en wil me aanmelden"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Mandrakelinux privacy-beleid"
-
-#~ msgid "Authentification"
-#~ msgstr "Verificatie"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Configuratie verzenden"
-
-#~ msgid "Finish"
-#~ msgstr "Voltooien"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "geautomatiseerde herzieningen"
-
-#~ msgid "Country:"
-#~ msgstr "Land:"
-
-#~ msgid "Error"
-#~ msgstr "Fout"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Bezig met afsluiten wizard\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "Er kon geen verbinding met MandrakeOnline gemaakt worden, probeert u het "
-#~ "later nog eens."
-
-#~ msgid "Wrong password"
-#~ msgstr "Wachtwoord onjuist"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - sleutels bijwerken\n"
