@@ -199,7 +199,8 @@ sub checkErrors {
 }
 sub setEntryWithConf {
     my %t = getVarsFromSh($wideconf);
-    $t{MACHINE} ||= chomp_(`hostname`);
+    my $host = chomp_(`hostname`) ; $host =~ /(\w+)(.*)/;
+    $t{MACHINE} ||= $1;
     foreach (qw(login machine)) { $o->{$_}->get_text or $o->{$_}->set_text($t{uc($_)}) }
 }
 sub sendConfig {
