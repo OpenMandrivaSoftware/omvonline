@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	22mdk
+Release: 	23mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -94,6 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Tue Jul 16 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-23mdk
+- delete redondant 'ftp://' when choosing ftp mirrors
+
 * Tue Jul  9 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-22mdk
 - fixes:
 		o use no-clobber for wget (prevent multiples downloads of same files)
