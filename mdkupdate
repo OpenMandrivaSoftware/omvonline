@@ -247,7 +247,7 @@ sub updateConf {
 }
 sub addMedia {
     my $mirror = shift;
-    my $r = getRelease();
+    my ($r) = getRelease();
     my $fullpath2mir = "$mirror". "/$r" . "/RPMS" . "/" ;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
@@ -256,8 +256,8 @@ sub addMedia {
     $@ and die "Problem adding Update Media with urpmi";
 }
 sub getRelease() {
-    my $release = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
-    $release
+    my ($release) = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
+    ($release)
 }
 sub updatePkgs {
     my (@str) = @_;
