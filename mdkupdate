@@ -1,0 +1,77 @@
+#!/usr/bin/perl 
+################################################################################
+# Mdkupdate                                                                    # 
+#                                                                              #
+# Copyright (C) 2002 MandrakeSoft                                              #
+#
+# Daouda Lo <daouda@mandrakesoft.com>                                          #
+#                                                                              #
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
+
+use POSIX;
+use Digest::MD5  qw(md5 md5_hex md5_base64);
+use HTTP::Request;
+use HTTP::Request::Common;
+use LWP::UserAgent;
+use MDK::Common;
+use Locale::GetText;
+
+#- I18N.
+setlocale (LC_ALL, "");
+Locale::GetText::textdomain ("mdkupdate");
+
+sub _ {
+    my ($format, @params) = @_;
+    sprintf(Locale::GetText::I_($format), @params);
+}
+
+my $VERSION = "0.16";
+my $security = 0;
+
+sub usage {
+    print STDERR _("mdkupdate version %s
+Copyright (C) 2002 MandrakeSoft.
+This is free software and may be redistributed under the terms of the GNU GPL.
+
+usage:
+") . _("  --help         - print this help message.
+") . _("  --security     - use only security media.
+") . _("  -v             - verbose mode.
+", $VERSION );
+    exit(0);
+}
+
+sub parse_file {
+    my ($file)=@_; 
+    my @list_hosts;
+    open( FILE, $file ) or die "load_text: missing file $file : $!";
+    while (<FILE>) {
+	chomp;
+	unshift(@list_hosts,$_); 
+    }
+    close( FILE );
+    reverse @list_hosts;
+}
+
+sub log_it {
+    local *LOG;
+    open LOG, ">>/var/log/mdkupdate.log" or die "can't output to log file\n";
+    print LOG @_;
+}
+
+sub fatal {
+    my ($comment)=@_;
+    printf STDERR "%s\n", $comment; exit($_[0]);
+}
