@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	7mdk
+Release: 	8mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -126,6 +126,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Fri Sep 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-8mdk
+- fixed typo in sprintf_fixutf8
+
 * Thu Sep  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-7mdk
 - i18n is back (#11064)
 - launch one instance of mdkapplet per desktop.
