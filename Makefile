@@ -33,7 +33,7 @@ clean:
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME),icons/{mini,large}}}
+	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME),autorun,icons/{mini,large}}}
 	install -s -m755 $(NAME) $(SBINDIR)
 	install -s -m755 $(MDKUPDATE) $(BINDIR)
 	install -s -m755 $(MDKAPPLET) $(BINDIR)
