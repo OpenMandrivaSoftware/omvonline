@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	1.100mdk
+Release: 	2.1.100mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-2.1.100mdk
+- added misc architectures (ia64, amd64, x86_64, noarch, ppc64)
+
 * Mon May 31 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
 - Released as mandatory update and tagged as security fix 
   (force applet to update itself).
