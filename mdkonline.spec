@@ -9,18 +9,18 @@
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 
-%define version 0.92
+%define version 1.0
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.1.92mdk
+Release: 	0.1mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakfirsttime >= 0.92-4.1.92mdk, perl-Crypt-SSLeay >= 0.51-2mdk
+Requires:	drakfirsttime >= 1.0-0.2mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -31,6 +31,7 @@ who want to upload their configuration (packages, hardware infos).
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
 The mdkupdate daemon allows you to install security updates automatically. 
+Mdkapplet is an KDE/Gnome applet for Security update notification.
 
 %prep
 %setup -q
@@ -78,15 +79,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %{_sbindir}/*
 %{_bindir}/*
-%{_prefix}/X11R6/bin/*
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 
 %changelog
-* Fri Oct 17 2003 Daouda LO <daouda@mandrakesoft.com> 0.92-0.1mdk
-- Mandrake Online Resurrection
+* Wed Feb 18 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
+- Mandrake Online Resurrected/Rewrited
+- Mandrake Applet Notification system
 - Wizard for club users is still valid but separated (drakclub executable)
 
 * Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-2mdk
