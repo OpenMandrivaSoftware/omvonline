@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Thu Apr  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-2mdk
-- move files to /root/.mdkonline directory (#8621)
+- move mdkonline process files to /root/.mdkonline directory (#8621)
 - one more fix for rpmvercmp (remove extra shift to avoid comparing numbers and strings)
 - better logs
 - better timeout for first configuration
