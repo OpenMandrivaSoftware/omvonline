@@ -2,8 +2,9 @@
 ################################################################################
 # MandrakeOnline                                                               # 
 #                                                                              #
-# Copyright (C) 2001-2002-2003 MandrakeSoft                                    #
+# Copyright (C) 2001-2002-2003-2004 MandrakeSoft                               #
 #                                                                              #
+# Renaud Chaillat                                                              #
 # Daouda Lo <daouda@mandrakesoft.com>                                          #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
@@ -39,112 +40,188 @@ use MIME::Base64 qw(encode_base64);
 use Sys::Hostname;
 use ugtk2 qw(:all);
 
+use lib qw(/usr/lib/libDrakX/drakfirsttime);
+use comdialog;
+use data;
+
+
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
 my $in = 'interactive'->vnew('su', 'default');
+my $VERSION = '1.0';
+my ($create_account, $auto_update) = (0, 0);
 
-#-------------------------------------------------------------
-# i18n routines
-# IMPORTANT: next two routines have to be redefined here to
-#         get correct namespace (mdkonline instead of libDrakX)
-#         (This version is now UTF8 compliant - Sg 2001-08-31)
-#-------------------------------------------------------------
+my $linkAccount = "http://www.mandrakeexpert.com/index2.php";
+my ($o, $p);
 
-#my $authentication_host = "http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php";
-my $nb_pages=6; # 0 to 5
-my $page=-1;
-my $xpm_path="/usr/share/mdkonline/pixmaps";
-my $sharepath="/usr/share/mdkonline";
-my $path_to_welcome="/usr/share/doc/HTML/welcome.html";
-my $link_to_mdkonline="http://www.mandrakeexpert.com/index2.php";
-my $check_custid=0;
-my $true=1;
-my $false=0;
-
-my %locations = ( N("Africa") => ['ftp.univie.ac.at/systems/linux/Mandrake/updates','ftp.lip6.fr/pub/linux/distributions/mandrake/updates'],
-		  N("Asia") => ['ftp.surfnet.nl/pub/os/Linux/distr/Mandrake/Mandrake/updates','ftp.sunet.se/pub/Linux/distributions/mandrake/updates'],
-		  N("Australia") => ['ftp-linux.cc.gatech.edu/pub/linux/distributions/mandrake/updates','mandrake.redbox.cz/Mandrake/updates'],
-		  N("Europe") => ['ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates','ftp.gwdg.de/pub/linux/mandrake/updates'],
-		  N("North America") =>['mandrake.secsup.org/pub/linux/mandrake/Mandrake/updates','ftp.sunet.se/pub/Linux/distributions/mandrake/updates/'],
-		  N("South America") => ['ftp.sunet.se/pub/Linux/distributions/mandrake/updates','ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates'],
-		  );
-#require Gtk;
-#require Gtk2::Gdk::ImlibImage;
-
-#init Gtk;
-#Gtk->set_locale;
-#Gtk2::Gdk::ImlibImage->init;
-
-my $Main_Window = new Gtk2::Window -toplevel;
-# For translators : the MandrakeOnline (in one world) should not be translated.
-$Main_Window->set_title("MandrakeOnline");
-gtkset_size_request($Main_Window, 580, 470);
-$Main_Window->realize();
-$Main_Window->set_position('center');
-$Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
-
-my $Step_Label      = new Gtk2::Label(" 1/".$nb_pages." "); 
-my $Button_Next     = new Gtk2::Button("  " . N("Next") . " 2/".$nb_pages." > ");
-my $Button_End      = new Gtk2::Button("  " . N("Finish") . "  ");
-my $Button_SkipWiz  = new Gtk2::Button("  " . N("Quit") . "  ");
-my $Button_Prev     = new Gtk2::Button("  < " . N("Back") . "  ");
-my $notebook_global = new Gtk2::Notebook;
-my $check_subs = new Gtk2::CheckButton(N("I don't have a MandrakeOnline account and I want to "));
-my $button_subs = new Gtk2::Button("  " . N("Subscribe") . "  ");
-$Button_End->show();
-$notebook_global->set_show_border($false);
-$notebook_global->set_show_tabs($false);
-$page=$notebook_global->get_current_page();
-my $vbox = new Gtk2::VBox(0,0);
-$Main_Window->add($vbox);
-$vbox->pack_start($notebook_global,1,1,0);
-$vbox->pack_start(new Gtk2::HSeparator, 0, 0, 1);
-my $hbox= new Gtk2::HBox(0,5);
-$vbox->pack_start($hbox, 0, 0, 1);
-$hbox->pack_end($Button_Next, 0, 1, 0);
-$hbox->pack_end($Step_Label, 0, 1, 0);
-$hbox->pack_end($Button_Prev, 0, 1, 0);
-$Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
-$hbox->pack_start($Button_SkipWiz, 0, 1, 0);
-my $check_cron = new Gtk2::CheckButton(N("Yes I want automated updates"));
-my $gtkcombo_user = new Gtk2::Combo();
-my $gtkcombo_mirror = new Gtk2::Combo();
-my $login_user= new Gtk2::Entry();
-my $passwd_user= new Gtk2::Entry();
-my $box_user= new Gtk2::Entry();
-
-my $login   = "";
-my $passwd  = "";
-my $box_name = "";
-my $key = "";
-
-my %actions = ( 
-		2 => \&test_passwd,
-		3 => \&send_config,
-		4 => \&send_config,
-		);
-my @no_back_button_pages = (0,3,4,5);
-
-$Button_Prev->set_sensitive(0);
-init_ui();
-$Main_Window->show_all;
-
-Gtk2->main_iteration while Gtk2->events_pending;
-Gtk2->main;
-
-sub init_ui {
-    step_wizard();
-    $Button_Next->signal_connect(clicked =>\&on_next_clicked);
-    $Button_Prev->signal_connect(clicked =>\&on_prev_clicked);
-    $Button_End->signal_connect(clicked =>\&on_end_clicked);
+$o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
+gtkset_size_request($o->{mw}{window}, 580, 470);
+$o->{mw}{rwindow}->set_position('center');
+$o->{mw}{window}->signal_connect( "delete_event", sub { Gtk2->main_quit} );
+$o->{nb} = Gtk2::Notebook->new;
+#$o->{nb}->set_show_tabs(0); $o->{nb}->set_show_border(0);
+$o->{bottomHbox} = Gtk2::HBox->new;
+my %stage = (
+	     0 => sub { if ($o->{account_cb}->get_active) { subsOnline() } else { $o->{nb}->next_page} },
+	     1 => sub { $o->{nb}->next_page() }, 
+	     2 => sub { sendConfig() },
+	     3 => sub { setConf() },
+	    );
+$o->{actions} = {
+		 Next => sub {
+		     $p = $o->{nb}->get_current_page;
+		     $stage{$p}->();
+		     $p <= 0 and $o->{Prev}->set_sensitive(1)
+		 },
+		 SkipWiz => sub {
+		     mainQuit()
+		 },
+		 Prev => sub {
+		     $p = $o->{nb}->get_current_page;
+		     $o->{nb}->prev_page();
+		     $p <= 1 and init(0)
+		 }
+		};
+foreach my $l (['Next', 'gtk-go-forward', 'stock'], ['SkipWiz', N("Skip Wizard")], ['Prev', 'gtk-go-back', 'stock']) {
+    $o->{$l->[0]} = $l->[2] ? Gtk2::Button->new_from_stock($l->[1]) : Gtk2::Button->new(" " . $l->[1] . " ");
+    $l->[2] ? $o->{bottomHbox}->pack_end($o->{$l->[0]}, 0, 0, 1) : $o->{bottomHbox}->pack_start($o->{$l->[0]}, 0, 0, 1);
+    $o->{$l->[0]}->signal_connect( clicked => sub { $o->{actions}{$l->[0]}->() });
 }
+gtkadd($o->{mw}{window},
+       gtkpack_(Gtk2::VBox->new(0, 2),
+		1, $o->{nb},
+		0, Gtk2::HSeparator->new,
+		0, gtkpack($o->{bottomHbox}),
+	       ),
+      );
+gtkappend_page($o->{nb},
+	       gtkpack_(Gtk2::VBox->new(0, 3),
+			0, set_darea(N("Welcome to MandrakeOnline"), 'welcome'),
+			0, Gtk2::Label->new(N("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n")),
+			1, gtkadd(Gtk2::Frame->new(N("Create a MandrakeOnline Account")),
+				  gtkpack_(Gtk2::VBox->new(0, 3),
+					   0, gtksignal_connect(gtkset_active($o->{account_cb} = Gtk2::CheckButton->new(N("I don't have a MandrakeOnline account and I want to ") .  N("Subscribe")), $create_account), clicked => sub { $create_account =! $create_account; $o->{vbox_account}->set_sensitive($create_account) }),
+					   1, gtkpack_($o->{vbox_account} = Gtk2::VBox->new(0, 3),
+						       1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10 },
+									   [],
+									   [ N("Login:"), $o->{clogin} = Gtk2::Entry->new(), " " ],
+									   [ N("Password:"), $o->{cpasswd} = entry_hidepass(), " " ],
+									   [ N("Confirm Password:"), $o->{cconfirm} = entry_hidepass(), " " ],
+									   [ N("Mail contact:"), $o->{cmail} = Gtk2::Entry->new() ]
+									  ))
+					  )
+				 ))
+	      );
+gtkappend_page($o->{nb},
+	       gtkpack_(Gtk2::VBox->new(0, 3),
+			0, set_darea(N("Mandrake Privacy Policy"), 'privacy'),
+			1, create_scrolled_window(gtktext_insert(Gtk2::TextView->new, privacy_text()))
+		       )
+	      );
+gtkappend_page($o->{nb},
+	       gtkpack_(Gtk2::VBox->new(0, 3),
+			0, set_darea("MandrakeOnline" . " " . N("Authentification"), 'authentification'),
+			0, Gtk2::Label->new("\n\n" . N("Enter your MandrakeOnline login, password and machine name:")),
+			1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10 },
+					    [], 
+					    [ N("Login:"), $o->{login} = Gtk2::Entry->new(), "" ],
+					    [ N("Password:"), $o->{passwd} = Gtk2::Entry->new(), "" ],
+					    [ N("Machine name:"), $o->{machine} = Gtk2::Entry->new() ],
+					   ))
+	      );
+gtkappend_page($o->{nb},
+	       gtkpack_(Gtk2::VBox->new(0, 3),
+			0,  set_darea(N(""), 'sendingconf'),
+			1, Gtk2::Label->new(N("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you.")) 
+		       )
+	      );
+gtkappend_page($o->{nb},
+	       gtkpack_(Gtk2::VBox->new(0, 3),
+			0, set_darea(N(""), 'end'),
+			1, new Gtk2::Label->new("\n\n" . N("Your upload was successful!") . "\n" . N("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.") . "\n\n" . N("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
+			0, gtkadd(Gtk2::Frame->new(N("automated Upgrades")),
+				  gtkpack_(Gtk2::VBox->new(0, 3),
+					   0, gtksignal_connect(gtkset_active($o->{autoup} = Gtk2::CheckButton->new(N("Yes I want automated updates")), $auto_update), clicked => sub { $auto_update =! $auto_update; $o->{vbox_auto}->set_sensitive($auto_update) }),
+					   0, gtkpack_($o->{vbox_auto} = Gtk2::VBox->new(0, 3),
+						       0, create_packtable({ homogeneous => 1, col_spacings => 5, row_spacings => 5 },
+									   [ N("Country:"), $o->{country} = Gtk2::Combo->new ],
+									   [" ", " "],
+									  ))
+					  ))));
 
-sub gtk_main_quit {
+init(1);
+$o->{country}->set_popdown_strings(country());
+$o->{mw}{rwindow}->show_all;
 
+Gtk2->main;
+ugtk2->exit(0);
+
+sub subsOnline {
+    my $explink = 'http://www.mandrakeexpert.com/online3_CreateAccount.php?';
+    my $login = $o->{clogin}->get_text;
+    my $despwd = $o->{cpasswd}->get_text;
+    my $despwdcfm = $o->{cconfirm}->get_text;
+    my $cmail = $o->{cmail}->get_text;
+    $::error = 0;
+    checkErrors($login, $despwd, $despwdcfm, $o->{cmail});
+    print "Error = $::error";
+    if (!$::error) {
+	my $ret = requestURL($explink . '?desuserid=' . $login . '&despwd=' . $despwd . '&user_email=' . $cmail);
+	my $result = {
+		      0 => sub { !$::error and $o->{nb}->next_page},
+		      11 => sub { raiseError($o->{mw}->{window},N("Creation"), N("Login and Password should be < 12 characters\n")) },
+		      12 => sub { raiseError($o->{mw}->{window},N("Special Characters"), N("Special Characters are not allowed\n")) },
+		      13 => sub { raiseError($o->{mw}->{window},N("Empty Fields"), N("Please fill up all fields\n")) },
+		      14 => sub { raiseError($o->{mw}->{window},N("Email"), N("Email not valid\n")) },
+		      15 => sub { raiseError($o->{mw}->{window},N("Change account"), N("Account already exist\n")) },
+		     };
+	if ($ret->is_success) {
+	    my $content = $ret->content;
+	    if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1);print "CODE = $code"; eval { $result->{$code}->() } }
+	} else { raiseError($o->{mw}->{window}, N("Server Problem"), N("Problem connecting to server \n")) }
+    }
+}
+sub checkErrors {
+    my ($login, $despwd, $despwdcfm, $cmail) = @_;
+    $login or raiseError($o->{mw}->{window},N("Error"), N("Please provide a login"));
+    if (!$::error && $despwd ne $despwdcfm) {
+	raiseError($o->{mw}->{window},N("Error"), N("The passwords do not match\n Please try again\n"))
+    } elsif (!$::error and check_valid_email($cmail) != 1) {
+	raiseError($o->{mw}->{window},N("Error"), N("Not a valid mail address!\n"))
+    }
+}
+sub sendConfig {
+}	     
+sub setConf {
+}
+sub init {
+    my $i = shift;
+    $o->{Prev}->set_sensitive(0); 
+    $o->{Next}->grab_focus;
+    $i and FirstSettings();
+}
+sub FirstSettings {
+    foreach my $l (qw(vbox_account vbox_auto)) {
+       	$o->{$l}->set_sensitive(0);
+    }
+}
+sub final {
+    $o->{Prev}->hide; $o->{SkipWiz}->hide;
+    $o->{Next}->set_label(N("Finish"))
+}
+sub getNames {
+    my ($login, $passwd, $machine) = @_;
+    $login = $o->{login}->get_text;
+    $passwd = $o->{passwd}->get_text;
+    $machine = $o->{machine}->get_text;
+    ($login, $passwd, $machine)
+}
+sub mainQuit {
     # remove local files
-    if ($login && $passwd) {
-	[ -f "/root/$login.$passwd.$box_name.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2.uue");
-	[ -f "/root/$login.$passwd.$box_name.online.log.bz2" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2");
+    my ($login, $passwd, $boxname) = getNames();
+    if ($o->{login}->get_text && $o->{passwd}->get_text) {
+	[ -f "/root/$login.$passwd.$boxname.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.$boxname.online.log.bz2.uue");
+	[ -f "/root/$login.$passwd.$boxname.online.log.bz2" ] && unlink ("/root/$login.$passwd.$boxname.online.log.bz2");
     }
     # quit
     print N("Quitting Wizard\n");
@@ -158,116 +235,18 @@ sub isalphanum {
 	return 0;
     }
 }
-sub on_end_clicked {
-    if ($check_cron->get_active()) {
-	my $mirror = $gtkcombo_mirror->entry->get_text();
-	if ($mirror) { automated_upgrades(); gtk_main_quit() } else { info_popup(N('Empty Mirror'), N("Empty Mirror. Please choose a place.")) }
-    }
-}
-
-sub on_next_clicked {
-    $page=$notebook_global->get_current_page();
-
-#---- 8<-----------to remove for page 5 test -----------
-#    if ($page == 0) {
-#	$notebook_global->set_page(5); 
-#    }
-#-------------8<----------------------------------------
-
-    if ( $actions{$page} ) {
-	$actions{$page}->();
-    } else {
-	$notebook_global->next_page();
-    }
-    $page=$notebook_global->get_current_page();
-
-    # handle the back button state
-    $Button_Prev->set_sensitive(1);
-    foreach (@no_back_button_pages) {
-	/$page/ and $Button_Prev->set_sensitive(0), last;
-    }
-    
-    # change "Next" to "Finish" in the last page
-    if ($page == $nb_pages - 1) {
-	$hbox->remove($Button_Prev);
-	$hbox->remove($Step_Label);
-	$hbox->remove($Button_Next);
-	$hbox->pack_end($Button_End, 0, 1, 0);
-	$hbox->pack_end($Step_Label, 0, 1, 0);
-	$hbox->pack_end($Button_Prev, 0, 1, 0);
-    }
-
-    # Update the buttons labels
-    $Button_Next->child->set(" ".N("Next")." ".($page+2)."/".$nb_pages." > ");
-    $Button_Prev->child->set(" < ".$page."/".$nb_pages." ".N("Back")." ");
-    $Step_Label->set(" ".($page+1)."/".$nb_pages." ");
-}
-
-sub on_prev_clicked {
-    $page=$notebook_global->get_current_page();
-
-    # change "Finish" to "Next" if coming from the last page
-    if ($page == $nb_pages - 1) {
-	$hbox->remove($Button_Prev);
-	$hbox->remove($Button_End);
-	$hbox->pack_end($Button_Next, 0, 1, 0);
-	$hbox->pack_end($Button_Prev, 0, 1, 0);
-    }
-
-    if ($page == 4) {
-	$notebook_global->set_page(2); # Alternatively, don't go back at all since passwd was correct
-    } elsif ($page == 6) { # Don't go back if information were correctly sent (button should be deactivated)
-
-    } else {
-	$notebook_global->prev_page();
-    }
-
-    $page=$notebook_global->get_current_page();
-
-    # handle the back button state
-    $Button_Prev->set_sensitive(1);
-    foreach (@no_back_button_pages) {
-	/$page/ and $Button_Prev->set_sensitive(0), last;
-    }
-
-    # Update the buttons labels
-    $Button_Next->child->set(" " . N("Next") . " " . ($page+2) . "/" . $nb_pages . " > ");
-    if ($page > 0) {
-	$Button_Prev->child->set(" < " . $page . "/" . $nb_pages . " " . N("Back") . " ");
-    } else {
-	$Button_Prev->child->set(" < " . N("Back") . " ");
-    }
-    $Step_Label->set(" " . ($page+1) . "/" . $nb_pages . " ");
-}
-
-sub subscribe_mdkonline() {
-    my $browser=$ENV{'BROWSER'};
-#    my $initial_user=$ENV{'INITIAL_USER'};
-    my $user_current=$ENV{'USER'};
-    
-    if (!$browser) {splash_warning( " " . N("Warning: No browser specified") . " "); return;}
-    #    if ($initial_user ne "root" && $initial_user ne undef) {
-    #	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
-    #    } else {
-    system("$browser $link_to_mdkonline &");
-   
-    #   }
-    $check_subs->set_active(0);$Button_Next->set_sensitive(1); $button_subs->set_sensitive(0);
-}
-
 sub test_passwd () {
     my $current_page = shift;
     my $result = -1;
-    $login    = $login_user->get_text;
-    $passwd   = $passwd_user->get_text;
-    $box_name = $box_user->get_text;
-    my $test = isalphanum($box_name);
+    my $login    = $o->{login}->get_text;
+    my $passwd   = $o->{passwd}->get_text;
+    my $boxname = $o->{machine}->get_text;
+    my $test = isalphanum($boxname);
     #print ("isalnum : $test");
     if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
-	$passwd = md5_hex ($passwd); # or md5 () or md5_base64 ()
-	
+	$passwd = md5_hex($passwd); # or md5 () or md5_base64 ()
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
 	my $w = wait_msg(N("Connecting ...\n"));
@@ -279,7 +258,7 @@ sub test_passwd () {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
-	    info_popup(N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	    raiseError(N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
 	    return;
 	}
     } else {
@@ -288,11 +267,11 @@ sub test_passwd () {
     
     # if correct, go to page 4
     if (! $result) {
-	$notebook_global->next_page(); 
+	$o->{nb}->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	info_popup (N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
-	$passwd_user->set_text("");
+	raiseError($o->{mw}->{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
+	$o->{passwd}->set_text("");
     }
 }
 
@@ -300,18 +279,19 @@ sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
 #    print STDERR "Sending config\n";
     my $result = -1;
+    my ($login, $passwd, $boxname, $key, $mirror);
     
-    report_config("/root/$login.$passwd.$box_name.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
+    report_config("/root/$login.$passwd.$boxname.online.log");
+    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$boxname.online.log`;
 
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, "/root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
+    open (FILE, "/root/$login.$passwd.$boxname.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
     }
     close (FILE);
-    open (FILEOUT, "> /root/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
+    open (FILEOUT, "> /root/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
 	print FILEOUT encode_base64($buffer);
     close (FILEOUT);
 
@@ -322,7 +302,7 @@ sub send_config {
 
                                 Content_Type => 'form-data',
                                 Content => [submit => "upload_wizard",
-                                            wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
+                                            wizard => ["/root/$login.$passwd.$boxname.online.log.bz2.uue"]
 					   ]);
     #printf("*********** Reponse is %s ***********\n", $response->as_string);
     # Check the outcome of the response
@@ -340,93 +320,13 @@ sub send_config {
     # if information were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $result) {
 	# go to last page
-	$notebook_global->set_current_page(5); 
+	$o->{nb}->set_current_page(4); 
     } else {
     # if incorrect, go/stay on page 4 to retry sending data
 	# pb with the connection ?
-	info_popup (N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
-	$notebook_global->set_current_page(4);
+	raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	$$o->{nb}->set_current_page(4);
     }
-}
-
-sub step_wizard {
-
-    my $vbox_welc= new Gtk2::VBox(0,0);
-    my $test_tog;
-    writ_on_pixmaps($vbox_welc, 'registry', N("Welcome to MandrakeOnline"));
-    my $label_welc = new Gtk2::Label(N("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
-    $label_welc->set_uposition(20, 150);
-    $label_welc->set_justify('left');
-    $vbox_welc->pack_start($label_welc, 0, 0, 1);
-    my $hbox_subs= new Gtk2::HBox(0,0);
-    $hbox_subs->set_uposition(50,300);
-    $vbox_welc->pack_start($hbox_subs,0,0,1);
-    $hbox_subs->pack_start($check_subs,0,0,1);
-    $button_subs->set_sensitive(0);
-    $check_subs->signal_connect (clicked => sub {$test_tog = $check_subs->get_active; 
-						 $button_subs->set_sensitive($test_tog); 
-						 $Button_Next->set_sensitive(!$test_tog); });
-    $button_subs->signal_connect('clicked' => \&subscribe_mdkonline);
-    $hbox_subs->pack_start($button_subs,0,0,1);
-    $notebook_global->append_page($vbox_welc, new Gtk2::Label("welcome"));
-    
-    my $vbox_priv = new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_priv, 'privacy', N("Mandrake Privacy Policy"));
-    get_on_privacy($vbox_priv);
-    $notebook_global->append_page($vbox_priv, new Gtk2::Label("club"));
-
-    my $vbox_ident= new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_ident, 'identity', "MandrakeOnline" . " " . N("Authentification"));
-    my $label_log = new Gtk2::Label("\n\n" . N("Enter your MandrakeOnline login, password and machine name:"));
-    $vbox_ident->pack_start($label_log,$false ,$false,1);
-    pack_box_identity($vbox_ident, N("Login:") . '  ', $login_user, N("Password:") . '   ', $passwd_user, N("Machine name:") . '        ', $box_user);
-    set_boxname($box_user) if -e "/root/.mdkupdate";
-    $notebook_global->append_page($vbox_ident, new Gtk2::Label("login"));
-
-    my $vbox_rev=new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_rev, 'mandrakeclub', N("Sending your Configuration"));
-    my $label_rev = new Gtk2::Label(N("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
-    $label_rev->set_uposition(20,150);
-    $label_rev->set_justify('left');
-    $vbox_rev->pack_start($label_rev,0,0,1);
-    $notebook_global->append_page($vbox_rev,new Gtk2::Label("revision"));
-
-    # building the "Error sending data" page
-    my $vbox_errorsend= new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_errorsend, 'appearence', N("Error while sending information"));
-    my $label_errorsend = new Gtk2::Label("\n\n" . N("There was an error while sending your personal information.\n\nPress Next to try and send your configuration again."));
-    $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
-    $notebook_global->append_page($vbox_errorsend,new Gtk2::Label("errorsend"));
-    
-    # building the "OK data sent" page
-    my $vbox_oksend= new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_oksend, 'mandrakestore', N("Finished"));
-    my $label_oksend = new Gtk2::Label("\n\n" . N("Your upload was successful!") . "\n" . N("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.") . "\n\n" . N("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"));
-    $label_oksend->set_justify('left');
-    $vbox_oksend->pack_start($label_oksend,$true ,$true,1);
-
-#automated mode
-    my $frame_auto = new Gtk2::Frame(N("automated Upgrades"));
-    my $vbox_frame_auto = new Gtk2::VBox(0,0);
-    $frame_auto->add($vbox_frame_auto);
-#    $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
-    $check_cron->set_active(1);
-    #$check_cron->set_uposition(70,245);
-    my $hboxfr1 = new Gtk2::HBox(0,0);
-    my $hboxfr2 = new Gtk2::HBox(0,0);
-    my $label_mirror = new Gtk2::Label(N("Choose your geographical location"));
-    $hboxfr2->pack_start($label_mirror,$true ,$true,5);
-    $gtkcombo_mirror->set_popdown_strings('',sort(keys %locations));
-    $hboxfr2->pack_end($gtkcombo_mirror,$true ,$true,5);
-    $hboxfr1->set_sensitive(1); 
-    $hboxfr2->set_sensitive(1);
-    $check_cron->signal_connect (clicked => sub { my $test_cron=$check_cron->get_active(); 
-						  $hboxfr1->set_sensitive($test_cron); 
-						  $hboxfr2->set_sensitive($test_cron); });
-    $vbox_frame_auto->pack_start($hboxfr1,$false ,$false,5);
-    $vbox_frame_auto->pack_start($hboxfr2,$false ,$false,5);
-    $vbox_oksend->pack_start($frame_auto, $true,$false,1);
-    $notebook_global->append_page($vbox_oksend,new Gtk2::Label("oksend"));
 }
 
 sub report_config {
@@ -457,35 +357,20 @@ join '', map { chomp; print FILE "$_\n" }
 close(FILE);
     remove_wait_msg($w);
 }
-sub wait_msg {
-    my ($msg, %options) = @_;
-    my $mainw = ugtk2->new('mdkonline', grab => 1, transient => $Main_Window);
-    my $label = ref($msg) =~ /^Gtk/ ? $msg : Gtk2::Label->new($msg);
-    gtkadd($mainw->{window}, gtkpack(gtkadd(create_vbox(), $label, if_(exists $options{widgets}, @{$options{widgets}}))));
-    $label->signal_connect(expose_event => sub { $mainw->{displayed} = 1; 0 });
-    $mainw->sync until $mainw->{displayed};
-    $mainw->flush;
-    $mainw;
-}
-sub remove_wait_msg { $_[0]->destroy }
 sub automated_upgrades {
-    # set up a daily cron to check connection and if there is one upgrade the system
-    open VERS, "/etc/mandrake-release" or die ("cannot open this file for read: %s", $!);
-    my @info_tree;
-    while (<VERS>) { 
-	@info_tree = split / /, $_;
-    }
-    close(VERS);
-    my $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()}[rand (2)];
-    my $version=$info_tree[3];
-    my $host = hostname;
+    my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
+    my $login = $o->{login}->get_text;
+    my $passwd = md5_hex($o->{passwd}->get_text);
+    my $boxname = $o->{machine}->get_text;
+    my $key = $o->{currentkey};
+    my $mirror = $o->{mirror};
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
 PASS=$passwd
-BOX=$box_name
-VER=$version
-MIRROR=$mirror_site
+BOX=$boxname
+VER=$r
+MIRROR=$mirror
 CURRENTKEY=$key 
 );
     output_p "/etc/cron.daily/mdkupdate",
@@ -495,157 +380,5 @@ if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate; fi
 chmod 0755, "/etc/cron.daily/mdkupdate";
 }
 
-sub set_boxname {
-    my ($box) = @_;
-    my %b = getVarsFromSh("/root/.mdkupdate");
-    $box->set_text($b{BOX});
-}
-
-sub info_popup {
-    # must have been translated by the caller
-    my ($title,$text) = @_;
-    my $popup = new Gtk2::Dialog();
-    $popup->set_transient_for($Main_Window);
-    $popup->set_position('center');
-    my $box = new Gtk2::HButtonBox;
-    $popup->action_area->pack_start($box,0,0,0);
-    my $button_ok = new Gtk2::Button(" " . N("OK") . " ");
-    $button_ok->signal_connect("clicked", sub { $popup->destroy });
-    $box->add($button_ok);
-    my $label = new Gtk2::Label($text);
-    $popup->set_title($title);
-    $popup->vbox->pack_start( $label, 1, 1, 0 );
-    $popup->show_all();
-    $popup->set_modal(1);
-}
-
-sub confirm_quit {
-    my $window_about = new Gtk2::Dialog();
-    $window_about->set_transient_for($Main_Window);
-    $window_about->set_position('center');
-    my $bbox1 = new Gtk2::HButtonBox;
-    $window_about->action_area->pack_start($bbox1,0,0,0);
-    my $button_cancel = new Gtk2::Button(" " . N("Cancel") . " ");
-    $button_cancel->signal_connect("clicked", sub { $window_about->destroy });
-    $bbox1->add($button_cancel);
-    my $button_quit = new Gtk2::Button(" " . N("Quit") . " ");
-    $button_quit->signal_connect (clicked =>\&gtk_main_quit);
-    $bbox1->add($button_quit);
-    my $label = new Gtk2::Label(N("Do you really want to abort MandrakeOnline?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
-    $window_about->set_title(N("Really abort? - MandrakeOnline"));
-    $window_about->vbox->pack_start( $label, 1, 1, 0 );
-    $window_about->show_all();
-}
-
-sub pack_box_identity {
-    my ($vbox,$label1,$entry1,$label2,$entry2,$label3,$entry3)=@_;
-    my $table = new Gtk2::Table( 3, 2, $true);
-    my $Label_wg1=new Gtk2::Label($label1);
-    my $Label_wg2=new Gtk2::Label($label2);
-    my $Label_wg3=new Gtk2::Label($label3);
-    Gtk2::Label::set_justify($Label_wg1, 'right');
-    Gtk2::Label::set_justify($Label_wg2, 'right');
-    Gtk2::Label::set_justify($Label_wg3, 'right');
-    $table->attach_defaults( $Label_wg1, 0, 1, 0, 1);
-    $table->attach_defaults( $entry1, 1, 2, 0, 1);
-    $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);
-    $table->attach_defaults( $entry2, 1, 2, 1, 2);
-    $table->attach_defaults( $Label_wg3, 0, 1, 2, 3);
-    $table->attach_defaults( $entry3, 1, 2, 2, 3);
-    $Label_wg1->set_uposition(25,170);
-    $Label_wg2->set_uposition(25,200);
-    $Label_wg3->set_uposition(25,230);
-    $entry1->set_uposition(210,170);
-    $entry2->set_uposition(210,200);
-    $entry3->set_uposition(210,230);
-    $entry2->set_visibility($false);
-    $vbox->pack_start($table,$true ,$true ,0);
-}
-sub get_on_privacy {
-    my ($vbox) = @_;
-    $vbox->pack_start(create_scrolled_window(gtktext_insert(Gtk2::TextView->new,
-N(" You are just starting our Free Mandrake Linux Download Edition for the first time. 
-
-There are now over three million Mandrake Linux users all over the world!
-
-Please take a few seconds to fill a short questionnaire. The data from this 
-questionnaire will be used only for aggregate market studies.
-The text below is the privacy policy of MandrakeSoft about your personal data.") .
-"\n" . 
-
-N("What personal data do we collect ?         
-                               
-Various information is collected in different areas of the website;
-what follows is an overview of the data we keep:
-
-Firstly, we record your email address, name and postal address.
-Secondly we give you a unique customer ID. This ID will be used to 
-add additional information related to your Mandrake account such as:
-    - Your subscription to mailling lists.
-    - When registering a purchased product, we ask for personal
-information as well as system/hardware details so that we may deliver
-the best support services customized to your needs.
-    - On our donation page and on our online store (MandrakeStore), we
-record data for billing purpose (we do not store any credit card data).
-    
-What do we do with this information?
-
-We never share personal information with other persons or companies -
-we use this data strictly for the following purposes:
-    - If you have subscribed to a mailing list, we keep this email
-address in our database to provide you with customized information
-and/or to enable you to participate in discussions in various mailing
-lists. If you send a message to such a list, other people will see
-your email address but no external parties have access to our database
-of subscribers. At any time you may unsubscribe to any list by using
-the appropriate form.
-    - If you provide information when registering a purchased product
-to receive support, we keep this information private unless the
-information is required by one of our partners to deliver the support
-you require.
-    - If you use MandrakeStore, we also use your Customer ID to track
-your order and deliver your products.
-    - If you provide us with marketing information, we keep it for 
-internal use only in order to improve our products so that they can 
-better fit your needs whether you have purchased a product or not.), How to change / correct your personal data?
-
-French law gives individuals the right to access, correct, modify or 
-remove their own personal data that we have on record. We offer this 
-as a worldwide privilege. You may execute this right at any time by 
-logging to your account with your customer ID and editing your
-personnal data. You can log on to this page: http://www.mandrakeonline.net"
-))), $true, $true, 0 );
-}    
-
-sub writ_on_pixmaps {
-    my ($vbox, $pix, $label) = @_;
-    my $darea = gtkset_size_request(Gtk2::DrawingArea->new, -1, 100);
-    $darea->modify_font(Gtk2::Pango::FontDescription->from_string(N("Sans Italic 17")));
-    my $layout = $darea->create_pango_layout($label);
-    my $pixbuf_banner = gtkcreate_pixbuf($pix);
-    $darea->signal_connect(expose_event => sub {
-                               fill_tiled($darea,$pixbuf_banner);
-                               $darea->window->draw_layout($darea->style->white_gc, (450-($layout->get_pixel_size)[0])/2, 35, $layout);
-                               0;
-                           });
-    $vbox->pack_start($darea, 0, 0, 0);
-}
-
-sub splash_warning {
-    my ($label) = @_;
-    my $win_about = new Gtk2::Dialog();
-    $win_about->set_position('center');
-    $win_about->set_transient_for($Main_Window);
-    my $bbox1 = new Gtk2::HButtonBox;
-    $win_about->action_area->pack_start($bbox1,0,0,0);
-    my $button = new Gtk2::Button(" " . N("Close") . " ");
-    $button->signal_connect_object("clicked", $win_about => 'destroy');
-    $bbox1->add($button);
-    my $lab = new Gtk2::Label($label);
-    my $style1 = new Gtk2::Style;
-    $win_about->vbox->pack_start($lab, 1, 1, 0);
-    $win_about->show_all();
-    $win_about->set_modal(1);
-}
 
 
