@@ -10,8 +10,8 @@ URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	%{name}-backend >= 1.1-4mdk, drakfirsttime >= 1.0-0.6mdk
-Requires:   perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk, hwdb-clients >= 0.15.1-1mdk
+Requires:	%{name}-backend = %{version}-%{release}, drakfirsttime >= 1.0-0.6mdk
+Requires:   perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
