@@ -27,18 +27,9 @@ use HTTP::Request::Common;
 use LWP::UserAgent;
 use Net::HTTPS; #for https connections 
 use MIME::Base64 qw(encode_base64);
-use MDK::Common;
 use lib qw(/usr/lib/libDrakX);
-use Locale::gettext;
-
-#- I18N.
-setlocale (LC_ALL, "");
-textdomain ("mdkupdate");
-
-sub _ {
-    my ($format, @params) = @_;
-    sprintf(Locale::gettext::gettext($format), @params);
-}
+use common;
+BEGIN { unshift @::textdomains, 'mdkupdate' }
 
 my $logfile = "/var/log/mdkupdate.log";
 my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
@@ -49,20 +40,22 @@ my $security = grep { /^-?-security$/ } @ARGV;
 my $update = grep { /^-?-update$/ } @ARGV;
 
 sub usage {
-    print STDERR _("mdkupdate version %s
+    print STDERR N("mdkupdate version %s
 Copyright (C) 2002 MandrakeSoft.
 This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
-", $VERSION) . _("  --help         - print this help message.
-") . _("  --security     - use only security media.
-") . _("  --update       - update all information.
-") . _("  -v             - verbose mode.
+", $VERSION) . N("  --help         - print this help message.
+") . N("  --security     - use only security media.
+") . N("  --update       - update all information.
+") . N("  -v             - verbose mode.
 ");
     exit(0);
 }
 
 grep { $_ !~ /^-?-(v|update|security)$/ } @ARGV and usage;
+
+-s "/root/.mdkupdate" or die N("No /root/.mdkupdate file found. Run mdkonline wizard first");
 
 my %o = getVarsFromSh("/root/.mdkupdate");
 update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
@@ -169,10 +162,11 @@ sub update_rpms {
 	my $request = HTTP::Request->new(GET => $url_get_rpms.'?log='.$login.'&pass='.$password.'&host='.$box_name.'&key='.$curkey);
 	my $response = $ua->request($request);
 	$string = $response->content;
+	print " \n\n *****  Response from update_rpms is : \n $string \n end update_rpms answer **********\n\n";
 	if ($response->is_success) {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
-	    log_i(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again."));
+	    log_i(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
 	    clean_dir();
 	    exit 1;
 	}
@@ -195,44 +189,34 @@ sub update_rpms {
 	    });
 	    my @junk= splice(@str_m,0,3);
 	    my $mir_full = "ftp://$l{MIRROR}/$l{VER}/RPMS/";
-	    update_packages($mir_full,@str_m);
+	    update_packages($mir_full, @str_m);
 	} else { log_i("problem occur $str_m\n"); }
 	    	    
     } else {
-	log_i(_("Your login or password may be wrong")."\n"._("You need to have an account on MandrakeOnline, or update your subscription.")."\n"._("For any problem send an e-mail to support\@mandrakeonline.net\n"));
+	log_i(N("Your login or password may be wrong") . "\n" . N("You need to have an account on MandrakeOnline, or update your subscription.")."\n" . N("For any problem send an e-mail to support\@mandrakeonline.net\n"));
 	clean_dir();
 	exit 1;
     }
 }
 
 sub update_packages {
-    my ($mir,@str) = @_;
+    my ($mir, @str) = @_;
     @str or return;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
 	system "/usr/sbin/urpmi.addmedia", "mdkupdate", $mir;
-	$? == 0 or die _("Unable to create mdkupdate medium.\n");
+	$? == 0 or die N("Unable to create mdkupdate medium.\n");
 	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
-	$? == 0 or die _("Unable to update packages from mdkupdate medium.\n");
+	$? == 0 or die N("Unable to update packages from mdkupdate medium.\n");
     };
-    $@ and die;
-#    chdir($rpms_rep) or log_i("\ncannot chdir to $rpms_rep\n");
-#    $full_rpm = join(' ',@str);
-#    print "@str\n";
-#    foreach (@str) {
-#	-x "/usr/bin/wget" or die _("wget is missing\n");
-#	`/usr/bin/wget -nc $mir$_`;
-#    }
-#    `urpmi $full_rpm`;
-#    foreach $pack (@str) {
-#	system("rm -f $pack");
-#    }	
+    $@ and die "Problem upgrading with urpmi";
 }
 
 sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
     #`sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
     `sdiff -s /root/rpm_qa_installed_after /root/.mdkupdate.rpms >/root/$login.$password.$box_name.$oldkey.dif`;
+    -s "/root/$login.$password.$box_name.$oldkey.dif" or die N("System is up to date");
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
     my $response = $ua->request(POST "https://www.mandrakeonline.net/online_dif.php",
@@ -245,10 +229,7 @@ sub send_rpm_dif {
     if ($response->content =~ /TRUE/) {
 	unlink "/root/.mdkupdate.rpms";
 	rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
-    }
-
-    # Check the outcome of the response
-    print "REPONSE: ".$response->content."\n";
+    } else { print "REPONSE: " . $response->content . "\n"; } 
 }
 
 sub clean_dir {
@@ -258,7 +239,7 @@ sub clean_dir {
 sub rpm_qa {
     my ($file) = @_;
     open (FILE,"> $file") || die "Couldn't open $file : $!"; 
-    map { chomp; print FILE "$_" } join('',sort `rpm -qa`);
+    map { chomp; print FILE "$_" } join('', sort `rpm -qa`);
     close FILE;
 }
 
