@@ -33,7 +33,7 @@ if ($@) {
 }
 my ($eventbox, $img);
 add_icon_path("/usr/share/mdkonline/pixmaps/");
-my ($menu, $url, $timeout);
+my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
 my $av_pkgs;
@@ -240,7 +240,11 @@ sub isNetwork {
 }
 sub configure {
     system "/usr/sbin/mdkonline &";
-    
+    $refreshtm = Glib::Timeout->add(1*60*1000, sub {
+					-e $conffile and Glib::Source->remove($refreshtm);
+					silentCheck();
+					1;
+				    });
 }
 sub getSite {
     my $b = browser();
