@@ -424,21 +424,6 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu
 }
-sub forkEm {
-    my ($command) = shift;
-    my $pid = fork();
-    if (defined $pid) {
-	!$pid and do { exec($command) or POSIX::_exit(1) };
-	push @proctable, $pid;
-	return $pid
-    } else {
-	print "Fork unsuccessful\n";
-    }
-}
-sub killEm {
-    map { if__($_, kill 'TERM', $_) } @proctable;
-    @proctable = ();
-}
 sub logIt {
     my $log = shift;
     $mLog .= $log;
