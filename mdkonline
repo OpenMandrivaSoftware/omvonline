@@ -28,7 +28,6 @@ use common;
 
 BEGIN { unshift @::textdomains, 'mdkonline', 'drakfw' }
 use Config;
-init Gtk2;
 
 #use LWP::Debug qw(+);
 use LWP::UserAgent;
