@@ -20,7 +20,7 @@ sub get_release() {
 sub get_from_URL {
     my ($link, $agent_name) = @_;
     my $ua = LWP::UserAgent->new;
-    $ua->agent("$agent_name" . $ua->agent);
+    $ua->agent($agent_name . $ua->agent);
     $ua->env_proxy;
     my $request = HTTP::Request->new(GET => $link);
     my $response = $ua->request($request);
@@ -54,25 +54,23 @@ sub header { "
 * $_[0]
 ********************************************************************************";
 }
-open (my $FILE,"> $file") || die "Couldn't open $file : $!";
-map { chomp; print $FILE "$_\n" }
+ouput($file, map { chomp; "$_\n" }
   header("partitions"), cat_("/proc/partitions"),
   header("cpuinfo"), cat_("/proc/cpuinfo"),
   header("fstab"), cat_("/etc/fstab"),
   header("/etc/modules.conf"), cat_("/etc/modules.conf"),
-  header("rpm -qa"), join ('', sort `rpm -qa`),
-  header("mandrake version"), cat_('/etc/mandrake-release');
-close($FILE);
-`/usr/bin/bzip2 \\\-f $file`;
-open (my $F, "$file" . ".bz2") or die "Cannot open file : $!";
+  header("rpm -qa"), join('', sort `rpm -qa`),
+  header("mandrake version"), cat_('/etc/mandrake-release'));
+system("/usr/bin/bzip2 -f $file");
+open(my $F, $file . ".bz2") or die "Cannot open file : $!";
 my ($chunk, $buffer);
 while (read($F, $chunk, 60*57)) {
     $buffer .= $chunk;
 }
-close ($F);
-open (my $OUT, "> $file" . ".bz2.uue") or die "Cannot open file : $!";
+close($F);
+open(my $OUT, "> $file" . ".bz2.uue") or die "Cannot open file : $!";
 print $OUT encode_base64($buffer);
-close ($OUT);
+close($OUT);
 }
 
 sub send_config {
@@ -92,13 +90,13 @@ sub send_config {
 
 sub mv_files {
     my ($source, $dest) = @_;
-    -e $source and system("mv","$source","$dest");
+    -e $source and system("mv", $source, $dest);
 }
 
 sub automated_upgrades {
     my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = get_release();
-    output "$conffile",
+    output $conffile,
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
 PASS=$passwd

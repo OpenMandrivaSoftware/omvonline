@@ -43,7 +43,7 @@ my $conffile = "$confdir/mdkupdate";
 
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
-my $in = 'interactive'->vnew('su', 'default');
+require_root_capability();
 my $VERSION = '1.0';
 my ($create_account, $auto_update) = (0, 1);
 
@@ -51,18 +51,18 @@ my ($o, $p);
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
-mdkonline::mv_files("/root/.mdkupdate", "$conffile");
+mdkonline::mv_files("/root/.mdkupdate", $conffile);
 
 $o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 580, 470);
 $o->{mw}{rwindow}->set_position('center');
-$o->{mw}{window}->signal_connect( "delete_event", sub { Gtk2->main_quit} );
+$o->{mw}{window}->signal_connect("delete_event", sub { Gtk2->main_quit });
 $o->{nb} = Gtk2::Notebook->new;
 $o->{nb}->set_show_tabs(0); $o->{nb}->set_show_border(0);
 $o->{bottomHbox} = Gtk2::HBox->new;
 my %stage = (
-	     0 => sub { if ($o->{account_cb}->get_active) { subs_online() } else { $o->{nb}->next_page} },
-	     1 => sub { $o->{nb}->next_page(); set_entry_with_conf() }, 
+	     0 => sub { if ($o->{account_cb}->get_active) { subs_online() } else { $o->{nb}->next_page } },
+	     1 => sub { $o->{nb}->next_page; set_entry_with_conf() }, 
 	     2 => sub { check_passwd() },
 	     3 => sub { log::l("[mdkonline] Sending configuration to remote server"); send_conf_online() },
 	     4 => sub { log::l("[mdkonline] Writing local configuration dir"); set_conf() }
@@ -79,14 +79,14 @@ $o->{actions} = {
 		 },
 		 Prev => sub {
 		     $p = $o->{nb}->get_current_page;
-		     $o->{nb}->prev_page();
+		     $o->{nb}->prev_page;
 		     $p <= 1 and init(0)
 		 }
 		};
 foreach my $l (['Next', 'gtk-go-forward', 'stock'], ['SkipWiz', N("Skip Wizard")], ['Prev', 'gtk-go-back', 'stock']) {
     $o->{$l->[0]} = $l->[2] ? Gtk2::Button->new_from_stock($l->[1]) : Gtk2::Button->new(" " . $l->[1] . " ");
     $l->[2] ? $o->{bottomHbox}->pack_end($o->{$l->[0]}, 0, 0, 1) : $o->{bottomHbox}->pack_start($o->{$l->[0]}, 0, 0, 1);
-    $o->{$l->[0]}->signal_connect( clicked => sub { $o->{actions}{$l->[0]}->() });
+    $o->{$l->[0]}->signal_connect(clicked => sub { $o->{actions}{$l->[0]}->() });
 }
 gtkadd($o->{mw}{window},
        gtkpack_(Gtk2::VBox->new(0, 2),
@@ -101,14 +101,14 @@ gtkappend_page($o->{nb},
 			0, Gtk2::Label->new(N("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n")),
 			1, gtkadd(gtkset_border_width(Gtk2::Frame->new(N("Create a MandrakeOnline Account")), 5),
 				  gtkpack_(gtkset_border_width(Gtk2::VBox->new(0, 5), 5),
-					   0, gtksignal_connect(gtkset_active($o->{account_cb} = Gtk2::CheckButton->new(N("I don't have a MandrakeOnline account and I want to ") .  N("Subscribe")), $create_account), clicked => sub { $create_account =! $create_account; $o->{vbox_account}->set_sensitive($create_account) }),
+					   0, gtksignal_connect(gtkset_active($o->{account_cb} = Gtk2::CheckButton->new(N("I don't have a MandrakeOnline account and I want to ") .  N("Subscribe")), $create_account), clicked => sub { $create_account = !$create_account; $o->{vbox_account}->set_sensitive($create_account) }),
 					   1, gtkpack_($o->{vbox_account} = Gtk2::VBox->new(0, 3),
 						       1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10, mcc => 1 },
 									   [],
-									   [ N("Login:"), $o->{clogin} = Gtk2::Entry->new() ],
+									   [ N("Login:"), $o->{clogin} = Gtk2::Entry->new ],
 									   [ N("Password:"), $o->{cpasswd} = entry_hidepass() ],
 									   [ N("Confirm Password:"), $o->{cconfirm} = entry_hidepass() ],
-									   [ N("Mail contact:"), $o->{cmail} = Gtk2::Entry->new() ]
+									   [ N("Mail contact:"), $o->{cmail} = Gtk2::Entry->new ]
 									  ))
 					  )
 				 ))
@@ -125,9 +125,9 @@ gtkappend_page($o->{nb},
 			0, Gtk2::WrappedLabel->new("\n\n" . N("Enter your MandrakeOnline login, password and machine name:")),
 			1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10, mcc => 1 },
 					    [], 
-					    [ N("Login:"), $o->{login} = Gtk2::Entry->new(), "" ],
+					    [ N("Login:"), $o->{login} = Gtk2::Entry->new, "" ],
 					    [ N("Password:"), $o->{passwd} = entry_hidepass(), "" ],
-					    [ N("Machine name:"), $o->{machine} = Gtk2::Entry->new() ],
+					    [ N("Machine name:"), $o->{machine} = Gtk2::Entry->new ],
 					   ))
 	      );
 gtkappend_page($o->{nb},
@@ -163,7 +163,7 @@ $o->{mw}{rwindow}->show_all;
 Gtk2->main;
 ugtk2->exit(0);
 
-sub subs_online {
+sub subs_online() {
     my $explink = 'http://www.mandrakeexpert.com/online3_CreateAccount.php';
     my $login = $o->{clogin}->get_text; my $despwd = $o->{cpasswd}->get_text; my $despwdcfm = $o->{cconfirm}->get_text;
     my $cmail = $o->{cmail}->get_text;
@@ -174,26 +174,26 @@ sub subs_online {
 	my $url = $explink . '?desuserid=' . $login . '&despwd=' . $despwd . '&user_email=' . $cmail;
 	#print "LOGIN = $login\nPASSWD = $despwd\nMAIL= $cmail\nURL=$url\n";
 	my $ret = mdkonline::subscribe_online($url);
-	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}->{window}, $ret) };
+	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}{window}, $ret) };
     }
 }
 sub check_errors {
     my ($login, $despwd, $despwdcfm, $cmail) = @_;
-    $login or raiseError($o->{mw}->{window},N("Error"), N("Please provide a login"));
+    $login or raiseError($o->{mw}{window}, N("Error"), N("Please provide a login"));
     if (!$::error && $despwd ne $despwdcfm) {
-	raiseError($o->{mw}->{window},N("Error"), N("The passwords do not match\n Please try again\n"))
-    } elsif (!$::error and check_valid_email($cmail) != 1) {
-	raiseError($o->{mw}->{window},N("Error"), N("Not a valid mail address!\n"))
+	raiseError($o->{mw}{window}, N("Error"), N("The passwords do not match\n Please try again\n"))
+    } elsif (!$::error && check_valid_email($cmail) != 1) {
+	raiseError($o->{mw}{window}, N("Error"), N("Not a valid mail address!\n"))
     }
 }
-sub set_entry_with_conf {
+sub set_entry_with_conf() {
     my $wideconf = '/etc/sysconfig/mdkonline';
     my %t = getVarsFromSh($wideconf);
-    my $host = chomp_(`hostname`) ; $host =~ /(\w+)(.*)/;
-    $t{MACHINE} ||= $1;
+    my $host = chomp_(`hostname`);
+    $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
     foreach (qw(login machine)) { $o->{$_}->get_text or $o->{$_}->set_text($t{uc($_)}) }
 }
-sub send_conf_online {
+sub send_conf_online() {
     my ($login, $passwd, $boxname) = get_names();
     my $w = wait_msg(N("Reading configuration\n"));
     my $link = 'https://www.mandrakeonline.net/wizard.php';
@@ -207,7 +207,7 @@ sub send_conf_online {
 	$o->{currentkey} = $key;
 	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide
     } else {
-	raiseError($o->{mw}->{window}, N("Connection problem"), N("Problem occurs when uploading files, please try again"));
+	raiseError($o->{mw}{window}, N("Connection problem"), N("Problem occurs when uploading files, please try again"));
     }
 }
 sub set_conf() {
@@ -244,15 +244,16 @@ sub main_quit() {
     # remove local files
     my ($login, $passwd, $boxname) = get_names();
     if ($login && $passwd && $boxname) {
-	-f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
-	-f "$confdir/$login.$passwd.$boxname.online.log.bz2" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2");
+	-f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" and unlink("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
+	-f "$confdir/$login.$passwd.$boxname.online.log.bz2" and unlink("$confdir/$login.$passwd.$boxname.online.log.bz2");
     }
     # quit
     print N("Quitting Wizard\n");
     Gtk2->main_quit;
 }
 sub is_alphanum {
-    my $is_num = sub { $_[0] =~ /^[[:alnum:]]+$/ ? 1 : 0 }
+    my ($x) = @_;
+    my $_is_num = sub { $x =~ /^[[:alnum:]]+$/ ? 1 : 0 }
 }
 sub check_passwd() {
     my $link = 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php';
@@ -262,16 +263,16 @@ sub check_passwd() {
     if ($login && $passwd && $boxname && $login !~ /\s+/ && $passwd !~ /\s+/) {
 	# NEW METHOD (http)
 	# first, MD5ify the password
-	my $w = wait_msg(("Connecting ...\n"));
+	my $w = wait_msg("Connecting ...\n");
 	$link .= '?u=' . $login . '&p=' . $passwd;
 	my $response = mdkonline::get_from_URL($link);
 	remove_wait_msg($w);
 	# Check the outcome of the response
 	if ($response->is_success) {
-	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
+	    $result = $response->content =~ /TRUE/ ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
-	    raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	    raiseError($o->{mw}{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
 	    return;
 	}
     } else {
@@ -280,10 +281,10 @@ sub check_passwd() {
     
     # if correct, go to page 4
     if (! $result) {
-	$o->{nb}->next_page(); 
+	$o->{nb}->next_page; 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	raiseError($o->{mw}->{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
+	raiseError($o->{mw}{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
 	$o->{passwd}->set_text("");
     }
 }
