@@ -58,7 +58,7 @@ my $wideconf = '/etc/sysconfig/mdkonline';
 my ($o, $p);
 
 #for compatibilities
-mkdir_p($confdir) if !-d confdir;
+mkdir_p($confdir) if !-d $confdir;
 mvfiles("/root/.mdkupdate", "$confdir/mdkupdate");
 #mvfiles("/root/.mdkonline", "$confdir/mdkonline");
 
