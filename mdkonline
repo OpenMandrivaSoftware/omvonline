@@ -183,8 +183,8 @@ sub subsOnline {
 		     };
 	if ($ret->is_success) {
 	    my $content = $ret->content;
-	    print "CODE_RETOUR = $content\n";
-	    if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1);print "CODE = $code\n"; eval { $result->{$code}->() } }
+#	    print "CODE_RETOUR = $content\n";
+	    if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1); eval { $result->{$code}->() } }
 	} else { raiseError($o->{mw}->{window}, N("Server Problem"), N("Problem connecting to server \n")) }
     }
 }
