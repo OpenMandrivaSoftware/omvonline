@@ -197,7 +197,7 @@ sub lastCheck {
     my %h = getVarsFromSh($conffile);
     my ($t, $l);
     $t = $h{LASTCHECK} =~ s/\_/  /;
-    $t
+    $t ? $t : N("No check")
 }
 sub checkUpdates {
     if (!isNetwork()) {
