@@ -127,7 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Fri Sep 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-8mdk
-- fixed typo in sprintf_fixutf8
+- fixed typos in sprintf_fixutf8 and output functions
 
 * Thu Sep  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-7mdk
 - i18n is back (#11064)
