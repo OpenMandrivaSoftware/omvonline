@@ -172,7 +172,7 @@ sub setLabel {
 }
 sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
 sub launchUpdate { logIt(N("Launching MandrakeUpdate\n")); system "/usr/sbin/MandrakeUpdate &" }
-sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); system "/usr/sbin/mdkupdate", "--applet"; -e conffile and $silentCheck() }
+sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); system "/usr/sbin/mdkupdate", "--applet"; -e conffile and silentCheck() }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
