@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-27 20:59+0100\n"
-"PO-Revision-Date: 2004-02-26 15:42+0100\n"
+"POT-Creation-Date: 2004-03-01 00:01+0100\n"
+"PO-Revision-Date: 2004-02-29 17:02+0100\n"
 "Last-Translator: Per Øyvind Karlsen <peroyvind@sintrax.net>\n"
 "Language-Team: Norwegian Bokmål <nb@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,119 +18,144 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:76
+#: ../mdkapplet:47
+msgid "No updates available for your system"
+msgstr ""
+
+#: ../mdkapplet:53
+msgid "Test critical"
+msgstr ""
+
+#: ../mdkapplet:59
+msgid "System is busy. Wait ..."
+msgstr ""
+
+#: ../mdkapplet:65
+#, perl-format
+msgid "%s packages available for update"
+msgstr ""
+
+#: ../mdkapplet:71
+msgid "Service not available. Click on configuration"
+msgstr ""
+
+#: ../mdkapplet:77
+msgid "Network is down. Click on configure Network"
+msgstr ""
+
+#: ../mdkapplet:81
 msgid "Launch Mandrake Update"
 msgstr "Start Mandrake Update"
 
-#: ../mdkapplet:77
+#: ../mdkapplet:82
 msgid "Configuration"
 msgstr "Konfigurasjon"
 
-#: ../mdkapplet:78
+#: ../mdkapplet:83
 msgid "Check Updates"
 msgstr "Sjekk etter oppdateringer"
 
-#: ../mdkapplet:79
+#: ../mdkapplet:84
 msgid "Online WebSite"
 msgstr "Online Nettsted"
 
-#: ../mdkapplet:80
+#: ../mdkapplet:85
 msgid "Configure Network"
 msgstr "Konfigurer nettverk"
 
-#: ../mdkapplet:81
+#: ../mdkapplet:86
 msgid "Register Now!"
 msgstr "Registrer nå!"
 
-#: ../mdkapplet:105
+#: ../mdkapplet:110
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Updates-panelprogram"
 
-#: ../mdkapplet:113
+#: ../mdkapplet:118
 msgid "Actions"
 msgstr "Handlinger"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:120
 msgid "Install updates"
-msgstr ""
+msgstr "Installer oppdateringer"
 
-#: ../mdkapplet:116
+#: ../mdkapplet:121
 msgid "Configure"
 msgstr "Konfigurer"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:122
 msgid "Check updates"
 msgstr "Sjekk etter oppdateringer"
 
-#: ../mdkapplet:118
+#: ../mdkapplet:123
 msgid "See logs"
 msgstr "Se logger"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:126
 msgid "Status"
 msgstr "Status"
 
-#: ../mdkapplet:124
+#: ../mdkapplet:129
 msgid "Network Connection: "
 msgstr "Nettverkstilkobling"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:130
 msgid "Down"
 msgstr "Ned"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:130
 msgid "Up"
 msgstr "Opp"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:133
 msgid "New Updates: "
 msgstr "Nye oppdateringer: "
 
-#: ../mdkapplet:129
+#: ../mdkapplet:134
 msgid "Available"
 msgstr "Tilgjengelig"
 
-#: ../mdkapplet:129
+#: ../mdkapplet:134
 msgid "Not Available"
 msgstr "Ikke tilgjengelig"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:137
 msgid "Last check: "
 msgstr "Siste sjekk: "
 
-#: ../mdkapplet:138
+#: ../mdkapplet:143
 msgid "Close"
 msgstr "Lukk"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:223
 msgid "About.."
 msgstr "Om.."
 
-#: ../mdkapplet:196
+#: ../mdkapplet:224
 msgid "Quit"
 msgstr "Avslutt"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:228
 msgid "About Online Applet"
 msgstr "Om Online-panelprogram"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:229
 msgid "Mandrake Online Team"
 msgstr "Mandrake Online-team"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:229
 msgid "Mandrake Update Notification Applet"
 msgstr "Mandrake Update notifiseringspanelprogram"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:229
 msgid "Team:"
 msgstr "Team:"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:229
 msgid "This Software is under GPL"
 msgstr "Denne programvare er under GPL"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:229
 msgid "Version:"
 msgstr "Versjon:"
 
@@ -411,16 +436,15 @@ msgstr "  --help         - skriv denne hjelp beskjeden.\n"
 
 #: ../mdkupdate:56
 msgid "  --auto         - Mdkupdate launched automatically.\n"
-msgstr ""
+msgstr "  --auto         - Mdkupdate kjørt automatisk.\n"
 
 #: ../mdkupdate:57
 msgid "  --applet       - launch MandrakeUpdate.\n"
 msgstr "  --applet       - start MandrakeUpdate.\n"
 
 #: ../mdkupdate:58
-#, fuzzy
 msgid "  --update       - Update keys\n"
-msgstr "  --applet       - start MandrakeUpdate.\n"
+msgstr "  --update       - Oppdater nøkler\n"
 
 #: ../mdkupdate:77
 msgid "MandrakeUpdate could not contact the site, we will try again."
