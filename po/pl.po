@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-03 17:51+0100\n"
+"POT-Creation-Date: 2004-03-04 14:49+0100\n"
 "PO-Revision-Date: 2004-02-20 19:59+0100\n"
 "Last-Translator: Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -15,107 +15,108 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:48
 msgid "No updates available for your system"
 msgstr "Brak dostępnych aktualizacji dla twojego systemu"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:54
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Problemy konfiguracyjne. Uruchom ponownie \"configure\""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:60
 msgid "System is busy. Wait ..."
 msgstr "System jest zajęty. Czekaj ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:66
+#, perl-format
 msgid "%s packages available for update"
-msgstr "% pakietów jest dostępnych do aktualizacji"
+msgstr "%s pakietów jest dostępnych do aktualizacji"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:72
 msgid "Service not available. Click on \"configuration\""
 msgstr "Usługa jest niedostępna. Kliknij na \"konfiguracja\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:78
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Sieć jest wyłączona. Kliknij na \"Konfiguracja sieci\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:84
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Usługa została wyłączona. Oczekiwanie na płatność..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:88
 msgid "Launch Mandrake Update"
 msgstr "Uruchom Uaktualnienie Mandrake"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:89
 msgid "Configuration"
 msgstr "Konfiguracja"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:90
 msgid "Check Updates"
 msgstr "Sprawdź aktualizację"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:91
 msgid "Online WebSite"
 msgstr "Witryna Online"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:92
 msgid "Configure Network"
 msgstr "Skonfiguruj sieć"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:93
 msgid "Configure Now!"
 msgstr "Skonfiguruj teraz!"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:122
 msgid "Mandrake Updates Applet"
 msgstr "Aplet aktualizacji Mandrake"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 msgid "Actions"
 msgstr "Operacje"
 
-#: ../mdkapplet:130
+#: ../mdkapplet:131
 msgid "Install updates"
 msgstr "Zainstaluj aktualizacje"
 
-#: ../mdkapplet:131
+#: ../mdkapplet:132
 msgid "Configure"
 msgstr "Skonfiguruj"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:133
 msgid "Check updates"
 msgstr "Sprawdź aktualizację"
 
-#: ../mdkapplet:133
+#: ../mdkapplet:134
 msgid "See logs"
 msgstr "Zobacz dziennik"
 
-#: ../mdkapplet:136
+#: ../mdkapplet:137
 msgid "Status"
 msgstr "Stan"
 
-#: ../mdkapplet:139
+#: ../mdkapplet:140
 msgid "Network Connection: "
 msgstr "Połączenie sieciowe: "
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 msgid "Down"
 msgstr "W dół"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 msgid "Up"
 msgstr "W górę"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:144
 msgid "New Updates: "
 msgstr "Nowe aktualizacje: "
 
-#: ../mdkapplet:144
+#: ../mdkapplet:145
 msgid "Available"
 msgstr "Dostępny"
 
-#: ../mdkapplet:144
+#: ../mdkapplet:145
 msgid "Not Available"
 msgstr "Niedostępny"
 
@@ -131,11 +132,11 @@ msgstr "Zamknij"
 msgid "No check"
 msgstr "Bez sprawdzania"
 
-#: ../mdkapplet:280
+#: ../mdkapplet:285
 msgid "About.."
 msgstr "Informacje o programie"
 
-#: ../mdkapplet:281
+#: ../mdkapplet:286
 msgid "Quit"
 msgstr "Zakończ"
 
@@ -383,6 +384,7 @@ msgid "Reading configuration\n"
 msgstr "Wczytywanie konfiguracji\n"
 
 #: ../mdkupdate:50
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
