@@ -176,7 +176,7 @@ sub subs_online() {
 	my $url = $explink . '?desuserid=' . $login . '&despwd=' . $despwd . '&user_email=' . $cmail;
 	#print "LOGIN = $login\nPASSWD = $despwd\nMAIL= $cmail\nURL=$url\n";
 	my $ret = mdkonline::subscribe_online($url);
-	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}{window}, $ret) };
+	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}{window}, N("Error"), $ret) };
     }
 }
 sub check_errors {
