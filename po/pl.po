@@ -1,71 +1,69 @@
+# translation of mdkonline-pl.po to polski
 # translation of pl.po to Polish
 # Aplikacja umożliwiająca zdalne korzystanie z usług Mandrakelinux.
 # Copyright (C) 2002, 2004 Free Software Foundation, Inc.
 # Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>, 2002-2004.
+# Tomasz Bednarski <bednarski@skrzynka.pl>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pl\n"
+"Project-Id-Version: mdkonline-pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-15 05:14+0800\n"
-"PO-Revision-Date: 2004-02-20 19:59+0100\n"
+"PO-Revision-Date: 2004-08-25 20:55+0200\n"
 "Last-Translator: Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: polski <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../mdkapplet:64
-#, fuzzy
 msgid "Your system is up-to-date"
-msgstr "System jest zajęty. Czekaj ..."
+msgstr "Oprogramowanie systemu jest aktualne"
 
 #: ../mdkapplet:70
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrakeonline.net"
 msgstr ""
+"Problem z konfiguracją usługi. Sprawdź logi i wyślij e-mail'a pod adres "
+"support@mandrakeonline.net"
 
 #: ../mdkapplet:76
 msgid "System is busy. Please wait ..."
-msgstr "System jest zajęty. Czekaj ..."
+msgstr "System jest zajęty. Proszę czekać ..."
 
 #: ../mdkapplet:82
-#, fuzzy
 msgid "New updates are available for your system"
-msgstr "Brak dostępnych aktualizacji dla twojego systemu"
+msgstr "Dostępne są nowe aktualizacje dla Twojego systemu"
 
 #: ../mdkapplet:88
-#, fuzzy
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Usługa jest niedostępna. Kliknij na \"konfiguracja\""
+msgstr "Usługa jest nieskonfigurowana. Kliknij na \"Konfiguracja usługi\""
 
 #: ../mdkapplet:94
-#, fuzzy
 msgid "Network is down. Please configure your network"
-msgstr "Sieć jest wyłączona. Kliknij na \"Konfiguracja sieci\""
+msgstr "Sieć jest wyłączona. Skonfiguruj sieć"
 
 #: ../mdkapplet:100
-#, fuzzy
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Usługa jest niedostępna. Kliknij na \"konfiguracja\""
+msgstr "Usługa jest nieaktywna. Kliknij na Witryna internetowa\""
 
 #: ../mdkapplet:104 ../mdkapplet:153
 msgid "Install updates"
 msgstr "Zainstaluj aktualizacje"
 
 #: ../mdkapplet:105
-#, fuzzy
 msgid "Configure the service"
-msgstr "Skonfiguruj sieć"
+msgstr "Konfiguracja usługi"
 
 #: ../mdkapplet:106
 msgid "Check Updates"
-msgstr "Sprawdź aktualizację"
+msgstr "Sprawdź aktualizacje"
 
 #: ../mdkapplet:107
 msgid "Online WebSite"
-msgstr "Witryna Online"
+msgstr "Witryna internetowa"
 
 #: ../mdkapplet:108
 msgid "Configure Network"
@@ -89,7 +87,7 @@ msgstr "Skonfiguruj"
 
 #: ../mdkapplet:155
 msgid "Check updates"
-msgstr "Sprawdź aktualizację"
+msgstr "Sprawdź aktualizacje"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -120,9 +118,8 @@ msgid "Last check: "
 msgstr "Ostatnie sprawdzenie: "
 
 #: ../mdkapplet:200
-#, fuzzy
 msgid "Updates: "
-msgstr "Nowe aktualizacje: "
+msgstr "Aktualizacje: "
 
 #: ../mdkapplet:204
 msgid "Launching drakconnect\n"
@@ -130,15 +127,16 @@ msgstr "Uruchamianie programu drakconnect\n"
 
 #: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
-msgstr "Uruchamianie mdkupdate --applet\n"
+msgstr "Uruchamianie polecenia mdkupdate --applet\n"
 
 #: ../mdkapplet:212
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr ""
+"Mandrakeonline prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
 
 #: ../mdkapplet:220
 msgid "Computing new updates...\n"
-msgstr "Obliczanie nowych aktualizacji...\n"
+msgstr "Przetwarzanie nowych aktualizacji...\n"
 
 #: ../mdkapplet:222
 msgid "Connecting to"
@@ -155,21 +153,23 @@ msgstr "Nieznany stan"
 #: ../mdkapplet:249
 msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
-"Usługi internetowe są wyłaczone. Skontaktuj się z witryną Mandrakeonline\n"
+"Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandrakeonline\n"
 
 #: ../mdkapplet:250
 msgid "Wrong Password.\n"
-msgstr "Niepoprawne hasło.\n"
+msgstr "Złe hasło.\n"
 
 #: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
-msgstr "Niepoprawna operacja lub komputer lub nazwa użytkownika.\n"
+msgstr "Niepoprawna operacja, komputer lub nazwa użytkownika.\n"
 
 #: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
+"Coś nieprawidłowego dzieje się z ustawieniami sieci (sprawdź połączenie, "
+"zaporę sieciową lub ustawienia pośrednika)\n"
 
 #: ../mdkapplet:256
 msgid "System is up-to-date\n"
@@ -185,7 +185,7 @@ msgstr "Sprawdzanie sieci: wygląda na wyłączoną\n"
 
 #: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
-msgstr "Sprawdzanie pliku konfiguracyjnego: nieobecny\n"
+msgstr "Sprawdzanie pliku konfiguracyjnego: brak pliku\n"
 
 #: ../mdkapplet:401
 msgid "Logs"
@@ -197,11 +197,11 @@ msgstr "Wyczyść"
 
 #: ../mdkapplet:444
 msgid "About.."
-msgstr "Informacje o programie"
+msgstr "O programie"
 
 #: ../mdkapplet:445
 msgid "Always launch on startup"
-msgstr ""
+msgstr "Uruchamiaj przy starcie"
 
 #: ../mdkapplet:447
 msgid "Quit"
@@ -213,7 +213,7 @@ msgstr "Pomiń druida"
 
 #: ../mdkonline:100
 msgid "Welcome to Mandrakeonline"
-msgstr "Witaj w Mandrakeonline"
+msgstr "Witamy w Mandrakeonline"
 
 #: ../mdkonline:101
 msgid ""
@@ -224,12 +224,12 @@ msgid ""
 msgstr ""
 "Na tym etapie użytkownik powinien posiadać konto na Mandrakeonline.\n"
 "Ten asystent pomoże ci w przesłaniu konfiguracji\n"
-"(pakiety, konfiguracja sprzętowa) do centralnej bazy danych aby\n"
+"(pakiety, konfiguracja sprzętowa) do centralnej bazy danych, aby\n"
 "móc lepiej informować cię o odpowiednich uaktualnieniach.\n"
 
 #: ../mdkonline:102
 msgid "Create a Mandrakeonline Account"
-msgstr "Utwórz konto Mandrakelinux Online"
+msgstr "Utwórz konto Mandrakeonline "
 
 #: ../mdkonline:104
 msgid "I don't have a Mandrakeonline account and I want to "
@@ -301,13 +301,13 @@ msgstr ""
 "1) lista pakietów zainstalowanych w systemie,\n"
 "2) konfiguracja sprzętowa.\n"
 "\n"
-"Jeśli nie przepadasz za tego typu pomysłami, lub nie chcesz wysyłać tych "
+"Jeśli nie przepadasz za tego typu pomysłami lub nie chcesz wysyłać tych "
 "informacji,\n"
-"naciśnij \"Anuluj\". Po kliknięciu \"Dalej\", zezwolisz na wysyłanie\n"
+"naciśnij \"Anuluj\". Klikając \"Dalej\" pozwolisz na wysyłanie\n"
 "informacji dotyczących uaktualnień za pomocą spersonalizowanych e-maili.\n"
 "Co więcej, skorzystasz z usług bez potrzeby uiszczania dodatkowych opłat\n"
 "na www.mandrakeexpert.com.\n"
-"Zostanie Ci przypisany także alias z loginem@mandrakeonline.net."
+"Otrzymasz także alias pocztowy login@mandrakeonline.net."
 
 #: ../mdkonline:141 ../mdkonline:208 ../mdkonline:234
 msgid "Finish"
@@ -318,16 +318,16 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
 msgstr ""
-"Od tej chwili będziesz otrzymywać informacje\n"
-"o wykrytych błedach i uaktualnieniach dzięki Mandrakeonline."
+"Od tej chwili dzięki Mandrakeonline będziesz otrzymywać \n"
+"informacje o wykrytych błędach i uaktualnieniach."
 
 #: ../mdkonline:142
 msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandrakeonline oferuje ci możliwość automatyzacji uaktualnień.\n"
-"Program będzie uruchamiał się regulanie i oczekiwał na uaktualnienia\n"
+"Mandrakeonline umożliwia Ci zautomatyzowanie uaktualnień.\n"
+"Program będzie uruchamiał się regularnie i oczekiwał na uaktualnienia\n"
 
 #: ../mdkonline:142
 msgid "Your upload was successful!"
@@ -354,7 +354,7 @@ msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr ""
-"Hasło się nie zgadza\n"
+"Hasła różnią się\n"
 "Spróbuj ponownie\n"
 
 #: ../mdkonline:186
@@ -375,7 +375,7 @@ msgstr "Problem z połączeniem"
 
 #: ../mdkonline:210
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
+msgstr "Podczas wysyłania plików wystąpił błąd. Spróbuj ponownie."
 
 #: ../mdkonline:251
 msgid "Quitting Wizard\n"
@@ -384,7 +384,7 @@ msgstr "Opuszczanie druida\n"
 #: ../mdkonline:275
 msgid "Mandrakeonline could not be contacted, please try again at a later time"
 msgstr ""
-"Nie można nawiązać połączenia z Mandrakeonline, spróbuj zrobić to później."
+"Nie można nawiązać połączenia z Mandrakeonline. Spróbuj ponownie później."
 
 #: ../mdkonline:287
 msgid "Wrong password"
@@ -402,8 +402,8 @@ msgid ""
 msgstr ""
 "Twój login lub hasło zostały niepoprawnie wprowadzone.\n"
 " Możesz spróbować ponownie lub też utworzyć nowe konto na Mandrakeonline.\n"
-" W tym drugim przypadku, wróć do pierwszego kroku nawiązywania połączenia\n"
-" z Mandrakeonline. Zauważ, że należy także podać nazwę komputera\n"
+" W drugim przypadku wróć do pierwszego kroku nawiązywania \n"
+"połączenia z Mandrakeonline. Nie zapomnij podać nazwy komputera\n"
 " (przyjmowane są tylko znaki alfanumeryczne)"
 
 #: ../mdkupdate:53
@@ -416,10 +416,10 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate wersja %s\n"
+"wersja mdkupdate %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"To jest oprogramowanie wolnodostępne i może być rozpowszechniane\n"
-"na zasadach licencji GPL.\n"
+"To jest Wolne Oprogramowanie i może być rozpowszechniane\n"
+"na zasadach licencji GNU GPL.\n"
 "\n"
 "użycie:\n"
 
@@ -429,7 +429,7 @@ msgstr "  --help         - wyświetla ten komunikat pomocy.\n"
 
 #: ../mdkupdate:59
 msgid "  --auto         - Mandrakeupdate launched automatically.\n"
-msgstr "  --auto         - Mandrakeupdate uruchamiane automatycznie.\n"
+msgstr "  --auto         - automatyczne uruchamiane Mandrakeupdate .\n"
 
 #: ../mdkupdate:60
 msgid "  --applet       - launch Mandrakeupdate.\n"
@@ -438,82 +438,3 @@ msgstr "  --applet       - uruchamia Mandrakeupdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - uaktualnia klucze\n"
-
-#~ msgid "Config problems. Launch \"configure\" again"
-#~ msgstr "Problemy konfiguracyjne. Uruchom ponownie \"configure\""
-
-#~ msgid "%s packages available for update"
-#~ msgstr "%s pakietów jest dostępnych do aktualizacji"
-
-#~ msgid "Service deactivated. Waiting for payment..."
-#~ msgstr "Usługa została wyłączona. Oczekiwanie na płatność..."
-
-#~ msgid "Launch Mandrakelinux Update"
-#~ msgstr "Uruchom Uaktualnienie Mandrakelinux"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfiguracja"
-
-#~ msgid "Available"
-#~ msgstr "Dostępny"
-
-#~ msgid "Checking ..."
-#~ msgstr "Sprawdzanie..."
-
-#~ msgid "Not Available"
-#~ msgstr "Niedostępny"
-
-#~ msgid "Attempting to connect to mandrakeonline.net\n"
-#~ msgstr "Próba nawiązania połączenia z mandrakeonline.net\n"
-
-#~ msgid "Creation"
-#~ msgstr "Tworzenie"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Login i hasło powinny być krótsze niż 12 znaków\n"
-
-#~ msgid "Special characters"
-#~ msgstr "Znaki specjalne"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Znaki specjalne nie są dozwolone\n"
-
-#~ msgid "Empty fields"
-#~ msgstr "Puste pola"
-
-#~ msgid "Please fill in all fields\n"
-#~ msgstr "Wypełnij wszystkie pola\n"
-
-#~ msgid "Email"
-#~ msgstr "E-mail"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Adres e-mail nie jest prawidłowy\n"
-
-#~ msgid "Account already exist\n"
-#~ msgstr "Konto już istnieje\n"
-
-#~ msgid "Change account"
-#~ msgstr "Zmień konto"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problem przy łączeniu z serwerem\n"
-
-#~ msgid "Server Problem"
-#~ msgstr "Problem z serwerem"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Nie można zaktualizować pakietów z nośnika mdkupdate.\n"
-
-#~ msgid "Response from Mandrakeonline server\n"
-#~ msgstr "Odpowiedź z serwera Mandrakeonline\n"
-
-#~ msgid "Launching Mandrakeupdate\n"
-#~ msgstr "Uruchamianie Mandrakeupdate\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "Tak, chcę automatyczne uaktualnienia"
-
-#~ msgid "Mandrakeupdate could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Nie można nawiązać połączenia ze stroną, spróbujemy zrobić to później."
