@@ -132,8 +132,6 @@ rm -rf $RPM_BUILD_ROOT
 * Sun Sep 26 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
 - introduced mdkonline text based wizard for server products
 - po updates
-
-* Tue Sep 21 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-11mdk
 - strict requirement on mdkonline-backend
 - new applet status when distrib is not supported (too old or cooker)
 
