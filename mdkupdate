@@ -34,7 +34,8 @@ BEGIN { unshift @::textdomains, 'mdkupdate' }
 require_root_capability();
 
 my $logfile = "/var/log/mdkupdate.log";
-my $conffile = "/root/.mdkupdate";
+my $confdir = '/root/.mdkonline';
+my $conffile = "$confdir/mdkupdate";
 
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my %url;
@@ -95,9 +96,9 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
 			  }
-			  rpm_qa("/root/rpm_qa_installed_after");
+			  rpm_qa("$confdir/rpm_qa_installed_after");
 			  my %new = getVarsFromSh($conffile);
-			  if (! -s "/root/.mdkupdate.rpms" || $update) {
+			  if (! -s "$confdir/mdkupdate.rpms" || $update) {
 			      #- send configuration and get back key to use...
 			      $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{MACHINE});
 			      delete $new{OLDKEY};
@@ -185,17 +186,17 @@ sub send_config {
 #    print STDERR "Sending config\n";
     my $result = -1;
     
-    report_config("/root/$login.$passwd.$box_name.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
+    report_config("$confdir/$login.$passwd.$box_name.online.log");
+    `/usr/bin/bzip2 \\\-9 \\\-f $confdir/$login.$passwd.$box_name.online.log`;
 
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, "/root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
+    open (FILE, "$confdir/$login.$passwd.$box_name.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
     }
     close (FILE);
-    open (FILEOUT, "> /root/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
+    open (FILEOUT, "> $confdir/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
 	print FILEOUT encode_base64($buffer);
     close (FILEOUT);
 
@@ -206,7 +207,7 @@ sub send_config {
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_wizard",
-					    wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
+					    wizard => ["$confdir/$login.$passwd.$box_name.online.log.bz2.uue"]
 					    ]);
     # Check the outcome of the response
     #print "REPONSE: ".$response->content."\n";
@@ -215,15 +216,15 @@ sub send_config {
 	#print("key is $1\n");
 	$key = $1; 
 	#- update local copy now.
-	unlink "/root/.mdkupdate.rpms";
-	rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
+	unlink "$confdir/mdkupdate.rpms";
+	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
     } else {
 	# pb with the connection ?
 	$result = -1;
     }
 
-    unlink "/root/$login.$passwd.$box_name.online.log.bz2";
-    unlink "/root/$login.$passwd.$box_name.online.log.bz2.uue";
+    unlink "$confdir/$login.$passwd.$box_name.online.log.bz2";
+    unlink "$confdir/$login.$passwd.$box_name.online.log.bz2.uue";
 
     $result == 0 && $key;
 }
@@ -273,9 +274,9 @@ sub updatePkgs {
 }
 sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
-    #`sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
-    `sdiff -s /root/rpm_qa_installed_after /root/.mdkupdate.rpms >/root/$login.$password.$box_name.$oldkey.dif`;
-    -s "/root/$login.$password.$box_name.$oldkey.dif" or die N("System is up to date");
+    #`sdiff -s $confdir/rpm_qa_installed_after $confdirrpm_qa_installed_before >$confdir/$login.$password.$box_name.$oldkey.dif`;
+    `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$box_name.$oldkey.dif`;
+    -s "$confdir/$login.$password.$box_name.$oldkey.dif" or die N("System is up to date");
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
     $ua->env_proxy;
@@ -283,17 +284,17 @@ sub send_rpm_dif {
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_dif",
-					    dif_file => ["/root/$login.$password.$box_name.$oldkey.dif"]
+					    dif_file => ["$confdir/$login.$password.$box_name.$oldkey.dif"]
 					    ]);
-    #- update .mdkupdate.rpms with newer version just sent.
+    #- update mdkupdate.rpms with newer version just sent.
     if ($response->content =~ /TRUE/) {
-	unlink "/root/.mdkupdate.rpms";
-	rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
+	unlink "$confdir/mdkupdate.rpms";
+	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
     } else { print "REPONSE: " . $response->content . "\n"; } 
 }
 
 sub clean_dir() {
-    system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
+    system("rm -f $confdir/*.dif $confdir/rpm_qa_installed_before $confdir/rpm_qa_installed_after");    
 }
 
 sub rpm_qa {
@@ -305,7 +306,7 @@ sub rpm_qa {
 
 sub log_i {
     local *LOG;
-    open LOG, ">>/var/log/mdkupdate.log" or die "can't output to log file\n";
+    open LOG, ">> $logfile" or die "can't output to log file\n";
     print LOG @_;
     close LOG;
 }
