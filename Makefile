@@ -33,14 +33,14 @@ clean:
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME),autorun,icons/{mini,large}}}
+	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME)/pixmaps,autorun,icons/{mini,large}}}
 	install -s -m755 $(NAME) $(SBINDIR)
 	install -s -m755 $(MDKUPDATE) $(BINDIR)
 	install -s -m755 $(MDKAPPLET) $(BINDIR)
 	install -m644 icons/$(NAME)16.png $(ICONSDIR)/mini/$(NAME).png
 	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png
 	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
-	install -m644 pixmaps/*.png $(PIXDIR)
+	install -m644 pixmaps/*.png $(PIXDIR)/pixmaps
 	install -m644 mdkapplet.desktop $(PREFIX)/usr/share/autorun/
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
