@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-11-22 14:01+0100\n"
-"PO-Revision-Date: 2004-10-01 17:02+0200\n"
+"PO-Revision-Date: 2004-12-24 21:58+0200\n"
 "Last-Translator: dovix <dovix2003@yahoo.com>\n"
 "Language-Team: Hebrew <mdk-hebrew@iglu.org.il>\n"
 "MIME-Version: 1.0\n"
@@ -185,9 +185,9 @@ msgid "Connecting to"
 msgstr "מתחבר אל"
 
 #: ../mdkapplet:244
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "ברוך בואך ל מנדרייק-אונליין"
+msgstr "ברוך בואך לשרת מנדרייק-אונליין\n"
 
 #: ../mdkapplet:262
 #, c-format
@@ -494,14 +494,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "חשבונך במנדרייק-אונליין הוגדר בהצלחה\n"
 
 #: ../mdkonline:215
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "העלאת הנתונים הסתימה בהצלחה"
+msgstr "טעינת התצורה הושלמה בהצלחה"
 
 #: ../mdkonline:216
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "קורא את קובץ התצורה \n"
+msgstr "חלה תקלה בעת טעינת התצורה"
 
 #: ../mdkonline:217
 #, c-format
@@ -509,6 +509,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"ההתקשרות לאתר מנדרייק-אונליין נכשלה עקב שם משתמש/סיסמה שגויים "
+"או הגדרות לא תקינות של הנתב/חומת האש"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -579,8 +581,7 @@ msgstr "לא נמצא קובץ %s, עליך להריץ קודם את האשף md
 #: ../mdkupdate:129
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr ""
-"אשף העדכונים לא הצליח להתחבר לאתר מנדרייק-אונליין, יש לנסות שוב מאוחר יותר."
+msgstr "אשף העדכונים לא הצליח להתחבר לאתר מנדרייק-אונליין, יש לנסות שוב מאוחר יותר."
 
 #: ../mdkupdate:180
 #, c-format
@@ -643,3 +644,4 @@ msgstr "לא ניתן לעדכן חבילות ממדיית mdkupdate.\n"
 
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - עדכן את המפתחות.\n"
+
