@@ -50,7 +50,7 @@ my %choices = (
 	      );
 my $choice = $choices{account};
 
-my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres);
+my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres, $country);
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
 
 sub read_conf() {
