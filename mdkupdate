@@ -64,6 +64,7 @@ update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
 rpm_qa("/root/rpm_qa_installed_after");
 my %new = getVarsFromSh("/root/.mdkupdate");
 send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
+clean_dir();
 
 sub update_rpms () {
     my ($login,$password,$box_name,$curkey) =@_;
@@ -80,6 +81,7 @@ sub update_rpms () {
 	    $result = ($response->content =~ /^TRUE/) ? 0 : -1;
 	} else {
 	    log_it(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
+	    clean_dir();
 	    exit -1;
 	}
     } else {
@@ -108,6 +110,7 @@ sub update_rpms () {
 	    	    
     } else {
 	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
+	clean_dir();
 	exit -1;
     }
 }
@@ -137,6 +140,11 @@ sub send_rpm_dif {
 					    ]);
     # Check the outcome of the response
     print "REPONSE: ".$response->content."\n";
+}
+
+sub clean_dir() {
+    `rm -f /root/$login.$password.$box_name.$oldkey.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after` if -e "/root/rpm_qa_installed_before";    
+    exit 1;
 }
 
 sub rpm_qa {
