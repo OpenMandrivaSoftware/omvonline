@@ -146,16 +146,10 @@ sub gtk_main_quit {
 	[ -f "/root/$login.$passwd.$box_name.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2.uue");
 	[ -f "/root/$login.$passwd.$box_name.online.log.bz2" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2");
     }
-    
-    # setting up the automated updates
-    if ($check_cron->get_active()) {
-	automated_upgrades();
-    }
     # quit
     print N("Quitting Wizard\n");
     Gtk2->main_quit;
 }
-
 sub isalphanum {
     my ($str) = @_;
     if ($str =~ /^[[:alnum:]]+$/) {
@@ -164,9 +158,11 @@ sub isalphanum {
 	return 0;
     }
 }
-    
 sub on_end_clicked {
-    gtk_main_quit();
+    if ($check_cron->get_active()) {
+	my $mirror = $gtkcombo_mirror->entry->get_text();
+	if ($mirror) { automated_upgrades(); gtk_main_quit() } else { info_popup(N('Empty Mirror'), N("Empty Mirror. Please choose a place.")) }
+    }
 }
 
 sub on_next_clicked {
@@ -413,7 +409,8 @@ sub step_wizard {
     my $frame_auto = new Gtk2::Frame(N("automated Upgrades"));
     my $vbox_frame_auto = new Gtk2::VBox(0,0);
     $frame_auto->add($vbox_frame_auto);
-    $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
+#    $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
+    $check_cron->set_active(1);
     #$check_cron->set_uposition(70,245);
     my $hboxfr1 = new Gtk2::HBox(0,0);
     my $hboxfr2 = new Gtk2::HBox(0,0);
@@ -421,8 +418,8 @@ sub step_wizard {
     $hboxfr2->pack_start($label_mirror,$true ,$true,5);
     $gtkcombo_mirror->set_popdown_strings('',sort(keys %locations));
     $hboxfr2->pack_end($gtkcombo_mirror,$true ,$true,5);
-    $hboxfr1->set_sensitive(0); 
-    $hboxfr2->set_sensitive(0);
+    $hboxfr1->set_sensitive(1); 
+    $hboxfr2->set_sensitive(1);
     $check_cron->signal_connect (clicked => sub { my $test_cron=$check_cron->get_active(); 
 						  $hboxfr1->set_sensitive($test_cron); 
 						  $hboxfr2->set_sensitive($test_cron); });
@@ -504,7 +501,7 @@ sub set_boxname {
     $box->set_text($b{BOX});
 }
 
-sub info_popup () {
+sub info_popup {
     # must have been translated by the caller
     my ($title,$text) = @_;
     my $popup = new Gtk2::Dialog();
