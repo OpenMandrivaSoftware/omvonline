@@ -67,11 +67,11 @@ my $check_custid=0;
 my $true=1;
 my $false=0;
 my %locations = ( _("Africa") => ['ftp.univie.ac.at/systems/linux/Mandrake/updates','ftp.lip6.fr/pub/linux/distributions/mandrake/updates'],
-		  _("Asia") => ['ftp.surfnet.nl/pub/os/Linux/distr/Mandrake/Mandrake/updates','ftp.math.utah.edu/pub/linux/Mandrake/updates'],
+		  _("Asia") => ['ftp.surfnet.nl/pub/os/Linux/distr/Mandrake/Mandrake/updates','ftp.sunet.se/pub/Linux/distributions/mandrake/updates'],
 		  _("Australia") => ['ftp-linux.cc.gatech.edu/pub/linux/distributions/mandrake/updates','mandrake.redbox.cz/Mandrake/updates'],
 		  _("Europe") => ['ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates','ftp.gwdg.de/pub/linux/mandrake/updates'],
-		  _("North America") =>['mirrors.secsup.org/pub/linux/mandrake/Mandrake/updates',''],
-		  _("South America") => ['ftp.proxad.net/pub/Distributions_Linux/Mandrake/updates','carroll.cac.psu.edu/pub/linux/distributions/mandrake/updates'],
+		  _("North America") =>['mandrake.secsup.org/pub/linux/mandrake/Mandrake/updates','ftp://ftp.sunet.se/pub/Linux/distributions/mandrake/updates/'],
+		  _("South America") => ['ftp://ftp.sunet.se/pub/Linux/distributions/mandrake/updates','ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates'],
 		  );
 require Gtk;
 require Gtk::Gdk::ImlibImage;
@@ -487,7 +487,7 @@ CURRENTKEY=$key
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
-if [ -f /root/.mdkupdate ]; then mdkupdate; fi
+if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate; fi
 );
 }
 
@@ -630,7 +630,7 @@ sub writ_on_pixmaps {
 	    $darea->window->draw_string(
 					 $style->font,
 					 $darea->style->white_gc,
-					 80+(380-$w)/2, 62,
+					 60+(380-$w)/2, 62,
 					 $step_label );
 	}
     });
