@@ -176,7 +176,7 @@ sub setLabel {
     gtkflush();
 }
 sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
-sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); gtkset_mousecursor_wait(); system "/usr/sbin/mdkupdate", "--applet"; silentCheck(); gtkset_mousecursor_normal() }
+sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); system "/usr/sbin/mdkupdate", "--applet"; silentCheck(); gtkflush; gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
