@@ -1,0 +1,1627 @@
+2002-10-11 19:16  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* mdkonline.spec: 0.18-1mdk
+
+2002-10-11 19:15  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* Makefile: added standard rules to build packages
+
+2002-10-11 19:06  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po,
+	da.po, de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po,
+	hr.po, hu.po, id.po, it.po, ja.po, ka.po, ko.po, lt.po, lv.po,
+	ms.po, mt.po, nl.po, no.po, pl.po, pt.po, pt_BR.po, ro.po, ru.po,
+	sk.po, sl.po, sq.po, sv.po, ta.po, tg.po, tr.po, uk.po, vi.po,
+	wa.po, zh_CN.po, zh_TW.po: \\@ => @
+
+2002-10-11 19:02  Frederic Lepied <flepied@mandrakesoft.com>
+
+	* po/fake_c.pl: \\@ => @
+
+2002-10-11 10:30  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkonline.spec: avoid being to restrictive on urpmi (need only
+	4.0).
+
+2002-10-11 10:27  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkonline.spec: updated with code cleanup of mdkupdate.
+
+2002-10-11 10:21  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkupdate: cleaned code a bit (use tempory copy of rpms installed
+	instead of building new one when sending configuration).
+
+2002-10-10 16:40  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkupdate: cleaning tempory files in /root.
+
+2002-10-10 16:38  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkonline, mdkonline.spec, mdkupdate: finally got the stuff to
+	work.
+
+2002-10-09 16:52  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkonline.spec: added missing requires to urpmi.
+
+2002-10-09 16:50  Fançois Pons <fpons@mandrakesoft.com>
+
+	* mdkonline, mdkonline.spec, mdkupdate: 0.17-1mdk
+
+2002-09-28 07:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/da.po: corrected encoding
+
+2002-09-25 18:32  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/lv.po: updated po file
+
+2002-09-23 20:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sq.po: Added Albanian file
+
+2002-09-20 11:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, fi.po: updated po files
+
+2002-09-18 11:44  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fi.po: updated po file
+
+2002-09-12 13:33  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - cleanups
+
+2002-09-12 13:31  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - Use cvs spec file (for Pablo)
+
+2002-09-12 12:25  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - mdkupdate perl-Locale-gettext move.
+
+2002-09-12 12:02  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - gettext udpdate
+
+2002-09-06 08:57  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/no.po: updated po file
+
+2002-09-05 19:03  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/lt.po: Added Lithuanian file
+
+2002-09-05 11:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/it.po: corrected typos
+
+2002-09-04 17:51  David Baudens <baudens@mandrakesoft.com>
+
+	* mdkonline, mdkonline.spec, pixmaps/default.png: New image
+
+2002-09-04 16:03  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ja.po: updated po file
+
+2002-09-03 10:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fr.po: updated po file
+
+2002-09-03 00:23  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bg.po: updated po file
+
+2002-09-02 18:51  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - fix older path symbolic link
+
+2002-09-02 18:21  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - symbolic link for compatibility with old
+	versions - fix LANG detection - cleanups
+
+2002-09-02 12:24  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po,
+	da.po, de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po,
+	hr.po, hu.po, id.po, it.po, ja.po, ka.po, ko.po, lv.po, ms.po,
+	mt.po, nl.po, no.po, pl.po, pt.po, pt_BR.po, ro.po, ru.po, sk.po,
+	sl.po, sv.po, ta.po, tg.po, tr.po, vi.po, wa.po, zh_CN.po,
+	zh_TW.po: updated po files
+
+2002-09-02 11:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - fix LANG detection - cleanups
+
+2002-09-01 15:33  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: mdkonline.pot, uk.po: updated po file
+
+2002-08-31 22:28  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - cleanup code
+
+2002-08-31 21:59  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - privacy text fix (choose good Language)
+
+2002-08-29 20:32  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/uk.po: Added Ukrainian file
+
+2002-08-28 23:12  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated po file
+
+2002-08-27 12:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eu.po: updated po file
+
+2002-08-26 16:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cy.po: updated po file
+
+2002-08-25 11:46  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/nl.po: updated po file
+
+2002-08-24 18:52  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new german version
+
+2002-08-24 18:06  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fr.po: updated po file
+
+2002-08-24 01:07  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ta.po: corrected font
+
+2002-08-23 19:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ta.po: updated po file
+
+2002-08-22 22:50  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/vi.po: converted to utf-8
+
+2002-08-21 19:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/es.po: updated po file
+
+2002-08-21 13:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/vi.po: updated po file
+
+2002-08-21 09:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bg.po: updated po file
+
+2002-08-21 03:05  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/no.po: updated po file
+
+2002-08-20 11:51  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: mt.po, sk.po, zh_CN.po: updated po files
+
+2002-08-19 23:13  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/el.po: updated po file
+
+2002-08-19 17:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/it.po: updated po file
+
+2002-08-19 14:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/nl.po: updated Dutch file
+
+2002-08-18 17:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cs.po: updated po file
+
+2002-08-18 08:19  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/af.po: updated po file
+
+2002-08-17 21:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bs.po: updated po file
+
+2002-08-17 13:54  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ta.po: updated po file
+
+2002-08-17 11:38  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: hu.po, zh_TW.po: updated po files
+
+2002-08-16 17:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: af.po, az.po, bs.po, de.po, el.po, ka.po, ta.po, tg.po:
+	mdkonline interface is very buggy, long lines are not wrapped and
+	often right side of the window is not visible; I edited some
+	translations to try to minimize that bad behavour
+
+2002-08-16 12:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po,
+	da.po, de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po,
+	hr.po, hu.po, id.po, it.po, ja.po, ka.po, ko.po, lv.po,
+	mdkonline.pot, ms.po, mt.po, nl.po, no.po, pl.po, pt.po, pt_BR.po,
+	ro.po, ru.po, sk.po, sl.po, sv.po, ta.po, tg.po, tr.po, vi.po,
+	wa.po, zh_CN.po, zh_TW.po: updated pot file
+
+2002-08-14 16:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: sk.po, sv.po, vi.po: updated po files
+
+2002-08-14 15:20  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - fix typo
+
+2002-08-14 14:49  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - release 0.16 - add sl drakonline -> mdkonline
+
+2002-08-14 13:03  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: - from /usr/X11R6/bin to /usr/sbin/
+
+2002-08-14 13:00  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - mdkonline now in /usr/sbin/ (remove
+	consolehelper aliases) - better text wrapping.	- good URL.
+
+2002-08-14 12:41  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - text wrapping.
+
+2002-08-14 09:11  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: id.po, pt.po, ro.po: updated po files
+
+2002-08-14 08:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hu.po: updated po file
+
+2002-08-13 22:45  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+
+	* po/pl.po: little fix
+
+2002-08-13 15:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sk.po: updated po file
+
+2002-08-13 14:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ru.po: updated po file
+
+2002-08-13 08:54  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+
+	* po/pl.po: updated translation
+
+2002-08-12 20:50  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: Makefile, POTFILES.in, af.po, ar.po, az.po, bg.po, bs.po,
+	ca.po, cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, eu.po,
+	fake_c.pl, fi.po, fr.po, ga.po, hr.po, hu.po, id.po, it.po, ja.po,
+	ka.po, ko.po, lv.po, mdkonline.pot, ms.po, mt.po, nl.po, no.po,
+	pl.po, pt.po, pt_BR.po, ro.po, ru.po, sk.po, sl.po, sv.po, ta.po,
+	tg.po, tr.po, vi.po, wa.po, zh_CN.po, zh_TW.po: Added Tamil file
+	and copied pot generation from other modules
+
+2002-08-12 16:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ar.po: updated po file
+
+2002-08-12 01:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/lv.po: updated po file
+
+2002-08-11 13:04  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/af.po: Added Afrikaans file
+
+2002-08-10 19:38  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/el.po: uopdated po file
+
+2002-08-08 19:41  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/it.po: updated po file
+
+2002-08-07 15:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: de.po, es.po, ro.po: updated po files
+
+2002-08-06 22:20  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new german version
+
+2002-08-05 15:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sl.po: updated po file
+
+2002-08-05 14:01  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sv.po: updated po file
+
+2002-08-01 18:31  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/az.po: updated po file
+
+2002-07-31 16:07  David Baudens <baudens@mandrakesoft.com>
+
+	* mdkonline.spec: Update
+
+2002-07-31 13:42  David Baudens <baudens@mandrakesoft.com>
+
+	* Makefile, mdkonline.spec: Fix "make rpm" ; update spec
+
+2002-07-31 13:28  David Baudens <baudens@mandrakesoft.com>
+
+	* icons/: mdkonline16.png, mdkonline32.png, mdkonline48.png: New
+	icons
+
+2002-07-30 15:23  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po, da.po,
+	de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po, hr.po,
+	hu.po, id.po, it.po, ja.po, ka.po, ko.po, lv.po, mdkonline.pot,
+	ms.po, mt.po, nl.po, no.po, pl.po, pt.po, pt_BR.po, ro.po, ru.po,
+	sk.po, sl.po, sv.po, tg.po, tr.po, vi.po, wa.po, zh_CN.po,
+	zh_TW.po: updated pot file
+
+2002-07-29 11:17  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - remove dangling reference [1] at welcome page.
+
+2002-07-29 10:28  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, mt.po, tr.po: updated po files
+
+2002-07-26 14:57  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ja.po: Added Japanese file
+
+2002-07-25 13:50  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: nl.po, pt.po, vi.po: Added Portuguese file
+
+2002-07-23 19:35  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cs.po, id.po, zh_TW.po: updated po files
+
+2002-07-20 11:18  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: new icon
+
+2002-07-20 11:18  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - 32 x 32 new icon
+
+2002-07-19 14:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ru.po: updated Russian file
+
+2002-07-19 12:38  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sk.po: updated Slovak file
+
+2002-07-17 11:04  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - changelog date
+
+2002-07-16 22:21  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - delete redondant 'ftp://' when choosing ftp
+	mirrors
+
+2002-07-16 16:43  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - remove redondant ftp:// which is added in mdkupdate
+
+2002-07-15 14:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/it.po: updated Italian file
+
+2002-07-15 12:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eu.po: updated Basque file
+
+2002-07-12 13:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hu.po: updated po file
+
+2002-07-10 14:21  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+
+	* po/pl.po: updated translation
+
+2002-07-09 14:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: POTFILES.in, ar.po, az.po, bg.po, bs.po, ca.po, cs.po,
+	cy.po, da.po, de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po,
+	ga.po, hr.po, hu.po, id.po, it.po, ka.po, ko.po, lv.po,
+	mdkonline.pot, ms.po, mt.po, nl.po, no.po, pl.po, pt_BR.po, ro.po,
+	ru.po, sk.po, sl.po, sv.po, tg.po, tr.po, vi.po, wa.po, zh_CN.po,
+	zh_TW.po: Updated pot file and made mdkupdate strings translatable
+
+2002-07-09 12:39  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - fixes:		o use no-clobber for wget
+	(prevent multiples downloads of same files)	      o interactive
+	wait message centered		  o cleanups
+
+2002-07-09 12:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - nc prevent multiples download
+
+2002-07-09 12:33  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - add -r to wget to prevent multiples copies of same
+	file.
+
+2002-07-08 16:56  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - isStandalone added to center interactive windows.
+
+2002-07-05 16:36  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - cleanup
+
+2002-06-24 19:54  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+
+	* po/pl.po: fixes as usual...:)
+
+2002-06-18 12:05  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/da.po: Updated Danish file
+
+2002-06-13 16:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - cleanup (remove -w)
+
+2002-06-13 16:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - moving from test to prod
+
+2002-06-13 16:28  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - from test to prod
+
+2002-06-09 22:19  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - bug fixing	o chdir/wget to safe directory	o
+	clean after upgrades
+
+2002-05-30 09:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated po file
+
+2002-05-28 16:13  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - bug fix
+
+2002-05-28 16:05  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - clean up - fix
+
+2002-04-26 15:59  Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>
+
+	* po/pl.po: few fixes
+
+2002-04-25 12:38  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, hu.po, mdkonline.pot, nl.po: updated po files
+
+2002-04-19 16:35  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, privacy-eu.txt: Added Basque translation of privacy
+	file
+
+2002-04-17 13:40  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - no -w on prod software
+
+2002-04-17 11:55  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - drakonline alias
+
+2002-04-17 11:49  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - cleanups, 8.1 support.
+
+2002-04-16 21:15  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - some cleanups after updates
+
+2002-04-13 13:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, privacy-ro.txt, po/mt.po, po/ro.po: Added Romanian
+	file
+
+2002-04-12 10:00  anoncvs
+
+	* po/pl.po: Added polish translation - Arkadiusz Lipiec
+	<alipiec@elka.pw.edu.pl>
+
+2002-04-08 11:35  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po, da.po,
+	de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po, hr.po,
+	hu.po, id.po, it.po, ka.po, ko.po, lv.po, mdkonline.pot, ms.po,
+	mt.po, nl.po, no.po, pt_BR.po, ru.po, sk.po, sl.po, sv.po, tg.po,
+	tr.po, vi.po, wa.po, zh_CN.po, zh_TW.po: updated pot file
+
+2002-03-19 17:24  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - clean dir after updates.
+
+2002-03-19 17:23  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - clean dir stalled files
+
+2002-03-17 00:31  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ko.po: updated po file
+
+2002-03-15 15:19  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: - add nautilus dir for build
+
+2002-03-15 15:17  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - po updates
+
+2002-03-15 15:16  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - code cleanup
+
+2002-03-15 15:14  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - good support
+
+2002-03-15 15:10  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - add desktop entry for gnome
+
+2002-03-15 15:05  Daouda Lo <daouda@mandrakesoft.com>
+
+	* gnome-mandrakeonline.desktop: - add gnome-mandrakeonline.desktop
+
+2002-03-14 21:52  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - release
+
+2002-03-14 21:50  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - code update (ftp)
+
+2002-03-14 20:25  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, hr.po, no.po: updated po file
+
+2002-03-14 18:53  Daouda Lo <daouda@mandrakesoft.com>
+
+	* po/fr.po: - fix long string "Mandrake privacy policy"
+
+2002-03-14 17:13  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - test is over
+
+2002-03-14 16:37  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - update code - finalizing
+
+2002-03-14 16:37  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - finalization
+
+2002-03-14 12:34  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate, mdkonline: - code update
+
+2002-03-14 12:33  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: -cleanup
+
+2002-03-14 12:32  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - 8.2 release - code update - automated updates
+
+2002-03-14 12:31  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: - add mdkupdate
+
+2002-03-14 11:06  Daouda Lo <daouda@mandrakesoft.com>
+
+	* crypto.pm, ftp.pm, http.pm: removed http ftp crypto
+
+2002-03-13 17:39  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, cs.po: updated po files
+
+2002-03-13 16:04  Daouda Lo <daouda@mandrakesoft.com>
+
+	* crypto.pm, ftp.pm, http.pm: add crypto.pm, ftp.pm, http.pm
+
+2002-03-13 10:54  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sv.po: updated po file
+
+2002-03-12 11:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ru.po, sl.po: updated po files
+
+2002-03-11 22:53  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cy.po, hu.po: updated po files
+
+2002-03-11 19:28  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/vi.po: updated po file
+
+2002-03-11 11:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po, da.po,
+	de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po, hr.po,
+	hu.po, id.po, it.po, ka.po, ko.po, lv.po, mdkonline.pot, ms.po,
+	mt.po, nl.po, no.po, pt_BR.po, ru.po, sk.po, sl.po, sv.po, tg.po,
+	tr.po, vi.po, wa.po, zh_CN.po, zh_TW.po: updated pot file
+
+2002-03-08 23:22  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/nl.po: Added dutch file
+
+2002-03-08 20:54  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hr.po: updated po file
+
+2002-03-07 18:51  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - add requires in perl-SSL
+
+2002-03-07 18:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - code update - automated updates
+
+2002-03-07 18:43  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline, mdkupdate: - code update
+
+2002-03-06 21:21  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/zh_CN.po: updated po file
+
+2002-03-06 14:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: az.po, cy.po: updated po files
+
+2002-03-04 19:01  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ar.po: updated po file
+
+2002-03-04 17:51  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated po file
+
+2002-03-04 15:40  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sk.po: updated po file
+
+2002-03-04 02:33  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sl.po: update po file
+
+2002-03-02 17:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, mdkonline.pot: updated po file
+
+2002-03-02 17:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, privacy-sv.txt: Added Swedish privacy file
+
+2002-03-01 14:41  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: fi.po, fr.po: updated po files
+
+2002-03-01 05:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: hu.po, zh_TW.po: updated po files
+
+2002-03-01 00:46  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/el.po: updated Greek file
+
+2002-02-28 23:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cs.po: updated po file
+
+2002-02-28 21:03  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/no.po: updated po file
+
+2002-02-28 19:35  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sv.po: updated po file
+
+2002-02-28 16:17  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: eu.po, id.po, it.po, ru.po, vi.po: updated po files
+
+2002-02-28 15:17  fabman
+
+	* po/es.po: updated spanish translation
+
+2002-02-28 10:11  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: added missing translations
+
+2002-02-28 04:34  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bg.po, bs.po, ca.po, cs.po, cy.po, da.po,
+	de.po, el.po, eo.po, es.po, eu.po, fi.po, fr.po, ga.po, hr.po,
+	hu.po, id.po, it.po, ka.po, ko.po, lv.po, mdkonline.pot, mt.po,
+	no.po, pt_BR.po, ru.po, sk.po, sl.po, sv.po, tg.po, tr.po, vi.po,
+	wa.po, zh_CN.po, zh_TW.po: updated pot file
+
+2002-02-27 18:42  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - code updates
+
+2002-02-27 18:20  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - code update
+
+2002-02-26 23:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/mt.po: Added Maltese file
+
+2002-02-26 16:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eu.po: updated Basque file
+
+2002-02-25 23:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated po file
+
+2002-02-23 17:51  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cy.po: updated Welsh file
+
+2002-02-23 13:17  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cy.po: updated Welsh file
+
+2002-02-22 19:33  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eu.po: updated Basque file
+
+2002-02-22 10:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/zh_CN.po: converted to utf-8 to avoid msgfmt -v problems
+
+2002-02-22 01:25  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bs.po: updated some po files
+
+2002-02-21 02:43  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fi.po: updated Finnish file
+
+2002-02-18 21:11  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/it.po: updated Italian file
+
+2002-02-17 23:15  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, po/ar.po, po/cs.po, po/mdkonline.pot, po/tr.po: fixed
+	buggy use of _( ) and updated some po files
+
+2002-02-17 22:38  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - update
+
+2002-02-16 09:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: code update
+
+2002-02-16 09:07  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/no.po: updated norwegian file
+
+2002-02-14 16:07  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/pt_BR.po: updated Brazilian file
+
+2002-02-12 14:19  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sk.po: updated Slovak file
+
+2002-02-10 05:06  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: fi.po, pt_BR.po, sl.po: Added Finnish and Brazilian files
+
+2002-02-09 14:24  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ko.po: updated Korean file
+
+2002-02-08 23:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated Turkish file
+
+2002-02-08 20:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bg.po, da.po, el.po, id.po, vi.po: updated various files
+
+2002-02-07 11:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: de.po, sk.po, sv.po: updated Slovak and Swedish files
+
+2002-02-06 11:13  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new german updates
+
+2002-02-06 10:22  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fr.po: updated French file
+
+2002-02-06 09:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bg.po, bs.po, ca.po, cs.po, da.po, de.po,
+	el.po, eo.po, es.po, eu.po, fr.po, ga.po, hr.po, hu.po, id.po,
+	it.po, ka.po, ko.po, lv.po, mdkonline.pot, no.po, ru.po, sk.po,
+	sl.po, sv.po, tg.po, tr.po, vi.po, wa.po, zh_CN.po, zh_TW.po:
+	updated Hungarian and Spanish files
+
+2002-02-05 08:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkupdate: - add mdkupdate automotical update
+
+2002-02-05 08:34  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - add mdkupdate cron
+
+2002-02-04 16:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: mdkonline.pot, no.po: updated Norwegian file
+
+2002-01-30 13:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, po/ru.po: updated Russian file; use of
+	Gtk::Label::set_justify() (but it seems not to work yet...)
+
+2002-01-29 13:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ru.po: Added Russian file
+
+2002-01-29 12:07  Daouda Lo <daouda@mandrakesoft.com>
+
+	* privacy-fr.txt: - word wrapping
+
+2002-01-28 14:08  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: hu.po, sl.po: updated Hungarian and Slovenian files
+
+2002-01-28 13:09  Daouda Lo <daouda@mandrakesoft.com>
+
+	* AUTHORS: - add AUTHORS file
+
+2002-01-28 12:51  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: update
+
+2002-01-25 12:49  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fr.po: updated French file
+
+2002-01-24 13:12  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tg.po: Added Tajik file
+
+2002-01-23 23:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: it.po, sv.po: Added Italian file
+
+2002-01-23 12:53  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/vi.po: updated Vietnamese file
+
+2002-01-23 10:49  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cs.po, es.po, id.po: updated Czech, Spanish and Indonesian
+	files
+
+2002-01-22 16:09  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, po/ar.po, po/az.po, po/bg.po, po/bs.po, po/ca.po,
+	po/cs.po, po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po,
+	po/eu.po, po/fr.po, po/ga.po, po/hr.po, po/hu.po, po/id.po,
+	po/ka.po, po/ko.po, po/lv.po, po/mdkonline.pot, po/no.po, po/sk.po,
+	po/sl.po, po/sv.po, po/tr.po, po/vi.po, po/wa.po, po/zh_CN.po,
+	po/zh_TW.po: fixed English typo
+
+2002-01-14 17:20  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - add missing png
+
+2002-01-14 13:08  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - add URL tag
+
+2002-01-14 12:44  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - automated upgrades
+
+2002-01-14 12:43  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - code update - automated upgrades (working on)
+
+2002-01-14 12:26  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: - code update
+
+2002-01-10 11:41  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sl.po: Added Slovenian file
+
+2002-01-09 13:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sv.po: updated Swedish file
+
+2002-01-08 13:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hr.po: updated Croatian file
+
+2001-11-28 15:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: revert back
+
+2001-11-28 15:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: correct path to pixmaps
+
+2001-11-26 23:32  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ar.po: updated Arabic file
+
+2001-11-26 15:44  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/az.po: updated Azeri file
+
+2001-11-10 17:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/id.po: Added Indonesian file
+
+2001-10-31 20:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/no.po: updated Norwegian file
+
+2001-10-25 16:38  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ka.po: Added Georgian file
+
+2001-10-16 23:10  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ar.po, az.po, bs.po, ca.po, cs.po, da.po, de.po, eo.po,
+	es.po, eu.po, fr.po, ga.po, hr.po, hu.po, ko.po, lv.po, no.po,
+	sv.po, tr.po, wa.po, zh_CN.po, zh_TW.po: updated pot files
+
+2001-10-16 11:49  Daouda Lo <daouda@mandrakesoft.com>
+
+	* COPYING: add copying
+
+2001-10-16 11:48  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: s/RPM/rpm
+
+2001-10-16 11:47  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: doc
+
+2001-10-16 11:47  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - rebuild against libpng3 - add doc
+
+2001-10-15 10:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ar.po: Added Arabic file
+
+2001-10-08 16:02  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bg.po: Added Bulgarian file
+
+2001-09-26 20:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/el.po: updated GReek file
+
+2001-09-26 18:54  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sk.po: updated Slovak file
+
+2001-09-25 21:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: mdkonline.pot, vi.po: updated Vietnamese file
+
+2001-09-25 19:32  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/zh_TW.po: updated Chinese file
+
+2001-09-25 19:19  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - When you hit the button subscribe, launch the
+	browser and un grayed the   next button.
+
+2001-09-25 19:19  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: update mdkonline code -> handle the next grayed button
+
+2001-09-25 12:54  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: fix
+
+2001-09-25 12:52  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: fix typo in po
+
+2001-09-25 12:18  Daouda Lo <daouda@mandrakesoft.com>
+
+	* privacy-fr.txt: add fr privacy po
+
+2001-09-25 11:03  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: put changes
+
+2001-09-25 10:35  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/sv.po: updated Swedish file
+
+2001-09-25 10:22  Daouda Lo <daouda@mandrakesoft.com>
+
+	* privacy-de.txt, privacy-es.txt: add translation
+
+2001-09-25 10:14  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile, mdkonline: fix
+
+2001-09-25 04:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, ko.po, tr.po: updated Danish, Korean and Turkish
+	files
+
+2001-09-24 23:50  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eu.po: updated Basque files
+
+2001-09-24 21:36  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ca.po, hu.po: updated Catalan and Hungarian file
+
+2001-09-24 17:56  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new version
+
+2001-09-24 17:05  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cs.po, fr.po, wa.po: updated Czech file; changed
+	"MandrakeOnline" to invariable
+
+2001-09-24 16:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* mdkonline, po/az.po, po/bs.po, po/ca.po, po/cs.po, po/da.po,
+	po/de.po, po/el.po, po/eo.po, po/es.po, po/eu.po, po/fr.po,
+	po/ga.po, po/hr.po, po/hu.po, po/ko.po, po/lv.po, po/mdkonline.pot,
+	po/no.po, po/sk.po, po/sv.po, po/tr.po, po/vi.po, po/wa.po,
+	po/zh_CN.po, po/zh_TW.po: corrected some English typos; rebuild pot
+	file
+
+2001-09-24 15:46  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: remove usr bin files
+
+2001-09-24 15:44  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: remove expect ssh stuffs
+
+2001-09-24 15:40  Daouda Lo <daouda@mandrakesoft.com>
+
+	* sshlogin.exp: remove ssh related file
+
+2001-09-24 15:38  Daouda Lo <daouda@mandrakesoft.com>
+
+	* scpcall.exp: remove expect
+
+2001-09-24 15:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - updated po.  - spec cleanups.
+
+2001-09-24 13:09  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: MandrakeOnline in one word.
+
+2001-09-23 18:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, eu.po, no.po: updated Bosnian and Basque files; added
+	Norwegian
+
+2001-09-22 16:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: lv.po, zh_TW.po: updated Latvian and Chinese files
+
+2001-09-22 02:41  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ko.po: updated Korean file
+
+2001-09-22 01:42  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: el.po, tr.po, vi.po: updated Greek, Turkish and Vietnamese
+	files
+
+2001-09-21 21:55  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: real links to registering
+
+2001-09-21 21:42  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: correct version number
+
+2001-09-21 21:41  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: mdkonline freeze code
+
+2001-09-21 19:46  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: ca.po, da.po, fr.po, sv.po: Added Catalan file; updated
+	Danish, French and Swedish files
+
+2001-09-21 15:52  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hu.po: updated Hungarian file
+
+2001-09-21 09:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: az.po, bs.po, cs.po, da.po, de.po, el.po, eo.po, es.po,
+	eu.po, fr.po, ga.po, hr.po, hu.po, ko.po, lv.po, mdkonline.pot,
+	sk.po, sv.po, tr.po, vi.po, zh_CN.po, zh_TW.po: updated pot file
+
+2001-09-20 16:57  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: launch $BROWSER with user perm
+
+2001-09-20 16:03  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: valid urls for authentication and upload, remove files
+	when exiting
+
+2001-09-20 10:43  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: - resync with cvs (Pablo s**) - switch to
+	usermode - spec cleanup
+
+2001-09-20 10:31  Daouda Lo <daouda@mandrakesoft.com>
+
+	* pam.mdkonline: usermode switch - pam authetification
+
+2001-09-20 10:30  Daouda Lo <daouda@mandrakesoft.com>
+
+	* apps.mdkonline: usermode switch
+
+2001-09-20 00:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, mdkonline.pot: updated Bosnian file
+
+2001-09-19 11:22  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline, privacy.txt: texts modifications
+
+2001-09-19 00:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: az.po, fr.po, mdkonline.pot, sk.po: Added Azeri and Slovak
+	files
+
+2001-09-18 15:33  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: updated url params to upload the config file
+
+2001-09-17 14:42  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: changed file name to use md5 password in it; password
+	is in md5_hex; corrected a bug with step label at the last page
+
+2001-09-17 01:03  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/cs.po: updated Czech file
+
+2001-09-16 18:49  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/zh_CN.po: Added Chinese file
+
+2001-09-16 16:30  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: hr.po, ko.po, sv.po: Added Croatian, Korean and Swedish
+	files
+
+2001-09-14 19:25  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/da.po: updated Danish file
+
+2001-09-13 21:27  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/ga.po: Added Irish file
+
+2001-09-13 21:07  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/eo.po: updated Esperanto file
+
+2001-09-13 11:01  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, da.po, el.po, es.po, eu.po, fr.po, vi.po: Added
+	Greek, updated Danish file
+
+2001-09-11 17:50  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cs.po, de.po, hu.po: updated Czech and Hungarian files
+
+2001-09-11 11:06  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: change : cosmetic, link page , icons
+
+2001-09-11 11:03  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: add requires perl-libww-perl
+
+2001-09-11 11:00  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: update
+
+2001-09-10 15:51  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: updates
+
+2001-09-10 07:56  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/hu.po: Added Hungarian file
+
+2001-09-09 19:06  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/tr.po: updated Turkish file
+
+2001-09-08 15:20  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: lv.po, mdkonline.pot: updated Latvian file
+
+2001-09-07 23:17  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: eu.po, vi.po: updated Vietnamese and Basque files
+
+2001-09-07 18:59  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, tr.po: Updated Bosnian file; added Turkish file
+
+2001-09-07 12:51  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: es.po, fr.po: updated Spanish and French files
+
+2001-09-07 11:26  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, cs.po, da.po, de.po, es.po, eu.po, fr.po, lv.po,
+	mdkonline.pot, vi.po: updated Latvian file, updated pot file
+
+2001-09-07 11:17  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: A small info line for the future
+
+2001-09-06 17:30  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: added step number in between next and back buttons
+
+2001-09-06 17:15  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: added step number in buttons, and encode binary file
+	in base64 to prevent corruption of the uploaded file
+
+2001-09-06 15:31  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: Offer the possibiliy to send the configuration again
+	when a problem occurs contacting mdkonline site
+
+2001-09-06 13:00  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/da.po: updated Danish file
+
+2001-09-05 16:47  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bs.po: updated Bosnian file
+
+2001-09-05 11:44  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: es.po, fr.po, mdkonline.pot, vi.po: updated Spanish, French
+	and Vietnamese files
+
+2001-09-05 11:33  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: button next grayed if no mdkonline account
+
+2001-09-05 11:13  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new german vwersion
+
+2001-09-05 00:24  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, cs.po, da.po, de.po, es.po, eu.po, fr.po, lv.po,
+	mdkonline.pot, vi.po: updated Danish file; merged with new pot file
+
+2001-09-04 18:07  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: escaped compression level option for bzip2
+
+2001-09-04 17:58  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: fixed a regexp
+
+2001-09-04 17:39  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: add png, reaarange title
+
+2001-09-04 17:34  Daouda Lo <daouda@mandrakesoft.com>
+
+	* pixmaps/mdkonline.png: add banner
+
+2001-09-04 17:31  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: a few improvements (really handle empty
+	login/password, Quit instead of Cancel, deactivation of back in all
+	necessary cases...
+
+2001-09-04 17:17  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: changed authentication method to http...
+
+2001-09-04 17:07  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: icons
+
+2001-09-04 17:06  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: fix icons
+
+2001-09-04 16:54  Daouda Lo <daouda@mandrakesoft.com>
+
+	* icons/mdkonline16.png, icons/mdkonline32.png,
+	icons/mdkonline48.png, Makefile: add icons
+
+2001-09-04 01:16  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: fixed i18n (missing _())
+
+2001-09-04 01:15  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/: bs.po, cs.po, da.po, de.po, es.po, eu.po, fr.po, lv.po,
+	mdkonline.pot, vi.po: fixed some typos
+
+2001-09-04 00:37  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new germen version
+
+2001-09-03 21:48  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: cs.po, es.po, fr.po, vi.po: dded Czech file, updated
+	Vietnamese, French and Spanish files
+
+2001-09-03 21:39  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: don't translate the world "MandrakeOnline" -> generic
+	name of the Service
+
+2001-09-03 13:27  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: set some positions (check_subs)
+
+2001-09-03 12:29  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: bs.po, da.po, de.po, es.po, eu.po, fr.po, lv.po,
+	mdkonline.pot, vi.po: updated pot file
+
+2001-09-02 19:49  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: 5 mdk * Sun Sep  2 2001 Daouda LO
+	<daouda@mandrakesoft.com> 0.15-5mdk - add online subscription
+	feature.
+
+2001-09-02 19:47  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: add subscription online
+
+2001-09-02 18:17  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/fr.po: updated French file
+
+2001-09-02 14:06  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/bs.po: Added Bosnian file
+
+2001-09-01 10:17  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: new german version
+
+2001-08-31 18:02  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, de.po, es.po, eu.po, fr.po, lv.po, mdkonline.pot,
+	vi.po: updated pot file
+
+2001-08-31 16:37  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline.spec, scpcall.exp: updated release
+
+2001-08-31 16:29  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: fix de
+
+2001-08-31 16:26  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* sshlogin.exp: fixed exit code from sshlogin.exp
+
+2001-08-31 16:19  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: fixed typo
+
+2001-08-31 16:12  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline.spec: corrected typo in spec
+
+2001-08-31 16:07  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: fixed UTF-8 -> ISO-8859-X conversion
+
+2001-08-31 16:06  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/de.po: fixed typo
+
+2001-08-31 15:07  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile, mdkonline, mdkonline.spec: changed the paths order to
+	look for scripts
+
+2001-08-31 14:53  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile, mdkonline.spec: make rpm now works
+
+2001-08-31 14:47  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile, Makefile: corrected makefile
+
+2001-08-31 14:44  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile, mdkonline, mdkonline.spec, scpcall.exp, sshlogin.exp:
+	"working test version"
+
+2001-08-31 14:36  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: improved UI
+
+2001-08-31 12:04  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline, scpcall.exp: now exec drakbug_report and send the
+	results
+
+2001-08-31 11:08  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: popup when wrong password
+
+2001-08-30 19:47  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: add icons dirs
+
+2001-08-30 18:13  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline: added test with scp at the end of the wizard
+
+2001-08-30 17:45  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* mdkonline, sshlogin.exp: ssh login works
+
+2001-08-30 11:37  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: da.po, de.po, es.po, eu.po, fr.po, lv.po, vi.po: Added
+	Danish, Spanish, French, Latvian, Vietnamese; updated Basque file
+
+2001-08-29 18:39  Pablo Saratxaga <pablo@mandrakesoft.com>
+
+	* po/: eu.po, mdkonline.pot: Added Basque file
+
+2001-08-29 17:00  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: fixed typo
+
+2001-08-29 16:59  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/: de.po, mdkonline.pot: i18n updates
+
+2001-08-29 16:28  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: minor improvements, e.g. die if privacy.txt is not
+	found
+
+2001-08-29 16:02  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile: oops, makefile was modified, back to original state
+
+2001-08-29 16:01  Renaud Chaillat <rchaillat@mandrakesoft.com>
+
+	* Makefile, mdkonline, scpcall.exp: added expect script to drive
+	scp non interactively
+
+2001-08-29 15:18  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: remove GtkMozEmbed requirement
+
+2001-08-29 15:15  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* po/: .cvsignore, Makefile, POTFILES.in, mdkonline.pot: let the
+	translations begin ...
+
+2001-08-29 14:54  Stefan Siegel <siegel@linux-mandrake.com>
+
+	* mdkonline: fixed i18n
+
+2001-08-29 12:13  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: frontend 98%
+
+2001-08-29 11:51  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: frontend nearly finished (95%)
+
+2001-08-29 00:23  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: hack hack hack
+
+2001-08-28 19:24  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: label/entry aligned.
+
+2001-08-28 18:03  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: add path
+
+2001-08-28 17:49  Daouda Lo <daouda@mandrakesoft.com>
+
+	* Makefile: make file to easily make rpm and stuff like
+
+2001-08-28 17:48  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline.spec: spec file for building
+
+2001-08-28 17:48  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: continuing...
+
+2001-08-28 17:10  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: rearrange entries
+
+2001-08-28 17:08  Daouda Lo <daouda@mandrakesoft.com>
+
+	* privacy.txt: add on
+
+2001-08-28 15:35  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: suid root
+
+2001-08-28 15:13  Daouda Lo <daouda@mandrakesoft.com>
+
+	* pixmaps/privacy.png: add privacy (renaud)
+
+2001-08-28 14:57  Daouda Lo <daouda@mandrakesoft.com>
+
+	* pixmaps/: identity.png, mailnews.png, welcome.png: add pixmaps
+
+2001-08-28 13:56  Daouda Lo <daouda@mandrakesoft.com>
+
+	* mdkonline: upload the framework
+
