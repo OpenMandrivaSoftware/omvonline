@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 30mdk
+%define release 32mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -10,7 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Packager:	Daouda Lo <daouda@mandrakesoft.com>
+Packager:	Mandrakeonline Team <http://www.mandrakeonline.net>
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
@@ -116,10 +116,20 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 
 %changelog
+* Thu Mar 24 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-32mdk
+- best browwser is now handled by /usr/bin/www-browser 
+
+* Wed Mar 16 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-31mdk
+- change Packager to mandrakeonline team
+- misc fixes for mnf 
+- s/mdkapplet/mdkupdate/ for is_running check
+- get root before testing anything
+
+
 * Wed Mar  9 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-30mdk
 - libDrakX stuffs are always located in /usr/lib/ (gb)
 
-* Tue Mar  8 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-29mdk
+* Wed Mar  9 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-29mdk
 - added option --interactive (to use nointeractive in MNF)
 - MandrakeUpdate in newt version (only for update_source media)
 - fix the x86_64 coupled with corporate capharnaum
