@@ -5,7 +5,7 @@ LANGS = $(shell ls *.po | xargs -i basename {} .po )
 PGOAL = mdkonline
 GOALS = $(PGOAL).pot  $(foreach a, $(LANGS), $(a).mo)
 
-PL_FILES = ../mdkonline ../mdkupdate
+PL_FILES = ../mdkonline ../mdkupdate ../applet/mdkapplet
 
 # $(foreach a, $(LANGS), $($(a).mo))
 

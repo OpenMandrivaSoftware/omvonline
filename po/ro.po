@@ -1,24 +1,141 @@
+# translation of mdkonline-ro.po to Romanian Translators for Free Software
 # mdkonline romanian translation
-# Copyright (C) 2002 Free Software Foundation, Inc.
-# Ovidiu Constantin <ovidiu.soft@xnet.ro>, 2002.
-# Harald Ersch <hersch@romatsa.ro>,2002.
+# Copyright (C) 2002,2004 Free Software Foundation, Inc.
+# Ovidiu Constantin <ovidiu.soft@xnet.ro>, 2002,2003.
+# Harald Ersch <hersch@romatsa.ro>,2002,2004.
+# Harald Ersch <harald@ersch.ro>, 2004
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-16 22:53+0100\n"
-"PO-Revision-Date: 2003-02-02 14:50+0200\n"
-"Last-Translator: Ovidiu Constantin <ovidiu.constantin@gmx.net>\n"
+"POT-Creation-Date: 2004-02-20 17:57+0100\n"
+"PO-Revision-Date: 2004-02-20 09:24+0100\n"
+"Last-Translator: Harald Ersch <harald@ersch.ro>\n"
 "Language-Team: Romanian Translators for Free Software <rtfs-project@lists."
 "sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+
+#: ../applet/mdkapplet:71
+msgid "Launch Mandrake Update"
+msgstr ""
+
+#: ../applet/mdkapplet:72
+#, fuzzy
+msgid "Configuration"
+msgstr "Citire configuraţie\n"
+
+#: ../applet/mdkapplet:73 ../applet/mdkapplet:111
+msgid "Check Updates"
+msgstr ""
+
+#: ../applet/mdkapplet:74
+msgid "Online WebSite"
+msgstr ""
+
+#: ../applet/mdkapplet:75
+msgid "Configure Network"
+msgstr ""
+
+#: ../applet/mdkapplet:76
+msgid "Register Now!"
+msgstr ""
+
+#: ../applet/mdkapplet:101
+msgid "Mandrake Updates Applet"
+msgstr ""
+
+#: ../applet/mdkapplet:109
+msgid "Actions"
+msgstr ""
+
+#: ../applet/mdkapplet:112
+msgid "Start MandrakeUpdate"
+msgstr ""
+
+#: ../applet/mdkapplet:113
+msgid "Configure"
+msgstr ""
+
+#: ../applet/mdkapplet:114
+msgid "See logs"
+msgstr ""
+
+#: ../applet/mdkapplet:117
+msgid "Status"
+msgstr ""
+
+#: ../applet/mdkapplet:120
+msgid "Network Connection: "
+msgstr ""
+
+#: ../applet/mdkapplet:121
+msgid "Down"
+msgstr ""
+
+#: ../applet/mdkapplet:121
+msgid "Up"
+msgstr ""
+
+#: ../applet/mdkapplet:124
+msgid "New Updates: "
+msgstr ""
+
+#: ../applet/mdkapplet:125
+msgid "Available"
+msgstr ""
+
+#: ../applet/mdkapplet:125
+msgid "Not Available"
+msgstr ""
+
+#: ../applet/mdkapplet:128
+msgid "Last check: "
+msgstr ""
+
+#: ../applet/mdkapplet:134
+msgid "Close"
+msgstr "Închide"
+
+#: ../applet/mdkapplet:184
+msgid "About.."
+msgstr ""
+
+#: ../applet/mdkapplet:185
+msgid "Quit"
+msgstr "Ieşire"
+
+#: ../applet/mdkapplet:189
+msgid "About Online Applet"
+msgstr ""
+
+#: ../applet/mdkapplet:190
+#, fuzzy
+msgid "Mandrake Online Team"
+msgstr "Bun venit la MandrakeOnline"
+
+#: ../applet/mdkapplet:190
+msgid "Mandrake Update Notification Applet"
+msgstr ""
+
+#: ../applet/mdkapplet:190
+msgid "Team:"
+msgstr ""
+
+#: ../applet/mdkapplet:190
+msgid "This Software is under GPL"
+msgstr ""
+
+#: ../applet/mdkapplet:190
+msgid "Version:"
+msgstr ""
 
 #: ../mdkonline:85
 msgid "Skip Wizard"
-msgstr ""
+msgstr "Fără asistent"
 
 #: ../mdkonline:99
 msgid "Welcome to MandrakeOnline"
@@ -37,9 +154,8 @@ msgstr ""
 "a vă ţine la curent cu actualizările de securitate şi noutăţi utile.\n"
 
 #: ../mdkonline:101
-#, fuzzy
 msgid "Create a MandrakeOnline Account"
-msgstr "Bun venit la MandrakeOnline"
+msgstr "Creează un cont MandrakeOnline"
 
 #: ../mdkonline:103
 msgid "I don't have a MandrakeOnline account and I want to "
@@ -58,13 +174,12 @@ msgid "Password:"
 msgstr "Parolă:"
 
 #: ../mdkonline:109
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Parolă:"
+msgstr "Confirmare parolă:"
 
 #: ../mdkonline:110
 msgid "Mail contact:"
-msgstr ""
+msgstr "Contact mail:"
 
 #: ../mdkonline:117
 msgid "Mandrake Privacy Policy"
@@ -150,101 +265,107 @@ msgstr "Da, doresc actualizări automate"
 
 #: ../mdkonline:147
 msgid "Country:"
-msgstr ""
+msgstr "Ţara:"
 
-#: ../mdkonline:172
+#: ../mdkonline:174
 msgid "Creation"
-msgstr ""
-
-#: ../mdkonline:172
-msgid "Login and Password should be < 12 characters\n"
-msgstr ""
-
-#: ../mdkonline:173
-msgid "Special Characters"
-msgstr ""
-
-#: ../mdkonline:173
-msgid "Special Characters are not allowed\n"
-msgstr ""
+msgstr "Creare"
 
 #: ../mdkonline:174
-msgid "Empty Fields"
-msgstr ""
-
-#: ../mdkonline:174
-msgid "Please fill up all fields\n"
-msgstr ""
+#, fuzzy
+msgid "Login and password should be less than 12 characters\n"
+msgstr "Login-ul şi parola trebuie să fie < 12 caractere\n"
 
 #: ../mdkonline:175
+#, fuzzy
+msgid "Special characters"
+msgstr "Caractere speciale"
+
+#: ../mdkonline:175
+#, fuzzy
+msgid "Special characters are not allowed\n"
+msgstr "Caracterele speciale nu sunt permise\n"
+
+#: ../mdkonline:176
+#, fuzzy
+msgid "Empty fields"
+msgstr "Câmpuri goale"
+
+#: ../mdkonline:176
+#, fuzzy
+msgid "Please fill in all fields\n"
+msgstr "Vă rog să completaţi toate câmpurile\n"
+
+#: ../mdkonline:177
 msgid "Email"
-msgstr ""
+msgstr "Poşta electronică"
 
-#: ../mdkonline:175
+#: ../mdkonline:177
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Email incorect\n"
 
-#: ../mdkonline:176
+#: ../mdkonline:178
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Contul există deja!\n"
 
-#: ../mdkonline:176
+#: ../mdkonline:178
 msgid "Change account"
-msgstr ""
+msgstr "Modificare cont"
 
-#: ../mdkonline:181
+#: ../mdkonline:184
 msgid "Problem connecting to server \n"
-msgstr ""
+msgstr "Probleme cu conectarea la server \n"
 
-#: ../mdkonline:181
+#: ../mdkonline:184
 msgid "Server Problem"
-msgstr ""
+msgstr "Probleme cu serverul"
 
-#: ../mdkonline:186 ../mdkonline:188 ../mdkonline:190
+#: ../mdkonline:189 ../mdkonline:191 ../mdkonline:193
 msgid "Error"
-msgstr ""
+msgstr "Eroare"
 
-#: ../mdkonline:186
+#: ../mdkonline:189
 msgid "Please provide a login"
-msgstr ""
+msgstr "Vă rog să furnizaţi un login"
 
-#: ../mdkonline:188
+#: ../mdkonline:191
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr ""
+"Parolele nu se potrivesc.\n"
+"Incercaţi din nou\n"
 
-#: ../mdkonline:190
+#: ../mdkonline:193
 msgid "Not a valid mail address!\n"
-msgstr ""
+msgstr "Nu e o adresă de mail validă!\n"
 
-#: ../mdkonline:210
+#: ../mdkonline:213
 msgid "Finish"
 msgstr "Terminare"
 
-#: ../mdkonline:227
+#: ../mdkonline:230
 msgid "Quitting Wizard\n"
 msgstr "Terminare asistent\n"
 
-#: ../mdkonline:252
-#, fuzzy
+#: ../mdkonline:255
 msgid "Connecting ...\n"
-msgstr "Problemă la conectare"
+msgstr "Conectare ...\n"
 
-#: ../mdkonline:261 ../mdkonline:327 ../mdkupdate:169
+#: ../mdkonline:264 ../mdkonline:330 ../mdkupdate:169
 msgid "Connection problem"
 msgstr "Problemă la conectare"
 
-#: ../mdkonline:261 ../mdkonline:327
-#, fuzzy
+#: ../mdkonline:264 ../mdkonline:330
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "MandrakeUpdate nu a putut contacta situl, vom încerca din nou."
+msgstr ""
+"MandrakeOnline nu a putut fi contactat, vă rog încercaţi din nou mai târziu"
 
-#: ../mdkonline:273
+#: ../mdkonline:276
 msgid "Wrong password"
 msgstr "Parolă greşită"
 
-#: ../mdkonline:273
+#: ../mdkonline:276
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -262,11 +383,11 @@ msgstr ""
 " Va trebui de asemenea să furnizaţi un nume al maşinii \n"
 " (doar caracterele alfabetice sunt permise)"
 
-#: ../mdkonline:300
+#: ../mdkonline:303
 msgid "Sending configuration..."
-msgstr ""
+msgstr "Trimitere configurare..."
 
-#: ../mdkonline:335
+#: ../mdkonline:338
 msgid "Reading configuration\n"
 msgstr "Citire configuraţie\n"
 
@@ -351,9 +472,6 @@ msgstr "Nu pot actualiza pachetele de pe mediul mdkupdate.\n"
 #~ msgid "Next"
 #~ msgstr "Înainte"
 
-#~ msgid "Quit"
-#~ msgstr "Ieşire"
-
 #~ msgid "Back"
 #~ msgstr "Înapoi"
 
@@ -398,6 +516,3 @@ msgstr "Nu pot actualiza pachetele de pe mediul mdkupdate.\n"
 
 #~ msgid "Really abort? - MandrakeOnline"
 #~ msgstr "Într-adevăr abandonaţi? - MandrakeOnline"
-
-#~ msgid "Close"
-#~ msgstr "Închide"
