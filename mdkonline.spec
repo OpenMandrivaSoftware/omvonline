@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Sun Feb 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
+* Mon Mar  1 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
 - Mandrake Online Resurrected/Rewrited
 - Mandrake Applet Notification system
 - Wizard for club users is still valid but separated (drakclub executable)
