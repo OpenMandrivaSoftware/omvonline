@@ -169,7 +169,7 @@ sub installUpdates {
     system "/usr/sbin/mdkupdate", "--applet";
 }
 sub silentCheck {
-    my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
+    my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
     my $u;
     require LWP::UserAgent;
@@ -192,13 +192,13 @@ sub silentCheck {
 		   10 => sub { go2State('okay') },
 		   11 => sub {
 		       my @contents = sort ( split /\n/, $ct);
-		       my @r = sort( split /\n/, `rpm -qa` );
+		       my @t = split /\n/, `rpm -qa`;
 		       foreach my $cand (@contents) {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
-			   $cand =~ /(.*)-(.*)$/; my ($namever, $release) = ($1, $2);
-			   if (member($namever, @r) && $cand ne chomp_(`rpm -q $namever`)) {
-			       go2State('error') and last
-			   }
+			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
+			   my $comp = compareWithInstalled($name, $ver, $rel, \@t);
+			   $comp and go2State('error');
+			   $comp and last;
 		       }
 		   },
 		   97 => sub { go2State('disabled'); },
@@ -206,6 +206,19 @@ sub silentCheck {
 		   99 => sub { go2State('critical'); }
 		  };
     $retcode->{$u}->();
+}
+sub compareWithInstalled {
+    my ($name, $ver, $rel, $t) = @_;
+    my $isUpdate = 0;
+    foreach my $p (@{$t}) { 
+	$p =~ /(.*)-(.*)-(.*)$/;
+	if ($name eq $1 ) {
+	    if ($ver ne $2 || $rel ne $3) {
+		$isUpdate = 1 and last;
+	    }
+	}
+    }
+    $isUpdate
 }
 sub cronUpdate {
     my ($to) = shift;
