@@ -87,7 +87,7 @@ if(!$ret) {
     $noscheduled = join(',',@{$c2h->{nosched}});
     if ($opt eq '--applet') {
 	system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
-    } else {
+    } elsif ($opt eq '--auto') {
 	autoInstallRpms($c2h->{sched});
     }
     rpm_qa("/root/rpm_qa_installed_after");
