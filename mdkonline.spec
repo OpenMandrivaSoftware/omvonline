@@ -93,6 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-4mdk
 - BuildRequires: gettext (Stefan Van Der Eijk)
+- resync with cvs (please use the spec file !)
 
 * Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-3mdk
 - resync with cvs (please use the spec file !)
