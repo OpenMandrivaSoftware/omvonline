@@ -2,8 +2,8 @@
 ################################################################################
 # Mdkupdate                                                                    # 
 #                                                                              #
-# Copyright (C) 2002 MandrakeSoft                                              #
-#
+# Copyright (C) 2002-2004 MandrakeSoft                                         #
+#                                                                              #
 # Daouda Lo <daouda@mandrakesoft.com>                                          #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
@@ -44,6 +44,7 @@ foreach (qw(online_dif online_update online3_RemoteAction)) {
 }
 my $rpms_rep = "/root/tmp/";
 my $VERSION = "1.0";
+my $YEARS = "2002-2004";
 my $security = grep { /^-?-security$/ } @ARGV;
 my $update = grep { /^-?-update$/ } @ARGV;
 
@@ -55,11 +56,11 @@ my ($scheduled, $noscheduled);
 
 sub usage {
     print STDERR N("mdkupdate version %s
-Copyright (C) 2002 MandrakeSoft.
+Copyright (C) %s MandrakeSoft.
 This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
-", $VERSION) . N("  --help         - print this help message.
+", $VERSION, $YEARS) . N("  --help         - print this help message.
 ") . N("  --auto         - Mdkupdate launched automatically.
 ") . N("  --applet       - launch MandrakeUpdate.
 ") . N("  --update       - Update keys
@@ -68,7 +69,7 @@ usage:
 }
 
 my ($opt) = @ARGV;
-@ARGV == 1 && ($opt eq '--auto' || $opt eq '--security' || $opt eq '--applet' || $opt eq '--help') or usage();
+@ARGV == 1 && ($opt eq '--auto' || $opt eq '--security' || $opt eq '--applet') or usage();
 
 -s $conffile or die N("No $conffile file found. Run mdkonline wizard first");
 
@@ -96,7 +97,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  $noscheduled = join(',',@{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  if ($opt eq '--applet') {
-			      system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$noscheduled";
+			      system "MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
 			  }
@@ -259,7 +260,7 @@ sub addMedia {
     my $fullpath2mir = "ftp://" . "$mirror". "/$r" . "/RPMS" . "/" ;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with ../base/hdlist.cz";
+	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", "../base/synthesis.hdlist.cz";
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
