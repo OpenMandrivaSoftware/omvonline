@@ -21,6 +21,7 @@
 use Config;
 use POSIX;
 use Locale::GetText;
+#use strict;
 
 setlocale (LC_ALL, "");
 
@@ -41,7 +42,7 @@ sub _ {
 my $nb_pages=0;
 my $page;
 my $xpm_path="/usr/share/mdkonline/pixmaps";
-my $path_to_welcome="/usr/share/doc/HTM";
+my $path_to_welcome="/usr/share/doc/HTML/welcome.html";
 my $check_custid;
 my $true=1;
 my $false=0;
@@ -121,13 +122,13 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
     my $vbox_ident= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
-    my $label_log = new Gtk::Label(_("\n\n Enter your Mandrake Online login and password \n"));
+    my $label_log = new Gtk::Label("\n\n" . _("Enter your Mandrake Online login and password:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     my $vbox_rev=new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your config"),540,100);
-    my $label_rev = new Gtk::Label(_("We are going to store in our databases all the packages\nyou have installed on your system and your hardware configuration.\nIf you don't want to send anything press 'Cancel'.\nIf you will help us improve Mandrake Linux continue by pressing 'Next'."));
+    write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
+    my $label_rev = new Gtk::Label(_("This is your chance, to help us improving Mandrake Linux.\n\nThe Wizard will now send the following informations to MandrakeSoft:\n1) the packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable, by that idea, press 'Cancel'.\nBy pressing 'Next', you will grant us the privilege\nto learn more about about you as our customer\nand it gives us the chance to keep you informed\nabout security updates and useful upgrades."));
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
@@ -154,6 +155,7 @@ sub confirm_quit {
     my $style1 = new Gtk::Style;
     $style1->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style1); 
+    $window_about->set_title(_("Really abort? - Mandrake Online"));
     $window_about->vbox->pack_start( $label, 1, 1, 0 );
     $window_about->show_all();
     $window_about->set_modal(1);
@@ -177,8 +179,9 @@ sub pack_box_identity {
 }
 
 sub load_text {
+    my $line;
     my ($text,$file)=@_;
-    open( FILE, $file );
+    open( FILE, $file ) or die "load_text: missing file $file";
     foreach $line ( <FILE> )
     {
 	$text->insert( $fixed_font, undef, undef, $line );
