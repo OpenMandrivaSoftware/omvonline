@@ -248,7 +248,7 @@ sub sendConfig {
     # Check the outcome of the response
     #print "REPONSE: ".$response->content."\n";
     remove_wait_msg($w);
-    if ($response->is_success) {
+    if ($response->is_success || $::testing) {
 	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
 	#printf("Send Config :\nNEWKEY=%s\nRESPONSE=%s", $1, $response->content);
 	$o->{currentkey} = $1; 
@@ -257,7 +257,7 @@ sub sendConfig {
 	$result = -1;
     }
     # if information were sent correctly (exit code: 0 from scp script), go to page 5
-    if (! $result) {
+    if (! $result || $::testing) {
 	# go to last page
 	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide
     } else {
@@ -335,7 +335,7 @@ sub testPasswd () {
 	my $response = $ua->request($request);
 	remove_wait_msg($w);
 	# Check the outcome of the response
-	if ($response->is_success) {
+	if ($response->is_success || $::testing) {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
@@ -347,7 +347,7 @@ sub testPasswd () {
     }
     
     # if correct, go to page 4
-    if (! $result) {
+    if (! $result || $::testing) {
 	$o->{nb}->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
