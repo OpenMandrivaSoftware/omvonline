@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
 ################################################################################
 # Mdkupdate                                                                    # 
 #                                                                              #
@@ -63,7 +63,6 @@ rpm_qa("/root/rpm_qa_installed_before");
 update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
 rpm_qa("/root/rpm_qa_installed_after");
 my %new = getVarsFromSh("/root/.mdkupdate");
-print "old key is $new{OLDKEY}\n";
 send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
 
 sub update_rpms () {
@@ -108,7 +107,7 @@ sub update_rpms () {
 	} else { print "problem occur $str_m\n";}
 	    	    
     } else {
-	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.com\n"));
+	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
 	exit -1;
     }
 }
