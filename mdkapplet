@@ -104,7 +104,7 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 $eventbox->signal_connect(button_press_event => sub {
 			      if (!$raisedwindow) {
 				  if ($_[1]->button == 1) {
-				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { configure(); $raisedwindow = 0 }
+				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
 				  }
 			      }			      
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
