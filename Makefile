@@ -41,7 +41,7 @@ install: all
 	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png
 	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
 	install -m644 pixmaps/*.png $(PIXDIR)/pixmaps
-	install -m644 mdkapplet.desktop $(PREFIX)/usr/share/autostart/
+#	install -m644 mdkapplet.desktop $(PREFIX)/usr/share/autostart/
 	install -m644 mdkonline.pm $(FBLIBDIR)
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 

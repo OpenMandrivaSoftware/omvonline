@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	5mdk
+Release: 	6mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -51,6 +51,17 @@ mkdir -p %buildroot%_prefix/X11R6/bin/
 #ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakclub
 ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakonline
 ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
+
+mkdir -p $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d
+cat > $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet <<EOF
+#!/bin/sh
+DESKTOP=$1
+case $DESKTOP in
+   KDE|GNOME|IceWM) exec /usr/bin/mdkapplet;;
+esac
+EOF
+
+chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 
 #install lang
 %{find_lang} %{name}
@@ -102,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 %{_datadir}/%{name}/pixmaps/*.png
-%{_datadir}/autostart/*
+#%{_datadir}/autostart/*
 
 ##################################################################
 #
@@ -114,6 +125,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Wed Aug  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-6mdk
+- automatically launch mdkapplet for KDE, GNOME and IceWM (via xinit)
+
 * Sat Jul 17 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-5mdk
 - fix conflicts (fcrozat)
 
