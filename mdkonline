@@ -70,7 +70,7 @@ my %locations = ( _("Africa") => ['ftp.univie.ac.at/systems/linux/Mandrake/updat
 		  _("Asia") => ['ftp.surfnet.nl/pub/os/Linux/distr/Mandrake/Mandrake/updates','ftp.math.utah.edu/pub/linux/Mandrake/updates'],
 		  _("Australia") => ['ftp-linux.cc.gatech.edu/pub/linux/distributions/mandrake/updates','mandrake.redbox.cz/Mandrake/updates'],
 		  _("Europe") => ['ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates','ftp.gwdg.de/pub/linux/mandrake/updates'],
-		  _("North America") =>['mirrors.secsup.org/pub/linux/mandrake/Mandrake/updates','ftp.stealth.net/pub/mirrors/ftp.mandrake.com/Mandrake/updates'],
+		  _("North America") =>['mirrors.secsup.org/pub/linux/mandrake/Mandrake/updates',''],
 		  _("South America") => ['ftp.proxad.net/pub/Distributions_Linux/Mandrake/updates','carroll.cac.psu.edu/pub/linux/distributions/mandrake/updates'],
 		  );
 require Gtk;
@@ -374,7 +374,7 @@ sub step_wizard {
     $hbox_subs->pack_start($check_subs,0,0,1);
     $button_subs->set_sensitive(0);
     $check_subs->signal_connect (clicked => sub {$test_tog=$check_subs->get_active(); 
-						 $button_su4bs->set_sensitive($test_tog); 
+						 $button_subs->set_sensitive($test_tog); 
 						 $Button_Next->set_sensitive(!$test_tog); });
     $button_subs->signal_connect('clicked' => \&subscribe_mdkonline);
     $hbox_subs->pack_start($button_subs,0,0,1);
@@ -390,6 +390,7 @@ sub step_wizard {
     my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine name:"),$box_user);
+    set_boxname($box_user) if -e "/root/.mdkupdate";
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
@@ -488,6 +489,12 @@ CURRENTKEY=$key
     qq(#!/bin/bash
 if [ -f /root/.mdkupdate ]; then mdkupdate; fi
 );
+}
+
+sub set_boxname {
+    my ($box) = @_;
+    my %b = getVarsFromSh("/root/.mdkupdate");
+    $box->set_text($b{BOX});
 }
 
 sub info_popup () {
