@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 26mdk
+%define release 27mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -115,10 +115,16 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 
 %changelog
-* Thu Dec 23 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-26mdk
+* Wed Jan 19 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-27mdk
+- truly support x86_64 (good path to synthesis and RPMS repertory)
+- mdkupdate media renamed to update_source (consolidating with MandrakeUpdate)
+
+* Wed Dec 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-26mdk
+- display last check date on applet interface
 - fixed permissions of generated conf file (use octal with perl chmod)
 - do not go to 'End' step when upload fails, give choice to user 
   to reupload their config 
+- added nn.po ( thanks to Karl Ove Hufthammer )
 
 * Fri Dec 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-25mdk
 - fix typo when --debug is passed to mdkapplet (warly)

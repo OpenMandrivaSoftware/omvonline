@@ -96,7 +96,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
+			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched})
 			  }
@@ -165,20 +165,23 @@ sub add_media {
     my $mirror = shift;
     my ($r) = mdkonline::get_release();
     my $dist_type = mdkonline::get_distro_type();
+    my $media_varfile = "/var/lib/urpmi/list.mdkupdate";
+    my ($path2new_arch, $path2new_synthesis) = $r <= 10.0 ? ('/RPMS/', '../base/synthesis.hdlist.cz') : ('/main_updates/', 'media_info/synthesis.hdlist.cz');
     #sometimes server returns the full link http:// or ftp://
-    my $fullpath2mir = $r <= 10.0 ? if_($mirror !~ /^(http|ftp):\/\// , "ftp://") . $mirror . if_($dist_type, "/$dist_type") ."/$r" . "/RPMS" . "/" :
-      "ftp://" . $mirror . "/$r" . "/main_updates" . "/";
+    my $fullpath2mir = if_($mirror !~ /^(http|ftp):\/\// , "ftp://") . $mirror . if_($dist_type, "/$dist_type") ."/$r" . $path2new_arch;
     eval {
-	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", $r <= 10.0 ? "../base/synthesis.hdlist.cz" : "media_info/synthesis.hdlist.cz";
+	#Remove historical mdkupdate source 
+	-f $media_varfile and system "/usr/sbin/urpmi.removemedia", "mdkupdate";
+	system "/usr/sbin/urpmi.removemedia", "update_source";
+	system "/usr/sbin/urpmi.addmedia", "--update", "update_source", $fullpath2mir, "with", $path2new_synthesis;
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
 sub update_pkgs {
     @_ or return;
     eval {
-	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @_;
-	$? == 0 or die N("Unable to update packages from mdkupdate medium.\n");
+	system "/usr/sbin/urpmi", "--auto", "--media", "update_source", map { /^(.*)\.rpm$/ && $1 } @_;
+	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     $@ and die "Problem upgrading with urpmi";
 }

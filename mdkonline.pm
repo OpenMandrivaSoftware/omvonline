@@ -24,7 +24,7 @@ sub get_release() {
 
 sub get_distro_type() {
     my $d;
-    cat_($release_file) =~ /(corporate|mnf)/i, and $d = lc($1);
+    cat_($release_file) =~ /(corporate|mnf|x86_64)/i, and $d = lc($1);
     $d
 }
 
