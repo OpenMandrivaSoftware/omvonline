@@ -1,22 +1,22 @@
 #!/usr/bin/perl -w
-# Mandrake First Time Wizard
-#
-# Copyright (C) 2001 MandrakeSoft Daouda Lo (daouda@mandrakesoft.com)
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2, or (at your option)
-# any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.       
-####################################################################################
+################################################################################
+# Mandrake Online                                                              #
+#                                                                              #
+# Copyright (C) 2001 MandrakeSoft - Daouda Lo <daouda@mandrakesoft.com>        #
+#                                                                              #
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
 
 use Config;
 use Data::Dumper;
@@ -113,12 +113,12 @@ sub on_prev_clicked {
 sub step_wizard {
     my $vbox_welc= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to Mandrake Online"),540,100);
-    my $label_welc = new Gtk::Label(_("At this step You are supposed to have a account on Mandrake Online.\n This assistant will help you to upload your configuration \n (packages, hardware configuration) to a centralized databases in \n order to keep you informed about security updates, useful upgrades.\n "));
+    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized databases in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     my $vbox_priv = new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy"),540,100);
+    write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
     my $vbox_ident= new Gtk::VBox(0,0);
@@ -129,7 +129,7 @@ sub step_wizard {
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     my $vbox_rev=new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your config"),540,100);
-    my $label_rev = new Gtk::Label(_("We'll going to store on our databases all the packages installed \n on your system  and your hardware configuration \n if  you don't want to send anything , press Cancel \n otherwise press the Next button."));
+    my $label_rev = new Gtk::Label(_("We are going to store in our databases all the packages\nyou have installed on your system and your hardware configuration.\nIf you don't want to send anything press 'Cancel'.\nIf you will help us improve Mandrake Linux continue by pressing 'Next'."));
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
@@ -151,10 +151,10 @@ sub confirm_quit {
     $button_quit->signal_connect_object("clicked",\&gtk_main_quit);
     $bbox1->add($button_quit);
 
-    my $label = new Gtk::Label( _("Do you really want to abort the
-    Mandrake Online?\nTo return to mdkonline press 'Cancel'\nTo really quit the wizard press 'Quit'" ));
+    my $label = new Gtk::Label( 
+	_("Do you really want to abort Mandrake Online?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
     my $style1 = new Gtk::Style;
-    $style1->font(Gtk::Gdk::Font->fontset_load("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"));
+    $style1->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style1); 
     $window_about->vbox->pack_start( $label, 1, 1, 0 );
     $window_about->show_all();
@@ -224,7 +224,7 @@ sub write_on_pixmaps {
     my ($pix1,$pix_mask1) = gtkcreate_png("$xpm_path/$pix_name");
     my ($y1, $x1) = $pix1->get_size;
     my $style= new Gtk::Style;
-    $style->font(Gtk::Gdk::Font->fontset_load("-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"));
+    $style->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*")));
     my $w = $style->font->string_width(_("Welcome"));
     $darea->signal_connect(expose_event => sub {
 	my $i;
@@ -242,7 +242,7 @@ sub write_on_pixmaps {
 }
 
 sub gtk_main_quit {
-	print "Quitting Wizard\n";
+	print _("Quitting Wizard\n");
 	main_quit Gtk;
 }
 
