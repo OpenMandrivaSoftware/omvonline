@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2002-10-17 14:07+0200\n"
-"PO-Revision-Date: 2002-08-20 20:30+0800\n"
-"Last-Translator: Shiyu Tang <shiyutang@netscape.net>\n"
-"Language-Team: Simplified Chinese <zh@li.org>\n"
+"PO-Revision-Date: 2002-10-18 18:50+0800\n"
+"Last-Translator: Funda Wang <mandrake@en2china.com>\n"
+"Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=gb2312\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,11 +72,11 @@ msgstr "正在退出帮助\n"
 
 #: ../mdkonline_.c:265
 msgid "Warning: No browser specified"
-msgstr "警告：没有指定浏览器"
+msgstr "警告: 没有指定浏览器"
 
 #: ../mdkonline_.c:292
 msgid "Connecting ...\n"
-msgstr "连接...\n"
+msgstr "正在连接...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
 msgid "Connection problem"
@@ -116,10 +116,10 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"这一步骤假设您拥有一个 MandrakeOnline 帐户.\n"
-"我将帮助您把您的配置信息 ( 安装的软件包, 硬件配置 )\n"
+"这一步骤假设您拥有一个 MandrakeOnline 帐户。\n"
+"此助手将帮助您把配置信息(安装的软件包，硬件配置)\n"
 "上传到中心数据库\n"
-"这样我们可以及时通知您有关的安全升级和有用的更新.\n"
+"这样我们可以及时通知您有关的安全升级和有用的更新。\n"
 
 #: ../mdkonline_.c:394
 msgid "Mandrake Privacy Policy"
@@ -131,19 +131,19 @@ msgstr "认证"
 
 #: ../mdkonline_.c:400
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "请输入您的 MandrakeOnline 登录名，口令和机器名："
+msgstr "请输入您的 MandrakeOnline 登录名，口令和机器名:"
 
 #: ../mdkonline_.c:402
 msgid "Login:"
-msgstr "登录名："
+msgstr "登录名:"
 
 #: ../mdkonline_.c:402
 msgid "Machine name:"
-msgstr "机器名："
+msgstr "机器名:"
 
 #: ../mdkonline_.c:402
 msgid "Password:"
-msgstr "密码："
+msgstr "密码:"
 
 #: ../mdkonline_.c:407
 msgid "Sending your Configuration"
@@ -171,15 +171,15 @@ msgstr ""
 "为了利用 MandrakeOnline 的各项服务，\n"
 "我们将上传您的配置。\n"
 "\n"
-"下列信息将被发送到 MandrakeSoft：\n"
-"1）您在此系统中安装的软件包清单，\n"
-"2）您的硬件配置。\n"
+"下列信息将被发送到 MandrakeSoft:\n"
+"1) 您在此系统中安装的软件包清单，\n"
+"2) 您的硬件配置。\n"
 "\n"
 "如果您不喜欢发送这些信息，或者不需要使用这些服务，\n"
-" 请选择“取消”。如果您选择“下一步”，表示您允许我们\n"
+"请选择“取消”。如果您选择“下一步”，表示您允许我们\n"
 "通过为您定制的 E-mail 警报，通知您有关的安全更新和其他有用的升级。\n"
-"另外,您将以优惠价格在 www.mandrakeexpert.com 得到收费的支持。\n"
-"最后，我们将提供给你如下的 E-mail 转发地址：your.username@mandrakeonline.net"
+"另外，您将以优惠价格在 www.mandrakeexpert.com 得到收费的支持。\n"
+"最后，我们将提供给您如下的 E-mail 转发地址: your.username@mandrakeonline.net"
 
 #: ../mdkonline_.c:416
 msgid "Error while sending informations"
@@ -234,7 +234,7 @@ msgstr "读取设置\n"
 #: ../mdkonline_.c:481
 #, c-format
 msgid "cannot open this file for read: %s"
-msgstr "无法打开这个文件进行读取：%s"
+msgstr "无法打开这个文件进行读取: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -284,27 +284,27 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"Mdkupdate 版本：%s\n"
+"mdkupdate 版本 %s\n"
 "版权所有 (C) 2002 MandrakeSoft。\n"
-"这是自由软件，它能在GNU/GPL条款下再次发行。\n"
+"这是自由软件，它能在GNU GPL条款下再次发行。\n"
 "\n"
-"用途：\n"
+"用法:\n"
 
 #: ../mdkupdate_.c:57
 msgid "  --help         - print this help message.\n"
-msgstr "  --帮助         - 打印这份帮助信息。\n"
+msgstr "  --help        - 打印这份帮助信息。\n"
 
 #: ../mdkupdate_.c:58
 msgid "  --security     - use only security media.\n"
-msgstr "  --安全     - 仅仅使用安全媒介。\n"
+msgstr "  --security    - 仅仅使用安全媒介。\n"
 
 #: ../mdkupdate_.c:59
 msgid "  --update       - update all information.\n"
-msgstr ""
+msgstr " --update       - 更新全部信息。\n"
 
 #: ../mdkupdate_.c:60
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - 详细提示模式。\n"
+msgstr "  -v            - 详细提示模式。\n"
 
 #: ../mdkupdate_.c:175
 msgid "MandrakeUpdate could not contact the site, we will try again"
@@ -317,28 +317,16 @@ msgstr "如有任何问题，请发送邮件到 support@mandrakeonline.net\n"
 #: ../mdkupdate_.c:202
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
-msgstr "你必须在 MandrakeOnline 上有一个账号，或者升级你的预定。"
+msgstr "您必须在 MandrakeOnline 上有一个账号，或者升级您的预定。"
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
-msgstr "你的登陆名或密码可能是错的。"
+msgstr "您的登陆名或密码可能是错的。"
 
 #: ../mdkupdate_.c:214
 msgid "unable to create mdkupdate medium\n"
-msgstr ""
+msgstr "无法创建 mdkupdate 介质\n"
 
 #: ../mdkupdate_.c:216
 msgid "unable to update packages from mdkupdate medium\n"
-msgstr ""
-
-#~ msgid "wget is missing\n"
-#~ msgstr "没有 wget\n"
-
-#~ msgid "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr "您的系统会定期的运行一个程序, 查找新的升级\n"
-
-#~ msgid "USA"
-#~ msgstr "美国"
-
-#~ msgid "Your personal informations are now stored at MdkOnline"
-#~ msgstr "MdkOnline 现在保存了您的个人信息"
+msgstr "无法从 mdkupdate 介质中更新包\n"
