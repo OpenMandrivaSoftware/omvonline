@@ -20,7 +20,7 @@ install: all
 	install -d $(RPM_BUILD_ROOT)/usr/{X11R6/bin/,bin,share/icons,share/mdkonline/pixmaps}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/X11R6/bin/
 	install -s -m755 $(SCRIPTS) $(RPM_BUILD_ROOT)/usr/bin/
-#	install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
+	install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 pixmaps/*.png $(RPM_BUILD_ROOT)/usr/share/mdkonline/pixmaps
 	install -m644 privacy.txt $(RPM_BUILD_ROOT)/usr/share/mdkonline/
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
