@@ -37,8 +37,7 @@ add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
-my $av_pkgs;
-my $update_label;
+my ($av_pkgs, $update_label, $mLog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my $conffile = '/etc/sysconfig/mdkonline';
 
@@ -168,9 +167,9 @@ sub setLabel {
     my $label = shift;
     defined $update_label and $update_label->set_label($label);
 }
-sub configNetwork { system "/usr/sbin/drakconnect &" }
-sub launchUpdate { system "/usr/sbin/MandrakeUpdate &" } 
-sub installUpdates { system "/usr/sbin/mdkupdate", "--applet" }
+sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
+sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
+sub installUpdates { $mLog .= N("Launching mdkupdate --applet"); system "/usr/sbin/mdkupdate", "--applet" }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
@@ -192,7 +191,7 @@ sub silentCheck {
     #   98 - wrong pass
     #   97 - host not active
     my $retcode = {
-		   10 => sub { $isAvailable = 0; go2State('okay') },
+		   10 => sub { $isAvailable = 0; $mLog .= N("System is up to date") ;go2State('okay') },
 		   11 => sub {
 		       my @contents = sort ( split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
@@ -200,12 +199,12 @@ sub silentCheck {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   my $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   if ($comp) { $isAvailable = 1; go2State('error') and last }
+			   if ($comp) { $isAvailable = 1; $mLog .= N("Checkin ... Updates are available $comp\n"); go2State('error') and last }
 		       }
 		   },
-		   97 => sub { go2State('disabled'); },
-		   98 => sub { go2State('critical'); },
-		   99 => sub { go2State('critical'); }
+		   97 => sub { $mLog .= N("Online services disabled. Contact MandrakeOnline site\n") ; go2State('disabled'); },
+		   98 => sub { $mLog .= N("Wrong Password.\n"); go2State('critical'); },
+		   99 => sub { $mLog .= N("Wrong Action or host or login. "); go2State('critical'); }
 		  };
     $retcode->{$u}->();
 }
@@ -213,14 +212,27 @@ sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
     foreach my $p (@{$t}) { 
-	$p =~ /(.*)-(.*)-(.*)$/;
-	if ($name eq $1 ) {
-	    if ($ver ne $2 || $rel ne $3) {
-		$isUpdate = 1 and last;
-	    }
+	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
+	if ($name eq $n ) {
+	    if ($ver eq $v) {
+		if ($rel ne $r) { $isUpdate = 1 and last }
+	    } elsif (isNewVersion($ver, $v)) { $isUpdate = 1 and last }
 	}
     }
     $isUpdate
+}
+sub isNewVersion {   
+    my ($f, $d) = @_;
+    if (($f =~ /^[0-9\.]+$/) && ($d =~ /^[0-9\.]+$/)) {
+        while (1) {
+            my ($f_d, $f_l) = $f =~ /^\.?([^\.]+)(.*)$/ or return $f gt $d;
+            my ($d_d, $d_l) = $d =~ /^\.?([^\.]+)(.*)$/ or return $f gt $d;
+            return 1 if ($f_d > $d_d);
+            return 0 if ($f_d < $d_d);
+            ($f, $d) = ($f_l, $d_l);
+        }   
+    }   
+    return $f gt $d;
 }
 sub cronUpdate {
     my ($to) = shift;
@@ -238,11 +250,13 @@ sub lastCheck {
 }
 sub checkUpdates {
     if (!isNetwork()) {
+	$mLog .= N("Checking Network: seems disabled\n");
 	go2State('disconnected')
     } elsif (!-e $conffile) {
+	$mLog .= N("Checking config file: Not present");
 	go2State('noconfig')
     } else {				   
-	setLabel(N("Checking..."));
+	setLabel(N("Checking for Updates..."));
 	silentCheck();
     }
     setLabel($isAvailable ? N("Available") : N("Not Available"));
@@ -281,7 +295,8 @@ sub browser {
     $Br{$wm}
 }
 sub displayLogs {
-    system "/usr/sbin/logdrake --explain=drakxtools &"
+    #    system "/usr/sbin/logdrake --explain=drakxtools &"
+    create_dialog(N("Logs"), $mLog, { use_markup => 1, height => 480, width => 580, scroll => 1 })
 }
 sub shouldStart() {
     my %p = getVarsFromSh("$ENV{HOME}/.mdkonline");
