@@ -118,7 +118,7 @@ gtkappend_page($o->{nb},
 	      );
 gtkappend_page($o->{nb},
 	       gtkpack_(Gtk2::VBox->new(0, 3),
-			0, set_darea(N("Mandrake Privacy Policy"), 'privacy'),
+			0, set_darea(N("Mandrakelinux Privacy Policy"), 'privacy'),
 			1, create_scrolled_window(gtktext_insert(Gtk2::TextView->new, privacy_text()))
 		       )
 	      );
