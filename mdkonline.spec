@@ -126,7 +126,7 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Mon Sep 13 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
+* Tue Sep 14 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
 - po updates
 
 * Fri Sep 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-8mdk
