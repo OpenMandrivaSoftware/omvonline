@@ -83,7 +83,7 @@ $Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
 
 my $Button_Next= new Gtk::Button("  " . _("Next  >") . "  ");
 my $Button_End= new Gtk::Button("  " . _("Finish") . "  ");
-my $Button_SkipWiz= new Gtk::Button("  " ._("Cancel") . "  ");
+my $Button_SkipWiz= new Gtk::Button("  " ._("Quit") . "  ");
 my $Button_Prev= new Gtk::Button("  " . _("<  Back") . "  ");
 my $notebook_global = new Gtk::Notebook;
 $Button_End->show();
@@ -134,9 +134,7 @@ sub on_end_clicked {
 
 sub on_next_clicked {
     $page=$notebook_global->get_current_page();
-#    print "$page\n" ;
     if ( $actions{$page} ) {
-#	print STDERR "Action !\n";
 	$actions{$page}->();
     } else {
 	$notebook_global->next_page();
@@ -155,13 +153,11 @@ sub on_next_clicked {
 	$hbox->remove($Button_Next);
 	$hbox->pack_end($Button_End, 0, 1, 0);
 	$hbox->pack_end($Button_Prev, 0, 1, 0);
-    }4
-#    print "Go to page $page\n";
+    }
 }
 
 sub on_prev_clicked {
     $page=$notebook_global->get_current_page();
-#    print "$page\n" ;
 
     # change "Finish" to "Next" if coming from the last page
     if ($page == $nb_pages - 1) {
@@ -173,16 +169,19 @@ sub on_prev_clicked {
 
     if ($page == 4) {
 	$notebook_global->set_page(2); # Alternatively, don't go back at all since passwd was correct
-    } 
-    elsif ($page == 6) { # Don't go back if informations were correctly sent (button should be deactivated)
-	
-    }
-    else {
+    } elsif ($page == 6) { # Don't go back if informations were correctly sent (button should be deactivated)
+
+    } else {
 	$notebook_global->prev_page();
     }
 
     $page=$notebook_global->get_current_page();
-#    print "Go BACK to page $page\n";
+
+    # handle the back button state
+    $Button_Prev->set_sensitive(1);
+    foreach (@no_back_button_pages) {
+	/$page/ and $Button_Prev->set_sensitive(0), last;
+    }
 }
 
 sub subscribe_mdkonline() {
@@ -207,6 +206,8 @@ sub test_passwd () {
     $login   = $login_user->get_text();
     $passwd  = $passwd_user->get_text();
 
+    if ($login !~ /\s*/ && $passwd !~ /\s*/) {
+
 # OLD METHOD, keep it for next version ?...
 #    my $ssh_script = "";
 #    foreach ("/usr/bin/sshlogin.exp","./sshlogin.exp") {
@@ -215,35 +216,38 @@ sub test_passwd () {
 #    print "Exec: $ssh_script $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
 #    `$ssh_script $login $authentication_host $passwd`;
-
+	
 # NEW METHOD (http)
-    # first, MD5ify the password
-    $passwd = md5 ($passwd); # or md5_hex () or md5_base64 ()
-
-    require HTTP::Request;
-    require LWP::UserAgent;
-    my $ua = LWP::UserAgent->new;
+	# first, MD5ify the password
+	$passwd = md5 ($passwd); # or md5_hex () or md5_base64 ()
+	
+	require HTTP::Request;
+	require LWP::UserAgent;
+	my $ua = LWP::UserAgent->new;
 # TEST URL
-    print STDERR "Real url should be: $authentication_host?u=$login&p=$passwd \n";
-    my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=mark&p=26bdb06eabafac3aea95991149dd8ea9');
+	print STDERR "Real url should be: $authentication_host?u=$login&p=$passwd \n";
+	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=mark&p=26bdb06eabafac3aea95991149dd8ea9');
 # REAL ONE
 #    my $request = HTTP::Request->new(GET => '$authentication_host?u=$login&p=$passwd');
-    my $response = $ua->request($request);
-    # Check the outcome of the response
-    if ($response->is_success) {
-	$result = ($response->content =~ /TRUE/) ? 0 : -1;
+	my $response = $ua->request($request);
+	# Check the outcome of the response
+	if ($response->is_success) {
+	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
+	} else {
+	    # pb with the connection ?
+	    info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
+	    return;
+	}
     } else {
-	# pb with the connection ?
-	info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
-	return;
+	$result = -1; # not needed, but this way it's clear
     }
 
     # if correct, go to page 4
     if (! $result) {
 	$notebook_global->next_page(); 
     } else {
-    # if incorrect, clear passwd and stay on page 2
-	info_popup (_("Wrong password"), _("Your login or password was wrong, you'll have to type it again"));
+	# if incorrect, clear passwd and stay on page 2
+	info_popup (_("Wrong password"), _("Your login or password was wrong.\nEither you'll have to type it again, or you'll need to create an account on Mandrake Online.\n In the latter case, go back to the first step to connect to Mandrake Online."));
 	$passwd_user->set_text("");
     }
 
