@@ -85,10 +85,11 @@ $Main_Window->set_usize(540, 430);
 $Main_Window->realize();
 $Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
 
-my $Button_Next= new Gtk::Button("  " . _("Next") . " 2/".$nb_pages." > ");
-my $Button_End= new Gtk::Button("  " . _("Finish") . "  ");
-my $Button_SkipWiz= new Gtk::Button("  " ._("Quit") . "  ");
-my $Button_Prev= new Gtk::Button("  < " . _("Back") . "  ");
+my $Step_Label      = new Gtk::Label(" 1/".$nb_pages." "); 
+my $Button_Next     = new Gtk::Button("  " . _("Next") . " 2/".$nb_pages." > ");
+my $Button_End      = new Gtk::Button("  " . _("Finish") . "  ");
+my $Button_SkipWiz  = new Gtk::Button("  " ._("Quit") . "  ");
+my $Button_Prev     = new Gtk::Button("  < " . _("Back") . "  ");
 my $notebook_global = new Gtk::Notebook;
 $Button_End->show();
 $notebook_global->set_show_border($false);
@@ -101,6 +102,7 @@ $vbox->pack_start(new Gtk::HSeparator, 0, 0, 1);
 my $hbox= new Gtk::HBox(0,5);
 $vbox->pack_start($hbox, 0, 0, 1);
 $hbox->pack_end($Button_Next, 0, 1, 0);
+$hbox->pack_end($Step_Label, 0, 1, 0);
 $hbox->pack_end($Button_Prev, 0, 1, 0);
 $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
@@ -163,6 +165,7 @@ sub on_next_clicked {
     # Update the buttons labels
     $Button_Next->child->set(" "._("Next")." ".($page+2)."/".$nb_pages." > ");
     $Button_Prev->child->set(" < ".$page."/".$nb_pages." "._("Back")." ");
+    $Step_Label->set(" ".($page+1)."/".$nb_pages." ");
 }
 
 sub on_prev_clicked {
@@ -193,12 +196,13 @@ sub on_prev_clicked {
     }
 
     # Update the buttons labels
-    $Button_Next->child->set(_("Next")." ".($page+2)."/".$nb_pages." > ");
-    if ($page-1 >0) {
+    $Button_Next->child->set(" "._("Next")." ".($page+2)."/".$nb_pages." > ");
+    if ($page > 0) {
 	$Button_Prev->child->set(" < ".$page."/".$nb_pages." "._("Back")." ");
     } else {
 	$Button_Prev->child->set(" < "._("Back")." ");
     }
+    $Step_Label->set(" ".($page+1)."/".$nb_pages." ");
 }
 
 sub subscribe_mdkonline() {
