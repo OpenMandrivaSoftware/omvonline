@@ -27,13 +27,13 @@ use interactive;
 use Config;
 init Gtk;
 Gtk->set_locale;
-#use strict;
 use MDK::Common;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 use HTTP::Request;
 use HTTP::Request::Common;
 use LWP::UserAgent;
 use MIME::Base64 qw(encode_base64);
+use Sys::Hostname;
 use my_gtk qw(:helpers :wrappers :ask);
 
 my $in = 'interactive'->vnew('su', 'default');
@@ -57,12 +57,12 @@ sub translate {
 #my $authentication_host = "http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php";
 
 my $nb_pages=6; # 0 to 5
-my $page;
+my $page=-1;
 my $xpm_path="/usr/share/mdkonline/pixmaps";
 my $sharepath="/usr/share/mdkonline";
 my $path_to_welcome="/usr/share/doc/HTML/welcome.html";
 my $link_to_mdkonline="http://www.mandrakeexpert.com/index2.php";
-my $check_custid;
+my $check_custid=0;
 my $true=1;
 my $false=0;
 $::isWizard = "@ARGV" =~ /--wizard/;
@@ -124,6 +124,7 @@ my $passwd_user= new Gtk::Entry();
 
 my $login   = "";
 my $passwd  = "";
+my $machine_name ="";
 
 my %actions = ( 
 		2 => \&test_passwd,
@@ -173,7 +174,7 @@ sub on_next_clicked {
 
 #---- 8<-----------to remove for page 5 test -----------
     if ($page == 0) {
-	$notebook_global->set_page(5); 
+	$notebook_global->set_page(1); 
     }
 #-------------8<----------------------------------------
 
@@ -388,6 +389,7 @@ sub step_wizard {
     writ_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to MandrakeOnline"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
+    $label_welc->set_justify(left);
     $vbox_welc->pack_start($label_welc,0,0,1);
     my $hbox_subs= new Gtk::HBox(0,0);
     $hbox_subs->set_uposition(50,300);
@@ -417,6 +419,7 @@ sub step_wizard {
     writ_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
     my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
+    $label_rev->set_justify(left);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
 
@@ -431,6 +434,7 @@ sub step_wizard {
     my $vbox_oksend= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
     my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!From now you will receive on security")."\n"._("and updates announcements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.")."\n"._(" A program will run regulary in your system waiting for new updates\n "));
+    $label_oksend->set_justify(left);
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
 
 #automated mode
@@ -484,18 +488,22 @@ sub automated_upgrades {
     $usertomail = $gtkcombo_user->entry->get_text();
     $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()};
     my $version=$info_tree[3];
+    my $host = hostname;
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
 $usertomail
+$login
+$passwd
+$machine_name
 $version
 $mirror_site
 );
     output_p "/etc/cron.daily/mdkupdate",
-    qq(#!/bin/sh
+    qq(#!/bin/bash
+MAILTO=$usertomail\@$host
 if [ -f /root/.mdkupdate ]; then mdkupdate; fi
 );
 }
-
 
 sub info_popup ($$) {
     # must have been translated by the caller
