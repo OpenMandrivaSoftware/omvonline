@@ -1,4 +1,5 @@
-# Copyright (C) 2001 Free Software Foundation, Inc.
+# translation of mdkonline-sv.po to Svenska
+# Copyright (C) 2001,2002 Free Software Foundation, Inc.
 # Mattias Newzella <newzella@linux.nu>, 2001, 2002.
 # Cecilia Johnsson <datb@swipnet.se>, 2002
 # Henrik Borg <datb@swipnet.se>, 2002
@@ -6,15 +7,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: mdkonline-sv\n"
 "POT-Creation-Date: 2002-10-17 14:07+0200\n"
-"PO-Revision-Date: 2002-08-12 18:29-0300\n"
+"PO-Revision-Date: 2002-12-15 14:12+0100\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
-"Language-Team:  <sv@li.org>\n"
+"Language-Team: Svenska <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../mdkonline_.c:73
 msgid "Africa"
@@ -105,7 +106,7 @@ msgid ""
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Ditt användarnamn eller lösenord var felaktigt.\n"
-" Antingen behöver du skriva det igen eller så behöver du skapa ett konto på "
+" Antingen behöver du ange det igen eller så behöver du skapa ett konto på "
 "MandrakeOnline.\n"
 " I det senare fallet måste du gå tillbaks till första steget för att ansluta "
 "till MandrakeOnline.\n"
@@ -185,7 +186,7 @@ msgstr ""
 "\n"
 "Om du inte känner dig komfortabel med denna idé, eller inte vill dra nytta "
 "av fördelarna med denna tjänst,\n"
-"tryck på \"Avbryt\". Genom att trycka på \"Nästa\", tillåter du oss att "
+"klicka på \"Avbryt\". Genom att klicka på \"Nästa\", tillåter du oss att "
 "hålla dig informerad\n"
 "om säkerhetsuppdateringar och användbara uppgraderingar via personligt "
 "utformad e-post.\n"
@@ -225,9 +226,9 @@ msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"MandrakeOnline erbjuder dig möjligheten att automatisera uppdateringarna\n"
+"MandrakeOnline erbjuder dig möjligheten att automatisera uppdateringarna.\n"
 "Ett program kommer regelbundet att köras på systemet och vänta på nya "
-"uppdateringar\n"
+"uppdateringar.\n"
 
 #: ../mdkonline_.c:424
 msgid "Your upload was successful!"
@@ -298,8 +299,8 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate version %s\n"
-"Copyright (C) 2002 MandrakeSoft.\n"
+"Mdkupdate version %s\n"
+"Copyright © 2002 MandrakeSoft.\n"
 "Det här är fri programvara och får distribueras enligt villkoren i GNU GPL.\n"
 "\n"
 "användning:\n"
@@ -314,7 +315,7 @@ msgstr "  --security     - använd endast säkerhetsmedia.\n"
 
 #: ../mdkupdate_.c:59
 msgid "  --update       - update all information.\n"
-msgstr ""
+msgstr "  --update       - uppdatera all information.\n"
 
 #: ../mdkupdate_.c:60
 msgid "  -v             - verbose mode.\n"
@@ -340,34 +341,8 @@ msgstr "Ditt användarnamn eller lösenord kan vara felaktigt"
 
 #: ../mdkupdate_.c:214
 msgid "unable to create mdkupdate medium\n"
-msgstr ""
+msgstr "kunde inte skapa mdkupdate-medium\n"
 
 #: ../mdkupdate_.c:216
 msgid "unable to update packages from mdkupdate medium\n"
-msgstr ""
-
-#~ msgid "wget is missing\n"
-#~ msgstr "wget saknas\n"
-
-#~ msgid "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Ett program kommer regelbundet att köras på systemet och vänta på nya "
-#~ "uppdateringar\n"
-
-#~ msgid "mdkupdate version %s"
-#~ msgstr "mdkupdate version %s"
-
-#~ msgid ") . _("
-#~ msgstr ") . _("
-
-#~ msgid ", $VERSION );"
-#~ msgstr ", $VERSION );"
-
-#~ msgid "/root/.mdkupdate"
-#~ msgstr "/root/.mdkupdate"
-
-#~ msgid "/root/rpm_qa_installed_before"
-#~ msgstr "/root/rpm_qa_installed_before"
-
-#~ msgid "USA"
-#~ msgstr "USA"
+msgstr "kunde inte uppdatera paket från mdkupdate-medium\n"
