@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	13mdk
+Release: 	14mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -87,6 +87,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Mon Jan 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-14mdk
+- code update
+- automated upgrades (working on)
+
 * Tue Oct 16 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-13mdk
 - rebuild against libpng3
 - add doc
