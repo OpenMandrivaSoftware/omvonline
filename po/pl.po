@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonlie\n"
 "POT-Creation-Date: 2002-08-12 20:51+0200\n"
-"PO-Revision-Date: 2002-07-10 14:29+0100\n"
+"PO-Revision-Date: 2002-08-13 09:04+0200\n"
 "Last-Translator: Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>\n"
 "Language-Team: polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -288,18 +288,25 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate wersja %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"To jest oprogramowanie wolnodostêpne i mo¿e byæ rozpowszechniane\n"
+"na zasadach licencji GPL.\n"
+"\n"
+"u¿ycie:\n"
+
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         - wy¶wietla ten komunikat pomocy.\n"
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr "  --security     - u¿ywa tylko no¶ników bezpieczeñstwa.\n"
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr "  -v             - tryb informacyjny (wiêcej komunikatów).\n"
 
 #: ../mdkupdate_.c:83
 msgid "MandrakeUpdate could not contact the site, we will try again"
@@ -323,18 +330,3 @@ msgstr "Twój login lub has³o mog± byæ niepoprawne"
 #: ../mdkupdate_.c:122
 msgid "wget is missing\n"
 msgstr "Brak programu wget\n"
-
-#~ msgid "mdkupdate version %s"
-#~ msgstr "mdkupdate wersja %s"
-
-#~ msgid ") . _("
-#~ msgstr ") . _("
-
-#~ msgid ", $VERSION );"
-#~ msgstr ", $VERSION );"
-
-#~ msgid "/root/.mdkupdate"
-#~ msgstr "/root/.mdkupdate"
-
-#~ msgid "/root/rpm_qa_installed_before"
-#~ msgstr "/root/rpm_qa_installed_before"
