@@ -1,5 +1,5 @@
 # Installation directories
-localedir = $(prefix)/usr/share/locale
+localedir = $(PREFIX)/usr/share/locale
 
 LANGS = $(shell ls *.po | xargs -i basename {} .po )
 PGOAL = mdkonline
