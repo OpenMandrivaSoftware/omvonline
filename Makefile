@@ -3,7 +3,7 @@ NAME = mdkonline
 #SCRIPTS = sshlogin.exp scpcall.exp
 SUBDIRS = po
 localedir = $(prefix)/usr/share/locale
-RPM=$(HOME)/RPM
+RPM=$(HOME)/rpm
 
 override CFLAGS += -DPACKAGE=\"$(NAME)\" -DLOCALEDIR=\"$(localedir)\"
 
