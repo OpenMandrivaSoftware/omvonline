@@ -32,8 +32,7 @@ dis: clean
 	bzip2 -9f ../$(NAME)-$(VERSION).tar
 	rm -rf $(NAME)-$(VERSION)
 
-rpm: dis 
-	../$(NAME)-$(VERSION).tar.bz2 $(RPM)
+rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
 	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
 	cp -f *.xpm.bz2 $(RPM)/SOURCES
 	cp -f $(NAME).spec $(RPM)/SPECS/
