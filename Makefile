@@ -2,11 +2,22 @@ PACKAGE = mdkonline
 VERSION:=$(shell rpm -q --qf %{VERSION} --specfile $(PACKAGE).spec)
 RELEASE:=$(shell rpm -q --qf %{RELEASE} --specfile $(PACKAGE).spec)
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
+
 NAME = mdkonline
 MDKUPDATE = mdkupdate
+MDKAPPLET = mdkapplet
 SUBDIRS = po
-RPM = $(HOME)/rpm
-localedir = $(prefix)/usr/share/locale
+
+PREFIX = /
+DATADIR = $(PREFIX)/usr/share
+ICONSDIR = $(DATADIR)/icons
+PIXDIR = $(DATADIR)/$(NAME)
+SBINDIR = $(PREFIX)/usr/sbin
+BINDIR = $(PREFIX)/usr/bin
+SYSCONFDIR = $(PREFIX)/etc/sysconfig
+SBINREL = ../sbin
+
+localedir = $(PREFIX)/usr/share/locale
 
 override CFLAGS += -DPACKAGE=\"$(NAME)\" -DLOCALEDIR=\"$(localedir)\"
 
@@ -14,21 +25,22 @@ all: mdkonline
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 clean:
-#	$(MAKE) -C po $@
+	$(MAKE) -C po $@
 	rm -f core .#*[0-9]
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 	find . -name '*~' | xargs rm -f
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(RPM_BUILD_ROOT)/usr/{sbin/,bin,share/icons/{mini,large}}
-	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/sbin/
-	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
-#	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
-	install -m644 pixmaps/$(NAME)16.png $(RPM_BUILD_ROOT)/usr/share/icons/mini/$(NAME).png
-	install -m644 pixmaps/$(NAME)32.png $(RPM_BUILD_ROOT)/usr/share/icons/$(NAME).png
-	install -m644 pixmaps/$(NAME)48.png $(RPM_BUILD_ROOT)/usr/share/icons/large/$(NAME).png	
-#	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
+	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME),icons/{mini,large}}}
+	install -s -m755 $(NAME) $(SBINDIR)
+	install -s -m755 $(MDKUPDATE) $(BINDIR)
+	install -s -m755 applet/$(MDKAPPLET) $(BINDIR)
+	install -m644 icons/$(NAME)16.png $(ICONSDIR)/mini/$(NAME).png
+	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png
+	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
+	install -m644 pixmaps/*.png $(PIXDIR)
+	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 # rules to build a test rpm
 
