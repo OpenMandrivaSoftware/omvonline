@@ -1,19 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# translation of mdkonline-zh_TW.po to Chinese Traditional
+# Copyright (C) 2003 Free Software Foundation, Inc.
 # Kenduest Lee <kenduest@cynix.com.tw>, 2001
 # Kenduest Lee <kenduest@cynix.com.tw>, 2002
 # Kenduest Lee <kenduest@i18n.linux.org.tw>, 2002
+# hilbert <freehil@yahoo.com>, 2003
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 0.15\n"
+"Project-Id-Version: mdkonline-zh_TW\n"
 "POT-Creation-Date: 2003-02-19 00:04+0100\n"
-"PO-Revision-Date: 2002-08-17 03:50+CST\n"
-"Last-Translator: Kenduest Lee <kenduest@i18n.linux.org.tw>\n"
-"Language-Team: zh-tw <zh-l10n@linux.org.tw>\n"
+"PO-Revision-Date: 2003-11-30 19:38+0800\n"
+"Last-Translator: hilbert <freehil@yahoo.com>\n"
+"Language-Team: Chinese Traditional <zh@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=Big5\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Type: text/plain; charset=BIG5\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
 
 #: ../mdkupdate_.c:52
 #, c-format
@@ -27,14 +29,13 @@ msgid ""
 msgstr ""
 "mdkupdate 版本 %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"這是自由軟體且可於 GNU 條款下被重新發散 GPL.\n"
 "\n"
 "使用方式:\n"
 
 #: ../mdkupdate_.c:57
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - 顯示求助訊息說明.\n"
+msgstr "  --help         - 顯示此求助訊息說明.\n"
 
 #: ../mdkupdate_.c:58
 msgid "  --security     - use only security media.\n"
@@ -42,40 +43,37 @@ msgstr "  --security     - 僅使用安全修正的媒介項目.\n"
 
 #: ../mdkupdate_.c:59
 msgid "  --update       - update all information.\n"
-msgstr ""
+msgstr "  --update       - 更新全部資訊.\n"
 
 #: ../mdkupdate_.c:60
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - 顯示顯示執行過程.\n"
+msgstr "  -v             - 多訊息模式.\n"
 
 #: ../mdkupdate_.c:175
 msgid "Connection problem"
 msgstr "連線問題"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate 無法連線到總部，請稍後再重試"
+msgstr "MandrakeUpdate 無法聯絡到網站, 我們將再試."
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-msgstr "任何問題與建議，請回報至 support@mandrakeonline.net\n"
+msgstr "任何問題, 請寄出一封電子郵件至 support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
-msgstr "你需要先註冊一個帳號以便於使用 MandrakeOnline 服務"
+msgstr "你需要先有一個 MandrakeOnline 帳號, 或是更新您的會費."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
-msgstr "您的帳號或者是密碼輸入錯誤"
+msgstr "您的登入或者是密碼或許錯誤"
 
 #: ../mdkupdate_.c:214
 msgid "Unable to create mdkupdate medium.\n"
-msgstr ""
+msgstr "無法建立 mdkupdate 媒體.\n"
 
 #: ../mdkupdate_.c:216
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "無法由 mdkupdate 媒體更新套件.\n"
