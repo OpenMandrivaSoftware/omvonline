@@ -159,7 +159,7 @@ $wiz = {
 					$createaccount = create_new_account($nlogin, $npassword, $email);
 				    },
 				    name => sub { 
-					$createaccount eq 'OK' ? "\n\n" . N("Mandrakeonline Account successfully created.\nPlease click \"Next\ to authenticate and upload your configuration\n") : $createaccount;
+					$createaccount eq 'OK' ? "\n\n" . N("Mandrakeonline Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n") : $createaccount;
 				    },
 				    post => sub {
 					$createaccount eq 'OK' ? "account" : "noaccount"
