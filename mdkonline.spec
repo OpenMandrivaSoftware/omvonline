@@ -76,13 +76,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/*
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
-%{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
+#%{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 
 %changelog
+* Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
+- add urpmi source for club member.
+
 * Mon Feb 17 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
 - rewrite / port to Gtk2.
 - MandrakeOnline && MandrakeClub merge.
