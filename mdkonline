@@ -59,7 +59,7 @@ gtkset_size_request($o->{mw}{window}, 580, 470);
 $o->{mw}{rwindow}->set_position('center');
 $o->{mw}{window}->signal_connect( "delete_event", sub { Gtk2->main_quit} );
 $o->{nb} = Gtk2::Notebook->new;
-#$o->{nb}->set_show_tabs(0); $o->{nb}->set_show_border(0);
+$o->{nb}->set_show_tabs(0); $o->{nb}->set_show_border(0);
 $o->{bottomHbox} = Gtk2::HBox->new;
 my %stage = (
 	     0 => sub { if ($o->{account_cb}->get_active) { subsOnline() } else { $o->{nb}->next_page} },
