@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	19mdk
+Release: 	20mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -94,6 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Tue May 28 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-20mdk
+- bug fixing
+
 * Wed Apr 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-19mdk
 - cleanups, 8.1 support.
 - drakonline alias.
