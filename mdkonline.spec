@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 16mdk
+%define release 17mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -128,6 +128,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Tue Oct 05 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.1-17mdk
+- update mdkupdate with new 10.1 mirror structure
+
 * Mon Oct 04 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.1-16mdk
 - rebuild
 
