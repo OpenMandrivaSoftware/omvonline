@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "POT-Creation-Date: 2002-08-12 20:51+0200\n"
-"PO-Revision-Date: 2002-08-02 12:29+0000\n"
+"PO-Revision-Date: 2002-08-12 18:29-0300\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"Language-Team:  <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -155,7 +155,7 @@ msgstr "Lösenord:"
 
 #: ../mdkonline_.c:400
 msgid "Sending your Configuration"
-msgstr "Skickar din konfiguration"
+msgstr "Skickar konfiguration"
 
 #: ../mdkonline_.c:401
 msgid ""
@@ -180,7 +180,7 @@ msgstr ""
 "kommer vi att sända över din konfiguration.\n"
 "\n"
 "Guiden kommer nu att sända följande information till MandrakeSoft:\n"
-"1) listan på de paket du har installerat på ditt system,\n"
+"1) listan på de paket du har installerat på systemet,\n"
 "2) din hårdvarukonfiguration.\n"
 "\n"
 "Om du inte känner dig komfortabel med denna idé, eller inte vill dra nytta "
@@ -215,7 +215,7 @@ msgstr "Klar"
 #: ../mdkonline_.c:417
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Ett program kommer regelbundet att köras på ditt system och vänta på nya "
+"Ett program kommer regelbundet att köras på systemet och vänta på nya "
 "uppdateringar\n"
 
 #: ../mdkonline_.c:417
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../mdkonline_.c:417
 msgid "Your upload was successful!"
-msgstr "Din uppladdning lyckades!"
+msgstr "Uppladdningen lyckades!"
 
 #: ../mdkonline_.c:422
 msgid "automated Upgrades"
@@ -300,18 +300,23 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate version %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"Det här är fri programvara och får distribueras enligt villkoren i GNU GPL.\n"
+"\n"
+"användning:\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         - visa det här hjälpmeddelandet.\n"
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr "  --security     - använd endast säkerhetsmedia.\n"
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr "  -v             - utförligt läge.\n"
 
 #: ../mdkupdate_.c:83
 msgid "MandrakeUpdate could not contact the site, we will try again"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2002-08-12 20:51+0200\n"
-"PO-Revision-Date: 2002-08-13 14:56+0100\n"
+"PO-Revision-Date: 2002-07-18 13:41+0100\n"
 "Last-Translator: Pavol Cvengros <orpheus@hq.alert.sk>\n"
 "Language-Team: slovak <i18n@hq.alert.sk>\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgstr "Ukonèujem sprievodcu\n"
 
 #: ../mdkonline_.c:263
 msgid "Warning: No browser specified"
-msgstr "Pozor: nieje ¹pecifikovaný prehliadaè"
+msgstr "Pozor: nie je ¹pecifikovaný prehliadaè"
 
 #: ../mdkonline_.c:290
 msgid "Connecting ...\n"
@@ -120,8 +120,8 @@ msgid ""
 msgstr ""
 "V tomto kroku je potrebné ma» konto na MandrakeOnline.\n"
 "Tento asistent Vám pomô¾e ulo¾i» konfiguráciu\n"
-"(balíèky, hardvérovu konfiguráciu) do centrálnej databázy aby sme\n"
-"Vás mohli informova» o bezpeènostných a  iných u¾itoèných  aktualizáciach.\n"
+"(balíèky, hardvérovú konfiguráciu) do centrálnej databázy aby sme\n"
+"Vás mohli informova» o bezpeènostných a  iných u¾itoèných  aktualizáciách.\n"
 
 #: ../mdkonline_.c:387
 msgid "Mandrake Privacy Policy"
@@ -175,16 +175,16 @@ msgstr ""
 "\n"
 "Tento sprievodca teraz za¹le nasledujúce informácie spol. MandrakeSoft:\n"
 "1) nain¹talované balíèky vo Va¹om systéme,\n"
-"2) Va¹u hardvérovu konfiguráciu.\n"
+"2) Va¹u hardvérovú konfiguráciu.\n"
 "\n"
-"Ak nechcete aby tieto informácie boli zaslane, alebo nechcete vyu¾i» túto "
+"Ak nechcete aby tieto informácie boli zaslané, alebo nechcete vyu¾i» túto "
 "slu¾bu,\n"
 "stlaète 'Zru¹i»'. Ak stlaèíte 'Ïalej', dáte nám mo¾nos» informova» Vás\n"
-"bezpeènostných a iných u¾itoèných  aktualizáciach pomocou osobných emailov.\n"
+"bezpeènostných a iných u¾itoèných  aktualizáciách pomocou osobných emailov.\n"
 "V budúcnosti budete môc» vyu¾i» aj platených slu¾ieb na\n"
 "www.mandrakeexpert.com.\n"
-"Nakoniec Vám bude vytvorený emailovy alias v tvare va¹emeno\\@mandrakeonline."
-"net."
+"Nakoniec Vám bude vytvorený e-mailový alias v tvare va¹emeno"
+"\\@mandrakeonline.net."
 
 #: ../mdkonline_.c:409
 msgid "Error while sending informations"
@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../mdkonline_.c:416
 msgid "Finished"
-msgstr "Úspe¹ne ukonèene"
+msgstr "Úspe¹ne ukonèenie"
 
 #: ../mdkonline_.c:417
 msgid "A program will run regulary in your system waiting for new updates\n"
@@ -226,7 +226,7 @@ msgstr "Zaslanie bolo úspe¹né!"
 
 #: ../mdkonline_.c:422
 msgid "automated Upgrades"
-msgstr "automatiká aktualizácia"
+msgstr "automatická aktualizácia"
 
 #: ../mdkonline_.c:429
 msgid "Choose your geographical location"
@@ -234,7 +234,7 @@ msgstr "Zvoµte Va¹u geografickú pozíciu"
 
 #: ../mdkonline_.c:447
 msgid "Reading configuration\n"
-msgstr "Naèitávanie konfigurácie\n"
+msgstr "Naèítavanie konfigurácie\n"
 
 #: ../mdkonline_.c:474
 #, c-format
@@ -289,23 +289,18 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate verzia %s\n"
-"Copyright (C) 2002 MandrakeSoft.\n"
-"Toto je voµný softvér a mô¾e by» distribuovaný v súlade s GNU GPL.\n"
-"\n"
-"pou¾itie:\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - zobrazi» túto pomoc.\n"
+msgstr ""
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr "  --security     - pou¾i» len bezpeènostné média.\n"
+msgstr ""
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - viac výpisov.\n"
+msgstr ""
 
 #: ../mdkupdate_.c:83
 msgid "MandrakeUpdate could not contact the site, we will try again"
@@ -330,3 +325,18 @@ msgstr "Va¹e prihlasovacie meno alebo heslo je zlé"
 #: ../mdkupdate_.c:122
 msgid "wget is missing\n"
 msgstr "chýba wget\n"
+
+#~ msgid "mdkupdate version %s"
+#~ msgstr "mdkupdate verzia %s"
+
+#~ msgid ") . _("
+#~ msgstr ") . _("
+
+#~ msgid ", $VERSION );"
+#~ msgstr ", $VERSION );"
+
+#~ msgid "/root/.mdkupdate"
+#~ msgstr "/root/.mdkupdate"
+
+#~ msgid "/root/rpm_qa_installed_before"
+#~ msgstr "/root/rpm_qa_installed_before"
