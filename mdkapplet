@@ -294,5 +294,6 @@ sub mainQuit() {
     output $confpers,
     qq(AUTOSTART=FALSE
 );
+    chmod 0644, $confpers;
     Gtk2->main_quit
 }
