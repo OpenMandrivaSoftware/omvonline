@@ -96,7 +96,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
+			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched})
 			  }
