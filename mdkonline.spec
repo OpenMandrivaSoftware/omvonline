@@ -5,13 +5,13 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 5mdk
+Release: 6mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
-#Source1:	%{name}16.xpm.bz2
-#Source2:	%{name}32.xpm.bz2
-#Source3:	%{name}48.xpm.bz2
+Source1:	%{name}16.png.bz2
+Source2:	%{name}32.png.bz2
+Source3:	%{name}48.png.bz2
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
@@ -44,7 +44,7 @@ mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
 ?package(%{name}):\ 
 needs="x11" \
-icon="mdkonline.xpm" \
+icon="mdkonline.png" \
 section="Configuration/Other" \
 title="Mandrake Online" \
 longtitle="Wizard tool for online registered user" \
@@ -54,9 +54,9 @@ EOF
 #install menu icon
 mkdir -p $RPM_BUILD_ROOT%{_miconsdir}
 mkdir -p $RPM_BUILD_ROOT%{_liconsdir}
-#bzcat %{SOURCE1} > $RPM_BUILD_ROOT%{_miconsdir}/%{name}.xpm
-#bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_iconsdir}/%{name}.xpm
-#bzcat %{SOURCE3} > $RPM_BUILD_ROOT%{_liconsdir}/%{name}.xpm
+bzcat %{SOURCE1} > $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
+bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
+bzcat %{SOURCE3} > $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
 %post
 %{update_menus}
@@ -73,11 +73,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/X11R6/bin/*
 %{_datadir}/%{name}
 %{_menudir}/%{name}
-#%{_miconsdir}/*.xpm
-#%{_iconsdir}/*.xpm
-#%{_liconsdir}/*.xpm
+%{_miconsdir}/*.png
+%{_iconsdir}/*.png
+%{_liconsdir}/*.png
 
 %changelog
+* Tue Sep  4 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-6mdk
+- add icons
+
 * Sun Sep  2 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-5mdk
 - add online subscription feature.
 
