@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-26 07:20+0200\n"
-"PO-Revision-Date: 2004-09-23 12:14+0200\n"
+"PO-Revision-Date: 2004-09-26 20:43+0200\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -55,8 +55,7 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:97
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:103
 #, c-format
@@ -496,8 +495,7 @@ msgstr "Kilépés a Varázslóból\n"
 #: ../mdkonline:274
 #, c-format
 msgid "Mandrakeonline could not be contacted, please try again at a later time"
-msgstr ""
-"Nem sikerült kapcsolatba lépni a Mandrakeonline-nal; próbálja meg később."
+msgstr "Nem sikerült kapcsolatba lépni a Mandrakeonline-nal; próbálja meg később."
 
 #: ../mdkonline:286
 #, c-format
@@ -525,27 +523,27 @@ msgstr ""
 #: ../mdkonline.pm:36
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "A bejelentkezési névnek és a jelszónak 12 karakternél rövidebbnek kell lennie\n"
 
 #: ../mdkonline.pm:37
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Speciális karakterek nem használhatók\n"
 
 #: ../mdkonline.pm:38
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Töltse ki az összes mezőt\n"
 
 #: ../mdkonline.pm:39
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Az email-cím érvénytelen\n"
 
 #: ../mdkonline.pm:40
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Ilyen azonosító már létezik\n"
 
 #: ../mdkonline.pm:46
 #, c-format
@@ -553,49 +551,49 @@ msgid "Problem connecting to server \n"
 msgstr "Probléma a kiszolgálóhoz való kapcsolódáskor \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:90
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Üdvözli a Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Már van azonosítóm"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Szeretnék feliratkozni"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:119
 #, c-format
 msgid "Please wait"
-msgstr ""
+msgstr "Kis türelmet"
 
 #: ../mdkonline_tui:98
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Azonosító létrehozása vagy azonosítás"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Üdvözli a Mandrakeonline"
+msgstr "Kapcsolódás a Mandrakeonline weboldalhoz..."
 
 #: ../mdkonline_tui:126
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "vagy"
 
 #: ../mdkonline_tui:126
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Helytelen jelszó"
+msgstr "helytelen jelszó:"
 
 #: ../mdkonline_tui:160
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Ország:"
+msgstr "Ország"
 
 #: ../mdkupdate:50
 #, c-format
@@ -636,7 +634,7 @@ msgstr "  --update       - kulcsok frissítése\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "%s fájl nem található. Futtassa a Mandrakeonline varázslót."
 
 #: ../mdkupdate:124
 #, c-format
@@ -651,7 +649,7 @@ msgstr "A csomagok Mandrakeupdate-adatforrásból való frissítése sikertelen.
 #: ../mdkupdate:187
 #, c-format
 msgid "No diff found"
-msgstr ""
+msgstr "Diff-fájl nem található"
 
 #: ../mdkupdate:195
 #, c-format
@@ -659,6 +657,8 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"A Mandrakeupdate nem tudta feltölteni a diff-fájlokat. Küldjön egy "
+"emailt a következő címre: support [kukac] mandrakeonline [pont] net"
 
 #~ msgid "Config problems. Launch \"configure\" again"
 #~ msgstr ""
@@ -785,3 +785,4 @@ msgstr ""
 
 #~ msgid "Really abort? - Mandrakeonline"
 #~ msgstr "Valóban kilép? - Mandrakeonline"
+
