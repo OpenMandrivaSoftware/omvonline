@@ -270,7 +270,7 @@ sub compareWithInstalled {
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
 	    #my $iu = mdkonline::rpmvercmp($ver, $v); my $ir = mdkonline::rpmvercmp($rel, $r); 
-	    if (mdkonline::rpmvercmp($ver, $v) > 0 || mdkonline::rpmvercmp($ver, $v) == 0 && mdkonline::rpmvercmp($rel, $r) > 0) {
+	    if (mdkonline::rpm_ver_cmp($ver, $v) > 0 || mdkonline::rpm_ver_cmp($ver, $v) == 0 && mdkonline::rpm_ver_cmp($rel, $r) > 0) {
 		#print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
 		$isUpdate = 1 and last;
 	    }
