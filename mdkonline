@@ -506,7 +506,15 @@ sub get_on_privacy {
     my $vscrollbar = new Gtk::VScrollbar( $text->vadj );
     $table->attach( $vscrollbar, 1, 2, 0, 1, 'fill',
                        [ 'expand', 'shrink', 'fill' ], 0, 0 );
-    load_text($text,"/usr/share/mdkonline/privacy.txt");
+    if ($ENV{LANG} eq "fr") {
+	load_text($text,"$sharepath/privacy-fr.txt");
+    }elsif ($ENV{LANG} eq "de") {
+	load_text($text,"$sharepath/privacy-de.txt");
+    }elsif ($ENV{LANG} eq "es") {
+	load_text($text,"$sharepath/privacy-es.txt");
+    }else {
+	load_text($text,"$sharepath/privacy.txt");
+    }
     $vbox->pack_start( $table, $true, $true, 0 );
     
 }    
