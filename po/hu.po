@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2003-01-17 19:41+0100\n"
-"PO-Revision-Date: 2003-01-05 16:51+0100\n"
+"PO-Revision-Date: 2003-02-11 22:58+0100\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -75,30 +75,26 @@ msgid "Quitting Wizard\n"
 msgstr "Kilépés a Varázslóból\n"
 
 #: ../mdkonline_.c:265
-#, fuzzy
 msgid "Warning: No browser specified."
-msgstr "Figyelmeztetés: nincs megadva böngészõ"
+msgstr "Figyelmeztetés: nincs megadva böngészõ."
 
 #: ../mdkonline_.c:292
-#, fuzzy
 msgid "Connecting...\n"
-msgstr "Kapcsolódás ...\n"
+msgstr "Kapcsolódás...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
 msgid "Connection problem"
 msgstr "Kapcsolati hiba"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again later."
-msgstr "A MandrakeOnline-hoz való kapcsolódás sikertelen; próbálja meg késõbb"
+msgstr "A MandrakeOnline-hoz való kapcsolódás sikertelen; próbálja meg késõbb."
 
 #: ../mdkonline_.c:312
 msgid "Wrong password"
 msgstr "Helytelen jelszó"
 
 #: ../mdkonline_.c:312
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -120,7 +116,6 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Üdvözli a MandrakeOnline!"
 
 #: ../mdkonline_.c:377
-#, fuzzy
 msgid ""
 "At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -150,7 +145,6 @@ msgid "Login:"
 msgstr "Azonosító:"
 
 #: ../mdkonline_.c:402
-#, fuzzy
 msgid "Machine Name:"
 msgstr "Gépnév:"
 
@@ -163,7 +157,6 @@ msgid "Sending your Configuration"
 msgstr "Konfiguráció küldése"
 
 #: ../mdkonline_.c:408
-#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -206,7 +199,6 @@ msgid "Error while sending informations"
 msgstr "Hiba az adatok küldése közben"
 
 #: ../mdkonline_.c:417
-#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -221,16 +213,14 @@ msgid "Finished"
 msgstr "Kész"
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "From now on you will receive security and update \n"
 "announcements through MandrakeOnline."
 msgstr ""
 "Mostantól kezdve információkat fog kapni a biztonsági\n"
-"és egyéb frissítésekrõl - a MandrakeOnline-nak köszönhetõen."
+"és egyéb frissítésekrõl a MandrakeOnline-on keresztül."
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary on your system waiting for new updates\n"
@@ -243,9 +233,8 @@ msgid "Your upload was successful!"
 msgstr "A feltöltés sikeresen megtörtént."
 
 #: ../mdkonline_.c:429
-#, fuzzy
 msgid "Automated Upgrades"
-msgstr "automatizált frissítések"
+msgstr "Automatizált frissítések"
 
 #: ../mdkonline_.c:436
 msgid "Choose your geographical location"
@@ -256,9 +245,9 @@ msgid "Reading configuration\n"
 msgstr "Konfiguráció beolvasása\n"
 
 #: ../mdkonline_.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open this file for read: %s"
-msgstr "nem nyitható meg olvasásra: %s"
+msgstr "Nem nyitható meg olvasásra: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -273,7 +262,6 @@ msgid "Cancel"
 msgstr "Mégsem"
 
 #: ../mdkonline_.c:552
-#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel'.\n"
@@ -332,38 +320,33 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - részletes információ\n"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "A MandrakeUpdate nem tudott kapcsolatba lépni a géppel, újabb próba"
+msgstr "A MandrakeUpdate nem tudott kapcsolatba lépni a géppel; újabb próba."
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr ""
 "Probléma esetén küldjön levelet a következõ címre: support@mandrakeonline."
 "net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
 "Szüksége lesz egy MandrakeOnline azonosítóra, illetve az elõfizetés "
-"frissítésére"
+"frissítésére."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
 msgstr "A név vagy a jelszó valószínûleg helytelen"
 
 #: ../mdkupdate_.c:214
-#, fuzzy
 msgid "Unable to create mdkupdate medium.\n"
-msgstr "MandrakeUpdate-adatforrás létrehozása sikertelen\n"
+msgstr "MandrakeUpdate-adatforrás létrehozása sikertelen.\n"
 
 #: ../mdkupdate_.c:216
-#, fuzzy
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "A csomagok MandrakeUpdate-adatforrásból való frissítése sikertelen\n"
+msgstr "A csomagok MandrakeUpdate-adatforrásból való frissítése sikertelen.\n"
 
 #~ msgid "wget is missing\n"
 #~ msgstr "a wget nem található\n"
