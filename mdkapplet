@@ -35,41 +35,46 @@ my ($eventbox, $img);
 add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $url);
 my $nowindow = 1;
-
-my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php/";
-
-$url->{UpdateList} = $link . '&action=UpdateList';
+my $arch = arch();
+my $av_pkgs = $::testing ? 13 : 0;
+$conffile = '/etc/sysconfig/mdkonline';
 
 my %state = (
 	     okay => {
 		      colour => [ 'green' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
+		      tt => [ N("No updates available for your system") ]
 		     },
 	     critical => {
 			  colour => [ 'orange' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
+			  tt => [ N("Test critical") ]
 			 },
 	     busy => {
 		      colour => [ 'orange' ], 
 		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
 		      menu => [ ],
+		      tt => [ N("System is busy. Wait ...") ]
 		     },
 	     error => {
 		       colour => [ 'red' ],
 		       changes => [ 'okay' ],
 		       menu => [ 'update', 'check' ],
+		       tt => [ N("%s packages available for update", $av_pkgs) ]
 		      },
 	     noconfig => {
 			  colour => [ 'orange' ],
 			  changes => [ 'okay' ],
 			  menu => [ 'update', 'weblink', 'register' ],
+			  tt => [ N("Service not available. Click on configuration") ]
 			 },
 	     disconnected => {
 			      colour => [ 'orange' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
+			      tt => [ N("Network is down. Click on configure Network") ]
 			     } 
 	    );
 my %actions = (
@@ -154,11 +159,32 @@ sub installUpdates {
     $menu = setState('error');
 }
 sub checkUpdates {
-    $menu and $menu->destroy;
-    my $time
+    my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php/" . '?action=UpdateList';
+    my %h = getVarsFromSh($conffile);
+    my @r = sort( split /\n/, `rpm -qa` );
+    require LWP::UserAgent;
+    require HTTP::Request::Common;
+    require HTTP::Request;
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("MdkAppletAgent/0.1" . $ua->agent);
+    #    my $request = HTTP::Request->new(GET => $link . '&log=' . "ayomigration" . '&host=' . "online");
+    my $request = HTTP::Request->new(GET => $link . '&log=' . $h{LOGIN} . '&host=' . $h{BOX});
+    my $response = $ua->request($request); 
+    my @contents = sort ( split /\n/, $response->content);
+    foreach my $cand (@contents) {
+	$cand =~ s/\.(i586|ppc|ia64).rpm//;
+	$cand =~ /(.*)-(.*)$/; my ($namever, $release) = ($1, $2);
+	if (member($namever, @r) && $cand ne chomp_(`rpm -q $namever`)) {
+	    $need_update = 1 and last
+	}
+    }
+    $need_update
+}
+sub firstUpdate {
+    
 }
 sub configure {
-#    system "/usr/sbin/mdkonline", "&";
+    #    system "/usr/sbin/mdkonline", "&";
     $menu && $menu->destroy;
     $menu = setState('okay');
 }
@@ -185,6 +211,8 @@ sub setState {
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
     $img->set_from_pixbuf($tmp);
+    #my $tooltip = Gtk2::Tooltips->new;
+    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX($state{$state_type}{tt}->[0]));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	my $l = $actions{$_}{name};
