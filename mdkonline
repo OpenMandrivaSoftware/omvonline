@@ -44,6 +44,7 @@ use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use comdialog;
 use data;
 
+my $confdir = '/root/.mdkonline';
 
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
@@ -55,6 +56,8 @@ my $linkAccount = "http://www.mandrakeexpert.com/index2.php";
 my $wideconf = '/etc/sysconfig/mdkonline';
 
 my ($o, $p);
+
+mkdir_p($confdir);
 
 $o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 580, 470);
@@ -209,16 +212,16 @@ sub sendConfig {
     my $result = -1; 
     my ($login, $boxname, $passwd);
     $login = $o->{login}->get_text; $boxname = $o->{machine}->get_text; my $passwd = md5_hex($o->{passwd}->get_text);
-    reportConfig("/root/$login.$passwd.$boxname.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$boxname.online.log`;
+    reportConfig("$confdir/$login.$passwd.$boxname.online.log");
+    `/usr/bin/bzip2 \\\-9 \\\-f $confdir/$login.$passwd.$boxname.online.log`;
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, "/root/$login.$passwd.$boxname.online.log.bz2") or die "$!";
+    open (FILE, "$confdir/$login.$passwd.$boxname.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
     }
     close (FILE);
-    open (FILEOUT, "> /root/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
+    open (FILEOUT, "> $confdir/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
 	print FILEOUT encode_base64($buffer);
     close (FILEOUT);
     my $ua = LWP::UserAgent->new;
@@ -229,7 +232,7 @@ sub sendConfig {
 
                                 Content_Type => 'form-data',
                                 Content => [submit => "upload_wizard",
-                                            wizard => ["/root/$login.$passwd.$boxname.online.log.bz2.uue"]
+                                            wizard => ["$confdir/$login.$passwd.$boxname.online.log.bz2.uue"]
 					   ]);
     #printf("*********** Reponse is %s ***********\n", $response->as_string);
     # Check the outcome of the response
@@ -288,8 +291,8 @@ sub mainQuit {
     # remove local files
     my ($login, $passwd, $boxname) = getNames();
     if ($o->{login}->get_text && $o->{passwd}->get_text) {
-	[ -f "/root/$login.$passwd.$boxname.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.$boxname.online.log.bz2.uue");
-	[ -f "/root/$login.$passwd.$boxname.online.log.bz2" ] && unlink ("/root/$login.$passwd.$boxname.online.log.bz2");
+	[ -f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" ] && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
+	[ -f "$confdir/$login.$passwd.$boxname.online.log.bz2" ] && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2");
     }
     # quit
     print N("Quitting Wizard\n");
@@ -386,7 +389,7 @@ sub remove_wait_msg { $_[0]->destroy }
 sub automatedUpgrades {
     my ($login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
-    output "/root/.mdkupdate",
+    output "$confdir/mdkupdate",
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
 PASS=$passwd
@@ -398,7 +401,7 @@ AUTO=$auto
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
-if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate --auto; fi
+if [ -f $confdir/mdkupdate ]; then /usr/bin/mdkupdate --auto; fi
 );
 
 chmod 0755, "/etc/cron.daily/mdkupdate";
