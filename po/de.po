@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2002-02-28 04:30+0100\n"
-"PO-Revision-Date: 2002-02-06 11:14+0100\n"
+"PO-Revision-Date: 2002-02-28 10:07+0100\n"
 "Last-Translator: Stefan Siegel <siegel@mandrakesoft.com>\n"
 "Language-Team: German <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
@@ -88,7 +88,6 @@ msgid "Wrong password"
 msgstr "Falsches Passwort"
 
 #: mdkonline:308
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -99,10 +98,12 @@ msgid ""
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Ihr Kennzeichen oder Passwort ist verkehrt.\n"
-"Entweder sie haben noch kein Benutzerkonto angelegt (gehen Sie in\n"
-"diesem Fall zurück zum ersten Schritt um sich mit MandrakeOnline\n"
+"Entweder sie haben noch kein Benutzerkennzeichen angelegt (gehen Sie \n"
+"in diesem Fall zurück zum ersten Schritt um sich mit MandrakeOnline\n"
 "in Verbindung zu setzen) oder Sie haben sich nur vertippt.\n"
 "Versuchen Sie es in diesem Fall noch einmal."
+"Denken Sie daran, dass Sie auch einen Rechnernamen angeben müssen \n"
+"(nur Buchstaben sind erlaubt)."
 
 #: mdkonline:367
 msgid "Welcome to MandrakeOnline"
@@ -131,9 +132,8 @@ msgid "Authentification"
 msgstr "Authentifizierung"
 
 #: mdkonline:391
-#, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "Geben Sie Ihr MandrakeOnline Kennzeichen und Passwort ein:"
+msgstr "Geben Sie Ihr MandrakeOnline Kennzeichen, Passwort und den Rechnernamen ein:"
 
 #: mdkonline:393
 msgid "Login:"
@@ -145,7 +145,7 @@ msgstr "Passwort:"
 
 #: mdkonline:393
 msgid "Machine name:"
-msgstr ""
+msgstr "Rechnername:"
 
 #: mdkonline:397
 msgid "Sending your Configuration"
