@@ -26,6 +26,7 @@ use HTTP::Request;
 use HTTP::Request::Common;
 use LWP::UserAgent;
 use MDK::Common;
+use lib qw(/usr/lib/libDrakX);
 use Locale::GetText;
 
 #- I18N.
@@ -51,6 +52,49 @@ usage:
 ") . _("  -v             - verbose mode.
 ", $VERSION );
     exit(0);
+}
+
+#parse the file and leave the comments out
+my @parsed = grep {!/^#/} parse_file("/root/.mdkupdate"); 
+		   
+# authenticate before 
+my $valid_customer = connect_site("http://mandrakeonline.net/online_user.php");
+
+
+`urpmi.addmedia --update security_$parsed[3] $parsed[4] with ../base/hdlist.cz`;
+
+sub connect_site () {
+    my ($url) =@_;
+    my $result = -1;
+    my $login = $parsed[1];
+    my $passwd= $parsed[2];
+    
+    if ($login && $passwd && $login !~ /\s+/ && $passwd !~ /\s+/) {
+	my $ua = LWP::UserAgent->new;
+	$ua->agent("MdkUpdateAgent/0.15" . $ua->agent);
+	my $request = HTTP::Request->new(GET => $url.'?log='.$login.'&pass='.$passwd);
+	#add hostname to authentication.
+	my $response = $ua->request($request);
+	# Check the outcome of the response
+	if ($response->is_success) {
+	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
+	} else {
+	    # pb with the connection ? stay on page 2
+	    print STDERR _("Connection problem")."\n"._("MandrakeOnline could not be contacted, we will try again");
+	    return;
+	}
+    } else {
+	$result = -1; # not needed, but this way it's clear
+    }
+    
+    # if correct, return 1
+    if (! $result) {
+	$result;
+    } else {
+	# if incorrect, clear passwd and stay on page 2
+	print STDERR _("Wrong password")."\n"._("Your login or password was wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription. For any problems send mail to support@mandrakeonline.com");
+	return -1;
+    }
 }
 
 sub parse_file {
