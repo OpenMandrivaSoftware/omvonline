@@ -58,7 +58,7 @@ sub read_conf() {
     my %t = getVarsFromSh($wideconf);
     my $host = chomp_(`hostname`);
     $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
-    $login = defined $nlogin ? $nlogin : $t{LOGIN}; $boxname = $t{MACHINE}
+    $login = $t{LOGIN}; $boxname = $t{MACHINE}
 }
 sub check_login {
     my ($log, $pass, $box) = @_;
