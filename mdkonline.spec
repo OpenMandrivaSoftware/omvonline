@@ -15,13 +15,14 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	3mdk
+Release: 	4mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
 Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37, urpmi >= 4.0
+BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 
@@ -90,6 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-4mdk
+- BuildRequires: gettext (Stefan Van Der Eijk)
+
 * Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-3mdk
 - resync with cvs (please use the spec file !)
 
