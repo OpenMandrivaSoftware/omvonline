@@ -4,13 +4,14 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	9mdk
+Release: 	10mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	%{name}-backend >= 1.1-4mdk, drakfirsttime >= 1.0-0.6mdk, perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
+Requires:	%{name}-backend >= 1.1-4mdk, drakfirsttime >= 1.0-0.6mdk
+Requires:   perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk, hwdb-clients >= 0.15.1-1mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -126,6 +127,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon Sep 20 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-10mdk
+- upload config into hardware databases
+
 * Tue Sep 14 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
 - po updates
 
