@@ -96,12 +96,13 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Wed May  5 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-4mdk
-- mdkonline:
-  * list all countries (tv)
-  * fix truncated text (tv)
-  * remove shell stuff (tv)
-  * force to use the crontab entry
+* Thu May  6 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-4mdk
+- Wed May  5 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-4mdk
+  o mdkonline:
+		* list all countries (tv)
+		* fix truncated text (tv)
+		* remove shell stuff (tv)
+		* force to use the crontab entry
 
 * Wed Apr 28 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-3mdk
 - fix wrong path in cron entry (#9547)
