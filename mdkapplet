@@ -102,7 +102,6 @@ $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
-
 checkUpdates();
 cronUpdate();
 
@@ -160,9 +159,7 @@ sub launchUpdate {
     system "/usr/sbin/MandrakeUpdate &";
 }
 sub installUpdates {
-    #    system "/usr/sbin/mdkupdate", "--applet";
-    $menu && $menu->destroy;
-    $menu = setState('error');
+    system "/usr/sbin/mdkupdate", "--applet";
 }
 sub silentCheck {
     my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php/" . '?action=UpdateList';
@@ -263,5 +260,6 @@ sub setState {
     $menu
 }
 sub about {
-    
+    my $b = browser();
+    system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
