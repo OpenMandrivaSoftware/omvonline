@@ -104,11 +104,10 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 $eventbox->signal_connect(button_press_event => sub {
 			      if (!$raisedwindow) {
 				  if ($_[1]->button == 1) {
-				      if (-e $conffile) { showMainWindow() } else { configure() }
+				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { configure(); $raisedwindow = 0 }
 				  }
-				  $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
-				  $raisedwindow = 1;
-			      }
+			      }			      
+			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') };
