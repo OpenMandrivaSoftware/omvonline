@@ -33,12 +33,11 @@ my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
 my $onlineUrl = "https://www.mandrakeonline.net/";
-my %url;
+my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php'
 }
-my $rpms_rep = "/root/tmp/";
-my $VERSION = "1.0";
+my $VERSION = "1.1";
 my $YEARS = "2002-2004";
 
 #for compatibilities
@@ -47,7 +46,7 @@ mkdir_p($confdir) if !-d $confdir;
 
 my ($scheduled, $noscheduled);
 
-sub usage {
+sub usage() {
     print STDERR N("mdkupdate version %s
 Copyright (C) %s Mandrakesoft.
 This is free software and may be redistributed under the terms of the GNU GPL.
@@ -70,7 +69,7 @@ my %o = getVarsFromSh($conffile);
 if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $u;
     my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
-    my $resp = mdkonline::get_from_URL($MandrakeUpdateURL);
+    my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent/1.1');
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
     if ($resp->is_success) {
@@ -122,10 +121,10 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 		     };
 	$action->{$u}->();
     } else {
-	log::l(N("Connection problem")."\n" . N("Mandrakeupdate could not contact the site, we will try again."));
+	log::l(N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
     }
 } else {
-    $ret = -1; 
+    my $ret = -1; 
 }
 sub split_contents {
     my $cont = shift;
@@ -193,7 +192,7 @@ sub send_rpm_dif {
 	unlink "$confdir/mdkupdate.rpms";
 	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
     } else {
-	log::l(N("Connection problem")."\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
+	log::l(N("Connection problem") . "\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
 	return
     }
 }
