@@ -1,21 +1,22 @@
+# Перевод сообщений mdkonline-ru.po на Russian
 # Russian translation for MDKOnline
-# Copyright (C) 2002 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2004 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandrakesoft.
-# Pavel Maryanov <acid_jack@ukr.net>, 2002.
-# Alice Lafox <alice@lafox.net>, 2004
+# Pavel Maryanov <acid_jack@ukr.net>, 2002, 2004.
+# Alice Lafox <alice@lafox.net>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 0.15\n"
+"Project-Id-Version: mdkonline-ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-04-08 00:08+0200\n"
-"PO-Revision-Date: 2004-03-23 22:05+0200\n"
-"Last-Translator: Alice Lafox <alice@lafox.net>\n"
-"Language-Team: Russian <cooker-i18n@linux-mandrake.com>\n"
+"PO-Revision-Date: 2004-04-07 10:47+0300\n"
+"Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #: ../mdkapplet:51
 msgid "No updates available for your system"
@@ -23,7 +24,7 @@ msgstr "Для вашей системы нет доступных обновл�
 
 #: ../mdkapplet:57
 msgid "Config problems. Launch \"configure\" again"
-msgstr "Проблемы с конфигурацией. Запустите \"настройку\" снова"
+msgstr "Проблемы с конфигурацией. Запустите \"настройку\" еще раз"
 
 #: ../mdkapplet:63
 msgid "System is busy. Wait ..."
@@ -36,15 +37,15 @@ msgstr "%s пакетов доступно для обновления"
 
 #: ../mdkapplet:75
 msgid "Service not available. Click on \"configuration\""
-msgstr "Сервис недоступен. Зайдите в \"конфигурацию\""
+msgstr "Служба не доступна. Зайдите в \"конфигурацию\""
 
 #: ../mdkapplet:81
 msgid "Network is down. Click on \"configure Network\""
-msgstr "Сеть недоступна. Проверьте \"настройки сети\""
+msgstr "Сеть не доступна. Проверьте \"настройки сети\""
 
 #: ../mdkapplet:87
 msgid "Service deactivated. Waiting for payment..."
-msgstr "Сервис деактивирован. Ожидается оплата..."
+msgstr "Служба дезактивирована. Ожидается оплата..."
 
 #: ../mdkapplet:91
 msgid "Launch Mandrake Update"
@@ -60,7 +61,7 @@ msgstr "Проверить обновления"
 
 #: ../mdkapplet:94
 msgid "Online WebSite"
-msgstr "Web-сайт онлайн"
+msgstr "Онлайновый веб-сайт"
 
 #: ../mdkapplet:95
 msgid "Configure Network"
@@ -72,7 +73,7 @@ msgstr "Настроить сейчас!"
 
 #: ../mdkapplet:128
 msgid "Mandrake Updates Applet"
-msgstr "Аплет Mandrake Updates"
+msgstr "Апплет Mandrake Updates"
 
 #: ../mdkapplet:136
 msgid "Actions"
@@ -95,13 +96,12 @@ msgid "Check updates"
 msgstr "Проверить обновления"
 
 #: ../mdkapplet:140
-#, fuzzy
 msgid "Checking ..."
-msgstr "Проверяется ..."
+msgstr "Выполняется проверка..."
 
 #: ../mdkapplet:140 ../mdkapplet:152 ../mdkapplet:329
 msgid "Not Available"
-msgstr "Недоступны"
+msgstr "Не доступны"
 
 #: ../mdkapplet:141
 msgid "See logs"
@@ -113,7 +113,7 @@ msgstr "Статус"
 
 #: ../mdkapplet:147
 msgid "Network Connection: "
-msgstr "Сетевое соединение: "
+msgstr "Сетевое подключение: "
 
 #: ../mdkapplet:148
 msgid "Down"
@@ -125,7 +125,7 @@ msgstr "Вверх"
 
 #: ../mdkapplet:151
 msgid "New Updates: "
-msgstr "Свежие обновления: "
+msgstr "Новые обновления: "
 
 #: ../mdkapplet:155
 msgid "Last check: "
@@ -137,25 +137,24 @@ msgstr "Закрыть"
 
 #: ../mdkapplet:173
 msgid "Launching drakconnect\n"
-msgstr "Запуск drakconnect\n"
+msgstr "Запускается drakconnect\n"
 
 #: ../mdkapplet:174
 msgid "Launching MandrakeUpdate\n"
-msgstr "Запуск MandrakeUpdate\n"
+msgstr "Запускается MandrakeUpdate\n"
 
 #: ../mdkapplet:175
 msgid "Launching mdkupdate --applet\n"
-msgstr "Запуск mdkupdate --applet\n"
+msgstr "Запускается mdkupdate --applet\n"
 
 #: ../mdkapplet:183
-#, fuzzy
 msgid "Computing new updates...\n"
-msgstr "Запрос на обновления..."
+msgstr "Вычисляются новые обновления...\n"
 
 #: ../mdkapplet:190
 #, fuzzy
 msgid "Connecting to"
-msgstr "Проблема соединения"
+msgstr "Проблема подключения"
 
 #: ../mdkapplet:194
 #, fuzzy
@@ -164,11 +163,11 @@ msgstr "Добро пожаловать в MandrakeOnline"
 
 #: ../mdkapplet:210
 msgid "Checking... Updates are available\n"
-msgstr "Проверяем... Обновления доступны\n"
+msgstr "Выполняется проверка... Обновления доступны\n"
 
 #: ../mdkapplet:214
 msgid "Online services disabled. Contact MandrakeOnline site\n"
-msgstr "Онлайн услуги отключены. Зайдите на сайт MandrakeOnline\n"
+msgstr "Онлайновые службы отключены. Зайдите на сайт MandrakeOnline\n"
 
 #: ../mdkapplet:215
 msgid "Wrong Password.\n"
@@ -176,11 +175,11 @@ msgstr "Неверный пароль.\n"
 
 #: ../mdkapplet:216
 msgid "Wrong Action or host or login.\n"
-msgstr "Неверное действие или хост или логин.\n"
+msgstr "Неверное действие, хост или логин.\n"
 
 #: ../mdkapplet:220
 msgid "System is up to date\n"
-msgstr "Системе обновления не требуются\n"
+msgstr "Системе не требуются обновления\n"
 
 #: ../mdkapplet:308
 msgid "No check"
@@ -192,7 +191,7 @@ msgstr "Проверка сети: похоже отключена\n"
 
 #: ../mdkapplet:324
 msgid "Checking config file: Not present\n"
-msgstr "Проверка config файла: Отсутствует\n"
+msgstr "Проверка файла config: Отсутствует\n"
 
 #: ../mdkapplet:369
 msgid "Logs"
@@ -237,7 +236,7 @@ msgstr ""
 
 #: ../mdkonline:105
 msgid "Create a MandrakeOnline Account"
-msgstr "Создать MandrakeOnline аккаунт"
+msgstr "Создать учетную запись MandrakeOnline"
 
 #: ../mdkonline:107
 msgid "I don't have a MandrakeOnline account and I want to "
@@ -273,7 +272,7 @@ msgstr "Аутентификация"
 
 #: ../mdkonline:128
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "Введите свой MandrakeOnline логин, пароль и имя машины:"
+msgstr "Введите свои логин MandrakeOnline, пароль и имя машины:"
 
 #: ../mdkonline:133
 msgid "Machine name:"
@@ -281,7 +280,7 @@ msgstr "Имя машины:"
 
 #: ../mdkonline:138
 msgid "Send Configuration"
-msgstr "Послать конфигурацию"
+msgstr "Отправить конфигурацию"
 
 #: ../mdkonline:139
 msgid ""
@@ -343,7 +342,7 @@ msgstr ""
 
 #: ../mdkonline:145
 msgid "Your upload was successful!"
-msgstr "Закачка произведена успешно!"
+msgstr "Выгрузка произведена успешно!"
 
 #: ../mdkonline:146
 msgid "automated Upgrades"
@@ -387,19 +386,19 @@ msgstr "Email"
 
 #: ../mdkonline:181
 msgid "Email not valid\n"
-msgstr "Email неверен\n"
+msgstr "Email не верен\n"
 
 #: ../mdkonline:182
 msgid "Account already exist\n"
-msgstr "Аккаунт уже существует\n"
+msgstr "Учетная запись уже существует\n"
 
 #: ../mdkonline:182
 msgid "Change account"
-msgstr "Изменить аккаунт"
+msgstr "Изменить учетную запись"
 
 #: ../mdkonline:188
 msgid "Problem connecting to server \n"
-msgstr "Проблема соединения с сервером \n"
+msgstr "Проблема подключения к серверу \n"
 
 #: ../mdkonline:188
 msgid "Server Problem"
@@ -411,7 +410,7 @@ msgstr "Ошибка"
 
 #: ../mdkonline:193
 msgid "Please provide a login"
-msgstr "Пожалуйста сообщите логин"
+msgstr "Пожалуйста, укажите логин"
 
 #: ../mdkonline:195
 msgid ""
@@ -419,7 +418,7 @@ msgid ""
 " Please try again\n"
 msgstr ""
 "Пароли не совпадают\n"
-" Попробуйте снова\n"
+" Попробуйте еще раз\n"
 
 #: ../mdkonline:197
 msgid "Not a valid mail address!\n"
@@ -427,15 +426,16 @@ msgstr "Недействительный почтовый адрес!\n"
 
 #: ../mdkonline:227
 msgid "Sending configuration..."
-msgstr "Посылаются настройки..."
+msgstr "Отправляется конфигурация..."
 
 #: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
-msgstr "Проблема соединения"
+msgstr "Проблема подключения"
 
 #: ../mdkonline:253 ../mdkonline:329
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "Не удается связаться с MandrakeOnline, попробуйте снова чуть позже"
+msgstr ""
+"Не удается связаться с MandrakeOnline, попробуйте еще раз несколько позже"
 
 #: ../mdkonline:295
 msgid "Quitting Wizard\n"
@@ -465,7 +465,7 @@ msgstr ""
 
 #: ../mdkonline:348
 msgid "Reading configuration\n"
-msgstr "Чтение конфигурации\n"
+msgstr "Считывается конфигурация\n"
 
 #: ../mdkupdate:52
 #, perl-format
@@ -486,19 +486,19 @@ msgstr ""
 
 #: ../mdkupdate:57
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - вывести это справочное сообщение.\n"
+msgstr "  --help         - вывод этого справочного сообщения.\n"
 
 #: ../mdkupdate:58
 msgid "  --auto         - Mdkupdate launched automatically.\n"
-msgstr "  --auto         - Mdkupdate запускается автоматически.\n"
+msgstr "  --auto         - автоматический запуск Mdkupdate.\n"
 
 #: ../mdkupdate:59
 msgid "  --applet       - launch MandrakeUpdate.\n"
-msgstr "  --applet       - запустить MandrakeUpdate.\n"
+msgstr "  --applet       - запуск MandrakeUpdate.\n"
 
 #: ../mdkupdate:60
 msgid "  --update       - Update keys\n"
-msgstr "  --update       - Обновить ключи\n"
+msgstr "  --update       - обновление ключей\n"
 
 #: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
