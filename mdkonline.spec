@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	6mdk
+Release: 	7mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -126,6 +126,12 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Thu Sep  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-7mdk
+- launch one instance of mdkapplet per desktop.
+- resynced po
+- remove strings incoherencies
+- don't display the same desktop icon for mdkapplet and net_applet
+
 * Wed Aug  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-6mdk
 - automatically launch mdkapplet for KDE, GNOME and IceWM (via xinit)
 
