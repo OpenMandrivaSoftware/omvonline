@@ -28,7 +28,7 @@ use common;
 use Config;
 init Gtk2;
 
-use LWP::Debug qw(+);
+#use LWP::Debug qw(+);
 use LWP::UserAgent;
 use Net::HTTPS;    
 use HTTP::Request::Common;
@@ -328,7 +328,7 @@ sub send_config {
                                 Content => [submit => "upload_wizard",
                                             wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
 					   ]);
-    printf("*********** Reponse is %s ***********\n", $response->as_string);
+    #printf("*********** Reponse is %s ***********\n", $response->as_string);
     # Check the outcome of the response
     #print "REPONSE: ".$response->content."\n";
     remove_wait_msg($w);
