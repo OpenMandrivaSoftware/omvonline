@@ -408,7 +408,7 @@ AUTO=$auto
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
-if [ -f $confdir/mdkupdate ]; then /usr/bin/mdkupdate --auto; fi
+if [ -f $confdir/mdkupdate ]; then /usr/sbin/mdkupdate --auto; fi
 );
 
 chmod 0755, "/etc/cron.daily/mdkupdate";
