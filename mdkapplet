@@ -102,6 +102,7 @@ $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
+
 checkUpdates();
 cronUpdate();
 
@@ -173,6 +174,7 @@ sub silentCheck {
     require HTTP::Request;
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkAppletAgent/0.1" . $ua->agent);
+    $ua->env_proxy;
     #    my $request = HTTP::Request->new(GET => $link . '&log=' . "ayomigration" . '&host=' . "online");
     my $request = HTTP::Request->new(GET => $link . '&log=' . $h{LOGIN} . '&host=' . $h{BOX});
     my $response = $ua->request($request); 
