@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 27mdk
+%define release 29mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -115,9 +115,23 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 
 %changelog
+* Tue Mar  8 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-29mdk
+- added option --interactive (to use nointeractive in MNF)
+- MandrakeUpdate in newt version (only for update_source media)
+- fix the x86_64 coupled with corporate capharnaum
+- No more dns request to check mandrakeonline server's "reachability"
+  (release > 10.0) 
+- many cleanups
+
+ o Wed Feb 16 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-28mdk
+  - don't update kernel
+  - added --mnf option to mdkupdate
+  - don't check the network if no config file is available
+
 * Wed Jan 19 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-27mdk
 - truly support x86_64 (good path to synthesis and RPMS repertory)
 - mdkupdate media renamed to update_source (consolidating with MandrakeUpdate)
+- fixed last checked date not refreshing
 
 * Wed Dec 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-26mdk
 - display last check date on applet interface
