@@ -328,6 +328,7 @@ sub checkUpdates {
 	logIt(N("Checking config file: Not present\n"));
 	go2State('noconfig')
     } else {
+	go2State('busy');
 	silentCheck();
     }
     setLabel($update_label, $isAvailable ? N("Available") : N("Not Available"));
