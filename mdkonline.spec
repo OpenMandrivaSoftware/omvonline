@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.2mdk
+Release: 	0.3mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,6 +94,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
+* Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.3mdk
+- fix 'display logs'
+- set defaults parameters in wizard
+
 * Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.2mdk
 - autostart mdkapplet (KDE/GNOME)
 - timeout set to 1 hour checks (decrease server loads).
