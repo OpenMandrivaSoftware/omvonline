@@ -18,6 +18,7 @@ Version:	%{version}
 Release: 	0.1mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
+Packager:	Daouda Lo <daouda@mandrakesoft.com>
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakfirsttime >= 1.0-0.2mdk, perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
