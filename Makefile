@@ -10,9 +10,9 @@ all: mdkonline
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 clean:
-	$(MAKE) -C po $@
-	rm -f mdkonline core .#*[0-9]
-	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
+#	$(MAKE) -C po $@
+#	rm -f mdkonline core .#*[0-9]
+#	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 install: all
 	$(MAKE) -C po $@
@@ -23,7 +23,7 @@ install: all
 
 dis: clean
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
-	cvs commit 
+#	cvs commit 
 	mkdir -p $(NAME)-$(VERSION)
 	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
 	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore |xargs rm -rf

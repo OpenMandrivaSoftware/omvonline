@@ -198,7 +198,7 @@ sub get_on_privacy {
     my $vscrollbar = new Gtk::VScrollbar( $text->vadj );
     $table->attach( $vscrollbar, 1, 2, 0, 1, 'fill',
                        [ 'expand', 'shrink', 'fill' ], 0, 0 );
-    load_text($text,"/usr/share/ftw/privacy.txt");
+    load_text($text,"/usr/share/mdkonline/privacy.txt");
     $vbox->pack_start( $table, $true, $true, 0 );
     
 }    
