@@ -38,10 +38,13 @@ make prefix=$RPM_BUILD_ROOT install
 mv ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name} \
    ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}.real
 ln -sf %{_bindir}/consolehelper ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}
+ln -sf %{_bindir}/consolehelper ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/drakonline
 
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/{pam.d,security/console.apps}
 cp pam.%{name} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/%{name}
+cp pam.%{name} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/drakonline
 cp apps.%{name}  $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/%{name}
+cp apps.%{name}  $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/drakonline
 
 #install lang
 %{find_lang} %{name}
@@ -79,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 %config(noreplace) %{_sysconfdir}/pam.d/%{name}
 %config(noreplace) %{_sysconfdir}/security/console.apps/%{name}
+%config(noreplace) %{_sysconfdir}/pam.d/drakonline
+%config(noreplace) %{_sysconfdir}/security/console.apps/drakonline
 %{_prefix}/X11R6/bin/*
 %{_bindir}/*
 %{_datadir}/%{name}
@@ -91,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Wed Apr 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-19mdk
 - cleanups, 8.1 support.
+- drakonline alias.
 
 * Tue Mar 19 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-18mdk
 - clean dir after updates.
