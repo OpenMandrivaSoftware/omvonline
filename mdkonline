@@ -254,16 +254,16 @@ sub on_prev_clicked {
 
 sub subscribe_mdkonline() {
     my $browser=$ENV{'BROWSER'};
-    my $initial_user=$ENV{'INITIAL_USER'};
+#    my $initial_user=$ENV{'INITIAL_USER'};
     my $user_current=$ENV{'USER'};
     
     if (!$browser) {splash_warning( " ". _("Warning: No browser specified") ." "); return;}
-    if ($initial_user ne "root" && $initial_user ne undef) {
-	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
-    } else {
+#    if ($initial_user ne "root" && $initial_user ne undef) {
+#	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
+#    } else {
 	system("$browser $link_to_mdkonline &");
 	
-    }
+ #   }
     $check_subs->set_active(0);$Button_Next->set_sensitive(1); $button_subs->set_sensitive(0);
 }
 
