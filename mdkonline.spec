@@ -32,9 +32,10 @@ hardware support/enhancements and other high value services.
 rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT install 
 
-#symbolic link to drakonline
-ln -sf %_sbindir/mdkonline %buildroot/%_sbindir/drakonline
-ln -sf %_sbindir/mdkonline %buildroot/%_prefix/X11R6/bin/mdkonline
+#symbolic link to drakonline and older path
+mkdir -p %buildroot%_prefix/X11R6/bin/
+ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakonline
+ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
 
 #install lang
 %{find_lang} %{name}
