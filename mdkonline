@@ -249,10 +249,10 @@ sub test_passwd () {
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
 # TEST URL
-	print STDERR "Real url should be: $authentication_host?u=$login&p=$passwd \n";
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=mark&p=26bdb06eabafac3aea95991149dd8ea9');
 # REAL ONE
-#    my $request = HTTP::Request->new(GET => '$authentication_host?u=$login&p=$passwd');
+#	print STDERR "url used for auth.: $authentication_host?u=$login&p=$passwd \n";
+#	my $request = HTTP::Request->new(GET => '$authentication_host?u=$login&p=$passwd');
 	my $response = $ua->request($request);
 	# Check the outcome of the response
 	if ($response->is_success) {
@@ -371,7 +371,7 @@ sub step_wizard {
 
     my $vbox_rev=new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
-    my $label_rev = new Gtk::Label(_("This is your chance, to help us improving Mandrake Linux.\n\nThe Wizard will now send the following informations to MandrakeSoft:\n1) the packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable, by that idea, press 'Cancel'.\nBy pressing 'Next', you will grant us the privilege\nto learn more about about you as our customer\nand it gives us the chance to keep you informed\nabout security updates and useful upgrades."));
+    my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
@@ -386,7 +386,7 @@ sub step_wizard {
     # building the "OK data sent" page
     my $vbox_oksend= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
-    my $label_oksend = new Gtk::Label("\n\n" . _("Your personal informations are now stored at MdkOnline"));
+    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successfull!\nFrom now you will receive on security\nand upgrade annoucements thanks to MandrakeOnline."));
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
     
