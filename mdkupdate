@@ -1,4 +1,4 @@
-#!/usr/bin/perl 
+#!/usr/bin/perl -w
 ################################################################################
 # Mdkupdate                                                                    # 
 #                                                                              #
@@ -38,6 +38,10 @@ sub _ {
     sprintf(Locale::GetText::I_($format), @params);
 }
 
+$logfile = "/var/log/mdkupdate.log";
+my $url_upload_diff = "https://www.mandrakeonline.net/testonline/online_dif.php";
+my $url_get_rpms = "https://www.mandrakeonline.net/testonline/online_update.php";
+my $rpms_rep = "/var/cache/urpmi/rpms/";
 my $VERSION = "0.16";
 my $security = 0;
 
@@ -54,61 +58,92 @@ usage:
     exit(0);
 }
 
-#parse the file and leave the comments out
-my @parsed = grep {!/^#/} parse_file("/root/.mdkupdate"); 
-		   
-# authenticate before 
-my $valid_customer = connect_site("http://mandrakeonline.net/online_user.php");
+my %o = getVarsFromSh("/root/.mdkupdate");
+rpm_qa("/root/rpm_qa_installed_before");
+update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
+rpm_qa("/root/rpm_qa_installed_after");
+foreach (@rpm_qadiff) { print "$_\n";};
 
-#`urpmi.addmedia --update security_$parsed[3] $parsed[4] with ../base/hdlist.cz`;
-
-sub connect_site () {
-    my ($url) =@_;
+sub update_rpms () {
+    my ($login,$password,$box_name,$curkey) =@_;
     my $result = -1;
-    my $login = $parsed[1];
-    my $passwd= $parsed[2];
+    my $string;
     
-    if ($login && $passwd && $login !~ /\s+/ && $passwd !~ /\s+/) {
+    if ($login && $password && $login !~ /\s+/ && $password !~ /\s+/) {
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkUpdateAgent/0.15" . $ua->agent);
-	my $request = HTTP::Request->new(GET => $url.'?log='.$login.'&pass='.$passwd.'$name_machine');
-	#add hostname to authentication.
+	my $request = HTTP::Request->new(GET => $url_get_rpms.'?log='.$login.'&pass='.$password.'&host='.$box_name.'&key='.$curkey);
 	my $response = $ua->request($request);
-	# Check the outcome of the response
+	$string = $response->content;
 	if ($response->is_success) {
-	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
+	    $result = ($response->content =~ /^TRUE/) ? 0 : -1;
 	} else {
-	    print STDERR _("Connection problem")."\n"._("MandrakeOnline could not be contacted, we will try again");
-	    return;
+	    log_it(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
+	    exit -1;
 	}
     } else {
-	$result = -1; # not needed, but this way it's clear
+	$result = -1; 
     }
-    
-    # if correct, return 1
+    # if correct, return 0
     if (! $result) {
-	$result;
+	@str_m = split '\n', $string;
+	my %l = getVarsFromSh "/root/.mdkupdate";
+	if ($str_m[0] eq 'TRUE') {
+	    setVarsInSh("/root/.mdkupdate", {
+		OLDKEY => $str_m[2],
+		CURRENTKEY => $str_m[1],
+		MIRROR => $l{MIRROR},
+		VER => $l{VER},
+		BOX => $l{BOX},
+		PASS => $l{PASS},
+		LOGIN => $l{LOGIN} ,
+	    });
+	    my @junk= splice(@str_m,0,3);
+	    my $mir_full = $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS";
+	    @str_m and update_packages(@str_m,$mir_full);
+
+	} else { print "problem occur $str_m\n";}
+	    	    
     } else {
-	print STDERR _("Wrong password")."\n"._("Your login or password was wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription. For any problems send mail to support@mandrakeonline.com");
-	return -1;
+	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.com\n"));
+	exit -1;
     }
 }
 
-sub parse_file {
-    my ($file)=@_; 
-    my @list_hosts;
-    open( FILE, $file ) or die "load_text: missing file $file : $!";
-    while (<FILE>) {
-	chomp;
-	unshift(@list_hosts,$_); 
+sub update_packages {
+    my (@str,$mir) = @_;
+    chdir ($rpms_rep);
+    $full_rpm = join(' ',@strm);
+    foreach (@str) {
+	-x "/usr/bin/wget" or die _("wget is missing\n");
+	`/usr/bin/wget $mir/$_`;
     }
-    close( FILE );
-    reverse @list_hosts;
+    `urpmi $full_rpm`;
+}
+
+sub send_rpm_dif {
+    my ($login,$password,$box_name,$oldkey) =@_;
+    `sdiff -o /root/$login.$password.$box_name.$old_key.dif -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before `;
+    my $response = $ua->request(POST $url_upload_diff,
+
+				Content_Type => 'form-data',
+				Content => [submit => "upload_dif",
+					    dif_file => ["$root-dir/$login.$password.$box_name.$old_key.dif"]
+					    ]);
+    # Check the outcome of the response
+    print "REPONSE: ".$response->content."\n";
+}
+
+sub rpm_qa {
+    my ($file) = @_;
+    open (FILE,"> $file") || die "Couldn't open $file : $!"; 
+    join '', map { chomp; print FILE "$_" }
+    join('',sort `rpm -qa`); 
 }
 
 sub log_it {
     local *LOG;
-    open LOG, ">>/var/log/mdkupdate.log" or die "can't output to log file\n";
+    open LOG, ">> $logfile" or die "can't output to log file\n";
     print LOG @_;
 }
 

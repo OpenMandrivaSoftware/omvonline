@@ -66,16 +66,13 @@ my $link_to_mdkonline="http://www.mandrakeexpert.com/index2.php";
 my $check_custid=0;
 my $true=1;
 my $false=0;
-$::isWizard = "@ARGV" =~ /--wizard/;
-$::isWizard=1;
-my %locations = ( _("Africa") => 'ftp://africa',
-		  _("Asia") => 'ftp://asia',
-		  _("Australia") => 'ftp://australia',
-		  _("Europe") => 'ftp://europe',
-		  _("USA") =>'ftp://usa',
-		  _("South America") => 'ftp://southamerica',
+my %locations = ( _("Africa") => ['ftp.univie.ac.at/systems/linux/Mandrake/updates','ftp.lip6.fr/pub/linux/distributions/mandrake/updates'],
+		  _("Asia") => ['ftp.surfnet.nl/pub/os/Linux/distr/Mandrake/Mandrake/updates','ftp.math.utah.edu/pub/linux/Mandrake/updates'],
+		  _("Australia") => ['ftp-linux.cc.gatech.edu/pub/linux/distributions/mandrake/updates','mandrake.redbox.cz/Mandrake/updates'],
+		  _("Europe") => ['ftp.club-internet.fr/pub/unix/linux/distributions/Mandrake/updates','ftp.gwdg.de/pub/linux/mandrake/updates'],
+		  _("North America") =>['mirrors.secsup.org/pub/linux/mandrake/Mandrake/updates','ftp.stealth.net/pub/mirrors/ftp.mandrake.com/Mandrake/updates'],
+		  _("South America") => ['ftp.proxad.net/pub/Distributions_Linux/Mandrake/updates','carroll.cac.psu.edu/pub/linux/distributions/mandrake/updates'],
 		  );
-
 require Gtk;
 require Gtk::Gdk::ImlibImage;
 
@@ -126,6 +123,7 @@ my $box_user= new Gtk::Entry();
 my $login   = "";
 my $passwd  = "";
 my $box_name = "";
+my $key = "";
 
 my %actions = ( 
 		2 => \&test_passwd,
@@ -343,7 +341,7 @@ sub send_config {
     print "REPONSE: ".$response->content."\n";
     if ($response->is_success) {
 	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
-	print("key is $1");
+	print("key is $1\n");
 	$key = $1; 
     } else {
 	# pb with the connection ?
@@ -376,7 +374,7 @@ sub step_wizard {
     $hbox_subs->pack_start($check_subs,0,0,1);
     $button_subs->set_sensitive(0);
     $check_subs->signal_connect (clicked => sub {$test_tog=$check_subs->get_active(); 
-						 $button_subs->set_sensitive($test_tog); 
+						 $button_su4bs->set_sensitive($test_tog); 
 						 $Button_Next->set_sensitive(!$test_tog); });
     $button_subs->signal_connect('clicked' => \&subscribe_mdkonline);
     $hbox_subs->pack_start($button_subs,0,0,1);
@@ -423,10 +421,6 @@ sub step_wizard {
     $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
     #$check_cron->set_uposition(70,245);
     my $hboxfr1 = new Gtk::HBox(0,0);
-    #my $label_user_mail = new Gtk::Label(_("I want this (local) user to get email alerts"));
-    #$hboxfr1->pack_start($label_user_mail,$true ,$true,5);
-    #$gtkcombo_user->set_popdown_strings(parse_etc_passwd());
-    #$hboxfr1->pack_end($gtkcombo_user,$true ,$true,5);
     my $hboxfr2 = new Gtk::HBox(0,0);
     my $label_mirror = new Gtk::Label(_("Choose your geographical location"));
     $hboxfr2->pack_start($label_mirror,$true ,$true,5);
@@ -441,20 +435,6 @@ sub step_wizard {
     $vbox_frame_auto->pack_start($hboxfr2,$false ,$false,5);
     $vbox_oksend->pack_start($frame_auto, $true,$false,1);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
-}
-
-sub parse_etc_passwd ()
-{
-    my (@usernames,$uname, $uid);
-    my $uid=0;
-    setpwent();
-    do {
-	@user_info = getpwent();
-	($uname, $uid) = @user_info[0,2];
-         push (@usernames, $uname) if ($uid > 500);
-    } while (@user_info);
-    unshift @usernames,'root';
-    @usernames;
 }
 
 sub report_config {
@@ -492,7 +472,7 @@ sub automated_upgrades {
     while (<VERS>) { 
 	@info_tree = split / /, $_;
     }
-    $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()};
+    $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()}[rand (2)];
     my $version=$info_tree[3];
     my $host = hostname;
     output "/root/.mdkupdate",
@@ -502,7 +482,7 @@ PASS=$passwd
 BOX=$box_name
 VER=$version
 MIRROR=$mirror_site
-CURRENTKEY= $key 
+CURRENTKEY=$key 
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
