@@ -69,10 +69,6 @@ update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
 rpm_qa("/root/rpm_qa_installed_after");
 my %new = getVarsFromSh("/root/.mdkupdate");
 if (! -s "/root/.mdkupdate.rpms" || $update) {
-    #- added to allow .mdkupdate.rpms file creation.
-    open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
-    print FILE join ('', sort `rpm -qa`);
-    close FILE;
     #- send configuration and get back key to use...
     $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{BOX});
     delete $new{OLDKEY};
@@ -147,6 +143,9 @@ sub send_config {
 	$result = ($response->content =~ /TRUE(.*)/) ? 0 : -1;
 	#print("key is $1\n");
 	$key = $1; 
+	#- update local copy now.
+	unlink "/root/.mdkupdate.rpms";
+	rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
     } else {
 	# pb with the connection ?
 	$result = -1;
@@ -259,8 +258,7 @@ sub clean_dir {
 sub rpm_qa {
     my ($file) = @_;
     open (FILE,"> $file") || die "Couldn't open $file : $!"; 
-    join '', map { chomp; print FILE "$_" }
-    join('',sort `rpm -qa`);
+    map { chomp; print FILE "$_" } join('',sort `rpm -qa`);
     close FILE;
 }
 
