@@ -6,6 +6,8 @@ PGOAL = mdkonline
 GOALS = $(PGOAL).pot  $(foreach a, $(LANGS), $(a).mo)
 
 PL_FILES = ../mdkonline ../mdkupdate ../mdkapplet
+POFILES = $(shell ls *.po)
+
 
 # $(foreach a, $(LANGS), $($(a).mo))
 
@@ -28,4 +30,11 @@ clean:
 		--keyword=N_ --keyword=N \
 		--keyword=I_ --keyword=i18n \
 		--language=perl -o $@ $(PL_FILES) 
+
+merge: $(PGOAL).pot
+	@for n in $(POFILES); do \
+		echo "Merging $$n"; \
+		msgmerge "$$n" $< > "$$n"t; \
+		mv -f "$$n"t "$$n"; \
+	done
 
