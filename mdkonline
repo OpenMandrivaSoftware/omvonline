@@ -26,6 +26,7 @@ use lib qw(/usr/lib/libDrakX);
 use interactive;
 use common;
 
+BEGIN { unshift @::textdomains, 'mdkonline', 'drakfw' }
 use Config;
 init Gtk2;
 
@@ -34,7 +35,6 @@ use LWP::UserAgent;
 use Net::HTTPS;    
 use HTTP::Request::Common;
 use HTTP::Request;
-BEGIN { unshift @::textdomains, 'mdkonline' }
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 use MIME::Base64 qw(encode_base64);
 use Sys::Hostname;
