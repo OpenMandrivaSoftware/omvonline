@@ -19,6 +19,9 @@ Things to do on mdkonline
    updates), not when everything is fine?
 
  * mdkapplet:
+   when minimizing applet, minimize to icon, not to task bar
+
+ * mdkapplet:
    applet popup display the number of available updates (requires full diff
    check, changes silentCheck() )
 
@@ -27,10 +30,15 @@ Things to do on mdkonline
    if nothing, don't run urpmi, just upload the config.
 
  * mdkupdate:
-   should exit, if another mdkupdate is running, or if the urpmi db is locked.
+   should exit, if another mdkupdate is running (done),
+   or if the urpmi db is locked.
 
  * mdkupdate:
    started every 2 hours +/- salt ?
+
+ * mdkupdate --auto 
+   when failing, informative feedback should be displayed (not authenticated,
+   not subscribed, not activated, st like that).
 
 
 
@@ -39,6 +47,10 @@ Things to do on mdkonline
      - move to SOAP or REST,
      - client queries server for higher-level tasks (from a predefined list)
        (package update, install, uninstall, config setting, data processing)
+
+
+ * move authentication calls to new customer db (remove expert/online calls
+   for that purpose).
 
 
 -------------------------------------------------------------------------------
