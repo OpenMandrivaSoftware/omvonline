@@ -22,10 +22,11 @@ sub get_release() {
     ($release)
 }
 
-sub get_distro_type() {
-    my $d;
-    cat_($release_file) =~ /(corporate|mnf|x86_64)/i, and $d = lc($1);
-    $d
+sub get_distro_type {
+    my $release = cat_($release_file);
+    my ($arch) = $release =~ /\s+for\s+(\w+)/;
+    my ($name) = $release =~ /(corporate|mnf)/i;
+    { name => lc($name), arch => $arch };
 }
 
 sub get_from_URL {
@@ -41,20 +42,7 @@ sub get_from_URL {
 sub get_site {
     my $link = shift;
     $link .= join('', @_);
-    my $b = browser();
-    system("$b " . $link . "&")
-}
-
-sub browser() {
-    require any;
-    my $wm = any::running_window_manager();
-    member($wm, 'kwin', 'gnome-session') or $wm = 'other';
-    my %Br = (
-	      'kwin' => 'webclient-kde',
-	      'gnome-session' => 'webclient-gnome',
-	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_" } qw(epiphany mozilla konqueror galeon)
-	     );
-    $Br{$wm}
+    system("/usr/bin/www-browser  " . $link . "&");
 }
 
 sub subscribe_online {
@@ -184,7 +172,7 @@ sub clean_confdir {
 sub hw_upload {
     my ($login, $passwd, $hostname) = @_;
     my $hw_exec = '/usr/sbin/hwdb_add_system';
-    -x $hw_exec and system("HWDB_PASSWD=$passwd $hw_exec $login $hostname &");
+    -x $hw_exec && !-s '/etc/sysconfig/mdkonline' and system("HWDB_PASSWD=$passwd $hw_exec $login $hostname &");
 }
 
 sub automated_upgrades {
