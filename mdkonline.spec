@@ -13,7 +13,7 @@ URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
-Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37
+Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37, urpmi >= 4.0-20mdk
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 
@@ -87,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 - use urpmi media for update in order to use non scheduled packages.
 - fixed to propagate version to user agent.
 - removed most of perl warnings of mdkonline and mdkupdate.
+- added missing requires to urpmi.
 
 * Thu Sep 12 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-5mdk
 - Use cvs spec file to update package (for Pablo and co)
