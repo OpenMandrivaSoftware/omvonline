@@ -12,6 +12,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Source1:	%{name}16.png.bz2
 Source2:	%{name}32.png.bz2
 Source3:	%{name}48.png.bz2
+URL:		http://people.mandrakesoft.com/~daouda/mandrake/mdkonline.html
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
@@ -90,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 * Mon Jan 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-14mdk
 - code update
 - automated upgrades (working on)
+- add URL tag
 
 * Tue Oct 16 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-13mdk
 - rebuild against libpng3
