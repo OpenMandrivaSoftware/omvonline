@@ -97,6 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Mar 16 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.5mdk
 - die properly when AUTOSTART is set TO FALSE
 - mdkupdate --applet call
+- write conf in both auto and applet mode
 - po updates (load mdkonline domain for po in mdkappplet)
 - bited by chmod novice mode
 
