@@ -99,7 +99,7 @@ $w->{cancel}->set_label(N("Skip Wizard"));
 $o->{Next} = $w->{ok};
 $o->{SkipWiz} = $w->{cancel};
 
-$w->{ok}->set_label(N("gtk-go-forward"));
+$w->{ok}->set_label("gtk-go-forward");
 $w->{ok}->set_use_stock(1);
 
 $o->{Prev} = $w->{buttons}{'gtk-go-back'};
