@@ -84,8 +84,8 @@ my %actions = (
 	       'configureApplet' => { name => N("Configuration"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
 	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite() } },
-	       'confNetwork' => { name => N("Configure Network"), sub { configNetwork() } },
-	       'register' => { name => N("Register Now!"), sub { configure() } }
+	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
+	       'register' => { name => N("Configure Now!"), launch => sub { configure() } }
 	      );
 
 gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"), 
@@ -186,8 +186,8 @@ sub silentCheck {
 sub cronUpdate {
     my ($to) = shift;
     $timeout = Glib::Timeout->add(60*60*1000, sub {
-				      checkUpdates()
-					1;
+				      checkUpdates();
+				      1;
 				  });
 }
 sub checkUpdates {
@@ -213,7 +213,7 @@ sub isNetwork {
     $network;
 }
 sub configure {
-    system "/usr/sbin/mdkonline &";
+    system "/usr/sbin/drakclock &";
 }
 sub getSite {
     my $b = browser();
