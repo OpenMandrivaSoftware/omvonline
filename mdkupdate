@@ -103,7 +103,6 @@ sub update_rpms () {
 	    });
 	    my @junk= splice(@str_m,0,3);
 	    my $mir_full = "ftp://" . $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS"."/";
-	    print "la chaine est @str_m\n";
 	    update_packages($mir_full,@str_m);
 
 	} else { print "problem occur $str_m\n";}
@@ -143,7 +142,7 @@ sub send_rpm_dif {
 }
 
 sub clean_dir() {
-    `rm -f /root/$login.$password.$box_name.$oldkey.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after` if -e "/root/rpm_qa_installed_before";    
+    `rm -f /root/$login.$password.$box_name.$oldkey.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after`;    
     exit 1;
 }
 
