@@ -15,7 +15,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	1mdk
+Release: 	2mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,6 +94,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
+* Tue Apr  6 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-2mdk
+- one more fix for rpmvercmp (remove extra shift to avoid comparing numbers and strings)
+- better logs
+- better timeout for first configuration
+- after upgrade, update applet status immediately (do not wait next timeout occurance)
+
 * Wed Mar 24 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-1mdk
 - update status when performing 'check updates'
 - better perl rpmvercmp for version and release comparisons
