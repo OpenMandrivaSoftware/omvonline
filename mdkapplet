@@ -101,6 +101,7 @@ $eventbox->signal_connect(button_press_event => sub {
 			  });
 
 checkUpdates();
+cronUpdate();
 
 $icon->show_all;
 Gtk2->main;
