@@ -9,19 +9,19 @@
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 
-%define version 0.18
+%define version 0.91
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	4mdk
+Release: 	1mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
-Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37, urpmi >= 4.0
+Requires:	drakxtools >= 9.1-0.19mdk, gtk+mdk, perl-GTK2 > 0.0.cvs.2003.01.27.1
+Requires:	perl-libwww-perl, perl-Crypt-SSLeay >= 0.37,
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -91,6 +91,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Mon Feb  3 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
+- rewrite / port to Gtk2.
+- spec cleanup.
+
 * Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-4mdk
 - BuildRequires: gettext (Stefan Van Der Eijk)
 - resync with cvs (please use the spec file !)
