@@ -37,7 +37,7 @@ my $conffile = "/root/.mdkupdate";
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my %url;
 foreach (qw(online_dif online_update online3_RemoteAction)) {
-    $url->{$_} = $onlineUrl . $_ . 'php'
+    $url->{$_} = $onlineUrl . $_ . '.php'
 }
 my $rpms_rep = "/root/tmp/";
 my $VERSION = "0.17";
