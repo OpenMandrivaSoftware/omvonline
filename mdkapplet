@@ -78,6 +78,12 @@ my %state = (
 			      menu => [ 'confNetwork' ],
 			      tt => [ N("Network is down. Click on \"configure Network\"") ]
 			     }
+	     disabled => {
+			  colour => [ 'red' ],
+			  changes => [ 'okay', 'busy', 'critical', 'error' ],
+			  menu => [ 'weblink' ],
+			  tt => [ N("Service deactivated. Waiting for payment...") ]
+			 }
 	    );
 my %actions = (
 	       'update' => { name => N("Launch Mandrake Update"), launch => sub { launchUpdate() } },
@@ -116,7 +122,6 @@ sub showMainWindow() {
     $w->signal_connect(delete_event => sub { $w->destroy });
     $w->set_position('center');
     my ($choice, $isAvailable, $time);
-    $isAvailable = silentCheck();
     my $autocheck;
     gtkadd($w,
            gtkpack__(Gtk2::VBox->new(0,5),
@@ -162,10 +167,9 @@ sub installUpdates {
     system "/usr/sbin/mdkupdate", "--applet";
 }
 sub silentCheck {
-    my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php/" . '?action=UpdateList';
+    my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
-    $need_update = 0;
-    my @r = sort( split /\n/, `rpm -qa` );
+    my $u;
     require LWP::UserAgent;
     require HTTP::Request::Common;
     require HTTP::Request;
@@ -174,16 +178,30 @@ sub silentCheck {
     $ua->env_proxy;
     #    my $request = HTTP::Request->new(GET => $link . '&log=' . "ayomigration" . '&host=' . "online");
     my $request = HTTP::Request->new(GET => $link . '&log=' . $h{LOGIN} . '&host=' . $h{BOX});
-    my $response = $ua->request($request); 
-    my @contents = sort ( split /\n/, $response->content);
-    foreach my $cand (@contents) {
-	$cand =~ s/\.(i586|ppc|ia64).rpm//;
-	$cand =~ /(.*)-(.*)$/; my ($namever, $release) = ($1, $2);
-	if (member($namever, @r) && $cand ne chomp_(`rpm -q $namever`)) {
-	    $need_update = 1 and last
-	}
-    }
-    $need_update
+    my $response = $ua->request($request);
+    my $ct = $response->content;
+    if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
+    #   99 - log or host or action or pass empty, wrong action
+    #   98 - wrong pass
+    #   97 - host not active
+    my $retcode = {
+		   10 => sub { go2State('okay') },
+		   11 => sub {
+		       my @contents = sort ( split /\n/, $ct);
+		       my @r = sort( split /\n/, `rpm -qa` );
+		       foreach my $cand (@contents) {
+			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
+			   $cand =~ /(.*)-(.*)$/; my ($namever, $release) = ($1, $2);
+			   if (member($namever, @r) && $cand ne chomp_(`rpm -q $namever`)) {
+			       go2State('error') and last
+			   }
+		       }
+		   },
+		   97 => sub { go2State('disabled'); },
+		   98 => sub { go2State('critical'); },
+		   99 => sub { go2State('critical'); }
+		  };
+    $retcode->{$u}->();
 }
 sub cronUpdate {
     my ($to) = shift;
@@ -205,10 +223,7 @@ sub checkUpdates {
     } elsif (!-e $conffile) {
 	go2State('noconfig')
     } else {				   
-	my $update = silentCheck();
-	if ($update) {
-	    go2State('critical')
-	} else { go2State('okay') }
+	silentCheck();
     }
 }
 sub go2State {
