@@ -163,7 +163,7 @@ gtkappend_page($o->{nb},
 init(1);
 
 # Filling country list:
-my %countries = map { lang::c2name($_) => $_ } lang::list_countries(exclude_non_installed => 1);
+my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
 $o->{vbox_auto}->set_sensitive($auto_update);
 $o->{country}->set_popdown_strings(sort(keys %countries));
 $o->{country}->set_text(lang::c2name(lang::read('', $>)->{country}));
