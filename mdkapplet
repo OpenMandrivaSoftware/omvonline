@@ -145,7 +145,8 @@ sub showMainWindow() {
 						 0, Gtk2::Label->new(N("New Updates: ")),
 						 0, Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
 						),
-				     0, gtkpack_(Gtk2::HBox->new(0, 3)						 0, Gtk2::Label->new(N("Last check: ")),
+				     0, gtkpack_(Gtk2::HBox->new(0, 3),
+						 0, Gtk2::Label->new(N("Last check: ")),
 						 0, Gtk2::Label->new(lastCheck())
 						),
 				    )
