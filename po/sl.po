@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2003-01-17 19:41+0100\n"
-"PO-Revision-Date: 2002-08-05 13:52+0200\n"
+"PO-Revision-Date: 2003-02-14 14:56+0100\n"
 "Last-Translator: Gregor Pirnaver <gregor.pirnaver@email.si>\n"
 "Language-Team: Sloven¹èina <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
@@ -73,30 +73,26 @@ msgid "Quitting Wizard\n"
 msgstr "Zapu¹èam èarovnika\n"
 
 #: ../mdkonline_.c:265
-#, fuzzy
 msgid "Warning: No browser specified."
-msgstr "Pozor: brskalnik ni naveden"
+msgstr "Pozor: brskalnik ni naveden."
 
 #: ../mdkonline_.c:292
-#, fuzzy
 msgid "Connecting...\n"
-msgstr "Povezujem se ...\n"
+msgstr "Povezujem se...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
 msgid "Connection problem"
 msgstr "Problemi pri povezavi"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again later."
-msgstr "Povezave z MandrakeOnline ni mogoèe vspostaviti, poskusite kasneje"
+msgstr "Povezave z MandrakeOnline ni mogoèe vzpostaviti, poskusite kasneje."
 
 #: ../mdkonline_.c:312
 msgid "Wrong password"
 msgstr "Napaèno geslo"
 
 #: ../mdkonline_.c:312
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -107,8 +103,8 @@ msgid ""
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Uporabni¹ko ime ali geslo je bilo napaèno.\n"
-" Poskusite oboje vtipkati ponovno ali pa ustvarite nov raèun "
-"MandrakeOnline.\n"
+" Poskusite oboje vtipkati ponovno, ali pa ustvarite nov raèun "
+"naMandrakeOnline.\n"
 " Èe ¾elite slednje, pojdite nazaj na prvi korak za povezavo z "
 "MandrakeOnline.\n"
 " Zavedajte se, da morate vnesti tudi ime raèunalnika\n"
@@ -119,14 +115,13 @@ msgid "Welcome to MandrakeOnline"
 msgstr "POzdravljeni v MandrakeOnline"
 
 #: ../mdkonline_.c:377
-#, fuzzy
 msgid ""
 "At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"Pri tem koraku se predvideva da ¾e imate raèun MandrakeOnline.\n"
+"Pri tem koraku se predvideva, da ¾e imate raèun MandrakeOnline.\n"
 "Ta èarovnik vam bo v pomoè pri prenosu va¹ih nastavitev\n"
 "(paketov, sestava strojne opreme) v centralno bazo, tako da boste\n"
 "obve¹èeni o varnostnih in drugih uporabnih nadgradnjah.\n"
@@ -149,7 +144,6 @@ msgid "Login:"
 msgstr "Uporabnik:"
 
 #: ../mdkonline_.c:402
-#, fuzzy
 msgid "Machine Name:"
 msgstr "Ime raèunalnika:"
 
@@ -162,7 +156,6 @@ msgid "Sending your Configuration"
 msgstr "Po¹iljanje va¹ih nastavitev"
 
 #: ../mdkonline_.c:408
-#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -195,21 +188,20 @@ msgstr ""
 "sporoèil.\n"
 "Poleg tega boste imeli popust pri plaèevanju podpornih storitev na\n"
 "www.mandrakeexpert.com.\n"
-"Nenazadnje, dodelljen ti bo elektronski naslov s tvojim "
-"uporabni¹kimimenom@mandrakeonline.net. "
+"Nenazadnje, dodelljen vam bo elektronski naslov z va¹im "
+"uporabni¹kimimenom@mandrakeonline.net."
 
 #: ../mdkonline_.c:416
 msgid "Error while sending informations"
 msgstr "Napaka pri po¹iljanju informacij"
 
 #: ../mdkonline_.c:417
-#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
 "Press 'Next' to try and send your configuration again."
 msgstr ""
-"Med po¹iljanjem va¹ih osebnih nastavitev se je pojavila napaka.\n"
+"Med po¹iljanjem va¹ih osebnih nastavitev je pri¹lo do napake.\n"
 "\n"
 "Pritisnite naprej, èe ¾elite poskusiti poslati nastavitve ¹e enkrat."
 
@@ -218,31 +210,28 @@ msgid "Finished"
 msgstr "Konèano"
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "From now on you will receive security and update \n"
 "announcements through MandrakeOnline."
 msgstr ""
-"Od zdaj naprej bo¹ prejemal varnostna\n"
-"in druga obvestila o nadgrajevanju zahvaljujoè MandrakeOnline."
+"Od zdaj naprej boste prejemali varnostna in\n"
+"obvestila o nadgrajah zahvaljujoè MandrakeOnline."
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary on your system waiting for new updates\n"
 msgstr ""
-"MandrakeOnline ti omogoèa, da avtomatizira¹ nadgradnje.\n"
-"Program bo tekel redno v va¹em sistemu èakajoè na nove nadgradnje\n"
+"MandrakeOnline vam omogoèa, da avtomatizirate nadgradnje.\n"
+"Program bo redno tekel na va¹em sistemu èakajoè na nove nadgradnje\n"
 
 #: ../mdkonline_.c:424
 msgid "Your upload was successful!"
 msgstr "Po¹iljanje je bilo uspe¹no!"
 
 #: ../mdkonline_.c:429
-#, fuzzy
 msgid "Automated Upgrades"
-msgstr "avtomatiziranje Nadgradnje"
+msgstr "Avtomatizirana nadgradnja"
 
 #: ../mdkonline_.c:436
 msgid "Choose your geographical location"
@@ -253,9 +242,9 @@ msgid "Reading configuration\n"
 msgstr "Berem nastavitve\n"
 
 #: ../mdkonline_.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open this file for read: %s"
-msgstr "datoteke %s ne morem odpreti za branje"
+msgstr "Te datoteke ne morem odpreti za branje: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -270,15 +259,14 @@ msgid "Cancel"
 msgstr "Preklièi"
 
 #: ../mdkonline_.c:552
-#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel'.\n"
 "To really quit it press 'Quit'."
 msgstr ""
-"Res hoèe¹ prekiniti MandrakeOnline?\n"
-"Èe se hoèe¹ vrnitni do èarovnika pritisni 'Preklièi',\n"
-"èe pa hoèe¹ zares konèati pritisni 'Konèaj'."
+"Ali res ¾elite prekiniti MandrakeOnline?\n"
+"Èe se hoèete vrnitni k èarovniku pritisnite 'Preklièi',\n"
+"èe pa res hoèete konèati, pritisnite 'Konèaj'."
 
 #: ../mdkonline_.c:556
 msgid "Really abort? - MandrakeOnline"
@@ -306,40 +294,41 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate version %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
 
 #: ../mdkupdate_.c:57
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         - izpi¹i to pomoè.\n"
 
 #: ../mdkupdate_.c:58
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr "  --security     - uporabi le varnostni medij.\n"
 
 #: ../mdkupdate_.c:59
 msgid "  --update       - update all information.\n"
-msgstr ""
+msgstr "  --update       - obnovi vse informacije.\n"
 
 #: ../mdkupdate_.c:60
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr "  -v             - obse¾en naèin.\n"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate ne more vzpostaviti povezave, poskusili bomo znova"
+msgstr "MandrakeUpdate ne more vzpostaviti povezave, poskusili bomo znova."
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "V primeru problema po¹lite email na support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
-msgstr ""
-"Potrebovali boste raèun na MandrakeOnline, ali pa boste morali nadgraditi "
-"va¹o prijavo"
+msgstr "Potrebujete raèun na MandrakeOnline, ali pa nadgradite va¹o prijavo."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
@@ -347,11 +336,11 @@ msgstr "Mo¾no je, da je va¹e uporabni¹ko ime oz. geslo napaèno"
 
 #: ../mdkupdate_.c:214
 msgid "Unable to create mdkupdate medium.\n"
-msgstr ""
+msgstr "Ni mogoèe ustvariti mdkupdate medija.\n"
 
 #: ../mdkupdate_.c:216
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Ni mogoèe obnoviti paketov z mdkupdate medija.\n"
 
 #~ msgid "wget is missing\n"
 #~ msgstr "ni programa wget\n"
