@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonlie\n"
-"POT-Creation-Date: 2002-10-17 14:07+0200\n"
+"POT-Creation-Date: 2003-01-17 19:41+0100\n"
 "PO-Revision-Date: 2002-10-17 17:53+0200\n"
 "Last-Translator: Arkadiusz Lipiec <alipiec@elka.pw.edu.pl>\n"
 "Language-Team: polish <pl@li.org>\n"
@@ -71,11 +71,13 @@ msgid "Quitting Wizard\n"
 msgstr "Opuszczanie druida\n"
 
 #: ../mdkonline_.c:265
-msgid "Warning: No browser specified"
+#, fuzzy
+msgid "Warning: No browser specified."
 msgstr "Ostrze¿enie: Nie zdefiniowano przegl±darki"
 
 #: ../mdkonline_.c:292
-msgid "Connecting ...\n"
+#, fuzzy
+msgid "Connecting...\n"
 msgstr "Nawi±zywanie po³±czenia ...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
@@ -83,7 +85,8 @@ msgid "Connection problem"
 msgstr "Problem z po³±czeniem"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr ""
 "Nie mo¿na nawi±zaæ po³±czenia z MandrakeOnline, spróbuj to zrobiæ pó¼niej"
 
@@ -92,13 +95,14 @@ msgid "Wrong password"
 msgstr "Niepoprawne has³o"
 
 #: ../mdkonline_.c:312
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
 " In the latter case, go back to the first step to connect to "
 "MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
+" Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Twój login lub has³o zosta³y niepoprawnie wprowadzone.\n"
@@ -112,8 +116,9 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Witaj w MandrakeOnline"
 
 #: ../mdkonline_.c:377
+#, fuzzy
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -140,7 +145,8 @@ msgid "Login:"
 msgstr "Login:"
 
 #: ../mdkonline_.c:402
-msgid "Machine name:"
+#, fuzzy
+msgid "Machine Name:"
 msgstr "Nazwa komputera:"
 
 #: ../mdkonline_.c:402
@@ -152,6 +158,7 @@ msgid "Sending your Configuration"
 msgstr "Przesy³anie konfiguracji systemu"
 
 #: ../mdkonline_.c:408
+#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -160,14 +167,14 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
+"If you feel uncomfortable with this idea, or do not want to benefit from "
+"this service,\n"
 "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
 "informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
+"about security updates and useful upgrades via personalized e-mail alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be "
+"Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
 "W celu skorzystaniu z us³ug MandrakeOnline, twoja konfiguracja\n"
@@ -190,10 +197,11 @@ msgid "Error while sending informations"
 msgstr "B³±d w trakcie wysy³ania informacji"
 
 #: ../mdkonline_.c:417
+#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
-"Press Next to try and send your configuration again."
+"Press 'Next' to try and send your configuration again."
 msgstr ""
 "Wyst±pi³ b³±d w trakcie wysy³ania informacji osobistych.\n"
 "\n"
@@ -204,17 +212,19 @@ msgid "Finished"
 msgstr "Zakoñczono"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"From now on you will receive security and update \n"
+"announcements through MandrakeOnline."
 msgstr ""
 "Od tej chwili bêdziesz otrzymywaæ informacje\n"
 "o wykrytych b³edach i uaktualnieniach dziêki MandrakeOnline."
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
+"A program will run regulary on your system waiting for new updates\n"
 msgstr ""
 "MandrakeOnline oferuje ci mo¿liwo¶æ automatyzacji uaktualnieñ.\n"
 "Program bêdzie uruchamia³ siê regulanie i oczekiwa³ na uaktualnienia\n"
@@ -224,7 +234,8 @@ msgid "Your upload was successful!"
 msgstr "Informacje zosta³y pomy¶lnie przes³ane!"
 
 #: ../mdkonline_.c:429
-msgid "automated Upgrades"
+#, fuzzy
+msgid "Automated Upgrades"
 msgstr "automatyczne uaktualnienia"
 
 #: ../mdkonline_.c:436
@@ -236,8 +247,8 @@ msgid "Reading configuration\n"
 msgstr "Wczytywanie konfiguracji\n"
 
 #: ../mdkonline_.c:481
-#, c-format
-msgid "cannot open this file for read: %s"
+#, fuzzy, c-format
+msgid "Cannot open this file for read: %s"
 msgstr "nie mo¿na otworzyæ tego pliku do odczytu: %s"
 
 #: ../mdkonline_.c:522
@@ -253,10 +264,11 @@ msgid "Cancel"
 msgstr "Anuluj"
 
 #: ../mdkonline_.c:552
+#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
+"To return to the Wizard press 'Cancel'.\n"
+"To really quit it press 'Quit'."
 msgstr ""
 "Czy na pewno chcesz wyj¶æ z MandrakeOnline?\n"
 "Aby powróciæ do Druida naci¶nij \"Anuluj\",\n"
@@ -312,16 +324,19 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - tryb informacyjny (wiêcej komunikatów).\n"
 
 #: ../mdkupdate_.c:175
-msgid "MandrakeUpdate could not contact the site, we will try again"
+#, fuzzy
+msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "Nie mo¿na nawi±zaæ po³±czenia ze stron±, spróbujemy zrobiæ to pó¼niej"
 
 #: ../mdkupdate_.c:202
-msgid "For any problem send mail to support@mandrakeonline.net\n"
+#, fuzzy
+msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "W przypadku problemu wy¶lij mail na adres support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
+#, fuzzy
 msgid ""
-"You'll need to have an account on MandrakeOnline, or update your subscription"
+"You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
 "Wymagane jest posiadanie konta w MandrakeOnline, lub aktualizacja subskrybcji"
 
@@ -330,9 +345,11 @@ msgid "Your login or password may be wrong"
 msgstr "Twój login lub has³o mog± byæ niepoprawne"
 
 #: ../mdkupdate_.c:214
-msgid "unable to create mdkupdate medium\n"
+#, fuzzy
+msgid "Unable to create mdkupdate medium.\n"
 msgstr "nie mo¿na utworzyæ no¶nika mdkupdate\n"
 
 #: ../mdkupdate_.c:216
-msgid "unable to update packages from mdkupdate medium\n"
+#, fuzzy
+msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "nie mo¿na zaktualizowaæ pakietów z no¶nika mdkupdate\n"

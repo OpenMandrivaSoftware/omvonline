@@ -262,7 +262,7 @@ sub subscribe_mdkonline() {
 #    my $initial_user=$ENV{'INITIAL_USER'};
     my $user_current=$ENV{'USER'};
     
-    if (!$browser) {splash_warning( " ". _("Warning: No browser specified") ." "); return;}
+    if (!$browser) {splash_warning( " ". _("Warning: No browser specified.") ." "); return;}
     #    if ($initial_user ne "root" && $initial_user ne undef) {
     #	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
     #    } else {
@@ -289,7 +289,7 @@ sub test_passwd () {
 	
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
-	my $w = $in->wait_message('',_("Connecting ...\n"),1);
+	my $w = $in->wait_message('',_("Connecting...\n"),1);
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u='.$login.'&p='.$passwd);
 	my $response = $ua->request($request);
 	# Check the outcome of the response
@@ -297,7 +297,7 @@ sub test_passwd () {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
-	    info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
+	    info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again later."));
 	    return;
 	}
     } else {
@@ -309,7 +309,7 @@ sub test_passwd () {
 	$notebook_global->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	info_popup (_("Wrong password"), _("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
+	info_popup (_("Wrong password"), _("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a machine name \n (only alphabetical characters are admitted)"));
 	$passwd_user->set_text("");
     }
 }
@@ -365,7 +365,7 @@ sub send_config {
     } else {
     # if incorrect, go/stay on page 4 to retry sending data
 	# pb with the connection ?
-	info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
+	info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again later."));
 	$notebook_global->set_page(4);
     }
 }
@@ -374,7 +374,7 @@ sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_welc,"default.png",_("Welcome to MandrakeOnline"),540,100);
-    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
+    my $label_welc = new Gtk::Label(_("At this step you are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $label_welc->set_justify('left');
     $vbox_welc->pack_start($label_welc,0,0,1);
@@ -399,13 +399,13 @@ sub step_wizard {
     writ_on_pixmaps($vbox_ident,"default.png","MandrakeOnline"." "._("Authentication"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
-    pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine name:"),$box_user);
+    pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine Name:"),$box_user);
     set_boxname($box_user) if -e "/root/.mdkupdate";
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_rev,"default.png",_("Sending your Configuration"),540,100);
-    my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
+    my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable with this idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized e-mail alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an e-mail alias with your username\@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
     $label_rev->set_justify('left');
     $vbox_rev->pack_start($label_rev,0,0,1);
@@ -414,19 +414,19 @@ sub step_wizard {
     # building the "Error sending data" page
     my $vbox_errorsend= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_errorsend,"default.png",_("Error while sending informations"),540,100);
-    my $label_errorsend = new Gtk::Label("\n\n" . _("There was an error while sending your personal informations.\n\nPress Next to try and send your configuration again."));
+    my $label_errorsend = new Gtk::Label("\n\n" . _("There was an error while sending your personal informations.\n\nPress 'Next' to try and send your configuration again."));
     $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
     $notebook_global->append_page($vbox_errorsend,new Gtk::Label("errorsend"));
     
     # building the "OK data sent" page
     my $vbox_oksend= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_oksend,"default.png",_("Finished"),540,100);
-    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"));
+    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now on you will receive security and update \nannouncements through MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary on your system waiting for new updates\n"));
     $label_oksend->set_justify('left');
     $vbox_oksend->pack_start($label_oksend,$true ,$true,1);
 
 #automated mode
-    my $frame_auto = new Gtk::Frame(_("automated Upgrades"));
+    my $frame_auto = new Gtk::Frame(_("Automated Upgrades"));
     my $vbox_frame_auto = new Gtk::VBox(0,0);
     $frame_auto->add($vbox_frame_auto);
     $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
@@ -478,7 +478,7 @@ close(FILE);
 
 sub automated_upgrades {
     # set up a daily cron to check connection and if there is one upgrade the system
-    open VERS, "/etc/mandrake-release" or die _("cannot open this file for read: %s", $!);
+    open VERS, "/etc/mandrake-release" or die _("Cannot open this file for read: %s", $!);
     my @info_tree;
     while (<VERS>) { 
 	@info_tree = split / /, $_;
@@ -549,7 +549,7 @@ sub confirm_quit {
     $bbox1->add($button_quit);
     
     my $label = new Gtk::Label( 
-				_("Do you really want to abort MandrakeOnline?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
+				_("Do you really want to abort MandrakeOnline?\nTo return to the Wizard press 'Cancel'.\nTo really quit it press 'Quit'."));
     my $style1 = new Gtk::Style;
     $style1->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style1); 

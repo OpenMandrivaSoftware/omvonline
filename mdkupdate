@@ -172,7 +172,7 @@ sub update_rpms {
 	if ($response->is_success) {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
-	    log_i(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
+	    log_i(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again."));
 	    clean_dir();
 	    exit 1;
 	}
@@ -199,7 +199,7 @@ sub update_rpms {
 	} else { log_i("problem occur $str_m\n"); }
 	    	    
     } else {
-	log_i(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
+	log_i(_("Your login or password may be wrong")."\n"._("You need to have an account on MandrakeOnline, or update your subscription.")."\n"._("For any problem send an e-mail to support\@mandrakeonline.net\n"));
 	clean_dir();
 	exit 1;
     }
@@ -211,9 +211,9 @@ sub update_packages {
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
 	system "/usr/sbin/urpmi.addmedia", "-c", "mdkupdate", $mir, "with", "../base/hdlist.cz";
-	$? == 0 or die _("unable to create mdkupdate medium\n");
+	$? == 0 or die _("Unable to create mdkupdate medium.\n");
 	system "/usr/sbin/urpmi", "--auto", "--clean", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
-	$? == 0 or die _("unable to update packages from mdkupdate medium\n");
+	$? == 0 or die _("Unable to update packages from mdkupdate medium.\n");
     };
     $@ and die;
 #    chdir($rpms_rep) or log_i("\ncannot chdir to $rpms_rep\n");

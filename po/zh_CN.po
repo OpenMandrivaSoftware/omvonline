@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-10-17 14:07+0200\n"
+"POT-Creation-Date: 2003-01-17 19:41+0100\n"
 "PO-Revision-Date: 2002-11-28 23:50+0800\n"
 "Last-Translator: Funda Wang <mandrake@en2china.com>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -71,11 +71,13 @@ msgid "Quitting Wizard\n"
 msgstr "正在退出向导\n"
 
 #: ../mdkonline_.c:265
-msgid "Warning: No browser specified"
+#, fuzzy
+msgid "Warning: No browser specified."
 msgstr "警告: 没有指定浏览器"
 
 #: ../mdkonline_.c:292
-msgid "Connecting ...\n"
+#, fuzzy
+msgid "Connecting...\n"
 msgstr "正在连接...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
@@ -83,7 +85,8 @@ msgid "Connection problem"
 msgstr "连接问题"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr "无法连接到 MandrakeOnline, 请稍后再试"
 
 #: ../mdkonline_.c:312
@@ -91,13 +94,14 @@ msgid "Wrong password"
 msgstr "口令错误"
 
 #: ../mdkonline_.c:312
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
 " In the latter case, go back to the first step to connect to "
 "MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
+" Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "您的登录名或口令有错。\n"
@@ -110,8 +114,9 @@ msgid "Welcome to MandrakeOnline"
 msgstr "MandrakeOnline 欢迎您"
 
 #: ../mdkonline_.c:377
+#, fuzzy
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -138,7 +143,8 @@ msgid "Login:"
 msgstr "登录名:"
 
 #: ../mdkonline_.c:402
-msgid "Machine name:"
+#, fuzzy
+msgid "Machine Name:"
 msgstr "机器名:"
 
 #: ../mdkonline_.c:402
@@ -150,6 +156,7 @@ msgid "Sending your Configuration"
 msgstr "正在发送您的配置"
 
 #: ../mdkonline_.c:408
+#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -158,14 +165,14 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
+"If you feel uncomfortable with this idea, or do not want to benefit from "
+"this service,\n"
 "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
 "informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
+"about security updates and useful upgrades via personalized e-mail alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be "
+"Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
 "为了利用 MandrakeOnline 的各项服务, \n"
@@ -186,10 +193,11 @@ msgid "Error while sending informations"
 msgstr "发送信息出错"
 
 #: ../mdkonline_.c:417
+#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
-"Press Next to try and send your configuration again."
+"Press 'Next' to try and send your configuration again."
 msgstr ""
 "发送您的个人信息时出错。\n"
 "\n"
@@ -200,17 +208,19 @@ msgid "Finished"
 msgstr "完成"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"From now on you will receive security and update \n"
+"announcements through MandrakeOnline."
 msgstr ""
 "今后您将收到来自 MandrakeOnline 的\n"
 "安全及升级通知。"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
+"A program will run regulary on your system waiting for new updates\n"
 msgstr ""
 "MandrakeOnline 为您提供自动升级的能力\n"
 "您的系统会定期的运行一个程序, 查找新的升级\n"
@@ -220,7 +230,8 @@ msgid "Your upload was successful!"
 msgstr "您的上传已经成功!"
 
 #: ../mdkonline_.c:429
-msgid "automated Upgrades"
+#, fuzzy
+msgid "Automated Upgrades"
 msgstr "自动升级"
 
 #: ../mdkonline_.c:436
@@ -232,8 +243,8 @@ msgid "Reading configuration\n"
 msgstr "正在读取设置\n"
 
 #: ../mdkonline_.c:481
-#, c-format
-msgid "cannot open this file for read: %s"
+#, fuzzy, c-format
+msgid "Cannot open this file for read: %s"
 msgstr "无法打开这个文件进行读取: %s"
 
 #: ../mdkonline_.c:522
@@ -249,10 +260,11 @@ msgid "Cancel"
 msgstr "取消"
 
 #: ../mdkonline_.c:552
+#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
+"To return to the Wizard press 'Cancel'.\n"
+"To really quit it press 'Quit'."
 msgstr ""
 "真的要中止 MandrakeOnline 吗？\n"
 "要回到程序请选择“取消”, \n"
@@ -307,16 +319,19 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v            - 详细提示模式。\n"
 
 #: ../mdkupdate_.c:175
-msgid "MandrakeUpdate could not contact the site, we will try again"
+#, fuzzy
+msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "MandrakeUpdate 无法连接到站点, 请再试一次"
 
 #: ../mdkupdate_.c:202
-msgid "For any problem send mail to support@mandrakeonline.net\n"
+#, fuzzy
+msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "如有任何问题, 请发送邮件到 support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
+#, fuzzy
 msgid ""
-"You'll need to have an account on MandrakeOnline, or update your subscription"
+"You need to have an account on MandrakeOnline, or update your subscription."
 msgstr "您必须在 MandrakeOnline 上有一个账号, 或者更新您的订阅。"
 
 #: ../mdkupdate_.c:202
@@ -324,9 +339,11 @@ msgid "Your login or password may be wrong"
 msgstr "您的登录名或密码可能是错的。"
 
 #: ../mdkupdate_.c:214
-msgid "unable to create mdkupdate medium\n"
+#, fuzzy
+msgid "Unable to create mdkupdate medium.\n"
 msgstr "无法创建 mdkupdate 介质\n"
 
 #: ../mdkupdate_.c:216
-msgid "unable to update packages from mdkupdate medium\n"
+#, fuzzy
+msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "无法从 mdkupdate 介质中更新包\n"

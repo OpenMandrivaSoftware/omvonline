@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-10-17 14:07+0200\n"
+"POT-Creation-Date: 2003-01-17 19:41+0100\n"
 "PO-Revision-Date: 2002-08-17 03:50+CST\n"
 "Last-Translator: Kenduest Lee <kenduest@i18n.linux.org.tw>\n"
 "Language-Team: zh-tw <zh-l10n@linux.org.tw>\n"
@@ -73,11 +73,13 @@ msgid "Quitting Wizard\n"
 msgstr "正在結束設定精靈\n"
 
 #: ../mdkonline_.c:265
-msgid "Warning: No browser specified"
+#, fuzzy
+msgid "Warning: No browser specified."
 msgstr "緊告: 沒有指定瀏覽器"
 
 #: ../mdkonline_.c:292
-msgid "Connecting ...\n"
+#, fuzzy
+msgid "Connecting...\n"
 msgstr "連線中 ...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
@@ -85,7 +87,8 @@ msgid "Connection problem"
 msgstr "連線問題"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr "MandrakeOnline 無法聯繫上，請稍後再重試"
 
 #: ../mdkonline_.c:312
@@ -93,13 +96,14 @@ msgid "Wrong password"
 msgstr "密碼錯誤"
 
 #: ../mdkonline_.c:312
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
 " In the latter case, go back to the first step to connect to "
 "MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
+" Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "您所輸入的登入 ID 或者是密碼有誤導致無法登入。\n"
@@ -113,8 +117,9 @@ msgid "Welcome to MandrakeOnline"
 msgstr "歡迎來到 MandrakeOnline"
 
 #: ../mdkonline_.c:377
+#, fuzzy
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -143,7 +148,8 @@ msgid "Login:"
 msgstr "帳號："
 
 #: ../mdkonline_.c:402
-msgid "Machine name:"
+#, fuzzy
+msgid "Machine Name:"
 msgstr "機器名稱："
 
 #: ../mdkonline_.c:402
@@ -155,6 +161,7 @@ msgid "Sending your Configuration"
 msgstr "正送出您的組態內容"
 
 #: ../mdkonline_.c:408
+#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -163,14 +170,14 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
+"If you feel uncomfortable with this idea, or do not want to benefit from "
+"this service,\n"
 "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
 "informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
+"about security updates and useful upgrades via personalized e-mail alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be "
+"Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
 "為了能夠使用 MandrakeOnline 服務項目，首先需要將您目前組態資訊\n"
@@ -195,10 +202,11 @@ msgid "Error while sending informations"
 msgstr "送出資訊時發生錯誤"
 
 #: ../mdkonline_.c:417
+#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
-"Press Next to try and send your configuration again."
+"Press 'Next' to try and send your configuration again."
 msgstr ""
 "送出您個人資訊時發生了錯誤導致發送失敗。\n"
 "\n"
@@ -209,17 +217,19 @@ msgid "Finished"
 msgstr "完成了"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"From now on you will receive security and update \n"
+"announcements through MandrakeOnline."
 msgstr ""
 "現在開始，您將會不定期的收到來自於MandrakeOnline\n"
 "發送的安全與更新修正套件公告資訊。"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
+"A program will run regulary on your system waiting for new updates\n"
 msgstr ""
 "MandrakeOnline 提供讓您能夠自動進行更新動作。\n"
 "系統將會定期的執行更新程式檢查最新的更新資訊\n"
@@ -229,7 +239,8 @@ msgid "Your upload was successful!"
 msgstr "已經成功上傳資訊!"
 
 #: ../mdkonline_.c:429
-msgid "automated Upgrades"
+#, fuzzy
+msgid "Automated Upgrades"
 msgstr "自動升級"
 
 #: ../mdkonline_.c:436
@@ -241,8 +252,8 @@ msgid "Reading configuration\n"
 msgstr "正在讀取組態設定\n"
 
 #: ../mdkonline_.c:481
-#, c-format
-msgid "cannot open this file for read: %s"
+#, fuzzy, c-format
+msgid "Cannot open this file for read: %s"
 msgstr "無法讀取該檔案: %s"
 
 #: ../mdkonline_.c:522
@@ -258,10 +269,11 @@ msgid "Cancel"
 msgstr "取消"
 
 #: ../mdkonline_.c:552
+#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
+"To return to the Wizard press 'Cancel'.\n"
+"To really quit it press 'Quit'."
 msgstr ""
 "您確定要取消 MandrakeOnline 的執行嗎？\n"
 "返回到原本精靈畫面，請按下 \"取消\" 按鈕，\n"
@@ -317,16 +329,19 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - 顯示顯示執行過程.\n"
 
 #: ../mdkupdate_.c:175
-msgid "MandrakeUpdate could not contact the site, we will try again"
+#, fuzzy
+msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "MandrakeUpdate 無法連線到總部，請稍後再重試"
 
 #: ../mdkupdate_.c:202
-msgid "For any problem send mail to support@mandrakeonline.net\n"
+#, fuzzy
+msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "任何問題與建議，請回報至 support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
+#, fuzzy
 msgid ""
-"You'll need to have an account on MandrakeOnline, or update your subscription"
+"You need to have an account on MandrakeOnline, or update your subscription."
 msgstr "你需要先註冊一個帳號以便於使用 MandrakeOnline 服務"
 
 #: ../mdkupdate_.c:202
@@ -334,11 +349,11 @@ msgid "Your login or password may be wrong"
 msgstr "您的帳號或者是密碼輸入錯誤"
 
 #: ../mdkupdate_.c:214
-msgid "unable to create mdkupdate medium\n"
+msgid "Unable to create mdkupdate medium.\n"
 msgstr ""
 
 #: ../mdkupdate_.c:216
-msgid "unable to update packages from mdkupdate medium\n"
+msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
 
 #~ msgid "wget is missing\n"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.01\n"
-"POT-Creation-Date: 2002-10-17 14:07+0200\n"
+"POT-Creation-Date: 2003-01-17 19:41+0100\n"
 "PO-Revision-Date: 2002-08-13 20:52+0900\n"
 "Last-Translator: Budi Rachmanto <rac@linux-mandrake.com>\n"
 "Language-Team: Bahasa Indonesia <id@li.org>\n"
@@ -71,11 +71,13 @@ msgid "Quitting Wizard\n"
 msgstr "Keluar Wizard\n"
 
 #: ../mdkonline_.c:265
-msgid "Warning: No browser specified"
+#, fuzzy
+msgid "Warning: No browser specified."
 msgstr "Awas: Tiada browser ditunjuk"
 
 #: ../mdkonline_.c:292
-msgid "Connecting ...\n"
+#, fuzzy
+msgid "Connecting...\n"
 msgstr "Sedang dihubungkan...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
@@ -83,7 +85,8 @@ msgid "Connection problem"
 msgstr "Problem koneksi"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr "MandrakeOnline gagal dihubungi, coba lagi nanti"
 
 #: ../mdkonline_.c:312
@@ -91,13 +94,14 @@ msgid "Wrong password"
 msgstr "Salah katasandi"
 
 #: ../mdkonline_.c:312
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
 " In the latter case, go back to the first step to connect to "
 "MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
+" Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Login atau katasandi Anda keliru.\n"
@@ -112,8 +116,9 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Selamat Datang di MandrakeOnline"
 
 #: ../mdkonline_.c:377
+#, fuzzy
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -140,7 +145,8 @@ msgid "Login:"
 msgstr "Login:"
 
 #: ../mdkonline_.c:402
-msgid "Machine name:"
+#, fuzzy
+msgid "Machine Name:"
 msgstr "Nama mesin:"
 
 #: ../mdkonline_.c:402
@@ -152,6 +158,7 @@ msgid "Sending your Configuration"
 msgstr "Mengirim Konfigurasi Anda"
 
 #: ../mdkonline_.c:408
+#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -160,14 +167,14 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
+"If you feel uncomfortable with this idea, or do not want to benefit from "
+"this service,\n"
 "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
 "informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
+"about security updates and useful upgrades via personalized e-mail alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be "
+"Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
 "Agar mendapat manfaat servis MandrakeOnline,\n"
@@ -188,10 +195,11 @@ msgid "Error while sending informations"
 msgstr "Error saat mengirim informasi"
 
 #: ../mdkonline_.c:417
+#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
-"Press Next to try and send your configuration again."
+"Press 'Next' to try and send your configuration again."
 msgstr ""
 "Ada error saat mengirim info personal Anda.\n"
 "\n"
@@ -202,17 +210,19 @@ msgid "Finished"
 msgstr "Selesai"
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"From now on you will receive security and update \n"
+"announcements through MandrakeOnline."
 msgstr ""
 "Mulai saat ini Anda akan menerima pemberitahuan sekuriti dan upgrade\n"
 "dari MandrakeOnline."
 
 #: ../mdkonline_.c:424
+#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
+"A program will run regulary on your system waiting for new updates\n"
 msgstr ""
 "MandrakeOnline memberi Anda kemampuan update otomatis.\n"
 "Sebuah program akan secara periodik berjalan menunggu update baru\n"
@@ -222,7 +232,8 @@ msgid "Your upload was successful!"
 msgstr "Upload Anda sukses!"
 
 #: ../mdkonline_.c:429
-msgid "automated Upgrades"
+#, fuzzy
+msgid "Automated Upgrades"
 msgstr "upgrade otomatis"
 
 #: ../mdkonline_.c:436
@@ -234,8 +245,8 @@ msgid "Reading configuration\n"
 msgstr "Baca konfigurasi\n"
 
 #: ../mdkonline_.c:481
-#, c-format
-msgid "cannot open this file for read: %s"
+#, fuzzy, c-format
+msgid "Cannot open this file for read: %s"
 msgstr "gagal membaca file: %s"
 
 #: ../mdkonline_.c:522
@@ -251,10 +262,11 @@ msgid "Cancel"
 msgstr "Batal"
 
 #: ../mdkonline_.c:552
+#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
+"To return to the Wizard press 'Cancel'.\n"
+"To really quit it press 'Quit'."
 msgstr ""
 "Anda ingin keluar dari MandrakeOnline?\n"
 "Untuk kembali ke Wizard tekan 'Batal',\n"
@@ -309,16 +321,19 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - mode verbose.\n"
 
 #: ../mdkupdate_.c:175
-msgid "MandrakeUpdate could not contact the site, we will try again"
+#, fuzzy
+msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "MandrakeUpdate gagal menghubungi situs yg dimaksud, nanti dicoba lagi"
 
 #: ../mdkupdate_.c:202
-msgid "For any problem send mail to support@mandrakeonline.net\n"
+#, fuzzy
+msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "Jika ada masalah kirimlah email ke support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
+#, fuzzy
 msgid ""
-"You'll need to have an account on MandrakeOnline, or update your subscription"
+"You need to have an account on MandrakeOnline, or update your subscription."
 msgstr "Anda butuh account di MandrakeOnline, atau update subskripsi Anda"
 
 #: ../mdkupdate_.c:202
@@ -326,11 +341,11 @@ msgid "Your login or password may be wrong"
 msgstr "Login atau katakunci Anda mungkin salah"
 
 #: ../mdkupdate_.c:214
-msgid "unable to create mdkupdate medium\n"
+msgid "Unable to create mdkupdate medium.\n"
 msgstr ""
 
 #: ../mdkupdate_.c:216
-msgid "unable to update packages from mdkupdate medium\n"
+msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
 
 #~ msgid "wget is missing\n"

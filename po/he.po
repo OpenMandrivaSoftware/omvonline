@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2002-12-24 20:33+0100\n"
+"POT-Creation-Date: 2003-01-17 19:41+0100\n"
 "PO-Revision-Date: 2002-09-13 11:53+0300\n"
 "Last-Translator: nadav <nadav@mavor.com>\n"
 "Language-Team: hebrew <C@li.org>\n"
@@ -72,11 +72,13 @@ msgid "Quitting Wizard\n"
 msgstr "יציאה מהאשף\n"
 
 #: ../mdkonline_.c:265
-msgid "Warning: No browser specified"
+#, fuzzy
+msgid "Warning: No browser specified."
 msgstr "אזהרה אין לא מצוין דפדפן"
 
 #: ../mdkonline_.c:292
-msgid "Connecting ...\n"
+#, fuzzy
+msgid "Connecting...\n"
 msgstr "מתחבר...\n"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368 ../mdkupdate_.c:175
@@ -84,7 +86,7 @@ msgid "Connection problem"
 msgstr "התחברות נכשלה"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr ""
 
 #: ../mdkonline_.c:312
@@ -98,7 +100,7 @@ msgid ""
 "MandrakeOnline.\n"
 " In the latter case, go back to the first step to connect to "
 "MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
+" Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 
@@ -108,7 +110,7 @@ msgstr "ברוך הבא לMandrakeOnline"
 
 #: ../mdkonline_.c:377
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -131,7 +133,8 @@ msgid "Login:"
 msgstr "שם מישתמש:"
 
 #: ../mdkonline_.c:402
-msgid "Machine name:"
+#, fuzzy
+msgid "Machine Name:"
 msgstr "שם מחשב:"
 
 #: ../mdkonline_.c:402
@@ -151,14 +154,14 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
+"If you feel uncomfortable with this idea, or do not want to benefit from "
+"this service,\n"
 "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
 "informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
+"about security updates and useful upgrades via personalized e-mail alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be "
+"Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
 
@@ -170,7 +173,7 @@ msgstr ""
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
-"Press Next to try and send your configuration again."
+"Press 'Next' to try and send your configuration again."
 msgstr ""
 
 #: ../mdkonline_.c:423
@@ -179,14 +182,14 @@ msgstr "סיום"
 
 #: ../mdkonline_.c:424
 msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"From now on you will receive security and update \n"
+"announcements through MandrakeOnline."
 msgstr ""
 
 #: ../mdkonline_.c:424
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
+"A program will run regulary on your system waiting for new updates\n"
 msgstr ""
 
 #: ../mdkonline_.c:424
@@ -194,7 +197,7 @@ msgid "Your upload was successful!"
 msgstr ""
 
 #: ../mdkonline_.c:429
-msgid "automated Upgrades"
+msgid "Automated Upgrades"
 msgstr ""
 
 #: ../mdkonline_.c:436
@@ -207,7 +210,7 @@ msgstr ""
 
 #: ../mdkonline_.c:481
 #, c-format
-msgid "cannot open this file for read: %s"
+msgid "Cannot open this file for read: %s"
 msgstr ""
 
 #: ../mdkonline_.c:522
@@ -225,8 +228,8 @@ msgstr "ביטול"
 #: ../mdkonline_.c:552
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
+"To return to the Wizard press 'Cancel'.\n"
+"To really quit it press 'Quit'."
 msgstr ""
 
 #: ../mdkonline_.c:556
@@ -273,16 +276,16 @@ msgid "  -v             - verbose mode.\n"
 msgstr ""
 
 #: ../mdkupdate_.c:175
-msgid "MandrakeUpdate could not contact the site, we will try again"
+msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr ""
 
 #: ../mdkupdate_.c:202
-msgid "For any problem send mail to support@mandrakeonline.net\n"
+msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr ""
 
 #: ../mdkupdate_.c:202
 msgid ""
-"You'll need to have an account on MandrakeOnline, or update your subscription"
+"You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
 
 #: ../mdkupdate_.c:202
@@ -290,9 +293,9 @@ msgid "Your login or password may be wrong"
 msgstr ""
 
 #: ../mdkupdate_.c:214
-msgid "unable to create mdkupdate medium\n"
+msgid "Unable to create mdkupdate medium.\n"
 msgstr ""
 
 #: ../mdkupdate_.c:216
-msgid "unable to update packages from mdkupdate medium\n"
+msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
