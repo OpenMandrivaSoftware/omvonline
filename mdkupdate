@@ -31,6 +31,8 @@ use lib qw(/usr/lib/libDrakX);
 use common;
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
+my $in = 'interactive'->vnew('su', 'default');
+
 my $logfile = "/var/log/mdkupdate.log";
 my $conffile = "/root/.mdkupdate";
 
