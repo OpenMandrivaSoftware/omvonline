@@ -50,7 +50,7 @@ my %state = (
 			  colour => [ 'orange' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
-			  tt => [ N("Test critical") ]
+			  tt => [ N("Config problems. Launch \"configure\" again") ]
 			 },
 	     busy => {
 		      colour => [ 'orange' ], 
@@ -68,13 +68,13 @@ my %state = (
 			  colour => [ 'orange' ],
 			  changes => [ 'okay' ],
 			  menu => [ 'update', 'weblink', 'register' ],
-			  tt => [ N("Service not available. Click on configuration") ]
+			  tt => [ N("Service not available. Click on \"configuration\"") ]
 			 },
 	     disconnected => {
 			      colour => [ 'orange' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
-			      tt => [ N("Network is down. Click on configure Network") ]
+			      tt => [ N("Network is down. Click on \"configure Network\"") ]
 			     } 
 	    );
 my %actions = (
