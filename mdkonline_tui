@@ -42,6 +42,10 @@ my $online_link = 'https://www.mandrakeonline.net';
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
+#for compatibilities
+mkdir_p($confdir) if !-d $confdir;
+-e '/root/.mdkupdate' and system("mv", "/root/.mdkupdate", $conffile);
+
 $::Wizard_title = N("Mandrakeonline");
 
 my %choices = (
