@@ -308,7 +308,7 @@ sub send_config {
 # NEW METHOD (http)
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $response = $ua->request(POST 'http://devweb.mandrakesoft.com/dev/test/test-up-wizard.php',
+    my $response = $ua->request(POST 'http://dev-online/upload/test-up-wizard.php',
 				Content_Type => 'form-data',
 				Content => [submit => "test_upload",
 					    wizard => ["/root/$login-drakbug_report.log.bz2.uue"]
