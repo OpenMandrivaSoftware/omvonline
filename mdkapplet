@@ -291,7 +291,7 @@ sub about {
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
 sub mainQuit() {
-    output $confperf,
+    output $confpers,
     qq(AUTOSTART=FALSE
 );
     Gtk2->main_quit
