@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.7mdk
+Release: 	0.8mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,7 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
-* Sun Mar 21 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.7mdk
+* Tue Mar 23 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.8mdk
+- better perl rpmvercmp for version and release comparisons
 - Report status dynamically
 - launch applet main window only once
 - autograb hostname and prefill wizard fields
