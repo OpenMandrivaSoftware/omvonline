@@ -20,26 +20,33 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
 ################################################################################
 
-use Config;
 use POSIX;
-use Locale::GetText;
-#use strict;
-
-setlocale (LC_ALL, "");
-
-Locale::GetText::textdomain ("MdkOnline");
-
-import Locale::GetText I_;
+use Gtk;
 use lib qw(/usr/lib/libDrakX);
 use interactive;
+use Config;
+init Gtk;
+Gtk->set_locale;
+#use strict;
+use MDK::Common;
 
 my $in = 'interactive'->vnew('su', 'default');
 
+#-------------------------------------------------------------
+# i18n routines
+# IMPORTANT: next two routines have to be redefined here to
+#         get correct namespace (drakconf instead of libDrakX)
+#         (This version is now UTF8 compliant - Sg 2001-08-31)
+#-------------------------------------------------------------
+
 sub _ {
-    my $s = shift @_; my $t = I_($s);
-    $t && ref $t or return sprintf $t, @_;
-    my ($T, @p) = @$t;
-    sprintf $T, @_[@p];
+    my $s = shift @_; my $t = translate($s);
+    sprintf $t, @_;
+}
+
+sub translate {
+    my ($s) = @_;
+    $s ? c::dgettext('mdkonline', $s) : '';
 }
 
 my $authentication_host = "bi";
