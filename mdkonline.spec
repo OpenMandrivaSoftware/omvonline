@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Fri May 28 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
+* Mon May 31 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
 - Released as mandatory update and tagged as security fix 
   (force applet to update itself).
 
