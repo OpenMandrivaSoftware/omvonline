@@ -113,7 +113,8 @@ sub on_prev_clicked {
 sub step_wizard {
     my $vbox_welc= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to Mandrake Online"),540,100);
-    my $label_welc = new Gtk::Label(_("\n\nAt this step You are supposed to have a account on Mandrake Online.\n This assistant will help you to upload your configuration \n (packages, hardware configuration) to a centralized databases in \n order to keep you informed about security updates, useful upgrades.\n "));
+    my $label_welc = new Gtk::Label(_("At this step You are supposed to have a account on Mandrake Online.\n This assistant will help you to upload your configuration \n (packages, hardware configuration) to a centralized databases in \n order to keep you informed about security updates, useful upgrades.\n "));
+    $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     my $vbox_priv = new Gtk::VBox(0,0);
@@ -127,7 +128,11 @@ sub step_wizard {
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     my $vbox_rev=new Gtk::VBox(0,0);
-    
+    write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your config"),540,100);
+    my $label_rev = new Gtk::Label(_("We'll going to store on our databases all the packages installed \n on your system  and your hardware configuration \n if  you don't want to send anything , press Cancel \n otherwise press the Next button."));
+    $label_rev->set_uposition(20,150);
+    $vbox_rev->pack_start($label_rev,0,0,1);
+    $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
 }
 
 sub confirm_quit {
@@ -146,7 +151,7 @@ sub confirm_quit {
     $bbox1->add($button_quit);
 
     my $label = new Gtk::Label( _("Do you really want to abort the
-    Mandrake Online?\nTo return to fwdrake press 'Cancel'\nTo really quit the wizard press 'Quit'" ));
+    Mandrake Online?\nTo return to mdkonline press 'Cancel'\nTo really quit the wizard press 'Quit'" ));
     my $style1 = new Gtk::Style;
     $style1->font(Gtk::Gdk::Font->fontset_load("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"));
     $label->set_style($style1); 
