@@ -86,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Mon Sep 24 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-10mdk
+* Tue Sep 25 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-10mdk
 - updated po.
 - spec cleanups.
 
