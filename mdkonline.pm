@@ -158,7 +158,7 @@ sub send_config {
     my $response = $ua->request(POST $link,
 				Content_Type => 'form-data',
                                 Content => [ %$content ]);
-    if ($response->is_success && $response->content =~ /^TRUE(.*)/) {
+    if ($response->is_success && $response->content =~ /^TRUE(.*?)([^a-zA-Z0-9].*)?$/) {
 	($res, $key) = ('TRUE', $1);
     } 
     ($res, $key)
