@@ -279,7 +279,7 @@ sub final {
 sub getNames {
     my ($login, $passwd, $machine) = @_;
     $login = $o->{login}->get_text;
-    $passwd = $o->{passwd}->get_text;
+    $passwd = md5_hex($o->{passwd}->get_text);
     $machine = $o->{machine}->get_text;
     ($login, $passwd, $machine)
 }
