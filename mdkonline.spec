@@ -91,9 +91,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 %{_datadir}/%{name}/pixmaps/*.png
-%{_datadir}/autorun/*
+%{_datadir}/autostart/*
 
 %changelog
+* Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
+- s/autorun/autostart for mdkapplet
+
 * Mon Mar  1 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
 - Mandrake Online Resurrected/Rewrited
 - Mandrake Applet Notification system
