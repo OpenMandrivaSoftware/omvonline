@@ -20,7 +20,7 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakfirsttime >= 0.92-4.1.92mdk
+Requires:	drakfirsttime >= 0.92-4.1.92mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
