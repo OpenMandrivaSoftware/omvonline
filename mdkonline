@@ -24,20 +24,22 @@ use strict;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use standalone;
-use interactive;
 use lang;
 
 BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' }
 
-use ugtk2 qw(:all);
+$::no_ugtk_init = 1;
+if (check_for_xserver()) {
+    $::no_ugtk_init = 0;
+    eval { require ugtk2 };
+    die "Can't load ugtk2...\n" if $@;
+    ugtk2->import(qw(:all));
+} else {        
+    exec("/usr/sbin/mdkonline_tui");
+}
+
 use mdkonline;
 use comdialog;
-use data;
-
-
-#use Config;
-
-#use LWP::Debug qw(+);
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 
 my $confdir = '/root/.MdkOnline';
@@ -47,7 +49,7 @@ add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
 require_root_capability();
 my $VERSION = '1.0';
-my ($create_account, $auto_update) = (0, 1);
+my $create_account = 0;
 
 my ($o, $p);
 
@@ -144,7 +146,6 @@ gtkappend_page($o->{nb},
 			1, Gtk2::WrappedLabel->new("\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
 			0, gtkadd(Gtk2::Frame->new(N("automated Upgrades")),
 				  gtkpack_(Gtk2::VBox->new(0, 3),
-#					   0, gtksignal_connect(gtkset_active($o->{autoup} = Gtk2::CheckButton->new(N("Yes I want automated updates")), $auto_update), clicked => sub { $auto_update =! $auto_update; $o->{vbox_auto}->set_sensitive($auto_update) }),
 					   0, gtkpack_($o->{vbox_auto} = Gtk2::VBox->new(0, 3),
 						       0, create_packtable({ homogeneous => 1, col_spacings => 5, row_spacings => 5 },
 									   [ N("Country:"), $o->{country} = Gtk2::OptionMenu->new ],
@@ -156,7 +157,6 @@ init(1);
 
 # Filling country list:
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
-$o->{vbox_auto}->set_sensitive($auto_update);
 $o->{country}->set_popdown_strings(sort(keys %countries));
 $o->{country}->set_text(lang::c2name(lang::read('', $>)->{country}));
 
@@ -217,9 +217,8 @@ sub send_conf_online() {
 sub set_conf() {
     my ($login, $passwd, $boxname) = get_names(); 
     my $country = lc($countries{$o->{country}->entry->get_text});
-    my $key = $o->{currentkey}; my $auto = 'FALSE';
-    if ($auto_update) { $auto = 'TRUE' }; 
-    mdkonline::automated_upgrades($conffile, $login, $passwd, $boxname, $key, $country, $auto);
+    my $key = $o->{currentkey}; 
+    mdkonline::automated_upgrades($conffile, $login, $passwd, $boxname, $key, $country, 'TRUE');
     mdkonline::write_wide_conf($login, $boxname, $country);
 }
 sub init {
@@ -229,9 +228,7 @@ sub init {
     $i and first_settings();
 }
 sub first_settings() {
-    foreach my $l (qw(vbox_account vbox_auto)) {
-       	$o->{$l}->set_sensitive(0);
-    }
+    $o->{vbox_account}->set_sensitive(0);
 }
 sub final() {
     $o->{Prev}->hide; $o->{SkipWiz}->hide;
@@ -265,8 +262,6 @@ sub check_passwd() {
     my $login = $o->{login}->get_text; my $passwd   = md5_hex($o->{passwd}->get_text); my $boxname = $o->{machine}->get_text;
     $boxname = is_alphanum($boxname);
     if ($login && $passwd && $boxname && $login !~ /\s+/ && $passwd !~ /\s+/) {
-	# NEW METHOD (http)
-	# first, MD5ify the password
 	my $w = wait_msg("Connecting ...\n");
 	$link .= '?u=' . $login . '&p=' . $passwd;
 	my $response = mdkonline::get_from_URL($link);
