@@ -5,20 +5,20 @@
 # Andreas Bergstrøm <abergstr@halden.net>, 2001.
 # Terje Bjerkelia <terje@bjerkelia.com>, 2002.
 # Per Øyvind Karlsen <peroyvind@sintrax.net>, 2004.
-# Eskild Hustvedt <zerodogg@skolelinux.no>, 2004.
+# Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2004-10-06 15:48+0100\n"
-"Last-Translator: Eskild Hustvedt <eskild@goldenfiles.com>\n"
-"Language-Team: Norwegian Bokmål <nb@li.org>\n"
+"PO-Revision-Date: 2005-02-03 10:12+0100\n"
+"Last-Translator: Eskild Hustvedt <zerodogg@skolelinux.no>\n"
+"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../mdkapplet:63
 #, c-format
@@ -47,8 +47,7 @@ msgstr "Nye oppdateringer er tilgjengelig for ditt system"
 #: ../mdkapplet:87
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
+msgstr "Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
 
 #: ../mdkapplet:93
 #, c-format
@@ -63,8 +62,7 @@ msgstr "Tjenesten er ikke aktivert. Vennligst klikk på \"Online-nettsted\""
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:110 ../mdkapplet:164
 #, c-format
@@ -195,9 +193,9 @@ msgid "Connecting to"
 msgstr "Kobler til"
 
 #: ../mdkapplet:247
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Velkommen til Mandrakeonline"
+msgstr "Respons fra Mandrakeonline tjeneren\n"
 
 #: ../mdkapplet:265
 #, c-format
@@ -248,7 +246,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
+msgstr "Et problem oppstod under tilkobling til tjeneren, vennligst kontakt brukerstøtte."
 
 #: ../mdkapplet:280
 #, c-format
@@ -512,21 +510,21 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Din Mandrakeonline konto har blitt vellykket satt opp\n"
 
 #: ../mdkonline:219
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Din opplasting var vellykket!"
+msgstr "Opplastingen av oppsettsfilene var vellykket"
 
 #: ../mdkonline:220
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Leser konfigurasjon\n"
+msgstr "Problem under opplasting av oppsettsfiler"
 
 #: ../mdkonline:221
 #, c-format
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
-msgstr ""
+msgstr "Kan ikke koble til Mandrakeonline nettsiden: feil brukernavn/passord eller feil innstillinger i router/brannmur."
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -605,64 +603,3 @@ msgstr "Mandrakeupdate kunne ikke kontakte stedet, vi vil prøve igjen."
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunne ikke oppdatere pakker fra update_source-medium.\n"
 
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Kunne ikke oppdatere pakker fra mdkupdate-medium.\n"
-
-#~ msgid ""
-#~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
-#~ "[at] mandrakeonline [dot] net"
-#~ msgstr ""
-#~ "Mandrakeupdate kunne ikke last opp diff filene. Send en e-post til "
-#~ "support [at] mandrakeonline [dot] net"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Vennligst vent"
-
-#~ msgid "Next"
-#~ msgstr "Neste"
-
-#~ msgid "Cancel"
-#~ msgstr "Avbryt"
-
-#~ msgid "Previous"
-#~ msgstr "Forrige"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Jeg har ingen Mandrakeonline-konto og jeg ønsker å abonnere"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Mandrakelinux retningslinjer for personvern"
-
-#~ msgid "Authentification"
-#~ msgstr "Autentisering"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Send konfigurasjon"
-
-#~ msgid "Finish"
-#~ msgstr "Fullfør"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "automatiserte oppgraderinger"
-
-#~ msgid "Country:"
-#~ msgstr "Land:"
-
-#~ msgid "Error"
-#~ msgstr "Feil"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Avslutter veiviser\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "Mandrakeonline kunne ikke bli kontaktet, vennligst prøv igjen på et "
-#~ "senere tidspunkt"
-
-#~ msgid "Wrong password"
-#~ msgstr "Feil passord"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - Oppdater nøkler\n"
