@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2005-02-04 10:04+0000\n"
+"PO-Revision-Date: 2005-02-16 21:20+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <isl@molar.is>\n"
 "MIME-Version: 1.0\n"
@@ -224,21 +224,21 @@ msgstr "Rangt lykilorð.\n"
 #: ../mdkapplet:275
 #, c-format
 msgid "Wrong Action or host or login.\n"
-msgstr ""
+msgstr "Röng aðgerð, vél eða auðkenni.\n"
 
 #: ../mdkapplet:276
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
-msgstr ""
+msgstr "Eitthvað er rangt við uppsetningu netsins (Athugaðu beinir, eldvegg eða uppsetningu vefsels)\n"
 
 #: ../mdkapplet:278
 #, c-format
 msgid ""
 "Problem occurred while connecting to the server, please contact the support "
 "team"
-msgstr ""
+msgstr "Villa kom upp þegar reynt var að tengjast miðlara, vinsamlega hafðu samband við þjónustuhópinn"
 
 #: ../mdkapplet:280
 #, c-format
@@ -246,19 +246,19 @@ msgid "System is up-to-date\n"
 msgstr "Kerfi er uppfært\n"
 
 #: ../mdkapplet:312
-#, fuzzy, c-format
+#, c-format
 msgid "No check"
-msgstr "GNU Go tafl"
+msgstr "Engin athugun"
 
 #: ../mdkapplet:325
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr ""
+msgstr "Athuga net: virðist aftengt\n"
 
 #: ../mdkapplet:328
 #, c-format
 msgid "Checking config file: Not present\n"
-msgstr ""
+msgstr "Athuga stillingaskrá: ekki til staðar\n"
 
 #: ../mdkapplet:360
 #, c-format
@@ -278,7 +278,7 @@ msgstr "Um..."
 #: ../mdkapplet:404
 #, c-format
 msgid "Always launch on startup"
-msgstr ""
+msgstr "Ræsa alltaf þegar kveikt á vél"
 
 #: ../mdkapplet:406
 #, c-format
@@ -293,17 +293,17 @@ msgstr "Mandrakeonline"
 #: ../mdkonline:55
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Ég hef nú þegar auðkenni"
 
 #: ../mdkonline:56
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Ég vil gerast áskrifandi"
 
 #: ../mdkonline:89
-#, fuzzy, c-format
+#, c-format
 msgid "Reading configuration\n"
-msgstr "Endurlesa stillingar"
+msgstr "Endurlesa stillingar\n"
 
 #: ../mdkonline:93
 #, c-format
@@ -317,16 +317,20 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
+"Þessi álfur hjálpar þér við að senda inn stillingar þínar\n"
+"(pakka, vélbúnaðarstillingar) í miðlægan gagnagrunn til\n"
+"að geta veitt þér upplýsingar um öryggisuppfærslur og\n"
+"nytsamlegar uppfærslur.\n"
 
 #: ../mdkonline:114
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Stofna reikning eða auðkenna"
 
 #: ../mdkonline:119
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr ""
+msgstr "Skráðu Mandrakeonline notandanafn, lykilorð og vélarnafn:"
 
 #: ../mdkonline:125 ../mdkonline:156
 #, c-format
@@ -361,6 +365,19 @@ msgid ""
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com."
 msgstr ""
+"Til að njóta þjónustu Mandrake online,\n"
+"Þá munum við nú senda upplýsingar um stillingar þínar.\n"
+"\n"
+"Þessi álfur mun senda eftirfarandi upplýsingr til Mandrakesoft:\n"
+"1) lista uppsettra pakka á vélinni þinni,\n"
+"2) vélbúnaðaruppsetningu.\n"
+"\n"
+"Ef þér þykir þetta óþægilegt, eða vilt ekki njóta þessarar þjónustu,\n"
+"vinsamlega ýttu á 'Hætta við'. Með því að ýta á 'Næsta' hjálpar þú okkur\n"
+"við að upplýsa þig um öryggisuppfærslur og nytsamar uppfærslur með\n"
+"persónulegum tölvupósti.\n"
+"Þess utan færð þú afslátt af þjónustum sem þú kaupir á\n"
+"www.mandrakeexpert.com."
 
 #: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:131
 #, c-format
@@ -388,6 +405,11 @@ msgid ""
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
+"Notandanafn eða lykilorð var rangt.\n"
+" Annaðhvort verður þú að slá það inn aftur, eða þú verður að búa til reikning á Mandrakeonline,\n"
+" Í síðara tilvikinu verður þú að fara til baka í upphafsþrepið til að tengjast Mandrakeonline.\n"
+" Athugið að þú verður einnig að gefa upp vélarnafn \n"
+" (aðeins bókstafir leyfilegir)"
 
 #: ../mdkonline:153
 #, c-format
@@ -400,7 +422,7 @@ msgid "Confirm Password:"
 msgstr "Staðfestu lykilorð:"
 
 #: ../mdkonline:159
-#, fuzzy, c-format
+#, c-format
 msgid "Mail contact:"
 msgstr "Netfang:"
 
@@ -414,9 +436,9 @@ msgstr ""
 " Vinsamlega reyndu aftur\n"
 
 #: ../mdkonline:163
-#, fuzzy, c-format
+#, c-format
 msgid "Please provide a login"
-msgstr "Reyndu aftur"
+msgstr "Vinsamlega gefðu upp notenda"
 
 #: ../mdkonline:163
 #, c-format
@@ -429,11 +451,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"tókst að búa til Mandrakeonline reikning.\n"
+"Vinsamlega smelltu á \"Næst\" auðkenna þig og senda inn stillingar þinar\n"
 
 #: ../mdkonline:178
 #, c-format
 msgid "Your upload was successful!"
-msgstr ""
+msgstr "Tókst að senda upplýsingar!"
 
 #: ../mdkonline:178
 #, c-format
@@ -441,6 +465,8 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
 msgstr ""
+"Héðan í frá munt þú fá tilkynningar um öryggisuppfærslur og lagfæringar\n"
+"þökk sé Mandrakeonline."
 
 #: ../mdkonline:178
 #, c-format
@@ -448,11 +474,13 @@ msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
+"Mandrakeonline býður upp á þann möguleika að uppfæra sjálfvirkt.\n"
+"Forrit mun keyra reglulega á vélinni þinni til að athuga með nýjar uppfærslur\n"
 
 #: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
+msgstr "Vandamál kom upp þegar skrár voru sóttar, vinsamlega reyndu aftur"
 
 #: ../mdkonline:186
 #, c-format
@@ -467,12 +495,12 @@ msgstr "Til hamingju"
 #: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
-msgstr ""
+msgstr "Mandrakeonline reikningur þinn hefur verið settur upp\n"
 
 #: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
-msgstr ""
+msgstr "Tókst að senda stillingar"
 
 #: ../mdkonline:220
 #, c-format
@@ -484,7 +512,7 @@ msgstr "Vandamál að sækja stillingar"
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
-msgstr ""
+msgstr "Get ekki tengst Mandrakeonline vefsíðunni: rangur notandi/lykilorð eða vandamál með beinir/eldvegg"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -561,3 +589,4 @@ msgstr "Mandrakeupdate gat ekki tengst þjóninum, við munum reyna aftur."
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
+
