@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	25mdk
+Release: 	26mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -53,7 +53,7 @@ cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
 needs="x11" \
 icon="mdkonline.png" \
 section="Configuration/Other" \
-title="Mandrake Online" \
+title="Discover custom services" \
 longtitle="Wizard tool for online registered user" \
 command="/usr/X11R6/bin/mdkonline"
 EOF
@@ -91,6 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 0.15-26mdk
+- Update icon's title
+
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 0.15-25mdk
 - New 16 & 48 icons.
 - Fix "make rpm"
