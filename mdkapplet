@@ -283,7 +283,7 @@ sub compareWithInstalled {
     my $isUpdate = 0;
     foreach my $p (@$t) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
-	if ($name eq $n) {
+	if ($name eq $n && $name !~ /kernel/) {
 	    my ($iu, $ir);
 	    if ($debug) { $iu = mdkonline::rpm_ver_cmp($ver, $v); $ir = mdkonline::rpm_ver_cmp($rel, $r) }; 
 	    if (mdkonline::rpm_ver_cmp($ver, $v) > 0 || mdkonline::rpm_ver_cmp($ver, $v) == 0 && mdkonline::rpm_ver_cmp($rel, $r) > 0) {
