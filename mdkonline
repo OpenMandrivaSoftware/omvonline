@@ -399,10 +399,13 @@ chmod 0755, "/etc/cron.daily/mdkupdate";
 }
 sub writeWideConf {
     my ($login, $boxname, $country) = @_;
+    my $d = localtime();
+    $d =~ s/\s+/_/
     output_with_perm $wideconf, 644,
     qq(LOGIN=$login
 MACHINE=$boxname
 COUNTRY=$country
+LASTCHECK=$d
 );
    
 }
