@@ -69,42 +69,59 @@ my ($opt) = @ARGV;
 
 my %o = getVarsFromSh($conffile);
 if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
+    my $u;
     my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
     my $resp = getFromURL($MandrakeUpdateURL);
     my $contents = $resp->content;
     print " \n\n *****  Response from Online3_RemoteAction is : \n $contents \n end update_rpms answer **********\n\n";
     if ($resp->is_success) {
-	$ret = ($contents =~ /TRUE/) ? 0 : -1;
+	if ($contents =~ /TRUE/) { $ret = 10 } elsif ($contents = m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 } ;
+	my $action = {
+		      10 => sub {
+			  print "\nCONTENTS = $contents \n";
+			  my $c2h = splitContents($contents);
+			  if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
+			  if ($c2h->{FTP}) { addMedia($c2h->{FTP}) }
+			  $scheduled = join(',',@{$c2h->{sched}});
+			  $noscheduled = join(',',@{$c2h->{nosched}});
+			  if ($opt eq '--applet') {
+			      system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
+			  } elsif ($opt eq '--auto') {
+			      $o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
+			  }
+			  rpm_qa("/root/rpm_qa_installed_after");
+			  my %new = getVarsFromSh($conffile);
+			  if (! -s "/root/.mdkupdate.rpms" || $update) {
+			      #- send configuration and get back key to use...
+			      $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{MACHINE});
+			      delete $new{OLDKEY};
+			      #- save back keys.
+			      setVarsInSh($conffile, \%new);
+			  } else {
+			      #- this can safely be ignored if new configuration is sent.
+			      send_rpm_dif($new{LOGIN},$new{PASS},$new{MACHINE},$new{OLDKEY});
+			  }
+			  clean_dir();
+		      },
+		      80 => sub { 
+			  log::l("[mdkupdate] Client password does not match in database")
+		      },
+		      81 => sub {
+			  log::l("[mdkupdate] Bad Authentification key. Please rerun mdkonline wizard")
+		      },
+		      82 => sub {
+			  log::l("[mdkupdate] No active Online service found for this host.")
+		      }
+		      83 => sub {
+			  log::l("[mdkupdate] Unknown problem, better relaunch mdkonline wizard")
+		      }
+		     }
+	  $action->{$u}->();
     } else {
-	log_i(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
+	log::l(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
     }
 } else {
     $ret = -1; 
-}
-if(!$ret) {
-    my $c2h = splitContents($contents);
-    if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
-    if ($c2h->{FTP}) { addMedia($c2h->{FTP}) }
-    $scheduled = join(',',@{$c2h->{sched}});
-    $noscheduled = join(',',@{$c2h->{nosched}});
-    if ($opt eq '--applet') {
-	system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
-    } elsif ($opt eq '--auto') {
-	$o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
-    }
-    rpm_qa("/root/rpm_qa_installed_after");
-    my %new = getVarsFromSh($conffile);
-    if (! -s "/root/.mdkupdate.rpms" || $update) {
-	#- send configuration and get back key to use...
-	$new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{MACHINE});
-	delete $new{OLDKEY};
-	#- save back keys.
-	setVarsInSh($conffile, \%new);
-    } else {
-	#- this can safely be ignored if new configuration is sent.
-	send_rpm_dif($new{LOGIN},$new{PASS},$new{MACHINE},$new{OLDKEY});
-    }
-    clean_dir();
 }
 sub splitContents {
     my $cont = shift;
