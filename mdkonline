@@ -216,7 +216,7 @@ sub on_prev_clicked {
 
     if ($page == 4) {
 	$notebook_global->set_page(2); # Alternatively, don't go back at all since passwd was correct
-    } elsif ($page == 6) { # Don't go back if informations were correctly sent (button should be deactivated)
+    } elsif ($page == 6) { # Don't go back if information were correctly sent (button should be deactivated)
 
     } else {
 	$notebook_global->prev_page();
@@ -337,7 +337,7 @@ sub send_config {
 	$result = -1;
     }
 
-    # if informations were sent correctly (exit code: 0 from scp script), go to page 5
+    # if information were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $result) {
 	# go to last page
 	$notebook_global->set_current_page(5); 
@@ -393,8 +393,8 @@ sub step_wizard {
 
     # building the "Error sending data" page
     my $vbox_errorsend= new Gtk2::VBox(0,0);
-    writ_on_pixmaps($vbox_errorsend, 'appearence', N("Error while sending informations"));
-    my $label_errorsend = new Gtk2::Label("\n\n" . N("There was an error while sending your personal informations.\n\nPress Next to try and send your configuration again."));
+    writ_on_pixmaps($vbox_errorsend, 'appearence', N("Error while sending information"));
+    my $label_errorsend = new Gtk2::Label("\n\n" . N("There was an error while sending your personal information.\n\nPress Next to try and send your configuration again."));
     $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
     $notebook_global->append_page($vbox_errorsend,new Gtk2::Label("errorsend"));
     
