@@ -53,7 +53,7 @@ my $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
-is_running('mdkapplet') and die "mdkapplet already running\n";
+mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
 
 my %state = (
 	     okay => {
