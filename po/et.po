@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-03 12:10+0100\n"
-"PO-Revision-Date: 2004-10-02 12:50+0200\n"
+"POT-Creation-Date: 2004-11-05 13:34+0100\n"
+"PO-Revision-Date: 2004-11-05 09:15+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -75,9 +75,10 @@ msgstr "Teenuse seadistamine"
 msgid "Check Updates"
 msgstr "Uuenduste kontrollimine"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225
-#, fuzzy, c-format
-msgid "Please Wait"
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
+#, c-format
+msgid "Please wait"
 msgstr "Palun oodake"
 
 #: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
@@ -182,9 +183,9 @@ msgid "Connecting to"
 msgstr "Ühendumine saidiga"
 
 #: ../mdkapplet:244
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Tere tulemast Mandrakeonline'i"
+msgstr "Mandrakeonline'i serveri vastus\n"
 
 #: ../mdkapplet:262
 #, c-format
@@ -289,11 +290,6 @@ msgstr "Mul on juba konto"
 #, c-format
 msgid "I want to subscribe"
 msgstr "Tahan konto luua"
-
-#: ../mdkonline:89 ../mdkonline:93 ../mdkonline:131
-#, c-format
-msgid "Please wait"
-msgstr "Palun oodake"
 
 #: ../mdkonline:89
 #, c-format
@@ -500,14 +496,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Teie Mandrakeonline'i konto on edukalt loodud\n"
 
 #: ../mdkonline:214
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Saatmine õnnestus!"
+msgstr "Konfiguratsiooni saatmine õnnestus"
 
 #: ../mdkonline:215
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Konfiguratsiooni tuvastamine\n"
+msgstr "Probleem konfiguratsiooni saatmisel"
 
 #: ../mdkonline:216
 #, c-format
@@ -515,6 +511,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"Mandrakeonline'i veebileheküljega ei õnnestunud ühendust luua: vigane "
+"kasutajatunnus/parool või sobimatud ruuteri/tulemüüri seadistused"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -602,14 +600,8 @@ msgstr ""
 "Mandrakeupdate ei suutnud võrdlusfaile laadida. Saatke palun e-kiri "
 "aadressile support@mandrakeonline.net"
 
-#~ msgid "Next"
-#~ msgstr "Järgmine"
-
-#~ msgid "Cancel"
-#~ msgstr "Loobu"
-
-#~ msgid "Previous"
-#~ msgstr "Eelmine"
+#~ msgid "Please Wait"
+#~ msgstr "Palun oodake"
 
 #~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
 #~ msgstr "Mul ei ole veel Mandrakeonline'i kontot, aga ma tahan seda"
@@ -623,27 +615,11 @@ msgstr ""
 #~ msgid "Send Configuration"
 #~ msgstr "Saada konfiguratsioon"
 
-#~ msgid "Finish"
-#~ msgstr "Lõpeta"
-
 #~ msgid "automated Upgrades"
 #~ msgstr "Automaatne uuendamine"
 
-#~ msgid "Country:"
-#~ msgstr "Riik:"
-
-#~ msgid "Error"
-#~ msgstr "Viga"
-
 #~ msgid "Quitting Wizard\n"
 #~ msgstr "Nõustajast väljumine\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr "Mandrakeonline'iga ei saadud ühendust, palun proovige hiljem uuesti"
-
-#~ msgid "Wrong password"
-#~ msgstr "Vale parool"
 
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - uuendatakse võtmeid\n"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-03 12:10+0100\n"
+"POT-Creation-Date: 2004-11-05 13:34+0100\n"
 "PO-Revision-Date: 2004-11-04 22:21+0100\n"
 "Last-Translator: Jose Jorge <jjorge@free.fr>\n"
 "Language-Team: português <pt@li.org>\n"
@@ -51,7 +51,8 @@ msgstr "Há novas actualizações disponíveis para o seu sistema"
 #: ../mdkapplet:87
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "O serviço não está configurado. Por favor clique em \"Configurar o serviço\""
+msgstr ""
+"O serviço não está configurado. Por favor clique em \"Configurar o serviço\""
 
 #: ../mdkapplet:93
 #, c-format
@@ -66,7 +67,8 @@ msgstr "O serviço não está activado. Por favor clique em \"Website Online\""
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Versão não suportada (versão demasiado antiga, ou versão de programação)"
+msgstr ""
+"Versão não suportada (versão demasiado antiga, ou versão de programação)"
 
 #: ../mdkapplet:110 ../mdkapplet:164
 #, c-format
@@ -83,9 +85,10 @@ msgstr "Configurar o serviço"
 msgid "Check Updates"
 msgstr "Verificar Actualizações"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
 #, c-format
-msgid "Please Wait"
+msgid "Please wait"
 msgstr "Por favor aguarde"
 
 #: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
@@ -296,11 +299,6 @@ msgstr "Já tenho uma conta"
 #, c-format
 msgid "I want to subscribe"
 msgstr "Quero subscrever"
-
-#: ../mdkonline:89 ../mdkonline:93 ../mdkonline:131
-#, c-format
-msgid "Please wait"
-msgstr "Por favor aguarde"
 
 #: ../mdkonline:89
 #, c-format
@@ -522,7 +520,9 @@ msgstr "Problema ao enviar a configuração"
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
-msgstr "Não consigo ligar ao site mandrakeonline: nome/senha errados ou problema na configuração do router/guarda-fogo"
+msgstr ""
+"Não consigo ligar ao site mandrakeonline: nome/senha errados ou problema na "
+"configuração do router/guarda-fogo"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -609,6 +609,9 @@ msgstr ""
 "O Mandrakeupdate nao conseguiu enviar os ficheiros diff. Envie um email para "
 "suport [em] mandrakeonline [ponto] net"
 
+#~ msgid "Please Wait"
+#~ msgstr "Por favor aguarde"
+
 #~ msgid "Next"
 #~ msgstr "Seguinte"
 
@@ -655,4 +658,3 @@ msgstr ""
 
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - actualiza as chaves\n"
-

@@ -110,7 +110,7 @@ my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { 
-				my $w = $in->wait_message(N("Please Wait"), N("Check updates") . '...');
+				my $w = $in->wait_message(N("Please wait"), N("Check updates") . '...');
 				checkUpdates(); undef $w } }, 
 	       'weblink' => { name => N("Online WebSite"), launch => sub { mdkonline::get_site($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
@@ -164,7 +164,7 @@ sub showMainWindow() {
 				       1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
 				       1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
 				       1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub {
-								my $w = $in->wait_message(N("Please Wait"), N("Check updates") . '...');
+								my $w = $in->wait_message(N("Please wait"), N("Check updates") . '...');
 								checkUpdates(); undef $w }),
 				       1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main } }),
 				      )
@@ -222,7 +222,7 @@ sub installUpdates {
     system "/usr/sbin/mdkupdate", "--applet";
     my $newmd5 = md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandrakeonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') };
-    my $w = $in->wait_message(N("Please Wait"), N("Check updates"));
+    my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush(); 
     undef $w;
     my $mdkupdate_status = cat_('/tmp/mdkupdate.log');

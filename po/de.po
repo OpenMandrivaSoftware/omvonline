@@ -1,3 +1,4 @@
+# translation of mdkonline-de.po to deutsch
 # translation of mdkonline-de.po to Deutsch
 # translation of Mandrakeonline-de.po to german
 # german translation of Madrake Online.
@@ -10,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-03 12:10+0100\n"
-"PO-Revision-Date: 2004-09-18 12:24+0200\n"
-"Last-Translator: Frank Köster\n"
-"Language-Team: Deutsch <I18n-mdk-de@codershome.org>\n"
+"POT-Creation-Date: 2004-11-05 13:34+0100\n"
+"PO-Revision-Date: 2004-10-28 16:20+0200\n"
+"Last-Translator: Frank Köster <frank@dueppel13.de>\n"
+"Language-Team: deutsch <I18n-mdk-de@codershome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -62,6 +63,7 @@ msgstr "Dienst nicht verfügbar. Klicken Sie auf „Online Webseite“"
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
+"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:110 ../mdkapplet:164
 #, c-format
@@ -78,9 +80,10 @@ msgstr "Den Dienst konfigurieren"
 msgid "Check Updates"
 msgstr "Überprüfe Updates"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225
-#, fuzzy, c-format
-msgid "Please Wait"
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
+#, c-format
+msgid "Please wait"
 msgstr "Bitte warten"
 
 #: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
@@ -136,7 +139,7 @@ msgstr "Schließen"
 #: ../mdkapplet:211
 #, c-format
 msgid "Network Connection: "
-msgstr "Netzwerkverbindung:"
+msgstr "Netzwerkverbindung: "
 
 #: ../mdkapplet:211
 #, c-format
@@ -151,12 +154,12 @@ msgstr "Runter"
 #: ../mdkapplet:212
 #, c-format
 msgid "Last check: "
-msgstr "Letzte Überprüfung:"
+msgstr "Letzte Überprüfung: "
 
 #: ../mdkapplet:213
 #, c-format
 msgid "Updates: "
-msgstr "Aktualisierungen:"
+msgstr "Aktualisierungen: "
 
 #: ../mdkapplet:217
 #, c-format
@@ -172,7 +175,8 @@ msgstr "Starte mdkupdate --applet\n"
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr ""
-"Mandrakeonline scheint neu installiert worden zu sein, lade Applet erneut ..."
+"Mandrakeonline scheint neu installiert worden zu sein, lade Applet "
+"erneut ...."
 
 #: ../mdkapplet:235
 #, c-format
@@ -197,12 +201,12 @@ msgstr "Überprüfe... Updates sind verfügbar\n"
 #: ../mdkapplet:267
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Entwicklungsversion wird nicht vom Service unterstützt"
 
 #: ../mdkapplet:268
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Zu alte Version wird nicht vom Service unterstützt"
 
 #: ../mdkapplet:269
 #, c-format
@@ -266,7 +270,7 @@ msgstr "Löschen"
 #: ../mdkapplet:408
 #, c-format
 msgid "About..."
-msgstr "Über.."
+msgstr "Über..."
 
 #: ../mdkapplet:409
 #, c-format
@@ -279,24 +283,19 @@ msgid "Quit"
 msgstr "Beenden"
 
 #: ../mdkonline:52 ../mdkonline:106
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Wilkommen bei Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline:55
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Ich besitze schon ein Benutzerkonto"
 
 #: ../mdkonline:56
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
-
-#: ../mdkonline:89 ../mdkonline:93 ../mdkonline:131
-#, c-format
-msgid "Please wait"
-msgstr "Bitte warten"
+msgstr "Ich möchte abonnieren"
 
 #: ../mdkonline:89
 #, c-format
@@ -322,7 +321,7 @@ msgstr ""
 #: ../mdkonline:114
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Erstellung einesBenutzekontos oder Authentifizierung"
 
 #: ../mdkonline:119
 #, c-format
@@ -346,9 +345,9 @@ msgid "Machine name:"
 msgstr "Rechnername:"
 
 #: ../mdkonline:131
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Wilkommen bei Mandrakeonline"
+msgstr "Verbinde mit Mandrakeonline Webseite..."
 
 #: ../mdkonline:139
 #, c-format
@@ -392,12 +391,12 @@ msgstr "Verbindungsproblem"
 #: ../mdkonline:141
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "oder"
 
 #: ../mdkonline:141
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Falsches Passwort"
+msgstr "falsches Passwort:"
 
 #: ../mdkonline:141
 #, c-format
@@ -458,6 +457,9 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline Benutzerkonto erfolgreich erstellt.\n"
+"Bitte drücken Sie „Weiter\" zum Authentifizieren und zum Hochzuladen Ihrer "
+"Konfiguration\n"
 
 #: ../mdkonline:178
 #, c-format
@@ -491,19 +493,19 @@ msgstr ""
 "erneut"
 
 #: ../mdkonline:186
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Land:"
+msgstr "Land"
 
 #: ../mdkonline:198
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations"
-msgstr "Konfiguration senden"
+msgstr "Herzlichen Glückwunsch"
 
 #: ../mdkonline:198
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
-msgstr ""
+msgstr "Ihr Mandrakeonline Konto wurde erfolgreich eingerichtet\n"
 
 #: ../mdkonline:214
 #, fuzzy, c-format
@@ -525,27 +527,27 @@ msgstr ""
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Benutzername und Passwort sollten kürzer als 12 Buchstaben sein\n"
 
 #: ../mdkonline.pm:67
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Sonderzeichen sind nicht erlaubt\n"
 
 #: ../mdkonline.pm:68
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Bitte füllen Sie alle Felder aus\n"
 
 #: ../mdkonline.pm:69
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "E-Mail nicht gültig\n"
 
 #: ../mdkonline.pm:70
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Konto existiert bereits\n"
 
 #: ../mdkonline.pm:76
 #, c-format
@@ -587,19 +589,18 @@ msgstr "  --applet       - starte Mandrakeupdate.\n"
 #: ../mdkupdate:67
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Keine %s Datei gefunden. Starten Sie zuerst den Mdkonline-Assistenten"
 
 #: ../mdkupdate:126
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr ""
-"Mandrakeonline kann nicht erreicht werden, versuchen Sie es später noch "
-"einmal."
+"Mandrakeupdate kann die Seite nicht erreichen, wir versuchen es nochmal."
 
 #: ../mdkupdate:176
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Aktualisieren der Pakete vom Mdkupdate Medium nicht möglich.\n"
 
 #: ../mdkupdate:198
 #, c-format
@@ -607,9 +608,11 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate konnte die Diff-Dateien nicht hochladen. Senden Sie eine E-"
+"Mail an support [at] mandrakeonline [dot] net"
 
 #~ msgid "Next"
-#~ msgstr "Nächster"
+#~ msgstr "Weiter"
 
 #~ msgid "Cancel"
 #~ msgstr "Abbruch"
@@ -617,9 +620,11 @@ msgstr ""
 #~ msgid "Previous"
 #~ msgstr "Zurück"
 
-#, fuzzy
+#~ msgid "Welcome to Mandrakeonline"
+#~ msgstr "Wilkommen bei Mandrakeonline"
+
 #~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Ich besitze keinen Mandrakeonline Account und ich möchte"
+#~ msgstr "Ich besitze keinen Mandrakeonline Konto und ich möchte abonnieren"
 
 #~ msgid "Mandrakelinux Privacy Policy"
 #~ msgstr "Mandrakelinux Datenschutzrichtlinie"
@@ -649,16 +654,10 @@ msgstr ""
 #~ "Mandrakeonline could not be contacted, please try again at a later time"
 #~ msgstr ""
 #~ "Mandrakeonline kann nicht erreicht werden, versuchen Sie es später noch "
-#~ "einmal."
+#~ "einmal"
 
 #~ msgid "Wrong password"
 #~ msgstr "Falsches Passwort"
 
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - Aktualisiere Schlüssel\n"
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Überspringe Assistenten"
-
-#~ msgid "Subscribe"
-#~ msgstr "Abonnieren"

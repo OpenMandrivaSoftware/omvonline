@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-03 12:10+0100\n"
+"POT-Creation-Date: 2004-11-05 13:34+0100\n"
 "PO-Revision-Date: 2004-10-01 21:11+0200\n"
 "Last-Translator: Kenneth Krekula <kenneth.krekula@kiruna.se>\n"
 "Language-Team:  <sv@li.org>\n"
@@ -84,9 +84,10 @@ msgstr "Konfigurera tjänsten"
 msgid "Check Updates"
 msgstr "Kontrollera om det finns uppdateringar"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225
-#, fuzzy, c-format
-msgid "Please Wait"
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
+#, c-format
+msgid "Please wait"
 msgstr "Vänta"
 
 #: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
@@ -297,11 +298,6 @@ msgstr "Jag har redan ett konto"
 #, c-format
 msgid "I want to subscribe"
 msgstr "Jag vill prenumerera"
-
-#: ../mdkonline:89 ../mdkonline:93 ../mdkonline:131
-#, c-format
-msgid "Please wait"
-msgstr "Vänta"
 
 #: ../mdkonline:89
 #, c-format
@@ -616,6 +612,10 @@ msgid ""
 msgstr ""
 "Mandrakeupdate kunde inte ladda upp diff filerna. Skicka ett mail till "
 "support[at]mandrakeonline[punkt]net"
+
+#, fuzzy
+#~ msgid "Please Wait"
+#~ msgstr "Vänta"
 
 #~ msgid "Next"
 #~ msgstr "Nästa"
