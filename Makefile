@@ -11,7 +11,7 @@ all: mdkonline
 
 clean:
 	$(MAKE) -C po $@
-	rm -f mdkonline core .#*[0-9]
+	rm -f core .#*[0-9]
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 install: all
@@ -33,7 +33,7 @@ dis: clean
 	rm -rf $(NAME)-$(VERSION)
 
 rpm: dis 
-       ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
+	../$(NAME)-$(VERSION).tar.bz2 $(RPM)
 	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
 	cp -f *.xpm.bz2 $(RPM)/SOURCES
 	cp -f $(NAME).spec $(RPM)/SPECS/

@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release:        1mdk
+Release: 2mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -73,6 +73,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.xpm
 
 %changelog
+* Fri Aug 31 2001 Renaud Chaillat <rchaillat@mandrakesoft.com> 0.15-2mdk
+- added ssh/scp backend with expect scripts
+- improved ui
+
 * Mon Aug 27 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-1mdk
 - First mandrake package
 
