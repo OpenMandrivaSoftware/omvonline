@@ -305,7 +305,12 @@ sub about {
 }
 sub setAutoStart {
     my $state = shift;
-    output_p "$ENV{HOME}/.mdkonline",
+    my $file = "$ENV{HOME}/.mdkonline";
+    if (-e $file) {
+	my %s = getVarsInSh($file);
+	
+    } 
+    output_p $file,
     qq(AUTOSTART=$state
 );
     chmod 0644, "$ENV{HOME}/.mdkonline";
