@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	5mdk
+Release: 	6mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Tue May 11 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-6mdk
+- use mouse clock cursor when busy with applet busy icon.
+- decrease debug messages
+
 * Mon May 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-5mdk
 - more meaningful icons set for applet state (big up 2 ln)
 
