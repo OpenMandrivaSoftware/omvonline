@@ -46,7 +46,7 @@ install: all
 
 # rules to build a test rpm
 
-localrpm: clean localdist buildrpm
+localrpm: cleandist clean clocaldist buildrpm
 
 localdist: cleandist dir localcopy tar
 
