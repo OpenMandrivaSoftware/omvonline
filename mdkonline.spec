@@ -94,8 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
-* Thu Mar  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.5mdk
+* Tue Mar 16 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.5mdk
 - die properly when AUTOSTART is set TO FALSE
+- mdkupdate --applet call
 - po updates (load mdkonline domain for po in mdkappplet)
 - bited by chmod novice mode
 
