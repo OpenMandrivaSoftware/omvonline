@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-21 14:29+0200\n"
+"POT-Creation-Date: 2004-09-26 07:20+0200\n"
 "PO-Revision-Date: 2004-09-21 19:30+0100\n"
 "Last-Translator: Tibor Pittich <Tibor.Pittich@mandrake.org>\n"
 "Language-Team: Slovak <i18n@mandrake.sk>\n"
@@ -16,216 +16,278 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../mdkapplet:61
+#, c-format
 msgid "Your system is up-to-date"
 msgstr "Váš systém obsahuje všetky aktualizácie"
 
 #: ../mdkapplet:67
-msgid "Service configuration problem. Please check logs and send mail to support@mandrakeonline.net"
-msgstr "Nastal problém v konfigurácii služby. Prosím skontrolujte log súbory a pošlite e-mail na support@mandrakeonline.net"
+#, c-format
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
+"Nastal problém v konfigurácii služby. Prosím skontrolujte log súbory a "
+"pošlite e-mail na support@mandrakeonline.net"
 
 #: ../mdkapplet:73
+#, c-format
 msgid "System is busy. Please wait ..."
 msgstr "Systém je zaneprázdnený. Prosím čakajte ..."
 
 #: ../mdkapplet:79
+#, c-format
 msgid "New updates are available for your system"
 msgstr "Sú dostupné nové aktualizácie pre váš systém"
 
 #: ../mdkapplet:85
+#, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Služba nie je nakonfigurovaná. Prosím kliknite na \"Konfigurovať službu\""
+msgstr ""
+"Služba nie je nakonfigurovaná. Prosím kliknite na \"Konfigurovať službu\""
 
 #: ../mdkapplet:91
+#, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Sieť je nedostupná. Prosím skontrolute vašu sieť"
 
 #: ../mdkapplet:97
+#, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Služba nie je aktivovaná. Prosím kliknite na \"Online Website\""
 
 #: ../mdkapplet:103
+#, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Táto verzia nie je podporovaná (je príliš stará alebo je vo fáze vývoja)"
+msgstr ""
+"Táto verzia nie je podporovaná (je príliš stará alebo je vo fáze vývoja)"
 
-#: ../mdkapplet:108
-#: ../mdkapplet:157
+#: ../mdkapplet:108 ../mdkapplet:157
+#, c-format
 msgid "Install updates"
 msgstr "Inštalácia aktualizácií"
 
 #: ../mdkapplet:109
+#, c-format
 msgid "Configure the service"
 msgstr "Nastaviť službu"
 
 #: ../mdkapplet:110
+#, c-format
 msgid "Check Updates"
 msgstr "Skontrolovať aktualizácie"
 
 #: ../mdkapplet:111
+#, c-format
 msgid "Online WebSite"
 msgstr "Online web sajty"
 
 #: ../mdkapplet:112
+#, c-format
 msgid "Configure Network"
 msgstr "Nastaviť sieť"
 
 #: ../mdkapplet:113
+#, c-format
 msgid "Configure Now!"
 msgstr "Nastaviť teraz!"
 
 #: ../mdkapplet:145
+#, c-format
 msgid "Mandrakelinux Updates Applet"
 msgstr "Mandrakelinux aktualizačný applet"
 
 #: ../mdkapplet:155
+#, c-format
 msgid "Actions"
 msgstr "Akcie"
 
 #: ../mdkapplet:158
+#, c-format
 msgid "Configure"
 msgstr "Nastaviť"
 
 #: ../mdkapplet:159
+#, c-format
 msgid "Check updates"
 msgstr "Skontrolovať aktualizácie"
 
 #: ../mdkapplet:160
+#, c-format
 msgid "See logs"
 msgstr "Nahliadnuť do logov"
 
 #: ../mdkapplet:163
+#, c-format
 msgid "Status"
 msgstr "Stav"
 
-#: ../mdkapplet:167
-#: ../mdkapplet:422
+#: ../mdkapplet:167 ../mdkapplet:422
+#, c-format
 msgid "Close"
 msgstr "Zatvoriť"
 
 #: ../mdkapplet:202
-msgid "Down"
-msgstr "Dole"
-
-#: ../mdkapplet:202
+#, c-format
 msgid "Network Connection: "
 msgstr "Sieťové pripojenia:"
 
 #: ../mdkapplet:202
+#, c-format
 msgid "Up"
 msgstr "Hore"
 
+#: ../mdkapplet:202
+#, c-format
+msgid "Down"
+msgstr "Dole"
+
 #: ../mdkapplet:203
+#, c-format
 msgid "Last check: "
 msgstr "Posledná kontrola:"
 
 #: ../mdkapplet:204
+#, c-format
 msgid "Updates: "
 msgstr "Aktualizácie:"
 
 #: ../mdkapplet:208
+#, c-format
 msgid "Launching drakconnect\n"
 msgstr "Spúšťanie drakconnect\n"
 
 #: ../mdkapplet:212
+#, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr "Spúšťanie appletu mdkupdate\n"
 
 #: ../mdkapplet:216
+#, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr "Mandrakeonline bude potrebné preinštalovať, znova nahrávam applet...."
 
 #: ../mdkapplet:224
+#, c-format
 msgid "Computing new updates...\n"
 msgstr "Hľadanie nových aktualizácií...\n"
 
 #: ../mdkapplet:226
+#, c-format
 msgid "Connecting to"
 msgstr "Spájanie s"
 
 #: ../mdkapplet:249
+#, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Prehľadávanie... Sú dostupné nové aktualizácie\n"
 
 #: ../mdkapplet:253
+#, c-format
 msgid "Development release not supported by service"
 msgstr "Vývojová verzia nie je podporovaná touto službou"
 
 #: ../mdkapplet:254
+#, c-format
 msgid "Too old release not supported by service"
 msgstr "Príliš stará verzia nie je podporovaná službou"
 
 #: ../mdkapplet:255
+#, c-format
 msgid "Unknown state"
 msgstr "Neznámy stav"
 
 #: ../mdkapplet:256
+#, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Online služby vypnuté. Kontaktujte stránku Mandrakeonline\n"
 
 #: ../mdkapplet:257
+#, c-format
 msgid "Wrong Password.\n"
 msgstr "Zlé heslo.\n"
 
 #: ../mdkapplet:258
+#, c-format
 msgid "Wrong Action or host or login.\n"
-msgstr "Nesprávna akcia, adresa hostiteľa alebo nesprávne prihlasovacie údaje\n"
+msgstr ""
+"Nesprávna akcia, adresa hostiteľa alebo nesprávne prihlasovacie údaje\n"
 
 #: ../mdkapplet:259
-msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
-msgstr "Niečo s nastavením vašej siete nie je v poriadku (skontrolujte vaše pripojenie, firewall alebo nastavenie proxy)\n"
+#, c-format
+msgid ""
+"Something is wrong with your network settings (check your route, firewall or "
+"proxy settings)\n"
+msgstr ""
+"Niečo s nastavením vašej siete nie je v poriadku (skontrolujte vaše "
+"pripojenie, firewall alebo nastavenie proxy)\n"
 
 #: ../mdkapplet:263
+#, c-format
 msgid "System is up-to-date\n"
 msgstr "Váš systém obsahuje všetky aktualizácie\n"
 
 #: ../mdkapplet:348
+#, c-format
 msgid "No check"
 msgstr "Žiadna kontrola"
 
 #: ../mdkapplet:361
+#, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontrola siete: zrejme je vypnuté\n"
 
 #: ../mdkapplet:364
+#, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Kontrola konfiguračného súboru: Nebol nájdený\n"
 
 #: ../mdkapplet:412
+#, c-format
 msgid "Logs"
 msgstr "Logy"
 
 #: ../mdkapplet:428
+#, c-format
 msgid "Clear"
 msgstr "Vyprázdniť"
 
 #: ../mdkapplet:455
+#, c-format
 msgid "About..."
 msgstr "O.."
 
 #: ../mdkapplet:456
+#, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spúšťať po štarte"
 
 #: ../mdkapplet:458
+#, c-format
 msgid "Quit"
 msgstr "Koniec"
 
-#: ../mdkonline:88
+#: ../mdkonline:90
+#, c-format
 msgid "Next"
 msgstr "Ďalej"
 
-#: ../mdkonline:88
-msgid "Previous"
-msgstr "Späť"
-
-#: ../mdkonline:88
+#: ../mdkonline:90
+#, c-format
 msgid "Skip Wizard"
 msgstr "Prerušiť sprievodcu"
 
-#: ../mdkonline:102
+#: ../mdkonline:90
+#, c-format
+msgid "Previous"
+msgstr "Späť"
+
+#: ../mdkonline:104
+#, c-format
 msgid "Welcome to Mandrakeonline"
 msgstr "Vítajte v Mandrakelinux Online"
 
-#: ../mdkonline:103
+#: ../mdkonline:105 ../mdkonline_tui:93
+#, c-format
 msgid ""
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
@@ -235,57 +297,68 @@ msgstr ""
 "(balíky, hardverová konfigurácia) do centrálnej databázy aby ste mohli\n"
 "byť informovaní o bezpečnostných aktualizáciách a zaujímavých balíkoch.\n"
 
-#: ../mdkonline:104
+#: ../mdkonline:106 ../mdkonline_tui:133
+#, c-format
 msgid "Create a Mandrakeonline Account"
 msgstr "Vytvoriť Mandrakelinux Online účet"
 
-#: ../mdkonline:106
+#: ../mdkonline:108
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to "
 msgstr "Nemám konto na Mandrakeonline, ale želám si ho"
 
-#: ../mdkonline:106
+#: ../mdkonline:108
+#, c-format
 msgid "Subscribe"
 msgstr "Vytvoriť"
 
-#: ../mdkonline:110
-#: ../mdkonline:130
+#: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:109 ../mdkonline_tui:136
+#, c-format
 msgid "Login:"
 msgstr "Prihlasovacie meno:"
 
-#: ../mdkonline:111
-#: ../mdkonline:131
+#: ../mdkonline:113 ../mdkonline:133 ../mdkonline_tui:110 ../mdkonline_tui:137
+#, c-format
 msgid "Password:"
 msgstr "Heslo:"
 
-#: ../mdkonline:112
+#: ../mdkonline:114 ../mdkonline_tui:138
+#, c-format
 msgid "Confirm Password:"
 msgstr "Potvrdiť heslo:"
 
-#: ../mdkonline:113
+#: ../mdkonline:115 ../mdkonline_tui:139
+#, c-format
 msgid "Mail contact:"
 msgstr "Mail kontakt:"
 
-#: ../mdkonline:120
+#: ../mdkonline:122
+#, c-format
 msgid "Mandrakelinux Privacy Policy"
 msgstr "Bezpečnostná politika Mandrakelinux"
 
-#: ../mdkonline:126
+#: ../mdkonline:128
+#, c-format
 msgid "Authentification"
 msgstr "Authentikácia"
 
-#: ../mdkonline:127
+#: ../mdkonline:129 ../mdkonline_tui:103
+#, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
 msgstr "Zadajte vaše prihlasovacie meno, heslo a názov počítača:"
 
-#: ../mdkonline:132
+#: ../mdkonline:134 ../mdkonline_tui:111
+#, c-format
 msgid "Machine name:"
 msgstr "Meno počítača:"
 
-#: ../mdkonline:137
+#: ../mdkonline:139
+#, c-format
 msgid "Send Configuration"
 msgstr "Odoslať konfiguráciu"
 
-#: ../mdkonline:138
+#: ../mdkonline:140 ../mdkonline_tui:124
+#, c-format
 msgid ""
 "In order to benefit from Mandrakeonline services,\n"
 "we are about to upload your configuration.\n"
@@ -294,12 +367,15 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com.\n"
-"Finally, an email alias with your username@mandrakeonline.net will be provided to you."
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
 msgstr ""
 "Aby ste mohli mať úžitok zo služieb na Mandrakeonline,\n"
 "je potrebné získanie vašej konfigurácie.\n"
@@ -308,21 +384,28 @@ msgstr ""
 "1) zoznam balíkov ktoré ste si nainštalovali\n"
 "2) vašu hardvérovú konfiguráciu\n"
 "\n"
-"Ak sa vám nepozdáva tento nápad alebo nevyžadujete používanie takýchto služieb\n"
-"kliknite na 'Zrušiť'. Kliknutím na 'Pokračovať' nám umožníte, aby sme vás informovali\n"
+"Ak sa vám nepozdáva tento nápad alebo nevyžadujete používanie takýchto "
+"služieb\n"
+"kliknite na 'Zrušiť'. Kliknutím na 'Pokračovať' nám umožníte, aby sme vás "
+"informovali\n"
 "o bezpečnostných aktualizáciách a užitočných iných vylepšeniach pomocou\n"
 "personalizovaného emailu.\n"
 "Môžete tiež zúžitkovať rôzne zľavy pre platené podporné služby na\n"
 "www.mandrakeexpert.com.\n"
 "Nakoniec, môžete získať emailový alias meno@mandrakeonline.net."
 
-#: ../mdkonline:143
-#: ../mdkonline:212
-#: ../mdkonline:238
+#: ../mdkonline:145 ../mdkonline:212 ../mdkonline:235
+#, c-format
 msgid "Finish"
 msgstr "Dokončiť"
 
-#: ../mdkonline:144
+#: ../mdkonline:146 ../mdkonline_tui:152
+#, c-format
+msgid "Your upload was successful!"
+msgstr "Zaslanie bolo úspešné!"
+
+#: ../mdkonline:146 ../mdkonline_tui:152
+#, c-format
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
@@ -330,7 +413,8 @@ msgstr ""
 "Odteraz budete môcť získavať oznámenia o bezpečnostných\n"
 "a funkčných aktualizáciách vďaka Mandrakeonline."
 
-#: ../mdkonline:144
+#: ../mdkonline:146 ../mdkonline_tui:152
+#, c-format
 msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
@@ -338,30 +422,28 @@ msgstr ""
 "Mandrakeonline vám prináša možnosť ako vykonávať aktualizácie.\n"
 "Program môže bežať na vašom systéme a čakať na nové aktualizácie\n"
 
-#: ../mdkonline:144
-msgid "Your upload was successful!"
-msgstr "Zaslanie bolo úspešné!"
-
-#: ../mdkonline:145
+#: ../mdkonline:147
+#, c-format
 msgid "automated Upgrades"
 msgstr "automatické aktualizácie"
 
-#: ../mdkonline:150
+#: ../mdkonline:151
+#, c-format
 msgid "Country:"
 msgstr "Krajina:"
 
-#: ../mdkonline:179
-#: ../mdkonline:184
-#: ../mdkonline:186
-#: ../mdkonline:188
+#: ../mdkonline:179 ../mdkonline:184 ../mdkonline:186 ../mdkonline:188
+#, c-format
 msgid "Error"
 msgstr "Chyba"
 
 #: ../mdkonline:184
+#, c-format
 msgid "Please provide a login"
 msgstr "Zadajte prosím prihlasovanie meno"
 
 #: ../mdkonline:186
+#, c-format
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
@@ -370,58 +452,147 @@ msgstr ""
 " Skúste znova\n"
 
 #: ../mdkonline:188
+#, c-format
 msgid "Not a valid mail address!\n"
 msgstr "Nekorektná emailová adresa!\n"
 
-#: ../mdkonline:200
+#: ../mdkonline:200 ../mdkonline_tui:78 ../mdkonline_tui:82
+#, c-format
 msgid "Reading configuration\n"
 msgstr "Načítavanie konfigurácie\n"
 
 #: ../mdkonline:205
+#, c-format
 msgid "Sending configuration..."
 msgstr "Zasielanie konfigurácie..."
 
-#: ../mdkonline:214
-#: ../mdkonline:279
+#: ../mdkonline:214 ../mdkonline:274 ../mdkonline_tui:126 ../mdkonline_tui:154
+#: ../mdkupdate:124 ../mdkupdate:195
+#, c-format
 msgid "Connection problem"
 msgstr "Problém s pripojením"
 
-#: ../mdkonline:214
+#: ../mdkonline:214 ../mdkonline_tui:154
+#, c-format
 msgid "Problem occurs when uploading files, please try again"
 msgstr "Pri odosielaní súborov nastal problém. Prosím, skúste ešte raz"
 
-#: ../mdkonline:255
+#: ../mdkonline:252
+#, c-format
 msgid "Quitting Wizard\n"
 msgstr "Ukončenie sa sprievodcu\n"
 
-#: ../mdkonline:279
+#: ../mdkonline:274
+#, c-format
 msgid "Mandrakeonline could not be contacted, please try again at a later time"
-msgstr "Mandrakeonline nie je možné skontaktovať, prosím skúste to neskôr znova"
+msgstr ""
+"Mandrakeonline nie je možné skontaktovať, prosím skúste to neskôr znova"
 
-#: ../mdkonline:291
+#: ../mdkonline:286
+#, c-format
 msgid "Wrong password"
 msgstr "Zlé heslo"
 
-#: ../mdkonline:291
+#: ../mdkonline:286 ../mdkonline_tui:126
+#, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n"
-" In the latter case, go back to the first step to connect to Mandrakeonline.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"Mandrakeonline.\n"
+" In the latter case, go back to the first step to connect to "
+"Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Vaše prihlasovacie meno alebo heslo je nesprávne.\n"
-" Predtým ako sa ich pokúsite zadať znova, mali by ste si vytvoriť účet na Mandrakeonline.\n"
+" Predtým ako sa ich pokúsite zadať znova, mali by ste si vytvoriť účet na "
+"Mandrakeonline.\n"
 " V opačnom prípade sa vráťte na prvý krok v pripojení k Mandrakeonline.\n"
 " Buďte si vedomí toho, že je potrebné zadať meno počítača \n"
 " (akceptované sú iba abecedné znaky)"
 
-#: ../mdkupdate:51
-#, perl-format
+#: ../mdkonline.pm:36
+#, c-format
+msgid "Login and password should be less than 12 characters\n"
+msgstr ""
+
+#: ../mdkonline.pm:37
+#, c-format
+msgid "Special characters are not allowed\n"
+msgstr ""
+
+#: ../mdkonline.pm:38
+#, c-format
+msgid "Please fill in all fields\n"
+msgstr ""
+
+#: ../mdkonline.pm:39
+#, c-format
+msgid "Email not valid\n"
+msgstr ""
+
+#: ../mdkonline.pm:40
+#, c-format
+msgid "Account already exist\n"
+msgstr ""
+
+#: ../mdkonline.pm:46
+#, c-format
+msgid "Problem connecting to server \n"
+msgstr ""
+
+#: ../mdkonline_tui:45 ../mdkonline_tui:90
+#, fuzzy, c-format
+msgid "Mandrakeonline"
+msgstr "Vítajte v Mandrakelinux Online"
+
+#: ../mdkonline_tui:48
+#, c-format
+msgid "I already have an account"
+msgstr ""
+
+#: ../mdkonline_tui:49
+#, c-format
+msgid "I want to subscribe"
+msgstr ""
+
+#: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:119
+#, c-format
+msgid "Please wait"
+msgstr ""
+
+#: ../mdkonline_tui:98
+#, c-format
+msgid "Account creation or authentication"
+msgstr ""
+
+#: ../mdkonline_tui:119
+#, fuzzy, c-format
+msgid "Connecting to Mandrakeonline website..."
+msgstr "Vítajte v Mandrakelinux Online"
+
+#: ../mdkonline_tui:126
+#, c-format
+msgid "or"
+msgstr ""
+
+#: ../mdkonline_tui:126
+#, fuzzy, c-format
+msgid "wrong password:"
+msgstr "Zlé heslo"
+
+#: ../mdkonline_tui:160
+#, fuzzy, c-format
+msgid "Country"
+msgstr "Krajina:"
+
+#: ../mdkupdate:50
+#, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -431,19 +602,50 @@ msgstr ""
 "\n"
 "použitie:\n"
 
-#: ../mdkupdate:56
+#: ../mdkupdate:55
+#, c-format
 msgid "  --help         - print this help message.\n"
 msgstr "  --help         - vypísať túto pomoc.\n"
 
-#: ../mdkupdate:57
+#: ../mdkupdate:56
+#, c-format
 msgid "  --auto         - Mandrakeupdate launched automatically.\n"
 msgstr "  --auto         - Mandrakeupdate spustený automaticky.\n"
 
-#: ../mdkupdate:58
+#: ../mdkupdate:57
+#, c-format
 msgid "  --applet       - launch Mandrakeupdate.\n"
 msgstr "  --applet       - spustiť Mandrakeupdate.\n"
 
-#: ../mdkupdate:59
+#: ../mdkupdate:58
+#, c-format
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Obnoviť kľúče\n"
 
+#: ../mdkupdate:66
+#, c-format
+msgid "No %s file found. Run mdkonline wizard first"
+msgstr ""
+
+#: ../mdkupdate:124
+#, fuzzy, c-format
+msgid "Mandrakeupdate could not contact the site, we will try again."
+msgstr ""
+"Mandrakeonline nie je možné skontaktovať, prosím skúste to neskôr znova"
+
+#: ../mdkupdate:173
+#, c-format
+msgid "Unable to update packages from mdkupdate medium.\n"
+msgstr ""
+
+#: ../mdkupdate:187
+#, c-format
+msgid "No diff found"
+msgstr ""
+
+#: ../mdkupdate:195
+#, c-format
+msgid ""
+"Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
+"mandrakeonline [dot] net"
+msgstr ""
