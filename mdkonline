@@ -53,7 +53,7 @@ my ($o, $p);
 mkdir_p($confdir) if !-d $confdir;
 mdkonline::mv_files("/root/.mdkupdate", $conffile);
 
-$o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
+$o->{mw} = ugtk2->new("Mandrakeonline" . " " . $VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 580, 470);
 $o->{mw}{rwindow}->set_position('center');
 $o->{mw}{window}->signal_connect("delete_event", sub { Gtk2->main_quit });
@@ -97,11 +97,11 @@ gtkadd($o->{mw}{window},
       );
 gtkappend_page($o->{nb},
 	       gtkpack_(Gtk2::VBox->new(0, 3),
-			0, set_darea(N("Welcome to MandrakeOnline"), 'welcome'),
-			0, Gtk2::Label->new(N("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n")),
-			1, gtkadd(gtkset_border_width(Gtk2::Frame->new(N("Create a MandrakeOnline Account")), 5),
+			0, set_darea(N("Welcome to Mandrakeonline"), 'welcome'),
+			0, Gtk2::Label->new(N("At this step You are supposed to have an account on Mandrakeonline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n")),
+			1, gtkadd(gtkset_border_width(Gtk2::Frame->new(N("Create a Mandrakeonline Account")), 5),
 				  gtkpack_(gtkset_border_width(Gtk2::VBox->new(0, 5), 5),
-					   0, gtksignal_connect(gtkset_active($o->{account_cb} = Gtk2::CheckButton->new(N("I don't have a MandrakeOnline account and I want to ") .  N("Subscribe")), $create_account), clicked => sub { $create_account = !$create_account; $o->{vbox_account}->set_sensitive($create_account) }),
+					   0, gtksignal_connect(gtkset_active($o->{account_cb} = Gtk2::CheckButton->new(N("I don't have a Mandrakeonline account and I want to ") .  N("Subscribe")), $create_account), clicked => sub { $create_account = !$create_account; $o->{vbox_account}->set_sensitive($create_account) }),
 					   1, gtkpack_($o->{vbox_account} = Gtk2::VBox->new(0, 3),
 						       1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10, mcc => 1 },
 									   [],
@@ -121,8 +121,8 @@ gtkappend_page($o->{nb},
 	      );
 gtkappend_page($o->{nb},
 	       gtkpack_(Gtk2::VBox->new(0, 3),
-			0, set_darea("MandrakeOnline" . " " . N("Authentification"), 'authentification'),
-			0, Gtk2::WrappedLabel->new("\n\n" . N("Enter your MandrakeOnline login, password and machine name:")),
+			0, set_darea("Mandrakeonline" . " " . N("Authentification"), 'authentification'),
+			0, Gtk2::WrappedLabel->new("\n\n" . N("Enter your Mandrakeonline login, password and machine name:")),
 			1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10, mcc => 1 },
 					    [], 
 					    [ N("Login:"), $o->{login} = Gtk2::Entry->new, "" ],
@@ -133,13 +133,13 @@ gtkappend_page($o->{nb},
 gtkappend_page($o->{nb},
 	       gtkpack_(Gtk2::VBox->new(0, 3),
 			0,  set_darea(N("Send Configuration"), 'sendingconf'),
-			1, gtktext_insert(Gtk2::TextView->new, N("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you.")) 
+			1, gtktext_insert(Gtk2::TextView->new, N("In order to benefit from Mandrakeonline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you.")) 
 		       )
 	      );
 gtkappend_page($o->{nb},
 	       gtkpack_(Gtk2::VBox->new(0, 3),
 			0, set_darea(N("Finish"), 'welcome'),
-			1, Gtk2::WrappedLabel->new("\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.") . "\n\n" . N("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
+			1, Gtk2::WrappedLabel->new("\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
 			0, gtkadd(Gtk2::Frame->new(N("automated Upgrades")),
 				  gtkpack_(Gtk2::VBox->new(0, 3),
 #					   0, gtksignal_connect(gtkset_active($o->{autoup} = Gtk2::CheckButton->new(N("Yes I want automated updates")), $auto_update), clicked => sub { $auto_update =! $auto_update; $o->{vbox_auto}->set_sensitive($auto_update) }),
@@ -272,7 +272,7 @@ sub check_passwd() {
 	    $result = $response->content =~ /TRUE/ ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
-	    raiseError($o->{mw}{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	    raiseError($o->{mw}{window}, N("Connection problem"), N("Mandrakeonline could not be contacted, please try again at a later time"));
 	    return;
 	}
     } else {
@@ -284,7 +284,7 @@ sub check_passwd() {
 	$o->{nb}->next_page; 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	raiseError($o->{mw}{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
+	raiseError($o->{mw}{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n In the latter case, go back to the first step to connect to Mandrakeonline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
 	$o->{passwd}->set_text("");
     }
 }

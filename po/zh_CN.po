@@ -2,12 +2,13 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Danny Zeng <danny@zeng.com.cn>, 2001-2002
 # Updated by Shiyu Tang <shiyutang@netscape.net>,2002
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 10.0\n"
+"Project-Id-Version: mdkonline 10.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-11 20:32+0200\n"
-"PO-Revision-Date: 2004-08-15 05:05+0800\n"
+"POT-Creation-Date: 2004-08-15 05:14+0800\n"
+"PO-Revision-Date: 2004-08-15 05:16+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +70,7 @@ msgid "Configure Now!"
 msgstr "立即配置!"
 
 #: ../mdkapplet:141
-msgid "Mandrake Updates Applet"
+msgid "Mandrakelinux Updates Applet"
 msgstr "Mandrakelinux 更新小程序"
 
 #: ../mdkapplet:151
@@ -125,8 +126,8 @@ msgid "Launching mdkupdate --applet\n"
 msgstr "调用 mdkupdate --applet\n"
 
 #: ../mdkapplet:212
-msgid "Mdkonline seems to be reinstalled, reloading applet ...."
-msgstr "Mdkonline 似乎重新安装了，正在重新装入小程序..."
+msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
+msgstr "Mandrakeonline 似乎重新安装了，正在重新装入小程序..."
 
 #: ../mdkapplet:220
 msgid "Computing new updates...\n"
@@ -203,12 +204,12 @@ msgid "Skip Wizard"
 msgstr "跳过向导"
 
 #: ../mdkonline:100
-msgid "Welcome to MandrakeOnline"
+msgid "Welcome to Mandrakeonline"
 msgstr "Mandrakeonline 欢迎您"
 
 #: ../mdkonline:101
 msgid ""
-"At this step You are supposed to have an account on MandrakeOnline.\n"
+"At this step You are supposed to have an account on Mandrakeonline.\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -218,11 +219,11 @@ msgstr ""
 "安全更新和有用的升级。\n"
 
 #: ../mdkonline:102
-msgid "Create a MandrakeOnline Account"
+msgid "Create a Mandrakeonline Account"
 msgstr "创建一个 Mandrakeonline 账户"
 
 #: ../mdkonline:104
-msgid "I don't have a MandrakeOnline account and I want to "
+msgid "I don't have a Mandrakeonline account and I want to "
 msgstr "我没有 Mandrakeonline 账户, 我要"
 
 #: ../mdkonline:104
@@ -254,7 +255,7 @@ msgid "Authentification"
 msgstr "身份验证"
 
 #: ../mdkonline:125
-msgid "Enter your MandrakeOnline login, password and machine name:"
+msgid "Enter your Mandrakeonline login, password and machine name:"
 msgstr "请输入您的 Mandrakeonline 登录名, 密码和机器名:"
 
 #: ../mdkonline:130
@@ -267,7 +268,7 @@ msgstr "发送配置"
 
 #: ../mdkonline:136
 msgid ""
-"In order to benefit from MandrakeOnline services,\n"
+"In order to benefit from Mandrakeonline services,\n"
 "we are about to upload your configuration.\n"
 "\n"
 "The Wizard will now send the following information to Mandrakesoft:\n"
@@ -303,14 +304,14 @@ msgstr "完成"
 #: ../mdkonline:142
 msgid ""
 "From now you will receive on security and updates \n"
-"announcements thanks to MandrakeOnline."
+"announcements thanks to Mandrakeonline."
 msgstr ""
 "从现在开始，您将能够收到 Mandrakeonline 发出的安全\n"
 "和更新通知了。"
 
 #: ../mdkonline:142
 msgid ""
-"MandrakeOnline offers you the ability to automate the updates.\n"
+"Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Mandrakeonline 还能让您自动保持更新。您的系统中会定期运行一个特\n"
@@ -369,8 +370,8 @@ msgid "Quitting Wizard\n"
 msgstr "正在退出向导\n"
 
 #: ../mdkonline:275
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "Mandrakeonline 无法连接到站点, 请稍后再试一次"
+msgid "Mandrakeonline could not be contacted, please try again at a later time"
+msgstr "Mandrakeonline 无法连接，请稍后再试一次"
 
 #: ../mdkonline:287
 msgid "Wrong password"
@@ -380,9 +381,9 @@ msgstr "密码错误"
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
-"MandrakeOnline.\n"
+"Mandrakeonline.\n"
 " In the latter case, go back to the first step to connect to "
-"MandrakeOnline.\n"
+"Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
@@ -404,7 +405,7 @@ msgid ""
 msgstr ""
 "mdkupdate 版本 %s\n"
 "版权所有 (C) %s Mandrakesoft。\n"
-"这是自由软件, 它能在GNU GPL条款下再次发行。\n"
+"这是自由软件, 它能在 GNU GPL 条款下再次发行。\n"
 "\n"
 "用法:\n"
 
@@ -413,14 +414,13 @@ msgid "  --help         - print this help message.\n"
 msgstr "  --help        - 打印本帮助信息。\n"
 
 #: ../mdkupdate:59
-msgid "  --auto         - Mdkupdate launched automatically.\n"
-msgstr "  --auto        - 自动调用 Mandrakelinux Update。\n"
+msgid "  --auto         - Mandrakeupdate launched automatically.\n"
+msgstr "  --auto        - 自动调用 Mandrakeupdate。\n"
 
 #: ../mdkupdate:60
-msgid "  --applet       - launch MandrakeUpdate.\n"
-msgstr "  --applet      - 调用 Mandrakelinux Update。\n"
+msgid "  --applet       - launch Mandrakeupdate.\n"
+msgstr "  --applet      - 调用 Mandrakeupdate。\n"
 
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update      - 更新密钥\n"
-

@@ -56,8 +56,8 @@ This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
 ", $VERSION, $YEARS) . N("  --help         - print this help message.
-") . N("  --auto         - Mdkupdate launched automatically.
-") . N("  --applet       - launch MandrakeUpdate.
+") . N("  --auto         - Mandrakeupdate launched automatically.
+") . N("  --applet       - launch Mandrakeupdate.
 ") . N("  --update       - Update keys
 ");
     exit(0);
@@ -125,7 +125,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 		     };
 	$action->{$u}->();
     } else {
-	log::l(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
+	log::l(N("Connection problem")."\n" . N("Mandrakeupdate could not contact the site, we will try again."));
     }
 } else {
     $ret = -1; 
@@ -196,7 +196,7 @@ sub send_rpm_dif {
 	unlink "$confdir/mdkupdate.rpms";
 	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
     } else {
-	log::l(N("Connection problem")."\n" . N("Mdkupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
+	log::l(N("Connection problem")."\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
 	return
     }
 }

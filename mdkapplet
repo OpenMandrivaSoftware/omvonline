@@ -138,7 +138,7 @@ ugtk2::exit(0);
 
 sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
-    $w->set_title(N("Mandrake Updates Applet"));
+    $w->set_title(N("Mandrakelinux Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     gtkset_size_request($w, 360, 240);
     $w->set_position('center');
@@ -209,7 +209,7 @@ sub installUpdates {
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); 
     system "/usr/sbin/mdkupdate", "--applet"; 
     my $newmd5 = md5file($binfile);
-    if ($newmd5 ne $oldmd5) { logIt(N("Mdkonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') };
+    if ($newmd5 ne $oldmd5) { logIt(N("Mandrakeonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') };
     silentCheck(); gtkflush(); 
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); 
 }
