@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
-"POT-Creation-Date: 2004-11-22 14:01+0100\n"
+"POT-Creation-Date: 2004-12-23 17:43+0100\n"
 "PO-Revision-Date: 2004-12-10 17:49+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -21,8 +21,12 @@ msgstr "Systemet ditt er oppdatert."
 
 #: ../mdkapplet:69
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrakeonline.net"
-msgstr "Feil ved oppsett av tenesta. Kontroller loggane og kontakt support@mandrakeonline.net."
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
+"Feil ved oppsett av tenesta. Kontroller loggane og kontakt "
+"support@mandrakeonline.net."
 
 #: ../mdkapplet:75
 #, c-format
@@ -42,7 +46,8 @@ msgstr "Tenesta er ikkje sett opp enno. Vel «Set opp tenesta»."
 #: ../mdkapplet:93
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
+msgstr ""
+"Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
 
 #: ../mdkapplet:99
 #, c-format
@@ -69,12 +74,13 @@ msgstr "Set opp tenesta"
 msgid "Check Updates"
 msgstr "Sjå etter oppdateringar"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89 ../mdkonline:93 ../mdkonline:131
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:227 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
 #, c-format
 msgid "Please wait"
 msgstr "Vent litt"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
+#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:227
 #, c-format
 msgid "Check updates"
 msgstr "Sjå etter oppdateringar"
@@ -94,7 +100,7 @@ msgstr "Set opp nettverket"
 msgid "Configure Now!"
 msgstr "Set opp"
 
-#: ../mdkapplet:152 ../mdkapplet:229
+#: ../mdkapplet:152 ../mdkapplet:231
 #, c-format
 msgid "Mandrakelinux Updates Applet"
 msgstr "Panelprogram for Mandrakelinux-oppdateringar"
@@ -119,147 +125,156 @@ msgstr "Sjå loggar"
 msgid "Status"
 msgstr "Status"
 
-#: ../mdkapplet:176 ../mdkapplet:375
+#: ../mdkapplet:176 ../mdkapplet:377
 #, c-format
 msgid "Close"
 msgstr "Lukk"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Network Connection: "
 msgstr "Nettverksoppsett: "
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Up"
 msgstr "Op"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Down"
 msgstr "Ned"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:213
 #, c-format
 msgid "Last check: "
 msgstr "Siste kontroll: "
 
-#: ../mdkapplet:213
+#: ../mdkapplet:214 ../mdkonline:127
+#, c-format
+msgid "Machine name:"
+msgstr "Maskinnamn:"
+
+#: ../mdkapplet:215
 #, c-format
 msgid "Updates: "
 msgstr "Oppdateringar: "
 
-#: ../mdkapplet:217
+#: ../mdkapplet:219
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Køyrer drakconnect\n"
 
-#: ../mdkapplet:221
+#: ../mdkapplet:223
 #, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr "Køyrer mdkupdate --applet\n"
 
-#: ../mdkapplet:224
+#: ../mdkapplet:226
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr "Mandrakeonline er installert på nytt. Startar panelprogrammet om att."
 
-#: ../mdkapplet:235
+#: ../mdkapplet:237
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Granskar nye oppdateringar ...\n"
 
-#: ../mdkapplet:237
+#: ../mdkapplet:239
 #, c-format
 msgid "Connecting to"
 msgstr "Koplar til"
 
-#: ../mdkapplet:244
+#: ../mdkapplet:246
 #, c-format
 msgid "Response from Mandrakeonline server\n"
 msgstr "Svar frå Mandrakeonline-tenaren\n"
 
-#: ../mdkapplet:262
+#: ../mdkapplet:264
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Kontrollererer ... Det finst nye oppdateringar.\n"
 
-#: ../mdkapplet:267
+#: ../mdkapplet:269
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Utviklingsutgåva er ikkje støtta av denne tenesta"
 
-#: ../mdkapplet:268
+#: ../mdkapplet:270
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Gamle utgåver er ikkje støtta av tenesta"
 
-#: ../mdkapplet:269
+#: ../mdkapplet:271
 #, c-format
 msgid "Unknown state"
 msgstr "Ukjend tilstand"
 
-#: ../mdkapplet:270
+#: ../mdkapplet:272
 #, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Tenesta er avslått. Ta kontakt med Mandrakeonline.\n"
 
-#: ../mdkapplet:271
+#: ../mdkapplet:273
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Ugyldig passord.\n"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:274
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Ugyldig handling, vert eller bruknamn.\n"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:275
 #, c-format
-msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
-msgstr "Noko er galt med nettverksoppsettet (kontroller oppsetta for rutaren, brannmuren og mellomtenaren).\n"
+msgid ""
+"Something is wrong with your network settings (check your route, firewall or "
+"proxy settings)\n"
+msgstr ""
+"Noko er galt med nettverksoppsettet (kontroller oppsetta for rutaren, "
+"brannmuren og mellomtenaren).\n"
 
-#: ../mdkapplet:277
+#: ../mdkapplet:279
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systemet er oppdatert\n"
 
-#: ../mdkapplet:317
+#: ../mdkapplet:319
 #, c-format
 msgid "No check"
 msgstr "Ingen kontroll"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:332
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontrollerer nettverk: Ser avslått ut.\n"
 
-#: ../mdkapplet:333
+#: ../mdkapplet:335
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Kontrollerer oppsettfil: Manglar.\n"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:367
 #, c-format
 msgid "Logs"
 msgstr "Loggar"
 
-#: ../mdkapplet:381
+#: ../mdkapplet:383
 #, c-format
 msgid "Clear"
 msgstr "Tøm"
 
-#: ../mdkapplet:408
+#: ../mdkapplet:410
 #, c-format
 msgid "About..."
 msgstr "Om ..."
 
-#: ../mdkapplet:409
+#: ../mdkapplet:411
 #, c-format
 msgid "Always launch on startup"
 msgstr "Køyr ved oppstart"
 
-#: ../mdkapplet:411
+#: ../mdkapplet:413
 #, c-format
 msgid "Quit"
 msgstr "Avslutt"
@@ -317,11 +332,6 @@ msgstr "Brukarnamn:"
 msgid "Password:"
 msgstr "Passord:"
 
-#: ../mdkonline:127
-#, c-format
-msgid "Machine name:"
-msgstr "Maskinnamn:"
-
 #: ../mdkonline:131
 #, c-format
 msgid "Connecting to Mandrakeonline website..."
@@ -337,8 +347,10 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com."
@@ -363,8 +375,10 @@ msgstr "ugyldig passord:"
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n"
-" In the latter case, go back to the first step to connect to Mandrakeonline.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"Mandrakeonline.\n"
+" In the latter case, go back to the first step to connect to "
+"Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
@@ -439,29 +453,31 @@ msgstr ""
 msgid "Country"
 msgstr "Land"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulerer"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Mandrakeonline-kontoen er no sett opp.\n"
 
-#: ../mdkonline:215
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Oppsettet er lasta opp"
 
-#: ../mdkonline:216
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Feil ved opplasting av oppsett"
 
-#: ../mdkonline:217
+#: ../mdkonline:221
 #, c-format
-msgid "Cannot connect to mandrakeonline website: wrong login/password or router/firewall bad settings"
+msgid ""
+"Cannot connect to mandrakeonline website: wrong login/password or router/"
+"firewall bad settings"
 msgstr ""
 
 #: ../mdkonline.pm:66
@@ -499,7 +515,8 @@ msgstr "Feil ved tilkopling til tenar.\n"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -529,8 +546,7 @@ msgstr ""
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr ""
 
-#: ../mdkupdate:180
+#: ../mdkupdate:181
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
-

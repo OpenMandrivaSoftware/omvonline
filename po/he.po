@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-22 14:01+0100\n"
+"POT-Creation-Date: 2004-12-23 17:43+0100\n"
 "PO-Revision-Date: 2004-12-24 21:58+0200\n"
 "Last-Translator: dovix <dovix2003@yahoo.com>\n"
 "Language-Team: Hebrew <mdk-hebrew@iglu.org.il>\n"
@@ -78,13 +78,13 @@ msgstr "הגדרת השרות"
 msgid "Check Updates"
 msgstr "בדוק עדכונים"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:227 ../mdkonline:89
 #: ../mdkonline:93 ../mdkonline:131
 #, c-format
 msgid "Please wait"
 msgstr "נא להמתין"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
+#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:227
 #, c-format
 msgid "Check updates"
 msgstr "בדוק עדכונים"
@@ -104,7 +104,7 @@ msgstr "הגדר את הרשת"
 msgid "Configure Now!"
 msgstr "הגדר כעת"
 
-#: ../mdkapplet:152 ../mdkapplet:229
+#: ../mdkapplet:152 ../mdkapplet:231
 #, c-format
 msgid "Mandrakelinux Updates Applet"
 msgstr "יישומון עדכוני מנדרייק-לינוקס"
@@ -129,102 +129,107 @@ msgstr "צפה ברישומי המערכת"
 msgid "Status"
 msgstr "מצב"
 
-#: ../mdkapplet:176 ../mdkapplet:375
+#: ../mdkapplet:176 ../mdkapplet:377
 #, c-format
 msgid "Close"
 msgstr "סגור"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Network Connection: "
 msgstr "חיבור רשת: "
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Up"
 msgstr "למעלה"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Down"
 msgstr "למטה"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:213
 #, c-format
 msgid "Last check: "
 msgstr "בדיקה אחרונה:"
 
-#: ../mdkapplet:213
+#: ../mdkapplet:214 ../mdkonline:127
+#, c-format
+msgid "Machine name:"
+msgstr "שם המחשב:"
+
+#: ../mdkapplet:215
 #, c-format
 msgid "Updates: "
 msgstr "עדכונים: "
 
-#: ../mdkapplet:217
+#: ../mdkapplet:219
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "מפעיל את drakconnect\n"
 
-#: ../mdkapplet:221
+#: ../mdkapplet:223
 #, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr "מפעיל את mdkupdate --applet\n"
 
-#: ../mdkapplet:224
+#: ../mdkapplet:226
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr "נראה ש Mandrakeonline הותקן מחדש, טוען את היישומון ..."
 
-#: ../mdkapplet:235
+#: ../mdkapplet:237
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "מנתח עדכונים חדשים...\n"
 
-#: ../mdkapplet:237
+#: ../mdkapplet:239
 #, c-format
 msgid "Connecting to"
 msgstr "מתחבר אל"
 
-#: ../mdkapplet:244
+#: ../mdkapplet:246
 #, c-format
 msgid "Response from Mandrakeonline server\n"
 msgstr "ברוך בואך לשרת מנדרייק-אונליין\n"
 
-#: ../mdkapplet:262
+#: ../mdkapplet:264
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "בודק... יש עדכונים זמינים\n"
 
-#: ../mdkapplet:267
+#: ../mdkapplet:269
 #, c-format
 msgid "Development release not supported by service"
 msgstr "גרסאת פיתוח לא נתמכת על ידי שרות זה"
 
-#: ../mdkapplet:268
+#: ../mdkapplet:270
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "גרסה ישנה מדי לא נתמכת בשרות זה"
 
-#: ../mdkapplet:269
+#: ../mdkapplet:271
 #, c-format
 msgid "Unknown state"
 msgstr "מצב לא מוכר"
 
-#: ../mdkapplet:270
+#: ../mdkapplet:272
 #, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "השירותים המקוונים הופסקו. עליך להתעדכן באתר מנדרייק-אונליין\n"
 
-#: ../mdkapplet:271
+#: ../mdkapplet:273
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "סיסמה שגוייה.\n"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:274
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "הפעולה או שם מחשב או שם משתמש שגויים.\n"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:275
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -233,47 +238,47 @@ msgstr ""
 "כנראה קיימת בעיה עם הגדרות הרשת שלך )עליך לבדוק את ה routing, חומת האש "
 "והגדרות השרת המתווך)\n"
 
-#: ../mdkapplet:277
+#: ../mdkapplet:279
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "המערכת מעודכנת\n"
 
-#: ../mdkapplet:317
+#: ../mdkapplet:319
 #, c-format
 msgid "No check"
 msgstr "ללא בדיקה"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:332
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "בודק זמינות רשת: אין תגובה\n"
 
-#: ../mdkapplet:333
+#: ../mdkapplet:335
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "בודק קובץ הגדרות: לא קיים\n"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:367
 #, c-format
 msgid "Logs"
 msgstr "רישומים"
 
-#: ../mdkapplet:381
+#: ../mdkapplet:383
 #, c-format
 msgid "Clear"
 msgstr "נקה"
 
-#: ../mdkapplet:408
+#: ../mdkapplet:410
 #, c-format
 msgid "About..."
 msgstr "אודות..."
 
-#: ../mdkapplet:409
+#: ../mdkapplet:411
 #, c-format
 msgid "Always launch on startup"
 msgstr "הפעל תמיד באתחול המערכת"
 
-#: ../mdkapplet:411
+#: ../mdkapplet:413
 #, c-format
 msgid "Quit"
 msgstr "יציאה"
@@ -333,11 +338,6 @@ msgstr "שם משתמש:"
 #, c-format
 msgid "Password:"
 msgstr "סיסמה:"
-
-#: ../mdkonline:127
-#, c-format
-msgid "Machine name:"
-msgstr "שם המחשב:"
 
 #: ../mdkonline:131
 #, c-format
@@ -483,34 +483,34 @@ msgstr "ישנה בעיה בעת העלאת קבצים, עליך לנסות שנ
 msgid "Country"
 msgstr "מדינה"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Congratulations"
 msgstr "ברכותינו"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "חשבונך במנדרייק-אונליין הוגדר בהצלחה\n"
 
-#: ../mdkonline:215
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "טעינת התצורה הושלמה בהצלחה"
 
-#: ../mdkonline:216
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "חלה תקלה בעת טעינת התצורה"
 
-#: ../mdkonline:217
+#: ../mdkonline:221
 #, c-format
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
-"ההתקשרות לאתר מנדרייק-אונליין נכשלה עקב שם משתמש/סיסמה שגויים "
-"או הגדרות לא תקינות של הנתב/חומת האש"
+"ההתקשרות לאתר מנדרייק-אונליין נכשלה עקב שם משתמש/סיסמה שגויים או הגדרות לא "
+"תקינות של הנתב/חומת האש"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -581,9 +581,10 @@ msgstr "לא נמצא קובץ %s, עליך להריץ קודם את האשף md
 #: ../mdkupdate:129
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "אשף העדכונים לא הצליח להתחבר לאתר מנדרייק-אונליין, יש לנסות שוב מאוחר יותר."
+msgstr ""
+"אשף העדכונים לא הצליח להתחבר לאתר מנדרייק-אונליין, יש לנסות שוב מאוחר יותר."
 
-#: ../mdkupdate:180
+#: ../mdkupdate:181
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "לא ניתן לעדכן חבילות ממדיית mdkupdate.\n"
@@ -644,4 +645,3 @@ msgstr "לא ניתן לעדכן חבילות ממדיית mdkupdate.\n"
 
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - עדכן את המפתחות.\n"
-

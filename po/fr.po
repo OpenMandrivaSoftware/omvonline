@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2004-11-22 14:01+0100\n"
+"POT-Creation-Date: 2004-12-23 17:43+0100\n"
 "PO-Revision-Date: 2004-12-24 11:57+0100\n"
 "Last-Translator: Romain d'Alverny <rdalverny@mandrakesoft.com>\n"
 "Language-Team: francais <fr@li.org>\n"
@@ -27,9 +27,12 @@ msgstr "Votre système est à jour"
 
 #: ../mdkapplet:69
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrakeonline.net"
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
 msgstr ""
-"Problème lors de la configuration du service. Recherchez les journaux et envoyez-les à: \n"
+"Problème lors de la configuration du service. Recherchez les journaux et "
+"envoyez-les à: \n"
 "support@mandrakeonline.net"
 
 #: ../mdkapplet:75
@@ -60,10 +63,11 @@ msgstr "Service non activé. Cliquez sur « Site Mandrakeonline »"
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Cette version de Mandrakelinux n'est pas supportée (obsolète ou en développement)"
+msgstr ""
+"Cette version de Mandrakelinux n'est pas supportée (obsolète ou en "
+"développement)"
 
-#: ../mdkapplet:110
-#: ../mdkapplet:164
+#: ../mdkapplet:110 ../mdkapplet:164
 #, c-format
 msgid "Install updates"
 msgstr "Installer les mises à jour"
@@ -78,20 +82,13 @@ msgstr "Configurer le service"
 msgid "Check Updates"
 msgstr "Vérifier la disponibilité de mises à jour"
 
-#: ../mdkapplet:113
-#: ../mdkapplet:167
-#: ../mdkapplet:225
-#: ../mdkonline:89
-#: ../mdkonline:93
-#: ../mdkonline:131
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:227 ../mdkonline:89
+#: ../mdkonline:93 ../mdkonline:131
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
 
-#: ../mdkapplet:113
-#: ../mdkapplet:166
-#: ../mdkapplet:167
-#: ../mdkapplet:225
+#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:227
 #, c-format
 msgid "Check updates"
 msgstr "Vérifier la disponibilité de mises à jour"
@@ -111,8 +108,7 @@ msgstr "Configurer le réseau"
 msgid "Configure Now!"
 msgstr "Configurer maintenant !"
 
-#: ../mdkapplet:152
-#: ../mdkapplet:229
+#: ../mdkapplet:152 ../mdkapplet:231
 #, c-format
 msgid "Mandrakelinux Updates Applet"
 msgstr "Appliquette des mises à jour Mandrakelinux"
@@ -137,154 +133,164 @@ msgstr "Voir les journaux"
 msgid "Status"
 msgstr "Statut"
 
-#: ../mdkapplet:176
-#: ../mdkapplet:375
+#: ../mdkapplet:176 ../mdkapplet:377
 #, c-format
 msgid "Close"
 msgstr "Fermer"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Network Connection: "
 msgstr "Connection réseau : "
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Up"
 msgstr "Activé"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Down"
 msgstr "Arrêté"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:213
 #, c-format
 msgid "Last check: "
 msgstr "Dernière vérification : "
 
-#: ../mdkapplet:213
+#: ../mdkapplet:214 ../mdkonline:127
+#, c-format
+msgid "Machine name:"
+msgstr "Nom de l'ordinateur :"
+
+#: ../mdkapplet:215
 #, c-format
 msgid "Updates: "
 msgstr "Mises à jour : "
 
-#: ../mdkapplet:217
+#: ../mdkapplet:219
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Lancement de drakconnect\n"
 
-#: ../mdkapplet:221
+#: ../mdkapplet:223
 #, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr "Lancement de mdkupdate --applet\n"
 
-#: ../mdkapplet:224
+#: ../mdkapplet:226
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
-msgstr "Mandrakeonline semble avoir été réinstallé, rechargement de l'appliquette ..."
+msgstr ""
+"Mandrakeonline semble avoir été réinstallé, rechargement de l'appliquette ..."
 
-#: ../mdkapplet:235
+#: ../mdkapplet:237
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Calcul des nouvelles mises à jour...\n"
 
-#: ../mdkapplet:237
+#: ../mdkapplet:239
 #, c-format
 msgid "Connecting to"
 msgstr "Connection à"
 
-#: ../mdkapplet:244
+#: ../mdkapplet:246
 #, c-format
 msgid "Response from Mandrakeonline server\n"
 msgstr "réponse du serveur Mandrakeonline\n"
 
-#: ../mdkapplet:262
+#: ../mdkapplet:264
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Vérification... Des mises à jours sont disponibles\n"
 
-#: ../mdkapplet:267
+#: ../mdkapplet:269
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Version de développement non supportée par le service"
 
-#: ../mdkapplet:268
+#: ../mdkapplet:270
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Version de Mandrakelinux obsolète, non supportée par le service"
 
-#: ../mdkapplet:269
+#: ../mdkapplet:271
 #, c-format
 msgid "Unknown state"
 msgstr "Etat inconnu"
 
-#: ../mdkapplet:270
+#: ../mdkapplet:272
 #, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
-msgstr "Service en-ligne désactivé. Veuillez contacter le site Mandrakeonline\n"
+msgstr ""
+"Service en-ligne désactivé. Veuillez contacter le site Mandrakeonline\n"
 
-#: ../mdkapplet:271
+#: ../mdkapplet:273
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Mot de passe incorrect.\n"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:274
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Mauvaise action, hôte ou identifiant\n"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:275
 #, c-format
-msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
-msgstr "Une erreur semble être présente dans vos paramètres réseau (vérifiez votre table de routage, votre pare-feu ou les paramètres de votre serveur mandataire)\n"
+msgid ""
+"Something is wrong with your network settings (check your route, firewall or "
+"proxy settings)\n"
+msgstr ""
+"Une erreur semble être présente dans vos paramètres réseau (vérifiez votre "
+"table de routage, votre pare-feu ou les paramètres de votre serveur "
+"mandataire)\n"
 
-#: ../mdkapplet:277
+#: ../mdkapplet:279
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Le système est à jour\n"
 
-#: ../mdkapplet:317
+#: ../mdkapplet:319
 #, c-format
 msgid "No check"
 msgstr "Pas de vérification"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:332
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Vérification de l'accès au réseau : il semble être désactivé\n"
 
-#: ../mdkapplet:333
+#: ../mdkapplet:335
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Vérification du fichier de configuration : Absent\n"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:367
 #, c-format
 msgid "Logs"
 msgstr "Journaux"
 
-#: ../mdkapplet:381
+#: ../mdkapplet:383
 #, c-format
 msgid "Clear"
 msgstr "Effacer"
 
-#: ../mdkapplet:408
+#: ../mdkapplet:410
 #, c-format
 msgid "About..."
 msgstr "À propos..."
 
-#: ../mdkapplet:409
+#: ../mdkapplet:411
 #, c-format
 msgid "Always launch on startup"
 msgstr "Toujours lancer au démarrage"
 
-#: ../mdkapplet:411
+#: ../mdkapplet:413
 #, c-format
 msgid "Quit"
 msgstr "Quitter"
 
-#: ../mdkonline:52
-#: ../mdkonline:106
+#: ../mdkonline:52 ../mdkonline:106
 #, c-format
 msgid "Mandrakeonline"
 msgstr "Mandrakeonline"
@@ -328,24 +334,18 @@ msgstr "Création de compte ou authentification"
 #: ../mdkonline:119
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr "Entrez vos identifiant, mot de passe et nom de machine Mandrakeonline :"
+msgstr ""
+"Entrez vos identifiant, mot de passe et nom de machine Mandrakeonline :"
 
-#: ../mdkonline:125
-#: ../mdkonline:156
+#: ../mdkonline:125 ../mdkonline:156
 #, c-format
 msgid "Login:"
 msgstr "Identifiant :"
 
-#: ../mdkonline:126
-#: ../mdkonline:157
+#: ../mdkonline:126 ../mdkonline:157
 #, c-format
 msgid "Password:"
 msgstr "Mot de passe :"
-
-#: ../mdkonline:127
-#, c-format
-msgid "Machine name:"
-msgstr "Nom de l'ordinateur :"
 
 #: ../mdkonline:131
 #, c-format
@@ -362,8 +362,10 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com."
@@ -382,9 +384,7 @@ msgstr ""
 "plus, vous bénéficierez de remises sur les services d'aide payants sur\n"
 "www.mandrakeexpert.com."
 
-#: ../mdkonline:141
-#: ../mdkonline:180
-#: ../mdkupdate:129
+#: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:129
 #, c-format
 msgid "Connection problem"
 msgstr "Problème de connexion"
@@ -403,14 +403,18 @@ msgstr "Mot de passe incorrect :"
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n"
-" In the latter case, go back to the first step to connect to Mandrakeonline.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"Mandrakeonline.\n"
+" In the latter case, go back to the first step to connect to "
+"Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Votre identifiant ou mot de passe était incorrect.\n"
-" Vous devrez soit en recommencer la saisie, soit créer un compte Mandrakeonline.\n"
-" Dans le second cas, revenez à la première étape pour vous connecter à Mandrakeonline.\n"
+" Vous devrez soit en recommencer la saisie, soit créer un compte "
+"Mandrakeonline.\n"
+" Dans le second cas, revenez à la première étape pour vous connecter à "
+"Mandrakeonline.\n"
 " Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
 " (seuls les caractères alphabétiques sont autorisés)."
 
@@ -455,7 +459,8 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Compte Mandrakeonline créé avec succès.\n"
-"Cliquez sur \"Suivant\" pour vous authentifier et envoyer votre configuration au serveur\n"
+"Cliquez sur \"Suivant\" pour vous authentifier et envoyer votre "
+"configuration au serveur\n"
 
 #: ../mdkonline:178
 #, c-format
@@ -484,37 +489,42 @@ msgstr ""
 #: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr "Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
+msgstr ""
+"Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
 
 #: ../mdkonline:186
 #, c-format
 msgid "Country"
 msgstr "Pays"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Congratulations"
 msgstr "Félicitations"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Votre compte Mandrakeonline est correctement configuré\n"
 
-#: ../mdkonline:215
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Votre configuration a été envoyée avec succès"
 
-#: ../mdkonline:216
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Problème lors de l'envoi de votre configuration"
 
-#: ../mdkonline:217
+#: ../mdkonline:221
 #, c-format
-msgid "Cannot connect to mandrakeonline website: wrong login/password or router/firewall bad settings"
-msgstr "Ne peut se connecter au site internet mandrakeonline : mauvais identifiant/mot-de-passe ou mauvaise configuration routeur/pare-feu"
+msgid ""
+"Cannot connect to mandrakeonline website: wrong login/password or router/"
+"firewall bad settings"
+msgstr ""
+"Ne peut se connecter au site internet mandrakeonline : mauvais identifiant/"
+"mot-de-passe ou mauvaise configuration routeur/pare-feu"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -551,13 +561,15 @@ msgstr "Problème de connexion au serveur\n"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate version %s\n"
 "Copyright © %s Mandrakesoft.\n"
-"Ceci est un logiciel libre qui peut être redistribué selon les termes de la Licence Publique Générale GNU.\n"
+"Ceci est un logiciel libre qui peut être redistribué selon les termes de la "
+"Licence Publique Générale GNU.\n"
 "\n"
 "usage :\n"
 
@@ -579,15 +591,17 @@ msgstr "  --applet       - lance Mandrakeupdate.\n"
 #: ../mdkupdate:71
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr "Fichier %s non trouvé. Relancer l'assistant de configuration mdkonline pour le générer à nouveau."
+msgstr ""
+"Fichier %s non trouvé. Relancer l'assistant de configuration mdkonline pour "
+"le générer à nouveau."
 
 #: ../mdkupdate:129
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Mandrakeonline n'a pas pu être contacté, nous allons ré-essayer à nouveau."
+msgstr ""
+"Mandrakeonline n'a pas pu être contacté, nous allons ré-essayer à nouveau."
 
-#: ../mdkupdate:180
+#: ../mdkupdate:181
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Impossible de mettre a jour les paquetages du média mdkupdate\n"
-

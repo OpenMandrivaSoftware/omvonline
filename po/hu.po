@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-22 14:01+0100\n"
+"POT-Creation-Date: 2004-12-23 17:43+0100\n"
 "PO-Revision-Date: 2004-11-04 20:56+0100\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
@@ -81,13 +81,13 @@ msgstr "A szolgáltatás beállítása"
 msgid "Check Updates"
 msgstr "Frissítések keresése"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:225 ../mdkonline:89
+#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:227 ../mdkonline:89
 #: ../mdkonline:93 ../mdkonline:131
 #, c-format
 msgid "Please wait"
 msgstr "Kis türelmet"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:225
+#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:227
 #, c-format
 msgid "Check updates"
 msgstr "Frissítések keresése"
@@ -107,7 +107,7 @@ msgstr "A hálózat beállítása"
 msgid "Configure Now!"
 msgstr "Beállítás most"
 
-#: ../mdkapplet:152 ../mdkapplet:229
+#: ../mdkapplet:152 ../mdkapplet:231
 #, c-format
 msgid "Mandrakelinux Updates Applet"
 msgstr "Mandrakelinux-frissítési alkalmazás"
@@ -132,106 +132,111 @@ msgstr "Információ a naplóban"
 msgid "Status"
 msgstr "Állapot"
 
-#: ../mdkapplet:176 ../mdkapplet:375
+#: ../mdkapplet:176 ../mdkapplet:377
 #, c-format
 msgid "Close"
 msgstr "Bezárás"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Network Connection: "
 msgstr "Hálózati kapcsolat: "
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Up"
 msgstr "Aktív"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Down"
 msgstr "Inaktív"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:213
 #, c-format
 msgid "Last check: "
 msgstr "Legutóbbi ellenőrzés: "
 
-#: ../mdkapplet:213
+#: ../mdkapplet:214 ../mdkonline:127
+#, c-format
+msgid "Machine name:"
+msgstr "Gépnév:"
+
+#: ../mdkapplet:215
 #, c-format
 msgid "Updates: "
 msgstr "Frissítések: "
 
-#: ../mdkapplet:217
+#: ../mdkapplet:219
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "A DrakConnect indítása\n"
 
-#: ../mdkapplet:221
+#: ../mdkapplet:223
 #, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr "\"mdkupdate --applet\" indítása\n"
 
-#: ../mdkapplet:224
+#: ../mdkapplet:226
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Úgy tűnik, a Mandrakeonline újra lett telepítve - az alkalmazás "
 "újratöltése..."
 
-#: ../mdkapplet:235
+#: ../mdkapplet:237
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Új frissítések meghatározása...\n"
 
-#: ../mdkapplet:237
+#: ../mdkapplet:239
 #, c-format
 msgid "Connecting to"
 msgstr "Kapcsolódás:"
 
-#: ../mdkapplet:244
+#: ../mdkapplet:246
 #, c-format
 msgid "Response from Mandrakeonline server\n"
 msgstr "Válasz a Mandrakeonline-kiszolgálótól\n"
 
-#: ../mdkapplet:262
+#: ../mdkapplet:264
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Ellenőrzés... vannak elérhető frissítések\n"
 
-#: ../mdkapplet:267
+#: ../mdkapplet:269
 #, c-format
 msgid "Development release not supported by service"
 msgstr "A szolgáltatás nem támogat fejlesztői verziókat"
 
-#: ../mdkapplet:268
+#: ../mdkapplet:270
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Túl régi, a szolgáltatás által nem támogatott verzió"
 
-#: ../mdkapplet:269
+#: ../mdkapplet:271
 #, c-format
 msgid "Unknown state"
 msgstr "Ismeretlen állapot"
 
-#: ../mdkapplet:270
+#: ../mdkapplet:272
 #, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "Az online szolgáltatások inaktiválva vannak. Lépjen kapcsolatba a "
 "Mandrakeonline weboldallal.\n"
 
-#: ../mdkapplet:271
+#: ../mdkapplet:273
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Helytelen jelszó.\n"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:274
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Helytelen művelet, gép, vagy bejelentkezési név.\n"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:275
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -240,47 +245,47 @@ msgstr ""
 "A hálózatbeállítások nem megfelelők (ellenőrizze az útválasztást, a tűzfalat "
 "és a proxybeállításokat).\n"
 
-#: ../mdkapplet:277
+#: ../mdkapplet:279
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "A rendszer naprakész.\n"
 
-#: ../mdkapplet:317
+#: ../mdkapplet:319
 #, c-format
 msgid "No check"
 msgstr "Nincs ellenőrzés"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:332
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "A hálózat ellenőrzése: úgy tűnik, nem aktív\n"
 
-#: ../mdkapplet:333
+#: ../mdkapplet:335
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Beállításfájl ellenőrzése: nem található\n"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:367
 #, c-format
 msgid "Logs"
 msgstr "Naplók"
 
-#: ../mdkapplet:381
+#: ../mdkapplet:383
 #, c-format
 msgid "Clear"
 msgstr "Törlés"
 
-#: ../mdkapplet:408
+#: ../mdkapplet:410
 #, c-format
 msgid "About..."
 msgstr "Névjegy..."
 
-#: ../mdkapplet:409
+#: ../mdkapplet:411
 #, c-format
 msgid "Always launch on startup"
 msgstr "Minden rendszerindításnál induljon el"
 
-#: ../mdkapplet:411
+#: ../mdkapplet:413
 #, c-format
 msgid "Quit"
 msgstr "Kilépés"
@@ -340,11 +345,6 @@ msgstr "Azonosító:"
 #, c-format
 msgid "Password:"
 msgstr "Jelszó:"
-
-#: ../mdkonline:127
-#, c-format
-msgid "Machine name:"
-msgstr "Gépnév:"
 
 #: ../mdkonline:131
 #, c-format
@@ -496,27 +496,27 @@ msgstr "A fájlok feltöltésénél probléma lépett fel - próbálja meg ismé
 msgid "Country"
 msgstr "Ország"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulálunk"
 
-#: ../mdkonline:199
+#: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "A Mandrakeonline-azonosító beállítása megtörtént\n"
 
-#: ../mdkonline:215
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "A konfiguráció feltöltése megtörtént"
 
-#: ../mdkonline:216
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "A konfiguráció feltöltése közben probléma lépett fel"
 
-#: ../mdkonline:217
+#: ../mdkonline:221
 #, c-format
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
@@ -598,7 +598,7 @@ msgstr "%s fájl nem található. Futtassa a Mandrakeonline varázslót."
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr "A Mandrakeupdate nem tudott kapcsolatba lépni a géppel; újabb próba."
 
-#: ../mdkupdate:180
+#: ../mdkupdate:181
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "A csomagok Mandrakeupdate-adatforrásból való frissítése sikertelen.\n"
