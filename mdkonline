@@ -48,7 +48,6 @@ my $conffile = "$confdir/mdkupdate";
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
 require_root_capability();
-my $VERSION = '1.0';
 my $create_account = 0;
 
 my ($o, $p);
@@ -57,7 +56,7 @@ my ($o, $p);
 mkdir_p($confdir) if !-d $confdir;
 mdkonline::mv_files("/root/.mdkupdate", $conffile);
 
-$o->{mw} = ugtk2->new("Mandrakeonline" . " " . $VERSION, center => 1);
+$o->{mw} = ugtk2->new("Mandrakeonline" . " " . $::VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 600, 500);
 $o->{mw}{rwindow}->set_position('center');
 $o->{mw}{window}->signal_connect("delete_event", sub { Gtk2->main_quit });
@@ -264,7 +263,7 @@ sub check_passwd() {
     if ($login && $passwd && $boxname && $login !~ /\s+/ && $passwd !~ /\s+/) {
 	my $w = wait_msg("Connecting ...\n");
 	$link .= '?u=' . $login . '&p=' . $passwd;
-	my $response = mdkonline::get_from_URL($link);
+	my $response = mdkonline::get_from_URL($link, "MdkOnlineAgent/");
 	remove_wait_msg($w);
 	# Check the outcome of the response
 	if ($response->is_success) {
