@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	4mdk
+Release: 	5mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -19,7 +19,7 @@ BuildArch: noarch
 Summary: MandrakeOnline libraries and background tools
 Group: System/Configuration/Other
 Requires: drakxtools-newt >= 10-54mdk
-Conflicts: %{name} < 1.1-3mdk
+Conflicts: %{name} < 1.1-4mdk
 
 %description
 The MandrakeOnline tool is designed for registered users 
@@ -114,6 +114,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Sat Jul 17 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-5mdk
+- fix conflicts (fcrozat)
+
 * Fri Jul 16 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-4mdk
 - added mdkonline backend package for derivative products 
   (MNF, Corporate ...)
