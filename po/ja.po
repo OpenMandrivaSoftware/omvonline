@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-29 18:14+0200\n"
-"PO-Revision-Date: 2004-09-20 10:56+0900\n"
+"PO-Revision-Date: 2004-09-29 20:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr ""
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "お使いのバージョンはサービスの対象外です(期限切れ/開発版)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -185,12 +185,12 @@ msgstr "チェック中... 新しい更新があります\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "開発版(cooker)はサービスの対象外です"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "サポート期限の切れたバージョンはサービスの対象外です"
 
 #: ../mdkapplet:256
 #, c-format
@@ -219,8 +219,8 @@ msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
-"ネットワークの設定に問題があります。(ルート、ファイアウォール、プロキシ設定を"
-"確認して下さい。\n"
+"ネットワークの設定に問題があります(ルート、ファイアウォール、プロキシの設定を"
+"確認して下さい)\n"
 
 #: ../mdkapplet:264
 #, c-format
@@ -235,7 +235,7 @@ msgstr "チェックなし"
 #: ../mdkapplet:316
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr "ネットワーク確認: 無効化されているようです\n"
+msgstr "ネットワーク確認: 無効になっているようです\n"
 
 #: ../mdkapplet:319
 #, c-format
@@ -452,7 +452,7 @@ msgstr "メールアドレスが無効です\n"
 #: ../mdkonline:200 ../mdkonline_tui:77
 #, c-format
 msgid "Reading configuration\n"
-msgstr "設定読み込み中\n"
+msgstr "設定を読み込み中\n"
 
 #: ../mdkonline:205 ../mdkonline_tui:81
 #, c-format
@@ -473,7 +473,7 @@ msgstr "ファイル送信中に問題が発生しました。やり直して下
 #: ../mdkonline:252
 #, c-format
 msgid "Quitting Wizard\n"
-msgstr "Wizard を出る\n"
+msgstr "Wizard を終了\n"
 
 #: ../mdkonline:274
 #, c-format
@@ -508,27 +508,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "ログイン名とパスワードは12文字以内にしてください\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "特殊な文字は使用できません\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "すべての項目を埋めてください\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "メールアドレスが無効です\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "アカウントが既に存在します\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -536,19 +536,19 @@ msgid "Problem connecting to server \n"
 msgstr "サーバ接続中にエラーが発生\n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Mandrakeonline へようこそ"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "既にアカウントを持っています"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "入会します"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -558,22 +558,22 @@ msgstr "お待ちください"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "アカウントの作成または認証"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Mandrakeonline へようこそ"
+msgstr "Mandrakeonlineウェブサイトに接続中..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "または"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "パスワード誤り"
+msgstr "パスワード誤り:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -581,11 +581,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonlineアカウントを作成しました。\n"
+"「次へ」をクリックして認証と設定のアップロードを行なってください。\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "国名:"
+msgstr "国名"
 
 #: ../mdkupdate:50
 #, c-format
@@ -626,17 +628,17 @@ msgstr "  --update       - キー更新\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "%s ファイルがありません。まずmdkonlineウィザードを実行してください。"
 
 #: ../mdkupdate:124
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Mandrakeupdateはこのサイトに接続できません。再試行します。"
+msgstr "Mandrakeupdateはこのサイトに接続できませんでした。再試行します。"
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "mdkupdateメディアからのパッケージ更新ができません。\n"
+msgstr "mdkupdateメディアからパッケージを更新できません。\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -644,12 +646,53 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdateは差異ファイルをアップロードできませんでした。support [at] "
+"mandrakeonline [dot] net にメールしてください。"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "ウィザードを省略"
 
+#~ msgid "I don't have a Mandrakeonline account and I want to "
+#~ msgstr "Mandrakeonline にアカウントを持っていないので... "
+
 #~ msgid "Subscribe"
 #~ msgstr "入会する"
+
+#~ msgid ""
+#~ "In order to benefit from Mandrakeonline services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandrakesoft:\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrakeexpert.com.\n"
+#~ "Finally, an email alias with your username@mandrakeonline.net will be "
+#~ "provided to you."
+#~ msgstr ""
+#~ "Mandrakeonlineサービスをご利用頂くために、今から\n"
+#~ "あなたのシステムの設定情報を送信します。\n"
+#~ "\n"
+#~ "このWizardは次の情報を Mandrakesoft に送ります:\n"
+#~ "1) インストールされているパッケージのリスト\n"
+#~ "2) ハードウェアの設定\n"
+#~ "\n"
+#~ "これらの情報を送信されたくない、またはこのサービスを利用されない場合は"
+#~ "「キャンセル」を\n"
+#~ "押して下さい。「次へ」を選択されると、送信された情報をもとにセキュリティ"
+#~ "アップデート\n"
+#~ "と通常の更新情報をお客様ごとにメールでお知らせします。\n"
+#~ "また、このサービスをご利用頂くと www.mandrakeexpert.com の有料サポートにも"
+#~ "割引が\n"
+#~ "適用されます。\n"
+#~ "手続完了後、あなたの username@mandrakeonline.net をメールでお送りします。"
 
 #, fuzzy
 #~ msgid "Configuration"
