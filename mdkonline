@@ -30,7 +30,8 @@ Locale::GetText::textdomain ("MdkOnline");
 import Locale::GetText I_;
 use lib qw(/usr/lib/libDrakX);
 use interactive;
-my $in = 'interactive'->vnew('su', 'default');
+
+#my $in = 'interactive'->vnew('su', 'default');
 
 sub _ {
     my $s = shift @_; my $t = I_($s);
@@ -38,6 +39,8 @@ sub _ {
     my ($T, @p) = @$t;
     sprintf $T, @_[@p];
 }
+
+my $authentication_host = "bi";
 
 my $nb_pages=0;
 my $page;
@@ -85,11 +88,22 @@ $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
 my $login_user= new Gtk::Entry();
 my $passwd_user= new Gtk::Entry();
+my $login_user2= new Gtk::Entry();
+my $passwd_user2= new Gtk::Entry();
+
+my %actions = ( 
+		2 => \&test_passwd,
+		3 => \&test_passwd,
+		4 => \&send_config
+		);
+
 init_ui();
 $Main_Window->show_all;
 
 Gtk->main_iteration while Gtk->events_pending;
 Gtk->main;
+
+
 
 sub init_ui {
     step_wizard();
@@ -100,32 +114,102 @@ sub init_ui {
 sub on_next_clicked {
     $page=$notebook_global->get_current_page();
     print "$page\n" ;
-    $notebook_global->next_page();
+    if ( $actions{$page} ) {
+	print STDERR "Action !\n";
+	$actions{$page}->();
+    } else {
+	$notebook_global->next_page();
+    }
     $page=$notebook_global->get_current_page();
-    print "$page\n" ;
+    print "Go to page $page\n";
 }
 
 sub on_prev_clicked {
-    $notebook_global->prev_page();
+    $page=$notebook_global->get_current_page();
+    print "$page\n" ;
+
+    if ($page == 4) {
+	$notebook_global->set_page(2); # Alternatively, don't go back at all since passwd was correct
+    } 
+    elsif ($page == 6) { # Don't go back if informations were correctly sent (button should be deactivated)
+	
+    }
+    else {
+	$notebook_global->prev_page();
+    }
+
+    $page=$notebook_global->get_current_page();
+    print "Go BACK to page $page\n";
+}
+
+
+sub test_passwd () {
+
+    my $current_page = shift;
+
+    print STDERR "Testing passwd\n";
+
+    # test the password
+    my $login   = $login_user->get_text();
+    my $login2  = $login_user2->get_text();
+    my $passwd  = $passwd_user->get_text();
+    my $passwd2 = $passwd_user2->get_text();
+    if ($login2)  { $login = $login2; }
+    if ($passwd2) { $passwd = $passwd2; }
+    print STDERR "Login: $login\n";
+
+    if ($login =~ /OK/) { $status = 1; }
+    my $ssh_script = "";
+    foreach ("./sshlogin.exp", "/usr/bin/sshlogin.exp") {
+	[ -e "$_" ] and $ssh_script="$_", last;
+    }
+    print "Exec: $ssh_script $login $authentication_host $passwd \n";
+    `$ssh_script $login $authentication_host $passwd`;
+
+    # if correct (exit code: 0 from ssh script), go to page 4
+    if (! $?) {
+	$notebook_global->set_page(4); 
+    } else {
+    # if incorrect, clear passwd and go/stay on page 3
+	$passwd_user2->set_text("");
+	$notebook_global->set_page(3);
+    }
+
+}
+
+sub send_config {
+    print STDERR "Sending config\n";
 }
 
 sub step_wizard {
+
     my $vbox_welc= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to Mandrake Online"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
+
     my $vbox_priv = new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
+
     my $vbox_ident= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your Mandrake Online login and password:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
+
+    # building the "retype passwd page"
+    my $vbox_ident2= new Gtk::VBox(0,0);
+    write_on_pixmaps($vbox_ident2,"identity.png",_("Mandrake Online Authentification"),540,100);
+    my $label_wrong = new Gtk::Label("\n\n" . _("Wrong login/password, please try again:"));
+    $vbox_ident2->pack_start($label_wrong,$false ,$false,1);
+    pack_box_identity($vbox_ident2,"Login:",$login_user2,"Password:",$passwd_user2);
+    $notebook_global->append_page($vbox_ident2,new Gtk::Label("login"));
+
     my $vbox_rev=new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
     my $label_rev = new Gtk::Label(_("This is your chance, to help us improving Mandrake Linux.\n\nThe Wizard will now send the following informations to MandrakeSoft:\n1) the packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable, by that idea, press 'Cancel'.\nBy pressing 'Next', you will grant us the privilege\nto learn more about about you as our customer\nand it gives us the chance to keep you informed\nabout security updates and useful upgrades."));
