@@ -23,6 +23,7 @@
 use strict;
 use lib qw(/usr/lib/libDrakX);
 use common;
+BEGIN { unshift @::textdomains, 'mdkonline' }
 
 use Gtk2::TrayIcon;
 
