@@ -72,12 +72,10 @@ msgid "Quitting Wizard\n"
 msgstr "Завершения работы мастера\n"
 
 #: ../mdkonline_.c:265
-#, fuzzy
 msgid "Warning: No browser specified."
-msgstr "Предупреждение: Не указан броузер"
+msgstr "Предупреждение: Не выбран броузер."
 
 #: ../mdkonline_.c:292
-#, fuzzy
 msgid "Connecting...\n"
 msgstr "Соединение...\n"
 
@@ -86,17 +84,14 @@ msgid "Connection problem"
 msgstr "Проблема соединения"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again later."
-msgstr ""
-"Связь MandrakeOnline не может быть установлена, пожалуйста попробуйте позже"
+msgstr "Невозможно подключиться к MandrakeOnline, пожалуйста попробуйте позже."
 
 #: ../mdkonline_.c:312
 msgid "Wrong password"
 msgstr "Неверный пароль"
 
 #: ../mdkonline_.c:312
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -107,8 +102,8 @@ msgid ""
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Ваш логин или пароль были неверны.\n"
-"Или вы должны ввести его снова, или вам необходимо создать учетную запись в "
-"MandrakeOnline.\n"
+" Вы либо должны ввести их снова, либо вам необходимо создать учетную запись "
+"в MandrakeOnline.\n"
 " В последнем случае вернитесь назад к первому шагу для соединения с "
 "MandrakeOnline.\n"
 " Обратите внимание, что вы также должны указать имя машины \n"
@@ -119,7 +114,6 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Добро пожаловать в MandrakeOnline"
 
 #: ../mdkonline_.c:377
-#, fuzzy
 msgid ""
 "At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -127,7 +121,7 @@ msgid ""
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
 "На этом шаге Вам предлагается получить учетную запись в MandrakeOnline.\n"
-"Этот ассистент поможет вам загрузить вашу конфигурацию \n"
+"Этот ассистент поможет вам загрузить свою конфигурацию \n"
 "(пакеты, конфигурацию оборудования) в центральную базу данных для того, \n"
 "чтобы держать вас в курсе при появлении обновлений по безопасности \n"
 "и полезных апгрейдов.\n"
@@ -149,7 +143,6 @@ msgid "Login:"
 msgstr "Логин:"
 
 #: ../mdkonline_.c:402
-#, fuzzy
 msgid "Machine Name:"
 msgstr "Имя машины:"
 
@@ -162,7 +155,6 @@ msgid "Sending your Configuration"
 msgstr "Отправление вашей конфигурации"
 
 #: ../mdkonline_.c:408
-#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -181,19 +173,19 @@ msgid ""
 "Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
-"Для того, чтобы извлекать пользу из служб MandrakeOnline, \n"
-"мы рекомендуем закачать вашу конфигурацию.\n"
+"Для того, чтобы получать прибыль от служб MandrakeOnline, \n"
+"мы рекомендуем закачать к нам вашу конфигурацию.\n"
 "\n"
 "Сейчас Мастер отправит следующую информацию в MandrakeSoft:\n"
-"1) список пакетов, установленных вами в системе,2) конфигурацию вашего "
-"оборудования.\n"
+"1) список пакетов, установленных в вашей системе,\n"
+"2) конфигурацию вашего оборудования.\n"
 "\n"
-"Если вас не устраивает эта идея или вы не хотите извлекать пользу \n"
-"из этой службы, \n"
-"пожалуйста, нажмите на 'Отмену'. Нажимая на 'Дальше', вы разрешаете нам "
+"Если вас не устраивает эта идея или вы не хотите получать прибыль \n"
+"от этой службы, \n"
+"пожалуйста, нажмите на 'Отмену'. Нажимая на 'Далее', вы разрешаете нам "
 "держать вас в курсе последних событий\n"
 "об обновлениях по безопасности и полезных апргейдах посредством отправки "
-"личных сообщений по e-mail.\n"
+"личных сообщений на e-mail.\n"
 "Кроме того, вы получаете скидку при расплате в службе поддержки на\n"
 " www.mandrakeexpert.com.\n"
 "И, наконец, вам будет предоставлен почтовый ящик с вашим именем\n"
@@ -204,7 +196,6 @@ msgid "Error while sending informations"
 msgstr "Ошибка при отправлении информации"
 
 #: ../mdkonline_.c:417
-#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -212,23 +203,21 @@ msgid ""
 msgstr ""
 "Произошла ошибка при отправке вашей личной информации.\n"
 "\n"
-"Нажмите Дальше, чтобы попытаться снова отправить вашу конфигурацию."
+"Нажмите 'Далее', чтобы попытаться снова отправить вашу конфигурацию."
 
 #: ../mdkonline_.c:423
 msgid "Finished"
 msgstr "Завершено"
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "From now on you will receive security and update \n"
 "announcements through MandrakeOnline."
 msgstr ""
 "С этого момента вы будете получать уведомления\n"
-"по безопасности и обновлениям, благодаря MandrakeOnline."
+"по безопасности и обновлениям через  MandrakeOnline."
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary on your system waiting for new updates\n"
@@ -242,9 +231,8 @@ msgid "Your upload was successful!"
 msgstr "Закачка произведена успешно!"
 
 #: ../mdkonline_.c:429
-#, fuzzy
 msgid "Automated Upgrades"
-msgstr "автоматизированные апгрейды"
+msgstr "Автоматизированные апгрейды"
 
 #: ../mdkonline_.c:436
 msgid "Choose your geographical location"
@@ -255,9 +243,9 @@ msgid "Reading configuration\n"
 msgstr "Чтение конфигурации\n"
 
 #: ../mdkonline_.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open this file for read: %s"
-msgstr "невозможно открыть этот файл для чтения: %s"
+msgstr "Невозможно открыть этот файл для чтения: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -272,15 +260,14 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: ../mdkonline_.c:552
-#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel'.\n"
 "To really quit it press 'Quit'."
 msgstr ""
 "Вы действительно хотите прервать MandrakeOnline?\n"
-"Чтобы вернуться в Мастер, нажмите на 'Отмену',\n"
-"чтобы действительно выйти из него, нажмите 'Выход'."
+"Чтобы вернуться в Мастер, нажмите на 'Отмену'.\n"
+"Чтобы действительно выйти из него, нажмите 'Выход'."
 
 #: ../mdkonline_.c:556
 msgid "Really abort? - MandrakeOnline"
@@ -329,41 +316,36 @@ msgstr "  --update       - обновить всю информацию.\n"
 
 #: ../mdkupdate_.c:60
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - многословный режим.\n"
+msgstr "  -v             - подробный режим.\n"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate не может связаться с сайтом, попытаемся снова"
+msgstr "MandrakeUpdate не может связаться с сайтом, попытаемся снова."
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr ""
-"С любыми проблемами отправляйте письма \n"
+"По любым вопросам отправляйте e-mail \n"
 "на support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"Вам понадобится получить учетную запись в MandrakeOnline или \n"
-"обновить вашу подписку"
+"Вам необходимо иметь учетную запись в MandrakeOnline или \n"
+"обновить вашу подписку."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
 msgstr "Ваш логин или пароль возможно неверны"
 
 #: ../mdkupdate_.c:214
-#, fuzzy
 msgid "Unable to create mdkupdate medium.\n"
-msgstr "невозможно создать накопитель mdkupdate\n"
+msgstr "Невозможно создать накопитель mdkupdate.\n"
 
 #: ../mdkupdate_.c:216
-#, fuzzy
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "невозможно обновить пакеты с накопителя mdkupdate\n"
+msgstr "Невозможно обновить пакеты с накопителя mdkupdate.\n"
 
 #~ msgid "wget is missing\n"
 #~ msgstr "отсутствует wget\n"
