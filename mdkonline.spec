@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	2.1.100mdk
+Release: 	3mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,14 +96,15 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-2.1.100mdk
-- added misc architectures (ia64, amd64, x86_64, noarch, ppc64)
-- use md5 file check to reload automagically mdkapplet when mdkonline 
-  package has changed (install, upgrade or file replacement).
+* Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-3mdk
+ o Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-2.1.100mdk
+   - added misc architectures (ia64, amd64, x86_64, noarch, ppc64)
+   - use md5 file check to reload automagically mdkapplet when mdkonline 
+     package has changed (install, upgrade or file replacement).
 
-* Mon May 31 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
-- Released as mandatory update and tagged as security fix 
-  (force applet to update itself).
+ o Mon May 31 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
+   - Released as mandatory update and tagged as security fix 
+     (force applet to update itself).
 
 * Tue May 25 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-8mdk
 - fix broken regexp in error handling code (flepied)
