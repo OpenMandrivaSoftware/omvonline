@@ -1,18 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # Peter Bosch <peter.bosch@hccnet.nl>, 2002
+# Reinout van Schouwen <reinout@cs.vu.nl>, 2002
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2002-08-16 12:11+0200\n"
-"PO-Revision-Date: 2002-08-19 12:08+0200\n"
-"Last-Translator: Jeroen ten Berge <j.ten.berge@twinbit.nl>\n"
-"Language-Team: (nl) Dutch team\n"
+"PO-Revision-Date: 2002-08-24 21:58+0100\n"
+"Last-Translator: Reinout van Schouwen <reinout@cs.vu.nl>\n"
+"Language-Team: (nl) Dutch team <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
 
 #: ../mdkonline_.c:71
 msgid "Africa"
@@ -69,7 +69,7 @@ msgstr "Ja, ik wil automatische updates"
 
 #: ../mdkonline_.c:166
 msgid "Quitting Wizard\n"
-msgstr "Wizard afsluiten\n"
+msgstr "Bezig met afsluiten wizard\n"
 
 #: ../mdkonline_.c:263
 msgid "Warning: No browser specified"
@@ -105,9 +105,9 @@ msgstr ""
 "Uw gebruikersnaam of wachtwoord was onjuist.\n"
 " U kunt het opnieuw proberen, of u moet zich nog registreren bij "
 "MandrakeOnline.\n"
-" In het laatste geval moet u terug naar de eerst stap om verbinding te maken "
-"metMandrakeOnline.\n"
-" Wees ervan bewust dat u ook een Computernaam moet invoeren \n"
+" In het laatste geval dient u terug te gaan naar de eerste stap om "
+"verbinding te maken metMandrakeOnline.\n"
+" Weest u zich ervan bewust dat u ook een Computernaam moet invoeren \n"
 " (alleen letters zijn toegestaan)"
 
 #: ../mdkonline_.c:369
@@ -124,15 +124,16 @@ msgstr ""
 "U wordt bij deze stap verondersteld een MandrakeOnline account te hebben.\n"
 "Deze assistent zal u helpen om uw configuratie te sturen\n"
 "(pakketten, hardware configuratie) naar een centrale database om\n"
-"u op de hoogte te houden van beveiligings updates en nuttige upgrades.\n"
+"u op de hoogte te houden van beveiligingsvernieuwingen en nuttige "
+"opwaarderingen.\n"
 
 #: ../mdkonline_.c:387
 msgid "Mandrake Privacy Policy"
-msgstr "Mandrake Privé Beleid"
+msgstr "Mandrake Privacy-beleid"
 
 #: ../mdkonline_.c:392
 msgid "Authentification"
-msgstr "Authenticatie"
+msgstr "Verificatie"
 
 #: ../mdkonline_.c:393
 msgid "Enter your MandrakeOnline login, password and machine name:"
@@ -174,7 +175,7 @@ msgid ""
 "provided to you."
 msgstr ""
 "Om te profiteren van de MandrakeOnline diensten,\n"
-"staan we op het punt uw configuratie te sturen.\n"
+"staan we op het punt uw configuratie op te sturen.\n"
 "\n"
 "De Wizard zal nu de volgende informatie naar MandrakeSoft sturen:\n"
 "1) een lijst met pakketten die u heeft geïnstalleerd op uw systeem,\n"
@@ -184,15 +185,16 @@ msgstr ""
 "diensten, \n"
 "druk dan op 'Annuleren'. Als u op 'Volgende' klikt, staat u ons toe dat wij "
 "u informeren\n"
-"over beveiligings updates en nuttige upgrades via persoonlijke e-mail "
-"berichten.\n"
+"over beveiligingsvernieuwingen en nuttige opwaarderingen via persoonlijke e-"
+"mail.\n"
 "Verder profiteert u van goedkopere betaalde ondersteuning op\n"
 "www.mandrakeexpert.com.\n"
-"Tot slot krijg u een e-mailadres met 'uw gebruikersnaam'@mandrakeonline.net"
+"Tot slot krijg u een e-mailadres met 'uw gebruikersnaam'\\@mandrakeonline."
+"net ."
 
 #: ../mdkonline_.c:409
 msgid "Error while sending informations"
-msgstr "Fout bij het versturen van informatie"
+msgstr "Er is een fout opgetreden bij het versturen van informatie"
 
 #: ../mdkonline_.c:410
 msgid ""
@@ -231,7 +233,7 @@ msgstr "Het versturen is gelukt!"
 
 #: ../mdkonline_.c:422
 msgid "automated Upgrades"
-msgstr "geautomatiseerde Updates"
+msgstr "geautomatiseerde vernieuwingen"
 
 #: ../mdkonline_.c:429
 msgid "Choose your geographical location"
@@ -296,8 +298,8 @@ msgid ""
 msgstr ""
 "mdkupdate versie %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
-"Dit is gratis software en mag geherdistribueert worden onder de voorwaarden "
-"van de GNU GPL.\n"
+"Dit is vrije software en mag verder gedistribueerd worden onder de "
+"voorwaarden van de GNU GPL.\n"
 "\n"
 "gebruik:\n"
 
@@ -326,7 +328,9 @@ msgstr "Voor problemen kunt u mailen naar support\\@mandrakeonline.net\n"
 #: ../mdkupdate_.c:110
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
-msgstr "U heeft een account op MandrakeOnline nodig, of pas uw abonnement aan"
+msgstr ""
+"U heeft een account op MandrakeOnline nodig, of uw abonnement moet vernieuwd "
+"worden"
 
 #: ../mdkupdate_.c:110
 msgid "Your login or password may be wrong"
@@ -334,14 +338,21 @@ msgstr "Uw gebruikersnaam of wachtwoord is onjuist"
 
 #: ../mdkupdate_.c:122
 msgid "wget is missing\n"
-msgstr "wget is niet geinstalleerd\n"
+msgstr "wget is niet geïnstalleerd\n"
+
+#~ msgid "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Een programma dat regelmatig zal worden gestart en kijkt of er nieuwe "
+#~ "opwaarderingen zijn\n"
+
+#~ msgid ""
+#~ "From now you will receive on security\n"
+#~ "and updates announcements thanks to MandrakeOnline."
+#~ msgstr ""
+#~ "Vanaf nu ontvangt u beveiliging- en\n"
+#~ "vernieuwings-aankondigingen aangeboden door MandrakeOnline"
 
 #~ msgid "MandrakeOnline offers you the ability to automate the updates."
 #~ msgstr ""
-#~ "MandrakeOnline biedt u de mogelijkheid om de updates te automatiseren."
-
-#~ msgid "mdkupdate version %s"
-#~ msgstr "mdkupdate versie %s"
-
-#~ msgid "USA"
-#~ msgstr "USA"
+#~ "MandrakeOnline biedt u de mogelijkheid om de vernieuwingen te "
+#~ "automatiseren."
