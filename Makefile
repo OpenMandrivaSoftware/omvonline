@@ -46,7 +46,7 @@ install: all
 
 # rules to build a test rpm
 
-localrpm: cleandist clean localdist buildrpm
+localrpm:  clean localdist buildrpm
 
 localdist: cleandist dir localcopy tar
 
@@ -70,6 +70,7 @@ buildrpm:
 		cat $(PACKAGE).spec \
 	) > $(RPM)/SPECS/$(PACKAGE).spec
 	rpm -ta ../$(PACKAGE)-$(VERSION).tar.bz2
+	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
 
 # rules to build a distributable rpm
 
