@@ -38,7 +38,6 @@ my $nowindow = 1;
 my $arch = arch();
 my $av_pkgs;
 my $need_update = 0;
-my $confpers = "$ENV{HOME}/.mdkonline";
 my $conffile = '/etc/sysconfig/mdkonline';
 
 my %state = (
@@ -108,7 +107,8 @@ $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
-shouldStart() or c::_exit(0);
+shouldStart() or die "$ENV{HOME}/.mdkonline should be set to TRUE";
+
 checkUpdates();
 cronUpdate();
 
@@ -144,8 +144,7 @@ sub showMainWindow() {
 						 0, Gtk2::Label->new(N("New Updates: ")),
 						 0, Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
 						),
-				     0, gtkpack_(Gtk2::HBox->new(0, 3),
-						 0, Gtk2::Label->new(N("Last check: ")),
+				     0, gtkpack_(Gtk2::HBox->new(0, 3)						 0, Gtk2::Label->new(N("Last check: ")),
 						 0, Gtk2::Label->new(lastCheck())
 						),
 				    )
@@ -266,7 +265,7 @@ sub displayLogs {
     system "/usr/sbin/logdrake --explain=drakxtools &"
 }
 sub shouldStart() {
-    my %p = getVarsFromSh($confpers);
+    my %p = getVarsFromSh("$ENV{HOME}/.mdkonline");
     my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
     $ret
 }
@@ -292,9 +291,9 @@ sub about {
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
 sub mainQuit() {
-    output $confpers,
+    output_p "$ENV{HOME}/.mdkonline",
     qq(AUTOSTART=FALSE
 );
-    chmod 0644, $confpers;
+    chmod 0644, "$ENV{HOME}/.mdkonline";
     Gtk2->main_quit
 }
