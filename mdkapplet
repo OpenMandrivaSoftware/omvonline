@@ -349,7 +349,6 @@ sub isNetwork {
     if ($r <= 10.0) {
 	$network = gethostbyname("mandrakeonline.net") ? 1 : 0;
     } else {
-	print "requiring net_connect";
 	require network::netconnect;
 	require network::tools;
     	network::netconnect::read_net_conf($netcnx, $netc, $intf);

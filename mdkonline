@@ -49,11 +49,11 @@ $ia = 1;
 
 GetOptions('interactive!' => \$ia, 'login=s' => \$login, 'pass=s' => \$password, 'box=s' => \$boxname, 'country:s' => \$country);
 
+my $in = interactive->vnew('su') if $ia;
+
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
 -e '/root/.mdkupdate' and system("mv", "/root/.mdkupdate", $conffile);
-
-my $in = interactive->vnew('su') if $ia;
 
 $::Wizard_title = N("Mandrakeonline");
 
