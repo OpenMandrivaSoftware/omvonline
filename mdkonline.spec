@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-2.1.100mdk
 - added misc architectures (ia64, amd64, x86_64, noarch, ppc64)
-- use md5 file check tp reload automagically mdkapplet when  mdkonline 
+- use md5 file check tp reload automagically mdkapplet when mdkonline 
   package has changed.
 
 * Mon May 31 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
