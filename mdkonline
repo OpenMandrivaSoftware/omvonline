@@ -203,9 +203,9 @@ sub send_conf_online() {
     my $tag = { submit => "upload_wizard", wizard => ["$confdir/$login.$passwd.$boxname.online.log.bz2.uue"] };
     remove_wait_msg($w);
     my $ww = wait_msg(N("Sending configuration..."));
+    my ($res, $key) = mdkonline::send_config($link, $tag);
     my $pass = $o->{passwd}->get_text;
     mdkonline::hw_upload($login, $pass, $boxname);
-    my ($res, $key) = mdkonline::send_config($link, $tag);
     remove_wait_msg($ww);
     if ($res eq 'TRUE' && $key) {
 	$o->{currentkey} = $key;
