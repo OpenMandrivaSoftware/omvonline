@@ -214,7 +214,7 @@ sub isNetwork {
     $network;
 }
 sub configure {
-    system "/usr/sbin/drakclock &";
+    system "/usr/sbin/mdkonline &";
 }
 sub getSite {
     my $b = browser();
