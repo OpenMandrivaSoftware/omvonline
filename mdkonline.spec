@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Thu Mar 24 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-32mdk
-- best browwser is now handled by /usr/bin/www-browser 
+- best browwser is now handled by /usr/bin/www-browser (#14847)
 
 * Wed Mar 16 2005 Daouda LO <daouda@mandrakesoft.com> 1.1-31mdk
 - change Packager to mandrakeonline team
