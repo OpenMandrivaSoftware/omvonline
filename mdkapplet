@@ -145,7 +145,7 @@ sub showMainWindow() {
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("Network Connection: ")),
 						 0, Gtk2::Label->new(isNetwork() ? N("Up") : N("Down"))
-						),
+ 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("New Updates: ")),
 						 0, $update_label = Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
