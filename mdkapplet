@@ -39,9 +39,10 @@ if ($@) {
 }
 my ($eventbox, $img);
 add_icon_path("/usr/share/mdkonline/pixmaps/");
-my ($menu, $url, $timeout, $refreshtm);
+my ($menu, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
+my $online_site = "http://www.mandrakeonline.net/";
 my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my @proctable;
@@ -105,7 +106,7 @@ my %actions = (
 	       'update' => { name => N("Launch Mandrake Update"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configuration"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
-	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite() } },
+	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'register' => { name => N("Configure Now!"), launch => sub { configure() } }
 	      );
@@ -379,8 +380,10 @@ sub configure {
 				    });
 }
 sub getSite {
+    my $link = shift;
+    $link .= join('', @_);
     my $b = browser();
-    system("$b " . "https://www.mandrakeonline.net" . "&")
+    system("$b " . $link . "&")
 }
 sub browser {
     require any;
@@ -438,7 +441,7 @@ sub setState {
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
-    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About.."))), activate => sub { about() }));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About.."))), activate => sub { getSite($online_site) }));
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu
 }
@@ -448,11 +451,6 @@ sub logIt {
     if (defined $wlog) {
 	$buffer->insert_at_cursor($log)
     }
-}
-sub about {
-    my $b = browser();
-    logIt(N("Attempting to connect to mandrakeonline.net\n"));
-    system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
 sub setVar {
     my ($file, $var, $st) = @_;
