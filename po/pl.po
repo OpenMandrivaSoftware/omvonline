@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-01 20:46+0100\n"
+"POT-Creation-Date: 2004-03-03 12:46+0100\n"
 "PO-Revision-Date: 2004-02-20 19:59+0100\n"
 "Last-Translator: Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -28,6 +28,7 @@ msgid "System is busy. Wait ..."
 msgstr "System jest zajęty. Czekaj ..."
 
 #: ../mdkapplet:67
+#, fuzzy, perl-format
 msgid "%s packages available for update"
 msgstr "% pakietów jest dostępnych do aktualizacji"
 
@@ -63,83 +64,88 @@ msgstr "Skonfiguruj sieć"
 msgid "Configure Now!"
 msgstr "Skonfiguruj teraz!"
 
-#: ../mdkapplet:112
+#: ../mdkapplet:116
 msgid "Mandrake Updates Applet"
 msgstr "Aplet aktualizacji Mandrake"
 
-#: ../mdkapplet:120
+#: ../mdkapplet:124
 msgid "Actions"
 msgstr "Operacje"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:126
 msgid "Install updates"
 msgstr "Zainstaluj aktualizacje"
 
-#: ../mdkapplet:123
+#: ../mdkapplet:127
 msgid "Configure"
 msgstr "Skonfiguruj"
 
-#: ../mdkapplet:124
+#: ../mdkapplet:128
 msgid "Check updates"
 msgstr "Sprawdź aktualizację"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:129
 msgid "See logs"
 msgstr "Zobacz dziennik"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:132
 msgid "Status"
 msgstr "Stan"
 
-#: ../mdkapplet:131
+#: ../mdkapplet:135
 msgid "Network Connection: "
 msgstr "Połączenie sieciowe: "
 
-#: ../mdkapplet:132
+#: ../mdkapplet:136
 msgid "Down"
 msgstr "W dół"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:136
 msgid "Up"
 msgstr "W górę"
 
-#: ../mdkapplet:135
+#: ../mdkapplet:139
 msgid "New Updates: "
 msgstr "Nowe aktualizacje: "
 
-#: ../mdkapplet:136
+#: ../mdkapplet:140
 msgid "Available"
 msgstr "Dostępny"
 
-#: ../mdkapplet:136
+#: ../mdkapplet:140
 msgid "Not Available"
 msgstr "Niedostępny"
 
-#: ../mdkapplet:139
+#: ../mdkapplet:143
 msgid "Last check: "
 msgstr "Ostatnie sprawdzenie: "
 
-#: ../mdkapplet:145
+#: ../mdkapplet:149
 msgid "Close"
 msgstr "Zamknij"
 
-#: ../mdkapplet:250
+#: ../mdkapplet:203
+#, fuzzy
+msgid "No check"
+msgstr "Ostatnie sprawdzenie: "
+
+#: ../mdkapplet:261
 msgid "About.."
 msgstr "Informacje o programie"
 
-#: ../mdkapplet:251
+#: ../mdkapplet:262
 msgid "Quit"
 msgstr "Zakończ"
 
-#: ../mdkonline:87
+#: ../mdkonline:89
 msgid "Skip Wizard"
 msgstr "Pomiń druida"
 
-#: ../mdkonline:101
+#: ../mdkonline:103
 msgid "Welcome to MandrakeOnline"
 msgstr "Witaj w MandrakeOnline"
 
-#: ../mdkonline:102
+#: ../mdkonline:104
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -151,51 +157,51 @@ msgstr ""
 "(pakiety, konfiguracja sprzętowa) do centralnej bazy danych aby\n"
 "móc lepiej informować cię o odpowiednich uaktualnieniach.\n"
 
-#: ../mdkonline:103
+#: ../mdkonline:105
 msgid "Create a MandrakeOnline Account"
 msgstr "Utwórz konto Mandrake Online"
 
-#: ../mdkonline:105
+#: ../mdkonline:107
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "Nie posiadam konta MandrakeOnline i chcę je otrzymać "
 
-#: ../mdkonline:105
+#: ../mdkonline:107
 msgid "Subscribe"
 msgstr "Zasubskrybuj"
 
-#: ../mdkonline:109 ../mdkonline:129
+#: ../mdkonline:111 ../mdkonline:131
 msgid "Login:"
 msgstr "Login:"
 
-#: ../mdkonline:110 ../mdkonline:130
+#: ../mdkonline:112 ../mdkonline:132
 msgid "Password:"
 msgstr "Hasło:"
 
-#: ../mdkonline:111
+#: ../mdkonline:113
 msgid "Confirm Password:"
 msgstr "Potwierdź hasło:"
 
-#: ../mdkonline:112
+#: ../mdkonline:114
 msgid "Mail contact:"
 msgstr "Kontakt pocztowy:"
 
-#: ../mdkonline:119
+#: ../mdkonline:121
 msgid "Mandrake Privacy Policy"
 msgstr "Zastrzeżenie prywatności Mandrake"
 
-#: ../mdkonline:125
+#: ../mdkonline:127
 msgid "Authentification"
 msgstr "Uwierzytelnienie"
 
-#: ../mdkonline:126
+#: ../mdkonline:128
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Wprowadź swój login MandrakeOnline, hasło i nazwę komputera:"
 
-#: ../mdkonline:131
+#: ../mdkonline:133
 msgid "Machine name:"
 msgstr "Nazwa komputera:"
 
-#: ../mdkonline:137
+#: ../mdkonline:139
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -229,7 +235,7 @@ msgstr ""
 "na www.mandrakeexpert.com.\n"
 "Zostanie Ci przypisany także alias z loginem@mandrakeonline.net."
 
-#: ../mdkonline:143
+#: ../mdkonline:145
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
@@ -237,7 +243,7 @@ msgstr ""
 "Od tej chwili będziesz otrzymywać informacje\n"
 "o wykrytych błedach i uaktualnieniach dzięki MandrakeOnline."
 
-#: ../mdkonline:143
+#: ../mdkonline:145
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
@@ -245,79 +251,79 @@ msgstr ""
 "MandrakeOnline oferuje ci możliwość automatyzacji uaktualnień.\n"
 "Program będzie uruchamiał się regulanie i oczekiwał na uaktualnienia\n"
 
-#: ../mdkonline:143
+#: ../mdkonline:145
 msgid "Your upload was successful!"
 msgstr "Informacje zostały pomyślnie przesłane!"
 
-#: ../mdkonline:144
+#: ../mdkonline:146
 msgid "automated Upgrades"
 msgstr "automatyczne uaktualnienia"
 
-#: ../mdkonline:146
+#: ../mdkonline:148
 msgid "Yes I want automated updates"
 msgstr "Tak, chcę automatyczne uaktualnienia"
 
-#: ../mdkonline:149
+#: ../mdkonline:151
 msgid "Country:"
 msgstr "Kraj:"
 
-#: ../mdkonline:176
+#: ../mdkonline:178
 msgid "Creation"
 msgstr "Tworzenie"
 
-#: ../mdkonline:176
+#: ../mdkonline:178
 msgid "Login and password should be less than 12 characters\n"
 msgstr "Login i hasło powinny być krótsze niż 12 znaków\n"
 
-#: ../mdkonline:177
+#: ../mdkonline:179
 msgid "Special characters"
 msgstr "Znaki specjalne"
 
-#: ../mdkonline:177
+#: ../mdkonline:179
 msgid "Special characters are not allowed\n"
 msgstr "Znaki specjalne nie są dozwolone\n"
 
-#: ../mdkonline:178
+#: ../mdkonline:180
 msgid "Empty fields"
 msgstr "Puste pola"
 
-#: ../mdkonline:178
+#: ../mdkonline:180
 msgid "Please fill in all fields\n"
 msgstr "Wypełnij wszystkie pola\n"
 
-#: ../mdkonline:179
+#: ../mdkonline:181
 msgid "Email"
 msgstr "E-mail"
 
-#: ../mdkonline:179
+#: ../mdkonline:181
 msgid "Email not valid\n"
 msgstr "Adres e-mail nie jest prawidłowy\n"
 
-#: ../mdkonline:180
+#: ../mdkonline:182
 msgid "Account already exist\n"
 msgstr "Konto już istnieje\n"
 
-#: ../mdkonline:180
+#: ../mdkonline:182
 msgid "Change account"
 msgstr "Zmień konto"
 
-#: ../mdkonline:186
+#: ../mdkonline:188
 msgid "Problem connecting to server \n"
 msgstr "Problem przy łączeniu z serwerem\n"
 
-#: ../mdkonline:186
+#: ../mdkonline:188
 msgid "Server Problem"
 msgstr "Problem z serwerem"
 
-#: ../mdkonline:191 ../mdkonline:193 ../mdkonline:195
+#: ../mdkonline:193 ../mdkonline:195 ../mdkonline:197
 msgid "Error"
 msgstr "Błąd"
 
-#: ../mdkonline:191
+#: ../mdkonline:193
 msgid "Please provide a login"
 msgstr "Podaj login"
 
-#: ../mdkonline:193
+#: ../mdkonline:195
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
@@ -325,36 +331,36 @@ msgstr ""
 "Hasło się nie zgadza\n"
 "Spróbuj ponownie\n"
 
-#: ../mdkonline:195
+#: ../mdkonline:197
 msgid "Not a valid mail address!\n"
 msgstr "To nie jest poprawny adres e-mail!\n"
 
-#: ../mdkonline:218
+#: ../mdkonline:225
 msgid "Sending configuration..."
 msgstr "Przesyłanie konfiguracji..."
 
-#: ../mdkonline:240 ../mdkonline:263
+#: ../mdkonline:247 ../mdkonline:275
 msgid "Finish"
 msgstr "Zakończ"
 
-#: ../mdkonline:244 ../mdkonline:313 ../mdkupdate:77
+#: ../mdkonline:251 ../mdkonline:326 ../mdkupdate:77
 msgid "Connection problem"
 msgstr "Problem z połączeniem"
 
-#: ../mdkonline:244 ../mdkonline:313
+#: ../mdkonline:251 ../mdkonline:326
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Nie można nawiązać połączenia z MandrakeOnline, spróbuj zrobić to później."
 
-#: ../mdkonline:280
+#: ../mdkonline:292
 msgid "Quitting Wizard\n"
 msgstr "Opuszczanie druida\n"
 
-#: ../mdkonline:325
+#: ../mdkonline:338
 msgid "Wrong password"
 msgstr "Niepoprawne hasło"
 
-#: ../mdkonline:325
+#: ../mdkonline:338
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -370,11 +376,12 @@ msgstr ""
 " z MandrakeOnline. Zauważ, że należy także podać nazwę komputera\n"
 " (przyjmowane są tylko znaki alfanumeryczne)"
 
-#: ../mdkonline:332
+#: ../mdkonline:345
 msgid "Reading configuration\n"
 msgstr "Wczytywanie konfiguracji\n"
 
 #: ../mdkupdate:50
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
