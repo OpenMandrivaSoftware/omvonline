@@ -80,7 +80,7 @@ sub send_conf {
     undef $w;
     my $ww = $in->wait_message(N("Please wait"), N("Sending configuration..."));
     ($sendconfres, $key) = mdkonline::send_config($uplink, $tag);
-    mdkonline::hw_upload($login, $pass, $boxname);
+    mdkonline::hw_upload($log, $pass, $box);
     undef $ww;
     ($sendconfres, $key)
 }
@@ -133,7 +133,7 @@ $wiz = {
 				   post => sub { 
 				       if ($is_success) {
 					   ($sendconfres, $key) = send_conf($login, $password, $boxname);
-					   "end"
+					   "upload"
 				       } else { "choices" }
 				   }
 				  },
@@ -160,21 +160,31 @@ $wiz = {
 					$createaccount eq 'OK' ? "account" : "noaccount"
 				    }
 				   },
+		  upload => {
+			     name => sub {
+				 if ($sendconfres eq 'TRUE' && $key) {
+				     "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
+				 } else {
+				     N("Connection problem") . N("Problem occurs when uploading files, please try again")
+				 }
+			     },
+			     data => sub {
+				 if ($sendconfres eq 'TRUE' && $key) {
+				     [ 
+				      { label => N("Country"), val => \$country, format => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
+					list => [ sort keys %countries ], not_edit => 0 }
+				     ]
+				 }
+			     },
+			     post => sub {
+				 mdkonline::automated_upgrades($conffile, $login, $password, $boxname, $key, $country, 'TRUE');
+				 mdkonline::write_wide_conf($login, $boxname, $country);
+				 "end"
+			     },
+			    },
 		  end => {
 			  name => sub {
-			      if ($sendconfres eq 'TRUE' && $key) {
-				  "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
-			      } else {
-				  N("Connection problem") . N("Problem occurs when uploading files, please try again")
-			      }
-			  },
-			  data => sub {
-			      if ($sendconfres eq 'TRUE' && $key) {
-				  [ 
-				   { label => N("Country"), val => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
-				     list => [ sort keys %countries ], not_edit => 0 }
-				  ]
-			      }	      
+			      N("Congratulations") . "\n\n" . N("Your Mandrakeonline account has been successfully configured\n")
 			  },
 			  end => 1,
 			  no_back => 1,
