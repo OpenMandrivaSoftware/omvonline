@@ -16,8 +16,8 @@ License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
 Requires:	popt >= 1.6, 
-Requires: expect
-Requires: openssh-clients
+#Requires: expect
+#Requires: openssh-clients
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 
@@ -78,8 +78,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Tue Sep  4 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-6mdk
-- add icons
+* Tue Sep 11 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-6mdk
+- cvs snapshot
+- new http authentification
+- cosmetics changes (add icons, paging...)
+- no more requires on expect and openssh.
 
 * Sun Sep  2 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-5mdk
 - add online subscription feature.
