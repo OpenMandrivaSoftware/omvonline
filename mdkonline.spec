@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 14mdk
+%define release 15mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -129,6 +129,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon Oct  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-15mdk
+- po updates
+- exit code instead of die on mdkupdate
+
 * Fri Oct  1 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-14mdk
 - libDrakX is always in %%{_prefix}/lib (gwenole)
 - write local and wide configs when Text wizard is used
