@@ -96,6 +96,8 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.4mdk
 - require drakfirsttime (>= 1.0-0.6mdk)
+- proxy support (olivier blin)
+- some consistencies amongst wizard steps
 
 * Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.3mdk
 - fix 'display logs'
