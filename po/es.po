@@ -1,11 +1,11 @@
-# mdkonline-es.po
-# Copyright (C) 2001 Free Software Foundation, Inc.
+# spanish translation of Madrake Online (mdkonline-es.po).
+# Copyright (C) 2001 MandrakeSoft S.A.
 # Juan Manuel García Molina <juanmagm@mail.com>, 2001.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2001-09-03 12:14+0200\n"
+"POT-Creation-Date: 2001-09-04 00:51+0200\n"
 "PO-Revision-Date: 2001-09-03 09:50GMT\n"
 "Last-Translator: Juan Manuel García Molina <juanmagm@mail.com>\n"
 "Language-Team: Spanish <cooker-i18n@linux-mandrake.com>\n"
@@ -13,44 +13,41 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mdkonline:77
-msgid "Mandrake Online"
-msgstr "Mandrake Online"
-
-#: mdkonline:82
-msgid "  Next  > "
-msgstr "  Siguiente  > "
-
 #: mdkonline:83
-msgid "  Finish "
-msgstr "  Acabar "
+msgid "Next  >"
+msgstr "Siguiente  >"
 
 #: mdkonline:84
-msgid " Cancel "
-msgstr " Cancelar "
+#, fuzzy
+msgid "Finish"
+msgstr "Acabado"
 
-#: mdkonline:85
-msgid " <  Back  "
-msgstr " <  Anterior  "
+#: mdkonline:85 mdkonline:341
+msgid "Cancel"
+msgstr "Cancelar"
 
-#: mdkonline:191
+#: mdkonline:86
+msgid "<  Back"
+msgstr "<  Anterior"
+
+#: mdkonline:192
 msgid "Warning: No browser specified"
 msgstr "Aviso: No especificó ningún navegador"
 
-#: mdkonline:224
+#: mdkonline:225
 msgid "Wrong password"
 msgstr "Contraseña incorrecta"
 
-#: mdkonline:224
+#: mdkonline:225
 msgid "Your login or password was wrong, you'll have to type it again"
 msgstr ""
 "Su usuario o contraseña eran incorrectos, tendrá que teclearlos de nuevo"
 
-#: mdkonline:257
-msgid "Welcome to Mandrake Online"
-msgstr "Bienvenido a Mandrake Online"
-
 #: mdkonline:258
+msgid "Welcome to MandrakeOnline"
+msgstr "Bienvenido a MandrakeOnline"
+
+#: mdkonline:259
 msgid ""
 "At this step You are supposed to have an account on Mandrake Online [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -62,35 +59,39 @@ msgstr ""
 "(paquetes, configuración del hardware) a una base de datos centralizada\n"
 "para mantenerle informado de actualizaciones de seguridad y mejoras útiles.\n"
 
-#: mdkonline:264
-msgid "I don't have a Mandrake Online account and I want to  "
+#: mdkonline:265
+msgid "I don't have a Mandrake Online account and I want to "
 msgstr "No tengo ninguna cuenta en Mandrake Online y quiero una "
 
-#: mdkonline:274
+#: mdkonline:267
+msgid "Subscribe"
+msgstr ""
+
+#: mdkonline:275
 msgid "Mandrake Privacy Policy"
 msgstr "Política de privacidad de Mandrake"
 
-#: mdkonline:279
-msgid "Mandrake Online Authentification"
-msgstr "Autentificación de Mandrake Online"
-
 #: mdkonline:280
+msgid "MandrakeOnline Authentification"
+msgstr "Autentificación de MandrakeOnline"
+
+#: mdkonline:281
 msgid "Enter your Mandrake Online login and password:"
 msgstr "Introduzca su nombre de usuario y contraseña de Mandrake Online:"
 
-#: mdkonline:282
+#: mdkonline:283
 msgid "Login:"
 msgstr "Usuario:"
 
-#: mdkonline:282
+#: mdkonline:283
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: mdkonline:286
+#: mdkonline:287
 msgid "Sending your Configuration"
 msgstr "Enviando su configuración"
 
-#: mdkonline:287
+#: mdkonline:288
 msgid ""
 "This is your chance, to help us improving Mandrake Linux.\n"
 "\n"
@@ -116,64 +117,60 @@ msgstr ""
 "dará la oportunidad de mantenerle informado sobre\n"
 "actualizaciones de seguridad y mejoras útiles."
 
-#: mdkonline:294
+#: mdkonline:295
 msgid "Error while sending informations"
 msgstr "Error mientras se enviaban las informaciones"
 
-#: mdkonline:295
+#: mdkonline:296
 msgid "There was an error while sending your personal informations"
 msgstr "Hubo un error mientras se enviaba su información personal"
 
-#: mdkonline:301
+#: mdkonline:302
 msgid "Finished"
 msgstr "Acabado"
 
-#: mdkonline:302
+#: mdkonline:303
 msgid "Your personal informations are now stored at MdkOnline"
 msgstr "Se almacenaron sus informaciones personales en MdkOnline"
 
-#: mdkonline:319
+#: mdkonline:320
 msgid "OK"
 msgstr "Aceptar"
 
-#: mdkonline:325 mdkonline:351
+#: mdkonline:326 mdkonline:352
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:340
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: mdkonline:344
+#: mdkonline:345
 msgid "Quit"
 msgstr "Salir"
 
-#: mdkonline:349
+#: mdkonline:350
 msgid ""
-"Do you really want to abort Mandrake Online?\n"
+"Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
 "to really quit it press 'Quit'."
 msgstr ""
-"¿Seguro que desea concluir Mandrake Online?\n"
+"¿Seguro que desea concluir MandrakeOnline?\n"
 "Para volver al asistente, pulse 'Cancelar'.\n"
 "Para salir realmente, pulse 'Salir'."
 
-#: mdkonline:353
-msgid "Really abort? - Mandrake Online"
-msgstr "¿Concluir realmente? - Mandrake Online"
+#: mdkonline:354
+msgid "Really abort? - MandrakeOnline"
+msgstr "¿Concluir realmente? - MandrakeOnline"
 
-#: mdkonline:423
+#: mdkonline:424
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:424
+#: mdkonline:425
 msgid "Welcome"
 msgstr "Bienvenido"
 
-#: mdkonline:448
+#: mdkonline:449
 msgid "Close"
 msgstr "Cerrar"
 
-#: mdkonline:461
+#: mdkonline:462
 msgid "Quitting Wizard\n"
 msgstr "Saliendo del asistente\n"
