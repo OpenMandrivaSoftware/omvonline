@@ -76,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_sbindir}/*
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
-%{_datadir}/%{name}
 %{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
