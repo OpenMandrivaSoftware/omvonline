@@ -414,9 +414,9 @@ sub step_wizard {
     # building the "OK data sent" page
     my $vbox_oksend= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
-    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now you will receive on security\nand updates announcements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.")."\n"._("A program will run regulary in your system waiting for new updates\n"));
+    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"));
     $label_oksend->set_justify(left);
-    $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
+    $vbox_oksend->pack_start($label_oksend,$true ,$true,1);
 
 #automated mode
     my $frame_auto = new Gtk::Frame(_("automated Upgrades"));
@@ -533,7 +533,7 @@ sub confirm_quit {
     my $bbox1 = new Gtk::HButtonBox;
     $window_about->action_area->pack_start($bbox1,0,0,0);
    
-    My $button_cancel = new Gtk::Button(" " . _("Cancel") . " ");
+    my $button_cancel = new Gtk::Button(" " . _("Cancel") . " ");
     $button_cancel->signal_connect_object("clicked",$window_about => 'destroy');
     $bbox1->add($button_cancel);
 
