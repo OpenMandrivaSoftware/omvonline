@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 10.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-28 14:29+0200\n"
-"PO-Revision-Date: 2004-09-21 21:33+0800\n"
+"POT-Creation-Date: 2004-09-27 23:33+0200\n"
+"PO-Revision-Date: 2004-09-28 23:56+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
@@ -497,27 +497,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "登录名和密码都必须少于 12 个字符\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "不允许出现特殊字符\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "所有内容都是必填的\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "电子邮件无效\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "账户已存在\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -525,19 +525,19 @@ msgid "Problem connecting to server \n"
 msgstr "连接服务器出错\n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Mandrakeonline 欢迎您"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "我已经有账户了"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "我想要订阅"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -547,22 +547,22 @@ msgstr "请稍候"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "账户创建或身份验证"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Mandrakeonline 欢迎您"
+msgstr "正在连接到 Mandrakeonline 网站..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "或"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "密码错误"
+msgstr "密码错误:"
 
 #: ../mdkonline_tui:162
 #, c-format
@@ -570,11 +570,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline 账户创建成功。\n"
+"请单击“下一步”进行身份验证并上传您的配置\n"
 
 #: ../mdkonline_tui:179
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "国家:"
+msgstr "国家"
 
 #: ../mdkupdate:50
 #, c-format
@@ -615,17 +617,17 @@ msgstr "  --update      - 更新密钥\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "未找到 %s 文件。请先运行 mdkonline 向导"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Mandrakeonline 无法连接，请稍后再试一次"
+msgstr "Mandrakeonline 无法连接网站，请稍后再试一次。"
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "无法从 mdkupdate 介质更新软件包。\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -633,3 +635,4 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate 无法上传差异文件。请给 support@mandrakeonline.net 发送邮件"
