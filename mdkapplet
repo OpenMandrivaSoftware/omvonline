@@ -35,6 +35,8 @@ use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::TrayIcon;
 
+mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
+
 my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
@@ -52,8 +54,6 @@ my $localfile = "$localdir/mdkonline";
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
-
-mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
 
 my %state = (
 	     okay => {
