@@ -1,18 +1,19 @@
 # $Id$
-# translation of Mandrakeonline-uk.po to ukrainian
+# translation of mdkonline-uk.po to ukrainian
 # Ukrainian translation for MDKOnline
 # Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # Gladky Dima <gladimdim@inbox.ru>, 2002.
 # Taras Boychuk <btr1@torba.com>, 2003, 2004.
 # Taras Boychuk <btr1@mail.ru>, 2003.
+# Taras Boychuk <btr1@ukrpost.net>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-15 05:14+0800\n"
-"PO-Revision-Date: 2003-07-22 00:45+0300\n"
-"Last-Translator: Taras Boychuk <btr1@mail.ru>\n"
+"PO-Revision-Date: 2004-08-09 10:58+0300\n"
+"Last-Translator: Taras Boychuk <btr1@ukrpost.net>\n"
 "Language-Team: ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -206,7 +207,7 @@ msgstr "Про..."
 
 #: ../mdkapplet:445
 msgid "Always launch on startup"
-msgstr "Завжди запускати при завантаженні"
+msgstr "Завжди виконувати при завантаженні"
 
 #: ../mdkapplet:447
 msgid "Quit"
@@ -447,20 +448,35 @@ msgstr "  --applet       - виконати Mandrakeupdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - поновити ключі\n"
 
+#~ msgid "No updates available for your system"
+#~ msgstr "Немає поновлень для Вашої системи"
+
 #~ msgid "Config problems. Launch \"configure\" again"
 #~ msgstr "Проблеми з конфігурацією. Запустіть \"налаштувати\" знову"
+
+#~ msgid "System is busy. Wait ..."
+#~ msgstr "Система зайнята. Зачекайте..."
 
 #~ msgid "%s packages available for update"
 #~ msgstr "%s пакунків для поновлення"
 
+#~ msgid "Service not available. Click on \"configuration\""
+#~ msgstr "Сервіс недоступний. Натисніть на \"налаштування\""
+
+#~ msgid "Network is down. Click on \"configure Network\""
+#~ msgstr "Мережа вимкнена. Натисніть \"налаштувати мережу\""
+
 #~ msgid "Service deactivated. Waiting for payment..."
 #~ msgstr "Сервіс вимкнено. Очікується оплата..."
 
-#~ msgid "Launch Mandrakelinux Update"
+#~ msgid "Launch Mandrake Update"
 #~ msgstr "Запустити Поновлення Мандрейк"
 
 #~ msgid "Configuration"
 #~ msgstr "Налаштування"
+
+#~ msgid "Mandrake Updates Applet"
+#~ msgstr "Аплет Поновлення Мандрейк"
 
 #~ msgid "Available"
 #~ msgstr "Увімнено"
@@ -471,5 +487,116 @@ msgstr "  --update       - поновити ключі\n"
 #~ msgid "Not Available"
 #~ msgstr "Не увімкнено"
 
-#~ msgid "Attempting to connect to mandrakeonline.net\n"
-#~ msgstr "Спроба під'єднатися до mandrakeonline.net\n"
+#~ msgid "New Updates: "
+#~ msgstr "Нові поновлення:"
+
+#~ msgid "Mdkonline seems to be reinstalled, reloading applet ...."
+#~ msgstr "Здається, Mdkonline було перевстановлено, перезавантажую аплет..."
+
+#~ msgid "Online services disabled. Contact MandrakeOnline site\n"
+#~ msgstr "Онлайнові послуги вимкнено. Зверніться до сайту MandrakeOnline\n"
+
+#~ msgid "System is up to date\n"
+#~ msgstr "Система поновлена\n"
+
+#~ msgid "Welcome to MandrakeOnline"
+#~ msgstr "Ласкаво просимо до MandrakeOnline"
+
+#~ msgid ""
+#~ "At this step You are supposed to have an account on MandrakeOnline.\n"
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "У цьому кроці передбачається, що Ви маєте рахунок на MandrakeOnline.\n"
+#~ " Цей Помічник допоможе переслати Вашу конфігурацію\n"
+#~ "(пакунки, конфігурацію системи) до централізованої бази,\n"
+#~ "щоб інформувати Вас про поновлення безпеки та інші корисні оновлення.\n"
+
+#~ msgid "Create a MandrakeOnline Account"
+#~ msgstr "Створити рахунок MandrakeOnline"
+
+#~ msgid "I don't have a MandrakeOnline account and I want to "
+#~ msgstr "В мене немає рахунку MandrakeOnline і я хочу "
+
+#~ msgid "Enter your MandrakeOnline login, password and machine name:"
+#~ msgstr "Введіть своє ім'я на MandrakeOnline, пароль та назву машини: "
+
+#~ msgid ""
+#~ "In order to benefit from MandrakeOnline services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandrakesoft:\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrakeexpert.com.\n"
+#~ "Finally, an email alias with your username@mandrakeonline.net will be "
+#~ "provided to you."
+#~ msgstr ""
+#~ "Для того, щоб можна було використовувати послуги MandrakeOnline,\n"
+#~ "ми відішлемо Вашу конфігурацію.\n"
+#~ "\n"
+#~ "Помічник зараз відправить наступну інформацію до Mandrakesoft:\n"
+#~ "1) список пакунків, встановлених на Вашу систему,\n"
+#~ "2) конфігурацію обладнання.\n"
+#~ "\n"
+#~ "Якщо Вам не подобається ця ідея, або не хочете користуватися цією "
+#~ "послугою,\n"
+#~ " натисніть 'Скасувати'. Натиснувши на 'Далі', Ви дозволите нам "
+#~ "інформувати Вас\n"
+#~ " про поновлення безпеки і корисні оновлення через персональні "
+#~ "попередження електронною поштою.\n"
+#~ " До того ж, Ви отримуєте знижку на послуги підтримки на\n"
+#~ "username@mandrakeonline.net.\n"
+#~ "На завершення, Вам буде надано електронну адресу username@mandrakeonline."
+#~ "net"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to MandrakeOnline."
+#~ msgstr ""
+#~ "Відтепер завдяки MandrakeOnline Ви отримуватимете оновлення безпеки \n"
+#~ "оголошення про поновлення."
+
+#~ msgid ""
+#~ "MandrakeOnline offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "MandrakeOnline пропонує Вам можливість автоматизувати поновлення.\n"
+#~ "Програма регулярно виконуватиметься і очікуватиме нових поновлень\n"
+
+#~ msgid ""
+#~ "MandrakeOnline could not be contacted, please try again at a later time"
+#~ msgstr ""
+#~ "Неможливо встановити зв'язок з MandrakeOnline, будь ласка, спробуйте ще "
+#~ "раз пізніше"
+
+#~ msgid ""
+#~ "Your login or password was wrong.\n"
+#~ " Either you'll have to type it again, or you'll need to create an account "
+#~ "on MandrakeOnline.\n"
+#~ " In the latter case, go back to the first step to connect to "
+#~ "MandrakeOnline.\n"
+#~ " Be aware that you must also provide a Machine name \n"
+#~ " (only alphabetical characters are admitted)"
+#~ msgstr ""
+#~ "Ваше ім'я реєстрації або пароль неправильні.\n"
+#~ " Наберіть знову або створіть рахунок на MandrakeOnline.\n"
+#~ " В другому випадку поверніться до першого кроку, щоб з'єднатися з "
+#~ "MandrakeOnline.\n"
+#~ " Знайте, що Ви повинні також вказати назву машини \n"
+#~ " (можна використовувати тільки алфавітні символи)"
+
+#~ msgid "  --auto         - Mdkupdate launched automatically.\n"
+#~ msgstr "  --auto         - Mdkupdate виконується автоматично.\n"
+
+#~ msgid "  --applet       - launch MandrakeUpdate.\n"
+#~ msgstr "  --applet       - виконати MandrakeUpdate.\n"
