@@ -63,7 +63,7 @@ my %state = (
 	     error => {
 		       colour => [ 'red' ],
 		       changes => [ 'okay' ],
-		       menu => [ 'update', 'check' ],
+		       menu => [ 'update', 'check', 'weblink' ],
 		       tt => [ N("%s packages available for update", $av_pkgs) ]
 		      },
 	     noconfig => {
