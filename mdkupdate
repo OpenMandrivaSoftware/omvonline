@@ -60,8 +60,7 @@ my @parsed = grep {!/^#/} parse_file("/root/.mdkupdate");
 # authenticate before 
 my $valid_customer = connect_site("http://mandrakeonline.net/online_user.php");
 
-
-`urpmi.addmedia --update security_$parsed[3] $parsed[4] with ../base/hdlist.cz`;
+#`urpmi.addmedia --update security_$parsed[3] $parsed[4] with ../base/hdlist.cz`;
 
 sub connect_site () {
     my ($url) =@_;

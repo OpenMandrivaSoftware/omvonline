@@ -31,6 +31,7 @@ use MDK::Common;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 use HTTP::Request;
 use HTTP::Request::Common;
+use Net::HTTPS; #for https connections 
 use LWP::UserAgent;
 use MIME::Base64 qw(encode_base64);
 use Sys::Hostname;
@@ -67,7 +68,6 @@ my $true=1;
 my $false=0;
 $::isWizard = "@ARGV" =~ /--wizard/;
 $::isWizard=1;
-local $_ = join '', @ARGV;
 my %locations = ( _("Africa") => 'ftp://africa',
 		  _("Asia") => 'ftp://asia',
 		  _("Australia") => 'ftp://australia',
@@ -167,13 +167,13 @@ sub gtk_main_quit {
 
 sub isalphanum {
     my ($str) = @_;
-    if ($str =~ /^[^\W\d_]+$/) {
+    #if ($str =~ /^[^\W\d_]+$/) {
+    if ($str =~ /^[[:alnum:]]+$/) {
 	return 1;
     } else {
 	return 0;
     }
 }
-    
     
 sub on_end_clicked {
     gtk_main_quit();
@@ -278,7 +278,7 @@ sub test_passwd () {
     $passwd   = $passwd_user->get_text();
     $box_name = $box_user->get_text();
     $test = isalphanum($box_name);
-    print ("isanum : $test");
+    print ("isalnum : $test");
     if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
@@ -286,6 +286,7 @@ sub test_passwd () {
 	
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+	my $w = $in->wait_message('',_("Connecting ...\n"),1);
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u='.$login.'&p='.$passwd);
 	my $response = $ua->request($request);
 	# Check the outcome of the response
@@ -314,12 +315,12 @@ sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
 #    print STDERR "Sending config\n";
     my $result = -1;
-
-    `/usr/sbin/drakbug_report > /root/$login.$passwd.$box_name.online.log`;
+    
+    report_config("/root/$login.$passwd.$box_name.online.log");
     `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
 
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, " /root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
+    open (FILE, "/root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
@@ -331,20 +332,21 @@ sub send_config {
 
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $response = $ua->request(POST 'http://upload.mandrakeonline.net/wizard.php',
+    my $w = $in->wait_message('',"Sending configuration...");
+    my $response = $ua->request(POST 'https://www.mandrakeonline.net/testonline/wizard.php',
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_wizard",
 					    wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
 					    ]);
-
     # Check the outcome of the response
     print "REPONSE: ".$response->content."\n";
     if ($response->is_success) {
-	$result = ($response->content =~ /TRUE/) ? 0 : -1;
+	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
+	print("key is $1");
+	$key = $1; 
     } else {
 	# pb with the connection ?
-#	info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
 	$result = -1;
     }
 
@@ -358,7 +360,6 @@ sub send_config {
 	info_popup (_("Connection problem"), _("MandrakeOnline could not be contacted, please try again at a later time"));
 	$notebook_global->set_page(4);
     }
-
 }
 
 sub step_wizard {
@@ -456,6 +457,34 @@ sub parse_etc_passwd ()
     @usernames;
 }
 
+sub report_config {
+    my ($file) = @_;
+#touch($file);
+    my $w = $in->wait_message('',_("Reading configuration\n"));
+sub header { "
+********************************************************************************
+* $_[0]
+********************************************************************************";
+	 }
+open (FILE,"> $file") || die "Couldn't open $file : $!"; 
+join '', map { chomp; print FILE "$_\n" }
+    header("scsi"), cat_("/proc/scsi/scsi"),
+    header("lsmod"), cat_("/proc/modules"),
+    header("cmdline"), cat_("/proc/cmdline"),
+    header("pcmcia: stab"), cat_("$prefix/var/lib/pcmcia/stab") || cat_("$prefix/var/run/stab"),
+    header("usb"), cat_("/proc/bus/usb/devices"),
+    header("partitions"), cat_("/proc/partitions"),
+    header("cpuinfo"), cat_("/proc/cpuinfo"),
+    header("install.log"), cat_("$prefix/root/drakx/install.log"),
+    header("fstab"), cat_("$prefix/etc/fstab"),
+    header("lilo.conf"), cat_("$prefix/etc/lilo.conf"),
+    header("menu.lst"), cat_("$prefix/boot/grub/menu.lst"),
+    header("/etc/modules.conf"), cat_("$prefix/etc/modules.conf"),
+    header("rpm -qa"), join ('', sort `rpm -qa`),
+    header("mandrake version"), cat_('/etc/redhat-release');
+close(FILE);
+}
+
 sub automated_upgrades {
 # set up a daily cron to check connection and if there is one upgrade the system
     open VERS,  "/etc/mandrake-release" or die _("cannot open this file for read: %s", $!);
@@ -463,30 +492,27 @@ sub automated_upgrades {
     while (<VERS>) { 
 	@info_tree = split / /, $_;
     }
-    $usertomail = $gtkcombo_user->entry->get_text();
     $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()};
     my $version=$info_tree[3];
     my $host = hostname;
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
-USER=$usertomail
 LOGIN=$login
 PASS=$passwd
-BOX=$machine_name
+BOX=$box_name
 VER=$version
 MIRROR=$mirror_site
+CURRENTKEY= $key 
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
-MAILTO=$usertomail\@$host
 if [ -f /root/.mdkupdate ]; then mdkupdate; fi
 );
 }
 
-sub info_popup ($$) {
+sub info_popup () {
     # must have been translated by the caller
-    my $title = shift;
-    my $text  = shift;
+    my ($title,$text) = @_;
 
     my $popup = new Gtk::Dialog();
     $popup->set_position(1);
