@@ -37,7 +37,7 @@ add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
-my ($av_pkgs, $update_label, $mLog);
+my ($av_pkgs, $update_label, $lastch, $mLog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my $conffile = '/etc/sysconfig/mdkonline';
 my $localfile = "$ENV{HOME}/.mdkonline";
@@ -152,7 +152,7 @@ sub showMainWindow() {
 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("Last check: ")),
-						 0, Gtk2::Label->new(lastCheck())
+						 0, $lastch = Gtk2::Label->new(lastCheck())
 						),
 				    )
 			   ),
@@ -165,8 +165,8 @@ sub showMainWindow() {
     $w->show_all
 }
 sub setLabel {
-    my $label = shift;
-    $update_label->set_text($label) if defined $update_label;
+    my ($widget, $string) = shift;
+    $widget->set_text($string) if defined $widget;
 }
 sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
 sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
@@ -186,7 +186,7 @@ sub silentCheck {
     my $lnk = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     my $response = $ua->request($request);
     my $ct = $response->content;
-#    print "\nCONTENTS = $ct; link = $lnk \n";
+    print "\nCONTENTS = $ct\n";
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
@@ -200,7 +200,7 @@ sub silentCheck {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   my $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   if ($comp) { $isAvailable = 1; $mLog .= N("Checking... Updates are available\n"); go2State('error') and last };
+			   if ($comp) { $isAvailable = 1; $mLog .= N("Checking... Updates are available\n"); go2State('error') and last } else { $isAvailable = 0; go2State('okay') and last };
 		       }
 		   },
 		   97 => sub { $mLog .= N("Online services disabled. Contact MandrakeOnline site\n") ; go2State('disabled'); },
@@ -215,12 +215,73 @@ sub compareWithInstalled {
     foreach my $p (@{$t}) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n ) {
-	    if ($ver eq $v) {
-		if ($rel gt $r) { $isUpdate = 1 and last }
-	    } elsif (isNewVersion($ver, $v)) { $isUpdate = 1 and last }
+	    my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel, $r);
+	    print "$name-$ver-$rel $n-$v-$r ***  CMPVER=$iu  ** CMPREL = $ir \n";
+	    if (rpmvercmp($ver, $v) > 0 || ( rpmvercmp($ver, $v) == 0 && rpmvercmp( $rel, $r) > 0)) {
+		$isUpdate = 1 and last;
+	    } 
 	}
     }
     $isUpdate
+}
+sub rpmverparse {
+    my ($ver) = @_;
+    my @verparts = ();
+    while ( $ver ne "" ) {
+        if ( $ver =~ /^([A-Za-z]+)/ ) {    # leading letters
+            push ( @verparts, $1 );
+            $ver =~ s/^[A-Za-z]+//;
+        }
+        elsif ( $ver =~ /^(\d+)/ ) {       # leading digits
+            push ( @verparts, $1 );
+            $ver =~ s/^\d+//;
+        }
+        else {                             # remove non-letter, non-digit
+            $ver =~ s/^.//;
+        }
+    }
+    return @verparts;
+}
+sub rpmvercmp {
+    my ($a, $b) = @_;
+    my @aparts;                            # list of version/release tokens
+    my @bparts;
+    my $apart;                             # individual token from array
+    my $bpart;
+    my $result;
+    if ( $a eq $b ) {
+        return 0;
+    }
+    @aparts = rpmverparse($a);
+    @bparts = rpmverparse($b);
+    while ( @aparts && @bparts ) {
+        $apart = shift (@aparts);
+        $bpart = shift (@bparts);
+        if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
+            if ( $result = ( $apart <=> $bpart ) ) {
+                return $result;
+            }
+        }
+        elsif ( $apart =~ /^[A-Za-z]+/ && $bpart =~ /^[A-Za-z]+/ ) {    # alpha
+            if ( $result = ( $apart cmp $bpart ) ) {
+                return $result;
+            }
+        }
+        else {    # "arbitrary" in original code
+	    shift (@aparts);
+	    shift (@bparts);
+            #return -1;
+        }
+    }
+    if (@aparts) {    # left over stuff in a, assume it's newer
+        return 1;
+    }
+    elsif (@bparts) {    # leftover in b, assume it's newer
+        return -1;
+    }
+    else {               # "should never happen"
+        return 0;
+    }
 }
 sub isNewVersion {   
     my ($f, $d) = @_;
@@ -265,13 +326,14 @@ sub checkUpdates {
     } elsif (!-e $conffile) {
 	$mLog .= N("Checking config file: Not present\n");
 	go2State('noconfig')
-    } else {				   
-	setLabel(N("Checking for Updates..."));
+    } else {
+	print "Checking ...";
+	$update_label and setLabel($update_label, N("Checking for Updates..."));
+	setLastTime();
+	$lastch and setLabel($lastch, lastCheck() );
 	silentCheck();
     }
-    if ($update_label && $update_label->get_text eq N("Checking for Updates...")) {
-	setLabel($isAvailable ? N("Available") : N("Not Available"));
-    }
+    setLabel($update_label, $isAvailable ? N("Available") : N("Not Available"));
 }
 sub go2State {
     my $state = shift;
