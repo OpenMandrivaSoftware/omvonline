@@ -69,7 +69,7 @@ my %o = getVarsFromSh($conffile);
 if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $u;
     my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
-    my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent/1.1');
+    my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent');
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
     if ($resp->is_success) {
