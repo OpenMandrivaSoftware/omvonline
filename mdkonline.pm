@@ -134,9 +134,10 @@ sub header { "
 * $_[0]
 ********************************************************************************";
 }
+my $releasefile = find { -f $_ } '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 output($file, map { chomp; "$_\n" }
   header("rpm -qa"), join('', sort `rpm -qa`),
-  header("mandrake version"), cat_('/etc/mandrakelinux-release'));
+  header("mandrake version"), cat_($releasefile));
 system("/usr/bin/bzip2 -f $file");
 open(my $F, $file . ".bz2") or die "Cannot open file : $!";
 my ($chunk, $buffer);
