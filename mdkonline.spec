@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.9mdk
+Release: 	1mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
-* Wed Mar 24 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.9mdk
+* Wed Mar 24 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-1mdk
 - update status when performing 'check updates'
 - better perl rpmvercmp for version and release comparisons
 - Report status dynamically
