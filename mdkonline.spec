@@ -12,7 +12,7 @@
 %define version 1.0
 %define name mdkonline
 
-Summary:	The Mandrake Online Tool  
+Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
 Release: 	1mdk
@@ -27,12 +27,12 @@ BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 
 %description
-The Mandrake Online tool is designed for registered users 
+The MandrakeOnline tool is designed for registered users 
 who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
 The package include :
-* Mandrake Online wizard for users registration and configuration 
+* MandrakeOnline wizard for users registration and configuration 
   uploads, 
 * Mdkupdate daemon which allows you to install security updates 
   automatically,
