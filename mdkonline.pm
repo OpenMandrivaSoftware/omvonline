@@ -90,8 +90,8 @@ sub mv_files {
 }
 
 sub hw_upload {
-    my ($login, $hostname, $passwd) = @_;
-    system("HWDB_PASSWD=$passwd hwdb_add_system $login $hostname");
+    my ($login, $passwd, $hostname) = @_;
+    system("HWDB_PASSWD=$passwd hwdb_add_system $login $hostname &");
 }
 sub automated_upgrades {
     my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
