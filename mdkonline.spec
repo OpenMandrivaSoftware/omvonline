@@ -5,11 +5,11 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	26mdk
+Release: 	27mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
-URL:		http://www.mandrakesoft.com/
+URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
@@ -32,17 +32,6 @@ hardware support/enhancements and other high value services.
 rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT install 
 
-mv ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name} \
-   ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}.real
-ln -sf %{_bindir}/consolehelper ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}
-ln -sf %{_bindir}/consolehelper ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/drakonline
-
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/{pam.d,security/console.apps}
-cp pam.%{name} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/%{name}
-cp pam.%{name} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/drakonline
-cp apps.%{name}  $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/%{name}
-cp apps.%{name}  $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/drakonline
-
 #install lang
 %{find_lang} %{name}
 
@@ -55,7 +44,7 @@ icon="mdkonline.png" \
 section="Configuration/Other" \
 title="Discover custom services" \
 longtitle="Wizard tool for online registered user" \
-command="/usr/X11R6/bin/mdkonline"
+command="/usr/sbin/mdkonline"
 EOF
 
 #install menu icon
@@ -77,11 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING
-%config(noreplace) %{_sysconfdir}/pam.d/%{name}
-%config(noreplace) %{_sysconfdir}/security/console.apps/%{name}
-%config(noreplace) %{_sysconfdir}/pam.d/drakonline
-%config(noreplace) %{_sysconfdir}/security/console.apps/drakonline
-%{_prefix}/X11R6/bin/*
+%{_sbindir}/*
 %{_bindir}/*
 %{_datadir}/%{name}
 %{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
@@ -91,6 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Aug 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-27mdk
+- mdkonline now in /usr/sbin/ (remove consolehelper aliases)
+- better text wrapping.
+- good URL.
+
 * Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 0.15-26mdk
 - Update icon's title
 
