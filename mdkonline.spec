@@ -127,6 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Thu Sep  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-7mdk
+- i18n is back
 - launch one instance of mdkapplet per desktop.
 - resynced po
 - remove strings incoherencies
