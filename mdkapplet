@@ -21,20 +21,21 @@
 ################################################################################
 
 use strict;
-use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
+use lib qw(/usr/lib/libDrakX);
 use common;
-use mdkonline;
 
 use Gtk2::Pango;
 use Digest::MD5;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
-use ugtk2;
+use ugtk2 qw (:all);
 
+use lib qw(/usr/lib/libDrakX/drakfirsttime);
+use mdkonline;
 use Gtk2::TrayIcon;
 
 my ($eventbox, $img);
-add_icon_path("/usr/share/mdkonline/pixmaps/");
+ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
@@ -218,9 +219,10 @@ sub silentCheck {
     my %h = getVarsFromSh($conffile); 
     my $u;
     logIt(N("Computing new updates...\n"));
-    my $lnk = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
-    logIt(N("Connecting to") . " $lnk ...\n");
+    my $link = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
+    logIt(N("Connecting to") . " $link ...\n");
     gtkflush(); go2State('busy'); gtkflush();
+    print "$link\n";
     my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
     my $ct = $response->content;
     print "\nCONTENTS = $ct\n";
