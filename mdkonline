@@ -118,7 +118,8 @@ my $passwd  = "";
 my %actions = ( 
 		2 => \&test_passwd,
 		3 => \&send_config,
-		4 => \&send_config
+		4 => \&send_config,
+		5 => \&automated_upgrades
 		);
 my @no_back_button_pages = (0,3,4,5);
 
@@ -293,6 +294,9 @@ sub test_passwd () {
 
 }
 
+sub automate_upgrades {
+    
+} 
 sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
 #    print STDERR "Sending config\n";
@@ -340,7 +344,7 @@ sub send_config {
 					    ]);
 
     # Check the outcome of the response
-#    print "REPONSE: ".$response->content."\n";
+    print "REPONSE: ".$response->content."\n";
     if ($response->is_success) {
 	$result = ($response->content =~ /TRUE/) ? 0 : -1;
     } else {
@@ -412,6 +416,9 @@ sub step_wizard {
     write_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
     my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!\nFrom now you will receive on security\nand upgrade announcements thanks to MandrakeOnline."));
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
+    my $check_cron = new Gtk::CheckButton(_("I want to automated the upgrades"));
+    $vbox_oksend->pack_start($check_cron, $false,$false,1);
+    $check_cron->set_uposition(80,200);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
     
 }
@@ -435,7 +442,7 @@ sub info_popup ($$) {
     my $style = new Gtk::Style;
     $style->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style); 
-    $popup->set_title($title);
+     $popup->set_title($title);
     $popup->vbox->pack_start( $label, 1, 1, 0 );
     $popup->show_all();
     $popup->set_modal(1);
