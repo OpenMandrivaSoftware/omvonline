@@ -415,5 +415,5 @@ LASTCHECK=$d
     output_with_perm $confpers, 644,
     qq(AUTOSTART=TRUE
 );
-    chown $uid, $gid $confpers;
+    chown $uid, $gid, $confpers;
 }
