@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2004-10-05 18:52+0700\n"
+"PO-Revision-Date: 2005-02-12 19:53+0700\n"
 "Last-Translator: Trinh Minh Thanh <tmthanh@yahoo.com>\n"
 "Language-Team: Gnome-Vi <Gnomevi-list@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Dịch vụ chưa được kích hoạt. Hãy nhấn chuột lên \"Webs
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Không hỗ trợ phát hành này (phát hành quá cũ hay là bản phát triển)"
 
 #: ../mdkapplet:110 ../mdkapplet:164
 #, c-format
@@ -184,9 +184,9 @@ msgid "Connecting to"
 msgstr "Kết nối tới"
 
 #: ../mdkapplet:247
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Chào Mừng Mandrakeonline"
+msgstr "Trả lời từ máy chủ Mandrakeonline\n"
 
 #: ../mdkapplet:265
 #, c-format
@@ -196,12 +196,12 @@ msgstr "Kiểm tra... Đang có bản cập nhật mới\n"
 #: ../mdkapplet:270
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Dịch vụ không hỗ trợ phiên bản phát triển"
 
 #: ../mdkapplet:271
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Dịch vụ không hỗ trợ phiên bản quá cũ"
 
 #: ../mdkapplet:272
 #, c-format
@@ -237,7 +237,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
+msgstr "Có trục trặc khi kết nỗi tới máy chủ, hãy liên lạc với nhóm hỗ trợ"
 
 #: ../mdkapplet:280
 #, c-format
@@ -323,7 +323,7 @@ msgstr ""
 #: ../mdkonline:114
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Việc tạo tài khoản hay chứng thực"
 
 #: ../mdkonline:119
 #, c-format
@@ -451,6 +451,8 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Đã tạo được tài khoản Mandrakeonline.\n"
+"Hãy nhấn \"Tiếp theo\" để chứng thực và tải lên cấu hình của bạn\n"
 
 #: ../mdkonline:178
 #, c-format
@@ -493,17 +495,17 @@ msgstr "Chúc mừng"
 #: ../mdkonline:203
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
-msgstr ""
+msgstr "Cấu hình thành công tài khoản Mandrakeonline của bạn\n"
 
 #: ../mdkonline:219
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Đã hoàn thành việc tải lên!"
+msgstr "Hoàn thành việc tải lên cấu hình"
 
 #: ../mdkonline:220
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Đang đọc cấu hình\n"
+msgstr "Lỗi tải lên cấu hình"
 
 #: ../mdkonline:221
 #, c-format
@@ -511,16 +513,18 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"Không thể kết nối đến mandrakeonline website: sai đăng nhập/mật khẩu hoặc "
+"thiết lập sai router/firewall"
 
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Đăng nhập và mật khẩu không nên dài quá 12 ký tự\n"
 
 #: ../mdkonline.pm:67
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Không cho phép các ký tự đặc biệt\n"
 
 #: ../mdkonline.pm:68
 #, c-format
@@ -577,7 +581,7 @@ msgstr "  --applet       - chạy Mandrakeupdate.\n"
 #: ../mdkupdate:73
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Không thấy tập tin %s. Hãy chạy đồ thuật mdkonline trước"
 
 #: ../mdkupdate:131
 #, c-format
@@ -587,54 +591,4 @@ msgstr "Mandrakeupdate không thể liên lạc với site, hãy thử lại sau
 #: ../mdkupdate:186
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr ""
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Hãy đợi"
-
-#~ msgid "Next"
-#~ msgstr "Tiến"
-
-#~ msgid "Cancel"
-#~ msgstr "Bỏ qua"
-
-#~ msgid "Previous"
-#~ msgstr "Về trước"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Tôi không có tài khoản Mandrakelinuxonline nên muốn đăng ký"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Chính Sách Riêng Tư Của Mandrakelinux"
-
-#~ msgid "Authentification"
-#~ msgstr "Chứng thực"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Gửi cấu hình"
-
-#~ msgid "Finish"
-#~ msgstr "Kết thúc"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "Nâng cấp tự động"
-
-#~ msgid "Country:"
-#~ msgstr "Quốc gia:"
-
-#~ msgid "Error"
-#~ msgstr "Lỗi"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Đang thoát khỏi Đồ Thuật\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr "Không thể liên lạc với MandrakeOnline, hãy thực hiện lại sau"
-
-#~ msgid "Wrong password"
-#~ msgstr "Sai mật khẩu"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - Cập nhật khóa\n"
+msgstr "Không thể cập nhật các gói từ phương tiện update_source.\n"
