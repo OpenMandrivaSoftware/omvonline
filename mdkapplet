@@ -84,7 +84,7 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 	       )
       );
 
-print "Setting applet-critical ...\n";
+print "Setting yellow ...\n";
 $menu = setImage('yellow');
 $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 1 and showMainWindow(); #just for testing
@@ -170,9 +170,8 @@ sub browser {
 }
 sub setImage {
     my $file = shift;
-    my $applet = 'applet' . '-' . $file;
     my $arr = $state{$file}{menu};
-    my $tmp = gtkcreate_pixbuf($applet);
+    my $tmp = gtkcreate_pixbuf($file);
     $img->set_from_pixbuf($tmp);
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
