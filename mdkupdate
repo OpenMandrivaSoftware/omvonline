@@ -281,7 +281,7 @@ sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
     #`sdiff -s $confdir/rpm_qa_installed_after $confdirrpm_qa_installed_before >$confdir/$login.$password.$box_name.$oldkey.dif`;
     `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$box_name.$oldkey.dif`;
-    -s "$confdir/$login.$password.$box_name.$oldkey.dif" or die N("System is up to date");
+    -s "$confdir/$login.$password.$box_name.$oldkey.dif" or die N("No diff found");
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
     $ua->env_proxy;
