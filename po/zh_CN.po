@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-06 17:37+0100\n"
+"POT-Creation-Date: 2004-02-16 22:53+0100\n"
 "PO-Revision-Date: 2004-02-10 10:06+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -14,115 +14,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkonline:64
-msgid "Africa"
-msgstr "非洲"
-
-#: ../mdkonline:65
-msgid "Asia"
-msgstr "亚洲"
-
-#: ../mdkonline:66
-msgid "Australia"
-msgstr "澳洲"
-
-#: ../mdkonline:67
-msgid "Europe"
-msgstr "欧洲"
-
-#: ../mdkonline:68
-msgid "North America"
-msgstr "北美洲"
-
-#: ../mdkonline:69
-msgid "South America"
-msgstr "南美洲"
-
-#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
-msgid "Next"
-msgstr "下一步"
-
-#: ../mdkonline:88
-msgid "Finish"
-msgstr "完成"
-
-#: ../mdkonline:89 ../mdkonline:531
-msgid "Quit"
-msgstr "退出"
-
-#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
-msgid "Back"
-msgstr "上一步"
-
-#: ../mdkonline:92
-msgid "I don't have a MandrakeOnline account and I want to "
-msgstr "我没有 MandrakeOnline 账户, 我要"
-
-#: ../mdkonline:93
-msgid "Subscribe"
-msgstr "订阅"
-
-#: ../mdkonline:109
-msgid "Yes I want automated updates"
-msgstr "是, 我要自动更新"
-
-#: ../mdkonline:150
-msgid "Quitting Wizard\n"
-msgstr "正在退出向导\n"
-
-#: ../mdkonline:164
-msgid "Empty Mirror"
-msgstr "空镜像"
-
-#: ../mdkonline:164
-msgid "Empty Mirror. Please choose a place."
-msgstr "空镜像。请选择一个位置。"
-
-#: ../mdkonline:248
-msgid "Warning: No browser specified"
-msgstr "警告：未指定浏览器"
-
-#: ../mdkonline:273
-msgid "Connecting ...\n"
-msgstr "正在连接...\n"
-
-#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
-msgid "Connection problem"
-msgstr "连接问题"
-
-#: ../mdkonline:282 ../mdkonline:347
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "MandrakeOnline 无法连接到站点, 请稍后再试一次"
-
-#: ../mdkonline:294
-msgid "Wrong password"
-msgstr "密码错误"
-
-#: ../mdkonline:294
-msgid ""
-"Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to "
-"MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
-" (only alphabetical characters are admitted)"
+#: ../mdkonline:85
+msgid "Skip Wizard"
 msgstr ""
-"您的登录名或密码有错。\n"
-"不管是哪种情况，您都需要重新输入一次。不然，您就需要在 MandrakeOnline 上创建"
-"一个账户。\n"
-"如果您想要创建账户的话，请返回到第一步，以连接到 MandrakeOnline。\n"
-"请注意，您还必须提供一个机器名(只能由字母组成)"
 
-#: ../mdkonline:320
-msgid "Sending configuration..."
-msgstr "正在发送配置..."
-
-#: ../mdkonline:356
+#: ../mdkonline:99
 msgid "Welcome to MandrakeOnline"
 msgstr "MandrakeOnline 欢迎您"
 
-#: ../mdkonline:357
+#: ../mdkonline:100
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -133,35 +33,53 @@ msgstr ""
 "的配置(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到\n"
 "安全更新和有用的升级。\n"
 
-#: ../mdkonline:374
-msgid "Mandrake Privacy Policy"
-msgstr "Mandrake 隐私保护政策"
+#: ../mdkonline:101
+#, fuzzy
+msgid "Create a MandrakeOnline Account"
+msgstr "MandrakeOnline 欢迎您"
 
-#: ../mdkonline:379
-msgid "Authentification"
-msgstr "身份炎症"
+#: ../mdkonline:103
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "我没有 MandrakeOnline 账户, 我要"
 
-#: ../mdkonline:380
-msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "请输入您的 MandrakeOnline 登录名, 密码和机器名:"
+#: ../mdkonline:103
+msgid "Subscribe"
+msgstr "订阅"
 
-#: ../mdkonline:382
+#: ../mdkonline:107 ../mdkonline:127
 msgid "Login:"
 msgstr "登录名:"
 
-#: ../mdkonline:382
-msgid "Machine name:"
-msgstr "机器名:"
-
-#: ../mdkonline:382
+#: ../mdkonline:108 ../mdkonline:128
 msgid "Password:"
 msgstr "密码:"
 
-#: ../mdkonline:387
-msgid "Sending your Configuration"
-msgstr "发送您的配置"
+#: ../mdkonline:109
+#, fuzzy
+msgid "Confirm Password:"
+msgstr "密码:"
 
-#: ../mdkonline:388
+#: ../mdkonline:110
+msgid "Mail contact:"
+msgstr ""
+
+#: ../mdkonline:117
+msgid "Mandrake Privacy Policy"
+msgstr "Mandrake 隐私保护政策"
+
+#: ../mdkonline:123
+msgid "Authentification"
+msgstr "身份炎症"
+
+#: ../mdkonline:124
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr "请输入您的 MandrakeOnline 登录名, 密码和机器名:"
+
+#: ../mdkonline:129
+msgid "Machine name:"
+msgstr "机器名:"
+
+#: ../mdkonline:135
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -192,25 +110,7 @@ msgstr ""
 "到支持服务的付费折扣。\n"
 "最后，您还能得到一个 username@mandrakeonline.net 的电子邮件别名。"
 
-#: ../mdkonline:396
-msgid "Error while sending informations"
-msgstr "发送信息出错"
-
-#: ../mdkonline:397
-msgid ""
-"There was an error while sending your personal informations.\n"
-"\n"
-"Press Next to try and send your configuration again."
-msgstr ""
-"发送您的个人信息时出错。\n"
-"\n"
-"请按“下一步”再次尝试发送您的配置。"
-
-#: ../mdkonline:403
-msgid "Finished"
-msgstr "完成"
-
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
@@ -218,7 +118,7 @@ msgstr ""
 "从现在开始，您将能够收到 MandrakeOnline 发出的安全\n"
 "和更新通知了。"
 
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
@@ -226,156 +126,135 @@ msgstr ""
 "MandrakeOnline 还能让您自动保持更新。您的系统中会定期运行一个特\n"
 "定的程序，该程序会自动下载并安装更新\n"
 
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid "Your upload was successful!"
 msgstr "您的上传已经成功!"
 
-#: ../mdkonline:409
+#: ../mdkonline:142
 msgid "automated Upgrades"
 msgstr "自动升级"
 
-#: ../mdkonline:417
-msgid "Choose your geographical location"
-msgstr "选择您的地理位置"
+#: ../mdkonline:144
+msgid "Yes I want automated updates"
+msgstr "是, 我要自动更新"
 
-#: ../mdkonline:435
+#: ../mdkonline:147
+msgid "Country:"
+msgstr ""
+
+#: ../mdkonline:172
+msgid "Creation"
+msgstr ""
+
+#: ../mdkonline:172
+msgid "Login and Password should be < 12 characters\n"
+msgstr ""
+
+#: ../mdkonline:173
+msgid "Special Characters"
+msgstr ""
+
+#: ../mdkonline:173
+msgid "Special Characters are not allowed\n"
+msgstr ""
+
+#: ../mdkonline:174
+msgid "Empty Fields"
+msgstr ""
+
+#: ../mdkonline:174
+msgid "Please fill up all fields\n"
+msgstr ""
+
+#: ../mdkonline:175
+msgid "Email"
+msgstr ""
+
+#: ../mdkonline:175
+msgid "Email not valid\n"
+msgstr ""
+
+#: ../mdkonline:176
+msgid "Account already exist\n"
+msgstr ""
+
+#: ../mdkonline:176
+msgid "Change account"
+msgstr ""
+
+#: ../mdkonline:181
+msgid "Problem connecting to server \n"
+msgstr ""
+
+#: ../mdkonline:181
+msgid "Server Problem"
+msgstr ""
+
+#: ../mdkonline:186 ../mdkonline:188 ../mdkonline:190
+msgid "Error"
+msgstr ""
+
+#: ../mdkonline:186
+msgid "Please provide a login"
+msgstr ""
+
+#: ../mdkonline:188
+msgid ""
+"The passwords do not match\n"
+" Please try again\n"
+msgstr ""
+
+#: ../mdkonline:190
+msgid "Not a valid mail address!\n"
+msgstr ""
+
+#: ../mdkonline:210
+msgid "Finish"
+msgstr "完成"
+
+#: ../mdkonline:227
+msgid "Quitting Wizard\n"
+msgstr "正在退出向导\n"
+
+#: ../mdkonline:252
+msgid "Connecting ...\n"
+msgstr "正在连接...\n"
+
+#: ../mdkonline:261 ../mdkonline:327 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "连接问题"
+
+#: ../mdkonline:261 ../mdkonline:327
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeOnline 无法连接到站点, 请稍后再试一次"
+
+#: ../mdkonline:273
+msgid "Wrong password"
+msgstr "密码错误"
+
+#: ../mdkonline:273
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"您的登录名或密码有错。\n"
+"不管是哪种情况，您都需要重新输入一次。不然，您就需要在 MandrakeOnline 上创建"
+"一个账户。\n"
+"如果您想要创建账户的话，请返回到第一步，以连接到 MandrakeOnline。\n"
+"请注意，您还必须提供一个机器名(只能由字母组成)"
+
+#: ../mdkonline:300
+msgid "Sending configuration..."
+msgstr "正在发送配置..."
+
+#: ../mdkonline:335
 msgid "Reading configuration\n"
 msgstr "正在读取配置\n"
-
-#: ../mdkonline:512
-msgid "OK"
-msgstr "确定"
-
-#: ../mdkonline:528
-msgid "Cancel"
-msgstr "取消"
-
-#: ../mdkonline:534
-msgid ""
-"Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
-msgstr ""
-"您真的想要中断 MandrakeOnline 吗?\n"
-"要返回到向导，请按“取消”，真的退\n"
-"出请按“退出”。"
-
-#: ../mdkonline:535
-msgid "Really abort? - MandrakeOnline"
-msgstr "真的要退出?- MandrakeOnline"
-
-#: ../mdkonline:567
-msgid ""
-" You are just starting our Free Mandrake Linux Download Edition for the "
-"first time. \n"
-"\n"
-"There are now over three million Mandrake Linux users all over the world!\n"
-"\n"
-"Please take a few seconds to fill a short questionnaire. The data from "
-"this \n"
-"questionnaire will be used only for aggregate market studies.\n"
-"The text below is the privacy policy of MandrakeSoft about your personal "
-"data."
-msgstr ""
-"您即将首次启动我们的 Mandrake Linux 免费下载版本。\n"
-"\n"
-"全世界有超过三百万和您一样的用户选择了 Mandrake Linux!\n"
-"\n"
-"请花一点时间完成小小的问卷调查。此问卷调查所收集的数据将只会用于市场研究。\n"
-"下面说明了 MandrakeSoft 关于您个人数据的隐私保护政策。"
-
-#: ../mdkonline:576
-msgid ""
-"What personal data do we collect ?         \n"
-"                               \n"
-"Various information is collected in different areas of the website;\n"
-"what follows is an overview of the data we keep:\n"
-"\n"
-"Firstly, we record your email address, name and postal address.\n"
-"Secondly we give you a unique customer ID. This ID will be used to \n"
-"add additional information related to your Mandrake account such as:\n"
-"    - Your subscription to mailling lists.\n"
-"    - When registering a purchased product, we ask for personal\n"
-"information as well as system/hardware details so that we may deliver\n"
-"the best support services customized to your needs.\n"
-"    - On our donation page and on our online store (MandrakeStore), we\n"
-"record data for billing purpose (we do not store any credit card data).\n"
-"    \n"
-"What do we do with this information?\n"
-"\n"
-"We never share personal information with other persons or companies -\n"
-"we use this data strictly for the following purposes:\n"
-"    - If you have subscribed to a mailing list, we keep this email\n"
-"address in our database to provide you with customized information\n"
-"and/or to enable you to participate in discussions in various mailing\n"
-"lists. If you send a message to such a list, other people will see\n"
-"your email address but no external parties have access to our database\n"
-"of subscribers. At any time you may unsubscribe to any list by using\n"
-"the appropriate form.\n"
-"    - If you provide information when registering a purchased product\n"
-"to receive support, we keep this information private unless the\n"
-"information is required by one of our partners to deliver the support\n"
-"you require.\n"
-"    - If you use MandrakeStore, we also use your Customer ID to track\n"
-"your order and deliver your products.\n"
-"    - If you provide us with marketing information, we keep it for \n"
-"internal use only in order to improve our products so that they can \n"
-"better fit your needs whether you have purchased a product or not.), How to "
-"change / correct your personal data?\n"
-"\n"
-"French law gives individuals the right to access, correct, modify or \n"
-"remove their own personal data that we have on record. We offer this \n"
-"as a worldwide privilege. You may execute this right at any time by \n"
-"logging to your account with your customer ID and editing your\n"
-"personnal data. You can log on to this page: http://www.mandrakeonline.net"
-msgstr ""
-"我们收集什么样的私人信息?\n"
-"\n"
-"我们会在网站的不同部分收集不同的信息；\n"
-"以下列出了我们主要收集的私人信息:\n"
-"\n"
-"首先，我们将记录您的电子邮箱地址、姓名和邮政地址。\n"
-"其次，我们将给您分配唯一的顾客ID。该ID将用于用于向您的 Mandrake\n"
-"账户中添加额外信息，例如:\n"
-"    - 您订阅的邮件列表。\n"
-"    - 如果您要注册已经购买的产品，我们将会询问您的私人信息以及计\n"
-"算机系统硬件的细节。这样有助于我们为您提供最能满足您需要的支持服\n"
-"务。\n"
-"    - 在向我们捐赠的网页和我们的在线商店(MandrakeStore)中，我们\n"
-"将会记录付账用途的数据(我们不会保存任何信用卡资料)。\n"
-"\n"
-"我们将如何处置这些信息?\n"
-"\n"
-"我们不会和任何个人或公司共享任何私人信息 - 我们会严格按照以下用\n"
-"途使用这些信息:\n"
-"    - 如果您订阅了邮件列表，我们将会在我们的数据库中保留此邮件地\n"
-"址，以便能够为您提供定制的信息和/或允许您在不同的邮件列表中参与\n"
-"讨论。如果您给这样的一个列表发送邮件，其他人将会看到您的电子邮件\n"
-"地址，但是外人无法访问我们的订阅者数据库。不管在任何时候，只要您\n"
-"想要退订邮件列表，都可以使用我们相应的表格完成这一操作。\n"
-"    - 如果您在注册所购产品时提供了您的信息以便得到技术支持，我们\n"
-"将绝对将这些信息保密。除非我们的合作伙伴必须通过这些信息才能为您\n"
-"提供您所需的服务。\n"
-"    - 如果您使用了 MandrakeStore，我们也会使用您的顾客 ID 来跟踪\n"
-"您的订单，以及进行产品配送。\n"
-"    - 如果您为我们提供了营销信息，我们将仅在内部使用此信息，用以\n"
-"完善我们产品。这样无论您是否购买了我们的产品，产品都能更加满足您\n"
-"需要。\n"
-"\n"
-"如何去更改或修正您的私人信息?\n"
-"\n"
-"法国法律赋予任何人都有权利去访问、更正、编辑和(或)删除自己的私人\n"
-"信息。我们把这项权利作为一项世界上公认个人拥有的权利。您可以在任\n"
-"何履行这项权利，只需用您的顾客 ID 等入您的账户，就可编辑您的私人\n"
-"数据。您可以到该网页去登入: http://www.mandrakeonline.net"
-
-#: ../mdkonline:623
-msgid "Sans Italic 17"
-msgstr "Sans 17"
-
-#: ../mdkonline:641
-msgid "Close"
-msgstr "关闭"
 
 #: ../mdkupdate:43
 #, perl-format
@@ -433,3 +312,189 @@ msgstr "无法创建 mdkupdate 介质。\n"
 #: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "无法从 mdkupdate 介质中更新包。\n"
+
+#~ msgid "Africa"
+#~ msgstr "非洲"
+
+#~ msgid "Asia"
+#~ msgstr "亚洲"
+
+#~ msgid "Australia"
+#~ msgstr "澳洲"
+
+#~ msgid "Europe"
+#~ msgstr "欧洲"
+
+#~ msgid "North America"
+#~ msgstr "北美洲"
+
+#~ msgid "South America"
+#~ msgstr "南美洲"
+
+#~ msgid "Next"
+#~ msgstr "下一步"
+
+#~ msgid "Quit"
+#~ msgstr "退出"
+
+#~ msgid "Back"
+#~ msgstr "上一步"
+
+#~ msgid "Empty Mirror"
+#~ msgstr "空镜像"
+
+#~ msgid "Empty Mirror. Please choose a place."
+#~ msgstr "空镜像。请选择一个位置。"
+
+#~ msgid "Warning: No browser specified"
+#~ msgstr "警告：未指定浏览器"
+
+#~ msgid "Sending your Configuration"
+#~ msgstr "发送您的配置"
+
+#~ msgid "Error while sending informations"
+#~ msgstr "发送信息出错"
+
+#~ msgid ""
+#~ "There was an error while sending your personal informations.\n"
+#~ "\n"
+#~ "Press Next to try and send your configuration again."
+#~ msgstr ""
+#~ "发送您的个人信息时出错。\n"
+#~ "\n"
+#~ "请按“下一步”再次尝试发送您的配置。"
+
+#~ msgid "Finished"
+#~ msgstr "完成"
+
+#~ msgid "Choose your geographical location"
+#~ msgstr "选择您的地理位置"
+
+#~ msgid "OK"
+#~ msgstr "确定"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid ""
+#~ "Do you really want to abort MandrakeOnline?\n"
+#~ "To return to the Wizard press 'Cancel',\n"
+#~ "to really quit it press 'Quit'."
+#~ msgstr ""
+#~ "您真的想要中断 MandrakeOnline 吗?\n"
+#~ "要返回到向导，请按“取消”，真的退\n"
+#~ "出请按“退出”。"
+
+#~ msgid "Really abort? - MandrakeOnline"
+#~ msgstr "真的要退出?- MandrakeOnline"
+
+#~ msgid ""
+#~ " You are just starting our Free Mandrake Linux Download Edition for the "
+#~ "first time. \n"
+#~ "\n"
+#~ "There are now over three million Mandrake Linux users all over the "
+#~ "world!\n"
+#~ "\n"
+#~ "Please take a few seconds to fill a short questionnaire. The data from "
+#~ "this \n"
+#~ "questionnaire will be used only for aggregate market studies.\n"
+#~ "The text below is the privacy policy of MandrakeSoft about your personal "
+#~ "data."
+#~ msgstr ""
+#~ "您即将首次启动我们的 Mandrake Linux 免费下载版本。\n"
+#~ "\n"
+#~ "全世界有超过三百万和您一样的用户选择了 Mandrake Linux!\n"
+#~ "\n"
+#~ "请花一点时间完成小小的问卷调查。此问卷调查所收集的数据将只会用于市场研"
+#~ "究。\n"
+#~ "下面说明了 MandrakeSoft 关于您个人数据的隐私保护政策。"
+
+#~ msgid ""
+#~ "What personal data do we collect ?         \n"
+#~ "                               \n"
+#~ "Various information is collected in different areas of the website;\n"
+#~ "what follows is an overview of the data we keep:\n"
+#~ "\n"
+#~ "Firstly, we record your email address, name and postal address.\n"
+#~ "Secondly we give you a unique customer ID. This ID will be used to \n"
+#~ "add additional information related to your Mandrake account such as:\n"
+#~ "    - Your subscription to mailling lists.\n"
+#~ "    - When registering a purchased product, we ask for personal\n"
+#~ "information as well as system/hardware details so that we may deliver\n"
+#~ "the best support services customized to your needs.\n"
+#~ "    - On our donation page and on our online store (MandrakeStore), we\n"
+#~ "record data for billing purpose (we do not store any credit card data).\n"
+#~ "    \n"
+#~ "What do we do with this information?\n"
+#~ "\n"
+#~ "We never share personal information with other persons or companies -\n"
+#~ "we use this data strictly for the following purposes:\n"
+#~ "    - If you have subscribed to a mailing list, we keep this email\n"
+#~ "address in our database to provide you with customized information\n"
+#~ "and/or to enable you to participate in discussions in various mailing\n"
+#~ "lists. If you send a message to such a list, other people will see\n"
+#~ "your email address but no external parties have access to our database\n"
+#~ "of subscribers. At any time you may unsubscribe to any list by using\n"
+#~ "the appropriate form.\n"
+#~ "    - If you provide information when registering a purchased product\n"
+#~ "to receive support, we keep this information private unless the\n"
+#~ "information is required by one of our partners to deliver the support\n"
+#~ "you require.\n"
+#~ "    - If you use MandrakeStore, we also use your Customer ID to track\n"
+#~ "your order and deliver your products.\n"
+#~ "    - If you provide us with marketing information, we keep it for \n"
+#~ "internal use only in order to improve our products so that they can \n"
+#~ "better fit your needs whether you have purchased a product or not.), How "
+#~ "to change / correct your personal data?\n"
+#~ "\n"
+#~ "French law gives individuals the right to access, correct, modify or \n"
+#~ "remove their own personal data that we have on record. We offer this \n"
+#~ "as a worldwide privilege. You may execute this right at any time by \n"
+#~ "logging to your account with your customer ID and editing your\n"
+#~ "personnal data. You can log on to this page: http://www.mandrakeonline.net"
+#~ msgstr ""
+#~ "我们收集什么样的私人信息?\n"
+#~ "\n"
+#~ "我们会在网站的不同部分收集不同的信息；\n"
+#~ "以下列出了我们主要收集的私人信息:\n"
+#~ "\n"
+#~ "首先，我们将记录您的电子邮箱地址、姓名和邮政地址。\n"
+#~ "其次，我们将给您分配唯一的顾客ID。该ID将用于用于向您的 Mandrake\n"
+#~ "账户中添加额外信息，例如:\n"
+#~ "    - 您订阅的邮件列表。\n"
+#~ "    - 如果您要注册已经购买的产品，我们将会询问您的私人信息以及计\n"
+#~ "算机系统硬件的细节。这样有助于我们为您提供最能满足您需要的支持服\n"
+#~ "务。\n"
+#~ "    - 在向我们捐赠的网页和我们的在线商店(MandrakeStore)中，我们\n"
+#~ "将会记录付账用途的数据(我们不会保存任何信用卡资料)。\n"
+#~ "\n"
+#~ "我们将如何处置这些信息?\n"
+#~ "\n"
+#~ "我们不会和任何个人或公司共享任何私人信息 - 我们会严格按照以下用\n"
+#~ "途使用这些信息:\n"
+#~ "    - 如果您订阅了邮件列表，我们将会在我们的数据库中保留此邮件地\n"
+#~ "址，以便能够为您提供定制的信息和/或允许您在不同的邮件列表中参与\n"
+#~ "讨论。如果您给这样的一个列表发送邮件，其他人将会看到您的电子邮件\n"
+#~ "地址，但是外人无法访问我们的订阅者数据库。不管在任何时候，只要您\n"
+#~ "想要退订邮件列表，都可以使用我们相应的表格完成这一操作。\n"
+#~ "    - 如果您在注册所购产品时提供了您的信息以便得到技术支持，我们\n"
+#~ "将绝对将这些信息保密。除非我们的合作伙伴必须通过这些信息才能为您\n"
+#~ "提供您所需的服务。\n"
+#~ "    - 如果您使用了 MandrakeStore，我们也会使用您的顾客 ID 来跟踪\n"
+#~ "您的订单，以及进行产品配送。\n"
+#~ "    - 如果您为我们提供了营销信息，我们将仅在内部使用此信息，用以\n"
+#~ "完善我们产品。这样无论您是否购买了我们的产品，产品都能更加满足您\n"
+#~ "需要。\n"
+#~ "\n"
+#~ "如何去更改或修正您的私人信息?\n"
+#~ "\n"
+#~ "法国法律赋予任何人都有权利去访问、更正、编辑和(或)删除自己的私人\n"
+#~ "信息。我们把这项权利作为一项世界上公认个人拥有的权利。您可以在任\n"
+#~ "何履行这项权利，只需用您的顾客 ID 等入您的账户，就可编辑您的私人\n"
+#~ "数据。您可以到该网页去登入: http://www.mandrakeonline.net"
+
+#~ msgid "Sans Italic 17"
+#~ msgstr "Sans 17"
+
+#~ msgid "Close"
+#~ msgstr "关闭"

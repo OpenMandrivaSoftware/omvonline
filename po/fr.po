@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-02-06 17:37+0100\n"
+"POT-Creation-Date: 2004-02-16 22:53+0100\n"
 "PO-Revision-Date: 2003-03-07 22:29+0100\n"
 "Last-Translator: Arnaud Hrycak <arnaud.hrycak@noos.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -17,119 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ../mdkonline:64
-msgid "Africa"
-msgstr "Afrique"
-
-#: ../mdkonline:65
-msgid "Asia"
-msgstr "Asie"
-
-#: ../mdkonline:66
-msgid "Australia"
-msgstr "Australie"
-
-#: ../mdkonline:67
-msgid "Europe"
-msgstr "Europe"
-
-#: ../mdkonline:68
-msgid "North America"
-msgstr "Amérique du Nord"
-
-#: ../mdkonline:69
-msgid "South America"
-msgstr "Amérique du Sud"
-
-#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
-msgid "Next"
-msgstr "Suivant"
-
-#: ../mdkonline:88
-msgid "Finish"
-msgstr "Terminer"
-
-#: ../mdkonline:89 ../mdkonline:531
-msgid "Quit"
-msgstr "Quitter"
-
-#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
-msgid "Back"
-msgstr "Retour"
-
-#: ../mdkonline:92
-msgid "I don't have a MandrakeOnline account and I want to "
-msgstr "Je n'ai pas de compte MandrakeOnline et je veux "
-
-#: ../mdkonline:93
-msgid "Subscribe"
-msgstr "Souscrire"
-
-#: ../mdkonline:109
-msgid "Yes I want automated updates"
-msgstr "Oui, je veux automatiser les mises-à-jour"
-
-#: ../mdkonline:150
-msgid "Quitting Wizard\n"
-msgstr "Fermeture de l'assistant\n"
-
-#: ../mdkonline:164
-msgid "Empty Mirror"
+#: ../mdkonline:85
+msgid "Skip Wizard"
 msgstr ""
 
-#: ../mdkonline:164
-msgid "Empty Mirror. Please choose a place."
-msgstr ""
-
-#: ../mdkonline:248
-msgid "Warning: No browser specified"
-msgstr "Alerte : aucun navigateur spécifié"
-
-#: ../mdkonline:273
-#, fuzzy
-msgid "Connecting ...\n"
-msgstr "Problème de connexion"
-
-#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
-msgid "Connection problem"
-msgstr "Problème de connexion"
-
-#: ../mdkonline:282 ../mdkonline:347
-#, fuzzy
-msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
-
-#: ../mdkonline:294
-msgid "Wrong password"
-msgstr "Mot de passe incorrect"
-
-#: ../mdkonline:294
-msgid ""
-"Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to "
-"MandrakeOnline.\n"
-" Be aware that you must also provide a Machine name \n"
-" (only alphabetical characters are admitted)"
-msgstr ""
-"Votre identifiant ou mot de passe était incorrect.\n"
-" Vous devrez soit en recommencer la saisie, soit créer un compte "
-"MandrakeOnline.\n"
-" Dans le second cas, revenez à la première étape pour vous connecter à "
-"MandrakeOnline.\n"
-" Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
-" (seuls les caractères alphabétiques sont autorisés)."
-
-#: ../mdkonline:320
-msgid "Sending configuration..."
-msgstr ""
-
-#: ../mdkonline:356
+#: ../mdkonline:99
 msgid "Welcome to MandrakeOnline"
 msgstr "Bienvenue à MandrakeOnline"
 
-#: ../mdkonline:357
+#: ../mdkonline:100
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -141,37 +37,55 @@ msgstr ""
 "paquetages, configuration matérielle) vers une base de données centralisée,\n"
 "afin de vous maintenir informé des mises-à-jour de sécurité.\n"
 
-#: ../mdkonline:374
+#: ../mdkonline:101
+#, fuzzy
+msgid "Create a MandrakeOnline Account"
+msgstr "Bienvenue à MandrakeOnline"
+
+#: ../mdkonline:103
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "Je n'ai pas de compte MandrakeOnline et je veux "
+
+#: ../mdkonline:103
+msgid "Subscribe"
+msgstr "Souscrire"
+
+#: ../mdkonline:107 ../mdkonline:127
+msgid "Login:"
+msgstr "Identifiant :"
+
+#: ../mdkonline:108 ../mdkonline:128
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: ../mdkonline:109
+#, fuzzy
+msgid "Confirm Password:"
+msgstr "Mot de passe :"
+
+#: ../mdkonline:110
+msgid "Mail contact:"
+msgstr ""
+
+#: ../mdkonline:117
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake et votre vie privée"
 
 # (in english : authentication !)
-#: ../mdkonline:379
+#: ../mdkonline:123
 msgid "Authentification"
 msgstr "Authentification"
 
-#: ../mdkonline:380
+#: ../mdkonline:124
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr ""
 "Entrez vos identifiant, mot de passe et nom de machine MandrakeOnline :"
 
-#: ../mdkonline:382
-msgid "Login:"
-msgstr "Identifiant :"
-
-#: ../mdkonline:382
+#: ../mdkonline:129
 msgid "Machine name:"
 msgstr "Nom de machine :"
 
-#: ../mdkonline:382
-msgid "Password:"
-msgstr "Mot de passe :"
-
-#: ../mdkonline:387
-msgid "Sending your Configuration"
-msgstr "Envoi de votre configuration"
-
-#: ../mdkonline:388
+#: ../mdkonline:135
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -207,25 +121,7 @@ msgstr ""
 "net\n"
 "vous sera fourni."
 
-#: ../mdkonline:396
-msgid "Error while sending informations"
-msgstr "Erreur à l'envoi des informations"
-
-#: ../mdkonline:397
-msgid ""
-"There was an error while sending your personal informations.\n"
-"\n"
-"Press Next to try and send your configuration again."
-msgstr ""
-"Une erreur s'est produite pendant l'envoi de vos informations personnelles.\n"
-"\n"
-"Appuyez sur Suivant pour réessayer."
-
-#: ../mdkonline:403
-msgid "Finished"
-msgstr "Terminé"
-
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
@@ -233,7 +129,7 @@ msgstr ""
 "À partir de maintenant, MandrakeOnline vous\n"
 "enverra les annonces de sécurité et de mises-à-jour."
 
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
@@ -242,111 +138,139 @@ msgstr ""
 "Un programme se lancera régulièrement sur votre machine en\n"
 "attente de nouvelles mises-à-jour.\n"
 
-#: ../mdkonline:404
+#: ../mdkonline:141
 msgid "Your upload was successful!"
 msgstr "Votre envoi a eu lieu avec succès !"
 
-#: ../mdkonline:409
+#: ../mdkonline:142
 msgid "automated Upgrades"
 msgstr "mises-à-jour automatisées"
 
-#: ../mdkonline:417
-msgid "Choose your geographical location"
-msgstr "Choisir la localisation géographique"
+#: ../mdkonline:144
+msgid "Yes I want automated updates"
+msgstr "Oui, je veux automatiser les mises-à-jour"
 
-#: ../mdkonline:435
+#: ../mdkonline:147
+msgid "Country:"
+msgstr ""
+
+#: ../mdkonline:172
+msgid "Creation"
+msgstr ""
+
+#: ../mdkonline:172
+msgid "Login and Password should be < 12 characters\n"
+msgstr ""
+
+#: ../mdkonline:173
+msgid "Special Characters"
+msgstr ""
+
+#: ../mdkonline:173
+msgid "Special Characters are not allowed\n"
+msgstr ""
+
+#: ../mdkonline:174
+msgid "Empty Fields"
+msgstr ""
+
+#: ../mdkonline:174
+msgid "Please fill up all fields\n"
+msgstr ""
+
+#: ../mdkonline:175
+msgid "Email"
+msgstr ""
+
+#: ../mdkonline:175
+msgid "Email not valid\n"
+msgstr ""
+
+#: ../mdkonline:176
+msgid "Account already exist\n"
+msgstr ""
+
+#: ../mdkonline:176
+msgid "Change account"
+msgstr ""
+
+#: ../mdkonline:181
+msgid "Problem connecting to server \n"
+msgstr ""
+
+#: ../mdkonline:181
+msgid "Server Problem"
+msgstr ""
+
+#: ../mdkonline:186 ../mdkonline:188 ../mdkonline:190
+msgid "Error"
+msgstr ""
+
+#: ../mdkonline:186
+msgid "Please provide a login"
+msgstr ""
+
+#: ../mdkonline:188
+msgid ""
+"The passwords do not match\n"
+" Please try again\n"
+msgstr ""
+
+#: ../mdkonline:190
+msgid "Not a valid mail address!\n"
+msgstr ""
+
+#: ../mdkonline:210
+msgid "Finish"
+msgstr "Terminer"
+
+#: ../mdkonline:227
+msgid "Quitting Wizard\n"
+msgstr "Fermeture de l'assistant\n"
+
+#: ../mdkonline:252
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problème de connexion"
+
+#: ../mdkonline:261 ../mdkonline:327 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Problème de connexion"
+
+#: ../mdkonline:261 ../mdkonline:327
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
+
+#: ../mdkonline:273
+msgid "Wrong password"
+msgstr "Mot de passe incorrect"
+
+#: ../mdkonline:273
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"Votre identifiant ou mot de passe était incorrect.\n"
+" Vous devrez soit en recommencer la saisie, soit créer un compte "
+"MandrakeOnline.\n"
+" Dans le second cas, revenez à la première étape pour vous connecter à "
+"MandrakeOnline.\n"
+" Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
+" (seuls les caractères alphabétiques sont autorisés)."
+
+#: ../mdkonline:300
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:335
 msgid "Reading configuration\n"
 msgstr "Lecture de la configuration\n"
-
-#: ../mdkonline:512
-msgid "OK"
-msgstr "OK"
-
-#: ../mdkonline:528
-msgid "Cancel"
-msgstr "Annuler"
-
-#: ../mdkonline:534
-msgid ""
-"Do you really want to abort MandrakeOnline?\n"
-"To return to the Wizard press 'Cancel',\n"
-"to really quit it press 'Quit'."
-msgstr ""
-"Voulez-vous abandonner MandrakeOnline?\n"
-"Pour revenir à l'assistant appuyez sur Annuler,\n"
-"pour quitter appuyez sur Quitter."
-
-#: ../mdkonline:535
-msgid "Really abort? - MandrakeOnline"
-msgstr "Abandonner? - MandrakeOnline"
-
-#: ../mdkonline:567
-msgid ""
-" You are just starting our Free Mandrake Linux Download Edition for the "
-"first time. \n"
-"\n"
-"There are now over three million Mandrake Linux users all over the world!\n"
-"\n"
-"Please take a few seconds to fill a short questionnaire. The data from "
-"this \n"
-"questionnaire will be used only for aggregate market studies.\n"
-"The text below is the privacy policy of MandrakeSoft about your personal "
-"data."
-msgstr ""
-
-#: ../mdkonline:576
-msgid ""
-"What personal data do we collect ?         \n"
-"                               \n"
-"Various information is collected in different areas of the website;\n"
-"what follows is an overview of the data we keep:\n"
-"\n"
-"Firstly, we record your email address, name and postal address.\n"
-"Secondly we give you a unique customer ID. This ID will be used to \n"
-"add additional information related to your Mandrake account such as:\n"
-"    - Your subscription to mailling lists.\n"
-"    - When registering a purchased product, we ask for personal\n"
-"information as well as system/hardware details so that we may deliver\n"
-"the best support services customized to your needs.\n"
-"    - On our donation page and on our online store (MandrakeStore), we\n"
-"record data for billing purpose (we do not store any credit card data).\n"
-"    \n"
-"What do we do with this information?\n"
-"\n"
-"We never share personal information with other persons or companies -\n"
-"we use this data strictly for the following purposes:\n"
-"    - If you have subscribed to a mailing list, we keep this email\n"
-"address in our database to provide you with customized information\n"
-"and/or to enable you to participate in discussions in various mailing\n"
-"lists. If you send a message to such a list, other people will see\n"
-"your email address but no external parties have access to our database\n"
-"of subscribers. At any time you may unsubscribe to any list by using\n"
-"the appropriate form.\n"
-"    - If you provide information when registering a purchased product\n"
-"to receive support, we keep this information private unless the\n"
-"information is required by one of our partners to deliver the support\n"
-"you require.\n"
-"    - If you use MandrakeStore, we also use your Customer ID to track\n"
-"your order and deliver your products.\n"
-"    - If you provide us with marketing information, we keep it for \n"
-"internal use only in order to improve our products so that they can \n"
-"better fit your needs whether you have purchased a product or not.), How to "
-"change / correct your personal data?\n"
-"\n"
-"French law gives individuals the right to access, correct, modify or \n"
-"remove their own personal data that we have on record. We offer this \n"
-"as a worldwide privilege. You may execute this right at any time by \n"
-"logging to your account with your customer ID and editing your\n"
-"personnal data. You can log on to this page: http://www.mandrakeonline.net"
-msgstr ""
-
-#: ../mdkonline:623
-msgid "Sans Italic 17"
-msgstr ""
-
-#: ../mdkonline:641
-msgid "Close"
-msgstr "Fermer"
 
 #: ../mdkupdate:43
 #, perl-format
@@ -408,3 +332,76 @@ msgstr "Impossible d'ajouter le medium mdkupdate.\n"
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
 "Impossible de mettre à jour les paquets à partir du medium de mdkupdate.\n"
+
+#~ msgid "Africa"
+#~ msgstr "Afrique"
+
+#~ msgid "Asia"
+#~ msgstr "Asie"
+
+#~ msgid "Australia"
+#~ msgstr "Australie"
+
+#~ msgid "Europe"
+#~ msgstr "Europe"
+
+#~ msgid "North America"
+#~ msgstr "Amérique du Nord"
+
+#~ msgid "South America"
+#~ msgstr "Amérique du Sud"
+
+#~ msgid "Next"
+#~ msgstr "Suivant"
+
+#~ msgid "Quit"
+#~ msgstr "Quitter"
+
+#~ msgid "Back"
+#~ msgstr "Retour"
+
+#~ msgid "Warning: No browser specified"
+#~ msgstr "Alerte : aucun navigateur spécifié"
+
+#~ msgid "Sending your Configuration"
+#~ msgstr "Envoi de votre configuration"
+
+#~ msgid "Error while sending informations"
+#~ msgstr "Erreur à l'envoi des informations"
+
+#~ msgid ""
+#~ "There was an error while sending your personal informations.\n"
+#~ "\n"
+#~ "Press Next to try and send your configuration again."
+#~ msgstr ""
+#~ "Une erreur s'est produite pendant l'envoi de vos informations "
+#~ "personnelles.\n"
+#~ "\n"
+#~ "Appuyez sur Suivant pour réessayer."
+
+#~ msgid "Finished"
+#~ msgstr "Terminé"
+
+#~ msgid "Choose your geographical location"
+#~ msgstr "Choisir la localisation géographique"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
+
+#~ msgid ""
+#~ "Do you really want to abort MandrakeOnline?\n"
+#~ "To return to the Wizard press 'Cancel',\n"
+#~ "to really quit it press 'Quit'."
+#~ msgstr ""
+#~ "Voulez-vous abandonner MandrakeOnline?\n"
+#~ "Pour revenir à l'assistant appuyez sur Annuler,\n"
+#~ "pour quitter appuyez sur Quitter."
+
+#~ msgid "Really abort? - MandrakeOnline"
+#~ msgstr "Abandonner? - MandrakeOnline"
+
+#~ msgid "Close"
+#~ msgstr "Fermer"
