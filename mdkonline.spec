@@ -1,11 +1,11 @@
 %define version 1.1
 %define name mdkonline
-%define release 11mdk
+%define release 12mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	12mdk
+Release: 	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -129,7 +129,7 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Sun Sep 26 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
+* Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
 - introduced mdkonline text based wizard for server products
 - po updates
 - strict requirement on mdkonline-backend
