@@ -146,6 +146,9 @@ sub gtk_main_quit {
 	[ -f "/root/$login.$passwd.online.log.bz2" ] && unlink ("/root/$login.$passwd.online.log.bz2");
     }
 
+    # setting up the automated updates
+    automated_upgrades();
+
     # quit
     print _("Quitting Wizard\n");
     main_quit Gtk;
@@ -294,7 +297,7 @@ sub test_passwd () {
 
 }
 
-sub automate_upgrades {
+sub automated_upgrades {
     
 } 
 sub send_config {
@@ -322,7 +325,7 @@ sub send_config {
 #	[ -e "$_" ] and $scp_script="$_", last;
 #    }
 #    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
-    # TODO: beware if the script was not found
+# TODO: beware if the script was not found
 # TODO: avoid starting a shell (which will eval args...) 
 # by using system() with several distinct args
 #    `$scp_script /root/drakbug_report.log $login $authentication_host $passwd`;
