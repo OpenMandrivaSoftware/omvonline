@@ -1,11 +1,11 @@
 # Changed by Makefile of cvs.
-%define version 0.15
+%define version 0.16
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	27mdk
+Release: 	1mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -31,6 +31,9 @@ hardware support/enhancements and other high value services.
 %install
 rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT install 
+
+#symbolic link to drakonline
+ln -sf %_sbindir/drakonline %buildroot/%_sbindir/mdkonline
 
 #install lang
 %{find_lang} %{name}
@@ -76,6 +79,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Aug 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-1mdk
+- release 0.16
+- add sl drakonline -> mdkonline
+
 * Wed Aug 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-27mdk
 - mdkonline now in /usr/sbin/ (remove consolehelper aliases)
 - better text wrapping.
