@@ -24,10 +24,10 @@ use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use mdkonline;
+use interactive;
+use urpm;
 
 BEGIN { unshift @::textdomains, 'mdkupdate' }
-
-mdkonline::is_running('mdkupdate') and die "mdkupdate already running\n";
 
 require_root_capability();
 
@@ -43,10 +43,10 @@ my $logfile = '/var/tmp/mdkupdate.log';
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
-    $url->{$_} = $onlineUrl . $_ . '.php'
+    $url->{$_} = $onlineUrl . $_ . '.php';
 }
 my $VERSION = "1.1";
-my $YEARS = "2002-2004";
+my $YEARS = "2002-2005";
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
@@ -63,12 +63,14 @@ usage:
 ", $VERSION, $YEARS) . N("  --help         - print this help message.
 ") . N("  --auto         - Mandrakeupdate launched automatically.
 ") . N("  --applet       - launch Mandrakeupdate.
+") . N("  --mnf          - launch mnf specific scripts.
+") . N("  --noX          - MandrakeUpdate newt version.
 ");
     exit(0);
 }
 
 my ($opt) = @ARGV;
-@ARGV == 1 && ($opt eq '--auto' || $opt eq '--applet') or usage();
+@ARGV == 1 && member($opt, qw(--auto --applet --mnf --noX)) or usage();
 
 -s $conffile or die N("No %s file found. Run mdkonline wizard first", $conffile);
 
@@ -81,7 +83,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     #print "CONTENTS = $contents \n";
     -e $logfile and system "/bin/rm", $logfile;
     if ($resp->is_success) {
-	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 };
+	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 }
 	my $action = {
 		      10 => sub {
 			  my $c2h = split_contents($contents);
@@ -91,39 +93,45 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			      # for debugging purpose
 			      printf("FTP = %s\n", $c2h->{FTP});
 			      #$c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
-			      add_media($c2h->{FTP})
+			      add_media($c2h->{FTP});
 			  }
 			  $scheduled = join(',', @{$c2h->{sched}});
 			  $noscheduled = join(',', @{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
+			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			  } elsif ($opt eq '--noX') {
+			      my $in = interactive->vnew;
+			      my $pkgs = ask_pkgs($in);
+			      install_pkgs($in, $pkgs) if $pkgs;
+			      $in->exit(0);
 			  } elsif ($opt eq '--auto') {
-			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched})
+			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched});
 			  }
 			  rpm_qa($afterrpm);
 			  my %new = getVarsFromSh($conffile);
 			  my $need_upload = get_rpm_diff();
-			  if ($need_upload || $opt eq '--auto') {
+			  if ($need_upload || member($opt, qw(--auto --mnf))) {
 			      #- send configuration and get back key to use...
 			      my $r;
 			      ($r, $new{CURRENTKEY}) = send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
+			      $new{FTP} = if_($opt eq '--mnf', $c2h->{FTP});
 			      if ($r eq 'TRUE') { delete $new{OLDKEY}; setVarsInSh($conffile, \%new) }
 			  }
 			  clean_dir();
 		      },
 		      80 => sub { 
-			  output_p($logfile, "[mdkupdate] Error 80: Client password does not match in database")
+			  output_p($logfile, "[mdkupdate] Error 80: Client password does not match in database");
 		      },
 		      81 => sub {
-			  output_p($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard")
+			  output_p($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard");
 		      },
 		      82 => sub {
-			  output_p($logfile, "[mdkupdate] Error 82: No active Online service found for this host.")
+			  output_p($logfile, "[mdkupdate] Error 82: No active Online service found for this host.");
 		      },
 		      83 => sub {
-			  output_p($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion")
+			  output_p($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion");
 		      }
 		     };
 	$action->{$u}->();
@@ -132,6 +140,64 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     }
 } else {
     my $ret = -1; 
+}
+sub ask_pkgs {
+    my ($in) = @_;
+    my $pkgs = get_updatable_pkgs();
+    $in->ask_browse_tree_info('Mdkupdate', N("Choose which packages should be installed and Press Ok"),
+			      {
+			       node_state => sub { $pkgs->{$_[0]}{selected} ? 'selected' : 'unselected' },
+			       build_tree => sub {
+				   my ($add_node, $flat) = @_;
+				   $add_node->($_, undef) foreach sort keys %$pkgs;
+			       },
+			       grep_unselected => sub { grep { !$pkgs->{$_}{selected} } @_ },
+			       toggle_nodes => sub {
+				   my ($set_state, @nodes) = @_;
+				   my $new_state = !$pkgs->{$nodes[0]}{selected};
+				   foreach (@nodes) {
+				       $set_state->($_, $new_state ? 'selected' : 'unselected');
+				       $pkgs->{$_}{selected} = $new_state;
+				   }
+			       },
+			       get_info => sub {},
+			      }) or return keys %$pkgs; #- no change on cancel.
+    [ grep { $pkgs->{$_}{selected} } keys %$pkgs ];
+}
+sub install_pkgs {
+    my ($in, $choosed) = @_;
+    my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
+    eval {
+	system "/usr/sbin/urpmi", "--auto", "--media", "update_source", @$choosed;
+	$? == 0 or die N("Unable to update packages from update_source medium.\n");
+    };
+    undef $w;
+}
+sub get_updatable_pkgs() {
+    my $urpm = new urpm;
+    $urpm->read_config;
+    my %installable_pkgs; my @update_medias;
+    my ($medium) = grep { $_->{name} eq "update_source" } @{$urpm->{media}};
+    
+    if ($medium) {
+	$urpm->configure(media => $medium->{name});
+	@update_medias = grep { !$_->{ignore} && $_->{update} } @{$urpm->{media}};
+	$urpm->compute_installed_flags(URPM::DB::open);
+	foreach my $pkg (@{$urpm->{depslist}}) {
+	    $pkg->flag_upgrade or next;
+	    my $selected = 0;
+	    $pkg->flag_installed or next;
+	    any { $pkg->id >= $_->{start} && $pkg->id <= $_->{end} } @update_medias or next;
+	    $selected = member($pkg->name, qw(perl-URPM, urpmi, mdkonline, drakxtools)) ? 1 : 0;
+	    $installable_pkgs{my_fullname($pkg)} = { selected => $selected, pkg => $pkg };
+	}
+    }
+    \%installable_pkgs;
+}
+sub my_fullname {
+    return '?-?-?' unless ref $_[0];
+    my ($name, $version, $release) = $_[0]->fullname;
+    "$name-$version-$release";
 }
 sub split_contents {
     my $cont = shift;
@@ -142,13 +208,14 @@ sub split_contents {
 	($elem->{torf}, $elem->{NEWKEY}, $elem->{OLDKEY}, $elem->{FTP}) = splice(@$s, 0, 4);
 	($elem->{sched}, $elem->{nosched}) = partition { /(i586|ppc|ia64|noarch|x86_64|amd64|ppc64)$/ } @$s;
     }
-    $elem
+    $elem;
 }
 sub auto_install_rpms {
     my ($pkgs) = shift;
     my @pkg;
     push(@pkg, $_ . '.rpm') foreach @$pkgs;
-    update_pkgs(@pkg);
+    my $ret = update_pkgs(@pkg);
+    $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 }
 sub update_conf {
     my ($oldkey, $newkey) = @_;
@@ -165,12 +232,16 @@ sub update_conf {
 }
 sub add_media {
     my $mirror = shift;
-    my ($r) = mdkonline::get_release();
-    my $dist_type = mdkonline::get_distro_type();
+    my ($r, $da, $is_x8664, $dist_name);
+    ($r) = mdkonline::get_release();
+    # retrieve dist and arch from /etc/mandrakelinux file
+    $da = mdkonline::get_distro_type();
     my $media_varfile = "/var/lib/urpmi/list.mdkupdate";
     my ($path2new_arch, $path2new_synthesis) = $r <= 10.0 ? ('/RPMS/', '../base/synthesis.hdlist.cz') : ('/main_updates/', 'media_info/synthesis.hdlist.cz');
     #sometimes server returns the full link http:// or ftp://
-    my $fullpath2mir = if_($mirror !~ /^(http|ftp):\/\// , "ftp://") . $mirror . if_($dist_type, "/$dist_type") ."/$r" . $path2new_arch;
+    ($is_x8664) = $da->{arch} =~ /(x86_64)/;
+    $dist_name = $da->{name};
+    my $fullpath2mir = if_($mirror !~ m!^(?:http|ftp)://! , "ftp://") . $mirror . if_($is_x8664, "/$is_x8664") . if_($dist_name, "/$dist_name") . "/$r" . $path2new_arch;
     eval {
 	#Remove historical mdkupdate source 
 	-f $media_varfile and system "/usr/sbin/urpmi.removemedia", "mdkupdate";
@@ -185,19 +256,20 @@ sub update_pkgs {
 	system "/usr/sbin/urpmi", "--auto", "--media", "update_source", map { /^(.*)\.rpm$/ && $1 } @_;
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
-    $@ and die "Problem upgrading with urpmi";
+    $@ and output_p($logfile, "[mdkupdate] Error 99: $@"), return 0;
+    return 1;
 }
 sub send_conf_update {
     my ($login, $password, $boxname) = @_;
     mdkonline::report_config("$confdir/$login.$password.$boxname.online.log");
     my $tag = { submit => 'upload_wizard', wizard => [ "$confdir/$login.$password.$boxname.online.log.bz2.uue" ] };
     my ($res, $key) = mdkonline::send_config($url->{wizard}, $tag);
-    ($res, $key)
+    ($res, $key);
 }
 sub get_rpm_diff {
     my $isdif = `sdiff -s $afterrpm $currentrpm`;
     $isdif and output_p($difflog, $isdif), return 1;
-    return 0
+    return 0;
 }
 sub new_rpm_base {
     -f $afterrpm and system('/bin/mv', $afterrpm, $currentrpm);
@@ -205,7 +277,7 @@ sub new_rpm_base {
 sub clean_dir() {
     new_rpm_base();
     mdkonline::clean_confdir();
-    output_p($logfile, 'OK')
+    output_p($logfile, 'OK');
 }
 sub rpm_qa {
     my ($file) = @_;
