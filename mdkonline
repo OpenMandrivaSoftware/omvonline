@@ -64,8 +64,9 @@ $o->{bottomHbox} = Gtk2::HBox->new;
 my %stage = (
 	     0 => sub { if ($o->{account_cb}->get_active) { subsOnline() } else { $o->{nb}->next_page} },
 	     1 => sub { $o->{nb}->next_page() }, 
-	     2 => sub { sendConfig() },
-	     3 => sub { setConf() },
+	     2 => sub { testPasswd() },
+	     3 => sub { sendConfig() },
+	     4 => sub { setConf() },
 	    );
 $o->{actions} = {
 		 Next => sub {
@@ -125,7 +126,7 @@ gtkappend_page($o->{nb},
 			1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10 },
 					    [], 
 					    [ N("Login:"), $o->{login} = Gtk2::Entry->new(), "" ],
-					    [ N("Password:"), $o->{passwd} = Gtk2::Entry->new(), "" ],
+					    [ N("Password:"), $o->{passwd} = entry_hidepass(), "" ],
 					    [ N("Machine name:"), $o->{machine} = Gtk2::Entry->new() ],
 					   ))
 	      );
@@ -194,8 +195,58 @@ sub checkErrors {
     }
 }
 sub sendConfig {
-}	     
+    # When we arrive here, we're sure the login/passwd is correct
+    # print STDERR "Sending config\n";
+    my $result = -1;
+    my ($login, $passwd, $boxname, $key, $mirror);
+    my $w = wait_msg(N("Sending configuration..."));
+    reportConfig("/root/$login.$passwd.$boxname.online.log");
+    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$boxname.online.log`;
+    # Turn the binary file into a uuencoded ascii file
+    open (FILE, "/root/$login.$passwd.$boxname.online.log.bz2") or die "$!";
+    my ($chunk, $buffer);
+    while (read(FILE, $chunk, 60*57)) {
+	$buffer .= $chunk;
+    }
+    close (FILE);
+    open (FILEOUT, "> /root/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
+	print FILEOUT encode_base64($buffer);
+    close (FILEOUT);
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
+
+                                Content_Type => 'form-data',
+                                Content => [submit => "upload_wizard",
+                                            wizard => ["/root/$login.$passwd.$boxname.online.log.bz2.uue"]
+					   ]);
+    #printf("*********** Reponse is %s ***********\n", $response->as_string);
+    # Check the outcome of the response
+    #print "REPONSE: ".$response->content."\n";
+    remove_wait_msg($w);
+    if ($response->is_success) {
+	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
+	#print("key is $1\n");
+	$key = $1; 
+    } else {
+	# pb with the connection ?
+	$result = -1;
+    }
+
+    # if information were sent correctly (exit code: 0 from scp script), go to page 5
+    if (! $result) {
+	# go to last page
+	$o->{nb}->set_current_page(4); 
+    } else {
+	# if incorrect, go/stay on page 4 to retry sending data
+	# pb with the connection ?
+	raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	$o->{nb}->set_current_page(4);
+    }
+}
+
 sub setConf {
+    
 }
 sub init {
     my $i = shift;
@@ -238,8 +289,7 @@ sub isalphanum {
 	return 0;
     }
 }
-sub test_passwd () {
-    my $current_page = shift;
+sub testPasswd () {
     my $result = -1;
     my $login    = $o->{login}->get_text;
     my $passwd   = $o->{passwd}->get_text;
@@ -249,10 +299,10 @@ sub test_passwd () {
     if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
+	my $w = wait_msg($o->{mw}{window}, N("Connecting ...\n")); $w->show;
 	$passwd = md5_hex($passwd); # or md5 () or md5_base64 ()
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-	my $w = wait_msg(N("Connecting ...\n"));
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=' . $login . '&p=' . $passwd);
 	my $response = $ua->request($request);
 	remove_wait_msg($w);
@@ -278,61 +328,7 @@ sub test_passwd () {
     }
 }
 
-sub send_config {
-    # When we arrive here, we're sure the login/passwd is correct
-#    print STDERR "Sending config\n";
-    my $result = -1;
-    my ($login, $passwd, $boxname, $key, $mirror);
-    
-    report_config("/root/$login.$passwd.$boxname.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$boxname.online.log`;
-
-    # Turn the binary file into a uuencoded ascii file
-    open (FILE, "/root/$login.$passwd.$boxname.online.log.bz2") or die "$!";
-    my ($chunk, $buffer);
-    while (read(FILE, $chunk, 60*57)) {
-	$buffer .= $chunk;
-    }
-    close (FILE);
-    open (FILEOUT, "> /root/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
-	print FILEOUT encode_base64($buffer);
-    close (FILEOUT);
-
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $w = wait_msg(N("Sending configuration..."));
-    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
-
-                                Content_Type => 'form-data',
-                                Content => [submit => "upload_wizard",
-                                            wizard => ["/root/$login.$passwd.$boxname.online.log.bz2.uue"]
-					   ]);
-    #printf("*********** Reponse is %s ***********\n", $response->as_string);
-    # Check the outcome of the response
-    #print "REPONSE: ".$response->content."\n";
-    remove_wait_msg($w);
-    if ($response->is_success) {
-	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
-	#print("key is $1\n");
-	$key = $1; 
-    } else {
-	# pb with the connection ?
-	$result = -1;
-    }
-
-    # if information were sent correctly (exit code: 0 from scp script), go to page 5
-    if (! $result) {
-	# go to last page
-	$o->{nb}->set_current_page(4); 
-    } else {
-    # if incorrect, go/stay on page 4 to retry sending data
-	# pb with the connection ?
-	raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
-	$$o->{nb}->set_current_page(4);
-    }
-}
-
-sub report_config {
+sub reportConfig {
     my ($file) = @_;
     #touch($file);
     my $w = wait_msg(N("Reading configuration\n"));
@@ -360,7 +356,7 @@ join '', map { chomp; print FILE "$_\n" }
 close(FILE);
     remove_wait_msg($w);
 }
-sub automated_upgrades {
+sub automatedUpgrades {
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
     my $login = $o->{login}->get_text;
     my $passwd = md5_hex($o->{passwd}->get_text);
