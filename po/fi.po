@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-fi - MDK 10.1 Release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-29 18:14+0200\n"
-"PO-Revision-Date: 2004-09-05 19:59+0300\n"
+"PO-Revision-Date: 2004-10-01 02:17+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandrake.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrakelinux.com>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Palvelu ei ole otettu käyttöön. Paina \"Online Webbisivusto\""
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Jakelu ei tuettu (liian vanha jakelu, tai kehitysjakelu)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -167,8 +167,7 @@ msgstr "käynnistetään mdkupdate --applet\n"
 #: ../mdkapplet:217
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandrakeonline on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
+msgstr "Mandrakeonline on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
 
 #: ../mdkapplet:225
 #, c-format
@@ -188,12 +187,12 @@ msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Kehitysjakelu ei ole tuettu tässä palvelussa"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Liian vanha jakelu ei ole tuettu tässä palvelussa"
 
 #: ../mdkapplet:256
 #, c-format
@@ -307,9 +306,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Luo Mandrakeonline-tunnus"
 
 #: ../mdkonline:108
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Minulla ei ole Mandrakeonline-tunnusta ja haluan "
+msgstr "Minulla ei ole Mandrakeonline-tiliä ja haluan tilaa sitä"
 
 #: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:113 ../mdkonline_tui:144
 #, c-format
@@ -508,8 +507,7 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
-"Tunnuksen ja salasanan pituuden pitäisi olla vähemmän kuin 12 merkkiä\n"
+msgstr "Tunnuksen ja salasanan pituuden pitäisi olla vähemmän kuin 12 merkkiä\n"
 
 #: ../mdkonline.pm:56
 #, c-format
@@ -537,19 +535,19 @@ msgid "Problem connecting to server \n"
 msgstr "Ongelmia yhdistettäessä palvelimeen\n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Tervetuloa Mandrakeonlineen"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Minulla on jo tili"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Haluan rekisteröityä"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -559,22 +557,22 @@ msgstr "Odota hetki"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Tilin luonti tai kirjautuminen"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Tervetuloa Mandrakeonlineen"
+msgstr "Yhdistetään Mandrakeonline webbisivustoon..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "tai"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Väärä salasana"
+msgstr "väärä salasana:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -582,11 +580,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline tili luotiin onnistuneesti.\n"
+"Paina \"Seuraava\" kirjautuaaksesi ja lähettääksesi laitteistotietojasi\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Maa:"
+msgstr "Maa"
 
 #: ../mdkupdate:50
 #, c-format
@@ -628,7 +628,7 @@ msgstr "  --update       - Päivitä avaimet\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "%s tiedosto ei löydetty. Suorita mdkonline velho ensin"
 
 #: ../mdkupdate:124
 #, c-format
@@ -646,6 +646,9 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate ei voinut lähettää diff tiedostoja. Lähetä viesti osoitteen: "
+"upport [at] "
+"mandrakeonline [piste] net"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "Ohita velho"
@@ -747,3 +750,4 @@ msgstr ""
 
 #~ msgid "Unable to create mdkupdate medium.\n"
 #~ msgstr "Ei pystytty luomaan mdkupdate lähdettä.\n"
+
