@@ -55,9 +55,13 @@ msgstr "¦ÅÇ¢î¦ºø"
 msgid "Back"
 msgstr "À¢ıÉ¡ø"
 
+# inserted a \n because mdkonline has a bug, it doens't wrap long
+# lines and the end of the line is not visible on the window...
 #: ../mdkonline_.c:101
 msgid "I don't have a MandrakeOnline account and I want to "
-msgstr "Á¡ñÊ§Ãì ş¨½Âò¾ÇòÇò¾¢ø ±ÉìÌ ÀÂÉ÷¸½ìÌ şø¨Ä.±Éì¦¸¡ıÚ "
+msgstr ""
+"Á¡ñÊ§Ãì ş¨½Âò¾ÇòÇò¾¢ø ±ÉìÌ\n"
+"ÀÂÉ÷¸½ìÌ şø¨Ä.±Éì¦¸¡ıÚ "
 
 #: ../mdkonline_.c:102
 msgid "Subscribe"
@@ -102,9 +106,10 @@ msgid ""
 " (only alphabetical characters are admitted)"
 msgstr ""
 "¯í¸û  ÀÂÉ÷¸½ìÌ «øÄĞ ¸¼×î¦º¡ø ¾ÅÈ¡ÉĞ.\n"
-"Á£ñÎõ ÓÂıÚ À¡÷ì¸Ä¡õ, «øÄĞ Á¡ñÊ§Ãì ş¨½Âò¾Çò¾¢ø Ò¾¢Â ÀÂÉ÷¸½ìÌ ĞÅì¸Ä¡õ.\n"
-"Á¡ñÊ§Ãì ş¨½Âò¾Çò¾¢ø ÀÂÉ÷¸½ìÌ ĞÅì¸, Ó¾ø Àì¸ò¾¢üÌî ¦ºøÄ×õ \n"
-"¬É¡ø ¬í¸¢øò¾¢ø ¸½¢½¢ìÌô ¦ÀÂÃ¢¼ §ÅñÎõ\n"
+"Á£ñÎõ ÓÂıÚ À¡÷ì¸Ä¡õ, «øÄĞ Á¡ñÊ§Ãì ş¨½Âò¾Çò¾¢ø\n"
+"Ò¾¢Â ÀÂÉ÷¸½ìÌ ĞÅì¸Ä¡õ.\n"
+"Á¡ñÊ§Ãì ş¨½Âò¾Çò¾¢ø ÀÂÉ÷¸½ìÌ ĞÅì¸, Ó¾ø Àì¸ò¾¢üÌî\n"
+"¦ºøÄ×õ ¬É¡ø ¬í¸¢øò¾¢ø ¸½¢½¢ìÌô ¦ÀÂÃ¢¼ §ÅñÎõ\n"
 "±ØòĞ¸û Á¼Î§Á ÀÂÉ¢ì¸Ä¡õ"
 
 #: ../mdkonline_.c:369
@@ -133,7 +138,9 @@ msgstr "¿øÌ¡¢¨Á"
 
 #: ../mdkonline_.c:393
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "¯í¸û Á¡ñÊ§Ãì ş¨½Âò¾Ç  ÀÂÉ÷¸½ì¸¢ı ¦ÀÂ÷,¸¼×î¦º¡ø¨Ä «Êì¸×õ"
+msgstr ""
+"¯í¸û Á¡ñÊ§Ãì ş¨½Âò¾Ç ÀÂÉ÷¸½ì¸¢ı\n"
+"¦ÀÂ÷,¸¼×î¦º¡ø¨Ä «Êì¸×õ"
 
 #: ../mdkonline_.c:395
 msgid "Login:"
@@ -280,7 +287,7 @@ msgid "Close"
 msgstr "ãÎ"
 
 #: ../mdkupdate_.c:49
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -288,7 +295,7 @@ msgid ""
 "GPL.\n"
 "\n"
 "usage:\n"
-msgstr ""
+msgstr " Á¡ñÊ§Ãìş¨½Â ¦ÅÇ¢Â£Î %s\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
@@ -329,15 +336,3 @@ msgstr "wget şø¨Ä\n"
 
 #~ msgid "mdkupdate version %s"
 #~ msgstr " Á¡ñÊ§Ãìş¨½Â ¦ÅÇ¢Â£Î %s"
-
-#~ msgid ") . _("
-#~ msgstr ") . _("
-
-#~ msgid ", $VERSION );"
-#~ msgstr ", $VERSION );"
-
-#~ msgid "/root/.mdkupdate"
-#~ msgstr "/root/.mdkupdate"
-
-#~ msgid "/root/rpm_qa_installed_before"
-#~ msgstr "/root/rpm_qa_installed_before"
