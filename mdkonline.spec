@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 13mdk
+%define release 14mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -101,8 +101,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_sbindir}/mdkupdate
 %{_sbindir}/mdkonline_tui
-%dir %{_libdir}/libDrakX/drakfirsttime
-%{_libdir}/libDrakX/drakfirsttime/*.pm
+%dir %{_prefix}/lib/libDrakX/drakfirsttime
+%{_prefix}/lib/libDrakX/drakfirsttime/*.pm
 
 %files -f %{name}.lang
 %defattr(-,root,root)
@@ -129,6 +129,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Fri Oct  1 2004 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 1.1-14mdk
+- libDrakX is always in %%{_prefix}/lib
+
 * Thu Sep 30 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-13mdk
 - backward compatibilities for mandrakelinux release files
 - use correct mdkonline version/release to track down useragent connections
