@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: mdkonline-fa\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-07-28 09:04+0200\n"
-"PO-Revision-Date: 2004-04-27 22:34+0430\n"
+"PO-Revision-Date: 2004-07-20 15:48+0430\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
-"Language-Team: Persian <fa@li.org>\n"
+"Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../mdkapplet:66
 msgid "No updates available for your system"
-msgstr "هیچ بروزسازی برای سیستم‌تان در دسترس نیست"
+msgstr "هیچ بروزسازیی برای سیستم‌تان در دسترس نیست"
 
 #: ../mdkapplet:72
 msgid "Config problems. Launch \"configure\" again"
@@ -145,6 +145,7 @@ msgstr "به راه انداختن mdkupdate-applet\n"
 #: ../mdkapplet:207
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
+"بنظر می‌رسد که mdkonline نصب مجدد شده است، برنامک بارگذاری مجدد می‌شود ..."
 
 #: ../mdkapplet:215
 msgid "Computing new updates...\n"
@@ -160,7 +161,7 @@ msgstr "در حال بررسی... بروزسازی‌هایی در دسترس ه
 
 #: ../mdkapplet:243
 msgid "Unknown state"
-msgstr ""
+msgstr "وضعیت ناشناخته"
 
 #: ../mdkapplet:244
 msgid "Online services disabled. Contact MandrakeOnline site\n"
@@ -179,6 +180,8 @@ msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
+"تنظیمات شبکه شما اشکال دارد (تنظیمات مسیریاب، دیوار آتش یا پراکسی خود را "
+"بررسی کنید)\n"
 
 #: ../mdkapplet:251
 msgid "System is up to date\n"
@@ -281,6 +284,7 @@ msgid "Send Configuration"
 msgstr "فرستادن پیکربندی"
 
 #: ../mdkonline:136
+#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -302,7 +306,7 @@ msgstr ""
 "برای بهره بردن از خدمات MandrakeOnline،\n"
 "ما در شرف باردهی پیکربندی شما هستیم.\n"
 "\n"
-"این جادوگر اطلاعات بدنبال آمده را اکنون به Mandrakesoft خواهد فرستاد:\n"
+"این جادوگر اطلاعات بدنبال آمده را اکنون به MandrakeSoft خواهد فرستاد:\n"
 "۱) لیست بسته‌هایی که بر سیستم‌تان نصب شده‌اند،\n"
 "۲) پیکربندی سخت‌افزارتان.\n"
 "\n"
@@ -414,7 +418,7 @@ msgstr ""
 " (فقط نویسه‌های الفبایی مجازند) "
 
 #: ../mdkupdate:53
-#, perl-format
+#, fuzzy, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
@@ -424,7 +428,7 @@ msgid ""
 "usage:\n"
 msgstr ""
 "mdkupdate نسخه %s\n"
-"حق نسخه‌برداری (C) %s Mandrakesoft.\n"
+"حق نسخه‌برداری (C) %s MandrakeSoft.\n"
 "این نرم‌ افزار آزاد می‌باشد و می‌تواند تحت شروط GNU GPL پخش مجدد گردد.\n"
 "\n"
 "طرز استفاده:\n"
@@ -486,12 +490,3 @@ msgstr "  --update       - بروزسازی کلیدها.\n"
 
 #~ msgid "Unable to update packages from mdkupdate medium.\n"
 #~ msgstr "قادر نبودن به بروزسازی بسته‌ها از رسانه‌ی mdkupdate.\n"
-
-#~ msgid "Response from MandrakeOnline server\n"
-#~ msgstr "پاسخ از کارگزار MandrakeOnline\n"
-
-#~ msgid "Launching MandrakeUpdate\n"
-#~ msgstr "راه‌انداختن بروزسازی ماندرایک\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "بله بروزسازی‌های خودکار را می‌خواهم"
