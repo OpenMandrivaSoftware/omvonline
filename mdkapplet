@@ -48,7 +48,7 @@ my %state = (
 		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
 		      tt => [ N("No updates available for your system") ]
 		     },
-	     critical => {
+ 	     critical => {
 			  colour => [ 'orange' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
