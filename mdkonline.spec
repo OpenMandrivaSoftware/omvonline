@@ -20,7 +20,7 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakfirsttime >= 1.0-0.2mdk, perl-Crypt-SSLeay >= 0.51-2mdk
+Requires:	drakfirsttime >= 1.0-0.2mdk, perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -30,8 +30,13 @@ The Mandrake Online tool is designed for registered users
 who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
-The mdkupdate daemon allows you to install security updates automatically. 
-Mdkapplet is an KDE/Gnome applet for Security update notification.
+The package include :
+* Mandrake Online wizard for users registration and configuration 
+  uploads, 
+* Mdkupdate daemon which allows you to install security updates 
+  automatically,
+* Mdkapplet which is a KDE/Gnome applet for security updates 
+  notification and installation. 
 
 %prep
 %setup -q
@@ -86,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Wed Feb 18 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
+* Sun Feb 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
 - Mandrake Online Resurrected/Rewrited
 - Mandrake Applet Notification system
 - Wizard for club users is still valid but separated (drakclub executable)
