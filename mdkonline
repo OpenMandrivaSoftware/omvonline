@@ -366,7 +366,7 @@ sub send_config {
 sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to MandrakeOnline"),540,100);
+    writ_on_pixmaps($vbox_welc,"default.png",_("Welcome to MandrakeOnline"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $label_welc->set_justify(left);
@@ -384,12 +384,12 @@ sub step_wizard {
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     
     my $vbox_priv = new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
+    writ_on_pixmaps($vbox_priv,"default.png",_("Mandrake Privacy Policy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
 
     my $vbox_ident= new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_ident,"identity.png","MandrakeOnline"." "._("Authentification"),540,100);
+    writ_on_pixmaps($vbox_ident,"default.png","MandrakeOnline"." "._("Authentification"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine name:"),$box_user);
@@ -397,7 +397,7 @@ sub step_wizard {
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
+    writ_on_pixmaps($vbox_rev,"default.png",_("Sending your Configuration"),540,100);
     my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
     $label_rev->set_justify(left);
@@ -406,14 +406,14 @@ sub step_wizard {
 
     # building the "Error sending data" page
     my $vbox_errorsend= new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_errorsend,"identity.png",_("Error while sending informations"),540,100);
+    writ_on_pixmaps($vbox_errorsend,"default.png",_("Error while sending informations"),540,100);
     my $label_errorsend = new Gtk::Label("\n\n" . _("There was an error while sending your personal informations.\n\nPress Next to try and send your configuration again."));
     $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
     $notebook_global->append_page($vbox_errorsend,new Gtk::Label("errorsend"));
     
     # building the "OK data sent" page
     my $vbox_oksend= new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
+    writ_on_pixmaps($vbox_oksend,"default.png",_("Finished"),540,100);
     my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!") . "\n" . _("From now you will receive on security and updates \nannouncements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"));
     $label_oksend->set_justify(left);
     $vbox_oksend->pack_start($label_oksend,$true ,$true,1);
