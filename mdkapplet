@@ -267,7 +267,7 @@ sub displayLogs {
 }
 sub shouldStart() {
     my %p = getVarsFromSh($confpers);
-    if $p{AUTOSTART} eq 'FALSE' and mainQuit();
+    $p{AUTOSTART} eq 'FALSE' and mainQuit();
 }
 sub setState {
     my $state_type = shift;
