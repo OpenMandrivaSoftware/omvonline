@@ -83,8 +83,8 @@ $o->{actions} = {
 		     $p <= 1 and init(0)
 		 }
 		};
-foreach my $l (['Next', 'gtk-go-forward', 'stock'], ['SkipWiz', N("Skip Wizard")], ['Prev', 'gtk-go-back', 'stock']) {
-    $o->{$l->[0]} = $l->[2] ? Gtk2::Button->new_from_stock($l->[1]) : Gtk2::Button->new(" " . $l->[1] . " ");
+foreach my $l (['Next', N("Next"), 1], ['SkipWiz', N("Skip Wizard")], ['Prev', N("Previous"), 1 ]) {
+    $o->{$l->[0]} = Gtk2::Button->new($l->[1]);
     $l->[2] ? $o->{bottomHbox}->pack_end($o->{$l->[0]}, 0, 0, 1) : $o->{bottomHbox}->pack_start($o->{$l->[0]}, 0, 0, 1);
     $o->{$l->[0]}->signal_connect(clicked => sub { $o->{actions}{$l->[0]}->() });
 }
