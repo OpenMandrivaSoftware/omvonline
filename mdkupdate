@@ -41,7 +41,7 @@ sub _ {
 $logfile = "/var/log/mdkupdate.log";
 my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
 my $url_get_rpms = "https://www.mandrakeonline.net/online_update.php";
-my $rpms_rep = "/var/cache/urpmi/rpms/";
+my $rpms_rep = "/root/tmp/";
 my $VERSION = "0.16";
 my $security = 0;
 
@@ -104,8 +104,7 @@ sub update_rpms () {
 	    my @junk= splice(@str_m,0,3);
 	    my $mir_full = "ftp://" . $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS"."/";
 	    update_packages($mir_full,@str_m);
-
-	} else { print "problem occur $str_m\n";}
+	} else { log_it("problem occur $str_m\n");}
 	    	    
     } else {
 	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
@@ -116,7 +115,7 @@ sub update_rpms () {
 
 sub update_packages {
     my ($mir,@str) = @_;
-    chdir ($rpms_rep);
+    chdir($rpms_rep) or log_it("\ncannot chdir to $rpms_rep\n");
     $full_rpm = join(' ',@str);
     print "@str\n";
     foreach (@str) {
@@ -124,6 +123,9 @@ sub update_packages {
 	`/usr/bin/wget $mir$_`;
     }
     `urpmi $full_rpm`;
+    foreach $pack (@str) {
+	system("rm -f $pack");
+    }	
 }
 
 sub send_rpm_dif {
@@ -142,7 +144,7 @@ sub send_rpm_dif {
 }
 
 sub clean_dir() {
-    `rm -f /root/$login.$password.$box_name.$oldkey.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after`;    
+    system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
     exit 1;
 }
 
