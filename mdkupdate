@@ -149,6 +149,7 @@ sub getFromURL {
     my ($link) = @_;
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkUpdateAgent/$VERSION" . $ua->agent);
+    $ua->env_proxy;
     my $request = HTTP::Request->new(GET => $link);
     my $response = $ua->request($request);
     $response
@@ -175,6 +176,7 @@ sub send_config {
 
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
+    $ua->env_proxy;
     my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
 
 				Content_Type => 'form-data',
@@ -250,6 +252,7 @@ sub send_rpm_dif {
     -s "/root/$login.$password.$box_name.$oldkey.dif" or die N("System is up to date");
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
+    $ua->env_proxy;
     my $response = $ua->request(POST "https://www.mandrakeonline.net/online_dif.php",
 
 				Content_Type => 'form-data',
