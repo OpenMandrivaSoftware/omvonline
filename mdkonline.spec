@@ -135,6 +135,7 @@ rm -rf $RPM_BUILD_ROOT
 - po updates and perl_checker cleanups
 - mdkapplet: decrease timeout for network config check (oblin), we use 10s 
   to refresh now.
+- move some functions to mdkonline.pm
 
 * Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
 - introduced mdkonline text based wizard for server products
