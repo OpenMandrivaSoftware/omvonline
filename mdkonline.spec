@@ -114,7 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Thu Jul 15 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-4mdk
+* Fri Jul 16 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-4mdk
 - added mdkonline backend package for derivative products 
   (MNF, Corporate ...)
 - more code shared between apps (wizard, cron update and applet)
