@@ -84,8 +84,8 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 	       )
       );
 
-print "Setting orange ...\n";
-$menu = setImage('orange');
+print "Setting okay ...\n";
+$menu = setState('okay');
 $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 1 and showMainWindow(); #just for testing
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
@@ -168,10 +168,10 @@ sub browser {
 	     );
     $Br{$wm}
 }
-sub setImage {
-    my $file = shift;
-    my $arr = $state{$file}{menu};
-    my $tmp = gtkcreate_pixbuf($file);
+sub setState {
+    my $state_type = shift;
+    my $arr = $state{$state_type}{menu};
+    my $tmp = gtkcreate_pixbuf($state{$state_type}{colour});
     $img->set_from_pixbuf($tmp);
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
