@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	15mdk
+Release: 	16mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -88,6 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Thu Mar  7 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
+- code update 
+- automated updates
+
 * Mon Jan 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-15mdk
 - add missing png file.
 
