@@ -1,10 +1,10 @@
-%define version 1.0
+%define version 1.1
 %define name mdkonline
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	8mdk
+Release: 	1.100mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Fri May 28 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-1.100mdk
+- Released as mandatory update and tagged as security fix 
+  (force applet to update itself).
+
 * Tue May 25 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-8mdk
 - fix broken regexp in error handling code (flepied)
 
