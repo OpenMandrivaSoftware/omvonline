@@ -42,7 +42,7 @@ sub _ {
 
 my $nb_pages=0;
 my $page;
-my $xpm_path="/usr/share/ftw/pixmaps";
+my $xpm_path="/usr/share/mdkonline/pixmaps";
 my $path_to_welcome="/usr/share/doc/HTM";
 my $check_custid;
 my $true=1;
@@ -159,14 +159,13 @@ sub pack_box_identity {
     my ($vbox,$label,$entry,$i)=@_;
     my $table = new Gtk::Table( 1, 2, $false);
     my $Label_wg=new Gtk::Label($label);
-    $Label_wg->set_justify('center');
-    $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
-    $table->attach( $entry, 1, 2, 0, 1, 'shrink' , 'shrink', 0, 0);
     if ($i==0){
 	$Label_wg->set_uposition(60,90);
     }elsif ($i==1) {
 	$Label_wg->set_uposition(56,120);
     }
+    $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
+    $table->attach( $entry, 1, 2, 0, 1, 'shrink' , 'shrink', 0, 0);
     $vbox->pack_start($table,$true ,$true ,1);
 }
 
