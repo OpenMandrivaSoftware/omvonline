@@ -169,7 +169,7 @@ $wiz = {
 			      }
 			  },
 			  data => sub {
-			      if (($sendconfres eq 'TRUE') && $key) {
+			      if ($sendconfres eq 'TRUE' && $key) {
 				  [ 
 				   { label => N("Country"), val => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
 				     list => [ sort keys %countries ], not_edit => 0 }
