@@ -1,15 +1,17 @@
 # Installation directories
 localedir = $(PREFIX)/usr/share/locale
 
-LANGS = $(shell ls *.po | xargs -i basename {} .po )
 PGOAL = mdkonline
-GOALS = $(foreach a, $(LANGS), $(a).mo)
 
-PL_FILES = ../mdkonline ../mdkupdate ../mdkapplet ../mdkonline_tui
+PL_FILES = $(shell cat POTFILES.in | sed 's,^,../,' )
 POFILES = $(shell ls *.po)
 
+PL_CFILES = $(PL_FILES:%=%_.c)
+POFILES = $(shell ls *.po)
+MOFILES = $(POFILES:%.po=%.mo)
+LANGS = $(POFILES:%.po=%)
 
-# $(foreach a, $(LANGS), $($(a).mo))
+GOALS = $(PGOAL).pot  $(MOFILES)
 
 all: $(GOALS)
 
@@ -20,16 +22,13 @@ install: all
 	done
 
 clean:
-	rm -f *~ *.[oas] *.mo $(GOALS) TAGS
+	rm -f *~ *.[oas] *.mo $(GOALS) TAGS $(MOFILES) $(PL_CFILES)
 
 %.mo: %.po
 	msgfmt -o $@ $<
 
-%.pot: $(PL_FILES) 
-	xgettext -F -n --add-comments='-PO' --keyword=__ --keyword=_ \
-		--keyword=N_ --keyword=N \
-		--keyword=I_ --keyword=i18n \
-		--language=perl -o $@ $(PL_FILES) 
+%.pot: $(PL_CFILES) $(CFILES)
+	perl_checker -q --generate-pot $(PGOAL).pot $(PL_FILES)
 
 merge: $(PGOAL).pot
 	@for n in $(POFILES); do \
