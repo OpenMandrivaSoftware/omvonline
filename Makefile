@@ -2,6 +2,7 @@ PACKAGE = mdkonline
 VERSION:=$(shell rpm -q --qf %{VERSION} --specfile $(PACKAGE).spec)
 RELEASE:=$(shell rpm -q --qf %{RELEASE} --specfile $(PACKAGE).spec)
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
+RPM = $(HOME)/rpm
 
 NAME = mdkonline
 MDKUPDATE = mdkupdate
