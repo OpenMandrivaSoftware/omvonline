@@ -432,7 +432,7 @@ sub logIt {
     $mLog .= $log;
     if (defined $wlog) {
 	$buffer->insert_at_cursor($log)
-    } else { print "no log shown" }
+    }
 }
 sub about {
     my $b = browser();
