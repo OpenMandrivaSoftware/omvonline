@@ -1,5 +1,5 @@
 # Changed by Makefile of cvs.
-%define version 0.17
+%define version 0.18
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc COPYING
+%doc COPYING ChangeLog
 %{_sbindir}/*
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
@@ -82,6 +82,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Fri Oct 11 2002 Frederic Lepied <flepied@mandrakesoft.com> 0.18-1mdk
+- made translations work on page 4
+- added mdk standard Makefile rules to build packages
+
 * Fri Oct 11 2002 François Pons <fpons@mandrakesoft.com> 0.17-1mdk
 - fixed to make sure the list of rpm is always sent to server.
 - use urpmi media for update in order to use non scheduled packages.
