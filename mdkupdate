@@ -40,8 +40,6 @@ foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
 my $rpms_rep = "/root/tmp/";
 my $VERSION = "1.0";
 my $YEARS = "2002-2004";
-my $security = find { /^-?-security$/ } @ARGV;
-my $update = find { /^-?-update$/ } @ARGV;
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
@@ -64,7 +62,7 @@ usage:
 }
 
 my ($opt) = @ARGV;
-@ARGV == 1 && ($opt eq '--auto' || $opt eq '--security' || $opt eq '--applet') or usage();
+@ARGV == 1 && ($opt eq '--auto' || $opt eq '--applet') or usage();
 
 -s $conffile or die N("No %s file found. Run mdkonline wizard first", $conffile);
 
@@ -98,7 +96,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  }
 			  rpm_qa("$confdir/rpm_qa_installed_after");
 			  my %new = getVarsFromSh($conffile);
-			  if (! -s "$confdir/mdkupdate.rpms" || $update) {
+			  if (! -s "$confdir/mdkupdate.rpms" || $opt eq '--auto') {
 			      #- send configuration and get back key to use...
 			      my $r;
 			      
