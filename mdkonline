@@ -138,6 +138,8 @@ $Main_Window->show_all;
 
 Gtk->main_iteration while Gtk->events_pending;
 Gtk->main;
+Gtk->exit(0);
+$in->exit(0);
 
 sub init_ui {
     step_wizard();
@@ -165,7 +167,6 @@ sub gtk_main_quit {
 
 sub isalphanum {
     my ($str) = @_;
-    #if ($str =~ /^[^\W\d_]+$/) {
     if ($str =~ /^[[:alnum:]]+$/) {
 	return 1;
     } else {
@@ -276,7 +277,7 @@ sub test_passwd () {
     $passwd   = $passwd_user->get_text();
     $box_name = $box_user->get_text();
     $test = isalphanum($box_name);
-    print ("isalnum : $test");
+    #print ("isalnum : $test");
     if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
@@ -338,10 +339,10 @@ sub send_config {
 					    wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
 					    ]);
     # Check the outcome of the response
-    print "REPONSE: ".$response->content."\n";
+    #print "REPONSE: ".$response->content."\n";
     if ($response->is_success) {
 	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
-	print("key is $1\n");
+	#print("key is $1\n");
 	$key = $1; 
     } else {
 	# pb with the connection ?
@@ -440,8 +441,8 @@ sub step_wizard {
 
 sub report_config {
     my ($file) = @_;
-#touch($file);
-    my $w = $in->wait_message('',_("Reading configuration\n"));
+    #touch($file);
+    my $w = $in->wait_message('',_("Reading configuration\n"),1);
 sub header { "
 ********************************************************************************
 * $_[0]
@@ -467,12 +468,13 @@ close(FILE);
 }
 
 sub automated_upgrades {
-# set up a daily cron to check connection and if there is one upgrade the system
-    open VERS,  "/etc/mandrake-release" or die _("cannot open this file for read: %s", $!);
+    # set up a daily cron to check connection and if there is one upgrade the system
+    open VERS, "/etc/mandrake-release" or die _("cannot open this file for read: %s", $!);
     my @info_tree;
     while (<VERS>) { 
 	@info_tree = split / /, $_;
     }
+    close(VERS);
     $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()}[rand (2)];
     my $version=$info_tree[3];
     my $host = hostname;
@@ -516,7 +518,7 @@ sub info_popup () {
     my $style = new Gtk::Style;
     $style->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style); 
-     $popup->set_title($title);
+    $popup->set_title($title);
     $popup->vbox->pack_start( $label, 1, 1, 0 );
     $popup->show_all();
     $popup->set_modal(1);
