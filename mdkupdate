@@ -27,15 +27,15 @@ use HTTP::Request::Common;
 use LWP::UserAgent;
 use MDK::Common;
 use lib qw(/usr/lib/libDrakX);
-use Locale::GetText;
+use Locale::gettext;
 
 #- I18N.
 setlocale (LC_ALL, "");
-Locale::GetText::textdomain ("mdkupdate");
+textdomain ("mdkupdate");
 
 sub _ {
     my ($format, @params) = @_;
-    sprintf(Locale::GetText::I_($format), @params);
+    sprintf(Locale::gettext::gettext($format), @params);
 }
 
 $logfile = "/var/log/mdkupdate.log";
