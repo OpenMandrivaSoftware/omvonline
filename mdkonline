@@ -80,10 +80,10 @@ $Main_Window->set_usize(540, 430);
 $Main_Window->realize();
 $Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
 
-my $Button_Next= new Gtk::Button(_("  Next  > "));
-my $Button_End= new Gtk::Button(_("  Finish "));
-my $Button_SkipWiz= new Gtk::Button(_(" Cancel "));
-my $Button_Prev= new Gtk::Button(_(" <  Back  "));
+my $Button_Next= new Gtk::Button("  " . _("Next  >") . "  ");
+my $Button_End= new Gtk::Button("  " . _("Finish") . "  ");
+my $Button_SkipWiz= new Gtk::Button("  " ._("Cancel") . "  ");
+my $Button_Prev= new Gtk::Button("  " . _("<  Back") . "  ");
 my $notebook_global = new Gtk::Notebook;
 $Button_End->show();
 $notebook_global->set_show_border($false);
@@ -262,9 +262,9 @@ sub step_wizard {
     my $hbox_subs= new Gtk::HBox(0,0);
     $hbox_subs->set_uposition(50,300);
     $vbox_welc->pack_start($hbox_subs,0,0,1);
-    my $check_subs = new Gtk::CheckButton(_("I don't have a Mandrake Online account and I want to  "));
+    my $check_subs = new Gtk::CheckButton(_("I don't have a Mandrake Online account and I want to "));
     $hbox_subs->pack_start($check_subs,0,0,1);
-    my $button_subs = new Gtk::Button("Subscribe");
+    my $button_subs = new Gtk::Button("  " . _("Subscribe") . "  ");
     $button_subs->set_sensitive(0);
     $check_subs->signal_connect (clicked => sub { $test_tog=$check_subs->get_active(); $button_subs->set_sensitive($test_tog);});
     $button_subs->signal_connect(clicked => \&subscribe_mdkonline);
@@ -317,7 +317,7 @@ sub info_popup ($$) {
     my $box = new Gtk::HButtonBox;
     $popup->action_area->pack_start($box,0,0,0);
    
-    my $button_ok = new Gtk::Button(_("OK"));
+    my $button_ok = new Gtk::Button(" " . _("OK") . " ");
     $button_ok->signal_connect_object("clicked",$popup => 'destroy');
     $box->add($button_ok);
 
@@ -338,11 +338,11 @@ sub confirm_quit {
     my $bbox1 = new Gtk::HButtonBox;
     $window_about->action_area->pack_start($bbox1,0,0,0);
    
-    my $button_cancel = new Gtk::Button(_("Cancel"));
+    my $button_cancel = new Gtk::Button(" " . _("Cancel") . " ");
     $button_cancel->signal_connect_object("clicked",$window_about => 'destroy');
     $bbox1->add($button_cancel);
 
-    my $button_quit = new Gtk::Button(_("Quit"));
+    my $button_quit = new Gtk::Button(" " . _("Quit") . " ");
     $button_quit->signal_connect_object("clicked",\&gtk_main_quit);
     $bbox1->add($button_quit);
     
@@ -446,7 +446,7 @@ sub splash_warning {
     my $bbox1 = new Gtk::HButtonBox;
     $win_about->action_area->pack_start($bbox1,0,0,0);
     
-    my $button = new Gtk::Button(_("Close"));
+    my $button = new Gtk::Button(" " . _("Close") . " ");
     $button->signal_connect_object("clicked",$win_about => 'destroy');
     $bbox1->add($button);
     
