@@ -29,7 +29,8 @@ $(PL_CFILES): %_.c: %
 
 %.pot: $(PL_CFILES) 
 	xgettext -F -n --add-comments='-PO' --keyword=__ --keyword=_ \
-		--keyword=N_ --keyword=I_ --keyword=i18n \
+		--keyword=N_ --keyword=N \
+		--keyword=I_ --keyword=i18n \
 		--language=C -o $@ $(PL_CFILES) 
 	@rm -rf $(PL_CFILES)
 
