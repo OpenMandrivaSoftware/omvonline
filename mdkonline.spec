@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	1mdk
+Release: 	2mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -82,6 +82,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Nov 13 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-2mdk
+- release for mandrakeonline.net customers
+
 * Fri Oct 11 2002 Frederic Lepied <flepied@mandrakesoft.com> 0.18-1mdk
 - made translations work on page 4
 - added mdk standard Makefile rules to build packages
