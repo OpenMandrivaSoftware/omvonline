@@ -5,14 +5,15 @@
 # Andreas Bergstrøm <abergstr@halden.net>, 2001.
 # Terje Bjerkelia <terje@bjerkelia.com>, 2002.
 # Per Øyvind Karlsen <peroyvind@sintrax.net>, 2004.
+# Eskild Hustvedt <zerodogg@skolelinux.no>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-01 22:41+0200\n"
-"PO-Revision-Date: 2004-08-18 18:08+0200\n"
-"Last-Translator: Per Øyvind Karlsen <peroyvind@sintrax.net>\n"
+"PO-Revision-Date: 2004-10-06 15:48+0100\n"
+"Last-Translator: Eskild Hustvedt <eskild@goldenfiles.com>\n"
 "Language-Team: Norwegian Bokmål <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,6 +64,7 @@ msgstr "Tjenesten er ikke aktivert. Vennligst klikk på \"Online-nettsted\""
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
+"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -189,12 +191,12 @@ msgstr "Sjekker... Opdateringer er tilgjengelig\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Utviklingsversjon er ikke støttet av tjenesten"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "For gammel versjon ikke støttet av tjenesten"
 
 #: ../mdkapplet:256
 #, c-format
@@ -307,9 +309,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Opprett en Mandrakeonline-konto"
 
 #: ../mdkonline:107
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Jeg har ingen Mandrakeonline-konto og jeg ønsker å "
+msgstr "Jeg har ingen Mandrakeonline-konto og jeg ønsker å abonnere"
 
 #: ../mdkonline:111 ../mdkonline:131 ../mdkonline_tui:114 ../mdkonline_tui:145
 #, c-format
@@ -541,19 +543,19 @@ msgid "Problem connecting to server \n"
 msgstr "Problem med å koble til tjener \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:95
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Velkommen til Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Jeg har allerede en konto"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Jeg vil abonnere"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:120
 #, c-format
@@ -563,22 +565,22 @@ msgstr "Vennligst vent"
 #: ../mdkonline_tui:103
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Konto opprettelse eller autentisering"
 
 #: ../mdkonline_tui:120
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Velkommen til Mandrakeonline"
+msgstr "Kobler til Mandrakeonline nettsiden..."
 
 #: ../mdkonline_tui:130
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #: ../mdkonline_tui:130
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Feil passord"
+msgstr "feil passord:"
 
 #: ../mdkonline_tui:158
 #, c-format
@@ -586,21 +588,23 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline konto ble vellykket opprettet.\n"
+"Vennligs klikk «Neste» for å autentisere og laste opp oppsettet ditt\n"
 
 #: ../mdkonline_tui:175
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Land:"
+msgstr "Land"
 
 #: ../mdkonline_tui:187
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations"
-msgstr "Konfigurasjon"
+msgstr "Gratulerer"
 
 #: ../mdkonline_tui:187
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
-msgstr ""
+msgstr "Din Mandrakeonline konto har blitt vellykket satt opp\n"
 
 #: ../mdkupdate:50
 #, c-format
@@ -642,7 +646,7 @@ msgstr "  --update       - Oppdater nøkler\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Ingen %s fil funnet. Kjør mdkonline veiviseren først"
 
 #: ../mdkupdate:124
 #, c-format
@@ -660,306 +664,5 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Hopp over veiviser"
-
-#~ msgid "Subscribe"
-#~ msgstr "Abonnere"
-
-#~ msgid "Config problems. Launch \"configure\" again"
-#~ msgstr "Konfigurasjonsproblemer. Kjør \"konfigurer\" på nytt"
-
-#~ msgid "%s packages available for update"
-#~ msgstr "%s pakker er tilgjengelig for oppdatering"
-
-#~ msgid "Service deactivated. Waiting for payment..."
-#~ msgstr "Tjeneste deaktivert. Venter på betaling..."
-
-#~ msgid "Launch Mandrakelinux Update"
-#~ msgstr "Start Mandrakelinux Update"
-
-#~ msgid "Available"
-#~ msgstr "Tilgjengelig"
-
-#~ msgid "Checking ..."
-#~ msgstr "Sjekker ..."
-
-#~ msgid "Not Available"
-#~ msgstr "Ikke tilgjengelig"
-
-#~ msgid "Attempting to connect to mandrakeonline.net\n"
-#~ msgstr "Prøver å koble til mandrakeonline.net\n"
-
-#~ msgid "Creation"
-#~ msgstr "Opprettelse"
-
-#~ msgid "Special characters"
-#~ msgstr "Spesialtegn"
-
-#~ msgid "Empty fields"
-#~ msgstr "Tomme felter"
-
-#~ msgid "Email"
-#~ msgstr "Epost"
-
-#~ msgid "Change account"
-#~ msgstr "Skift konto"
-
-#~ msgid "Server Problem"
-#~ msgstr "Tjenerproblem"
-
-#~ msgid "Response from Mandrakeonline server\n"
-#~ msgstr "Svar fra Mandrakeonline-tjener\n"
-
-#~ msgid "Launching Mandrakeupdate\n"
-#~ msgstr "Starter Mandrakeupdate\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "Ja, jeg ønsker automatiserte oppdateringer"
-
-#~ msgid "Checking for Updates..."
-#~ msgstr "Sjekker etter oppdateringer..."
-
-#~ msgid "Checking..."
-#~ msgstr "Sjekker..."
-
-#~ msgid "Test critical"
-#~ msgstr "Test kritisk"
-
-#~ msgid "Register Now!"
-#~ msgstr "Registrer nå!"
-
-#~ msgid "About Online Applet"
-#~ msgstr "Om Online-panelprogram"
-
-#~ msgid "Mandrakelinux Online Team"
-#~ msgstr "Mandrakelinux Online-team"
-
-#~ msgid "Mandrakelinux Update Notification Applet"
-#~ msgstr "Mandrakelinux Update notifiseringspanelprogram"
-
-#~ msgid "Team:"
-#~ msgstr "Team:"
-
-#~ msgid "This Software is under GPL"
-#~ msgstr "Denne programvare er under GPL"
-
-#~ msgid "Version:"
-#~ msgstr "Versjon:"
-
-#~ msgid "Start Mandrakeupdate"
-#~ msgstr "Start Mandrakeupdate"
-
-#~ msgid "  --security     - use only security media.\n"
-#~ msgstr "  --security     - bruk kun sikkerhet media.\n"
-
-#~ msgid "  -v             - verbose mode.\n"
-#~ msgstr "  -v             - verbose mode.\n"
-
-#~ msgid ""
-#~ "You need to have an account on Mandrakeonline, or update your "
-#~ "subscription."
-#~ msgstr ""
-#~ "Du må ha en konto på Mandrakeonline, eller oppdatere abbonnementet ditt."
-
-#~ msgid "Your login or password may be wrong"
-#~ msgstr "Ditt brukernavn og passord kan være feil"
-
-#~ msgid "Unable to create mdkupdate medium.\n"
-#~ msgstr "Kunne ikke opprette mdkupdate media.\n"
-
-#~ msgid "Africa"
-#~ msgstr "Afrika"
-
-#~ msgid "Asia"
-#~ msgstr "Asia"
-
-#~ msgid "Australia"
-#~ msgstr "Australia"
-
-#~ msgid "Europe"
-#~ msgstr "Europa"
-
-#~ msgid "North America"
-#~ msgstr "Nord Amerika"
-
-#~ msgid "South America"
-#~ msgstr "Sør Amerika"
-
-#~ msgid "Back"
-#~ msgstr "Tilbake"
-
-#~ msgid "Empty Mirror"
-#~ msgstr "Tomt speil"
-
-#~ msgid "Empty Mirror. Please choose a place."
-#~ msgstr "Tomt speil. Vennligst velg et sted."
-
-#~ msgid "Warning: No browser specified"
-#~ msgstr "Advarsel: Ingen nettleser spesifisert"
-
-#~ msgid "Sending your Configuration"
-#~ msgstr "Sender din konfigurasjon:"
-
-#~ msgid "Error while sending informations"
-#~ msgstr "Feil under sending av informasjon"
-
-#~ msgid ""
-#~ "There was an error while sending your personal informations.\n"
-#~ "\n"
-#~ "Press Next to try and send your configuration again."
-#~ msgstr ""
-#~ "Det var en feil under sending av din personlige informasjon.\n"
-#~ "\n"
-#~ "Press Neste og prøv å sende din konfigurasjon på nytt."
-
-#~ msgid "Finished"
-#~ msgstr "Ferdig"
-
-#~ msgid "Choose your geographical location"
-#~ msgstr "Velg din geografiske lokasjon"
-
-#~ msgid "OK"
-#~ msgstr "oK"
-
-#~ msgid ""
-#~ "Do you really want to abort Mandrakeonline?\n"
-#~ "To return to the Wizard press 'Cancel',\n"
-#~ "to really quit it press 'Quit'."
-#~ msgstr ""
-#~ "Vil du virkelig avbryte Mandrakeonline?\n"
-#~ "For å fortsette veiviseren trykk 'Avbryt',\n"
-#~ "for å virkelig avslutt, trykk 'Avslutt'."
-
-#~ msgid "Really abort? - Mandrakeonline"
-#~ msgstr "Virkelig avbryt? - Mandrakeonline"
-
-#~ msgid ""
-#~ " You are just starting our Free Mandrakelinux Download Edition for the "
-#~ "first time. \n"
-#~ "\n"
-#~ "There are now over three million Mandrakelinux users all over the world!\n"
-#~ "\n"
-#~ "Please take a few seconds to fill a short questionnaire. The data from "
-#~ "this \n"
-#~ "questionnaire will be used only for aggregate market studies.\n"
-#~ "The text below is the privacy policy of Mandrakesoft about your personal "
-#~ "data."
-#~ msgstr ""
-#~ " Du er på vei til å starte våre Frie Mandrakelinux Download Edition for "
-#~ "første gang. \n"
-#~ "\n"
-#~ "Det er nå over tre millioner Mandrakelinux-brukere over hele verden!\n"
-#~ "\n"
-#~ "Vennligst bruk noen få sekunder på å fylle ut et kjapt spørreskjema. "
-#~ "Dataen fra dette \n"
-#~ "spørreskjemaet vi bli brukt får bruksmessige markedsundersøkelser.\n"
-#~ "Teksten nedenfor er personvernsrettningslinjer hos Mandrakesoft om dine "
-#~ "personlige data."
-
-#~ msgid ""
-#~ "What personal data do we collect ?         \n"
-#~ "                               \n"
-#~ "Various information is collected in different areas of the website;\n"
-#~ "what follows is an overview of the data we keep:\n"
-#~ "\n"
-#~ "Firstly, we record your email address, name and postal address.\n"
-#~ "Secondly we give you a unique customer ID. This ID will be used to \n"
-#~ "add additional information related to your Mandrakelinux account such "
-#~ "as:\n"
-#~ "    - Your subscription to mailling lists.\n"
-#~ "    - When registering a purchased product, we ask for personal\n"
-#~ "information as well as system/hardware details so that we may deliver\n"
-#~ "the best support services customized to your needs.\n"
-#~ "    - On our donation page and on our online store (MandrakeStore), we\n"
-#~ "record data for billing purpose (we do not store any credit card data).\n"
-#~ "    \n"
-#~ "What do we do with this information?\n"
-#~ "\n"
-#~ "We never share personal information with other persons or companies -\n"
-#~ "we use this data strictly for the following purposes:\n"
-#~ "    - If you have subscribed to a mailing list, we keep this email\n"
-#~ "address in our database to provide you with customized information\n"
-#~ "and/or to enable you to participate in discussions in various mailing\n"
-#~ "lists. If you send a message to such a list, other people will see\n"
-#~ "your email address but no external parties have access to our database\n"
-#~ "of subscribers. At any time you may unsubscribe to any list by using\n"
-#~ "the appropriate form.\n"
-#~ "    - If you provide information when registering a purchased product\n"
-#~ "to receive support, we keep this information private unless the\n"
-#~ "information is required by one of our partners to deliver the support\n"
-#~ "you require.\n"
-#~ "    - If you use MandrakeStore, we also use your Customer ID to track\n"
-#~ "your order and deliver your products.\n"
-#~ "    - If you provide us with marketing information, we keep it for \n"
-#~ "internal use only in order to improve our products so that they can \n"
-#~ "better fit your needs whether you have purchased a product or not.), How "
-#~ "to change / correct your personal data?\n"
-#~ "\n"
-#~ "French law gives individuals the right to access, correct, modify or \n"
-#~ "remove their own personal data that we have on record. We offer this \n"
-#~ "as a worldwide privilege. You may execute this right at any time by \n"
-#~ "logging to your account with your customer ID and editing your\n"
-#~ "personnal data. You can log on to this page: http://www.mandrakeonline.net"
-#~ msgstr ""
-#~ "Hva slags personlige data samler vi?         \n"
-#~ "                               \n"
-#~ "Diverse informasjon er samlet i forskjellige områder på nettstedet;\n"
-#~ "hva somm følger nedenfor er en oversikt over dataen vi beholder:\n"
-#~ "\n"
-#~ "Først så tar vi vare på din epostadresse, navn og postadresse.\n"
-#~ "Så gir vi deg et unikt kundenummer. Dette nummeret vil bli brukt fo å \n"
-#~ "legge til ekstra informasjon relatert til din Mandrakelinux-konto som:\n"
-#~ "    - Ditt abonnement til mailinglister.\n"
-#~ "    - Når du registrerer et kjøpt produkt så spør vi etter personlig\n"
-#~ "informasjon så vel som system/maskinvare-detaljer så vi kan levere\n"
-#~ "de beste kundestøttetjenester skreddersydd for dine behov.\n"
-#~ "    - På vår donasjonsside og vår nettbutikk (MandrakeStore), tar vi "
-#~ "vare\n"
-#~ "på data for faktureringsårsaker (vi lagrer ikke noe kredittkortdata).\n"
-#~ "    \n"
-#~ "Hva gjør vi med denne informasjonen?\n"
-#~ "\n"
-#~ "Vi deler aldri personlig informasjon med andre personer eller firmaer -\n"
-#~ "vi bruker dataene kun for de følgende årsaker:\n"
-#~ "    - Hvis du har abonnert på en mailingliste, så beholver vi denne "
-#~ "epostadressen\n"
-#~ "i vår database for å tilby deg tilpasset informasjon\n"
-#~ "og/eller for å la deg delta i diskusjoner på diverse mailinglister.\n"
-#~ "Hvis du sender en melding til en slik liste, så vil andre folk se\n"
-#~ "din epostadresse, men ingen eksterne partier vil ha tilgang til vår "
-#~ "database\n"
-#~ "med abonnenter. Til enhver tid så kan du slutte å abonnere på hvilken som "
-#~ "helst\n"
-#~ "liste ved hjelp av riktig skjema,\n"
-#~ "    - Hvis du gir informasjon når du registrerer et kjøpt produkt\n"
-#~ "for å motta kundestøtte, så beholver vi denne informasjonen privat med "
-#~ "mindre\n"
-#~ "informasjonen trengs av en av våre partnere for å tilby kundestøtten\n"
-#~ "du trenger.\n"
-#~ "    - Hvis du bruker MandrakeStore så trenger vi også ditt kundenummer "
-#~ "for å\n"
-#~ "din ordre og levere dine produkter.\n"
-#~ "    - Hvis du gir oss markedsinformasjon så beholder vi den bare for \n"
-#~ "intern bruk for å forbedre våre produkter så de kan bedre passe dine "
-#~ "behov\n"
-#~ "(uavhengig om du har kjøpt produktet eller ei.), Hvordan endre / rette "
-#~ "dine personlige data?\n"
-#~ "\n"
-#~ "Franske lover gir folk rett til å ha tilgang til, rette, modifisere "
-#~ "eller \n"
-#~ "fjerne deres egne personlige data som vi måtte ha lagret. Vi tilbyr "
-#~ "dette \n"
-#~ "som et verdensomspennende privilegie. Du kan bruke denne retten til \n"
-#~ "enhver tid ved å logge inn på din konto med ditt kundenummer og redigere\n"
-#~ "dine personlige data. Du kan logge på denne siden: http://www."
-#~ "mandrakeonline.net French law gives individuals the right to access, "
-#~ "correct, modify or \n"
-#~ "remove their own personal data that we have on record. We offer this \n"
-#~ "as a worldwide privilege. You may execute this right at any time by \n"
-#~ "logging to your account with your customer ID and editing your\n"
-#~ "personnal data. You can log on to this page: http://www.mandrakeonline.net"
-
-#~ msgid "Sans Italic 17"
-#~ msgstr "Sans Italic 17"
+"Mandrakeupdate kunne ikke last opp diff filene. Send en e-post til support "
+"[at] mandrakeonline [dot] net"
