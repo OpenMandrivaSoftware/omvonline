@@ -136,7 +136,7 @@ sub showMainWindow() {
 			    gtkpack_(Gtk2::VBox->new(0, 3),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking for Updates...")); gtkflush(); checkUpdates(); $update_label->set_label($isAvailable ? N("Available") : N("Not Available")); setLastTime(); $lastch->set_label(lastCheck()); gtkflush() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking ...")); gtkflush(); checkUpdates(); $update_label->set_label($isAvailable ? N("Available") : N("Not Available")); setLastTime(); $lastch->set_label(lastCheck()); gtkflush() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
 				    )
 			   ),
