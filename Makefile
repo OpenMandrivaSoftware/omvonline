@@ -37,7 +37,7 @@ localrpm: clean localdist buildrpm
 localdist: cleandist dir localcopy tar
 
 cleandist:
-	rm -rf $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION).tar.bz2
+	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
 
 dir:
 	mkdir $(PACKAGE)-$(VERSION)
@@ -47,15 +47,15 @@ localcopy: clean
 	find $(PACKAGE)-$(VERSION) -type d -name CVS|xargs rm -rf 
 
 tar:
-	tar cvf $(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)
-	bzip2 -9vf $(PACKAGE)-$(VERSION).tar
+	tar cvf ../$(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)
+	bzip2 -9vf ../$(PACKAGE)-$(VERSION).tar
 	rm -rf $(PACKAGE)-$(VERSION)
 
 buildrpm:
 	(echo "# !! DON'T MODIFY HERE, MODIFY IN THE CVS !!" ; \
 		cat $(PACKAGE).spec \
 	) > $(RPM)/SPECS/$(PACKAGE).spec
-	rpm -ta $(PACKAGE)-$(VERSION).tar.bz2
+	rpm -ta ../$(PACKAGE)-$(VERSION).tar.bz2
 
 # rules to build a distributable rpm
 
