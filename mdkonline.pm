@@ -54,7 +54,7 @@ sub header { "
 * $_[0]
 ********************************************************************************";
 }
-ouput($file, map { chomp; "$_\n" }
+output($file, map { chomp; "$_\n" }
   header("partitions"), cat_("/proc/partitions"),
   header("cpuinfo"), cat_("/proc/cpuinfo"),
   header("fstab"), cat_("/etc/fstab"),
