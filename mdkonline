@@ -31,7 +31,7 @@ import Locale::GetText I_;
 use lib qw(/usr/lib/libDrakX);
 use interactive;
 
-#my $in = 'interactive'->vnew('su', 'default');
+my $in = 'interactive'->vnew('su', 'default');
 
 sub _ {
     my $s = shift @_; my $t = I_($s);
@@ -90,6 +90,11 @@ my $login_user= new Gtk::Entry();
 my $passwd_user= new Gtk::Entry();
 my $login_user2= new Gtk::Entry();
 my $passwd_user2= new Gtk::Entry();
+
+my $login   = "";
+my $login2  = "";
+my $passwd  = "";
+my $passwd2 = "";
 
 my %actions = ( 
 		2 => \&test_passwd,
@@ -150,20 +155,20 @@ sub test_passwd () {
     print STDERR "Testing passwd\n";
 
     # test the password
-    my $login   = $login_user->get_text();
-    my $login2  = $login_user2->get_text();
-    my $passwd  = $passwd_user->get_text();
-    my $passwd2 = $passwd_user2->get_text();
+    $login   = $login_user->get_text();
+    $login2  = $login_user2->get_text();
+    $passwd  = $passwd_user->get_text();
+    $passwd2 = $passwd_user2->get_text();
     if ($login2)  { $login = $login2; }
     if ($passwd2) { $passwd = $passwd2; }
     print STDERR "Login: $login\n";
 
-    if ($login =~ /OK/) { $status = 1; }
     my $ssh_script = "";
     foreach ("./sshlogin.exp", "/usr/bin/sshlogin.exp") {
 	[ -e "$_" ] and $ssh_script="$_", last;
     }
     print "Exec: $ssh_script $login $authentication_host $passwd \n";
+    # TODO: beware if the script was not found
     `$ssh_script $login $authentication_host $passwd`;
 
     # if correct (exit code: 0 from ssh script), go to page 4
@@ -178,7 +183,25 @@ sub test_passwd () {
 }
 
 sub send_config {
+    # When we arrive here, we're sure the login/passwd is correct
     print STDERR "Sending config\n";
+
+    my $scp_script = "";
+    foreach ("./scpcall.exp", "/usr/bin/scpcall.exp") {
+	[ -e "$_" ] and $scp_script="$_", last;
+    }
+    print "Exec: $scp_script $login $authentication_host $passwd \n";
+    # TODO: beware if the script was not found
+    `$scp_script $login $authentication_host $passwd`;
+
+    # if informations were sent correctly (exit code: 0 from scp script), go to page 6
+    if (! $?) {
+	$notebook_global->set_page(6); 
+    } else {
+    # if incorrect, go/stay on page 5 to retry sending data
+	$notebook_global->set_page(5);
+    }
+
 }
 
 sub step_wizard {
@@ -216,6 +239,20 @@ sub step_wizard {
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
+
+    # building the "Error sending data" page
+    my $vbox_errorsend= new Gtk::VBox(0,0);
+    write_on_pixmaps($vbox_errorsend,"identity.png",_("Error while sending informations"),540,100);
+    my $label_errorsend = new Gtk::Label("\n\n" . _("There was an error while sending your personal informations"));
+    $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
+    $notebook_global->append_page($vbox_errorsend,new Gtk::Label("errorsend"));
+    
+    # building the "OK data sent" page
+    my $vbox_oksend= new Gtk::VBox(0,0);
+    write_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
+    my $label_oksend = new Gtk::Label("\n\n" . _("Your personal informations are now stored at MdkOnline"));
+    $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
+    $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
     
 }
 
