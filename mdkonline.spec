@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Sat Jul 20 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-24mdk
-- 32 x 32 icon.
+- 32 x 32 new icon.
 
 * Wed Jul 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-23mdk
 - delete redondant 'ftp://' when choosing ftp mirrors
