@@ -3,7 +3,7 @@ localedir = $(PREFIX)/usr/share/locale
 
 LANGS = $(shell ls *.po | xargs -i basename {} .po )
 PGOAL = mdkonline
-GOALS = $(PGOAL).pot  $(foreach a, $(LANGS), $(a).mo)
+GOALS = $(foreach a, $(LANGS), $(a).mo)
 
 PL_FILES = ../mdkonline ../mdkupdate ../mdkapplet
 POFILES = $(shell ls *.po)
