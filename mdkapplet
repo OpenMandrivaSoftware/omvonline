@@ -69,7 +69,7 @@ my %state = (
 	     busy => {
 		      colour => [ 'busy' ], 
 		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
-		      menu => [ ],
+		      menu => [],
 		      tt => [ N_("System is busy. Please wait ...") ]
 		     },
 	     error => {
@@ -155,10 +155,10 @@ sub showMainWindow() {
            gtkpack_(Gtk2::VBox->new(0, 5),
 		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
 			      gtkpack_(Gtk2::VBox->new(0, 3),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates(); }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main }}),
+				       1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
+				       1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
+				       1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates() }),
+				       1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main } }),
 				    )
 			   ),
 		    1, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
@@ -175,11 +175,12 @@ sub showMainWindow() {
 }
 sub md5file {
     my @md5;
+    my $F;
     foreach my $file (@_) {
-	open(FILE, $file) or do { print STDERR "Can't open '$file': $!"; push @md5, "" };
-	binmode(FILE);
-	push @md5, Digest::MD5->new->addfile(*FILE)->hexdigest;
-	close(FILE);
+	open($F, $file) or do { print STDERR "Can't open '$file': $!"; push @md5, "" };
+	binmode($F);
+	push @md5, Digest::MD5->new->addfile(*F)->hexdigest;
+	close($F);
     }
     return wantarray() ? @md5 : $md5[0];
 }
@@ -206,7 +207,7 @@ sub refresh_contents {
 		   ];
     $contents
 }
-sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &"; }
+sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
     my $oldmd5 = md5file($binfile);
@@ -231,7 +232,7 @@ sub silentCheck {
     my $ct = $response->content;
 #    print "\nCONTENTS = $ct\n";
 #    logIt(N("Response from Mandrakeonline server\n") . "$ct");
-    if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
+    if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
     #   97 - host not active
@@ -239,7 +240,7 @@ sub silentCheck {
     my $retcode = {
 		   10 => sub { okState() },
 		   11 => sub {
-		       my @contents = sort ( split /\n/, $ct);
+		       my @contents = sort(split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
 		       my $comp = 0;
 		       foreach my $cand (@contents) {
@@ -251,12 +252,12 @@ sub silentCheck {
 		       }
 		       !$comp and okState();
 		   },
-		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported'); },
-		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported'); },
-		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') },
-		   97 => sub { logIt(N("Online services disabled. Contact Mandrakeonline site\n")) ; go2State('disabled'); },
-		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
-		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); },
+		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported') },
+		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported') },
+		   96 => sub { logIt(N("Unknown state")); go2State('okay') },
+		   97 => sub { logIt(N("Online services disabled. Contact Mandrakeonline site\n")); go2State('disabled') },
+		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical') },
+		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical') },
                    500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
     $retcode->{$u}->();
@@ -265,11 +266,11 @@ sub okState { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('ok
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
-    foreach my $p (@{$t}) { 
+    foreach my $p (@$t) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
-	    #my $iu = mdkonline::rpmvercmp($ver, $v); my $ir = mdkonline::rpmvercmp( $rel,$r); 
-	    if (mdkonline::rpmvercmp($ver, $v) > 0 || ( mdkonline::rpmvercmp($ver, $v) == 0 && mdkonline::rpmvercmp( $rel, $r) > 0)) {
+	    #my $iu = mdkonline::rpmvercmp($ver, $v); my $ir = mdkonline::rpmvercmp($rel, $r); 
+	    if (mdkonline::rpmvercmp($ver, $v) > 0 || mdkonline::rpmvercmp($ver, $v) == 0 && mdkonline::rpmvercmp($rel, $r) > 0) {
 		#print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
 		$isUpdate = 1 and last;
 	    }
@@ -282,7 +283,7 @@ sub is_running {
     any {
 	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
 	#- to run ps, perl may create some process with $name as name and 1 as ppid
-	$ppid ne 1 && $pid ne $$ && $n eq $name;
+	$ppid != 1 && $pid != $$ && $n eq $name;
     } `ps -o '%P %p %c' -u $ENV{USER}`;
 }
 sub cronUpdate {
@@ -298,7 +299,7 @@ sub cronUpdate {
 sub lastCheck {
     my %h = getVarsFromSh($localfile);
     my ($t, $l);
-    $t = $h{LASTCHECK} ;
+    $t = $h{LASTCHECK};
     $t =~ s/_/  /g;
     $t ? $t : N("No check")
 }
@@ -308,7 +309,7 @@ sub getTime {
     $d
 }
 sub setLastTime {
-    my $date = getTime() ;
+    my $date = getTime();
     setVar($localfile, 'LASTCHECK', $date);
 }
 sub checkConfig {
@@ -352,7 +353,7 @@ sub displayLogs {
     #create_dialog(N("Logs"), $mLog, { use_markup => 1, height => 480, width => 580, scroll => 1 })
     my $w = ugtk2->new(N("Logs"), center => 1);
     gtkset_size_request($w->{window}, 500, 400);
-    $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog});
+    $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog });
     $textview = Gtk2::TextView->new;
     $buffer = $textview->get_buffer;
     gtkadd($w->{window},
@@ -375,7 +376,7 @@ sub displayLogs {
     $w
 }
 sub shouldStart() {
-    my %p = getVarsFromSh("$localfile");
+    my %p = getVarsFromSh($localfile);
     my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
     $ret
 }
@@ -383,10 +384,10 @@ sub setState {
     my $state_type = shift;
     my $checkme;
     my $arr = $state{$state_type}{menu};
-    my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
+    my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $img->set_from_pixbuf($tmp);
     #my $tooltip = Gtk2::Tooltips->new;
-    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprintf_fixutf8(translate$state{$state_type}{tt}[0])));
+    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprintf_fixutf8(translate($state{$state_type}{tt}[0]))));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	my $l = $actions{$_}{name};
