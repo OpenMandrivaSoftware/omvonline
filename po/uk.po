@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-27 14:07+0200\n"
-"PO-Revision-Date: 2004-09-24 14:41+0300\n"
+"POT-Creation-Date: 2004-09-27 17:16+0200\n"
+"PO-Revision-Date: 2004-09-27 17:22+0300\n"
 "Last-Translator: Taras Boychuk <btr1@ukrpost.net>\n"
 "Language-Team: ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -124,7 +124,7 @@ msgstr "Переглянути журнал"
 msgid "Status"
 msgstr "Стан"
 
-#: ../mdkapplet:167 ../mdkapplet:422
+#: ../mdkapplet:167 ../mdkapplet:426
 #, c-format
 msgid "Close"
 msgstr "Закрити"
@@ -228,42 +228,42 @@ msgstr ""
 msgid "System is up-to-date\n"
 msgstr "Система поновлена\n"
 
-#: ../mdkapplet:348
+#: ../mdkapplet:352
 #, c-format
 msgid "No check"
 msgstr "Немає перевірок"
 
-#: ../mdkapplet:361
+#: ../mdkapplet:365
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Перевірка мережі: здається, вимкнена\n"
 
-#: ../mdkapplet:364
+#: ../mdkapplet:368
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Перевірка конфігураційного файла: немає\n"
 
-#: ../mdkapplet:412
+#: ../mdkapplet:416
 #, c-format
 msgid "Logs"
 msgstr "Журнал"
 
-#: ../mdkapplet:428
+#: ../mdkapplet:432
 #, c-format
 msgid "Clear"
 msgstr "Очистити"
 
-#: ../mdkapplet:455
+#: ../mdkapplet:459
 #, c-format
 msgid "About..."
 msgstr "Про..."
 
-#: ../mdkapplet:456
+#: ../mdkapplet:460
 #, c-format
 msgid "Always launch on startup"
 msgstr "Завжди виконувати при завантаженні"
 
-#: ../mdkapplet:458
+#: ../mdkapplet:462
 #, c-format
 msgid "Quit"
 msgstr "Вийти"
@@ -517,27 +517,27 @@ msgstr ""
 #: ../mdkonline.pm:36
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Ім'я і пароль повинні бути довжиною не менше 12 символів\n"
 
 #: ../mdkonline.pm:37
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Спеціальні символи не дозволяються\n"
 
 #: ../mdkonline.pm:38
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Будь ласка, заповніть усі поля\n"
 
 #: ../mdkonline.pm:39
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Електронна пошта недоступна\n"
 
 #: ../mdkonline.pm:40
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Рахунок вже існує\n"
 
 #: ../mdkonline.pm:46
 #, c-format
@@ -552,12 +552,12 @@ msgstr "Mandrakeonline"
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Я вже маю рахунок"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Я хочу підписатися"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:119
 #, c-format
@@ -567,22 +567,22 @@ msgstr "Зачекайте, будь-ласка"
 #: ../mdkonline_tui:98
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Створення рахунка або розпізнавання"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Ласкаво просимо до Mandrakeonline"
+msgstr "Під'єднання до сайта Mandrakeonline..."
 
 #: ../mdkonline_tui:126
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "або"
 
 #: ../mdkonline_tui:126
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Неправильний пароль"
+msgstr "неправильний пароль:"
 
 #: ../mdkonline_tui:160
 #, c-format
@@ -629,19 +629,19 @@ msgstr "  --update       - поновити ключі\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Файл %s не знайдено. Спочатку викличте помічника mdkonline"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr ""
-"Неможливо встановити зв'язок з Mandrakeonline, будь ласка, спробуйте ще раз "
-"пізніше"
+"Mandrakeupdate не може встановити зв'язок з сайтом, будь ласка, спробуйте ще "
+"раз пізніше."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Неможливо поновити пакунки з джерела mdkupdate.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -649,3 +649,5 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate не зміг звантажити файли відмінностей. Надішліть листа на "
+"support [на] mandrakeonline [крапка] net"

@@ -2,15 +2,14 @@
 # Czech translation of Madrake Online.
 # Copyright (C) 2001 Mandrakesoft S.A.
 # Radek Vybíral <Radek.Vybiral@vsb.cz>, 2001.
-# Michal Bukovjan <michal.bukovjan@openone.cz>, 2002.
-# Michal Bukovjan <bukm@centrum.cz>, 2003, 2004.
+# Michal Bukovjan <bukm@centrum.cz>, 2002, 2003, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-27 14:07+0200\n"
-"PO-Revision-Date: 2004-08-16 23:02+0200\n"
+"POT-Creation-Date: 2004-09-27 17:16+0200\n"
+"PO-Revision-Date: 2004-09-26 15:50+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../mdkapplet:61
@@ -65,7 +61,7 @@ msgstr "Služba není aktivována. Klikněte prosím na \"Online webové stránk
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
 #: ../mdkapplet:108 ../mdkapplet:157
 #, c-format
@@ -127,7 +123,7 @@ msgstr "Prohlížet záznamy"
 msgid "Status"
 msgstr "Stav"
 
-#: ../mdkapplet:167 ../mdkapplet:422
+#: ../mdkapplet:167 ../mdkapplet:426
 #, c-format
 msgid "Close"
 msgstr "Zavřít"
@@ -190,12 +186,12 @@ msgstr "Zjišťuji... Aktualizace jsou dostupné\n"
 #: ../mdkapplet:253
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Služba nepodporuje vývojovou verzi"
 
 #: ../mdkapplet:254
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Služba nepodporuje přiliš starou verzi"
 
 #: ../mdkapplet:255
 #, c-format
@@ -231,42 +227,42 @@ msgstr ""
 msgid "System is up-to-date\n"
 msgstr "Systém je aktuální\n"
 
-#: ../mdkapplet:348
+#: ../mdkapplet:352
 #, c-format
 msgid "No check"
 msgstr "Nezjištěno"
 
-#: ../mdkapplet:361
+#: ../mdkapplet:365
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontroluji síť: zdá se nedostupná\n"
 
-#: ../mdkapplet:364
+#: ../mdkapplet:368
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Kontroluji soubor s nastavením: Nenalezen\n"
 
-#: ../mdkapplet:412
+#: ../mdkapplet:416
 #, c-format
 msgid "Logs"
 msgstr "Záznamy"
 
-#: ../mdkapplet:428
+#: ../mdkapplet:432
 #, c-format
 msgid "Clear"
 msgstr "Vyčistit"
 
-#: ../mdkapplet:455
+#: ../mdkapplet:459
 #, c-format
 msgid "About..."
 msgstr "O aplikaci..."
 
-#: ../mdkapplet:456
+#: ../mdkapplet:460
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spustit při startu"
 
-#: ../mdkapplet:458
+#: ../mdkapplet:462
 #, c-format
 msgid "Quit"
 msgstr "Konec"
@@ -589,9 +585,9 @@ msgid "wrong password:"
 msgstr "Špatné heslo"
 
 #: ../mdkonline_tui:160
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Země:"
+msgstr "Země"
 
 #: ../mdkupdate:50
 #, c-format
