@@ -81,7 +81,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
     if ($resp->is_success) {
-	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents = m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 } ;
+	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 } ;
 	my $action = {
 		      10 => sub {
 			  my $c2h = splitContents($contents);
