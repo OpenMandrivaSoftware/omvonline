@@ -175,12 +175,11 @@ sub showMainWindow() {
 }
 sub md5file {
     my @md5;
-    my $F;
     foreach my $file (@_) {
-	open($F, $file) or do { print STDERR "Can't open '$file': $!"; push @md5, "" };
-	binmode($F);
-	push @md5, Digest::MD5->new->addfile(*F)->hexdigest;
-	close($F);
+	open(FILE, $file) or do { print STDERR "Can't open '$file': $!"; push @md5, "" };
+	binmode(FILE);
+	push @md5, Digest::MD5->new->addfile(*FILE)->hexdigest;
+	close(FILE);
     }
     return wantarray() ? @md5 : $md5[0];
 }
