@@ -48,6 +48,10 @@ my $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", "$localfile");
 
+#don't launch it twice :)
+my @pids = fuzzy_pidofs(qr/\bmdkapplet\b/);
+@pids > 1 and die "mdkapplet already running\n";
+
 my %state = (
 	     okay => {
 		      colour => [ 'okay' ],
@@ -176,7 +180,7 @@ sub setLabel {
     gtkflush();
 }
 sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
-sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); system "/usr/sbin/mdkupdate", "--applet"; silentCheck(); gtkflush; gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); }
+sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); system "/usr/sbin/mdkupdate", "--applet"; silentCheck(); gtkflush(); gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
@@ -220,7 +224,8 @@ sub silentCheck {
 		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') },
 		   97 => sub { logIt(N("Online services disabled. Contact MandrakeOnline site\n")) ; go2State('disabled'); },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
-		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); }
+		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); },
+                   500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
     $retcode->{$u}->();
 }

@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	6mdk
+Release: 	7mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon May 17 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-7mdk
+- avoid displaying the applet twice on the panel (using fuzzy_pidofs)
+- handle network proxy/routing misconfiguration.
+
 * Tue May 11 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-6mdk
 - use mouse clock cursor when busy with applet busy icon.
 - decrease debug messages
