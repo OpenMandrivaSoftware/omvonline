@@ -255,8 +255,9 @@ sub setConf {
     my $login = $o->{login}->get_text;
     my $passwd = md5_hex($o->{passwd}->get_text);
     my $boxname = $o->{machine}->get_text; my $country = getCountry($o->{country}->entry->get_text);
-    my $key = $o->{currentkey};
-    if ($o->{autoup}->get_active) { automatedUpgrades($login, $passwd, $boxname, $key, $country) }
+    my $key = $o->{currentkey}; my $auto = 'FALSE';
+    if ($o->{autoup}->get_active) { $auto = 'TRUE' }; 
+    automatedUpgrades($login, $passwd, $boxname, $key, $country, $auto);
     writeWideConf($login, $boxname, $country);
 }
 sub init {
@@ -381,7 +382,7 @@ sub wait_msg {
 }
 sub remove_wait_msg { $_[0]->destroy }
 sub automatedUpgrades {
-    my ($login, $passwd, $boxname, $key, $country) = @_;
+    my ($login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
@@ -391,6 +392,7 @@ MACHINE=$boxname
 VER=$r
 CURRENTKEY=$key 
 COUNTRY=$country
+AUTO=$auto
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
