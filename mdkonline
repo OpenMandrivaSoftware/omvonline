@@ -49,13 +49,13 @@ sub _ {
     my $s = shift @_; my $t = translate($s);
     sprintf $t, @_;
 }
+
 sub translate {
     my ($s) = @_;
     $s ? c::dgettext('mdkonline', $s) : '';
 }
 
 #my $authentication_host = "http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php";
-
 my $nb_pages=6; # 0 to 5
 my $page=-1;
 my $xpm_path="/usr/share/mdkonline/pixmaps";
@@ -121,10 +121,11 @@ my $gtkcombo_user = new Gtk::Combo();
 my $gtkcombo_mirror = new Gtk::Combo();
 my $login_user= new Gtk::Entry();
 my $passwd_user= new Gtk::Entry();
+my $box_user= new Gtk::Entry();
 
 my $login   = "";
 my $passwd  = "";
-my $machine_name ="";
+my $box_name = "";
 
 my %actions = ( 
 		2 => \&test_passwd,
@@ -140,8 +141,6 @@ $Main_Window->show_all;
 Gtk->main_iteration while Gtk->events_pending;
 Gtk->main;
 
-
-
 sub init_ui {
     step_wizard();
     $Button_Next->signal_connect(clicked =>\&on_next_clicked);
@@ -150,10 +149,11 @@ sub init_ui {
 }
 
 sub gtk_main_quit {
+
     # remove local files
     if ($login && $passwd) {
-	[ -f "/root/$login.$passwd.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.online.log.bz2.uue");
-	[ -f "/root/$login.$passwd.online.log.bz2" ] && unlink ("/root/$login.$passwd.online.log.bz2");
+	[ -f "/root/$login.$passwd.$box_name.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2.uue");
+	[ -f "/root/$login.$passwd.$box_name.online.log.bz2" ] && unlink ("/root/$login.$passwd.$box_name.online.log.bz2");
     }
     
     # setting up the automated updates
@@ -165,6 +165,16 @@ sub gtk_main_quit {
     main_quit Gtk;
 }
 
+sub isalphanum {
+    my ($str) = @_;
+    if ($str =~ /^[^\W\d_]+$/) {
+	return 1;
+    } else {
+	return 0;
+    }
+}
+    
+    
 sub on_end_clicked {
     gtk_main_quit();
 }
@@ -173,9 +183,9 @@ sub on_next_clicked {
     $page=$notebook_global->get_current_page();
 
 #---- 8<-----------to remove for page 5 test -----------
-    if ($page == 0) {
-	$notebook_global->set_page(1); 
-    }
+#    if ($page == 0) {
+#	$notebook_global->set_page(5); 
+#    }
 #-------------8<----------------------------------------
 
     if ( $actions{$page} ) {
@@ -264,32 +274,18 @@ sub test_passwd () {
     my $current_page = shift;
     my $result = -1;
 
-    $login   = $login_user->get_text();
-    $passwd  = $passwd_user->get_text();
-    
-    if ($login && $passwd && $login !~ /\s+/ && $passwd !~ /\s+/) {
-
-# OLD METHOD, keep it for next version ?...
-#    my $ssh_script = "";
-#    foreach ("/usr/bin/sshlogin.exp","./sshlogin.exp") {
-#	[ -e "$_" ] and $ssh_script="$_", last;
-#    }
-#    print "Exec: $ssh_script $login $authentication_host $passwd \n";
-    # TODO: beware if the script was not found
-# TODO: avoid starting a shell (which will eval args...) 
-# by using system() with several distinct args
-#    `$ssh_script $login $authentication_host $passwd`;
-	
+    $login    = $login_user->get_text();
+    $passwd   = $passwd_user->get_text();
+    $box_name = $box_user->get_text();
+    $test = isalphanum($box_name);
+    print ("isanum : $test");
+    if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
 # NEW METHOD (http)
 	# first, MD5ify the password
 	$passwd = md5_hex ($passwd); # or md5 () or md5_base64 ()
 	
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-# TEST URL
-#	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=mark&p=26bdb06eabafac3aea95991149dd8ea9');
-# REAL ONE
-#	print STDERR "url used for auth.: http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=$login&p=$passwd\n";
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u='.$login.'&p='.$passwd);
 	my $response = $ua->request($request);
 	# Check the outcome of the response
@@ -309,7 +305,7 @@ sub test_passwd () {
 	$notebook_global->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	info_popup (_("Wrong password"), _("Your login or password was wrong.\nEither you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline."));
+	info_popup (_("Wrong password"), _("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
 	$passwd_user->set_text("");
     }
 }
@@ -319,45 +315,27 @@ sub send_config {
 #    print STDERR "Sending config\n";
     my $result = -1;
 
-    `/usr/sbin/drakbug_report > /root/$login.$passwd.online.log`;
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.online.log`;
+    `/usr/sbin/drakbug_report > /root/$login.$passwd.$box_name.online.log`;
+    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
 
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, " /root/$login.$passwd.online.log.bz2") or die "$!";
+    open (FILE, " /root/$login.$passwd.$box_name.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
     }
     close (FILE);
-    open (FILEOUT, "> /root/$login.$passwd.online.log.bz2.uue") or die "$!";
+    open (FILEOUT, "> /root/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
 	print FILEOUT encode_base64($buffer);
     close (FILEOUT);
 
-# OLD METHOD (scp)
-#    my $scp_script = "";
-#    foreach ("/usr/bin/scpcall.exp","./scpcall.exp") {
-#	[ -e "$_" ] and $scp_script="$_", last;
-#    }
-#    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
-# TODO: beware if the script was not found
-# TODO: avoid starting a shell (which will eval args...) 
-# by using system() with several distinct args
-#    `$scp_script /root/drakbug_report.log $login $authentication_host $passwd`;
-
-# NEW METHOD (http)
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-# TESTS ONLY
-#    my $response = $ua->request(POST 'http://dev-online/upload/wizard.php',
-#				Content_Type => 'form-data',
-#				Content => [submit => "upload_wizard",
-#					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
-#					    ]);
     my $response = $ua->request(POST 'http://upload.mandrakeonline.net/wizard.php',
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_wizard",
-					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
+					    wizard => ["/root/$login.$passwd.$box_name.online.log.bz2.uue"]
 					    ]);
 
     # Check the outcome of the response
@@ -410,9 +388,9 @@ sub step_wizard {
 
     my $vbox_ident= new Gtk::VBox(0,0);
     writ_on_pixmaps($vbox_ident,"identity.png","MandrakeOnline"." "._("Authentification"),540,100);
-    my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login and password:"));
+    my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
-    pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
+    pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine name:"),$box_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
@@ -444,10 +422,10 @@ sub step_wizard {
     $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
     #$check_cron->set_uposition(70,245);
     my $hboxfr1 = new Gtk::HBox(0,0);
-    my $label_user_mail = new Gtk::Label(_("I want this (local) user to get email alerts"));
-    $hboxfr1->pack_start($label_user_mail,$true ,$true,5);
-    $gtkcombo_user->set_popdown_strings(parse_etc_passwd());
-    $hboxfr1->pack_end($gtkcombo_user,$true ,$true,5);
+    #my $label_user_mail = new Gtk::Label(_("I want this (local) user to get email alerts"));
+    #$hboxfr1->pack_start($label_user_mail,$true ,$true,5);
+    #$gtkcombo_user->set_popdown_strings(parse_etc_passwd());
+    #$hboxfr1->pack_end($gtkcombo_user,$true ,$true,5);
     my $hboxfr2 = new Gtk::HBox(0,0);
     my $label_mirror = new Gtk::Label(_("Choose your geographical location"));
     $hboxfr2->pack_start($label_mirror,$true ,$true,5);
@@ -491,12 +469,12 @@ sub automated_upgrades {
     my $host = hostname;
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
-$usertomail
-$login
-$passwd
-$machine_name
-$version
-$mirror_site
+USER=$usertomail
+LOGIN=$login
+PASS=$passwd
+BOX=$machine_name
+VER=$version
+MIRROR=$mirror_site
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
@@ -557,22 +535,28 @@ sub confirm_quit {
 }
 
 sub pack_box_identity {
-    my ($vbox,$label1,$entry1,$label2,$entry2)=@_;
-    my $table = new Gtk::Table( 2, 2, $true);
+    my ($vbox,$label1,$entry1,$label2,$entry2,$label3,$entry3)=@_;
+    my $table = new Gtk::Table( 3, 2, $true);
     my $Label_wg1=new Gtk::Label($label1);
     my $Label_wg2=new Gtk::Label($label2);
+    my $Label_wg3=new Gtk::Label($label3);
     Gtk::Label::set_justify($Label_wg1,right);
     Gtk::Label::set_justify($Label_wg2,right);
+    Gtk::Label::set_justify($Label_wg3,right);
     $table->attach_defaults( $Label_wg1, 0, 1, 0, 1);
     $table->attach_defaults( $entry1, 1, 2, 0, 1);
     $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);
     $table->attach_defaults( $entry2, 1, 2, 1, 2);
-    $Label_wg1->set_uposition(40,170);
-    $Label_wg2->set_uposition(40,200);
+    $table->attach_defaults( $Label_wg3, 0, 1, 2, 3);
+    $table->attach_defaults( $entry3, 1, 2, 2, 3);
+    $Label_wg1->set_uposition(25,170);
+    $Label_wg2->set_uposition(25,200);
+    $Label_wg3->set_uposition(25,230);
     $entry1->set_uposition(210,170);
     $entry2->set_uposition(210,200);
+    $entry3->set_uposition(210,230);
     $entry2->set_visibility($false);
-    $vbox->pack_start($table,$true ,$true ,1);
+    $vbox->pack_start($table,$true ,$true ,0);
 }
 
 sub load_text {
