@@ -36,7 +36,7 @@ use Digest::MD5  qw(md5 md5_hex md5_base64);
 
 my $in = interactive->vnew('su');
 
-my $expert_link = 'http://www.mandrakeexpert.com/';
+my $expert_link = 'http://www.mandrakeexpert.com';
 my $online_link = 'https://www.mandrakeonline.net';
 
 my $confdir = '/root/.MdkOnline';
@@ -50,7 +50,7 @@ my %choices = (
 	      );
 my $choice = $choices{account};
 
-my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r);
+my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount);
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
 
 sub read_conf() {
@@ -60,20 +60,19 @@ sub read_conf() {
     $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
     $login = $t{LOGIN}; $boxname = $t{MACHINE}
 }
-
 sub check_login {
     my ($log, $pass, $box) = @_;
     my ($res, $resp);
     my $pp = md5_hex($pass);
     $log && $pass && $box or return 0;
-    my $clink = $expert_link . 'firsttimewizard/validusercheck.php' . '?u=' . $log . '&p=' . $pp;
+    my $clink = $expert_link . '/firsttimewizard/validusercheck.php' . '?u=' . $log . '&p=' . $pp;
     $resp = mdkonline::get_from_URL($clink);
     $resp->is_success and $res = $resp->content =~ /TRUE/ ? 1 : 0;
     $res
 }
 sub send_conf {
     my ($log, $pass, $box) = @_;
-    my $uplink = $online_link . 'wizard.php';
+    my $uplink = $online_link . '/wizard.php';
     my $pp = md5_hex($pass); my $res;
     my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
     mdkonline::report_config("$confdir/$log.$pp.$box.online.log");
@@ -83,9 +82,14 @@ sub send_conf {
     ($res, $key) = mdkonline::send_config($uplink, $tag);
     mdkonline::hw_upload($login, $pass, $boxname);
     undef $ww;
-    $res
+    ($res, $key)
 }
-
+sub create_new_account {
+    my ($log, $pass, $mail) = @_;
+    my $url = $expert_link . '/online3_CreateAccount.php' . '?desuserid=' . $log . '&despwd=' . $pass . '&user_email=' . $mail;
+    my $ca = mdkonline::subscribe_online($url);
+    $ca
+}
 $wiz = {
 	name => N("Mandrakeonline"),
 	pages => {
@@ -111,14 +115,13 @@ $wiz = {
 				   { label => N("Machine name:"), val => \$boxname },
 				  ],
 			      },
-			      next => 'authenticate'
+			      post => sub {
+				  my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandrakeonline website..."));
+				  $is_success = check_login($login, $password, $boxname); undef($_wait);
+				  "authenticate"
+			      },
 			     },
 		  authenticate => {
-				   pre => sub {
-				       local $::isWizard;
-				       my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandrakeonline website..."));
-				       $is_success = check_login($login, $password, $boxname);
-				   },
 				   name => sub {
 				       if ($is_success) {
 					   N("In order to benefit from Mandrakeonline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you.")
@@ -127,7 +130,12 @@ $wiz = {
 				       }
 				   },
 				   no_back => $is_success ? 1 : 0,
-				   next => $is_success ? 'end' : 'choices'
+				   post => sub { 
+				       if ($is_success) {
+					   ($res, $key) = send_conf($login, $password, $boxname);
+					   "end"
+				       } else { "choices" }
+				   }
 				  },
 		  noaccount => {
 				name => N("Create a Mandrakeonline Account"),
@@ -140,27 +148,38 @@ $wiz = {
 				    ]
 				},
 				post => sub {
-				    "end"
+				    $npassword ne $cfmpassword and $in->ask_warn('', [ N("The passwords do not match\n Please try again\n") ]), return 1, 2;
+				    $nlogin or $in->ask_warn('', [ N("Please provide a login") ]), return 1,2;
+				    mdkonline::check_valid_email($email) or $in->ask_warn('', [ N("Not a valid mail address!\n") ]), return 1,2;
+				    "createaccount"
 				}
 			       },
+		  createaccount => {
+				    pre => sub {
+					$createaccount = create_new_account($nlogin, $npassword, $email);
+				    },
+				    name => sub { 
+					$createaccount eq 'OK' ? "\n\n" . N("Mandrakeonline Account successfully created.\nPlease click \"Next\ to authenticate and upload your configuration\n") : $createaccount;
+				    },
+				    post => sub {
+					$createaccount eq 'OK' ? "account" : "noaccount"
+				    }
+				   },
 		  end => {
-			  pre => sub {
-			      $r = send_conf($login, $password, $boxname);
-			  },
 			  name => sub {
-			      if ($r eq 'TRUE' && $key) {
+			      if ($res eq 'TRUE' && $key) {
 				  "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 			      } else {
 				  N("Connection problem") . N("Problem occurs when uploading files, please try again")
 			      }
 			  },
 			  data => sub {
-			      if (($r eq 'TRUE') && $key) {
+			      if (($res eq 'TRUE') && $key) {
 				  [ 
 				   { label => N("Country"), val => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
 				     list => [ sort keys %countries ], not_edit => 0 }
 				  ]
-			      }			      
+			      }	      
 			  },
 			  end => 1,
 			  no_back => 1,
