@@ -145,7 +145,7 @@ sub confNetwork {
     system("/usr/sbin/net_monitor" . "&")
 }
 sub launchUpdate {
-    system("/usr/sbin/MandrakeUpdate" . "&");
+    system("/usr/sbin/MandrakeUpdate --no-confirmation &");
 }
 sub CheckUpdates {
     

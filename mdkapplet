@@ -41,7 +41,7 @@ my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my @proctable;
 my $conffile = '/etc/sysconfig/mdkonline';
-my $localdir = '$ENV{HOME}/.MdkOnline';
+my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
 
 #compatibility
@@ -176,7 +176,10 @@ sub setLabel {
     gtkflush();
 }
 sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
-sub launchUpdate { logIt(N("Launching MandrakeUpdate\n")); system "/usr/sbin/MandrakeUpdate &" }
+sub launchUpdate {
+    logIt(N("Launching MandrakeUpdate\n"));
+    system "/usr/sbin/MandrakeUpdate --no-confirmation &";
+}
 sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); system "/usr/sbin/mdkupdate", "--applet"; silentCheck() }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
