@@ -1,21 +1,10 @@
-##################################################################
-#
-#
-# !!!!!!!! WARNING => THIS HAS TO BE EDITED IN THE CVS !!!!!!!!!!!
-#
-#
-##################################################################
-# Changed by Makefile of cvs.
-# get the source from our cvs repository (see
-# http://www.linuxmandrake.com/en/cvs.php3)
-
 %define version 1.0
 %define name mdkonline
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	2mdk
+Release: 	3mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -74,6 +63,10 @@ EOF
 %post
 %{update_menus}
 
+if [ -r /etc/cron.daily/mdkupdate ]; then
+  perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
+fi
+
 %postun
 %{clean_menus}
 
@@ -93,7 +86,21 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/pixmaps/*.png
 %{_datadir}/autostart/*
 
+##################################################################
+#
+#
+# !!!!!!!! WARNING => THIS HAS TO BE EDITED IN THE CVS !!!!!!!!!!!
+#
+#
+##################################################################
+# get the source from our cvs repository (see
+# http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Wed Apr 28 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-3mdk
+- fix wrong path in cron entry
+- po updates
+- don't show the window asking for network connection
+
 * Tue Apr 13 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-2mdk
 - move mdkonline process and conf files  to /root/.MdkOnline directory (#8621)
 - add migration code to ensure compatibility with old versions
