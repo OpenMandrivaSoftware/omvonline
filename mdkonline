@@ -258,7 +258,7 @@ sub send_config {
 #    print STDERR "Sending config\n";
 
     `/usr/sbin/drakbug_report > /root/$login-drakbug_report.log`;
-    `/usr/bin/bzip2 -9 /root/$login-drakbug_report.log`;
+    `/usr/bin/bzip2 \\\-9 /root/$login-drakbug_report.log`;
 
     my $scp_script = "";
     foreach ("/usr/bin/scpcall.exp","./scpcall.exp") {
