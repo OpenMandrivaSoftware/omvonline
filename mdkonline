@@ -199,7 +199,7 @@ sub checkErrors {
 }
 sub setEntryWithConf {
     my %t = getVarsFromSh($wideconf);
-    foreach (qw(login machine)) { $o->{$_} and $o->{$_}->set_text($t{uc($_)}) }
+    foreach (qw(login machine)) { $o->{$_}->get_text or $o->{$_}->set_text($t{uc($_)}) }
 }
 sub sendConfig {
     # When we arrive here, we're sure the login/passwd is correct
