@@ -40,7 +40,8 @@ Things to do on mdkonline
    or if the urpmi db is locked.
 
  * mdkupdate:
-   started every 2 hours +/- salt ?
+   - started every 2 hours +/- salt ?
+   - should compare system mandrake-release with the one on the server to detect if system was updated without starting mdkonline wizard.
 
  * mdkupdate --auto 
    when failing, informative feedback should be displayed (not authenticated,
