@@ -396,7 +396,7 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
 
     my $vbox_ident= new Gtk::VBox(0,0);
-    writ_on_pixmaps($vbox_ident,"default.png","MandrakeOnline"." "._("Authentification"),540,100);
+    writ_on_pixmaps($vbox_ident,"default.png","MandrakeOnline"." "._("Authentication"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login, password and machine name:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user,_("Machine name:"),$box_user);
