@@ -261,12 +261,12 @@ sub subscribe_mdkonline() {
     my $user_current=$ENV{'USER'};
     
     if (!$browser) {splash_warning( " ". _("Warning: No browser specified") ." "); return;}
-#    if ($initial_user ne "root" && $initial_user ne undef) {
-#	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
-#    } else {
-	system("$browser $link_to_mdkonline &");
-	
- #   }
+    #    if ($initial_user ne "root" && $initial_user ne undef) {
+    #	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
+    #    } else {
+    system("$browser $link_to_mdkonline &");
+   
+    #   }
     $check_subs->set_active(0);$Button_Next->set_sensitive(1); $button_subs->set_sensitive(0);
 }
 
@@ -594,6 +594,7 @@ sub get_on_privacy {
     my $table=new Gtk::Table( 1, 2, $false );
     my $text=new Gtk::Text(undef,undef);
     $text->set_editable($false);
+    my $translated = 1;
     $table->attach( $text, 0, 1, 0, 1,
                        [ 'expand', 'shrink', 'fill' ],
                        [ 'expand', 'shrink', 'fill' ],
@@ -601,24 +602,16 @@ sub get_on_privacy {
     my $vscrollbar = new Gtk::VScrollbar( $text->vadj );
     $table->attach( $vscrollbar, 1, 2, 0, 1, 'fill',
                        [ 'expand', 'shrink', 'fill' ], 0, 0 );
-    if ($ENV{LANG} eq "de") {
-	load_text($text,"$sharepath/privacy-de.txt");
-    }elsif ($ENV{LANG} eq "es") {
-	load_text($text,"$sharepath/privacy-es.txt");
-    }elsif ($ENV{LANG} eq "eu") {
-	load_text($text,"$sharepath/privacy-eu.txt");
-    }elsif ($ENV{LANG} eq "fr") {
-	load_text($text,"$sharepath/privacy-fr.txt");
-    }elsif ($ENV{LANG} eq "ro") {
-	load_text($text,"$sharepath/privacy-ro.txt");
-    }elsif ($ENV{LANG} eq "sv") {
-	load_text($text,"$sharepath/privacy-sv.txt");
-    }else {
-	load_text($text,"$sharepath/privacy.txt");
+
+    my @lang = qw(de es eu fr pl ro sv);
+    foreach $l (@lang) {
+	next if $ENV{LANG} !~ /$l/;
+	load_text($text,"$sharepath/privacy-$l.txt");
+	$translated = 0;
     }
+    $translated and load_text($text,"$sharepath/privacy.txt");
     $vbox->pack_start( $table, $true, $true, 0 );
-    
-}    
+ }    
 
 sub writ_on_pixmaps {
     my ($vbox, $pix_name, $step_label, $width, $height)=@_;
