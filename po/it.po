@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-01 22:41+0200\n"
-"PO-Revision-Date: 2004-08-31 16:19+0200\n"
+"PO-Revision-Date: 2004-09-28 21:10+0200\n"
 "Last-Translator: Daniele Pighin <daniele@dcs.it>\n"
 "Language-Team: italian <timl@freelists.org>\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr "Servizio non attivato. Clicca su \"Sito web online\""
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Versione non supportata (troppo vecchia o di sviluppo)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -187,12 +187,12 @@ msgstr "Sto controllando... Ci sono aggiornamenti disponibili\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Versione di sviluppo non supportata dal servizio"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Release troppo vecchia non supportata dal servizio"
 
 #: ../mdkapplet:256
 #, c-format
@@ -505,27 +505,27 @@ msgstr ""
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Login e password non devono superare i 12 caratteri\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "I caratteri speciali non sono consentiti\n"
 
 #: ../mdkonline.pm:60
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Per favore compila tutti i campi\n"
 
 #: ../mdkonline.pm:61
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Email non valida\n"
 
 #: ../mdkonline.pm:62
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Account già esistente\n"
 
 #: ../mdkonline.pm:68
 #, c-format
@@ -533,19 +533,19 @@ msgid "Problem connecting to server \n"
 msgstr "Problema di connessione al server\n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:95
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Benvenuto su Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Ho già un account"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Voglio iscrivermi"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:120
 #, c-format
@@ -555,22 +555,22 @@ msgstr "Attendere prego"
 #: ../mdkonline_tui:103
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Creazione dell'account o autenticazione"
 
 #: ../mdkonline_tui:120
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Benvenuto su Mandrakeonline"
+msgstr "Connessione in corso al sito Mandrakeonline..."
 
 #: ../mdkonline_tui:130
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "o"
 
 #: ../mdkonline_tui:130
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Password errata"
+msgstr "password errata:"
 
 #: ../mdkonline_tui:158
 #, c-format
@@ -578,11 +578,14 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Account Mandrakeonline creato correttamente.\n"
+"Clicca su \"Avanti\" per autenticarti e fare l'upload della tua "
+"configurazione\n"
 
 #: ../mdkonline_tui:175
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Nazione:"
+msgstr "Paese"
 
 #: ../mdkonline_tui:187
 #, fuzzy, c-format
@@ -634,17 +637,17 @@ msgstr "  --update       - Aggiorna chiavi\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "File %s non trovato. Devi prima eseguire mdkonline"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Non è stato possibile contattare Mandrakeonline, riprova piú tardi"
+msgstr "Mandrakeupdate non è riuscito a contattare il sito, nuovo tentativo."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Impossibile aggiornare i pacchetti dalla sorgente mdkupdate.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -652,9 +655,14 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate non è riuscito a fare l'upload dei file diff. Invia una email "
+"a support [chiocciola] mandrakeonline [punto] net"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "Salta la procedura guidata"
+
+#~ msgid "I don't have a Mandrakeonline account and I want to "
+#~ msgstr "Non ho un account su Mandrakeonline e vorrei "
 
 #~ msgid "Subscribe"
 #~ msgstr "Registrarmi"
