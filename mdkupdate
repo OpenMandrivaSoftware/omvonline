@@ -111,12 +111,12 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 		      },
 		      82 => sub {
 			  log::l("[mdkupdate] No active Online service found for this host.")
-		      }
+		      },
 		      83 => sub {
 			  log::l("[mdkupdate] Unknown problem, better relaunch mdkonline wizard")
 		      }
-		     }
-	  $action->{$u}->();
+		     };
+	$action->{$u}->();
     } else {
 	log::l(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
     }
