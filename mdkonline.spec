@@ -4,16 +4,22 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	3mdk
+Release: 	4mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakfirsttime >= 1.0-0.6mdk, perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
+Requires:	%{name}-backend >= 1.1-4mdk, drakfirsttime >= 1.0-0.6mdk, perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
+
+%package backend
+Summary: MandrakeOnline libraries and background tools
+Group: System/Configuration/Other
+Requires: drakxtools-newt
+Conflicts: %{name} < 1.1-3mdk
 
 %description
 The MandrakeOnline tool is designed for registered users 
@@ -27,6 +33,9 @@ The package include :
   automatically,
 * Mdkapplet which is a KDE/Gnome applet for security updates 
   notification and installation. 
+
+%description backend
+This package contains the mdkonline library and backend tools.
 
 %prep
 %setup -q
@@ -63,6 +72,8 @@ EOF
 %post
 %{update_menus}
 
+%post backend
+
 if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
 fi
@@ -73,10 +84,17 @@ fi
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%files backend
+%defattr(-,root,root)
+%{_sbindir}/mdkupdate
+%dir %{_libdir}/libDrakX/drakfirsttime
+%{_libdir}/libDrakX/drakfirsttime/*.pm
+
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING ChangeLog
-%{_sbindir}/*
+%{_sbindir}/mdkonline
+%{_sbindir}/drakonline
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
 %{_menudir}/%{name}
@@ -96,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Thu Jul  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-4mdk
+- added mdkonline backend package for derivative products 
+  (MNF, Corporate ...)
+
 * Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-3mdk
  o Tue Jun  8 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-2.1.100mdk
    - added misc architectures (ia64, amd64, x86_64, noarch, ppc64)

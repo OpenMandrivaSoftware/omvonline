@@ -21,25 +21,20 @@
 ################################################################################
 
 use POSIX;
-use Digest::MD5  qw(md5 md5_hex md5_base64);
-use HTTP::Request;
-use HTTP::Request::Common;
-use LWP::UserAgent;
-use Net::HTTPS; #for https connections 
-use MIME::Base64 qw(encode_base64);
-use lib qw(/usr/lib/libDrakX);
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
+use mdkonline;
+
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
 require_root_capability();
 
-my $logfile = "/var/log/mdkupdate.log";
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my %url;
-foreach (qw(online_dif online_update online3_RemoteAction)) {
+foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php'
 }
 my $rpms_rep = "/root/tmp/";
@@ -50,7 +45,7 @@ my $update = grep { /^-?-update$/ } @ARGV;
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
--e '/root/.mdkupdate' and system("mv","/root/.mdkupdate", "$confdir/mdkupdate");
+-e '/root/.mdkupdate' and system("mv","/root/.mdkupdate", "$conffile");
 
 my ($scheduled, $noscheduled);
 
@@ -77,21 +72,21 @@ my %o = getVarsFromSh($conffile);
 if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $u;
     my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
-    my $resp = getFromURL($MandrakeUpdateURL);
+    my $resp = mdkonline::get_from_URL($MandrakeUpdateURL);
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
     if ($resp->is_success) {
 	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 } ;
 	my $action = {
 		      10 => sub {
-			  my $c2h = splitContents($contents);
+			  my $c2h = split_contents($contents);
 			  #printf("\nCONTENTS = $contents \n torf = %s\n OLDKEY = %s = %s \n NEWKEY = %s \n FTP = %s\n", $c2h->{torf}, $c2h->{OLDKEY}, $o{CURRENTKEY}, $c2h->{NEWKEY}, $c2h->{FTP} );
-			  if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
+			  if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { update_conf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
 			  if ($c2h->{FTP}) { 
 			      # for debugging purpose
 			      printf("FTP = %s\n", $c2h->{FTP});
 			      #$c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
-			      addMedia($c2h->{FTP})
+			      add_media($c2h->{FTP})
 			  }
 			  $scheduled = join(',',@{$c2h->{sched}});
 			  $noscheduled = join(',',@{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
@@ -99,16 +94,16 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  if ($opt eq '--applet') {
 			      system "MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			  } elsif ($opt eq '--auto') {
-			      $o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
+			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched});
 			  }
 			  rpm_qa("$confdir/rpm_qa_installed_after");
 			  my %new = getVarsFromSh($conffile);
 			  if (! -s "$confdir/mdkupdate.rpms" || $update) {
 			      #- send configuration and get back key to use...
-			      $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{MACHINE});
-			      delete $new{OLDKEY};
-			      #- save back keys.
-			      setVarsInSh($conffile, \%new);
+			      my $r;
+			      
+			      ($r, $new{CURRENTKEY}) = send_conf_update($new{LOGIN},$new{PASS},$new{MACHINE});
+			      if ($r eq 'TRUE') { delete $new{OLDKEY}; setVarsInSh($conffile, \%new) }
 			  } else {
 			      #- this can safely be ignored if new configuration is sent.
 			      send_rpm_dif($new{LOGIN},$new{PASS},$new{MACHINE},$new{OLDKEY});
@@ -135,7 +130,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 } else {
     $ret = -1; 
 }
-sub splitContents {
+sub split_contents {
     my $cont = shift;
     my ($elem, $s);
     $s = [ split /\n/, $cont ];
@@ -146,102 +141,13 @@ sub splitContents {
     }
     $elem
 }
-
-################################################################################
-# Taken from mdkonline to perform complete update of rpm list (by diff), it has
-# been decided to do exactly what mdkonline does the first time to update the db.
-################################################################################
-sub report_config {
-    my ($file) = @_;
-sub header { "
-********************************************************************************
-* $_[0]
-********************************************************************************";
-	 }
-open (FILE,"> $file") || die "Couldn't open $file : $!";
-map { chomp; print FILE "$_\n" }
-    header("scsi"), cat_("/proc/scsi/scsi"),
-    header("lsmod"), cat_("/proc/modules"),
-    header("cmdline"), cat_("/proc/cmdline"),
-    header("pcmcia: stab"), cat_("$prefix/var/lib/pcmcia/stab") || cat_("$prefix/var/run/stab"),
-    header("usb"), cat_("/proc/bus/usb/devices"),
-    header("partitions"), cat_("/proc/partitions"),
-    header("cpuinfo"), cat_("/proc/cpuinfo"),
-    header("install.log"), cat_("$prefix/root/drakx/install.log"),
-    header("fstab"), cat_("$prefix/etc/fstab"),
-    header("lilo.conf"), cat_("$prefix/etc/lilo.conf"),
-    header("menu.lst"), cat_("$prefix/boot/grub/menu.lst"),
-    header("/etc/modules.conf"), cat_("$prefix/etc/modules.conf"),
-    header("rpm -qa"), join ('', sort `rpm -qa`),
-    header("mandrake version"), cat_('/etc/redhat-release');
-close(FILE);
-}
-sub getFromURL {
-    my ($link) = @_;
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkUpdateAgent/$VERSION" . $ua->agent);
-    $ua->env_proxy;
-    my $request = HTTP::Request->new(GET => $link);
-    my $response = $ua->request($request);
-    $response
-}
-sub send_config {
-    # When we arrive here, we're sure the login/passwd is correct
-    my ($login, $passwd, $box_name) = @_;
-#    print STDERR "Sending config\n";
-    my $result = -1;
-    
-    report_config("$confdir/$login.$passwd.$box_name.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f $confdir/$login.$passwd.$box_name.online.log`;
-
-    # Turn the binary file into a uuencoded ascii file
-    open (FILE, "$confdir/$login.$passwd.$box_name.online.log.bz2") or die "$!";
-    my ($chunk, $buffer);
-    while (read(FILE, $chunk, 60*57)) {
-	$buffer .= $chunk;
-    }
-    close (FILE);
-    open (FILEOUT, "> $confdir/$login.$passwd.$box_name.online.log.bz2.uue") or die "$!";
-	print FILEOUT encode_base64($buffer);
-    close (FILEOUT);
-
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
-    $ua->env_proxy;
-    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
-
-				Content_Type => 'form-data',
-				Content => [submit => "upload_wizard",
-					    wizard => ["$confdir/$login.$passwd.$box_name.online.log.bz2.uue"]
-					    ]);
-    # Check the outcome of the response
-    #print "REPONSE: ".$response->content."\n";
-    if ($response->is_success) {
-	$result = ($response->content =~ /TRUE(.*)/) ? 0 : -1;
-	#print("key is $1\n");
-	$key = $1; 
-	#- update local copy now.
-	unlink "$confdir/mdkupdate.rpms";
-	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
-    } else {
-	# pb with the connection ?
-	$result = -1;
-    }
-
-    unlink "$confdir/$login.$passwd.$box_name.online.log.bz2";
-    unlink "$confdir/$login.$passwd.$box_name.online.log.bz2.uue";
-
-    $result == 0 && $key;
-}
-################################################################################
-
-sub autoInstallRpms {
+sub auto_install_rpms {
     my ($pkgs) = shift;
     my @pkg;
     push(@pkg, $_ . '.rpm') foreach @{$pkgs};
-    updatePkgs(@pkg);
+    update_pkgs(@pkg);
 }
-sub updateConf {
+sub update_conf {
     my ($oldkey, $newkey) = @_;
     my %l = getVarsFromSh $conffile;
     setVarsInSh($conffile, {
@@ -254,9 +160,9 @@ sub updateConf {
 		AUTO => $l{AUTO}
 	      });
 }
-sub addMedia {
+sub add_media {
     my $mirror = shift;
-    my ($r) = getRelease();
+    my ($r) = mdkonline::get_release();
     my $fullpath2mir = "ftp://" . "$mirror". "/$r" . "/RPMS" . "/" ;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
@@ -264,42 +170,39 @@ sub addMedia {
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
-sub getRelease() {
-    my ($release) = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
-    ($release)
-}
-sub updatePkgs {
-    my (@str) = @_;
-    @str or return;
+sub update_pkgs {
+    @_ or return;
     eval {
-	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
+	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @_;
 	$? == 0 or die N("Unable to update packages from mdkupdate medium.\n");
     };
     $@ and die "Problem upgrading with urpmi";
 }
+sub send_conf_update {
+    my ($login,$password,$boxname) =@_;
+    mdkonline::report_config("$confdir/$login.$password.$boxname.online.log");
+    my $tag = { submit => 'upload_wizard', wizard => [ "$confdir/$login.$password.$boxname.online.log.bz2.uue" ] };
+    my ($res, $key) = mdkonline::send_config($url->{wizard}, $tag);
+    ($res, $key)
+}
 sub send_rpm_dif {
-    my ($login,$password,$box_name,$oldkey) =@_;
-    #`sdiff -s $confdir/rpm_qa_installed_after $confdirrpm_qa_installed_before >$confdir/$login.$password.$box_name.$oldkey.dif`;
-    `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$box_name.$oldkey.dif`;
-    -s "$confdir/$login.$password.$box_name.$oldkey.dif" or die N("No diff found");
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/$VERSION" . $ua->agent);
-    $ua->env_proxy;
-    my $response = $ua->request(POST "https://www.mandrakeonline.net/online_dif.php",
-
-				Content_Type => 'form-data',
-				Content => [submit => "upload_dif",
-					    dif_file => ["$confdir/$login.$password.$box_name.$oldkey.dif"]
-					    ]);
+    my ($login,$password,$boxname,$oldkey) =@_;
+    `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$boxname.$oldkey.dif`;
+    -s "$confdir/$login.$password.$boxname.$oldkey.dif" or die N("No diff found");
+    my $tag = { submit => "upload_dif", dif_file => [ "$confdir/$login.$password.$boxname.$oldkey.dif" ] };
+    my ($res, $key) = mdkonline::send_config($url->{online_dif}, $tag);
     #- update mdkupdate.rpms with newer version just sent.
-    if ($response->content =~ /TRUE/) {
+    if ($res eq 'TRUE') {
 	unlink "$confdir/mdkupdate.rpms";
 	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
-    } else { print "REPONSE: " . $response->content . "\n"; } 
+    } else {
+	log::l(N("Connection problem")."\n" . N("Mdkupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
+	return
+    }
 }
 
 sub clean_dir() {
-    system("rm -f $confdir/*.dif $confdir/rpm_qa_installed_before $confdir/rpm_qa_installed_after");    
+    system("rm -f $confdir/*log.bz2 $confdir/*log.bz2.uue $confdir/*.dif $confdir/rpm_qa_installed_before $confdir/rpm_qa_installed_after");    
 }
 
 sub rpm_qa {
@@ -309,14 +212,3 @@ sub rpm_qa {
     close FILE;
 }
 
-sub log_i {
-    local *LOG;
-    open LOG, ">> $logfile" or die "can't output to log file\n";
-    print LOG @_;
-    close LOG;
-}
-
-sub fatal {
-    my ($comment)=@_;
-    printf STDERR "%s\n", $comment; exit($_[0]);
-}

@@ -22,30 +22,25 @@
 ################################################################################
 
 use strict;
-use lib qw(/usr/lib/libDrakX);
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use standalone;
 use interactive;
 use lang;
+use ugtk2 qw(:all);
+
+use mdkonline;
+use comdialog;
+use data;
 
 BEGIN { unshift @::textdomains, 'mdkonline', 'drakfw' }
 use Config;
 
 #use LWP::Debug qw(+);
-use LWP::UserAgent;
-use Net::HTTPS;    
-use HTTP::Request::Common;
-use HTTP::Request;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
-use MIME::Base64 qw(encode_base64);
-use Sys::Hostname;
-use ugtk2 qw(:all);
-
-use lib qw(/usr/lib/libDrakX/drakfirsttime);
-use comdialog;
-use data;
 
 my $confdir = '/root/.MdkOnline';
+my $conffile = "$confdir/mdkupdate";
 
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
@@ -53,15 +48,11 @@ my $in = 'interactive'->vnew('su', 'default');
 my $VERSION = '1.0';
 my ($create_account, $auto_update) = (0, 1);
 
-my $linkAccount = "http://www.mandrakeexpert.com/index2.php";
-my $wideconf = '/etc/sysconfig/mdkonline';
-
 my ($o, $p);
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
-mvfiles("/root/.mdkupdate", "$confdir/mdkupdate");
-#mvfiles("/root/.mdkonline", "$confdir/mdkonline");
+mdkonline::mv_files("/root/.mdkupdate", "$conffile");
 
 $o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 580, 470);
@@ -69,42 +60,35 @@ $o->{mw}{rwindow}->set_position('center');
 $o->{mw}{window}->signal_connect( "delete_event", sub { Gtk2->main_quit} );
 $o->{nb} = Gtk2::Notebook->new;
 $o->{nb}->set_show_tabs(0); $o->{nb}->set_show_border(0);
+$o->{bottomHbox} = Gtk2::HBox->new;
 my %stage = (
-	     0 => sub { if ($o->{account_cb}->get_active) { subsOnline() } else { $o->{nb}->next_page} },
-	     1 => sub { $o->{nb}->next_page(); setEntryWithConf() }, 
-	     2 => sub { testPasswd() },
-	     3 => sub { log::l("[mdkonline] Sending configuration to remote server"); sendConfig() },
-	     4 => sub { log::l("[mdkonline] Writing local configuration dir"); setConf() }
+	     0 => sub { if ($o->{account_cb}->get_active) { subs_online() } else { $o->{nb}->next_page} },
+	     1 => sub { $o->{nb}->next_page(); set_entry_with_conf() }, 
+	     2 => sub { check_passwd() },
+	     3 => sub { log::l("[mdkonline] Sending configuration to remote server"); send_conf_online() },
+	     4 => sub { log::l("[mdkonline] Writing local configuration dir"); set_conf() }
 	    );
-$o->{bottomHbox} = create_okcancel(my $w =
-                                   {
-                                    cancel_clicked => \&mainQuit,
-                                    ok_clicked => sub {
-                                        $p = $o->{nb}->get_current_page;
-                                        $stage{$p}->();
-                                        $p <= 0 and $o->{Prev}->set_sensitive(1);
-                                        $p == 4 and mainQuit()
-                                    },
-                                   },
-                                   undef, undef, '',
-                                   [ "gtk-go-back", sub {
-                                         $p = $o->{nb}->get_current_page;
-                                         $o->{nb}->prev_page();
-                                         $p <= 1 and init(0)
-                                     },
-                                     0, 1,
-                                   ],
-                                  );
-$w->{cancel}->set_label(N("Skip Wizard"));
-$o->{Next} = $w->{ok};
-$o->{SkipWiz} = $w->{cancel};
-
-$w->{ok}->set_label("gtk-go-forward");
-$w->{ok}->set_use_stock(1);
-
-$o->{Prev} = $w->{buttons}{'gtk-go-back'};
-$o->{Prev}->set_use_stock(1);
-
+$o->{actions} = {
+		 Next => sub {
+		     $p = $o->{nb}->get_current_page;
+		     $stage{$p}->();
+		     $p <= 0 and $o->{Prev}->set_sensitive(1);
+		     $p == 4 and main_quit()
+		 },
+		 SkipWiz => sub {
+		     main_quit()
+		 },
+		 Prev => sub {
+		     $p = $o->{nb}->get_current_page;
+		     $o->{nb}->prev_page();
+		     $p <= 1 and init(0)
+		 }
+		};
+foreach my $l (['Next', 'gtk-go-forward', 'stock'], ['SkipWiz', N("Skip Wizard")], ['Prev', 'gtk-go-back', 'stock']) {
+    $o->{$l->[0]} = $l->[2] ? Gtk2::Button->new_from_stock($l->[1]) : Gtk2::Button->new(" " . $l->[1] . " ");
+    $l->[2] ? $o->{bottomHbox}->pack_end($o->{$l->[0]}, 0, 0, 1) : $o->{bottomHbox}->pack_start($o->{$l->[0]}, 0, 0, 1);
+    $o->{$l->[0]}->signal_connect( clicked => sub { $o->{actions}{$l->[0]}->() });
+}
 gtkadd($o->{mw}{window},
        gtkpack_(Gtk2::VBox->new(0, 2),
 		1, $o->{nb},
@@ -180,35 +164,21 @@ $o->{mw}{rwindow}->show_all;
 Gtk2->main;
 ugtk2->exit(0);
 
-sub subsOnline {
+sub subs_online {
     my $explink = 'http://www.mandrakeexpert.com/online3_CreateAccount.php';
-    my $login = $o->{clogin}->get_text;
-    my $despwd = $o->{cpasswd}->get_text;
-    my $despwdcfm = $o->{cconfirm}->get_text;
+    my $login = $o->{clogin}->get_text; my $despwd = $o->{cpasswd}->get_text; my $despwdcfm = $o->{cconfirm}->get_text;
     my $cmail = $o->{cmail}->get_text;
     $::error = 0;
-    checkErrors($login, $despwd, $despwdcfm, $o->{cmail});
+    check_errors($login, $despwd, $despwdcfm, $o->{cmail});
     #    print "Error = $::error";
     if (!$::error) {
 	my $url = $explink . '?desuserid=' . $login . '&despwd=' . $despwd . '&user_email=' . $cmail;
-	print "LOGIN = $login\nPASSWD = $despwd\nMAIL= $cmail\nURL=$url\n";
-	my $ret = requestURL($url);
-	my $result = {
-		      10 => sub { !$::error and $o->{nb}->next_page},
-		      11 => sub { raiseError($o->{mw}->{window},N("Creation"),N("Login and password should be less than 12 characters\n")) },
-		      12 => sub { raiseError($o->{mw}->{window},N("Special characters"),N("Special characters are not allowed\n")) },
-		      13 => sub { raiseError($o->{mw}->{window},N("Empty fields"),N("Please fill in all fields\n")) },
-		      14 => sub { raiseError($o->{mw}->{window},N("Email"),N("Email not valid\n")) },
-		      15 => sub { raiseError($o->{mw}->{window},N("Change account"),N("Account already exist\n")) },
-		     };
-	if ($ret->is_success) {
-	    my $content = $ret->content;
-#	    print "CODE_RETOUR = $content\n";
-	    if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1); eval { $result->{$code}->() } }
-	} else { raiseError($o->{mw}->{window}, N("Server Problem"), N("Problem connecting to server \n")) }
+	#print "LOGIN = $login\nPASSWD = $despwd\nMAIL= $cmail\nURL=$url\n";
+	my $ret = mdkonline::subscribe_online($url);
+	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}->{window}, $ret) };
     }
 }
-sub checkErrors {
+sub check_errors {
     my ($login, $despwd, $despwdcfm, $cmail) = @_;
     $login or raiseError($o->{mw}->{window},N("Error"), N("Please provide a login"));
     if (!$::error && $despwd ne $despwdcfm) {
@@ -217,97 +187,64 @@ sub checkErrors {
 	raiseError($o->{mw}->{window},N("Error"), N("Not a valid mail address!\n"))
     }
 }
-sub setEntryWithConf {
+sub set_entry_with_conf {
+    my $wideconf = '/etc/sysconfig/mdkonline';
     my %t = getVarsFromSh($wideconf);
     my $host = chomp_(`hostname`) ; $host =~ /(\w+)(.*)/;
     $t{MACHINE} ||= $1;
     foreach (qw(login machine)) { $o->{$_}->get_text or $o->{$_}->set_text($t{uc($_)}) }
 }
-sub sendConfig {
-    # When we arrive here, we're sure the login/passwd is correct
-    # print STDERR "Sending config\n";
-    my $result = -1; 
-    my ($login, $boxname, $passwd);
-    $login = $o->{login}->get_text; $boxname = $o->{machine}->get_text; my $passwd = md5_hex($o->{passwd}->get_text);
-    reportConfig("$confdir/$login.$passwd.$boxname.online.log");
-    `/usr/bin/bzip2 \\\-9 \\\-f $confdir/$login.$passwd.$boxname.online.log`;
-    # Turn the binary file into a uuencoded ascii file
-    open (FILE, "$confdir/$login.$passwd.$boxname.online.log.bz2") or die "$!";
-    my ($chunk, $buffer);
-    while (read(FILE, $chunk, 60*57)) {
-	$buffer .= $chunk;
-    }
-    close (FILE);
-    open (FILEOUT, "> $confdir/$login.$passwd.$boxname.online.log.bz2.uue") or die "$!";
-	print FILEOUT encode_base64($buffer);
-    close (FILEOUT);
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    $ua->env_proxy;
-    my $w = wait_msg(N("Sending configuration..."));
-    my $response = $ua->request(POST 'http://www.mandrakeonline.net/wizard.php',
-
-                                Content_Type => 'form-data',
-                                Content => [submit => "upload_wizard",
-                                            wizard => ["$confdir/$login.$passwd.$boxname.online.log.bz2.uue"]
-					   ]);
-    #printf("*********** Reponse is %s ***********\n", $response->as_string);
-    # Check the outcome of the response
-    #print "REPONSE: ".$response->content."\n";
+sub send_conf_online {
+    my ($login, $passwd, $boxname) = get_names();
+    my $w = wait_msg(N("Reading configuration\n"));
+    my $link = 'https://www.mandrakeonline.net/wizard.php';
+    mdkonline::report_config("$confdir/$login.$passwd.$boxname.online.log");
+    my $tag = { submit => "upload_wizard", wizard => ["$confdir/$login.$passwd.$boxname.online.log.bz2.uue"] };
     remove_wait_msg($w);
-    if ($response->is_success || $::testing) {
-	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
-	#printf("Send Config :\nNEWKEY=%s\nRESPONSE=%s", $1, $response->content);
-	$o->{currentkey} = $1; 
-    } else {
-	# pb with the connection ?
-	$result = -1;
-    }
-    # if information were sent correctly (exit code: 0 from scp script), go to page 5
-    if (! $result || $::testing) {
-	# go to last page
+    my $ww = wait_msg(N("Sending configuration..."));
+    my ($res, $key) = mdkonline::send_config($link, $tag);
+    remove_wait_msg($ww);
+    if ($res eq 'TRUE' && $key) {
+	$o->{currentkey} = $key;
 	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide
     } else {
-	# if incorrect, go/stay on page 4 to retry sending data
-	# pb with the connection ?
-	raiseError($o->{mw}->{window}, N("Connection problem"), N("MandrakeOnline could not be contacted, please try again at a later time"));
+	raiseError($o->{mw}->{window}, N("Connection problem"), N("Problem occurs when uploading files, please try again"));
     }
 }
-sub setConf {
-    my $login = $o->{login}->get_text;
-    my $passwd = md5_hex($o->{passwd}->get_text);
-    my $boxname = $o->{machine}->get_text; my $country = lc($countries{$o->{country}->entry->get_text});
+sub set_conf() {
+    my ($login, $passwd, $boxname) = get_names(); 
+    my $country = lc($countries{$o->{country}->entry->get_text});
     my $key = $o->{currentkey}; my $auto = 'FALSE';
     if ($auto_update) { $auto = 'TRUE' }; 
-    automatedUpgrades($login, $passwd, $boxname, $key, $country, $auto);
-    writeWideConf($login, $boxname, $country);
+    mdkonline::automated_upgrades($conffile, $login, $passwd, $boxname, $key, $country, $auto);
+    mdkonline::write_wide_conf($login, $boxname, $country);
 }
 sub init {
     my $i = shift;
     $o->{Prev}->set_sensitive(0); 
     $o->{Next}->grab_focus;
-    $i and FirstSettings();
+    $i and first_settings();
 }
-sub FirstSettings {
+sub first_settings() {
     foreach my $l (qw(vbox_account vbox_auto)) {
        	$o->{$l}->set_sensitive(0);
     }
 }
-sub final {
+sub final() {
     $o->{Prev}->hide; $o->{SkipWiz}->hide;
     $o->{Next}->set_label(N("Finish"))
 }
-sub getNames {
-    my ($login, $passwd, $machine) = @_;
+sub get_names() {
+    my ($login, $passwd, $machine);
     $login = $o->{login}->get_text;
     $passwd = md5_hex($o->{passwd}->get_text);
     $machine = $o->{machine}->get_text;
     ($login, $passwd, $machine)
 }
-sub mainQuit {
+sub main_quit() {
     # remove local files
-    my ($login, $passwd, $boxname) = getNames();
-    if ($o->{login}->get_text && $o->{passwd}->get_text) {
+    my ($login, $passwd, $boxname) = get_names();
+    if ($login && $passwd && $boxname) {
 	-f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
 	-f "$confdir/$login.$passwd.$boxname.online.log.bz2" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2");
     }
@@ -315,34 +252,23 @@ sub mainQuit {
     print N("Quitting Wizard\n");
     Gtk2->main_quit;
 }
-sub isalphanum {
-    my ($str) = @_;
-    if ($str =~ /^[[:alnum:]]+$/) {
-	return 1;
-    } else {
-	return 0;
-    }
+sub is_alphanum {
+    my $is_num = sub { $_[0] =~ /^[[:alnum:]]+$/ ? 1 : 0 }
 }
-sub testPasswd () {
-    my $result = -1;
-    my $login    = $o->{login}->get_text;
-    my $passwd   = $o->{passwd}->get_text;
-    my $boxname = $o->{machine}->get_text;
-    my $test = isalphanum($boxname);
-    #print ("isalnum : $test");
-    if ($login && $passwd && $test && $login !~ /\s+/ && $passwd !~ /\s+/) {
-# NEW METHOD (http)
+sub check_passwd() {
+    my $link = 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php';
+    my $result;
+    my $login = $o->{login}->get_text; my $passwd   = md5_hex($o->{passwd}->get_text); my $boxname = $o->{machine}->get_text;
+    $boxname = is_alphanum($boxname);
+    if ($login && $passwd && $boxname && $login !~ /\s+/ && $passwd !~ /\s+/) {
+	# NEW METHOD (http)
 	# first, MD5ify the password
 	my $w = wait_msg(("Connecting ...\n"));
-	$passwd = md5_hex($passwd); # or md5 () or md5_base64 ()
-	my $ua = LWP::UserAgent->new;
-	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);	
-	$ua->env_proxy;
-	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=' . $login . '&p=' . $passwd);
-	my $response = $ua->request($request);
+	$link .= '?u=' . $login . '&p=' . $passwd;
+	my $response = mdkonline::get_from_URL($link);
 	remove_wait_msg($w);
 	# Check the outcome of the response
-	if ($response->is_success || $::testing) {
+	if ($response->is_success) {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
 	    # pb with the connection ? stay on page 2
@@ -354,41 +280,13 @@ sub testPasswd () {
     }
     
     # if correct, go to page 4
-    if (! $result || $::testing) {
+    if (! $result) {
 	$o->{nb}->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
 	raiseError($o->{mw}->{window}, N("Wrong password"), N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)"));
 	$o->{passwd}->set_text("");
     }
-}
-sub reportConfig {
-    my ($file) = @_;
-    #touch($file);
-    my $w = wait_msg(N("Reading configuration\n"));
-    sub header { "
-********************************************************************************
-* $_[0]
-********************************************************************************";
-	 }
-open (FILE,"> $file") || die "Couldn't open $file : $!"; 
-join '', map { chomp; print FILE "$_\n" }
-    header("scsi"), cat_("/proc/scsi/scsi"),
-    header("lsmod"), cat_("/proc/modules"),
-    header("cmdline"), cat_("/proc/cmdline"),
-    header("pcmcia: stab"), cat_("/var/lib/pcmcia/stab") || cat_("/var/run/stab"),
-    header("usb"), cat_("/proc/bus/usb/devices"),
-    header("partitions"), cat_("/proc/partitions"),
-    header("cpuinfo"), cat_("/proc/cpuinfo"),
-    header("install.log"), cat_("/root/drakx/install.log"),
-    header("fstab"), cat_("/etc/fstab"),
-    header("lilo.conf"), cat_("/etc/lilo.conf"),
-    header("menu.lst"), cat_("/boot/grub/menu.lst"),
-    header("/etc/modules.conf"), cat_("/etc/modules.conf"),
-    header("rpm -qa"), join ('', sort `rpm -qa`),
-    header("mandrake version"), cat_('/etc/mandrake-release');
-    close(FILE);
-    remove_wait_msg($w);
 }
 sub wait_msg {
     my ($msg, %options) = @_;
@@ -403,38 +301,6 @@ sub wait_msg {
     $mainw;
 }
 sub remove_wait_msg { $_[0]->destroy }
-sub mvfiles {
-    my ($source, $dest) = @_;
-    -e $source and system("mv","$source","$dest");
-}
-sub automatedUpgrades {
-    my ($login, $passwd, $boxname, $key, $country, $auto) = @_;
-    my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
-    output "$confdir/mdkupdate",
-    qq(# automatically generated file. Please don't edit
-LOGIN=$login
-PASS=$passwd
-MACHINE=$boxname
-VER=$r
-CURRENTKEY=$key 
-COUNTRY=$country
-AUTO=$auto
-);
-    output_p "/etc/cron.daily/mdkupdate",
-    qq(#!/bin/bash
-if [ -f $confdir/mdkupdate ]; then /usr/sbin/mdkupdate --auto; fi
-);
 
-chmod 0755, "/etc/cron.daily/mdkupdate";
-}
-sub writeWideConf {
-    my ($login, $boxname, $country) = @_;
-    my $d = localtime();
-    $d =~ s/\s+/_/g;
-    output_with_perm $wideconf, 644,
-    qq(LOGIN=$login
-MACHINE=$boxname
-COUNTRY=$country
-LASTCHECK=$d
-);
-}
+
+

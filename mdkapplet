@@ -21,9 +21,12 @@
 ################################################################################
 
 use strict;
-use lib qw(/usr/lib/libDrakX);
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
+use mdkonline;
+
 use Digest::MD5;
+
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -208,19 +211,11 @@ sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
     my $u;
-    require LWP::UserAgent;
-    require HTTP::Request::Common;
-    require HTTP::Request;
     logIt(N("Computing new updates...\n"));
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkAppletAgent/0.1" . $ua->agent);
-    $ua->env_proxy;
-    #    my $request = HTTP::Request->new(GET => $link . '&log=' . "ayomigration" . '&host=' . "online");
-    my $request = HTTP::Request->new(GET => $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE});
     my $lnk = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     logIt(N("Connecting to") . " $lnk ...\n");
     gtkflush(); go2State('busy'); gtkflush();
-    my $response = $ua->request($request);
+    my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
     my $ct = $response->content;
 #    print "\nCONTENTS = $ct\n";
 #    logIt(N("Response from MandrakeOnline server\n") . "$ct");
