@@ -15,6 +15,8 @@ s|//|/""/|g;			# ensure // or not understood as comments
 
 s|$|\\n\\|;			# multi-line strings not handled in C
 
+s|\\@|@|;
+
 sub simpl {
     local $_ = $_[0];
     s,\*/,,g;
