@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-21 10:53+0100\n"
+"POT-Creation-Date: 2004-03-23 11:28+0100\n"
 "PO-Revision-Date: 2003-02-18 23:24+0000\n"
 "Last-Translator: Νίκος Νύκταρης (Nick Niktaris) <niktarin@yahoo.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -15,135 +15,182 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ../mdkapplet:50
+#: ../mdkapplet:49
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:56
+#: ../mdkapplet:55
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:62
+#: ../mdkapplet:61
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:68
+#: ../mdkapplet:67
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:74
+#: ../mdkapplet:73
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:80
+#: ../mdkapplet:79
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:86
+#: ../mdkapplet:85
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:90
+#: ../mdkapplet:89
 msgid "Launch Mandrake Update"
 msgstr ""
 
-#: ../mdkapplet:91
+#: ../mdkapplet:90
 #, fuzzy
 msgid "Configuration"
 msgstr "Ανάγνωση Ρυθμίσεων\n"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:91
 msgid "Check Updates"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:92
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:94
+#: ../mdkapplet:93
 msgid "Configure Network"
 msgstr ""
 
-#: ../mdkapplet:95
+#: ../mdkapplet:94
 #, fuzzy
 msgid "Configure Now!"
 msgstr "Ανάγνωση Ρυθμίσεων\n"
 
-#: ../mdkapplet:127
+#: ../mdkapplet:126
 msgid "Mandrake Updates Applet"
 msgstr ""
 
-#: ../mdkapplet:135
+#: ../mdkapplet:134
 msgid "Actions"
 msgstr "Ενέργειες"
 
-#: ../mdkapplet:137
+#: ../mdkapplet:136
 msgid "Install updates"
 msgstr "Αναβαθμίσεις"
 
-#: ../mdkapplet:138
+#: ../mdkapplet:137
 msgid "Configure"
 msgstr "Ρύθμιση"
 
-#: ../mdkapplet:139
+#: ../mdkapplet:138
 msgid "Check updates"
 msgstr ""
 
-#: ../mdkapplet:140
+#: ../mdkapplet:139
 msgid "See logs"
 msgstr ""
 
-#: ../mdkapplet:143
+#: ../mdkapplet:142
 msgid "Status"
 msgstr "Κατάσταση"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:145
 msgid "Network Connection: "
 msgstr ""
 
-#: ../mdkapplet:147
+#: ../mdkapplet:146
 msgid "Down"
 msgstr ""
 
-#: ../mdkapplet:147
+#: ../mdkapplet:146
 msgid "Up"
 msgstr ""
 
-#: ../mdkapplet:150
+#: ../mdkapplet:149
 msgid "New Updates: "
 msgstr ""
 
-#: ../mdkapplet:151 ../mdkapplet:248
+#: ../mdkapplet:150 ../mdkapplet:263
 msgid "Available"
 msgstr ""
 
-#: ../mdkapplet:151 ../mdkapplet:248
+#: ../mdkapplet:150 ../mdkapplet:263
 msgid "Not Available"
 msgstr ""
 
-#: ../mdkapplet:154
+#: ../mdkapplet:153
 msgid "Last check: "
 msgstr ""
 
-#: ../mdkapplet:160
+#: ../mdkapplet:159
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: ../mdkapplet:237
+#: ../mdkapplet:170
+msgid "Launching drakconnect\n"
+msgstr ""
+
+#: ../mdkapplet:171
+#, fuzzy
+msgid "Launching MandrakeUpdate\n"
+msgstr "  --applet       - αναβάθμιση όλων των πληροφοριών.\n"
+
+#: ../mdkapplet:172
+msgid "Launching mdkupdate --applet\n"
+msgstr ""
+
+#: ../mdkapplet:194
+msgid "System is up to date\n"
+msgstr ""
+
+#: ../mdkapplet:202
+msgid "Checking... Updates are available\n"
+msgstr ""
+
+#: ../mdkapplet:205
+msgid "Online services disabled. Contact MandrakeOnline site\n"
+msgstr ""
+
+#: ../mdkapplet:206
+#, fuzzy
+msgid "Wrong Password.\n"
+msgstr "Λάθος κωδικός πρόσβασης"
+
+#: ../mdkapplet:207
+msgid "Wrong Action or host or login.\n"
+msgstr ""
+
+#: ../mdkapplet:249
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:245
+#: ../mdkapplet:253
+msgid "Checking Network: seems disabled\n"
+msgstr ""
+
+#: ../mdkapplet:256
+msgid "Checking config file: Not present\n"
+msgstr ""
+
+#: ../mdkapplet:259 ../mdkapplet:262
 #, fuzzy
-msgid "Checking..."
+msgid "Checking for Updates..."
 msgstr "Πρόβλημα σύνδεσης"
 
-#: ../mdkapplet:304
+#: ../mdkapplet:301
+#, fuzzy
+msgid "Logs"
+msgstr "Όνομα χρήστη:          "
+
+#: ../mdkapplet:321
 msgid "About.."
 msgstr ""
 
-#: ../mdkapplet:305
+#: ../mdkapplet:322
 msgid "Quit"
 msgstr "Έξοδος"
 
