@@ -409,4 +409,11 @@ MACHINE=$boxname
 COUNTRY=$country
 LASTCHECK=$d
 );
+    my $user = $ENV{INITIAL_USER} || $ENV{USER};
+    my $confpers = $user eq 'root' ? '/root/.mdkonline' : "/home/$user/.mdkonline";
+    my ($uid, $gid) = (getpwnam($user) || $user, getgrnam($user) || $user);
+    output_with_perm $confpers, 644,
+    qq(AUTOSTART=TRUE
+);
+    chown $uid, $gid $confpers;
 }
