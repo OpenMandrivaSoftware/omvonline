@@ -5,16 +5,343 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 1.0\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2002-08-16 12:34+0900\n"
 "Last-Translator: Jaegeum Cze <baedaron@hanafos.com>\n"
 "Language-Team: korean <baedaron@hanafos.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=euc-kr\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "아프리카"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "아시아"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "오스트레일리아"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "유럽"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "북아메리카"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "남아메리카"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "다음"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "완료"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "종료"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "뒤로"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "맨드레이크 온라인에 계정이 없으며, 새로 만들고 싶습니다."
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "구독"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "예, 자동 업데이트하고 싶습니다."
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "마법사 종료 중\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr "경고: 브라우저가 지정되지 않았습니다."
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "연결 문제"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "연결 문제"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr ""
+"맨드레이크 업데이트가 사이트에 접속하지 못했습니다. 다시 시도할 것입니다."
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "잘못된 암호"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"사용자명이나 암호가 틀렸습니다.\n"
+"다시 시도해 보거나, 맨드레이크 온라인에 새 계정을 만들어 보세요.\n"
+"새 계정을 만들려면, 맨드레이크 온라인에 접속하기 위한 첫 단계로 돌아가세요.\n"
+"또한 컴퓨터 이름도 입력해야 한다는 것을 알아두세요.\n"
+"(컴퓨터 이름은 알파뱃만 허용됩니다.)"
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "맨드레이크 온라인에 잘 오셨습니다."
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+"이 단계에서는 님이 이미 맨드레이크 온라인에 계정을 가지고 있다고 가정합니"
+"다.\n"
+"이 마법사는 님의 설정(팩키지들, 하드웨어 설정)을\n"
+"중앙 데이터베이스에 올리는 것을 도울 것입니다.\n"
+"이는 님께 보안 업데이트나 유용한 업그레이드에 대해 지속적으로 알리기 위함입니"
+"다.\n"
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "맨드레이크 프라이버시 정책"
+
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr "인증"
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr "맨드레이크온라인 사용자명, 암호, 컴퓨터 이름을 입력하세요:"
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "로그인:"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr "컴퓨터 이름:"
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "암호:"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "님의 설정을 전송 중"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+"맨드레이크 온라인으로부터 혜택을 받기위해서는,\n"
+"님의 설정사항을 전송해야 합니다.\n"
+"\n"
+"마법사는 이제 다음의 정보를 맨드레이크소프트로 전송할 것입니다:\n"
+"1) 시스템에 설치된 팩키지 정보.\n"
+"2) 하드웨어 설정 정보.\n"
+"\n"
+"만약 정보누출이 우려되거나 원하지 않는다면, 「취소」를 누르세요.\n"
+"「다음」을 누르면, 님은 보안 및 기타 유용한 업그레이드에 대한 정보를\n"
+"개인 이메일을 통해 지속적으로 받아 보실 수 있게 됩니다.\n"
+"그리고 「www.mandrakeexpert.com」에서 할인된 지원 서비스를\n"
+"받으실 수도 있습니다.\n"
+"또한, 「사용자명@mandrakeonline.net」의 이메일 별칭을 부여받게 됩니다."
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "정보를 보내는 동안 오류 발생"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+"개인 정보를 보내는 도중에 오류가 발생했습니다.\n"
+"\n"
+"님의 설정을 다시 보내려면,「다음」을 누르세요."
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "완료했습니다."
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+"이제부터 보안과 업그레이드에 대한 정보를 \n"
+"맨드레이크 온라인을 통해 받아 보실 수 있습니다."
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"맨들레크 온라인은 님께 자동업데이트 기능을 제공합니다.\n"
+"새로운 업데이트를 확인하기 위하여 프로그램이 정기적으로 실행될 것입니다.\n"
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "성공적으로 전송되었습니다!"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr "자동 업그레이드"
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "님이 거주하는 지역을 선택하세요."
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "설정사항 읽는 중\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "확인"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "취소"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+"정말 맨드레이크 온라인을 종료할까요?\n"
+"마법사로 돌아가려면 「취소」를 누르고,\n"
+"정말 종료하려면 「종료」를 누르세요."
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "정말 종료합니까? - 맨드레이크 온라인"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "닫기"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -23,58 +350,54 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate ���� %s\n"
-"���۱�(C) 2002 MandrakeSoft.\n"
-"���� ����Ʈ�����̸�, GNU GPL �����Ͽ��� ������� �� �ֽ��ϴ�.\n"
+"mdkupdate 버전 %s\n"
+"저작권(C) 2002 MandrakeSoft.\n"
+"공개 소프트웨어이며, GNU GPL 조건하에서 재배포될 수 있습니다.\n"
 "\n"
 "usage:\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - �� ���� ���.\n"
+msgstr "  --help         - 이 도움말 출력.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
-msgstr "  --security     - ���� ��ü�� ���.\n"
+msgstr "  --security     - 보안 매체만 사용.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
 msgstr ""
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - �� ���� ���.\n"
+msgstr "  -v             - 상세 정보 모드.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "���� ����"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 #, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr ""
-"�ǵ巹��ũ ������Ʈ�� ����Ʈ�� �������� ���߽��ϴ�. �ٽ� �õ��� ���Դϴ�."
+"맨드레이크 업데이트가 사이트에 접속하지 못했습니다. 다시 시도할 것입니다."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 #, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-msgstr "���ǻ����� support@mandrakeonline.net�� ���� �ּ���.\n"
+msgstr "문의사항은 support@mandrakeonline.net로 메일 주세요.\n"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 #, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"�ǵ巹��ũ �¶��ο� �����ϰų�, ���� �������¸� ������ �ʿ䰡 �ֽ��ϴ�."
+"맨드레이크 온라인에 가입하거나, 현재 구독상태를 갱신할 필요가 있습니다."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
-msgstr "���̵� ��й�ȣ�� Ʋ�� �� �մϴ�."
+msgstr "아이디나 비밀번호가 틀린 듯 합니다."
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
 msgstr ""
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""

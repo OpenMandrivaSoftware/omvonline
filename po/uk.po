@@ -7,17 +7,309 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2003-08-26 08:38+0300\n"
 "Last-Translator: Taras Boychuk <btr1@torba.com>\n"
 "Language-Team: ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=KOI8-U\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "Африка"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "Азія"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "Австралія"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "Європа"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "Північна Америка"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "Південна Америка"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "Наступна"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "Завершити"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "Вихід"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "Назад"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "В мене немає рахунку MandrakeOnline і я хочу "
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "Підписатися"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "Так, я хочу автоматизованого поновлення"
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "Вийти з Менеджеру\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr ""
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Проблеми зі з'єднанням"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Проблеми зі з'єднанням"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate не може зв'язатися з сайтом, ми спробуємо ще раз."
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "Невірний пароль"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "Ласкаво просимо до MandrakeOnline"
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "Mandrake Privacy Policy"
+
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr ""
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr "Введіть ваше ім'я на MandrakeOnline, пароль і ім'я машини: "
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "Ім'я:"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr ""
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "Пароль:"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "Відсилаю ваші дані"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "Помилка під час відсилання інформації"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "Завершено"
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "Закачка пройшла успішно!"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr ""
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "Виберіть ваше географічне розташування"
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "Зчитую конфігурацію\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "Гаразд"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "Дійсно вийти? - MandrakeOnline"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "Закрити"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -26,55 +318,51 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate ���Ӧ� %s\n"
+"mdkupdate версія %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
-"�� צ������ ��������� ������������ � ���� ����������������� �� ���� GNU "
+"Це відкрите програмне забезпечення і може розповсюджуватися за умов GNU "
 "GPL.\n"
 "\n"
-"������������:\n"
+"використання:\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
-msgstr "  --help        - ������� �� ��צ���.\n"
+msgstr "  --help        - вивести цю довідку.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
-msgstr "  --security    - ����������� Ԧ���� ������Φ ��Ӧ�.\n"
+msgstr "  --security    - використати тільки безпечні носії.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
-msgstr "  --update       - �������� ��� �������æ�.\n"
+msgstr "  --update       - поновити всю інформацію.\n"
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - ��������� �����.\n"
+msgstr "  -v             - детальний режим.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "�������� ڦ �'��������"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate �� ���� ��'������� � ������, �� �����դ�� �� ���."
+msgstr "MandrakeUpdate не може зв'язатися з сайтом, ми спробуємо ще раз."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-msgstr "� ����-����� ��������� ����������� �� support@mandrakeonline.net\n"
+msgstr "З будь-якими питаннями звертайтеся до support@mandrakeonline.net\n"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"��� ����Ȧ��� ���� ������� �� MandrakeOnline, ��� �������� ���� Ц������."
+"Вам необхідно мати рахунок на MandrakeOnline, або поновити Вашу підписку."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
-msgstr "����������� ��'� ��� ������"
+msgstr "Неправильне ім'я або пароль"
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
-msgstr "�� ���� �������� ��Ӧ� mdkupdate.\n"
+msgstr "Не можу створити носія mdkupdate.\n"
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "�� ���� �������� ������� � ��Ӧ� mdkupdate.\n"
+msgstr "Не можу поновити пакунки з носія mdkupdate.\n"

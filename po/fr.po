@@ -1,23 +1,355 @@
 # french translation of Madrake Online.
 # Copyright (C) 2001 MandrakeSoft S.A.
-# Gr�goire Colbert <gregus@linux-mandrake.com>, 2001, 2002
+# Grégoire Colbert <gregus@linux-mandrake.com>, 2001, 2002
 # Guy CLOTILDE <guy.clotilde@wanadoo.fr>, 2002
 # Arnaud Hrycak <arnaud.hrycak@noos.fr>, 2003
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2003-03-07 22:29+0100\n"
 "Last-Translator: Arnaud Hrycak <arnaud.hrycak@noos.fr>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "Afrique"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "Asie"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "Australie"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "Europe"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "Amérique du Nord"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "Amérique du Sud"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "Suivant"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "Terminer"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "Quitter"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "Retour"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "Je n'ai pas de compte MandrakeOnline et je veux "
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "Souscrire"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "Oui, je veux automatiser les mises-à-jour"
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "Fermeture de l'assistant\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr "Alerte : aucun navigateur spécifié"
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problème de connexion"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Problème de connexion"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "Mot de passe incorrect"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"Votre identifiant ou mot de passe était incorrect.\n"
+" Vous devrez soit en recommencer la saisie, soit créer un compte "
+"MandrakeOnline.\n"
+" Dans le second cas, revenez à la première étape pour vous connecter à "
+"MandrakeOnline.\n"
+" Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
+" (seuls les caractères alphabétiques sont autorisés)."
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "Bienvenue à MandrakeOnline"
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+"À cette étape, vous êtes censé avoir un compte MandrakeOnline.\n"
+"Cet assistant vous aidera à envoyer votre configuration (liste des\n"
+"paquetages, configuration matérielle) vers une base de données centralisée,\n"
+"afin de vous maintenir informé des mises-à-jour de sécurité.\n"
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "Mandrake et votre vie privée"
+
+# (in english : authentication !)
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr "Authentification"
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr ""
+"Entrez vos identifiant, mot de passe et nom de machine MandrakeOnline :"
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "Identifiant :"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr "Nom de machine :"
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "Envoi de votre configuration"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+"Afin de bénéficier des services MandrakeOnline,\n"
+"nous sommes sur le point de récupérer votre configuration.\n"
+"\n"
+"L'assistant va communiquer les informations suivantes à MandrakeSoft :\n"
+"1) la liste des paquetages installés sur votre système,\n"
+"2) votre configuration matérielle.\n"
+"\n"
+"Si cette idée ne vous enchante guère, ou si vous ne souhaitez pas profiter\n"
+"de ce service, veuillez appuyer sur Annuler. En appuyant sur Suivant, vous\n"
+"nous permettrez de vous tenir informé des mises-à-jour de sécurité et des\n"
+"améliorations utiles via des courriers électroniques personnalisés.  De\n"
+"plus, vous bénéficierez de remises sur les services d'aide payants sur\n"
+"www.mandrakexpert.com.\n"
+"Enfin, un alias d'adresse électronique de la forme votrenom@mandrakeonline."
+"net\n"
+"vous sera fourni."
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "Erreur à l'envoi des informations"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+"Une erreur s'est produite pendant l'envoi de vos informations personnelles.\n"
+"\n"
+"Appuyez sur Suivant pour réessayer."
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "Terminé"
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+"À partir de maintenant, MandrakeOnline vous\n"
+"enverra les annonces de sécurité et de mises-à-jour."
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"MandrakeOnline vous permet d'automatiser les mises-à-jour.\n"
+"Un programme se lancera régulièrement sur votre machine en\n"
+"attente de nouvelles mises-à-jour.\n"
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "Votre envoi a eu lieu avec succès !"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr "mises-à-jour automatisées"
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "Choisir la localisation géographique"
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "Lecture de la configuration\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "OK"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "Annuler"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+"Voulez-vous abandonner MandrakeOnline?\n"
+"Pour revenir à l'assistant appuyez sur Annuler,\n"
+"pour quitter appuyez sur Quitter."
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "Abandonner? - MandrakeOnline"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "Fermer"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -27,56 +359,52 @@ msgid ""
 "usage:\n"
 msgstr ""
 "mdkupdate version %s\n"
-"Copyright � 2002 MandrakeSoft.\n"
-"Ceci est un logiciel libre qui peut �tre redistribu� selon les termes de la "
-"Licence Publique G�n�rale GNU.\n"
+"Copyright © 2002 MandrakeSoft.\n"
+"Ceci est un logiciel libre qui peut être redistribué selon les termes de la "
+"Licence Publique Générale GNU.\n"
 "\n"
-"usage�:\n"
+"usage :\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
 msgstr "  --help         - affiche ce message d'aide.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
-msgstr "  --security     - n'utilise que les media de s�curit�.\n"
+msgstr "  --security     - n'utilise que les media de sécurité.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
-msgstr "  --update       - met � jour toutes les informations.\n"
+msgstr "  --update       - met à jour toutes les informations.\n"
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - mode bavard.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "Probl�me de connexion"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons r�essayer."
+msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-msgstr "En cas de probl�me envoyez un courriel � support@mandrakeonline.net\n"
+msgstr "En cas de problème envoyez un courriel à support@mandrakeonline.net\n"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
 "Vous devez avoir un compte sur MandrakeOnline, ou bien votre inscription "
-"n�cessite une mise � jour."
+"nécessite une mise à jour."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
-msgstr "Votre identifiant ou votre mot de passe est peut-�tre incorrect"
+msgstr "Votre identifiant ou votre mot de passe est peut-être incorrect"
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
 msgstr "Impossible d'ajouter le medium mdkupdate.\n"
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
-"Impossible de mettre � jour les paquets � partir du medium de mdkupdate.\n"
+"Impossible de mettre à jour les paquets à partir du medium de mdkupdate.\n"

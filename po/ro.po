@@ -6,17 +6,348 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2003-02-02 14:50+0200\n"
 "Last-Translator: Ovidiu Constantin <ovidiu.constantin@gmx.net>\n"
 "Language-Team: Romanian Translators for Free Software <rtfs-project@lists."
 "sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "Africa"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "Asia"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "Australia"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "Europa"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "America de nord"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "America de sud"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "Înainte"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "Terminare"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "Ieşire"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "Înapoi"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "Nu am un cont la MandrakeOnline şi vreau să"
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "Mă înscriu"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "Da, doresc actualizări automate"
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "Terminare asistent\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr "Atenţie: Nici un navigator specificat"
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problemă la conectare"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Problemă la conectare"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate nu a putut contacta situl, vom încerca din nou."
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "Parolă greşită"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"Contul de utilizator sau parola au fost greşite.\n"
+" Va trebui să le tastaţi din nou, sau va trebui să creaţi un cont la "
+"MandrakeOnline.\n"
+" În acest ultim caz, mergeţi înapoi la primul pas pentru a vă conecta la "
+"MandrakeOnline.\n"
+" Va trebui de asemenea să furnizaţi un nume al maşinii \n"
+" (doar caracterele alfabetice sunt permise)"
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "Bun venit la MandrakeOnline"
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+"La acest pas se presupune că aveţi un cont la MandrakeOnline.\n"
+"Acest asistent vă va ajuta să vă trimiteţi configuraţia\n"
+"(pachete, configuraţie hardware) la o bază de date centralizată pentru\n"
+"a vă ţine la curent cu actualizările de securitate şi noutăţi utile.\n"
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "Politica de protejare a intimităţii"
+
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr "- Autentificare"
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr ""
+"Introduceţi contul utilizator MandrakeOnline, parola şi numele maşinii:"
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "Cont:"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr "Nume maşină:"
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "Parolă:"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "Trimitere configuraţie"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+"Pentru a beneficia de serviciile MandrakeOnline,\n"
+"suntem pe cale să trimitem configuraţia dumneavoastră.\n"
+"\n"
+"Acest asistent va trimite acum următoarele informaţii la MandrakeSoft:\n"
+"1) lista pachetelor pe care le aveţi instalate în sistem,\n"
+"2) configuraţia hardware.\n"
+"\n"
+"Dacă nu sunteţi de acord cu acest lucru, sau nu doriţi să beneficiaţi de "
+"acest serviciu,\n"
+"vă rog apăsaţi 'Anulare'. Apăsând 'Înainte', ne permiteţi să vă ţinem "
+"informat\n"
+"despre actualizări de securitate sau folositoare prin alerte email "
+"personalizate.\n"
+"Mai mult, beneficiaţi de discount la serviciile de suport plătit la\n"
+"www.mandrakeexpert.com.\n"
+"În fine, un alias email cu numeutilizator@mandrakeonline.net vă va fi "
+"furnizat."
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "Eroare la trimiterea informaţiilor"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+"A avut loc o eroare la trimiterea informaţiilor personale.\n"
+"\n"
+"Apăsaţi Înainte pentru a încerca să trimiteţi configuraţia din nou."
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "Terminat"
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+"De acum veţi primi anunţuri despre securitare\n"
+"şi actualizări cu ajutorul MandrakeOnline."
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"MandrakeOnline vă oferă posibilitatea să automatizaţi actualizările.\n"
+"Un program va rula regulat pe sistemul dumneavoastră aşteptând actualizări\n"
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "Trimiterea a fost reuşită!"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr "Actualizări automate"
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "Alegeţi locaţia dumneavoastră geografică"
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "Citire configuraţie\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "OK"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "Renunţă"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+"Chiar doriţi să părăsiţi MandrakeOnline?\n"
+"Pentru a reveni la asistent apăsaţi 'Renunţă',\n"
+"pentru a ieşi într-adevăr apăsaţi 'Ieşire'."
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "Într-adevăr abandonaţi? - MandrakeOnline"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "Închide"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -27,54 +358,50 @@ msgid ""
 msgstr ""
 "mdkupdate versiunea %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
-"Acest program este liber �i poate fi redistribuit sub termenii GNU GPL.\n"
+"Acest program este liber şi poate fi redistribuit sub termenii GNU GPL.\n"
 "\n"
 "Utilizare:\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
-msgstr "  --help             - afi�eaz� acest mesaj de ajutor.\n"
+msgstr "  --help             - afişează acest mesaj de ajutor.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
-msgstr "  --security     - folose�te numai media securizat�.\n"
+msgstr "  --security     - foloseşte numai media securizată.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
-msgstr "  --update       - actualizeaz� toate informa�iile.\n"
+msgstr "  --update       - actualizează toate informaţiile.\n"
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - mod detaliat.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "Problem� la conectare"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate nu a putut contacta situl, vom �ncerca din nou."
+msgstr "MandrakeUpdate nu a putut contacta situl, vom încerca din nou."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr ""
-"Pentru orice problem�, trimite�i un email la support@mandrakeonline.net\n"
+"Pentru orice problemă, trimiteţi un email la support@mandrakeonline.net\n"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"Ve�i avea nevoie de un cont la MandrakeOnline sau de actualizarea "
+"Veţi avea nevoie de un cont la MandrakeOnline sau de actualizarea "
 "subscrierii dvs."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
-msgstr "Contul sau parola dvs. pot fi gre�ite"
+msgstr "Contul sau parola dvs. pot fi greşite"
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
 msgstr "Nu pot crea mediul mdkupdate.\n"
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Nu pot actualiza pachetele de pe mediul mdkupdate.\n"

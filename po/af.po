@@ -5,17 +5,343 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2003-02-22 02:28+0200\n"
 "Last-Translator: Jean-Pierre van der Poel <sage@af.org.za>\n"
 "Language-Team: Afrikaans <lia@af.org.za>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "Afrika"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "Asie"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "Australia"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "Europa"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "Noord-Amerika"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "Suid-Amerika"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "Volgende"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "Klaar"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "Eindig"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "Terug"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "Ek het nie 'n MandrakeOnline rekening nie en ek wil "
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "Inskryf"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "Ja ek soek automatiese nuus"
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "Beëndig Assistent\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr "Waarskuwing: Geen blaaier aangewys nie"
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Konneksie probleem"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Konneksie probleem"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate kon nie die webruimte kontak nie, ons sal weer probeer"
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "Verkeerde wagwoord"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"You inteken of wagwoord was verkeerd.\n"
+"Of jy moet dit weer intik, of jy moet 'n rekening skep by MandrakeOnline.\n"
+"Indien laasgenoemde, gaan terug na die eerste stap om te konnekteer na\n"
+"MandrakeOnline. Hou ingedagte dat jy ook 'n Masjiennaam sal moet "
+"spesifiseer\n"
+"(net alfabetiese karakters word toegelaat)"
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "Welkom by MandrakeOnline"
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+"By hierdie stap moet jy 'n rekening hê by MandrakeOnline.\n"
+"Die assistent sal jou help om jou konfigurasie op te laai\n"
+"(pakkette, hardeware konfigurasie) na 'n sentrale databasis sodat\n"
+"jy op datum gehou kan word met sekuriteit en ander waardevolle nuus.\n"
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "Mandrake Privaatheid Polisie"
+
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr "Identifikasie"
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr "Sleutel in jou MandrakeOnline inteken, wagwoord, en masjiennaam:"
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "Inteken:"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr "Masjiennaam:"
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "Wagwoord:"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "Verstuur jou konfigurasie"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+"Om jou die beste MandrakeOnline diens te lewer,\n"
+"gaan ons nou jou konfigurasie oplaai.\n"
+"\n"
+"Die assistent sal die volgende inligting stuur na MandrakeSoft:\n"
+"1) Lys van pakkette wat jy geinstalleer het op jou stelsel,\n"
+"2) Jou hardeware konfigurasie.\n"
+"\n"
+"As jy ongemaklik voel met dit, of wil nie die diens hê nie, kliek\n"
+"asseblief 'Kanselleer'. As jy 'Volgende' kliek laat jy ons toe\n"
+"om jou op datum te hou\n"
+"oor sekuriteits nuus en waardevolle opgradeerings d.m.v. e-pos.\n"
+"Verder, jy kry afslag hulp by www.mandrakeexpert.com.\n"
+"Laastens, jy sal 'n e-pos alias kry in die vorm\n"
+"   you-naam@mandrakeonline.net."
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "Fout tydens informasie stuur"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+"Daar was 'n fout tydens die verstuur van jou persoonlike inligting.\n"
+"\n"
+"Kliek 'Volgende' om weer te probeer."
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "Klaar"
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+"Van nou af sal jy sekuritiets en opgradeerings nuus kry\n"
+"vanaf MandrakeOnline."
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"MandrakeOnline gee jou die vermoë op die opgradeerings te automatiseer.\n"
+"'n Program sal gereeld op jou stelsel loop en wag vir nuwe opgradeerings\n"
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "Die oplaai was suksesvol!"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr "automatiese Upgradëerings"
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "Kies jou geografiese posisie"
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "Lees konfigurasie\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "Reg"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "Kanselleer"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+"Wil jy rerig MandrakeOnline staak?\n"
+"Om terug te keer na die Assistent, kliek 'Kanselleer',\n"
+"om rerig te staak, kliek 'Eindig'."
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "Rerig staak? - MandrakeOnline"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "Maak toe"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -31,47 +357,44 @@ msgstr ""
 "\n"
 "gebruik:\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
 msgstr "  --help         - druk hierdie help boodskap.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
 msgstr "  --security     - gebruik net sekuriteit media.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
 msgstr "  --update       - opgradeer alle inligting.\n"
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - woordryke modus.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "Konneksie probleem"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "MandrakeUpdate kon nie die webruimte kontak nie, ons sal weer probeer"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "Vir enige probleem stuur 'n e-pos na support@mandrakeonline.net\n"
 
-#: ../mdkupdate_.c:202
-msgid "You need to have an account on MandrakeOnline, or update your subscription."
-msgstr "Jy sal 'n rekening by MandrakeOnline moet h�, of opgradeer jou subskripsie"
+#: ../mdkupdate:196
+msgid ""
+"You need to have an account on MandrakeOnline, or update your subscription."
+msgstr ""
+"Jy sal 'n rekening by MandrakeOnline moet hê, of opgradeer jou subskripsie"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
 msgstr "You inteken of wagwoord kan verkeerd wees"
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
 msgstr "Kon nie mdkupdate media maak nie.\n"
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Kon nie pakette vanaf mdkupdate media opgradeer nie.\n"
-

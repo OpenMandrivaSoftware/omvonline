@@ -1,4 +1,4 @@
-# �vers�ttning av mdkonline-sv.po till svenska
+# Översättning av mdkonline-sv.po till svenska
 # translation of mdkonline-sv.po to Svenska
 # Copyright (C) 2001,2002,2003 Free Software Foundation, Inc.
 # Mattias Newzella <newzella@linux.nu>, 2001, 2002,2003.
@@ -9,17 +9,349 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
-"POT-Creation-Date: 2003-02-19 00:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-02-06 17:37+0100\n"
 "PO-Revision-Date: 2003-02-01 14:47+0100\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
 "Language-Team: svenska <sv@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.2\n"
 
-#: ../mdkupdate_.c:52
-#, c-format
+#: ../mdkonline:64
+msgid "Africa"
+msgstr "Afrika"
+
+#: ../mdkonline:65
+msgid "Asia"
+msgstr "Asien"
+
+#: ../mdkonline:66
+msgid "Australia"
+msgstr "Australien"
+
+#: ../mdkonline:67
+msgid "Europe"
+msgstr "Europa"
+
+#: ../mdkonline:68
+msgid "North America"
+msgstr "Nordamerika"
+
+#: ../mdkonline:69
+msgid "South America"
+msgstr "Sydamerika"
+
+#: ../mdkonline:87 ../mdkonline:201 ../mdkonline:234
+msgid "Next"
+msgstr "Nästa"
+
+#: ../mdkonline:88
+msgid "Finish"
+msgstr "Klar"
+
+#: ../mdkonline:89 ../mdkonline:531
+msgid "Quit"
+msgstr "Avsluta"
+
+#: ../mdkonline:90 ../mdkonline:202 ../mdkonline:236 ../mdkonline:238
+msgid "Back"
+msgstr "Tillbaka"
+
+#: ../mdkonline:92
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "Jag har inget Mandrake Online-konto och jag vill "
+
+#: ../mdkonline:93
+msgid "Subscribe"
+msgstr "Prenumerera"
+
+#: ../mdkonline:109
+msgid "Yes I want automated updates"
+msgstr "Ja, jag vill ha automatiska uppdateringar"
+
+#: ../mdkonline:150
+msgid "Quitting Wizard\n"
+msgstr "Avslutar guiden\n"
+
+#: ../mdkonline:164
+msgid "Empty Mirror"
+msgstr ""
+
+#: ../mdkonline:164
+msgid "Empty Mirror. Please choose a place."
+msgstr ""
+
+#: ../mdkonline:248
+msgid "Warning: No browser specified"
+msgstr "Varning: Ingen webbläsare specificerad"
+
+#: ../mdkonline:273
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Anslutningsproblem"
+
+#: ../mdkonline:282 ../mdkonline:347 ../mdkupdate:169
+msgid "Connection problem"
+msgstr "Anslutningsproblem"
+
+#: ../mdkonline:282 ../mdkonline:347
+#, fuzzy
+msgid "MandrakeOnline could not be contacted, please try again at a later time"
+msgstr "MandrakeUpdate kunde inte kontakta platsen, kommer att försöka igen"
+
+#: ../mdkonline:294
+msgid "Wrong password"
+msgstr "Felaktigt lösenord"
+
+#: ../mdkonline:294
+msgid ""
+"Your login or password was wrong.\n"
+" Either you'll have to type it again, or you'll need to create an account on "
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
+msgstr ""
+"Ditt användarnamn eller lösenord var felaktigt.\n"
+" Antingen behöver du ange det igen eller så behöver du skapa ett konto på "
+"MandrakeOnline.\n"
+" I det senare fallet måste du gå tillbaks till första steget för att ansluta "
+"till MandrakeOnline.\n"
+" Var medveten om att du måste ange ett datornamn \n"
+" (bara alfabetiska tecken är tillåtna)"
+
+#: ../mdkonline:320
+msgid "Sending configuration..."
+msgstr ""
+
+#: ../mdkonline:356
+msgid "Welcome to MandrakeOnline"
+msgstr "Välkommen till Mandrake Online"
+
+#: ../mdkonline:357
+msgid ""
+"At this step You are supposed to have an account on MandrakeOnline.\n"
+"This assistant will help you to upload your configuration\n"
+"(packages, hardware configuration) to a centralized database in\n"
+"order to keep you informed about security updates and useful upgrades.\n"
+msgstr ""
+"Vid det här steget är det meningen att du ska ha ett konto hos Mandrake\n"
+"Online. Den här assistenten kommer hjälpa dig att ladda upp din\n"
+"konfiguration (paket, hårdvarukonfiguration) till en centraliserad\n"
+"databas för att kunna hålla dig informerad om säkerhetsuppdateringar\n"
+"och andra användbara uppdateringar.\n"
+
+#: ../mdkonline:374
+msgid "Mandrake Privacy Policy"
+msgstr "Mandrakes integritetspolicy"
+
+#: ../mdkonline:379
+msgid "Authentification"
+msgstr "Autentisering"
+
+#: ../mdkonline:380
+msgid "Enter your MandrakeOnline login, password and machine name:"
+msgstr "Ange ditt MandrakeOnline-konto, lösenord och datornamn:"
+
+#: ../mdkonline:382
+msgid "Login:"
+msgstr "Användarnamn:"
+
+#: ../mdkonline:382
+msgid "Machine name:"
+msgstr "Datornamn:"
+
+#: ../mdkonline:382
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: ../mdkonline:387
+msgid "Sending your Configuration"
+msgstr "Skickar konfiguration"
+
+#: ../mdkonline:388
+msgid ""
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
+"\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
+"2) your hardware configuration.\n"
+"\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username@mandrakeonline.net will be "
+"provided to you."
+msgstr ""
+"För att dra nytta av fördelarna hos MandrakeOnline\n"
+"kommer vi att sända över din konfiguration.\n"
+"\n"
+"Guiden kommer nu att sända följande information till MandrakeSoft:\n"
+"1) listan på de paket du har installerat på systemet,\n"
+"2) din hårdvarukonfiguration.\n"
+"\n"
+"Om du inte känner dig komfortabel med denna idé, eller inte vill dra nytta "
+"av fördelarna med denna tjänst,\n"
+"klicka på \"Avbryt\". Genom att klicka på \"Nästa\", tillåter du oss att "
+"hålla dig informerad\n"
+"om säkerhetsuppdateringar och användbara uppgraderingar via personligt "
+"utformad e-post.\n"
+"Du kan även dra nytta av de rabbatterade supporttjänsterna på \n"
+"www.mandrakeexpert.com.\n"
+"Slutligen kommer ett e-postalias med ditt användarnamn@mandrakeonline.net "
+"att tillhandahållas dig."
+
+#: ../mdkonline:396
+msgid "Error while sending informations"
+msgstr "Fel vid sändning av information"
+
+#: ../mdkonline:397
+msgid ""
+"There was an error while sending your personal informations.\n"
+"\n"
+"Press Next to try and send your configuration again."
+msgstr ""
+"Det uppstod ett fel när din personliga information skulle skickas.\n"
+"\n"
+"Klicka på \"Nästa\" för att försöka skicka den igen."
+
+#: ../mdkonline:403
+msgid "Finished"
+msgstr "Klar"
+
+#: ../mdkonline:404
+msgid ""
+"From now you will receive on security and updates \n"
+"announcements thanks to MandrakeOnline."
+msgstr ""
+"Från och med nu kommer du att få säkerhets-\n"
+"och uppdateringsannonseringar tack vare Mandrake Online."
+
+#: ../mdkonline:404
+msgid ""
+"MandrakeOnline offers you the ability to automate the updates.\n"
+"A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"MandrakeOnline erbjuder dig möjligheten att automatisera uppdateringarna.\n"
+"Ett program kommer regelbundet att köras på systemet och vänta på nya "
+"uppdateringar.\n"
+
+#: ../mdkonline:404
+msgid "Your upload was successful!"
+msgstr "Uppladdningen lyckades!"
+
+#: ../mdkonline:409
+msgid "automated Upgrades"
+msgstr "automatiska uppdateringar"
+
+#: ../mdkonline:417
+msgid "Choose your geographical location"
+msgstr "Välj din geografiska placering"
+
+#: ../mdkonline:435
+msgid "Reading configuration\n"
+msgstr "Läser konfiguration\n"
+
+#: ../mdkonline:512
+msgid "OK"
+msgstr "OK"
+
+#: ../mdkonline:528
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../mdkonline:534
+msgid ""
+"Do you really want to abort MandrakeOnline?\n"
+"To return to the Wizard press 'Cancel',\n"
+"to really quit it press 'Quit'."
+msgstr ""
+"Vill du verkligen avbryta Mandrake Online?\n"
+"För att återgå till guiden, klicka på \"Avbryt\",\n"
+"för att verkligen avsluta klicka på \"Avsluta\"."
+
+#: ../mdkonline:535
+msgid "Really abort? - MandrakeOnline"
+msgstr "Verkligen avbryta? - Mandrake Online"
+
+#: ../mdkonline:567
+msgid ""
+" You are just starting our Free Mandrake Linux Download Edition for the "
+"first time. \n"
+"\n"
+"There are now over three million Mandrake Linux users all over the world!\n"
+"\n"
+"Please take a few seconds to fill a short questionnaire. The data from "
+"this \n"
+"questionnaire will be used only for aggregate market studies.\n"
+"The text below is the privacy policy of MandrakeSoft about your personal "
+"data."
+msgstr ""
+
+#: ../mdkonline:576
+msgid ""
+"What personal data do we collect ?         \n"
+"                               \n"
+"Various information is collected in different areas of the website;\n"
+"what follows is an overview of the data we keep:\n"
+"\n"
+"Firstly, we record your email address, name and postal address.\n"
+"Secondly we give you a unique customer ID. This ID will be used to \n"
+"add additional information related to your Mandrake account such as:\n"
+"    - Your subscription to mailling lists.\n"
+"    - When registering a purchased product, we ask for personal\n"
+"information as well as system/hardware details so that we may deliver\n"
+"the best support services customized to your needs.\n"
+"    - On our donation page and on our online store (MandrakeStore), we\n"
+"record data for billing purpose (we do not store any credit card data).\n"
+"    \n"
+"What do we do with this information?\n"
+"\n"
+"We never share personal information with other persons or companies -\n"
+"we use this data strictly for the following purposes:\n"
+"    - If you have subscribed to a mailing list, we keep this email\n"
+"address in our database to provide you with customized information\n"
+"and/or to enable you to participate in discussions in various mailing\n"
+"lists. If you send a message to such a list, other people will see\n"
+"your email address but no external parties have access to our database\n"
+"of subscribers. At any time you may unsubscribe to any list by using\n"
+"the appropriate form.\n"
+"    - If you provide information when registering a purchased product\n"
+"to receive support, we keep this information private unless the\n"
+"information is required by one of our partners to deliver the support\n"
+"you require.\n"
+"    - If you use MandrakeStore, we also use your Customer ID to track\n"
+"your order and deliver your products.\n"
+"    - If you provide us with marketing information, we keep it for \n"
+"internal use only in order to improve our products so that they can \n"
+"better fit your needs whether you have purchased a product or not.), How to "
+"change / correct your personal data?\n"
+"\n"
+"French law gives individuals the right to access, correct, modify or \n"
+"remove their own personal data that we have on record. We offer this \n"
+"as a worldwide privilege. You may execute this right at any time by \n"
+"logging to your account with your customer ID and editing your\n"
+"personnal data. You can log on to this page: http://www.mandrakeonline.net"
+msgstr ""
+
+#: ../mdkonline:623
+msgid "Sans Italic 17"
+msgstr ""
+
+#: ../mdkonline:641
+msgid "Close"
+msgstr "Stäng"
+
+#: ../mdkupdate:43
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
@@ -29,53 +361,49 @@ msgid ""
 "usage:\n"
 msgstr ""
 "Mdkupdate version %s\n"
-"Copyright � 2002 MandrakeSoft.\n"
-"Det h�r �r fri programvara och f�r distribueras enligt villkoren i GNU GPL.\n"
+"Copyright © 2002 MandrakeSoft.\n"
+"Det här är fri programvara och får distribueras enligt villkoren i GNU GPL.\n"
 "\n"
-"anv�ndning:\n"
+"användning:\n"
 
-#: ../mdkupdate_.c:57
+#: ../mdkupdate:48
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - visa det h�r hj�lpmeddelandet.\n"
+msgstr "  --help         - visa det här hjälpmeddelandet.\n"
 
-#: ../mdkupdate_.c:58
+#: ../mdkupdate:49
 msgid "  --security     - use only security media.\n"
-msgstr "  --security     - anv�nd endast s�kerhetsmedia.\n"
+msgstr "  --security     - använd endast säkerhetsmedia.\n"
 
-#: ../mdkupdate_.c:59
+#: ../mdkupdate:50
 msgid "  --update       - update all information.\n"
 msgstr "  --update       - uppdatera all information.\n"
 
-#: ../mdkupdate_.c:60
+#: ../mdkupdate:51
 msgid "  -v             - verbose mode.\n"
-msgstr "  -v             - utf�rligt l�ge.\n"
+msgstr "  -v             - utförligt läge.\n"
 
-#: ../mdkupdate_.c:175
-msgid "Connection problem"
-msgstr "Anslutningsproblem"
-
-#: ../mdkupdate_.c:175
+#: ../mdkupdate:169
 msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate kunde inte kontakta platsen, kommer att f�rs�ka igen"
+msgstr "MandrakeUpdate kunde inte kontakta platsen, kommer att försöka igen"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "Vid problem, skicka e-post till support@mandrakeonline.net\n"
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"Du m�ste ha ett konto hos MandrakeOnline, eller uppdatera din prenumeration."
+"Du måste ha ett konto hos MandrakeOnline, eller uppdatera din prenumeration."
 
-#: ../mdkupdate_.c:202
+#: ../mdkupdate:196
 msgid "Your login or password may be wrong"
-msgstr "Ditt anv�ndarnamn eller l�senord kan vara felaktigt"
+msgstr "Ditt användarnamn eller lösenord kan vara felaktigt"
 
-#: ../mdkupdate_.c:214
+#: ../mdkupdate:208
 msgid "Unable to create mdkupdate medium.\n"
 msgstr "Kunde inte skapa mdkupdate-medium.\n"
 
-#: ../mdkupdate_.c:216
+#: ../mdkupdate:210
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "Kunde inte uppdatera paket fr�n mdkupdate-medium.\n"
+msgstr "Kunde inte uppdatera paket från mdkupdate-medium.\n"

@@ -6,7 +6,6 @@ PGOAL = mdkonline
 GOALS = $(PGOAL).pot  $(foreach a, $(LANGS), $(a).mo)
 
 PL_FILES = ../mdkonline ../mdkupdate
-PL_CFILES = $(PL_FILES:%=%_.c)
 
 # $(foreach a, $(LANGS), $($(a).mo))
 
@@ -24,13 +23,9 @@ clean:
 %.mo: %.po
 	msgfmt -o $@ $<
 
-$(PL_CFILES): %_.c: %
-	./fake_c.pl $< > $@
-
-%.pot: $(PL_CFILES) 
+%.pot: $(PL_FILES) 
 	xgettext -F -n --add-comments='-PO' --keyword=__ --keyword=_ \
 		--keyword=N_ --keyword=N \
 		--keyword=I_ --keyword=i18n \
-		--language=C -o $@ $(PL_CFILES) 
-	@rm -rf $(PL_CFILES)
+		--language=perl -o $@ $(PL_FILES) 
 
