@@ -16,7 +16,7 @@ URL:		http://people.mandrakesoft.com/~daouda/mandrake/mdkonline.html
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
-Requires:	popt >= 1.6, perl-libwww-perl 
+Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 
