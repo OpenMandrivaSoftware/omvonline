@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2002-08-12 20:51+0200\n"
-"PO-Revision-Date: 2002-07-11 23:11+0200\n"
+"PO-Revision-Date: 2002-08-13 20:59+0000\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -56,6 +56,8 @@ msgstr "Kilépés"
 msgid "Back"
 msgstr "Vissza"
 
+# a sztring jelentése: nincs azonosítója, és szeretne egyet
+# a MandrakeOnline tulajdonnevet nem szabad lefordítani
 #: ../mdkonline_.c:101
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "Nincs MandrakeOnline azonosítóm, de szeretnék egyet "
@@ -296,18 +298,23 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"MandrakeUpdate %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"Ez a program szabad szoftver; a GNU GPL alapján terjeszthetõ.\n"
+"\n"
+"Használat:\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         - jelen segítség megjelenítése\n"
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr "  --security     - csak a biztonságos adatforrások használata\n"
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr "  -v             - részletes információ\n"
 
 #: ../mdkupdate_.c:83
 msgid "MandrakeUpdate could not contact the site, we will try again"
