@@ -1,18 +1,19 @@
-# mdkonline Finnish translation
+# mdkonline - Finnish translation
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Matias Griese <mahagr@utu.fi>, 2002.
+# Thomas Backlund <thomas.backlund@inritel.com>, 2002.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 0.15\n"
+"Project-Id-Version: mdkonline - MDK Release 9.0\n"
 "POT-Creation-Date: 2002-09-01 15:53+0200\n"
-"PO-Revision-Date: 2002-03-01 09:07EET\n"
-"Last-Translator: Matias Griese <mahagr@utu.fi>\n"
-"Language-Team: Finnish\n"
+"PO-Revision-Date: 2002-09-18 00:12+0300\n"
+"Last-Translator: Thomas Backlund <thomas.backlund@inritel.com>\n"
+"Language-Team: Finnish <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.5\n"
+"X-Generator: KBabel 0.9.6\n"
 
 #: ../mdkonline_.c:71
 msgid "Africa"
@@ -31,9 +32,8 @@ msgid "Europe"
 msgstr "Eurooppa"
 
 #: ../mdkonline_.c:75
-#, fuzzy
 msgid "North America"
-msgstr "Etelä-Amerikka"
+msgstr "Pohjois-Amerikka"
 
 #: ../mdkonline_.c:76
 msgid "South America"
@@ -77,9 +77,8 @@ msgid "Warning: No browser specified"
 msgstr "Varoitus: selainta ei ole asetettu"
 
 #: ../mdkonline_.c:290
-#, fuzzy
 msgid "Connecting ...\n"
-msgstr "Yhteysongelma"
+msgstr "Avaa yhteyden ...\n"
 
 #: ../mdkonline_.c:298 ../mdkonline_.c:361 ../mdkupdate_.c:83
 msgid "Connection problem"
@@ -133,7 +132,7 @@ msgstr "Mandraken yksityisyyspolitiikka"
 
 #: ../mdkonline_.c:392
 msgid "Authentification"
-msgstr "Aidonnus"
+msgstr "Vahvistetaan"
 
 #: ../mdkonline_.c:393
 msgid "Enter your MandrakeOnline login, password and machine name:"
@@ -174,6 +173,20 @@ msgid ""
 "Finally, an email alias with your username\\@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
+"Saadaksesi hyödyn MandrakeOnline palveluista,\n"
+"olemme lähettämässä asetuksesi palvelimelle.\n"
+"\n"
+"Velho lähettää seuraavat tiedot MandrakeSoft:ille.\n"
+"1) listauksen asennetuista paketeista, \n"
+"2) laitteistolistauksen.\n"
+"Jos et ole tyytyväinen tähän ajatukseen, tai et halua hyödytä\n"
+"tästä palvelusta, ole hyvä ja paina 'Peruuta'. Painamalla 'Jatka'\n"
+"sallit meidän pitämään sinut ajan tasalla koskien turvallisuus-\n"
+"päivityksiä ja hyödyllisiä päivityksiä henkilökohtaisilla viestillä.\n"
+"\n"
+"Sen lisäksi hyödynnät alennuksista www.mandrakeexpert.com:in\n"
+"maksullisista tukipalveluista.\n"
+"Lopuksi saat sähköposti-aliaksen malli käyttäjänimi@mandrakeonline.net."
 
 #: ../mdkonline_.c:409
 msgid "Error while sending informations"
@@ -212,7 +225,7 @@ msgstr ""
 
 #: ../mdkonline_.c:417
 msgid "Your upload was successful!"
-msgstr "Imurointi onnistui!"
+msgstr "Tietojen siirto onnistui!"
 
 #: ../mdkonline_.c:422
 msgid "automated Upgrades"
@@ -223,9 +236,8 @@ msgid "Choose your geographical location"
 msgstr "Vaihda geograafinen sijaintisi"
 
 #: ../mdkonline_.c:447
-#, fuzzy
 msgid "Reading configuration\n"
-msgstr "Lähetän asetuksesi"
+msgstr "Luetaan asetukset\n"
 
 #: ../mdkonline_.c:474
 #, c-format
@@ -280,40 +292,47 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate version %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"Tämä on vapaata ohjelmistoa ja saadaan levittää uudelleen GNU GPL lisenssin "
+"alaisuudessa.\n"
+"\n"
+"Käyttö:\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         - tulosta tämä apuviesti.\n"
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr "  --security     - käytä ainoastaan turvallisuus-mediaa.\n"
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr "  -v             - yksityiskohtainen tyyli.\n"
 
 #: ../mdkupdate_.c:83
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again"
-msgstr "Ei yhteyttä MandrakeOnlineen, kokeile myöhemmin uudelleen"
+msgstr ""
+"MandrakeUpdate ei saanut yhteyttä MandrakeOnlineen, kokeilemme uudelleen."
 
 #: ../mdkupdate_.c:110
 msgid "For any problem send mail to support\\@mandrakeonline.net\n"
 msgstr ""
+"Ongelma-tilanteissa, lähetä viesti osoitteeseen: support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:110
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
-msgstr ""
+msgstr "Tarvitset tilin MandrakeOnline:ssä, tai päivitä tilauksesi."
 
 #: ../mdkupdate_.c:110
 msgid "Your login or password may be wrong"
-msgstr ""
+msgstr "Käyttäjänimesi tai salasanasi voi olla väärä."
 
 #: ../mdkupdate_.c:122
 msgid "wget is missing\n"
-msgstr ""
+msgstr "wget puuttuu\n"
 
 #~ msgid "A program will run regulary in your system waiting for new updates\n"
 #~ msgstr ""
