@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 4mdk
+Release: 5mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -78,6 +78,9 @@ rm -rf $RPM_BUILD_ROOT
 #%{_liconsdir}/*.xpm
 
 %changelog
+* Sun Sep  2 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-5mdk
+- add online subscription feature.
+
 * Fri Aug 31 2001 Renaud Chaillat <rchaillat@mandrakesoft.com> 0.15-4mdk
 - fixed exit code from sshlogin script when giving wrong number of args
 
