@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 ################################################################################
-# Mandrake Online                                                              # 
+# MandrakeOnline                                                               # 
 #                                                                              #
 # Copyright (C) 2001 MandrakeSoft                                              #
 # Daouda Lo <daouda@mandrakesoft.com>                                          #
@@ -283,7 +283,7 @@ sub test_passwd () {
 	$notebook_global->next_page(); 
     } else {
 	# if incorrect, clear passwd and stay on page 2
-	info_popup (_("Wrong password"), _("Your login or password was wrong.\nEither you'll have to type it again, or you'll need to create an account on Mandrake Online.\n In the latter case, go back to the first step to connect to Mandrake Online."));
+	info_popup (_("Wrong password"), _("Your login or password was wrong.\nEither you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline."));
 	$passwd_user->set_text("");
     }
 
@@ -361,14 +361,14 @@ sub send_config {
 sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to MandrakeOnline"),540,100);
-    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
+    write_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to")." "."MandrakeOnline",540,100);
+    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
     my $hbox_subs= new Gtk::HBox(0,0);
     $hbox_subs->set_uposition(50,300);
     $vbox_welc->pack_start($hbox_subs,0,0,1);
-    my $check_subs = new Gtk::CheckButton(_("I don't have a Mandrake Online account and I want to "));
+    my $check_subs = new Gtk::CheckButton(_("I don't have a MandrakeOnline account and I want to "));
     $hbox_subs->pack_start($check_subs,0,0,1);
     my $button_subs = new Gtk::Button("  " . _("Subscribe") . "  ");
     $button_subs->set_sensitive(0);
@@ -385,8 +385,8 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
 
     my $vbox_ident= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_ident,"identity.png",_("MandrakeOnline Authentification"),540,100);
-    my $label_log = new Gtk::Label("\n\n" . _("Enter your Mandrake Online login and password:"));
+    write_on_pixmaps($vbox_ident,"identity.png","MandrakeOnline"." "._("Authentification"),540,100);
+    my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login and password:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
