@@ -28,8 +28,8 @@ use Gtk2::Pango;
 use Digest::MD5;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
-use ugtk2 qw (:all);
 
+use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::TrayIcon;
@@ -49,7 +49,7 @@ my $localfile = "$localdir/mdkonline";
 
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
--e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", "$localfile");
+-e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
 is_running('mdkapplet') and die "mdkapplet already running\n";
 
@@ -344,7 +344,7 @@ sub lastCheck {
     my %h = getVarsFromSh($localfile);
     my ($t, $l);
     $t = $h{LASTCHECK} ;
-    $t =~ s/\_/  /g;
+    $t =~ s/_/  /g;
     $t ? $t : N("No check")
 }
 sub getTime {
