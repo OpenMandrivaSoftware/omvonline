@@ -60,11 +60,6 @@ command="/usr/sbin/mdkonline"
 EOF
 
 #install menu icon
-mkdir -p $RPM_BUILD_ROOT%{_miconsdir}
-mkdir -p $RPM_BUILD_ROOT%{_liconsdir}
-install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline16.png $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
-install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline32.png $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
-install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline48.png $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
 %post
 %{update_menus}
