@@ -120,7 +120,7 @@ sub update_packages {
     print "@str\n";
     foreach (@str) {
 	-x "/usr/bin/wget" or die _("wget is missing\n");
-	`/usr/bin/wget $mir$_`;
+	`/usr/bin/wget -r $mir$_`;
     }
     `urpmi $full_rpm`;
     foreach $pack (@str) {
