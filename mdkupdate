@@ -67,7 +67,7 @@ my ($opt) = @ARGV;
 
 my %o = getVarsFromSh($conffile);
 if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
-    my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{BOX} . '&key=' . $o{CURRENTKEY};
+    my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
     my $resp = getFromURL($MandrakeUpdateURL);
     my $contents = $resp->content;
     print " \n\n *****  Response from Online3_RemoteAction is : \n $contents \n end update_rpms answer **********\n\n";
@@ -94,13 +94,13 @@ if(!$ret) {
     my %new = getVarsFromSh($conffile);
     if (! -s "/root/.mdkupdate.rpms" || $update) {
 	#- send configuration and get back key to use...
-	$new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{BOX});
+	$new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{MACHINE});
 	delete $new{OLDKEY};
 	#- save back keys.
 	setVarsInSh($conffile, \%new);
     } else {
 	#- this can safely be ignored if new configuration is sent.
-	send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
+	send_rpm_dif($new{LOGIN},$new{PASS},$new{MACHINE},$new{OLDKEY});
     }
     clean_dir();
 }
@@ -215,7 +215,7 @@ sub updateConf {
 		OLDKEY => $oldkey,
 		CURRENTKEY => $newkey,
 		VER => $l{VER},
-       	        BOX => $l{BOX},
+       	        MACHINE => $l{MACHINE},
 		PASS => $l{PASS},
 		LOGIN => $l{LOGIN} ,
 	      });
