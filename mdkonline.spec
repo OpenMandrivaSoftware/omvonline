@@ -47,6 +47,9 @@ mkdir -p %buildroot%_prefix/X11R6/bin/
 ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakonline
 ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
 
+#install lang
+%{find_lang} %{name}
+
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
@@ -70,7 +73,7 @@ EOF
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING ChangeLog
 %{_sbindir}/*
