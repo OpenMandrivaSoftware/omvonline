@@ -171,7 +171,8 @@ sub mv_files {
 
 sub hw_upload {
     my ($login, $passwd, $hostname) = @_;
-    system("HWDB_PASSWD=$passwd hwdb_add_system $login $hostname &");
+    my $hw_exec = '/usr/sbin/hwdb_add_system';
+    -x $hw_exec and system("HWDB_PASSWD=$passwd $hw_exec $login $hostname &");
 }
 
 sub automated_upgrades {
