@@ -176,6 +176,7 @@ sub test_passwd () {
 	$notebook_global->set_page(4); 
     } else {
     # if incorrect, clear passwd and go/stay on page 3
+	info_popup (_("Wrong password"), _("Your login or password was wrong, you'll have to type it again"));
 	$passwd_user2->set_text("");
 	$notebook_global->set_page(3);
     }
@@ -254,6 +255,31 @@ sub step_wizard {
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
     
+}
+
+sub info_popup ($$) {
+    # must have been translated by the caller
+    my $title = shift;
+    my $text  = shift;
+
+    my $popup = new Gtk::Dialog();
+    $popup->set_position(1);
+
+    my $box = new Gtk::HButtonBox;
+    $popup->action_area->pack_start($box,0,0,0);
+   
+    my $button_ok = new Gtk::Button(_("OK"));
+    $button_ok->signal_connect_object("clicked",$popup => 'destroy');
+    $box->add($button_ok);
+
+    my $label = new Gtk::Label($text);
+    my $style = new Gtk::Style;
+    $style->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
+    $label->set_style($style); 
+    $popup->set_title($title);
+    $popup->vbox->pack_start( $label, 1, 1, 0 );
+    $popup->show_all();
+    $popup->set_modal(1);
 }
 
 sub confirm_quit {
