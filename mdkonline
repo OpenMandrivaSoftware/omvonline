@@ -92,6 +92,8 @@ my $Button_End      = new Gtk::Button("  " . _("Finish") . "  ");
 my $Button_SkipWiz  = new Gtk::Button("  " ._("Quit") . "  ");
 my $Button_Prev     = new Gtk::Button("  < " . _("Back") . "  ");
 my $notebook_global = new Gtk::Notebook;
+my $check_subs = new Gtk::CheckButton(_("I don't have a MandrakeOnline account and I want to "));
+my $button_subs = new Gtk::Button("  " . _("Subscribe") . "  ");
 $Button_End->show();
 $notebook_global->set_show_border($false);
 $notebook_global->set_show_tabs($false);
@@ -232,6 +234,7 @@ sub subscribe_mdkonline() {
 	system("$browser $link_to_mdkonline &");
 	
     }
+    $check_subs->set_active(0);$Button_Next->set_sensitive(1); $button_subs->set_sensitive(0);
 }
 
 sub test_passwd () {
@@ -369,14 +372,12 @@ sub step_wizard {
     my $hbox_subs= new Gtk::HBox(0,0);
     $hbox_subs->set_uposition(50,300);
     $vbox_welc->pack_start($hbox_subs,0,0,1);
-    my $check_subs = new Gtk::CheckButton(_("I don't have a MandrakeOnline account and I want to "));
     $hbox_subs->pack_start($check_subs,0,0,1);
-    my $button_subs = new Gtk::Button("  " . _("Subscribe") . "  ");
     $button_subs->set_sensitive(0);
     $check_subs->signal_connect (clicked => sub {$test_tog=$check_subs->get_active(); 
 						 $button_subs->set_sensitive($test_tog); 
 						 $Button_Next->set_sensitive(!$test_tog); });
-    $button_subs->signal_connect(clicked => \&subscribe_mdkonline);
+    $button_subs->signal_connect('clicked' => \&subscribe_mdkonline);
     $hbox_subs->pack_start($button_subs,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     
