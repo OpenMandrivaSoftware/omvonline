@@ -91,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Fri Mar 15 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-17mdk
 - add desktop entry for gnome.
+- po updates
 
 * Thu Mar 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
 - 8.2 release 
