@@ -221,4 +221,13 @@ LASTCHECK=$d
 );
 }
 
+sub is_running {
+    my ($name) = @_;
+    any {
+	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
+	#- to run ps, perl may create some process with $name as name and 1 as ppid
+	$ppid != 1 && $pid != $$ && $n eq $name;
+    } `ps -o '%P %p %c' -u $ENV{USER}`;
+}
+
 1;

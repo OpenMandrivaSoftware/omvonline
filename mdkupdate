@@ -27,6 +27,8 @@ use mdkonline;
 
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
+mdkonline::is_running('mdkupdate') and die "mdkupdate already running\n";
+
 require_root_capability();
 
 my $confdir = '/root/.MdkOnline';

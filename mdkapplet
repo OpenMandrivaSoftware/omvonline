@@ -53,7 +53,7 @@ my $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
-is_running('mdkapplet') and die "mdkapplet already running\n";
+mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
 
 my %state = (
 	     okay => {
@@ -293,14 +293,6 @@ sub compareWithInstalled {
 	}
     }
     $isUpdate
-}
-sub is_running {
-    my ($name) = @_;
-    any {
-	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
-	#- to run ps, perl may create some process with $name as name and 1 as ppid
-	$ppid != 1 && $pid != $$ && $n eq $name;
-    } `ps -o '%P %p %c' -u $ENV{USER}`;
 }
 sub cronUpdate {
     Glib::Timeout->add(10*1000, sub {
