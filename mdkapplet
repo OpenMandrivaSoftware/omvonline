@@ -199,7 +199,7 @@ sub installUpdates {
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); 
     system "/usr/sbin/mdkupdate", "--applet"; 
     my $newmd5 = md5file($binfile);
-    print "NEW($newmd5) = OLD($oldmd5)\n"
+#    print "NEW($newmd5) = OLD($oldmd5)\n"
     if ($newmd5 ne $oldmd5) { logIt(N("Mdkonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') };
     silentCheck(); gtkflush(); 
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); 
