@@ -115,8 +115,8 @@ sub showMainWindow() {
     $w->set_title(N("Mandrake Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy });
     $w->set_position('center');
-    my ($choice, $isAvailable, $isNetwork, $time);
-    $time = `date`; chomp($time); 
+    my ($choice, $isAvailable, $time);
+    $isAvailable = silentCheck();
     my $autocheck;
     gtkadd($w,
            gtkpack__(Gtk2::VBox->new(0,5),
@@ -132,7 +132,7 @@ sub showMainWindow() {
 			    gtkpack_(Gtk2::VBox->new(0, 3),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("Network Connection: ")),
-						 0, Gtk2::Label->new($isNetwork ? N("Up") : N("Down"))
+						 0, Gtk2::Label->new(isNetwork() ? N("Up") : N("Down"))
 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("New Updates: ")),
@@ -192,6 +192,12 @@ sub cronUpdate {
 				      checkUpdates();
 				      1;
 				  });
+}
+sub lastCheck {
+    my %h = getVarsFromSh($conffile);
+    my ($t, $l);
+    $t = $h{LASTCHECK} =~ s/\_/  /;
+    $t
 }
 sub checkUpdates {
     if (!isNetwork()) {
