@@ -89,8 +89,8 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  $noscheduled = join(',',@{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  if ($opt eq '--applet') {
-			      print "MandrakeUpdate --media=mdkupdate --pkg-sel=$scheduled --pkg-nosel=$nosheduled";
-			      system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
+			      print "MandrakeUpdate --media=mdkupdate --pkg-sel=$scheduled --pkg-nosel=$noscheduled";
+			      system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$noscheduled";
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and autoInstallRpms($c2h->{sched});
 			  }
