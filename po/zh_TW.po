@@ -1,63 +1,93 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # Kenduest Lee <kenduest@cynix.com.tw>, 2001
+# Kenduest Lee <kenduest@cynix.com.tw>, 2002
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-01-22 16:02+0100\n"
-"PO-Revision-Date: 2001-09-25 19:20+CST\n"
+"POT-Creation-Date: 2002-02-05 18:01+0100\n"
+"PO-Revision-Date: 2002-02-05 06:20+CST\n"
 "Last-Translator: Kenduest Lee <kenduest@cynix.com.tw>\n"
 "Language-Team: zh-tw <zh-i10n@linux.org.tw>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=Big5\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: mdkonline:90 mdkonline:187 mdkonline:220
+#: mdkonline:71
+msgid "Africa"
+msgstr ""
+
+#: mdkonline:72
+msgid "Asia"
+msgstr ""
+
+#: mdkonline:73
+msgid "Australia"
+msgstr ""
+
+#: mdkonline:74
+msgid "Europe"
+msgstr ""
+
+#: mdkonline:75
+msgid "USA"
+msgstr ""
+
+#: mdkonline:76
+msgid "South America"
+msgstr ""
+
+#: mdkonline:97 mdkonline:204 mdkonline:237
 msgid "Next"
 msgstr "下一步"
 
-#: mdkonline:91
+#: mdkonline:98
 msgid "Finish"
 msgstr "完成"
 
-#: mdkonline:92 mdkonline:465
+#: mdkonline:99 mdkonline:536
 msgid "Quit"
 msgstr "結束"
 
-#: mdkonline:93 mdkonline:188 mdkonline:222 mdkonline:224
+#: mdkonline:100 mdkonline:205 mdkonline:239 mdkonline:241
 msgid "Back"
 msgstr "上一步"
 
-#: mdkonline:95
+#: mdkonline:102
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "我還沒有 Mandrake Online 的帳號，我希望要 "
 
-#: mdkonline:96
+#: mdkonline:103
 msgid "Subscribe"
 msgstr "註冊"
 
-#: mdkonline:153
+#: mdkonline:119
+#, fuzzy
+msgid "Yes I want automated updates"
+msgstr "我希望讓更新自動化"
+
+#: mdkonline:163
 msgid "Quitting Wizard\n"
 msgstr "正在結束設定精靈\n"
 
-#: mdkonline:234
+#: mdkonline:251
 msgid "Warning: No browser specified"
 msgstr "緊告: 沒有指定瀏覽器"
 
-#: mdkonline:282 mdkonline:366
+#: mdkonline:299 mdkonline:379
 msgid "Connection problem"
 msgstr "連線問題"
 
-#: mdkonline:282 mdkonline:366
+#: mdkonline:299 mdkonline:379
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline 無法聯繫上，請稍後再重試"
 
-#: mdkonline:294
+#: mdkonline:311
 msgid "Wrong password"
 msgstr "密碼錯誤"
 
-#: mdkonline:294
+#: mdkonline:311
 msgid ""
 "Your login or password was wrong.\n"
 "Either you'll have to type it again, or you'll need to create an account on "
@@ -70,11 +100,11 @@ msgstr ""
 "請回到主畫面程式重新進行操作，以便於能夠連上 \n"
 "Mandrake Online 服務。"
 
-#: mdkonline:375
+#: mdkonline:388
 msgid "Welcome to MandrakeOnline"
 msgstr "歡迎來到 MandrakeOnline"
 
-#: mdkonline:376
+#: mdkonline:389
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -88,31 +118,31 @@ msgstr ""
 "這個步驟完成後，就能夠提供您相關的安全公告以及套件更新\n"
 "等資訊。\n"
 
-#: mdkonline:392
+#: mdkonline:405
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake 隱私政策"
 
-#: mdkonline:397
+#: mdkonline:410
 msgid "Authentification"
 msgstr "認證確認"
 
-#: mdkonline:398
+#: mdkonline:411
 msgid "Enter your MandrakeOnline login and password:"
 msgstr "請輸入您在 MandrakeOnline 上的帳號 ID 與密碼:"
 
-#: mdkonline:400
+#: mdkonline:413
 msgid "Login:"
 msgstr "帳號:"
 
-#: mdkonline:400
+#: mdkonline:413
 msgid "Password:"
 msgstr "密碼:"
 
-#: mdkonline:404
+#: mdkonline:417
 msgid "Sending your Configuration"
 msgstr "正送出您的組態設定內容"
 
-#: mdkonline:405
+#: mdkonline:418
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -148,11 +178,11 @@ msgstr ""
 "當整個步驟都完成後，Mandrake 將回提供一個 username@mandrakeonline.net\n"
 "的使用者帳好提供給您使用。"
 
-#: mdkonline:412
+#: mdkonline:425
 msgid "Error while sending informations"
 msgstr "送出資訊時發生錯誤"
 
-#: mdkonline:413
+#: mdkonline:426
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -162,37 +192,59 @@ msgstr ""
 "\n"
 "請等等重新再測試發送您個人資訊。"
 
-#: mdkonline:419
+#: mdkonline:432
 msgid "Finished"
 msgstr "完成了"
 
-#: mdkonline:420
+#: mdkonline:433
+msgid "Your upload was successful!"
+msgstr ""
+
+#: mdkonline:433
 msgid ""
-"Your upload was successful!\n"
 "From now you will receive on security\n"
-"and upgrade announcements thanks to MandrakeOnline."
-msgstr ""
-"上傳資訊已經成功了!\n"
-"現在開始您已經能夠透過 MandrakeOnLine 的服務\n"
-"獲得任何安全消息以及更新程式的資訊公告。"
-
-#: mdkonline:422
-msgid "I want to automate the upgrades"
+"and updates announcements thanks to MandrakeOnline."
 msgstr ""
 
-#: mdkonline:440
+#: mdkonline:433
+msgid "MandrakeOnline offers you the ability to automate the updates."
+msgstr ""
+
+#: mdkonline:433
+msgid "A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+
+#: mdkonline:437
+#, fuzzy
+msgid "automated Upgrades"
+msgstr "我希望讓更新自動化"
+
+#: mdkonline:443
+msgid "I want this (local) user to get email alerts"
+msgstr ""
+
+#: mdkonline:448
+msgid "Choose your geographical location"
+msgstr ""
+
+#: mdkonline:479
+#, c-format
+msgid "cannot open this file for read: %s"
+msgstr ""
+
+#: mdkonline:511
 msgid "OK"
 msgstr "確定"
 
-#: mdkonline:446 mdkonline:472
+#: mdkonline:517 mdkonline:543
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:461
+#: mdkonline:532
 msgid "Cancel"
 msgstr "取消"
 
-#: mdkonline:470
+#: mdkonline:541
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -202,18 +254,25 @@ msgstr ""
 "返回到原本精靈畫面，請按下 \"取消\" 按鈕，\n"
 "或者是可以選取 \"結束\" 來關閉程式。"
 
-#: mdkonline:474
+#: mdkonline:545
 msgid "Really abort? - MandrakeOnline"
 msgstr "確定要結束？ - MandrakeOnline"
 
-#: mdkonline:554
+#: mdkonline:615
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:555
+#: mdkonline:616
 msgid "Welcome"
 msgstr "歡迎"
 
-#: mdkonline:579
+#: mdkonline:640
 msgid "Close"
 msgstr "關閉"
+
+#, fuzzy
+#~ msgid "Your upload was successful!From now you will receive on security"
+#~ msgstr ""
+#~ "上傳資訊已經成功了!\n"
+#~ "現在開始您已經能夠透過 MandrakeOnLine 的服務\n"
+#~ "獲得任何安全消息以及更新程式的資訊公告。"
