@@ -267,7 +267,7 @@ sub displayLogs {
 }
 sub shouldStart() {
     my %p = getVarsFromSh($confpers);
-    $p{AUTOSTART} eq 'FALSE' and mainQuit();
+    if $p{AUTOSTART} eq 'FALSE' and mainQuit();
 }
 sub setState {
     my $state_type = shift;
@@ -291,7 +291,7 @@ sub about {
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
 sub mainQuit() {
-    output_with_perm $confperf,
+    output $confperf,
     qq(AUTOSTART=FALSE
 );
     Gtk2->main_quit
