@@ -213,7 +213,7 @@ sub silentCheck {
 		       my @t = split /\n/, `rpm -qa`;
 		       my $comp = 0;
 		       foreach my $cand (@contents) {
-			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
+			   $cand =~ s/\.(i586|ppc|ia64|noarch|x86_64|amd64|ppc64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   $comp = compareWithInstalled($name, $ver, $rel, \@t);
 			   #print "COMP =  $comp\n";
