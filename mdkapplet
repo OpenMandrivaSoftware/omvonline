@@ -128,6 +128,7 @@ sub showMainWindow() {
     $w->set_title(N("Mandrake Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     $w->set_position('center');
+    $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
     my ($choice, $time);
     my $autocheck;
     gtkadd($w,
