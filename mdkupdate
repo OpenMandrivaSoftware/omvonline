@@ -62,7 +62,9 @@ my %o = getVarsFromSh("/root/.mdkupdate");
 rpm_qa("/root/rpm_qa_installed_before");
 update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
 rpm_qa("/root/rpm_qa_installed_after");
-foreach (@rpm_qadiff) { print "$_\n";};
+my %new = getVarsFromSh("/root/.mdkupdate");
+print "old key is $new{OLDKEY}\n";
+send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
 
 sub update_rpms () {
     my ($login,$password,$box_name,$curkey) =@_;
@@ -99,8 +101,9 @@ sub update_rpms () {
 		LOGIN => $l{LOGIN} ,
 	    });
 	    my @junk= splice(@str_m,0,3);
-	    my $mir_full = $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS";
-	    @str_m and update_packages(@str_m,$mir_full);
+	    my $mir_full = "ftp://" . $l{MIRROR} . "/" . $l{VER} ."/" . "RPMS"."/";
+	    print "la chaine est @str_m\n";
+	    update_packages($mir_full,@str_m);
 
 	} else { print "problem occur $str_m\n";}
 	    	    
@@ -111,24 +114,27 @@ sub update_rpms () {
 }
 
 sub update_packages {
-    my (@str,$mir) = @_;
+    my ($mir,@str) = @_;
     chdir ($rpms_rep);
-    $full_rpm = join(' ',@strm);
+    $full_rpm = join(' ',@str);
+    print "@str\n";
     foreach (@str) {
 	-x "/usr/bin/wget" or die _("wget is missing\n");
-	`/usr/bin/wget $mir/$_`;
+	`/usr/bin/wget $mir$_`;
     }
     `urpmi $full_rpm`;
 }
 
 sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
-    `sdiff -o /root/$login.$password.$box_name.$old_key.dif -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before `;
-    my $response = $ua->request(POST $url_upload_diff,
+    `sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    my $response = $ua->request(POST "https://www.mandrakeonline.net/testonline/online_dif.php",
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_dif",
-					    dif_file => ["$root-dir/$login.$password.$box_name.$old_key.dif"]
+					    dif_file => ["/root/$login.$password.$box_name.$oldkey.dif"]
 					    ]);
     # Check the outcome of the response
     print "REPONSE: ".$response->content."\n";
