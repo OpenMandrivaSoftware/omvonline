@@ -133,6 +133,7 @@ sub step_wizard {
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
     $notebook_global->append_page($vbox_rev,new Gtk::Label("revision"));
+    
 }
 
 sub confirm_quit {
