@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	23mdk
+Release: 	24mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -94,6 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Sat Jul 20 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-24mdk
+- 32 x 32 icon.
+
 * Wed Jul 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-23mdk
 - delete redondant 'ftp://' when choosing ftp mirrors
 
