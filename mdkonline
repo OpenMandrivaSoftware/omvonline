@@ -29,6 +29,9 @@ setlocale (LC_ALL, "");
 Locale::GetText::textdomain ("MdkOnline");
 
 import Locale::GetText I_;
+use lib qw(/usr/lib/libDrakX);
+use interactive;
+my $in = 'interactive'->vnew('su', 'default');
 
 sub _ {
     my $s = shift @_; my $t = I_($s);
@@ -117,7 +120,11 @@ sub step_wizard {
     write_on_pixmaps($vbox_priv,"$x/privacy.png",_("Mandrake Privacy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
-#    my $vbox_ident= new Gtk::Vbox(0,0);
+    my $vbox_ident= new Gtk::VBox(0,0);
+    map {
+	pack_box_identity($vbox_ident,$_->[0],$_->[1],$_->[2]);
+    } ([_("Login:"),$login_user], [_("Password"),$passwd_user]);
+    $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     
 }
 
@@ -127,7 +134,7 @@ sub confirm_quit {
 
     my $bbox1 = new Gtk::HButtonBox;
     $window_about->action_area->pack_start($bbox1,0,0,0);
-
+   
     my $button_cancel = new Gtk::Button(_("Cancel"));
     $button_cancel->signal_connect_object("clicked",$window_about => 'destroy');
     $bbox1->add($button_cancel);
@@ -144,6 +151,16 @@ sub confirm_quit {
     $window_about->vbox->pack_start( $label, 1, 1, 0 );
     $window_about->show_all();
     $window_about->set_modal(1);
+}
+
+sub pack_box_identity {
+    my ($vbox,$label,$entry)=@_;
+    my $table = new Gtk::Table( 1, 2, $true );
+    my $Label_wg=new Gtk::Label($label);
+    $Label_wg->set_justify(left);
+    $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
+    $table->attach_defaults( $entry, 1, 2, 0, 1 );
+    $vbox->pack_start($table,$true,$true,1);
 }
 
 sub load_text {
