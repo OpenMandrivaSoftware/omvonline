@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 15mdk
+%define release 16mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -8,7 +8,6 @@ Version:	%{version}
 Release: 	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
-Packager:	Daouda Lo <daouda@mandrakesoft.com>
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	%{name}-backend = %{version}-%{release}, drakfirsttime >= 1.0-0.6mdk
@@ -129,6 +128,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon Oct 04 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.1-16mdk
+- rebuild
+
 * Mon Oct  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-15mdk
 - po updates
 - exit code instead of die on mdkupdate
