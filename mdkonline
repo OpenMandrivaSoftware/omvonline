@@ -172,11 +172,11 @@ sub subsOnline {
 	my $ret = requestURL($url);
 	my $result = {
 		      10 => sub { !$::error and $o->{nb}->next_page},
-		      11 => sub { raiseError($o->{mw}->{window},N("Creation"), N("Login and password should be less than 12 characters\n")) },
-		      12 => sub { raiseError($o->{mw}->{window},N("Special characters"), N("Special characters are not allowed\n")) },
-		      13 => sub { raiseError($o->{mw}->{window},N("Empty fields"), N("Please fill in all fields\n")) },
-		      14 => sub { raiseError($o->{mw}->{window},N("Email"), N("Email not valid\n")) },
-		      15 => sub { raiseError($o->{mw}->{window},N("Change account"), N("Account already exist\n")) },
+		      11 => sub { raiseError($o->{mw}->{window},N("Creation"),N("Login and password should be less than 12 characters\n")) },
+		      12 => sub { raiseError($o->{mw}->{window},N("Special characters"),N("Special characters are not allowed\n")) },
+		      13 => sub { raiseError($o->{mw}->{window},N("Empty fields"),N("Please fill in all fields\n")) },
+		      14 => sub { raiseError($o->{mw}->{window},N("Email"),N("Email not valid\n")) },
+		      15 => sub { raiseError($o->{mw}->{window},N("Change account"),N("Account already exist\n")) },
 		     };
 	if ($ret->is_success) {
 	    my $content = $ret->content;
@@ -232,7 +232,6 @@ sub sendConfig {
 	# pb with the connection ?
 	$result = -1;
     }
-
     # if information were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $result) {
 	# go to last page
@@ -244,7 +243,6 @@ sub sendConfig {
 	$o->{nb}->set_current_page(4);
     }
 }
-
 sub setConf {
     
 }
@@ -327,7 +325,6 @@ sub testPasswd () {
 	$o->{passwd}->set_text("");
     }
 }
-
 sub reportConfig {
     my ($file) = @_;
     #touch($file);
@@ -369,12 +366,16 @@ LOGIN=$login
 PASS=$passwd
 BOX=$boxname
 VER=$r
-MIRROR=$mirror
 CURRENTKEY=$key 
 );
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
 if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate; fi
 );
+    output_with_perm "/etc/sysconfig/mdkonline", 644,
+    qq(LOGIN=$login
+BOX=$boxname
+);
+
 chmod 0755, "/etc/cron.daily/mdkupdate";
 }
