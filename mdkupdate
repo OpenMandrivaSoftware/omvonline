@@ -159,10 +159,10 @@ sub update_conf {
 sub add_media {
     my $mirror = shift;
     my ($r) = mdkonline::get_release();
-    my $fullpath2mir = "ftp://" . $mirror . "/$r" . "/RPMS" . "/";
+    my $fullpath2mir = "ftp://" . $mirror . "/$r" . "/main_updates" . "/";
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", "../base/synthesis.hdlist.cz";
+	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", "media_info/synthesis.hdlist.cz";
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
