@@ -122,9 +122,7 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
     my $vbox_ident= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
-    map {
-	pack_box_identity($vbox_ident,$_->[0],$_->[1],$_->[2]);
-    } ([_("Login:"),$login_user,0], [_("Password:"),$passwd_user,1]);
+    pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     my $vbox_rev=new Gtk::VBox(0,0);
     
@@ -156,16 +154,18 @@ sub confirm_quit {
 }
 
 sub pack_box_identity {
-    my ($vbox,$label,$entry,$i)=@_;
-    my $table = new Gtk::Table( 1, 2, $false);
-    my $Label_wg=new Gtk::Label($label);
-    if ($i==0){
-	$Label_wg->set_uposition(60,90);
-    }elsif ($i==1) {
-	$Label_wg->set_uposition(56,120);
-    }
-    $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
-    $table->attach( $entry, 1, 2, 0, 1, 'shrink' , 'shrink', 0, 0);
+    my ($vbox,$label1,$entry1,$label2,$entry2)=@_;
+    my $table = new Gtk::Table( 2, 2, $true);
+    my $Label_wg1=new Gtk::Label($label1);
+    my $Label_wg2=new Gtk::Label($label2);
+    $table->attach_defaults( $Label_wg1, 0, 1, 0, 1);
+    $table->attach_defaults( $entry1, 1, 2, 0, 1);
+    $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);
+    $table->attach_defaults( $entry2, 1, 2, 1, 2);
+    $Label_wg1->set_uposition(50,100);
+    $Label_wg2->set_uposition(40,130);
+    $entry1->set_uposition(210,100);
+    $entry2->set_uposition(210,130);
     $vbox->pack_start($table,$true ,$true ,1);
 }
 
