@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-07-09 14:28+0200\n"
+"POT-Creation-Date: 2002-08-12 20:51+0200\n"
 "PO-Revision-Date: 2001-08-29 19:45+0200\n"
 "Last-Translator: Grégoire Colbert <gregus@linux-mandrake.com>\n"
 "Language-Team: fr <cooker-i18n@linux-mandrake.com>\n"
@@ -13,83 +13,84 @@ msgstr ""
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: mdkonline:71
+#: ../mdkonline_.c:71
 msgid "Africa"
 msgstr "Afrique"
 
-#: mdkonline:72
+#: ../mdkonline_.c:72
 msgid "Asia"
 msgstr "Asie"
 
-#: mdkonline:73
+#: ../mdkonline_.c:73
 msgid "Australia"
 msgstr "Australie"
 
-#: mdkonline:74
+#: ../mdkonline_.c:74
 msgid "Europe"
 msgstr "Europe"
 
-#: mdkonline:75
+#: ../mdkonline_.c:75
 msgid "North America"
 msgstr "Amérique du Nord"
 
-#: mdkonline:76
+#: ../mdkonline_.c:76
 msgid "South America"
 msgstr "Amérique du Sud"
 
-#: mdkonline:96 mdkonline:216 mdkonline:249
+#: ../mdkonline_.c:96 ../mdkonline_.c:216 ../mdkonline_.c:249
 msgid "Next"
 msgstr "Suivant"
 
-#: mdkonline:97
+#: ../mdkonline_.c:97
 msgid "Finish"
 msgstr "Terminer"
 
-#: mdkonline:98 mdkonline:540
+#: ../mdkonline_.c:98 ../mdkonline_.c:540
 msgid "Quit"
 msgstr "Quitter"
 
-#: mdkonline:99 mdkonline:217 mdkonline:251 mdkonline:253
+#: ../mdkonline_.c:99 ../mdkonline_.c:217 ../mdkonline_.c:251
+#: ../mdkonline_.c:253
 msgid "Back"
 msgstr "Retour"
 
-#: mdkonline:101
+#: ../mdkonline_.c:101
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "Je n'ai pas de compte MandrakeOnline et je veux "
 
-#: mdkonline:102
+#: ../mdkonline_.c:102
 msgid "Subscribe"
 msgstr "Souscrire"
 
-#: mdkonline:118
+#: ../mdkonline_.c:118
 msgid "Yes I want automated updates"
 msgstr "Oui, je veux automatiser les mises-à-jour"
 
-#: mdkonline:166
+#: ../mdkonline_.c:166
 msgid "Quitting Wizard\n"
 msgstr "Fermeture de l'assistant\n"
 
-#: mdkonline:263
+#: ../mdkonline_.c:263
 msgid "Warning: No browser specified"
 msgstr "Alerte : aucun navigateur spécifié"
 
-#: mdkonline:290
+#: ../mdkonline_.c:290
 msgid "Connecting ...\n"
 msgstr "Connexion ...\n"
 
-#: mdkonline:298 mdkonline:361 mdkupdate:83
+#: ../mdkonline_.c:298 ../mdkonline_.c:361 ../mdkupdate_.c:83
 msgid "Connection problem"
 msgstr "Problème de connexion"
 
-#: mdkonline:298 mdkonline:361
+#: ../mdkonline_.c:298 ../mdkonline_.c:361
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline n'a pu être contacté, veuillez réessayer plus tard"
 
-#: mdkonline:310
+#: ../mdkonline_.c:310
 msgid "Wrong password"
 msgstr "Mot de passe incorrect"
 
-#: mdkonline:310
+#: ../mdkonline_.c:310
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -107,11 +108,11 @@ msgstr ""
 " Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
 " (seuls les caractères alphabétiques sont autorisés)."
 
-#: mdkonline:369
+#: ../mdkonline_.c:369
 msgid "Welcome to MandrakeOnline"
 msgstr "Bienvenue à MandrakeOnline"
 
-#: mdkonline:370
+#: ../mdkonline_.c:370
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -123,37 +124,37 @@ msgstr ""
 "paquetages, configuration matérielle) vers une base de données centralisée,\n"
 "afin de vous maintenir informé des mises-à-jour de sécurité.\n"
 
-#: mdkonline:387
+#: ../mdkonline_.c:387
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake et votre vie privée"
 
 # (in english : authentication !)
-#: mdkonline:392
+#: ../mdkonline_.c:392
 msgid "Authentification"
 msgstr "Authentification"
 
-#: mdkonline:393
+#: ../mdkonline_.c:393
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr ""
 "Entrez vos identifiant, mot de passe et nom de machine MandrakeOnline :"
 
-#: mdkonline:395
+#: ../mdkonline_.c:395
 msgid "Login:"
 msgstr "Identifiant :"
 
-#: mdkonline:395
-msgid "Password:"
-msgstr "Mot de passe :"
-
-#: mdkonline:395
+#: ../mdkonline_.c:395
 msgid "Machine name:"
 msgstr "Nom de machine :"
 
-#: mdkonline:400
+#: ../mdkonline_.c:395
+msgid "Password:"
+msgstr "Mot de passe :"
+
+#: ../mdkonline_.c:400
 msgid "Sending your Configuration"
 msgstr "Envoi de votre configuration"
 
-#: mdkonline:401
+#: ../mdkonline_.c:401
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -189,11 +190,11 @@ msgstr ""
 "Enfin, un alias d'adresse électronique de la forme votrenom\\@mandrakeonline."
 "net vous sera fourni."
 
-#: mdkonline:409
+#: ../mdkonline_.c:409
 msgid "Error while sending informations"
 msgstr "Erreur à l'envoi des informations"
 
-#: mdkonline:410
+#: ../mdkonline_.c:410
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -203,15 +204,17 @@ msgstr ""
 "\n"
 "Appuyez sur Suivant pour réessayer."
 
-#: mdkonline:416
+#: ../mdkonline_.c:416
 msgid "Finished"
 msgstr "Terminé"
 
-#: mdkonline:417
-msgid "Your upload was successful!"
-msgstr "Votre envoi a eu lieu avec succès !"
+#: ../mdkonline_.c:417
+msgid "A program will run regulary in your system waiting for new updates\n"
+msgstr ""
+"Un programme se lancera régulièrement sur votre machine en attente de "
+"nouvelles mises-à-jour.\n"
 
-#: mdkonline:417
+#: ../mdkonline_.c:417
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -219,46 +222,44 @@ msgstr ""
 "À partir de maintenant, MandrakeOnline vous\n"
 "enverra les annonces de sécurité et de mises-à-jour."
 
-#: mdkonline:417
+#: ../mdkonline_.c:417
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline vous permet d'automatiser les mises-à-jour."
 
-#: mdkonline:417
-msgid "A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Un programme se lancera régulièrement sur votre machine en attente de "
-"nouvelles mises-à-jour.\n"
+#: ../mdkonline_.c:417
+msgid "Your upload was successful!"
+msgstr "Votre envoi a eu lieu avec succès !"
 
-#: mdkonline:422
+#: ../mdkonline_.c:422
 msgid "automated Upgrades"
 msgstr "mises-à-jour automatisées"
 
-#: mdkonline:429
+#: ../mdkonline_.c:429
 msgid "Choose your geographical location"
 msgstr "Choisir la localisation géographique"
 
-#: mdkonline:447
+#: ../mdkonline_.c:447
 msgid "Reading configuration\n"
 msgstr "Lecture de la configuration\n"
 
-#: mdkonline:474
+#: ../mdkonline_.c:474
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "ne peut ouvrir ce fichier en lecture : %s"
 
-#: mdkonline:515
+#: ../mdkonline_.c:515
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:521 mdkonline:547
+#: ../mdkonline_.c:521 ../mdkonline_.c:547
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:536
+#: ../mdkonline_.c:536
 msgid "Cancel"
 msgstr "Annuler"
 
-#: mdkonline:545
+#: ../mdkonline_.c:545
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -268,62 +269,64 @@ msgstr ""
 "Pour revenir à l'assistant appuyez sur Annuler,\n"
 "pour quitter appuyez sur Quitter."
 
-#: mdkonline:549
+#: ../mdkonline_.c:549
 msgid "Really abort? - MandrakeOnline"
 msgstr "Abandonner? - MandrakeOnline"
 
-#: mdkonline:631
+#: ../mdkonline_.c:631
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:632
+#: ../mdkonline_.c:632
 msgid "Welcome"
 msgstr "Bienvenue"
 
-#: mdkonline:656
+#: ../mdkonline_.c:656
 msgid "Close"
 msgstr "Fermer"
 
-#: mdkupdate:49
+#: ../mdkupdate_.c:49
 #, c-format
-msgid "mdkupdate version %s"
+msgid ""
+"mdkupdate version %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
 msgstr ""
 
-#: mdkupdate:54 mdkupdate:55 mdkupdate:56
-msgid ") . _("
+#: ../mdkupdate_.c:54
+msgid "  --help         - print this help message.\n"
 msgstr ""
 
-#: mdkupdate:57
-msgid ", $VERSION );"
+#: ../mdkupdate_.c:55
+msgid "  --security     - use only security media.\n"
 msgstr ""
 
-#: mdkupdate:61
-msgid "/root/.mdkupdate"
+#: ../mdkupdate_.c:56
+msgid "  -v             - verbose mode.\n"
 msgstr ""
 
-#: mdkupdate:62
-msgid "/root/rpm_qa_installed_before"
-msgstr ""
-
-#: mdkupdate:83
+#: ../mdkupdate_.c:83
 #, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again"
 msgstr "MandrakeOnline n'a pu être contacté, veuillez réessayer plus tard"
 
-#: mdkupdate:110
-msgid "Your login or password may be wrong"
+#: ../mdkupdate_.c:110
+msgid "For any problem send mail to support\\@mandrakeonline.net\n"
 msgstr ""
 
-#: mdkupdate:110
+#: ../mdkupdate_.c:110
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
 msgstr ""
 
-#: mdkupdate:110
-msgid "For any problem send mail to support\\@mandrakeonline.net\n"
+#: ../mdkupdate_.c:110
+msgid "Your login or password may be wrong"
 msgstr ""
 
-#: mdkupdate:122
+#: ../mdkupdate_.c:122
 msgid "wget is missing\n"
 msgstr ""
 

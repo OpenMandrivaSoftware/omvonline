@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-07-30 15:20+0200\n"
+"POT-Creation-Date: 2002-08-12 20:51+0200\n"
 "PO-Revision-Date: 2002-08-05 13:52+0200\n"
 "Last-Translator: Gregor Pirnaver <gregor.pirnaver@email.si>\n"
 "Language-Team: Sloven¹èina <lugos-slo@lugos.si>\n"
@@ -15,83 +15,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: mdkonline:71
+#: ../mdkonline_.c:71
 msgid "Africa"
 msgstr "Afrika"
 
-#: mdkonline:72
+#: ../mdkonline_.c:72
 msgid "Asia"
 msgstr "Azija"
 
-#: mdkonline:73
+#: ../mdkonline_.c:73
 msgid "Australia"
 msgstr "Avstralija"
 
-#: mdkonline:74
+#: ../mdkonline_.c:74
 msgid "Europe"
 msgstr "Evropa"
 
-#: mdkonline:75
+#: ../mdkonline_.c:75
 msgid "North America"
 msgstr "Severna Amerika"
 
-#: mdkonline:76
+#: ../mdkonline_.c:76
 msgid "South America"
 msgstr "Ju¾na Amerika"
 
-#: mdkonline:96 mdkonline:216 mdkonline:249
+#: ../mdkonline_.c:96 ../mdkonline_.c:216 ../mdkonline_.c:249
 msgid "Next"
 msgstr "Naprej"
 
-#: mdkonline:97
+#: ../mdkonline_.c:97
 msgid "Finish"
 msgstr "Konèaj"
 
-#: mdkonline:98 mdkonline:540
+#: ../mdkonline_.c:98 ../mdkonline_.c:540
 msgid "Quit"
 msgstr "Izhod"
 
-#: mdkonline:99 mdkonline:217 mdkonline:251 mdkonline:253
+#: ../mdkonline_.c:99 ../mdkonline_.c:217 ../mdkonline_.c:251
+#: ../mdkonline_.c:253
 msgid "Back"
 msgstr "Nazaj"
 
-#: mdkonline:101
+#: ../mdkonline_.c:101
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "Raèuna MandrakeOnline ¹e nimam in se ¾elim "
 
-#: mdkonline:102
+#: ../mdkonline_.c:102
 msgid "Subscribe"
 msgstr "Prijava"
 
-#: mdkonline:118
+#: ../mdkonline_.c:118
 msgid "Yes I want automated updates"
 msgstr "Nadgradnje ¾elim avtomatizirati"
 
-#: mdkonline:166
+#: ../mdkonline_.c:166
 msgid "Quitting Wizard\n"
 msgstr "Zapu¹èam èarovnika\n"
 
-#: mdkonline:263
+#: ../mdkonline_.c:263
 msgid "Warning: No browser specified"
 msgstr "Pozor: brskalnik ni naveden"
 
-#: mdkonline:290
+#: ../mdkonline_.c:290
 msgid "Connecting ...\n"
 msgstr "Povezujem se ...\n"
 
-#: mdkonline:298 mdkonline:361 mdkupdate:83
+#: ../mdkonline_.c:298 ../mdkonline_.c:361 ../mdkupdate_.c:83
 msgid "Connection problem"
 msgstr "Problemi pri povezavi"
 
-#: mdkonline:298 mdkonline:361
+#: ../mdkonline_.c:298 ../mdkonline_.c:361
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Povezave z MandrakeOnline ni mogoèe vspostaviti, poskusite kasneje"
 
-#: mdkonline:310
+#: ../mdkonline_.c:310
 msgid "Wrong password"
 msgstr "Napaèno geslo"
 
-#: mdkonline:310
+#: ../mdkonline_.c:310
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -109,11 +110,11 @@ msgstr ""
 " Zavedajte se, da morate vnesti tudi ime raèunalnika\n"
 " (samo èrke so sprejete)"
 
-#: mdkonline:369
+#: ../mdkonline_.c:369
 msgid "Welcome to MandrakeOnline"
 msgstr "POzdravljeni v MandrakeOnline"
 
-#: mdkonline:370
+#: ../mdkonline_.c:370
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -125,36 +126,36 @@ msgstr ""
 "(paketov, sestava strojne opreme) v centralno bazo, tako da boste\n"
 "obve¹èeni o varnostnih in drugih uporabnih nadgradnjah.\n"
 
-#: mdkonline:387
+#: ../mdkonline_.c:387
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake pravilo zasebosti"
 
-#: mdkonline:392
+#: ../mdkonline_.c:392
 msgid "Authentification"
 msgstr "Prijava v sistem"
 
-#: mdkonline:393
+#: ../mdkonline_.c:393
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr ""
 "Vnesite va¹e MandrakeOnline uporabni¹ko ime in geslo ter ime raèunalnika:"
 
-#: mdkonline:395
+#: ../mdkonline_.c:395
 msgid "Login:"
 msgstr "Uporabnik:"
 
-#: mdkonline:395
-msgid "Password:"
-msgstr "Geslo:"
-
-#: mdkonline:395
+#: ../mdkonline_.c:395
 msgid "Machine name:"
 msgstr "Ime raèunalnika:"
 
-#: mdkonline:400
+#: ../mdkonline_.c:395
+msgid "Password:"
+msgstr "Geslo:"
+
+#: ../mdkonline_.c:400
 msgid "Sending your Configuration"
 msgstr "Po¹iljanje va¹ih nastavitev"
 
-#: mdkonline:401
+#: ../mdkonline_.c:401
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -190,11 +191,11 @@ msgstr ""
 "Nenazadnje, dodelljen ti bo elektronski naslov s tvojim uporabni¹kimimenom"
 "\\@mandrakeonline.net. "
 
-#: mdkonline:409
+#: ../mdkonline_.c:409
 msgid "Error while sending informations"
 msgstr "Napaka pri po¹iljanju informacij"
 
-#: mdkonline:410
+#: ../mdkonline_.c:410
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -204,15 +205,15 @@ msgstr ""
 "\n"
 "Pritisnite naprej, èe ¾elite poskusiti poslati nastavitve ¹e enkrat."
 
-#: mdkonline:416
+#: ../mdkonline_.c:416
 msgid "Finished"
 msgstr "Konèano"
 
-#: mdkonline:417
-msgid "Your upload was successful!"
-msgstr "Po¹iljanje je bilo uspe¹no!"
+#: ../mdkonline_.c:417
+msgid "A program will run regulary in your system waiting for new updates\n"
+msgstr "Program bo tekel redno v va¹em sistemu èakajoè na nove nadgradnje\n"
 
-#: mdkonline:417
+#: ../mdkonline_.c:417
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -220,44 +221,44 @@ msgstr ""
 "Od zdaj naprej bo¹ prejemal varnostna\n"
 "in druga obvestila o nadgrajevanju zahvaljujoè MandrakeOnline."
 
-#: mdkonline:417
+#: ../mdkonline_.c:417
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline ti omogoèa, da avtomatizira¹ nadgradnje."
 
-#: mdkonline:417
-msgid "A program will run regulary in your system waiting for new updates\n"
-msgstr "Program bo tekel redno v va¹em sistemu èakajoè na nove nadgradnje\n"
+#: ../mdkonline_.c:417
+msgid "Your upload was successful!"
+msgstr "Po¹iljanje je bilo uspe¹no!"
 
-#: mdkonline:422
+#: ../mdkonline_.c:422
 msgid "automated Upgrades"
 msgstr "avtomatiziranje Nadgradnje"
 
-#: mdkonline:429
+#: ../mdkonline_.c:429
 msgid "Choose your geographical location"
 msgstr "Izberi svojo geografsko lokacijo"
 
-#: mdkonline:447
+#: ../mdkonline_.c:447
 msgid "Reading configuration\n"
 msgstr "Berem nastavitve\n"
 
-#: mdkonline:474
+#: ../mdkonline_.c:474
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "datoteke %s ne morem odpreti za branje"
 
-#: mdkonline:515
+#: ../mdkonline_.c:515
 msgid "OK"
 msgstr "V redu"
 
-#: mdkonline:521 mdkonline:547
+#: ../mdkonline_.c:521 ../mdkonline_.c:547
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:536
+#: ../mdkonline_.c:536
 msgid "Cancel"
 msgstr "Preklièi"
 
-#: mdkonline:545
+#: ../mdkonline_.c:545
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -267,65 +268,82 @@ msgstr ""
 "Èe se hoèe¹ vrnitni do èarovnika pritisni 'Preklièi',\n"
 "èe pa hoèe¹ zares konèati pritisni 'Konèaj'."
 
-#: mdkonline:549
+#: ../mdkonline_.c:549
 msgid "Really abort? - MandrakeOnline"
 msgstr "Resnièno prekini? - MandrakeOnline"
 
-#: mdkonline:631
+#: ../mdkonline_.c:631
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:632
+#: ../mdkonline_.c:632
 msgid "Welcome"
 msgstr "Pozdravljeni"
 
-#: mdkonline:656
+#: ../mdkonline_.c:656
 msgid "Close"
 msgstr "Zapri"
 
-#: mdkupdate:49
+#: ../mdkupdate_.c:49
 #, c-format
-msgid "mdkupdate version %s"
-msgstr "mdkupdate razlièica %s"
+msgid ""
+"mdkupdate version %s\n"
+"Copyright (C) 2002 MandrakeSoft.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
 
-#: mdkupdate:54 mdkupdate:55 mdkupdate:56
-msgid ") . _("
-msgstr ") . _("
+#: ../mdkupdate_.c:54
+msgid "  --help         - print this help message.\n"
+msgstr ""
 
-#: mdkupdate:57
-msgid ", $VERSION );"
-msgstr ", $VERSION );"
+#: ../mdkupdate_.c:55
+msgid "  --security     - use only security media.\n"
+msgstr ""
 
-#: mdkupdate:61
-msgid "/root/.mdkupdate"
-msgstr "/root/.mdkupdate"
+#: ../mdkupdate_.c:56
+msgid "  -v             - verbose mode.\n"
+msgstr ""
 
-#: mdkupdate:62
-msgid "/root/rpm_qa_installed_before"
-msgstr "/root/rpm_qa_installed_before"
-
-#: mdkupdate:83
+#: ../mdkupdate_.c:83
 msgid "MandrakeUpdate could not contact the site, we will try again"
 msgstr "MandrakeUpdate ne more vzpostaviti povezave, poskusili bomo znova"
 
-#: mdkupdate:110
-msgid "Your login or password may be wrong"
-msgstr "Mo¾no je, da je va¹e uporabni¹ko ime oz. geslo napaèno"
+#: ../mdkupdate_.c:110
+msgid "For any problem send mail to support\\@mandrakeonline.net\n"
+msgstr "V primeru problema po¹lite email na support\\@mandrakeonline.net\n"
 
-#: mdkupdate:110
+#: ../mdkupdate_.c:110
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
 msgstr ""
 "Potrebovali boste raèun na MandrakeOnline, ali pa boste morali nadgraditi "
 "va¹o prijavo"
 
-#: mdkupdate:110
-msgid "For any problem send mail to support\\@mandrakeonline.net\n"
-msgstr "V primeru problema po¹lite email na support\\@mandrakeonline.net\n"
+#: ../mdkupdate_.c:110
+msgid "Your login or password may be wrong"
+msgstr "Mo¾no je, da je va¹e uporabni¹ko ime oz. geslo napaèno"
 
-#: mdkupdate:122
+#: ../mdkupdate_.c:122
 msgid "wget is missing\n"
 msgstr "ni programa wget\n"
+
+#~ msgid "mdkupdate version %s"
+#~ msgstr "mdkupdate razlièica %s"
+
+#~ msgid ") . _("
+#~ msgstr ") . _("
+
+#~ msgid ", $VERSION );"
+#~ msgstr ", $VERSION );"
+
+#~ msgid "/root/.mdkupdate"
+#~ msgstr "/root/.mdkupdate"
+
+#~ msgid "/root/rpm_qa_installed_before"
+#~ msgstr "/root/rpm_qa_installed_before"
 
 #~ msgid "USA"
 #~ msgstr "ZDA"
