@@ -38,6 +38,7 @@ my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
 my $av_pkgs;
+my $update_label;
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my $conffile = '/etc/sysconfig/mdkonline';
 
@@ -135,7 +136,7 @@ sub showMainWindow() {
 			    gtkpack_(Gtk2::VBox->new(0, 3),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { setLabel(N("Checking...")); checkUpdates(); setLabel($isAvailable ?  N("Available") : N("Not Available")) }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
 				    )
 			   ),
@@ -147,7 +148,7 @@ sub showMainWindow() {
 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("New Updates: ")),
-						 0, Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
+						 0, $update_label = Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("Last check: ")),
@@ -162,6 +163,10 @@ sub showMainWindow() {
 			    )
 		    ));
     $w->show_all
+}
+sub setLabel {
+    my $label = shift;
+    $update_label->set_label($label);
 }
 sub confNetwork { system "/usr/sbin/drakconnect &" }
 sub launchUpdate { system "/usr/sbin/MandrakeUpdate &" } 
