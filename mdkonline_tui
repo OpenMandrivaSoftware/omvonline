@@ -50,7 +50,7 @@ my %choices = (
 	      );
 my $choice = $choices{account};
 
-my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount);
+my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres);
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
 
 sub read_conf() {
@@ -73,16 +73,16 @@ sub check_login {
 sub send_conf {
     my ($log, $pass, $box) = @_;
     my $uplink = $online_link . '/wizard.php';
-    my $pp = md5_hex($pass); my $res;
+    my $pp = md5_hex($pass);
     my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
     mdkonline::report_config("$confdir/$log.$pp.$box.online.log");
     my $tag = { submit => "upload_wizard", wizard => ["$confdir/$log.$pp.$box.online.log.bz2.uue"] };
     undef $w;
     my $ww = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
-    ($res, $key) = mdkonline::send_config($uplink, $tag);
+    ($sendconfres, $key) = mdkonline::send_config($uplink, $tag);
     mdkonline::hw_upload($login, $pass, $boxname);
     undef $ww;
-    ($res, $key)
+    ($sendconfres, $key)
 }
 sub create_new_account {
     my ($log, $pass, $mail) = @_;
@@ -111,7 +111,7 @@ $wiz = {
 			      data => sub {
 				  [
 				   { label => N("Login:"),   val => \$login },
-				   { label => N("Password:"), val => \$password },
+				   { label => N("Password:"), val => \$password, hidden => 1 },
 				   { label => N("Machine name:"), val => \$boxname },
 				  ],
 			      },
@@ -132,7 +132,7 @@ $wiz = {
 				   no_back => $is_success ? 1 : 0,
 				   post => sub { 
 				       if ($is_success) {
-					   ($res, $key) = send_conf($login, $password, $boxname);
+					   ($sendconfres, $key) = send_conf($login, $password, $boxname);
 					   "end"
 				       } else { "choices" }
 				   }
@@ -142,22 +142,17 @@ $wiz = {
 				data => sub {
 				    [
 				     { label => N("Login:"),   val => \$nlogin },
-				     { label => N("Password:"), val => \$npassword },
-				     { label => N("Confirm Password:"), val => \$cfmpassword },
+				     { label => N("Password:"), val => \$npassword, hidden => 1 },
+				     { label => N("Confirm Password:"), val => \$cfmpassword, hidden => 1 },
 				     { label => N("Mail contact:"),   val => \$email },
 				    ]
 				},
 				post => sub {
-				    $npassword ne $cfmpassword and $in->ask_warn('', [ N("The passwords do not match\n Please try again\n") ]), return 1, 2;
-				    $nlogin or $in->ask_warn('', [ N("Please provide a login") ]), return 1,2;
-				    mdkonline::check_valid_email($email) or $in->ask_warn('', [ N("Not a valid mail address!\n") ]), return 1,2;
+				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : $nlogin eq '' ? N("Please provide a login") : mdkonline::check_valid_email($email) ?  N("Not a valid mail address!\n") : create_new_account($nlogin, $npassword, $email);
 				    "createaccount"
 				}
 			       },
 		  createaccount => {
-				    pre => sub {
-					$createaccount = create_new_account($nlogin, $npassword, $email);
-				    },
 				    name => sub { 
 					$createaccount eq 'OK' ? "\n\n" . N("Mandrakeonline Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n") : $createaccount;
 				    },
@@ -167,14 +162,14 @@ $wiz = {
 				   },
 		  end => {
 			  name => sub {
-			      if ($res eq 'TRUE' && $key) {
+			      if ($sendconfres eq 'TRUE' && $key) {
 				  "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 			      } else {
 				  N("Connection problem") . N("Problem occurs when uploading files, please try again")
 			      }
 			  },
 			  data => sub {
-			      if (($res eq 'TRUE') && $key) {
+			      if (($sendconfres eq 'TRUE') && $key) {
 				  [ 
 				   { label => N("Country"), val => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
 				     list => [ sort keys %countries ], not_edit => 0 }
