@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	9mdk
+Release: 	10mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -16,8 +16,6 @@ License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
 Requires:	popt >= 1.6, perl-libwww-perl 
-#Requires: expect
-#Requires: openssh-clients
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArchitectures: noarch
 
@@ -88,6 +86,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Mon Sep 24 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-10mdk
+- updated po.
+- spec cleanups.
+
 * Fri Sep 21 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-9mdk
 - code update
 - definitive links
