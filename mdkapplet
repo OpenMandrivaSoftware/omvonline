@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ################################################################################
-# MandrakeOnline                                                               # 
+# Mandrakeonline                                                               # 
 #                                                                              #
 # Copyright (C) 2003-2004 Mandrakesoft                                         #
 #                                                                              #
@@ -25,25 +25,21 @@ use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use mdkonline;
 
+use Gtk2::Pango;
 use Digest::MD5;
 
-
 BEGIN { unshift @::textdomains, 'mdkonline' }
+use ugtk2;
 
 use Gtk2::TrayIcon;
 
-eval { require ugtk2; ugtk2->import(qw(:all)); require Gtk2::Pango; };
-if ($@) {
-    print "This program cannot be run in console mode.\n";
-    c::_exit(0);  #- skip ugtk2::END
-}
 my ($eventbox, $img);
 add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
 my $online_site = "http://www.mandrakeonline.net/";
-my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog);
+my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my @proctable;
 my $conffile = '/etc/sysconfig/mdkonline';
@@ -54,57 +50,59 @@ my $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", "$localfile");
 
-#don't launch it twice :)
-my @pids = fuzzy_pidofs(qr/\bmdkapplet\b/);
+my @pids =  `ps -u $ENV{USER} | grep mdkapplet`;
 @pids > 1 and die "mdkapplet already running\n";
+#don't launch it twice :)
+#my @pids = fuzzy_pidofs(qr/\bmdkapplet\b/);
+#@pids > 1 and die "mdkapplet already running\n";
 
 my %state = (
 	     okay => {
 		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
-		      tt => [ N("No updates available for your system") ]
+		      tt => [ N_("Your system is up-to-date") ]
 		     },
  	     critical => {
 			  colour => [ 'noconf' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'configureApplet', 'check', 'weblink' ],
-			  tt => [ N("Config problems. Launch \"configure\" again") ]
+			  tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrakeonline.net") ]
 			 },
 	     busy => {
 		      colour => [ 'busy' ], 
 		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
 		      menu => [ ],
-		      tt => [ N("System is busy. Wait ...") ]
+		      tt => [ N_("System is busy. Please wait ...") ]
 		     },
 	     error => {
 		       colour => [ 'error' ],
 		       changes => [ 'okay' ],
 		       menu => [ 'update', 'check', 'weblink' ],
-		       tt => [ N("%s packages available for update", $av_pkgs) ]
+		       tt => [ N_("New updates are available for your system") ]
 		      },
 	     noconfig => {
 			  colour => [ 'noconf' ],
 			  changes => [ 'okay' ],
 			  menu => [ 'weblink', 'register' ],
-			  tt => [ N("Service not available. Click on \"configuration\"") ]
+			  tt => [ N_("Service is not configured. Please click on \"Configure the service\"") ]
 			 },
 	     disconnected => {
 			      colour => [ 'disconnected' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
-			      tt => [ N("Network is down. Click on \"configure Network\"") ]
+			      tt => [ N_("Network is down. Please configure your network") ]
 			     },
 	     disabled => {
 			  colour => [ 'disabled' ],
 			  changes => [ 'okay', 'busy', 'critical', 'error' ],
 			  menu => [ 'configureApplet', 'weblink' ],
-			  tt => [ N("Service deactivated. Waiting for payment...") ]
+			  tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 			 }
 	    );
 my %actions = (
-	       'update' => { name => N("Launch Mandrake Update"), launch => sub { installUpdates() } },
-	       'configureApplet' => { name => N("Configuration"), launch => sub { configure() } },
+	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
+	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
 	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
@@ -128,7 +126,7 @@ $eventbox->signal_connect(button_press_event => sub {
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') };
 
-shouldStart() or die "$localfile should be set to TRUE";
+shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet";
 
 checkUpdates();
 cronUpdate();
@@ -142,42 +140,32 @@ sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
     $w->set_title(N("Mandrake Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
+    gtkset_size_request($w, 360, 240);
     $w->set_position('center');
     $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
+    $textvw = Gtk2::TextView->new;
     my ($choice, $time, $update_label, $lastch);
     my $autocheck;
     gtkadd($w,
-           gtkpack__(Gtk2::VBox->new(0,5),
-		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
-			    gtkpack_(Gtk2::VBox->new(0, 3),
+           gtkpack_(Gtk2::VBox->new(0, 5),
+		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
+			      gtkpack_(Gtk2::VBox->new(0, 3),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates(); }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking ...")); gtkflush(); checkUpdates(); $update_label->set_label($isAvailable ? N("Available") : N("Not Available")); setLastTime(); $lastch->set_label(lastCheck()); gtkflush() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main }}),
 				    )
 			   ),
-		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
+		    1, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
 			    gtkpack_(Gtk2::VBox->new(0, 3),
-				     0, gtkpack_(Gtk2::HBox->new(0, 3),
-						 0, Gtk2::Label->new(N("Network Connection: ")),
-						 0, Gtk2::Label->new(isNetwork() ? N("Up") : N("Down"))
- 						),
-				     0, gtkpack_(Gtk2::HBox->new(0, 3),
-						 0, Gtk2::Label->new(N("New Updates: ")),
-						 0, $update_label = Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
-						),
-				     0, gtkpack_(Gtk2::HBox->new(0, 3),
-						 0, Gtk2::Label->new(N("Last check: ")),
-						 0, $lastch = Gtk2::Label->new(lastCheck())
-						),
-				    )
-			   ),
-		     gtkpack(Gtk2::HSeparator->new),
-                     gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
-						    if (defined $wlog) { $wlog->destroy; undef $wlog }; $w->destroy; $raisedwindow = 0;
+				 1, create_scrolled_window(gtktext_insert($textvw, refresh_contents($state_global), wrap_mode => 'none')))),
+		    0, gtkpack(Gtk2::HSeparator->new),
+		    0, gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
+						   if (defined $wlog) { $wlog->destroy; undef $wlog }; $w->destroy; $raisedwindow = 0;
 					       })
 			    )
-		    ));
+		    )
+	  );
     $w->show_all
 }
 sub md5file {
@@ -195,6 +183,24 @@ sub setLabel {
     $widget->set_label($string) if defined $widget;
     gtkflush();
 }
+sub refresh_status {
+    my $status = shift;
+    gtktext_insert($textvw, refresh_contents($status), wrap_mode => 'none');
+}
+sub refresh_contents {
+    my $status = shift;
+    my $color = {};
+    foreach my $l (['first', 'red'], ['second', 'royalblue3'], ['third', 'green']) { 
+	$color->{$l->[0]} = { 'foreground' => $l->[1], 'weight' => Gtk2::Pango->PANGO_WEIGHT_BOLD } 
+    }
+    my $fixed_tag = { 'font' => 'monospace' }; 
+    my $last = lastCheck();
+    my $contents = [ [ N("Network Connection: "), $color->{second} ], [ isNetwork() ? N("Up") . "\n" : N("Down") . "\n", isNetwork() ? $color->{third} : $color->{first} ], 
+		     [ N("Last check: "), $color->{second} ], [ "$last\n", $fixed_tag ],
+		     [ N("Updates: "), $color->{second} ], [ common::sprintf_fixutf8($state{$status}{tt}[0]), $status eq 'okay' ? $color->{third} : $color->{first} ],
+		   ];
+    $contents
+}
 sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
@@ -203,7 +209,6 @@ sub installUpdates {
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('watch')); 
     system "/usr/sbin/mdkupdate", "--applet"; 
     my $newmd5 = md5file($binfile);
-#    print "NEW($newmd5) = OLD($oldmd5)\n"
     if ($newmd5 ne $oldmd5) { logIt(N("Mdkonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') };
     silentCheck(); gtkflush(); 
     gtkroot()->set_cursor(Gtk2::Gdk::Cursor->new('left-ptr')); 
@@ -218,8 +223,8 @@ sub silentCheck {
     gtkflush(); go2State('busy'); gtkflush();
     my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
     my $ct = $response->content;
-#    print "\nCONTENTS = $ct\n";
-#    logIt(N("Response from MandrakeOnline server\n") . "$ct");
+    print "\nCONTENTS = $ct\n";
+#    logIt(N("Response from Mandrakeonline server\n") . "$ct");
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
@@ -241,14 +246,14 @@ sub silentCheck {
 		       !$comp and okState();
 		   },
 		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') },
-		   97 => sub { logIt(N("Online services disabled. Contact MandrakeOnline site\n")) ; go2State('disabled'); },
+		   97 => sub { logIt(N("Online services disabled. Contact Mandrakeonline site\n")) ; go2State('disabled'); },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); },
                    500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
     $retcode->{$u}->();
 }
-sub okState { $isAvailable = 0; logIt(N("System is up to date\n")); go2State('okay') }
+sub okState { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('okay') }
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
@@ -284,11 +289,11 @@ sub rpmverparse {
 }
 sub rpmvercmp {
     my ($a, $b) = @_;
-    my @aparts;                            # list of version/release tokens
+    # list of version/release tokens
+    my @aparts;
     my @bparts;
-    my $apart;                             # individual token from array
-    my $bpart;
-    my $result;
+    # individual token from array
+    my ($apart, $bpart, $result);
     if ( $a eq $b ) {
         return 0;
     }
@@ -314,19 +319,12 @@ sub rpmvercmp {
 	    #return -1;
         }
     }
-    if (@aparts) {    # left over stuff in a, assume it's newer
-	return 1;
-    }
-    elsif (@bparts) {    # leftover in b, assume it's newer
-	return -1;
-    }
-    else {               # "should never happen"
-	return 0;
-    }
+    # left over stuff in a or b, assume one of the two is newer
+    if (@aparts) { return 1 } elsif (@bparts) {	return -1 } else { return 0 }
 }
 sub cronUpdate {
     my ($to) = shift;
-    $timeout = Glib::Timeout->add(60*60*1000, sub {
+    $timeout = Glib::Timeout->add(3*60*60*1000, sub {
 				      checkUpdates();
 				      1;
 				  });
@@ -357,12 +355,13 @@ sub checkUpdates {
     } else {
 	silentCheck();
     }
-    setLabel($update_label, $isAvailable ? N("Available") : N("Not Available"));
 }
 sub go2State {
     my $state = shift;
     $menu && $menu->destroy;
     $menu = setState($state);
+    $state_global = $state;
+    defined $textvw and refresh_status($state);
 }
 sub isNetwork {
     my $network;
@@ -390,9 +389,9 @@ sub browser {
     my $wm = any::running_window_manager();
     member ($wm, 'kwin', 'gnome-session') or $wm = 'other';
     my %Br = (
-	      'kwin' => 'konqueror',
-	      'gnome-session' => 'mozilla',
-	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(mozilla konqueror galeon)
+	      'kwin' => 'webclient-kde',
+	      'gnome-session' => 'webclient-gnome',
+	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(epiphany mozilla konqueror galeon)
 	     );
     $Br{$wm}
 }
@@ -435,7 +434,7 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
     $img->set_from_pixbuf($tmp);
     #my $tooltip = Gtk2::Tooltips->new;
-    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX($state{$state_type}{tt}->[0]));
+    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprintf_fixutf8(translate$state{$state_type}{tt}[0])));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	my $l = $actions{$_}{name};
