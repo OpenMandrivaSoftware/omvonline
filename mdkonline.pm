@@ -55,12 +55,8 @@ sub header { "
 ********************************************************************************";
 }
 output($file, map { chomp; "$_\n" }
-  header("partitions"), cat_("/proc/partitions"),
-  header("cpuinfo"), cat_("/proc/cpuinfo"),
-  header("fstab"), cat_("/etc/fstab"),
-  header("/etc/modules.conf"), cat_("/etc/modules.conf"),
   header("rpm -qa"), join('', sort `rpm -qa`),
-  header("mandrake version"), cat_('/etc/mandrake-release'));
+  header("mandrake version"), cat_('/etc/mandrakelinux-release'));
 system("/usr/bin/bzip2 -f $file");
 open(my $F, $file . ".bz2") or die "Cannot open file : $!";
 my ($chunk, $buffer);
@@ -93,6 +89,10 @@ sub mv_files {
     -e $source and system("mv", $source, $dest);
 }
 
+sub hw_upload {
+    my ($login, $hostname, $passwd) = @_;
+    system("HWDB_PASSWD=$passwd hwdb_add_system $login $hostname");
+}
 sub automated_upgrades {
     my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = get_release();
