@@ -42,7 +42,7 @@ sub _ {
 
 my $authentication_host = "bi";
 
-my $nb_pages=0;
+my $nb_pages=6; # 0 to 5
 my $page;
 my $xpm_path="/usr/share/mdkonline/pixmaps";
 my $path_to_welcome="/usr/share/doc/HTML/welcome.html";
@@ -70,9 +70,11 @@ $Main_Window->realize();
 $Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
 
 my $Button_Next= new Gtk::Button(_("  Next  > "));
+my $Button_End= new Gtk::Button(_("  Finish "));
 my $Button_SkipWiz= new Gtk::Button(_(" Cancel "));
 my $Button_Prev= new Gtk::Button(_(" <  Back  "));
 my $notebook_global = new Gtk::Notebook;
+$Button_End->show();
 $notebook_global->set_show_border($false);
 $notebook_global->set_show_tabs($false);
 $page=$notebook_global->get_current_page();
@@ -96,7 +98,9 @@ my %actions = (
 		2 => \&test_passwd,
 		3 => \&send_config
 		);
+my @no_back_button_pages = (0,3,4,5);
 
+$Button_Prev->set_sensitive(0);
 init_ui();
 $Main_Window->show_all;
 
@@ -109,24 +113,51 @@ sub init_ui {
     step_wizard();
     $Button_Next->signal_connect(clicked =>\&on_next_clicked);
     $Button_Prev->signal_connect(clicked =>\&on_prev_clicked);
+    $Button_End->signal_connect(clicked =>\&on_end_clicked);
+}
+
+sub on_end_clicked {
+    gtk_main_quit();
 }
 
 sub on_next_clicked {
     $page=$notebook_global->get_current_page();
-    print "$page\n" ;
+#    print "$page\n" ;
     if ( $actions{$page} ) {
-	print STDERR "Action !\n";
+#	print STDERR "Action !\n";
 	$actions{$page}->();
     } else {
 	$notebook_global->next_page();
     }
     $page=$notebook_global->get_current_page();
-    print "Go to page $page\n";
+
+    # handle the back button state
+    $Button_Prev->set_sensitive(1);
+    foreach (@no_back_button_pages) {
+	/$page/ and $Button_Prev->set_sensitive(0), last;
+    }
+    
+    # change "Next" to "Finish" in the last page
+    if ($page == $nb_pages - 1) {
+	$hbox->remove($Button_Prev);
+	$hbox->remove($Button_Next);
+	$hbox->pack_end($Button_End, 0, 1, 0);
+	$hbox->pack_end($Button_Prev, 0, 1, 0);
+    }
+#    print "Go to page $page\n";
 }
 
 sub on_prev_clicked {
     $page=$notebook_global->get_current_page();
-    print "$page\n" ;
+#    print "$page\n" ;
+
+    # change "Finish" to "Next" if coming from the last page
+    if ($page == $nb_pages - 1) {
+	$hbox->remove($Button_Prev);
+	$hbox->remove($Button_End);
+	$hbox->pack_end($Button_Next, 0, 1, 0);
+	$hbox->pack_end($Button_Prev, 0, 1, 0);
+    }
 
     if ($page == 4) {
 	$notebook_global->set_page(2); # Alternatively, don't go back at all since passwd was correct
@@ -139,7 +170,7 @@ sub on_prev_clicked {
     }
 
     $page=$notebook_global->get_current_page();
-    print "Go BACK to page $page\n";
+#    print "Go BACK to page $page\n";
 }
 
 
@@ -147,18 +178,18 @@ sub test_passwd () {
 
     my $current_page = shift;
 
-    print STDERR "Testing passwd\n";
+#    print STDERR "Testing passwd\n";
 
     # test the password
     $login   = $login_user->get_text();
     $passwd  = $passwd_user->get_text();
-    print STDERR "Login: $login\n";
+#    print STDERR "Login: $login\n";
 
     my $ssh_script = "";
     foreach ("./sshlogin.exp", "/usr/bin/sshlogin.exp") {
 	[ -e "$_" ] and $ssh_script="$_", last;
     }
-    print "Exec: $ssh_script $login $authentication_host $passwd \n";
+#    print "Exec: $ssh_script $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
     `$ssh_script $login $authentication_host $passwd`;
 
@@ -175,7 +206,7 @@ sub test_passwd () {
 
 sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
-    print STDERR "Sending config\n";
+#    print STDERR "Sending config\n";
 
     `/usr/sbin/drakbug_report > /root/drakbug_report.log`;
 
@@ -183,7 +214,7 @@ sub send_config {
     foreach ("./scpcall.exp", "/usr/bin/scpcall.exp") {
 	[ -e "$_" ] and $scp_script="$_", last;
     }
-    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
+#    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
     `$scp_script /root/drakbug_report.log $login $authentication_host $passwd`;
 
