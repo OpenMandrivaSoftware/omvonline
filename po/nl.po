@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-03-02 17:34+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-03-08 21:34GMT\n"
 "Last-Translator: Peter Bosch <peter.bosch@hccnet.nl>\n"
 "Language-Team: Nederlands <vertaling@nl.linux.org>\n"
@@ -46,7 +46,7 @@ msgstr "Volgende"
 msgid "Finish"
 msgstr "Voltooien"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Afsluiten"
 
@@ -74,20 +74,25 @@ msgstr "Wizard afsluiten\n"
 msgid "Warning: No browser specified"
 msgstr "Waarschuwing: geen browser aangegeven"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Verbindingsprobleem"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Verbindingsprobleem"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Kon geen verbinding krijgen met MandrakeOnline, probeer het later nog eens"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Wachtwoord onjuist"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -105,11 +110,11 @@ msgstr ""
 " Wees ervan bewust dat u ook een Computernaam moet invoeren \n"
 " (alleen letters zijn toegestaan)"
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Welkom bij MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -121,35 +126,35 @@ msgstr ""
 "(pakketten, hardware configuratie) naar een centrale database om\n"
 "u op de hoogte te houden van beveiligings updates en nuttige upgrades.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake Privé Beleid"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Authenticatie"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Voor uw MandrakeOnline gebruikersnaam, wachtwoord en computernaam in:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Gebruikersnaam:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Wachtwoord:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "Computernaam:"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Bezig met versturen van configuratie"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -185,11 +190,11 @@ msgstr ""
 "www.mandrakeexpert.com.\n"
 "Tot slot krijg u een e-mailadres met 'uw gebruikersnaam'@mandrakeonline.net"
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Fout bij het versturen van informatie"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -199,15 +204,15 @@ msgstr ""
 "\n"
 "Druk op 'volgende' om opnieuw te proberen uw configuratie te versturen."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Voltooid"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Het versturen is gelukt!"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -215,42 +220,47 @@ msgstr ""
 "Vanaf nu ontvangt u beveiliging- en\n"
 "update-aankondigingen aangeboden door MandrakeOnline"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline biedt u de mogelijkheid om de updates te automatiseren."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Een programma dat regelmatig zal worden gestart, kijkt of er nieuwe updates "
 "zijn\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "geautomatiseerde Updates"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Kies uw geografische locatie"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Bezig met versturen van configuratie"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "kon dit bestand niet openen om te lezen: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -260,18 +270,18 @@ msgstr ""
 "Druk op 'Annuleren' om naar de Wizard terug te keren,\n"
 "druk op 'Afsluiten' om werkelijk af te sluiten."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Wilt u echt stoppen? - MandrakeOnline"
 
-#: mdkonline:609
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:610
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Welkom"
 
-#: mdkonline:634
+#: mdkonline:660
 msgid "Close"
 msgstr "Sluiten"

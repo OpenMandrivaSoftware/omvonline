@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-03-04 10:30+0800\n"
 "Last-Translator: Danny Zeng <danny@zeng.com.cn>\n"
 "Language-Team: Simplified Chinese <zh@li.org>\n"
@@ -45,7 +45,7 @@ msgstr "下一步"
 msgid "Finish"
 msgstr "完成"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "退出"
 
@@ -73,19 +73,24 @@ msgstr "正在退出帮助\n"
 msgid "Warning: No browser specified"
 msgstr "警告: 没有指定浏览器"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "连接问题"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "连接问题"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "无法连接到 MandrakeOnline, 请稍后再试"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "口令错误"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -100,11 +105,11 @@ msgstr ""
 " 如果需要创建帐户, 请回到第一步, 连接 MandrakeOnline.\n"
 " 请注意您必须提供一个机器名(只能包含字母)"
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "MandrakeOnline 欢迎您"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -116,35 +121,35 @@ msgstr ""
 "上传到中心数据库\n"
 "这样我们可以及时通知您有关的安全升级和有用的更新.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake 隐私保护政策"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "认证"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "请输入您的 MandrakeOnline 登录名, 口令和机器名:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "登录名:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "口令:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "机器名:"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "发送您的配置"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -170,17 +175,17 @@ msgstr ""
 "1) 您在此系统中安装的软件包清单,\n"
 "2) 您的硬件配置.\n"
 "\n"
-"如果您不喜欢发送这些信息, 或者不需要使用这些服务,\n "
-"请选择 '取消'. 如果您选择 '下一步', 表示您允许我们\n"
+"如果您不喜欢发送这些信息, 或者不需要使用这些服务,\n"
+" 请选择 '取消'. 如果您选择 '下一步', 表示您允许我们\n"
 "通过为您定制的 email 警报, 通知您有关的安全更新和其他有用的升级.\n"
 "另外, 您将以优惠价格在 www.mandrakeexpert.com 得到收费的支持.\n"
 "最后, 我们将提供给你如下的 email 转发地址: your.username\\@mandrakeonline.net"
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "发送信息出错"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -190,15 +195,15 @@ msgstr ""
 "\n"
 "要重新尝试发送您的配置, 请选择 '下一步' "
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "完成"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "您已经成功发送"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -206,40 +211,45 @@ msgstr ""
 "今后您将收到来自 MandrakeOnline 的\n"
 "安全及升级通知."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline 为您提供自动升级的能力"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr "您的系统会定期的运行一个程序, 查找新的升级\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "自动升级"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "选择您的地理位置"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "发送您的配置"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "无法打开这个文件进行读取: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "确定"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "取消"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -249,19 +259,19 @@ msgstr ""
 "要回到程序请选择 '取消',\n"
 "要退出请选择 '退出'. "
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "真的要退出? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "欢迎"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "关闭"
 

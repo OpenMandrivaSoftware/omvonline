@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-09-22 07:48+0200\n"
 "Last-Translator: Juris Kudiòð <cooker@inbox.lv>\n"
 "Language-Team: Latvian <cooker-i18n@linux-mandrake.com>\n"
@@ -45,7 +45,7 @@ msgstr "Tâlâk"
 msgid "Finish"
 msgstr "Beigt"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Iziet"
 
@@ -74,19 +74,24 @@ msgstr "Izeju no meistara\n"
 msgid "Warning: No browser specified"
 msgstr "Brîdinâjums: Pârlûks nav norâdîts"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problçma ar pieslçgumu"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Problçma ar pieslçgumu"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Nevar pislçgties MandrakeOnline, pamçìiniet vçlreiz biðku vçlâk"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Kïûda parolç"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -102,11 +107,11 @@ msgstr ""
 "kontu.\n"
 " Otrâ gadîjumâ - ejiet atpakaï uz pirmo soli, lai pieslçgtos Mandrake Online."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Laipni lûdzam Mandrake Online"
 
-#: mdkonline:368
+#: mdkonline:369
 #, fuzzy
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
@@ -121,37 +126,37 @@ msgstr ""
 "uz centralizçtu datubâzi, ðis viss tiek darîts ar mçríi, lai Jûs tiktu\n"
 "informçts par droðîbas uzlabojumiem un citiem vçrtîgiem jaunumiem.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake konfidencialitâtes polise"
 
-#: mdkonline:390
+#: mdkonline:391
 #, fuzzy
 msgid "Authentification"
 msgstr "Mandrake Online autentifikâcija"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Ievadiet Jûsu Mandrake Online lietotâju un paroli:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Lietotâjs:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Parole:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Sûtu Jûsu konfigurâciju"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -183,11 +188,11 @@ msgstr ""
 "piegâdât Jums informâciju par droðîbas uzlabojumiem un \n"
 "citiem programmu juninâjumiem."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Ah, kïûda nosûtot informâciju :("
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -196,15 +201,15 @@ msgstr ""
 "Atgadîjâs kïûdiòa sûtot Jûsu personisko informâcinu :(\n"
 "Uzspiediet Tâlâk, lai pamçìinâtu sûtît vçlreiz."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Pabiegts"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 #, fuzzy
 msgid ""
 "From now you will receive on security\n"
@@ -214,40 +219,45 @@ msgstr ""
 "Nu tagad Jûs saòemsiet ziòas par visiem\n"
 "droðîbas u.c. juninâjumiem pateicoties MandrakeOnline."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr ""
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr ""
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Sûtu Jûsu konfigurâciju"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr ""
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "Labi"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Atcelt"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -257,19 +267,19 @@ msgstr ""
 "Lai atgrieztos pie meistara spiediet 'Atcelt',\n"
 "lai pavisam izietu spiediet 'Iziet'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Tieðâm pârtraukt? - Mandrake Online"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Laipni lûdzam"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Aizvçrt"
 

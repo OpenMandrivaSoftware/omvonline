@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-02-26 07:20CET\n"
 "Last-Translator: Ramon Casha <ramon.casha@linux.org.mt>\n"
 "Language-Team: Maltese <mt@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "Li Jmiss"
 msgid "Finish"
 msgstr "Spiċċa"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Oħroġ"
 
@@ -74,19 +74,24 @@ msgstr "Ħiereġ is-saħħar\n"
 msgid "Warning: No browser specified"
 msgstr "Twissija: Ebda browser speċifikat"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problema fil-konnessjoni"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Problema fil-konnessjoni"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline ma setax jiġi kuntattjat. Erġa' pprova iżjed tard"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Password ħażina"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -101,11 +106,11 @@ msgstr ""
 "Jew erġa' ttajpjaha, jew trid toħloq kont ieħor ma' MandrakeOnline.\n"
 "F'dak il-każ, mur lura fl-ewwel pass biex taqbad ma' MandrakeOnline."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Merħba għal MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -117,36 +122,36 @@ msgstr ""
 "(pakketti, konfigurazzjoni tal-magna) lill database ċentrali sabiex\n"
 "tinżamm infurmat dwar aġġornamenti ta' sigurtà u oħrajn utli.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Polza ta' privatezza Mandrake"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Awtentikazzjoni"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Daħħal il-login u password ta' MandrakeOnline:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Login:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Password:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Qed tintbagħat il-konfigurazzjoni tiegħek"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -182,11 +187,11 @@ msgstr ""
 "minn skonti fuq servizzi oħra bil-ħlas minn www.mandrakeexpert.com.\n"
 "Finalment, jinħoloqlok indirizz tal-imejl username\\@mandrakeonline.net."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Problema waqt li kienu qed tintbagħat l-informazzjoni"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -196,15 +201,15 @@ msgstr ""
 "\n"
 "Agħfas \"Li Jmiss\" biex terġa' tipprova."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Lest"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "It-trasferiment tal-informazzjoni rnexxa."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -212,42 +217,47 @@ msgstr ""
 "Minn issa 'l quddiem int tirċievi notifiki dwar \n"
 "sigurtà u aġġornamenti minngħand MandrakeOnline."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 "MandrakeOnline joffrilek il-possibbiltà li taġġorna s-sistema awtomatikament."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Regularment jitħaddem programm fuq is-sistema biex jistenna aġġornamenti.\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "Aġġornamenti awtomatiċi"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Agħżel fejn qiegħed ġeografikament"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Qed tintbagħat il-konfigurazzjoni tiegħek"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "dan il-fajl ma jistax jinfetaħ għall-qari: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Ikkanċella"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -257,19 +267,19 @@ msgstr ""
 "Biex terġa' lura agħfas \"Ikkanċella\",\n"
 "biex toħroġ agħfas \"Oħroġ\"."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Żgur trid tieqaf? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Merħba"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Agħlaq"
 

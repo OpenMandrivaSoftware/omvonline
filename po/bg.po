@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-09-22 11:08GMT\n"
 "Last-Translator: Boyan Ivanov <boyan17@mail.bg>\n"
 "Language-Team: Bulgarian\n"
@@ -45,7 +45,7 @@ msgstr "Нататък"
 msgid "Finish"
 msgstr "Край"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Изход"
 
@@ -73,19 +73,24 @@ msgstr "Излизам\n"
 msgid "Warning: No browser specified"
 msgstr "Внимание: няма избран браузер"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Проблем с връзката"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Проблем с връзката"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Не можах да се свържа с MandrakeOnline,моля опитайте по-късно"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Грешна парола"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -101,11 +106,11 @@ msgstr ""
 "Във втория случай се върнете на стъпка номер 1 за да се свържете с "
 "Mandrakeonline."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Добре дошли в MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -117,36 +122,36 @@ msgstr ""
 "(пакети и хардуерни настройки) в централизираната база данни,за да\n"
 "ви дръжим в течение относно необходими обновявания и полезни новости.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Политика на Мандраке относно сигурността"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Проверка"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Въведете вашето MandrakeOnline име и парола:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Име:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Парола:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Изпращам вашата конфигурация"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -181,11 +186,11 @@ msgstr ""
 "mandrakeexpert.com.\n"
 "И още - ще Ви запазим е-адрес с Вашето потребителско име\\@mandrakeonline.net"
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Грешка при изпращането на информация"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -195,15 +200,15 @@ msgstr ""
 "\n"
 "Натиснете \"Нататък\" за да пробвате да пратите конфигурациятаси отново."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Край"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Изпращането бе успешно!"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -211,43 +216,48 @@ msgstr ""
 "От сега нататък,Вие ще получавате информация\n"
 "относно сигуността и новостите,благодарение на MandrakeOnline."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline ви предлага автоматизиране на обновлението."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Програмата ще се пуска регулярно на системаа Ви и ще следи за обновявания\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "автоматизирани обновявания"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Изберете Вашето местоположение"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Изпращам вашата конфигурация"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "не мога да отворя този файл за четене: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "Добре"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr ""
 "-monotype-times new roman-bold-r-normal-*-14-*-100-100-p-*-microsoft-cp1251,-"
 "*-times-bold-r-normal--14-*-100-100-p-*-*-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Отказ"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -257,21 +267,21 @@ msgstr ""
 "За да се върнете към Магьосника,натиснете 'Отказ',\n"
 "за да излезете от него - 'Изход'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "100 % ли сте сигурни"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr ""
 "-monotype-times new roman-bold-r-normal-*-17-*-100-100-p-*-microsoft-cp1251,-"
 "*-times-bold-r-normal--17-*-100-100-p-*-*-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Добре дошли"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Затвори"
 

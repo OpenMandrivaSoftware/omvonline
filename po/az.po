@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-03-02 17:34+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-02-25 13:52GMT+0200\n"
 "Last-Translator: Vasif İsmayıloğlu MD <azerb_linux@hotmail.com>\n"
 "Language-Team: Azerbaijani Turkic <linuxaz@azerimail.net>\n"
@@ -46,7 +46,7 @@ msgstr "Sonrakı"
 msgid "Finish"
 msgstr "Qurtar"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Çıx"
 
@@ -74,21 +74,26 @@ msgstr "Sehirbazdan Çıxılır\n"
 msgid "Warning: No browser specified"
 msgstr "Xəbərdarlıq: Heç səyyah bildirilməyib"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Bağlantı problemi"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Bağlantı problemi"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "MandrakeOnline ilə bağlantı qurula bilmir, xahiş edirik, sonradan yenidən "
 "sınayın"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Səhv parol"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -104,11 +109,11 @@ msgstr ""
 "açın.\n"
 " Son halda MandrakeOnline xitmətinə bağlanmaq üçün dala gedin."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "MandrakeOnline-a Xoş Gəldiniz"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -121,36 +126,36 @@ msgstr ""
 "xəbər vermək üçün\n"
 "mərkəzi verilənlər bazasına göndərəcəkdir.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake Mülkiyyət Siyasəti"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Tanıtma"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "MandrakeOnline giriş adı və parolunuzu girin:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Giriş Adı:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Parol:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Qurğularınız Göndərilir"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -185,11 +190,11 @@ msgstr ""
 "Axırda sizə istifadəçi-adı\\@mandrakeonləne.net kimi poçt ünvanı "
 "veriləcəkdir."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Məlumatlarınız göndərilirkən xəta baş verdi"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -199,15 +204,15 @@ msgstr ""
 "\n"
 "Qurğularınızın yenidən göndərilməsi üçün Sonrakı düyməsinə basın."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Qurtardı"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Sizin yollamanız müvəffəqiyyətli oldu"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -215,42 +220,47 @@ msgstr ""
 "İndidən etibarən MandrakeOnline vasitəsilə güncəlləmə və\n"
 "təhlükəsizlik elanları alacaqsınız."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline sizə avtokatik güncəlləmə imkanı verir."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Proqram sürəkli olaraq sisteminizdə yeni göncəlləmələri gözləyəcək şəkildə "
 "işləyəcəkdir\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "avtomatik Yüksəltmələr"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Coğrafı yerinizi seçin"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Qurğularınız Göndərilir"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "bu fayl oxunmaq üçün açıla bilmir: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "Oldu"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Ləğv Et"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -260,19 +270,19 @@ msgstr ""
 "Sehirbaza geri dönmək üçün 'Ləğv Et'ə basın,\n"
 "tamamilə çıxmaq üçün 'Çıx'a basın."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Həqiqətən təxirə salaq? - MandrakeOnline"
 
-#: mdkonline:609
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:610
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Xoş Gəldiniz"
 
-#: mdkonline:634
+#: mdkonline:660
 msgid "Close"
 msgstr "Qapat"
 

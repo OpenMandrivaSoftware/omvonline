@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-09-24 20:40+0200\n"
 "Last-Translator: Softcatalà <traddrake@softcatala.org>\n"
 "Language-Team: Catalan <info@softcatala.org>\n"
@@ -46,7 +46,7 @@ msgstr "Següent"
 msgid "Finish"
 msgstr "Finalitza"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Surt"
 
@@ -74,21 +74,26 @@ msgstr "S'està sortint de l'auxiliar\n"
 msgid "Warning: No browser specified"
 msgstr "Avís: no s'ha indicat cap navegador"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problema de connexió"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Problema de connexió"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "No s'ha pogut contactar amb MandrakeOnline; si us plau, torneu-ho a provar "
 "més tard"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Contrasenya incorrecta"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -103,11 +108,11 @@ msgstr ""
 "Us caldrà tornar-los a escriure, o bé crear un compte a MandrakeOnline.\n"
 " En aquest darrer cas, torneu al primer pas per connectar amb MandrakeOnline."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Benvingut a MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -120,36 +125,36 @@ msgstr ""
 "per tal de mantenir-vos informat sobre les actualitzacions de seguretat i "
 "altres millores.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Normes de privacitat de Mandrake"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Autenticació"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Introduïu el vostre nom d'usuari i contrasenya de MandrakeOnline:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Nom d'usauri:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Contrasenya:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "S'està enviant la vostra configuració"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -185,11 +190,11 @@ msgstr ""
 "Per últim, us facilitarem un àlies de correu electrònic amb el vostre nom "
 "d'usuari\\@mandrakeonline.net."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "S'ha produït un error en enviar la informació"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -199,15 +204,15 @@ msgstr ""
 "\n"
 "Feu clic a Següent per tornar-ho a provar."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Finalitzat"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 #, fuzzy
 msgid ""
 "From now you will receive on security\n"
@@ -217,40 +222,45 @@ msgstr ""
 "A partir d'ara, gràcies a MandrakeOnline, rebreu\n"
 "avisos d'actualitzacions i millores de seguretat."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr ""
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr ""
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "S'està enviant la vostra configuració"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr ""
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "D'acord"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -260,18 +270,18 @@ msgstr ""
 "Per tornar a l'auxiliar, feu clic a 'Cancel·la';\n"
 "per sortir feu clic a 'Surt'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Segur que voleu avortat? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Benvingut"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Tanca"

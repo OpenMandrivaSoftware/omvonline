@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-09-24 21:45GMT+1\n"
 "Last-Translator: Josu Waliño <josu@elhuyar.com>\n"
 "Language-Team: Euskara <linux-eu@chanae.alphanet.ch>\n"
@@ -47,7 +47,7 @@ msgstr "Hurrengoa"
 msgid "Finish"
 msgstr "Amaitu"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Irten"
 
@@ -75,19 +75,24 @@ msgstr "Morroitik irteten\n"
 msgid "Warning: No browser specified"
 msgstr "Abisua: Ez da arakatzailerik zehaztu"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Konexio-arazoa"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Konexio-arazoa"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Ezin izan da MandrakeOnline-rekin kontaktatu, saiatu berriro geroago"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Pasahitza oker"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -105,11 +110,11 @@ msgstr ""
 "Kontuan izan Makinaren izena ere idatzi behar duzula \n"
 " (alfabetoaren karaktereak bakarrik erabil daitezke)"
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Ongi etorri MandrakeOnline-ra"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -121,35 +126,35 @@ msgstr ""
 "datu-base zentralizatu batera kargatzen lagunduko dizu, segurtasuneko \n"
 "eguneratzeen eta bertsio-berritzeen informazioa jaso ahal izan dezazun.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake-ren pribatutasun-gidalerroa"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Autentifikazioa"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Idatzi MandrakeOnline-n sartzeko izena, pasahitza eta makinaren izena:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Izena:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Pasahitza:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "Makinaren izena:"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Zure konfigurazioa bidaltzen"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -184,11 +189,11 @@ msgstr ""
 "Azkenik, posta elektroniko alias bat emango dizugu: zure erabiltzaile_izena"
 "\\@mandrakeonline.net."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Errorea informazioa bidaltzean"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -198,15 +203,15 @@ msgstr ""
 "\n"
 "Egin klik 'Hurrengoa'n, berriro saiatzeko konfigurazioa bidaltzen."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Amaituta"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Kargatzea behar bezala egin da!"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -214,42 +219,47 @@ msgstr ""
 "Hemendik aurrera segurtasunaren eta bertsio berrien\n"
 "informazioa jasoko duzu MandrakeOnline-ri esker."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline-k eguneratzeak automatizatzeko aukera ematen dizu."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Tarteka, programa bat exekutatuko da zure sisteman eguneratzerik dagoen "
 "ikusteko\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "bertsio-berritze automatizatuak"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Aukeratu zure kokaleku geografikoa"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Zure konfigurazioa bidaltzen"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "ezin da fitxategi hau ireki irakurtzeko: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "Ados"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Utzi"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -259,19 +269,19 @@ msgstr ""
 "Morroira itzultzeko egin klik 'Utzi'n,\n"
 "benetan irteteko egin klik 'Irten'en."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Benetan abortatu? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Ongi etorri"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Itxi"
 

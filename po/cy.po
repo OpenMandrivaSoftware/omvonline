@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-03-02 17:34+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-03-05 19:52-0000\n"
 "Last-Translator: Rhoslyn Prys <rhoslyn.prys@ntlworld.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -45,7 +45,7 @@ msgstr "Nesaf"
 msgid "Finish"
 msgstr "Gorffen"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Gadael"
 
@@ -73,19 +73,24 @@ msgstr "Gadael y Dewin\n"
 msgid "Warning: No browser specified"
 msgstr "Rhybydd: Nid oes porwr wedi ei bennu"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problem cysylltu"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Problem cysylltu"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Nid oedd modd cysylltu a MandrakeOnline. ceisiwch eto yn hwyrach"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Y gyfrinair anghywir"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -102,11 +107,11 @@ msgstr ""
 "Byddwch yn ymwybodol bod angen i chi ddarparu enw'r peiriant \n"
 "((dim ond llythrennau'r wyddor sy'n cael eu derbyn) "
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Croeso i MandrakeOnline "
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -118,36 +123,36 @@ msgstr ""
 "(pecynnau, ffurfweddiad caledwedd) i gronfa ddata ganolog fel\n"
 "modd i'ch hysbysu am ddiweddariadau diogelwch ac uwchraddiadau defnyddiol.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Polisi Preifatrwydd Mandrake"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Dilysu"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr ""
 "Rhowch eich mewngofnod MandrakeOnline, eich cyfrinair ac enw'r peiriant :"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Mewngofnod:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Cyfrinair:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "Enw'r peiriant"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Anfon eich Ffurfweddiad"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -183,11 +188,11 @@ msgstr ""
 "Yn olaf, bydd enw e-bost gyda eich enw defnyddiwr\\@mandrakeonline.net yn "
 "cael ei ddarparu ar eich cyfer."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Gwall wrth anfon gwybodaeth"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -197,15 +202,15 @@ msgstr ""
 "\n"
 "Cliciwch Nesaf i geisio gyrru eich ffurfweddiad eto.."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Gorffenwyd"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Roedd eich llwytho i fynny'n llwyddiant"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -213,40 +218,45 @@ msgstr ""
 "O hyn ymlaen byddwch yn derbyn gwybodaeth\n"
 "ar ddiogelwch a diweddariadau diolch i MandrakeOnline."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "Mae MandrakeOnline yn cynnig y gallu i ddiweddaru'n awtomatig."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr "Bydd rhaglen yn rhedeg yn rheolaidd yn disgwyl am ddiweddariadau\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "Diweddariadau awtomatig"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Dewiswch eich lleoliad daearyddol"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Anfon eich Ffurfweddiad"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "methu agor y ffeil i ddarllen: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "Iawn"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Dileu"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -256,18 +266,18 @@ msgstr ""
 "I ddychwelyd i'r Dewin cliciwch 'Dileu',\n"
 "i orffen cliciwch 'Gadael'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Darod i orffen? - MandrakeOnline"
 
-#: mdkonline:609
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:610
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Croeso"
 
-#: mdkonline:634
+#: mdkonline:660
 msgid "Close"
 msgstr "Cau"

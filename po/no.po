@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-02-03 14:07CET\n"
 "Last-Translator: Terje Bjerkelia <terje@bjerkelia.com>\n"
 "Language-Team: Norsk\n"
@@ -47,7 +47,7 @@ msgstr "Neste"
 msgid "Finish"
 msgstr "Avslutt"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Quit"
 
@@ -75,21 +75,26 @@ msgstr "Avslutter veiviser\n"
 msgid "Warning: No browser specified"
 msgstr "Advarsel: Ingen nettleser er spesifisert"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Tilkoblingsproblem"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Tilkoblingsproblem"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "MandrakeOnline kunne ikke bli kontaktet vennligst prøv igjen på ett senere "
 "tidspunkt"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "Feil passord"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -107,11 +112,11 @@ msgstr ""
 "maskinnavn \n"
 " (bare alfabetiske tegn er tillatt)"
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Velkommen til MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -123,35 +128,35 @@ msgstr ""
 "(pakker, hardware konfigurasjon) til en sentral database for å kunne\n"
 "holde deg oppdatert om sikkerhetsoppdateringen og smarte oppgraderinger.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake Privacy Policy"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Autentisering"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Skriv inn ditt MandrakeOnline brukernavn, passord og maskinnavn:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Brukernavn:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Passord:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "Maskinnavn:"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Sender din konfigurasjon"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -186,11 +191,11 @@ msgstr ""
 "Tilslutt, ett e-postalias med ditt brukernavn\\@mandrakeonline.net vil bli "
 "gitt til deg."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Feil ved sending av informasjon"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -200,15 +205,15 @@ msgstr ""
 "\n"
 "Trykk neste for å prøve igjen."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Ferdig"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Opplastingen din var vellykket!"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -216,42 +221,47 @@ msgstr ""
 "Fra nå av vil du få sikkerhets- og\n"
 "oppdateringsmeldinger takket være MandrakeOnline."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline gir deg muligheten til å automatisere oppdateringene."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Et program vil kjøre regelmessig i systemet ditt og vente på "
 "nyeoppdateringer\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "automatiserte oppgraderinger"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Velg din geografiske lokasjon"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Sender din konfigurasjon"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "kan ikke åpne denne filen for lesing: %s"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -261,19 +271,19 @@ msgstr ""
 "For å returnere til veiviseren trykk 'Avbryt',\n"
 "for å avslutt trykk 'Avslutt'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Virkelig avslutte? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Velkommen"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Lukk"
 

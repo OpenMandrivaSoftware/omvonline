@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2001-10-23 01:43GMT\n"
 "Last-Translator: Aiet Kolkhi <aiet@gmx.net>\n"
 "Language-Team: Georgian\n"
@@ -45,7 +45,7 @@ msgstr "შემდეგი"
 msgid "Finish"
 msgstr "დამთავრება"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "გასვლა"
 
@@ -73,19 +73,24 @@ msgstr "ოსტატის დასრულება\n"
 msgid "Warning: No browser specified"
 msgstr "გაფრთხილება: ბროუზერი არ აგირჩევიათ"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "კავშირის პრობლემა"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "კავშირის პრობლემა"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline-ს ვერ ვუკავშირდები. გთხოვთ მოგვიანებით სცადოთ"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "არასწორი პაროლი"
 
-#: mdkonline:308
+#: mdkonline:309
 #, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
@@ -101,11 +106,11 @@ msgstr ""
 "ამ უკანასკნელის გასაკეთებლად მიუბრუნდით პირველ მოქმედებას MandrakeOnline-ზე "
 "დასაკავშირებლად."
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "კეთილი იყოს თქვენი ფეხი MandrakeOnline-ზე."
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -119,36 +124,36 @@ msgstr ""
 "თქვენ ავტომატურად შეიტყოთ უსაფრთხობასთან დაკავშირებულ და მნიშვნელოვან "
 "გაუმჯობესებებზე.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake-ის პირადი უფლებების პოლისი"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "რეგისტრაცია"
 
-#: mdkonline:391
+#: mdkonline:392
 #, fuzzy
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "შეიყვანეთ თქვენი MandrakeOnline-ის მომხმარებლის სახელი და პაროლი:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "მომხმარებელი:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "პაროლი:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr ""
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "ვაგზავნი თქვენს კონფიგურაციას"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -182,11 +187,11 @@ msgstr ""
 "www.mandrakeexpert.com.-ზე\n"
 "და ბოლოს, თქვენ მიიღებთ ელფოსტის ალიასს მომხმარებელი\\@mandrakeonline.net."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "შეცდომა ინფორმაციის გადაგზავნისას"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -196,15 +201,15 @@ msgstr ""
 "\n"
 "დააჭირეთ 'შემდეგი'-ს თუ გნებავთ ისევ სცადოთ ნფორმაციის გაგზავნა."
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "დასრულდა"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 #, fuzzy
 msgid ""
 "From now you will receive on security\n"
@@ -215,40 +220,45 @@ msgstr ""
 "დაკავშირებულ\n"
 "და მნიშვნელოვან გაუმჯობესებების განცხადებებს."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr ""
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr ""
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "ვაგზავნი თქვენს კონფიგურაციას"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr ""
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "ო-ქეი"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "სტოპ!"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -258,18 +268,18 @@ msgstr ""
 "თუ გნებავთ ოსტატს დაუბრუნდეთ, დააჭირეთ 'სტოპ!'-ს,\n"
 "თუ მართლა გნებავთ გამოსვლა, დააჭირეთ 'გამოსვლა'-ს."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "მართლა გნებავთ გამოსვლა? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "სტუმარი ღვთისაა"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "დახურვა"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-28 04:30+0100\n"
+"POT-Creation-Date: 2002-03-11 11:25+0100\n"
 "PO-Revision-Date: 2002-02-28 18:02GMT+0100\n"
 "Last-Translator: Radek Vybíral <Radek.Vybiral@vsb.cz>\n"
 "Language-Team: Czech <cooker-i18n@linux-mandrake.com>\n"
@@ -46,7 +46,7 @@ msgstr "Dal¹í"
 msgid "Finish"
 msgstr "Hotovo"
 
-#: mdkonline:99 mdkonline:522
+#: mdkonline:99 mdkonline:548
 msgid "Quit"
 msgstr "Konec"
 
@@ -74,19 +74,24 @@ msgstr "Ukonèuji prùvodce\n"
 msgid "Warning: No browser specified"
 msgstr "Varování: Není zvolen prohlí¾eè"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:289
+#, fuzzy
+msgid "Connecting ...\n"
+msgstr "Problémy pøi spojení"
+
+#: mdkonline:297 mdkonline:360
 msgid "Connection problem"
 msgstr "Problémy pøi spojení"
 
-#: mdkonline:296 mdkonline:358
+#: mdkonline:297 mdkonline:360
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Nelze kontaktovat slu¾bu MandrakeOnline, zkuste to prosím pozdìji"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid "Wrong password"
 msgstr "©patné heslo"
 
-#: mdkonline:308
+#: mdkonline:309
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -104,11 +109,11 @@ msgstr ""
 " Uvìdomte si, ¾e musíte také zadat jméno poèítaèe \n"
 " (jsou povoleny pouze znaky abecedy bez diakritiky)"
 
-#: mdkonline:367
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "Vítá vás MandrakeOnline"
 
-#: mdkonline:368
+#: mdkonline:369
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -121,35 +126,35 @@ msgstr ""
 "kdy budete ihned informováni o v¹ech bezpeènostních a dal¹ích\n"
 "potøebných aktualizacích.\n"
 
-#: mdkonline:385
+#: mdkonline:386
 msgid "Mandrake Privacy Policy"
 msgstr "Ochrana soukromí firmy MandrakeSoft"
 
-#: mdkonline:390
+#: mdkonline:391
 msgid "Authentification"
 msgstr "Ovìøování"
 
-#: mdkonline:391
+#: mdkonline:392
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Zadejte jméno, heslo a jméno poèítaèe pro MandrakeOnline:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Login:"
 msgstr "Jméno:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Password:"
 msgstr "Heslo:"
 
-#: mdkonline:393
+#: mdkonline:394
 msgid "Machine name:"
 msgstr "Jméno poèítaèe:"
 
-#: mdkonline:397
+#: mdkonline:398
 msgid "Sending your Configuration"
 msgstr "Poslat konfiguraci"
 
-#: mdkonline:398
+#: mdkonline:399
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -181,11 +186,11 @@ msgstr ""
 "informovat o v¹ech bezpeènostních a potøebných aktualizacích.\n"
 "Také vám bude poskytnuta emailová adresa: jmeno\\@mandrakeonline.net."
 
-#: mdkonline:406
+#: mdkonline:407
 msgid "Error while sending informations"
 msgstr "Chyba pøi zasílání informací"
 
-#: mdkonline:407
+#: mdkonline:408
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -195,15 +200,15 @@ msgstr ""
 "\n"
 "Stisknìte tlaèítko Dal¹í pro dal¹í pokus o zaslání informací"
 
-#: mdkonline:413
+#: mdkonline:414
 msgid "Finished"
 msgstr "Hotovo"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "Your upload was successful!"
 msgstr "Vá¹ upload se zdaøil!"
 
-#: mdkonline:414
+#: mdkonline:415
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -211,40 +216,45 @@ msgstr ""
 "Od této chvíle budete díky slu¾bì MandrakeOnline\n"
 "informováni o bezpeènostních a dal¹ích aktualizacích."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline nabízí mo¾nost automatizovat aktualizace."
 
-#: mdkonline:414
+#: mdkonline:415
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr "Program, který bude bì¾et v systému a èekat na aktualizace\n"
 
-#: mdkonline:419
+#: mdkonline:420
 msgid "automated Upgrades"
 msgstr "automatické aktualizace"
 
-#: mdkonline:430
+#: mdkonline:431
 msgid "Choose your geographical location"
 msgstr "Vyberte si svoji geografickou polohu"
 
-#: mdkonline:461
+#: mdkonline:463
+#, fuzzy
+msgid "Reading configuration\n"
+msgstr "Poslat konfiguraci"
+
+#: mdkonline:490
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "nelze otevøít soubor %s pro ètení"
 
-#: mdkonline:497
+#: mdkonline:523
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:503 mdkonline:529
+#: mdkonline:529 mdkonline:555
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-2,*-r-*"
 
-#: mdkonline:518
+#: mdkonline:544
 msgid "Cancel"
 msgstr "Zru¹it"
 
-#: mdkonline:527
+#: mdkonline:553
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -254,19 +264,19 @@ msgstr ""
 "Pro návrat do prùvodce stisknìte 'Zru¹it',\n"
 "pokud chcete skonèit, stisknìte 'Konec'."
 
-#: mdkonline:531
+#: mdkonline:557
 msgid "Really abort? - MandrakeOnline"
 msgstr "Skuteènì skonèit? - MandrakeOnline"
 
-#: mdkonline:607
+#: mdkonline:635
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-2,*-r-*"
 
-#: mdkonline:608
+#: mdkonline:636
 msgid "Welcome"
 msgstr "Vítejte"
 
-#: mdkonline:632
+#: mdkonline:660
 msgid "Close"
 msgstr "Zavøít"
 
