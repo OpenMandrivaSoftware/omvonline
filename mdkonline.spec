@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Thu Oct 10 2002 François Pons <fpons@mandrakesoft.com> 0.17-1mdk
+* Fri Oct 11 2002 François Pons <fpons@mandrakesoft.com> 0.17-1mdk
 - fixed to make sure the list of rpm is always sent to server.
 - use urpmi media for update in order to use non scheduled packages.
 - fixed to propagate version to user agent.
