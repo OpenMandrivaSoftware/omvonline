@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline 10.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-11-05 13:34+0100\n"
-"PO-Revision-Date: 2004-10-02 17:16+0800\n"
+"PO-Revision-Date: 2004-11-20 22:06+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
@@ -179,9 +179,9 @@ msgid "Connecting to"
 msgstr "正在连接到"
 
 #: ../mdkapplet:244
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Mandrakeonline 欢迎您"
+msgstr "Mandrakeonline 服务器的响应\n"
 
 #: ../mdkapplet:262
 #, c-format
@@ -302,8 +302,8 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"您需要在本步骤中提供您在 Mandrakeonline 的账户。而本助手将会帮助您将您\n"
-"的配置(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到\n"
+"您需要在本步骤中提供您在 Mandrakeonline 的账户。而本助手将会帮助您将您"
+"的配置(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到"
 "安全更新和有用的升级。\n"
 
 #: ../mdkonline:114
@@ -314,7 +314,7 @@ msgstr "账户创建或身份验证"
 #: ../mdkonline:119
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr "请输入您的 Mandrakeonline 登录名, 密码和机器名:"
+msgstr "请输入您的 Mandrakeonline 登录名，密码和机器名:"
 
 #: ../mdkonline:125 ../mdkonline:156
 #, c-format
@@ -360,9 +360,9 @@ msgstr ""
 "1) 您在系统中所安装的软件包列表；\n"
 "2) 您的硬件配置。\n"
 "\n"
-"如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。\n"
-"只要您按下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的\n"
-"安全更新和有用的升级。除此以外，您还能够从 www.mandrakeexpert.com 上得\n"
+"如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。"
+"只要您按下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的"
+"安全更新和有用的升级。除此以外，您还能够从 www.mandrakeexpert.com 上得"
 "到支持服务的付费折扣。"
 
 #: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:126 ../mdkupdate:198
@@ -410,7 +410,7 @@ msgstr "确认密码:"
 #: ../mdkonline:159
 #, c-format
 msgid "Mail contact:"
-msgstr "联系邮件："
+msgstr "联系邮件:"
 
 #: ../mdkonline:163
 #, c-format
@@ -451,7 +451,7 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
 msgstr ""
-"从现在开始，您将能够收到 Mandrakeonline 发出的安全\n"
+"从现在开始，您将能够收到 Mandrakeonline 发出的安全"
 "和更新通知了。"
 
 #: ../mdkonline:178
@@ -460,7 +460,7 @@ msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandrakeonline 还能让您自动保持更新。您的系统中会定期运行一个特\n"
+"Mandrakeonline 还能让您自动保持更新。您的系统中会定期运行一个特"
 "定的程序，该程序会自动下载并安装更新\n"
 
 #: ../mdkonline:180
@@ -471,7 +471,7 @@ msgstr "上传文件时发生了错误，请重试"
 #: ../mdkonline:186
 #, c-format
 msgid "Country"
-msgstr "国家"
+msgstr "国家/地区"
 
 #: ../mdkonline:198
 #, c-format
@@ -484,14 +484,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "您的 Mandrakeonline 账户已经配置成功\n"
 
 #: ../mdkonline:214
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "您的上传已经成功!"
+msgstr "配置上传成功"
 
 #: ../mdkonline:215
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "正在读取配置\n"
+msgstr "读取配置出错"
 
 #: ../mdkonline:216
 #, c-format
@@ -499,6 +499,7 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"无法连接到 mandrakeonline 网站: 登录名/密码不对，或路由器/防火墙设置错误"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -584,58 +585,3 @@ msgid ""
 msgstr ""
 "Mandrakeupdate 无法上传差异文件。请给 support@mandrakeonline.net 发送邮件"
 
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "请稍候"
-
-#~ msgid "Next"
-#~ msgstr "下一步"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
-
-#~ msgid "Previous"
-#~ msgstr "上一步"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "我没有 Mandrakeonline 账户，我要订阅"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Mandrakelinux 隐私保护政策"
-
-#~ msgid "Authentification"
-#~ msgstr "身份验证"
-
-#~ msgid "Send Configuration"
-#~ msgstr "发送配置"
-
-#~ msgid "Finish"
-#~ msgstr "完成"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "自动升级"
-
-#~ msgid "Country:"
-#~ msgstr "国家:"
-
-#~ msgid "Error"
-#~ msgstr "出错"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "正在退出向导\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr "Mandrakeonline 无法连接，请稍后再试一次"
-
-#~ msgid "Wrong password"
-#~ msgstr "密码错误"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update      - 更新密钥\n"
-
-#~ msgid "Skip Wizard"
-#~ msgstr "跳过向导"
-
-#~ msgid "Subscribe"
-#~ msgstr "订阅"
