@@ -33,8 +33,13 @@ if ($@) {
 }
 my ($eventbox, $img);
 add_icon_path("/usr/share/mdkonline/pixmaps/");
-my $menu;
+my ($menu, $url);
 my $nowindow = 1;
+
+my $link = "https://www.mandrakeonline.net/online3_RemoteAction.php/";
+
+$url->{UpdateList} = $link . '&action=UpdateList';
+
 my %state = (
 	     okay => {
 		      colour => [ 'green' ],
@@ -71,9 +76,9 @@ my %actions = (
 	       'update' => { name => N("Launch Mandrake Update"), launch => sub { launchUpdate() } },
 	       'configureApplet' => { name => N("Configuration"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
-	       'weblink' => { name => N("Online WebSite"), launch => sub { getsite() } },
+	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite() } },
 	       'confNetwork' => { name => N("Configure Network"), sub { configNetwork() } },
-	       'register' => { name => N("Register Now!"), sub { register() } }
+	       'register' => { name => N("Register Now!"), sub { configure() } }
 	      );
 
 gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"), 
@@ -83,13 +88,12 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 			  )
 	       )
       );
-
-print "Setting okay ...\n";
-$menu = setState('okay');
 $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 1 and showMainWindow(); #just for testing
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
+
+checkUpdates();
 
 $icon->show_all;
 Gtk2->main;
@@ -108,9 +112,9 @@ sub showMainWindow() {
            gtkpack__(Gtk2::VBox->new(0,5),
 		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
 			    gtkpack_(Gtk2::VBox->new(0, 3),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check Updates")), clicked => sub { checkUpdates() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Start MandrakeUpdate")), clicked => sub { mdkUpdate() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { launchMdkOnline() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
 				    )
 			   ),
@@ -138,35 +142,43 @@ sub showMainWindow() {
 		    ));
     $w->show_all
 }
-sub displayLogs() {
-    
-}
 sub confNetwork {
-    system("/usr/sbin/net_monitor" . "&")
+    system "/usr/sbin/net_monitor &";
 }
 sub launchUpdate {
-    system("/usr/sbin/MandrakeUpdate" . "&");
+    system "/usr/sbin/MandrakeUpdate &";
 }
-sub CheckUpdates {
-    
+sub installUpdates {
+    #    system "/usr/sbin/mdkupdate", "--applet";
+    $menu && $menu->destroy;
+    $menu = setState('error');
 }
-sub register {
-    system("/usr/sbin/mdkonline" . "&")
+sub checkUpdates {
+    $menu and $menu->destroy;
+    my $time
 }
-sub getsite {
+sub configure {
+#    system "/usr/sbin/mdkonline", "&";
+    $menu && $menu->destroy;
+    $menu = setState('okay');
+}
+sub getSite {
     my $b = browser();
-    system("$b " . "https://www.mandrakeonline.com" . "&")
+    system("$b " . "https://www.mandrakeonline.net" . "&")
 }
 sub browser {
     require any;
     my $wm = any::running_window_manager();
-    member ($wm, 'kwin', 'gnome-seession') or $wm = 'other';
+    member ($wm, 'kwin', 'gnome-session') or $wm = 'other';
     my %Br = (
 	      'kwin' => 'konqueror',
 	      'gnome-session' => 'mozilla',
 	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(mozilla konqueror galeon)
 	     );
     $Br{$wm}
+}
+sub displayLogs {
+    
 }
 sub setState {
     my $state_type = shift;
@@ -186,5 +198,5 @@ sub setState {
 }
 sub about {
     create_dialog(N("About Online Applet"), 
-		  "\t" . "<span foreground=\"#21449C\"><u><b>" . N_("Mandrake Update Notification Applet") . "</b></u></span>\n\n<u>" . N_("Version:") . "</u> %s \n\n<u>" . N_("Team:"). "</u> " . N_("Mandrake Online Team"). " &lt;mot\@mandrakeonline.net&gt;\n\n<span foreground=\"#006666\"><i>" . N_("This Software is under GPL") . "</i></span>", ' 10.0 ') , { use_markup => 1 });
+		  "\t" . "<span foreground=\"#21449C\"><u><b>" . N_("Mandrake Update Notification Applet") . "</b></u></span>\n\n<u>" . N_("Version:") . "</u> %s \n\n<u>" . N_("Team:"). "</u> " . N_("Mandrake Online Team"). " &lt;mot\@mandrakeonline.net&gt;\n\n<span foreground=\"#006666\"><i>" . N_("This Software is under GPL") . "</i></span>", ' 10.0 ' , { use_markup => 1 });
 }
