@@ -301,8 +301,8 @@ sub mainQuit {
     # remove local files
     my ($login, $passwd, $boxname) = getNames();
     if ($o->{login}->get_text && $o->{passwd}->get_text) {
-	[ -f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" ] && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
-	[ -f "$confdir/$login.$passwd.$boxname.online.log.bz2" ] && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2");
+	-f "$confdir/$login.$passwd.$boxname.online.log.bz2.uue" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2.uue");
+	-f "$confdir/$login.$passwd.$boxname.online.log.bz2" && unlink ("$confdir/$login.$passwd.$boxname.online.log.bz2");
     }
     # quit
     print N("Quitting Wizard\n");
