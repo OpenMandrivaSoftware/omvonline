@@ -140,7 +140,7 @@ sub showMainWindow() {
 						),
 				     0, gtkpack_(Gtk2::HBox->new(0, 3),
 						 0, Gtk2::Label->new(N("Last check: ")),
-						 0, Gtk2::Label->new($time)
+						 0, Gtk2::Label->new(lastCheck())
 						),
 				    )
 			   ),
