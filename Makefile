@@ -4,8 +4,8 @@ RELEASE:=$(shell rpm -q --qf %{RELEASE} --specfile $(PACKAGE).spec)
 TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 NAME = mdkonline
 MDKUPDATE = mdkupdate
-#SCRIPTS = sshlogin.exp scpcall.exp
 SUBDIRS = po
+RPM = $(HOME)/rpm
 localedir = $(prefix)/usr/share/locale
 
 override CFLAGS += -DPACKAGE=\"$(NAME)\" -DLOCALEDIR=\"$(localedir)\"
@@ -26,7 +26,6 @@ install: all
 	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
 	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
 	install -m644 pixmaps/*.png $(RPM_BUILD_ROOT)/usr/share/mdkonline/pixmaps/
-	install -m644 *.txt $(RPM_BUILD_ROOT)/usr/share/mdkonline/
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 # rules to build a test rpm
@@ -52,8 +51,8 @@ tar:
 
 buildrpm:
 	(echo "# !! DON'T MODIFY HERE, MODIFY IN THE CVS !!" ; \
-		cat $(project).spec \
-	) > $(RPM)/SPECS/$(project).spec
+		cat $(PACKAGE).spec \
+	) > $(RPM)/SPECS/$(PACKAGE).spec
 	rpm -ta $(PACKAGE)-$(VERSION).tar.bz2
 
 # rules to build a distributable rpm
