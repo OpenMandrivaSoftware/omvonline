@@ -611,7 +611,7 @@ sub get_on_privacy {
     }
     $translated and load_text($text,"$sharepath/privacy.txt");
     $vbox->pack_start( $table, $true, $true, 0 );
- }    
+}    
 
 sub writ_on_pixmaps {
     my ($vbox, $pix_name, $step_label, $width, $height)=@_;
