@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-01 22:45-0300\n"
 "Last-Translator: Carlinhos Cecconi <carlinux@terra.com.br>\n"
 "Language-Team: Português Brasileiro <linux_pt_BR@yahoogrupos.com.br>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Não há atualizações disponíveis para seu sistema"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Problemas na configuração. Execute \"configurar\" novamente"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Sistema ocupado. Aguarde ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s pacote(s) disponível(is) para atualização."
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Serviço não disponível. Clique em \"configuração\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Sem conexão de rede. Clique em \"configurar rede\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Executar Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Configuração"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Verificar atualizações"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Site Web Online"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Configurar rede"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Configurar Agora!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Applet de atualizações Mandrake"
 
@@ -114,11 +114,11 @@ msgstr "Para cima"
 msgid "New Updates: "
 msgstr "Novas atualizações"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Disponível"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Não disponível"
 
@@ -130,15 +130,20 @@ msgstr "Última verificação: "
 msgid "Close"
 msgstr "Fechar"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Não verificado"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Conectando ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Sobre.."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Sair"
 
@@ -356,7 +361,7 @@ msgstr "Endereço de email inválido\n"
 msgid "Sending configuration..."
 msgstr "Enviando configuração..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problema de conexão"
 
@@ -426,14 +431,14 @@ msgstr "  --applet       - lança MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - atualiza chaves.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate não pôde ser contactado, por favor tente novamente mais tarde."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Incapaz de atualizar os pacotes a partir da mídia mdkupdate\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate não pôde ser contactado, por favor tente novamente mais "
+#~ "tarde."
 
 #~ msgid "Register Now!"
 #~ msgstr "Registrar agora!"
@@ -455,9 +460,6 @@ msgstr "Incapaz de atualizar os pacotes a partir da mídia mdkupdate\n"
 
 #~ msgid "Version:"
 #~ msgstr "Versão:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Conectando ...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Iniciar MandrakeUpdate"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-17 21:28+0200\n"
 "Last-Translator: Taras Boychuk <btr1@torba.com>\n"
 "Language-Team: ukrainian <uk@li.org>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Немає поновлень для Вашої системи"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Проблеми з конфігурацією. Запустіть \"налаштувати\" знову"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Система зайнята. Зачекайте..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s пакунків для поновлення"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Сервіс недоступний. Натисніть на \"налаштування\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Мережа вимкнена. Натисніть \"налаштувати мережу\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Сервіс вимкнено. Очікується оплата..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Запустити Поновлення Мандрейк"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Налаштування"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Перевірити поновлення"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Online WebSite"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Налаштувати мережу"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Налаштувати вже!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Аплет Поновлення Мандрейк"
 
@@ -114,11 +114,11 @@ msgstr "Увімкнути"
 msgid "New Updates: "
 msgstr "Нові поновлення:"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Увімнено"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Не увімкнено"
 
@@ -130,15 +130,20 @@ msgstr "Остання перевірка:"
 msgid "Close"
 msgstr "Закрити"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Немає перевірок"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Під'єднання ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Про..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Вийти"
 
@@ -353,7 +358,7 @@ msgstr "Неправильна елетронна адреса!\n"
 msgid "Sending configuration..."
 msgstr "Надсилається конфігурація..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Проблеми зі з'єднанням"
 
@@ -425,20 +430,16 @@ msgstr "  --applet       - виконати MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - поновити ключі\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate не може зв'язатися з сайтом, ми спробуємо ще раз."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Не можу поновити пакунки з носія mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate не може зв'язатися з сайтом, ми спробуємо ще раз."
 
 #, fuzzy
 #~ msgid "Mandrake Online Team"
 #~ msgstr "Ласкаво просимо до MandrakeOnline"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Під'єднання ...\n"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security    - використати тільки безпечні носії.\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-19 00:36+0200\n"
 "Last-Translator: Alice Lafox <alice@lafox.net>\n"
 "Language-Team: Russian <cooker-i18n@linux-mandrake.com>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Для вашей системы нет доступных обновлений"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Проблемы с конфигурацией. Запустите \"настройку\" снова"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Система занята. Ждите ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s пакетов доступно для обновления"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Сервис недоступен. Зайдите в \"конфигурацию\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Сеть недоступна. Проверьте \"настройки сети\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Сервис деактивирован. Ожидается оплата..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Запустить Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Настройка"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Проверить обновления"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Web-сайт онлайн"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Настроить сеть"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Настроить сейчас!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Аплет Mandrake Updates"
 
@@ -114,11 +114,11 @@ msgstr "Вверх"
 msgid "New Updates: "
 msgstr "Свежие обновления: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Доступны"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Недоступны"
 
@@ -130,15 +130,20 @@ msgstr "Последняя проверка: "
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Без проверок"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Соединяемся ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "О программе..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Выход"
 
@@ -357,7 +362,7 @@ msgstr "Недействительный почтовый адрес!\n"
 msgid "Sending configuration..."
 msgstr "Посылаются настройки..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Проблема соединения"
 
@@ -428,13 +433,12 @@ msgstr "  --applet       - запустить MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Обновить ключи\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate не может связаться с сайтом, попытаемся снова."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Невозможно обновить пакеты с носителя mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate не может связаться с сайтом, попытаемся снова."
 
 #~ msgid "Test critical"
 #~ msgstr "Тестировать на критичность"
@@ -459,9 +463,6 @@ msgstr "Невозможно обновить пакеты с носителя m
 
 #~ msgid "Version:"
 #~ msgstr "Версия:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Соединяемся ...\n"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - использовать только безопасные накопители.\n"
@@ -552,4 +553,3 @@ msgstr "Невозможно обновить пакеты с носителя m
 
 #~ msgid "Really abort? - MandrakeOnline"
 #~ msgstr "Действительно прервать? - MandrakeOnline"
-

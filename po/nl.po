@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-02-28 17:00-0500\n"
 "Last-Translator: Reinout van Schouwen <reinout@cs.vu.nl>\n"
 "Language-Team: Nederlands\n"
@@ -18,60 +18,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Geen herzieningen beschikbaar voor uw systeem"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Configuratieproblemen. Start \"configureren\" opnieuw s.v.p."
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Systeem is bezig. Wachten..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s pakketten beschikbaar voor vernieuwing"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Dienst niet beschikbaar. Klik op \"configuratie\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Netwerk niet actief. Klik op \"Netwerk configureren\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "MandrakeUpdate starten"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Configuratie"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Herzieningen nagaan"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Webadres"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Netwerk configureren"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Nu configureren!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "MandrakeUpdates-applet"
 
@@ -115,11 +115,11 @@ msgstr "Actief"
 msgid "New Updates: "
 msgstr "Nieuwe herziene versies:"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Beschikbaar"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Niet beschikbaar"
 
@@ -131,16 +131,21 @@ msgstr "Laatste controle: "
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 #, fuzzy
 msgid "No check"
 msgstr "Laatste controle: "
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Verbinding aan het maken...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Info.."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Afsluiten"
 
@@ -359,7 +364,7 @@ msgstr "Geen geldig emailadres\n"
 msgid "Sending configuration..."
 msgstr "Configuratie sturen"
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Verbindingsprobleem"
 
@@ -432,15 +437,14 @@ msgstr "  --applet       - MandrakeUpdate starten.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - sleutels bijwerken\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate kon geen verbinding krijgen met de website, op een later "
-"tijdstip wordt het opnieuw geprobeerd."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Kan geen pakketten bijwerken vanaf het mdkupdate medium.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate kon geen verbinding krijgen met de website, op een later "
+#~ "tijdstip wordt het opnieuw geprobeerd."
 
 #~ msgid "Register Now!"
 #~ msgstr "Nu registreren!"
@@ -462,6 +466,3 @@ msgstr "Kan geen pakketten bijwerken vanaf het mdkupdate medium.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Versie: "
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Verbinding aan het maken...\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-03 22:57+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <linux-eu@chanae.alphanet.ch>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Ez dago zure sistemarentzako eguneraketarik"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Konfig arazoak. Jaurti berriro \"konfiguratu\""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Sistema lanpetuta dago. Itxoin ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s pakete daude eguneratzeko"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Zerbitzu erabilezina. Klikatu \"konfiguratu\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Sarea erorita dago. Klikatu \"Sarea konfiguratu\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Zerbitzua ezgaitu egin da. Ordainketaren zai..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Jaurti Mandrake Eguneratu"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Konfigurazioa"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Egiaztatu Eguneraketak"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Lerroko WebGunea"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Konfiguratu Sarea"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Konfiguratu Orain!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Eguneratu Appleta"
 
@@ -114,11 +114,11 @@ msgstr "Altxatuta"
 msgid "New Updates: "
 msgstr "Eguneraketa Berriak: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Eskuragarri"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Eskuraezin"
 
@@ -130,15 +130,20 @@ msgstr "Azken egiaztapena: "
 msgid "Close"
 msgstr "Itxi"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Egiaztapenik ez"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Konexio-arazoa"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Honi buruz ..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Irten"
 
@@ -355,7 +360,7 @@ msgstr "Posta helbide baliogabea!\n"
 msgid "Sending configuration..."
 msgstr "Konfigurazioa bidaltzen..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Konexio-arazoa"
 
@@ -426,21 +431,17 @@ msgstr "  --applet       - jaurtiki MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Eguneratu gakoak\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "ezin mdkupdate euskarritik paketeak eguneratu.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
 
 #, fuzzy
 #~ msgid "Mandrake Online Team"
 #~ msgstr "Ongi etorri MandrakeOnline-ra"
-
-#, fuzzy
-#~ msgid "Connecting ...\n"
-#~ msgstr "Konexio-arazoa"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - erabili soilik segurtasun euskarriak.\n"

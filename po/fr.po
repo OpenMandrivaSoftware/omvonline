@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-04 16:58+0100\n"
 "Last-Translator: Pierre Soubourou <poupoune5@yahoo.fr>\n"
 "Language-Team: français <fr@li.org>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.5\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Aucune mise à jour disponible pour votre système"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Problème de configuration. Lancer « configurer » à nouveau"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Le système occupé. Veuillez attendre ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s paquetages disponibles en mises à jour"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Service indisponible. Cliquez sur « configuration »"
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Le réseau n'est pas actif. Cliquez sur « Configurer le réseau »"
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Service désactivé. En attente de paiement ..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Lancer Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Configuration"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Vérifier les mises à jour"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Site Mandrake Online"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Configurer le réseau"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Configurer maintenant!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Appliquette des mises à jour Mandrake"
 
@@ -114,11 +114,11 @@ msgstr "Activé"
 msgid "New Updates: "
 msgstr "Nouvelles mises à jour : "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Disponible"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Pas disponible"
 
@@ -130,15 +130,19 @@ msgstr "Dernière vérification : "
 msgid "Close"
 msgstr "Fermer"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Pas de vérification"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+msgid "Checking..."
+msgstr "Vérification..."
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "À propos..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Quitter"
 
@@ -359,7 +363,7 @@ msgstr "Cette adresse email n'est pas valide !\n"
 msgid "Sending configuration..."
 msgstr "Envoi de la configuration..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problème de connexion"
 
@@ -432,14 +436,13 @@ msgstr "  --applet       - lance MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - met à jour les clés.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
 "Impossible de mettre à jour les paquetages à partir du medium de mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate n'a pas pu contacter le site, nous allons réessayer."
 
 #~ msgid "Mandrake Online Team"
 #~ msgstr "L'équipe de MandrakeOnline"
@@ -452,9 +455,6 @@ msgstr ""
 
 #~ msgid "Version:"
 #~ msgstr "Version :"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "En train de connecter...\n"
 
 #~ msgid "Login and Password should be < 12 characters\n"
 #~ msgstr ""

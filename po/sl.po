@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-03 15:09+0100\n"
 "Last-Translator: Gregor Pirnaver <gregor.pirnaver@siol.net>\n"
 "Language-Team: Slovenščina <lugos-slo@lugos.si>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Za vaš sistem ni na voljo nobenih popravkov"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Problemi z nastavitvami. Poženite \"Configure\" znova"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Sistem je zaposlen. Počakajte ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "na voljo je %s paketov za obnovo"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Storitev ni na voljo. Kliknite na \"nastavitve\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Omrežje je nepovezano. Kliknite na \"nastavi omrežje\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Poženi Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Nastavitve"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Preglej popravke"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Spletna stran na internetu"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Nastavljanje omrežja"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Nastavi Zdaj!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Vstavek Mandrake za popravke"
 
@@ -114,11 +114,11 @@ msgstr "Povezana"
 msgid "New Updates: "
 msgstr "Novi popravki: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Na voljo"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Ni na voljo"
 
@@ -130,15 +130,20 @@ msgstr "Zadnji pregled: "
 msgid "Close"
 msgstr "Zapri"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Brez pregleda"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Povezovanje ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "O ..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Izhod"
 
@@ -356,7 +361,7 @@ msgstr "Neveljaven poštni naslov!\n"
 msgid "Sending configuration..."
 msgstr "Pošiljanje nastavitev ..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problemi pri povezavi"
 
@@ -428,13 +433,12 @@ msgstr "  --applet       - poženi MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - Obnovi ključe\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate ne more vzpostaviti povezave, poskusili bomo znova."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Ni mogoče obnoviti paketov z mdkupdate medija.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate ne more vzpostaviti povezave, poskusili bomo znova."
 
 #~ msgid "Register Now!"
 #~ msgstr "Takojšnja registracija!"
@@ -456,9 +460,6 @@ msgstr "Ni mogoče obnoviti paketov z mdkupdate medija.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Različica:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Povezovanje ...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Zaženi MandrakeUpdate"

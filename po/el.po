@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2003-02-18 23:24+0000\n"
 "Last-Translator: Νίκος Νύκταρης (Nick Niktaris) <niktarin@yahoo.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -15,62 +15,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.6\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr ""
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 #, fuzzy
 msgid "Configuration"
 msgstr "Ανάγνωση Ρυθμίσεων\n"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr ""
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr ""
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 #, fuzzy
 msgid "Configure Now!"
 msgstr "Ανάγνωση Ρυθμίσεων\n"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr ""
 
@@ -114,11 +114,11 @@ msgstr ""
 msgid "New Updates: "
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr ""
 
@@ -130,15 +130,20 @@ msgstr ""
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Πρόβλημα σύνδεσης"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr ""
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Έξοδος"
 
@@ -359,7 +364,7 @@ msgstr "Μη έγκυρη διεύθυνση ταχυδρομείου!\n"
 msgid "Sending configuration..."
 msgstr ""
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Πρόβλημα σύνδεσης"
 
@@ -435,23 +440,18 @@ msgstr "  --applet       - αναβάθμιση όλων των πληροφορ
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - αναβάθμιση όλων των πληροφοριών.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"Το MandrakeUpdate δεν μπόρεσε να συνδεθεί με την ιστοσελίδα, θα "
-"ξαναδοκιμάσουμε."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Αδύνατη η αναβάθμιση των πακέτων από το μέσο mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "Το MandrakeUpdate δεν μπόρεσε να συνδεθεί με την ιστοσελίδα, θα "
+#~ "ξαναδοκιμάσουμε."
 
 #, fuzzy
 #~ msgid "Mandrake Online Team"
 #~ msgstr "Καλώς ήρθατε στο MandrakeOnline"
-
-#, fuzzy
-#~ msgid "Connecting ...\n"
-#~ msgstr "Πρόβλημα σύνδεσης"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - χρήση μόνο των ασφαλών μέσων.\n"

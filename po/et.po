@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-04 21:52+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -16,60 +16,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Teie süsteemile uuendusi ei ole"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Probleemid seadistusega. Proovige uuesti seadistada"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Süsteem on tegevuses. Palun oodake..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "Uuendusi on %s paketile"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Teenus ei ole saadaval. Palun seadistage see"
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Võrk on maas. Palun seadistage võrk"
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Teenus on välja lülitatud: oodatakse tasumist..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Mandrake uuenduste käivitamine"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Seadistused"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Uuenduste kontrollimine"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Veebilehekülg"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Võrgu seadistamine"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Seadista"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake uuenduste aplett"
 
@@ -113,11 +113,11 @@ msgstr "Olemas"
 msgid "New Updates: "
 msgstr "Uuendused: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Saadaval"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Pole saadaval"
 
@@ -129,15 +129,19 @@ msgstr "Viimati kontrollitud: "
 msgid "Close"
 msgstr "Sulge"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Pole kontrollitud"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+msgid "Checking..."
+msgstr ""
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Info..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Välju"
 
@@ -353,7 +357,7 @@ msgstr "See ei ole korrektne e-posti aadress!\n"
 msgid "Sending configuration..."
 msgstr "Konfiguratsiooni saatmine..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Probleem ühendusega"
 
@@ -424,14 +428,13 @@ msgstr "  --applet       - käivitatakse MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - uuendatakse võtmeid\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate ei suutnud saidiga ühendust saada, aga proovib kohe uuesti."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Pakettide värskendamine mdkupdate andmekandjalt ebaõnnestus.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate ei suutnud saidiga ühendust saada, aga proovib kohe uuesti."
 
 #~ msgid ""
 #~ " You are just starting our Free Mandrake Linux Download Edition for the "

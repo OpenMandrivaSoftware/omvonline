@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-02-26 20:24+0200\n"
 "Last-Translator: S. Alp ŞENYER <ssenyer@linux-sevenler.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -17,61 +17,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Mandrake Update Uygulamasını Çalıştır"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Yapılandırma"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Güncellemeleri Kontrol Et"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Online WebSite"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Ağı Yapılandır"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 #, fuzzy
 msgid "Configure Now!"
 msgstr "Yapılandır"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Güncelleme Uygulamacığı"
 
@@ -116,11 +116,11 @@ msgstr "Yukarı"
 msgid "New Updates: "
 msgstr "Yeni Güncellemeler:"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Mevcut"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Mevcut Değil"
 
@@ -132,16 +132,21 @@ msgstr "Son Kontrol:"
 msgid "Close"
 msgstr "Kapat"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 #, fuzzy
 msgid "No check"
 msgstr "Son Kontrol:"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Bağlantı problemi...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Hakkında..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Çıkış"
 
@@ -358,7 +363,7 @@ msgstr "Geçerli bir EPosta adresi değil\n"
 msgid "Sending configuration..."
 msgstr "Yapılandırma gönderiliyor..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Bağlantı problemi"
 
@@ -433,14 +438,13 @@ msgstr " --update        - Mandrake Update'yi çalıştır.\n"
 msgid "  --update       - Update keys\n"
 msgstr " --update        - Mandrake Update'yi çalıştır.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate sitesine bağlantı sağlanamadı, sonra tekrar deneyeceğiz."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "mdkupdate medyasından paketler güncellenemiyor.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate sitesine bağlantı sağlanamadı, sonra tekrar deneyeceğiz."
 
 #~ msgid "Register Now!"
 #~ msgstr "Şimdi Kayıt Ol!"
@@ -462,9 +466,6 @@ msgstr "mdkupdate medyasından paketler güncellenemiyor.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Sürüm:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Bağlantı problemi...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Mandrake Update Uygulamasını Başlat"

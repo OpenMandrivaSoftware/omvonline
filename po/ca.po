@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-04 20:15+0100\n"
 "Last-Translator: Albert Astals Cid <astals11@terra.es>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -18,60 +18,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "No hi ha actualitzacions disponibles pel vostre sistema"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Problemes de configuració. Executeu \"configura\" un altre cop"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "El sistema està ocupat. Espereu ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "Hi ha %s paquets disponibles per actualitzar"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "El servei no està disponible. Premeu a \"configuració\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "La xarxa està inactiva. Premeu a \"configura la xarxa\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Servei desactivat. S'està esperant el pagament..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Executa Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Configuració"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Comprova actualitzacions"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Configura la xarxa"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Configura ara!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Applet Mandrake Update"
 
@@ -115,11 +115,11 @@ msgstr "Funcionant"
 msgid "New Updates: "
 msgstr "Noves actualitzacions: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Disponible"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "No disponible"
 
@@ -131,15 +131,20 @@ msgstr "Última comprovació: "
 msgid "Close"
 msgstr "Tanca"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "No comprovis"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "S'està connectant ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Quant a"
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Surt"
 
@@ -361,7 +366,7 @@ msgstr "No és una adreça de correu vàlida!\n"
 msgid "Sending configuration..."
 msgstr "S'està enviant la configuració..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problema de connexió"
 
@@ -432,14 +437,13 @@ msgstr "  --applet       - actualitza MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Actualitza les claus\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate no ha pogut contactar amb el lloc, ho provarem més tard."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "No es poden actualitzar els paquets des del suport mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate no ha pogut contactar amb el lloc, ho provarem més tard."
 
 #~ msgid "Register Now!"
 #~ msgstr "Registreu-vos ara!"
@@ -461,9 +465,6 @@ msgstr "No es poden actualitzar els paquets des del suport mdkupdate.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Versió:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "S'està connectant ...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Inicia MandrakeUpdate"

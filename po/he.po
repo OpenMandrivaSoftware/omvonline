@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-09 21:05+0200\n"
 "Last-Translator: dovix <dovix2003@yahoo.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -22,60 +22,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "אין עדכונים זמינים עבור המערכת שלך"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "בעיות תצורה.  נא להריץ \"configure\" שוב"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "המערכת עסוקה, אנא המתן..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s חבילות מוכנות לעדכון "
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "השירות לא זמין. נא ללחוץ על \"תצורה\"."
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "הרשת למטה. נא ללחוץ על \"תצורה\"."
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "השרות הופסק. ממתין לתשלום..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "הפעלת עדכוני Mandrake"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "הגדרות"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "חיפוש עדכונים"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "אתר מקוון"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "הגדרת הרשת"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "הגדר כעת"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "יישומון עדכוני Mandrake"
 
@@ -119,11 +119,11 @@ msgstr "למעלה"
 msgid "New Updates: "
 msgstr "עדכונים חדשים:"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "זמין"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "לא זמין"
 
@@ -135,15 +135,19 @@ msgstr "בדיקה אחרונה:"
 msgid "Close"
 msgstr "סגור"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "ללא בדיקה"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+msgid "Checking..."
+msgstr ""
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "אודות.."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "יציאה"
 
@@ -356,7 +360,7 @@ msgstr "זו אינה כתובת דוא\"ל חוקית!\n"
 msgid "Sending configuration..."
 msgstr "שולח תצורה..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "ההתחברות נכשלה"
 
@@ -424,10 +428,9 @@ msgstr "  --applet       - הרץ את MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - עדכן את המפתחות.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "לא יכול להתחבר לאתר של MandrakeUpdate, נא לנסות שוב מאוחר יותר."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "נכשל שדרוג החבילות ממדית mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "לא יכול להתחבר לאתר של MandrakeUpdate, נא לנסות שוב מאוחר יותר."

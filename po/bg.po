@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-bg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2003-02-14 21:48+0200\n"
 "Last-Translator: Borislav Aleksandrov <B.Aleksandrov@cnsys.bg>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -15,62 +15,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr ""
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 #, fuzzy
 msgid "Configuration"
 msgstr "Прочитам вашата конфигурация\n"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr ""
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr ""
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 #, fuzzy
 msgid "Configure Now!"
 msgstr "Прочитам вашата конфигурация\n"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr ""
 
@@ -114,11 +114,11 @@ msgstr ""
 msgid "New Updates: "
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr ""
 
@@ -130,15 +130,20 @@ msgstr ""
 msgid "Close"
 msgstr "Затвори"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Проблем с връзката"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr ""
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Изход"
 
@@ -355,7 +360,7 @@ msgstr "Невалиден адрес за е-поща!\n"
 msgid "Sending configuration..."
 msgstr ""
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Проблем с връзката"
 
@@ -428,21 +433,16 @@ msgstr "  --applet       - обновява цялата информация.\n
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - обновява цялата информация.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "Не можах да се свържа с MandrakeOnline,моля опитайте по-късно."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Не мога да обновя пакети от източник mdkupdate.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "Не можах да се свържа с MandrakeOnline,моля опитайте по-късно."
 
 #, fuzzy
 #~ msgid "Mandrake Online Team"
 #~ msgstr "Добре дошли в MandrakeOnline"
-
-#, fuzzy
-#~ msgid "Connecting ...\n"
-#~ msgstr "Проблем с връзката"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr " --security     - използва само сигурни носители\n"

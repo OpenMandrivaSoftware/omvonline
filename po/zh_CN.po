@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-06 12:56+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -14,60 +14,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "您的系统没有可用的更新"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "配置问题。请再次调用“配置”"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "系统正忙。请稍候..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s 软件包可进行更新"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "服务不可用。请点击“配置”"
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "网络已掉线。请点击“配置网络”"
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "服务已禁用。等候付款..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "调用 Mandrake Update"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "配置"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "检查更新"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "在线网站"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "配置网络"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "立即配置!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Madrake Update 小程序"
 
@@ -111,11 +111,11 @@ msgstr "向上"
 msgid "New Updates: "
 msgstr "新更新："
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "可用"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "不可用"
 
@@ -127,15 +127,20 @@ msgstr "上次检查："
 msgid "Close"
 msgstr "关闭"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "不检查"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "正在连接...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "关于..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "退出"
 
@@ -345,7 +350,7 @@ msgstr "不是有效的电子邮件地址!\n"
 msgid "Sending configuration..."
 msgstr "正在发送配置..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "连接问题"
 
@@ -413,13 +418,12 @@ msgstr "  --applet      - 调用 MandrakeUpdate。\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update      - 更新密钥\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate 无法连接到站点, 请再试一次。"
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "无法从 mdkupdate 介质中更新包。\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate 无法连接到站点, 请再试一次。"
 
 #~ msgid "Test critical"
 #~ msgstr "关键测试"
@@ -444,9 +448,6 @@ msgstr "无法从 mdkupdate 介质中更新包。\n"
 
 #~ msgid "Version:"
 #~ msgstr "版本："
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "正在连接...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "启动 MandrakeUpdate"

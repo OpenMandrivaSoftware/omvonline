@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2003-03-18 21:48+0900\n"
 "Last-Translator: utuhiro\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -17,62 +17,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr ""
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 #, fuzzy
 msgid "Configuration"
 msgstr "設定読み込み中\n"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr ""
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr ""
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 #, fuzzy
 msgid "Configure Now!"
 msgstr "設定読み込み中\n"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr ""
 
@@ -116,11 +116,11 @@ msgstr ""
 msgid "New Updates: "
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr ""
 
@@ -132,15 +132,20 @@ msgstr ""
 msgid "Close"
 msgstr "閉じる"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "接続トラブル"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr ""
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "出る"
 
@@ -354,7 +359,7 @@ msgstr "無効なメールアドレスです\n"
 msgid "Sending configuration..."
 msgstr ""
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "接続トラブル"
 
@@ -426,21 +431,16 @@ msgstr "  --applet       - 全ての情報を更新。\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - 全ての情報を更新。\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdateはこのサイトに接続できません。再試行します。"
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "mdkupdateメディアからのパッケージ更新ができません。\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdateはこのサイトに接続できません。再試行します。"
 
 #, fuzzy
 #~ msgid "Mandrake Online Team"
 #~ msgstr "MandrakeOnline へようこそ"
-
-#, fuzzy
-#~ msgid "Connecting ...\n"
-#~ msgstr "接続トラブル"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - セキュリティメディアのみを使う。\n"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-02-23 00:21+0100\n"
 "Last-Translator: Tibor Pittich <Tibor.Pittich@mandrake.org>\n"
 "Language-Team: Slovak <i18n@mandrake.sk>\n"
@@ -13,61 +13,61 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr ""
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr ""
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr ""
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr ""
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr ""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr ""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr ""
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Spustiť Mandrake aktualizácie"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Konfigurácia"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Skontrolovať aktualizácie"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "Online web sajty"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Nastaviť sieť"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 #, fuzzy
 msgid "Configure Now!"
 msgstr "Nastaviť"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake aktualizačný applet"
 
@@ -111,11 +111,11 @@ msgstr "Hore"
 msgid "New Updates: "
 msgstr "Nové aktualizácie:"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Dostupné"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Nedostupné"
 
@@ -127,16 +127,21 @@ msgstr "Posledná kontrola:"
 msgid "Close"
 msgstr "Zatvoriť"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 #, fuzzy
 msgid "No check"
 msgstr "Posledná kontrola:"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Pripájanie...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "O.."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Koniec"
 
@@ -353,7 +358,7 @@ msgstr "Nekorektná emailová adresa!\n"
 msgid "Sending configuration..."
 msgstr "Zasielanie konfigurácie..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problém s pripojením"
 
@@ -425,14 +430,13 @@ msgstr "  --applet       - aktualizovať všetky informácie.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - aktualizovať všetky informácie.\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr ""
-"MandrakeUpdate nemôže kontaktovať stránku, prosím skúste to neskôr opäť."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Nemôžem aktualizovať balíčky z mdkupdate média.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr ""
+#~ "MandrakeUpdate nemôže kontaktovať stránku, prosím skúste to neskôr opäť."
 
 #~ msgid "Register Now!"
 #~ msgstr "Registrovať teraz!"
@@ -454,9 +458,6 @@ msgstr "Nemôžem aktualizovať balíčky z mdkupdate média.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Verzia:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Pripájanie...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Spustiť MandrakeUpdate"

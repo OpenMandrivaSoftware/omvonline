@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-17 15:12+0100\n"
+"POT-Creation-Date: 2004-03-21 10:53+0100\n"
 "PO-Revision-Date: 2004-03-04 18:24+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <<dansk@klid.dk>>\n"
@@ -15,60 +15,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../mdkapplet:49
+#: ../mdkapplet:50
 msgid "No updates available for your system"
 msgstr "Ingen opdateringer tilgængelige for dit system"
 
-#: ../mdkapplet:55
+#: ../mdkapplet:56
 msgid "Config problems. Launch \"configure\" again"
 msgstr "Konfigurationsproblemer. Start \"konfigurér\" igen"
 
-#: ../mdkapplet:61
+#: ../mdkapplet:62
 msgid "System is busy. Wait ..."
 msgstr "Systemet er optaget. Vent ..."
 
-#: ../mdkapplet:67
+#: ../mdkapplet:68
 #, perl-format
 msgid "%s packages available for update"
 msgstr "%s pakker tilgængelige for opdatering"
 
-#: ../mdkapplet:73
+#: ../mdkapplet:74
 msgid "Service not available. Click on \"configuration\""
 msgstr "Tjeneste er ikke tilgængelig. Klik på \"konfiguration\""
 
-#: ../mdkapplet:79
+#: ../mdkapplet:80
 msgid "Network is down. Click on \"configure Network\""
 msgstr "Netværket er nede. Klik på \"konfigurér netværk\""
 
-#: ../mdkapplet:85
+#: ../mdkapplet:86
 msgid "Service deactivated. Waiting for payment..."
 msgstr "Tjenesten deaktiveret. Venter på betaling..."
 
-#: ../mdkapplet:89
+#: ../mdkapplet:90
 msgid "Launch Mandrake Update"
 msgstr "Start Mandrake Opdatering op"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:91
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:92
 msgid "Check Updates"
 msgstr "Tjek for opdateringer"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:93
 msgid "Online WebSite"
 msgstr "WebSite på nettet"
 
-#: ../mdkapplet:93
+#: ../mdkapplet:94
 msgid "Configure Network"
 msgstr "Konfigurér netværk"
 
-#: ../mdkapplet:94
+#: ../mdkapplet:95
 msgid "Configure Now!"
 msgstr "Konfigurér nu!"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:127
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Opdateringer panelprogram"
 
@@ -112,11 +112,11 @@ msgstr "Op"
 msgid "New Updates: "
 msgstr "Nye opdateringer: "
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Available"
 msgstr "Tilgængelige"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:151 ../mdkapplet:248
 msgid "Not Available"
 msgstr "Ikke tilgængelige"
 
@@ -128,15 +128,20 @@ msgstr "Sidste tjek: "
 msgid "Close"
 msgstr "Luk"
 
-#: ../mdkapplet:233
+#: ../mdkapplet:237
 msgid "No check"
 msgstr "Ingen tjek"
 
-#: ../mdkapplet:298
+#: ../mdkapplet:245
+#, fuzzy
+msgid "Checking..."
+msgstr "Kobler op ...\n"
+
+#: ../mdkapplet:304
 msgid "About.."
 msgstr "Om..."
 
-#: ../mdkapplet:299
+#: ../mdkapplet:305
 msgid "Quit"
 msgstr "Afslut"
 
@@ -348,7 +353,7 @@ msgstr "Ikke en gyldig postadresse!\n"
 msgid "Sending configuration..."
 msgstr "Sender konfiguration..."
 
-#: ../mdkonline:253 ../mdkonline:329 ../mdkupdate:79
+#: ../mdkonline:253 ../mdkonline:329
 msgid "Connection problem"
 msgstr "Problem med forbindelse"
 
@@ -418,13 +423,12 @@ msgstr "  --applet       - start MandrakeOpdatér op.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Opdatér nøgler\n"
 
-#: ../mdkupdate:79
-msgid "MandrakeUpdate could not contact the site, we will try again."
-msgstr "MandrakeUpdate kunne ikke kontakte stedet, vi vil prøve igen."
-
-#: ../mdkupdate:247
+#: ../mdkupdate:269
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Kan ikke opdatere pakker fra mdkupdate-medium.\n"
+
+#~ msgid "MandrakeUpdate could not contact the site, we will try again."
+#~ msgstr "MandrakeUpdate kunne ikke kontakte stedet, vi vil prøve igen."
 
 #~ msgid "Register Now!"
 #~ msgstr "Registrér nu!"
@@ -446,9 +450,6 @@ msgstr "Kan ikke opdatere pakker fra mdkupdate-medium.\n"
 
 #~ msgid "Version:"
 #~ msgstr "Version:"
-
-#~ msgid "Connecting ...\n"
-#~ msgstr "Kobler op ...\n"
 
 #~ msgid "Start MandrakeUpdate"
 #~ msgstr "Start MandrakeUpdate"
