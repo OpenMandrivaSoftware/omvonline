@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-08-15 05:14+0800\n"
-"PO-Revision-Date: 2004-08-15 22:37+0200\n"
+"PO-Revision-Date: 2004-07-08 23:35+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <<dansk@klid.dk>>\n"
 "MIME-Version: 1.0\n"
@@ -17,44 +17,49 @@ msgstr ""
 "X-Generator: KBabel 1.0.2\n"
 
 #: ../mdkapplet:64
+#, fuzzy
 msgid "Your system is up-to-date"
-msgstr "Dit systemet er opdateret"
+msgstr "Systemet er optaget. Vent ..."
 
 #: ../mdkapplet:70
+#, fuzzy
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrakeonline.net"
-msgstr ""
-"Problem ved konfigurering af tjenester. Kig venligst i loggene og send post til "
-"support@mandrakeonline.net"
+msgstr "Ved ethvert problem kan du sende post til support@mandrakeonline.net\n"
 
 #: ../mdkapplet:76
 msgid "System is busy. Please wait ..."
 msgstr "Systemet er optaget. Vent ..."
 
 #: ../mdkapplet:82
+#, fuzzy
 msgid "New updates are available for your system"
-msgstr "Nye opdateringer er tilgængelige for dit system"
+msgstr "Ingen opdateringer tilgængelige for dit system"
 
 #: ../mdkapplet:88
+#, fuzzy
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Tjeneste er ikke konfugureret. Klik på \"konfigurér tjenesten\""
+msgstr "Tjeneste er ikke tilgængelig. Klik på \"konfiguration\""
 
 #: ../mdkapplet:94
+#, fuzzy
 msgid "Network is down. Please configure your network"
-msgstr "Netværket er nede. Konfigurér venligst dit netværk"
+msgstr "Netværket er nede. Klik på \"konfigurér netværk\""
 
 #: ../mdkapplet:100
+#, fuzzy
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Tjeneste er ikke aktiveret. Klik på \"Sted på nettet\""
+msgstr "Tjeneste er ikke tilgængelig. Klik på \"konfiguration\""
 
 #: ../mdkapplet:104 ../mdkapplet:153
 msgid "Install updates"
 msgstr "Installér opdateringer"
 
 #: ../mdkapplet:105
+#, fuzzy
 msgid "Configure the service"
-msgstr "Konfigurér tjenesten"
+msgstr "Konfigurér netværk"
 
 #: ../mdkapplet:106
 msgid "Check Updates"
@@ -74,7 +79,7 @@ msgstr "Konfigurér nu!"
 
 #: ../mdkapplet:141
 msgid "Mandrakelinux Updates Applet"
-msgstr "Mandrake Opdateringer panelprogram"
+msgstr "Mandrakelinux Opdateringer panelprogram"
 
 #: ../mdkapplet:151
 msgid "Actions"
@@ -117,8 +122,9 @@ msgid "Last check: "
 msgstr "Sidste tjek: "
 
 #: ../mdkapplet:200
+#, fuzzy
 msgid "Updates: "
-msgstr "Opdateringer: "
+msgstr "Nye opdateringer: "
 
 #: ../mdkapplet:204
 msgid "Launching drakconnect\n"
@@ -126,11 +132,12 @@ msgstr "Begynder på drakconnect\n"
 
 #: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
-msgstr "Start Mandrake Opdatering op - applet\n"
+msgstr "Start Mandrakelinux Opdatering op - applet\n"
 
 #: ../mdkapplet:212
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
-msgstr "Mandrakeonline ser ud til at være geninstalleret, genindlæser applet ...."
+msgstr ""
+"Mandrakeonline ser ud til at være geninstalleret, genindlæser applet ...."
 
 #: ../mdkapplet:220
 msgid "Computing new updates...\n"
@@ -150,7 +157,7 @@ msgstr "Ukendt tilstand"
 
 #: ../mdkapplet:249
 msgid "Online services disabled. Contact Mandrakeonline site\n"
-msgstr "Nettjenester er deaktiveret. Kontakt MandrakeOnline webstedet\n"
+msgstr "Nettjenester er deaktiveret. Kontakt Mandrakeonline webstedet\n"
 
 #: ../mdkapplet:250
 msgid "Wrong Password.\n"
@@ -198,7 +205,7 @@ msgstr "Om..."
 
 #: ../mdkapplet:445
 msgid "Always launch on startup"
-msgstr "Start altid ved opstart"
+msgstr ""
 
 #: ../mdkapplet:447
 msgid "Quit"
@@ -221,7 +228,7 @@ msgid ""
 msgstr ""
 "På dette trin forventes det at du har en konto på Mandrakeonline.\n"
 "Denne guide vil hjælpe dig med at oplægge din konfiguration\n"
-"(pakker, udstyrskonfiguration) i en centraliseret database for at \n"
+"(pakker, systemkonfiguration) i en centraliseret database for at \n"
 "holde dig orienteret omkring sikkerhedsopdateringer og nyttige "
 "opdateringer.\n"
 
@@ -263,7 +270,7 @@ msgstr "Autentifikation"
 
 #: ../mdkonline:125
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr "Indtast dit Mandrakeonline brugernavn, adgangskode og maskinnavn:"
+msgstr "Angiv dit Mandrakeonline brugernavn, adgangskode og maskinnavn:"
 
 #: ../mdkonline:130
 msgid "Machine name:"
@@ -295,10 +302,6 @@ msgstr ""
 "For at kunne få gavn af Mandrakeonline-tjenesterne\n"
 "er vi ved at oplægge din konfiguration.\n"
 "\n"
-"Hjælperen vil nu sende de følgende oplysninger til Mandrakesoft:\n"
-"1) listen af pakker du har installeret på dit system,\n"
-"2) din konfiguration af ydstyr.\n"
-"\n"
 "Hvis du ikke føler dig tryg med denne idé, eller ikke ønsker at\n"
 "drage nytte af denne tjeneste, så tryk 'Annullér'.\n"
 "Ved at trykke 'Næste' vil du lade os holde dig informeret om\n"
@@ -306,7 +309,7 @@ msgstr ""
 "epost-underretninger. Desuden vil du få rabat på betalbare \n"
 "supporttjenenester på www.mandrakesupport.com.\n"
 "Der vil også blive lavet et epost-alias med dit brugernavn@mandrakeonline."
-"net til dig."
+"net."
 
 #: ../mdkonline:141 ../mdkonline:208 ../mdkonline:234
 msgid "Finish"
@@ -374,7 +377,7 @@ msgstr "Problem med forbindelse"
 
 #: ../mdkonline:210
 msgid "Problem occurs when uploading files, please try again"
-msgstr "Et problem hændte ved oplægning af filer, prøv venligst igen"
+msgstr ""
 
 #: ../mdkonline:251
 msgid "Quitting Wizard\n"
@@ -432,7 +435,7 @@ msgstr "  --auto         - Mandrakeupdate startes automatisk.\n"
 
 #: ../mdkupdate:60
 msgid "  --applet       - launch Mandrakeupdate.\n"
-msgstr "  --applet       - start Mandrakeupdate op.\n"
+msgstr "  --applet       - start MandrakeOpdatér op.\n"
 
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
@@ -447,8 +450,8 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgid "Service deactivated. Waiting for payment..."
 #~ msgstr "Tjenesten deaktiveret. Venter på betaling..."
 
-#~ msgid "Launch Mandrake Update"
-#~ msgstr "Start Mandrake Opdatering op"
+#~ msgid "Launch Mandrakelinux Update"
+#~ msgstr "Start Mandrakelinux Opdatering op"
 
 #~ msgid "Configuration"
 #~ msgstr "Konfiguration"
@@ -504,17 +507,17 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgid "Unable to update packages from mdkupdate medium.\n"
 #~ msgstr "Kan ikke opdatere pakker fra mdkupdate-medium.\n"
 
-#~ msgid "Response from MandrakeOnline server\n"
-#~ msgstr "Svar fra MandrakeOnline-serveren\n"
+#~ msgid "Response from Mandrakeonline server\n"
+#~ msgstr "Svar fra Mandrakeonline-serveren\n"
 
-#~ msgid "Launching MandrakeUpdate\n"
-#~ msgstr "Start Mandrake Opdatering op\n"
+#~ msgid "Launching Mandrakeupdate\n"
+#~ msgstr "Start Mandrakelinux Opdatering op\n"
 
 #~ msgid "Yes I want automated updates"
 #~ msgstr "Ja, jeg ønsker automatiserede opdateringer"
 
-#~ msgid "MandrakeUpdate could not contact the site, we will try again."
-#~ msgstr "MandrakeUpdate kunne ikke kontakte stedet, vi vil prøve igen."
+#~ msgid "Mandrakeupdate could not contact the site, we will try again."
+#~ msgstr "Mandrakeupdate kunne ikke kontakte stedet, vi vil prøve igen."
 
 #~ msgid "Register Now!"
 #~ msgstr "Registrér nu!"
@@ -522,11 +525,11 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgid "About Online Applet"
 #~ msgstr "Om netværks-panelprogrammet"
 
-#~ msgid "Mandrake Online Team"
-#~ msgstr "MandrakeOnline-holdet"
+#~ msgid "Mandrakelinux Online Team"
+#~ msgstr "Mandrakeonline-holdet"
 
-#~ msgid "Mandrake Update Notification Applet"
-#~ msgstr "Mandrake opdatering adviserings-panelprogram"
+#~ msgid "Mandrakelinux Update Notification Applet"
+#~ msgstr "Mandrakelinux opdatering adviserings-panelprogram"
 
 #~ msgid "Team:"
 #~ msgstr "Holdet:"
@@ -537,8 +540,8 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgid "Version:"
 #~ msgstr "Version:"
 
-#~ msgid "Start MandrakeUpdate"
-#~ msgstr "Start MandrakeUpdate"
+#~ msgid "Start Mandrakeupdate"
+#~ msgstr "Start Mandrakeupdate"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - brug kun sikkerhedsmeddia.\n"
@@ -547,10 +550,10 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgstr "  -v             - mange beskeder.\n"
 
 #~ msgid ""
-#~ "You need to have an account on MandrakeOnline, or update your "
+#~ "You need to have an account on Mandrakeonline, or update your "
 #~ "subscription."
 #~ msgstr ""
-#~ "Du har brug for en konto hos MandrakeOnline, eller opdatere dit "
+#~ "Du har brug for en konto hos Mandrakeonline, eller opdatere dit "
 #~ "abonnement."
 
 #~ msgid "Your login or password may be wrong"
@@ -620,23 +623,22 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ msgstr "Annullér"
 
 #~ msgid ""
-#~ "Do you really want to abort MandrakeOnline?\n"
+#~ "Do you really want to abort Mandrakeonline?\n"
 #~ "To return to the Wizard press 'Cancel',\n"
 #~ "to really quit it press 'Quit'."
 #~ msgstr ""
-#~ "Vil du virkelig afbryde MandrakeOnline?\n"
+#~ "Vil du virkelig afbryde Mandrakeonline?\n"
 #~ "Tryk 'Annullér' for at vende tilbage til guiden.\n"
 #~ "Tryk 'Afslut' for at endeligt afslutte."
 
-#~ msgid "Really abort? - MandrakeOnline"
-#~ msgstr "Virkelig afslut? - MandrakeOnline"
+#~ msgid "Really abort? - Mandrakeonline"
+#~ msgstr "Virkelig afslut? - Mandrakeonline"
 
 #~ msgid ""
-#~ " You are just starting our Free Mandrake Linux Download Edition for the "
+#~ " You are just starting our Free Mandrakelinux Download Edition for the "
 #~ "first time. \n"
 #~ "\n"
-#~ "There are now over three million Mandrake Linux users all over the "
-#~ "world!\n"
+#~ "There are now over three million Mandrakelinux users all over the world!\n"
 #~ "\n"
 #~ "Please take a few seconds to fill a short questionnaire. The data from "
 #~ "this \n"
@@ -644,10 +646,10 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ "The text below is the privacy policy of Mandrakesoft about your personal "
 #~ "data."
 #~ msgstr ""
-#~ " Du er ved at starte vores Gratis Mandrake Linux Nedhentnings Version for "
+#~ " Du er ved at starte vores Gratis Mandrakelinux Nedhentnings Version for "
 #~ "første gang. \n"
 #~ "\n"
-#~ "Der er nu over tre millioner Mandrake Linux brugere over hele verden!\n"
+#~ "Der er nu over tre millioner Mandrakelinux brugere over hele verden!\n"
 #~ "\n"
 #~ "Brug venligst et øjeblik til at svare på et kort spørgeskema. Data fra "
 #~ "dette \n"
@@ -663,7 +665,8 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ "\n"
 #~ "Firstly, we record your email address, name and postal address.\n"
 #~ "Secondly we give you a unique customer ID. This ID will be used to \n"
-#~ "add additional information related to your Mandrake account such as:\n"
+#~ "add additional information related to your Mandrakelinux account such "
+#~ "as:\n"
 #~ "    - Your subscription to mailling lists.\n"
 #~ "    - When registering a purchased product, we ask for personal\n"
 #~ "information as well as system/hardware details so that we may deliver\n"
@@ -708,7 +711,7 @@ msgstr "  --update       - Opdatér nøgler\n"
 #~ "postadresse.\n"
 #~ "For det andet giver vi dig en unik kundeidentitet. Denne ID vil blive "
 #~ "brugt til \n"
-#~ "at tilføje yderligere information relateret til din Mandrake-konto, "
+#~ "at tilføje yderligere information relateret til din Mandrakelinux-konto, "
 #~ "såsom:\n"
 #~ "    - Dit abonnement på postlister.\n"
 #~ "    - Ved registrering af et købt produkt spørger vi om personlige\n"
@@ -757,4 +760,3 @@ msgstr "  --update       - Opdatér nøgler\n"
 
 #~ msgid "Sans Italic 17"
 #~ msgstr "Sans Italic 17"
-
