@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
 - add urpmi source for club member.
-- remove gnome icon on desktop
+- remove icon on gnome desktop (handled in mandrake-galaxy)
 
 * Mon Feb 17 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
 - rewrite / port to Gtk2.
