@@ -2,41 +2,40 @@ $Id$
 Things to do on mdkonline
 -------------------------------------------------------------------------------
 
- * mdkapplet: verifier, en cas d'installation de différentes releases d'un
-   même package, que le package le plus à jour est installer.
-   ? forcer la désinstallation de packages rendus obsoletes ? (devrait être
-   géré par rpm...)
+ * mdkapplet:
+   several releases of the same package may be installed along each other
+   (seen for libaspell15, ~december); check that at least the most up to
+   date available package is installed.
+   Should it be handled by rpm instead?
 
  * mdkonline, mdkupdate:
-   ajouter de l'animation graphique pour l'attente (pingouin animé tournant
-   sur lui-même, dansant)
- 
- * mdkapplet: possibilité de lancer mdkapplet depuis le menu système
+   add animated fluffy tux for waiting during computations?
 
- * mdkapplet: l'applet n'apparait qu'en cas de non config, ou d'alerte.
-   si tout va bien, pas besoin de la voir.
+ * mdkapplet:
+   a launch system menu item should appear in System > ?
 
- * mdkapplet: affiche en popup le nombre de mises à jour à faire.
+ * mdkapplet:
+   should appear only for notification (no config, config problem, available
+   updates), not when everything is fine?
 
- * mdkupdate: au lancement, vérifier d'abord s'il y a quelquechose à faire,
-   avant de lancer tout le reste (urpmi, etc.)
+ * mdkapplet:
+   applet popup display the number of available updates (requires full diff
+   check, changes silentCheck() )
 
- * mdkupdate: lancé toutes les 2 heures +/- sel ?
+ * mdkupdate:
+   at start, first query the server to check if anything should be done;
+   if nothing, don't run urpmi, just upload the config.
+
+ * mdkupdate:
+   started every 2 hours +/- salt ?
 
 
 
-Pour version pro:
-
- * changer le dialogue client <-> serveur.
-   le client demande au serveur les tâches (parmi celles préétablies) qu'il
-   a à faire, les exécute, et renvoie le résultat au serveur.
-
-   les tâches peuvent être : mettre à jour (cas actuel), installer,
-   désinstaller, modifier fichier de config, exécuter un programme, traiter
-   un paquet de données, etc.
-
- * passer en appels SOAP ou REST.
-
+ * for pro version (v2)
+   changer server/client protocol:
+     - move to SOAP or REST,
+     - client queries server for higher-level tasks (from a predefined list)
+       (package update, install, uninstall, config setting, data processing)
 
 
 -------------------------------------------------------------------------------
