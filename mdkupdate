@@ -184,7 +184,7 @@ sub send_conf_update {
 sub send_rpm_dif {
     my ($login, $password, $boxname, $oldkey) = @_;
     `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$boxname.$oldkey.dif`;
-    -s "$confdir/$login.$password.$boxname.$oldkey.dif" or exit(0);
+    -s "$confdir/$login.$password.$boxname.$oldkey.dif" or exit(1);
     my $tag = { submit => "upload_dif", dif_file => [ "$confdir/$login.$password.$boxname.$oldkey.dif" ] };
     my ($res, $key) = mdkonline::send_config($url->{online_dif}, $tag);
     #- update mdkupdate.rpms with newer version just sent.
