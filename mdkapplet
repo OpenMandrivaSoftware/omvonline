@@ -232,7 +232,7 @@ sub browser {
     $Br{$wm}
 }
 sub displayLogs {
-    
+    system "logdrake --explain=drakxtools &"
 }
 sub setState {
     my $state_type = shift;
