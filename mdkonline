@@ -221,16 +221,16 @@ sub on_prev_clicked {
 
 sub subscribe_mdkonline() {
     my $browser=$ENV{'BROWSER'};
-    #my $initial_user=$ENV{'INITIAL_USER'};
-    #my $user_current=$ENV{'USER'};
+    my $initial_user=$ENV{'INITIAL_USER'};
+    my $user_current=$ENV{'USER'};
     
     if (!$browser) {splash_warning( " ". _("Warning: No browser specified") ." "); return;}
-#    if ($initial_user ne "root" && $initial_user ne undef) {
-#	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
-    
-#    } else {
-    system("$browser $link_to_mdkonline &");
+    if ($initial_user ne "root" && $initial_user ne undef) {
+	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
+    } else {
+	system("$browser $link_to_mdkonline &");
 	
+    }
 }
 
 sub test_passwd () {
@@ -329,6 +329,7 @@ sub send_config {
 #					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
 #					    ]);
     my $response = $ua->request(POST 'http://upload.mandrakeonline.net/wizard.php',
+
 				Content_Type => 'form-data',
 				Content => [submit => "upload_wizard",
 					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
