@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 10.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-05 13:34+0100\n"
+"POT-Creation-Date: 2004-11-22 14:01+0100\n"
 "PO-Revision-Date: 2004-11-20 22:06+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -302,9 +302,9 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"您需要在本步骤中提供您在 Mandrakeonline 的账户。而本助手将会帮助您将您"
-"的配置(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到"
-"安全更新和有用的升级。\n"
+"您需要在本步骤中提供您在 Mandrakeonline 的账户。而本助手将会帮助您将您的配置"
+"(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到安全更新和有"
+"用的升级。\n"
 
 #: ../mdkonline:114
 #, c-format
@@ -360,12 +360,11 @@ msgstr ""
 "1) 您在系统中所安装的软件包列表；\n"
 "2) 您的硬件配置。\n"
 "\n"
-"如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。"
-"只要您按下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的"
-"安全更新和有用的升级。除此以外，您还能够从 www.mandrakeexpert.com 上得"
-"到支持服务的付费折扣。"
+"如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。只要您按"
+"下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的安全更新和有用的"
+"升级。除此以外，您还能够从 www.mandrakeexpert.com 上得到支持服务的付费折扣。"
 
-#: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:126 ../mdkupdate:198
+#: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:129
 #, c-format
 msgid "Connection problem"
 msgstr "连接问题"
@@ -450,9 +449,7 @@ msgstr "您的上传已经成功!"
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
-msgstr ""
-"从现在开始，您将能够收到 Mandrakeonline 发出的安全"
-"和更新通知了。"
+msgstr "从现在开始，您将能够收到 Mandrakeonline 发出的安全和更新通知了。"
 
 #: ../mdkonline:178
 #, c-format
@@ -460,8 +457,8 @@ msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandrakeonline 还能让您自动保持更新。您的系统中会定期运行一个特"
-"定的程序，该程序会自动下载并安装更新\n"
+"Mandrakeonline 还能让您自动保持更新。您的系统中会定期运行一个特定的程序，该程"
+"序会自动下载并安装更新\n"
 
 #: ../mdkonline:180
 #, c-format
@@ -473,27 +470,27 @@ msgstr "上传文件时发生了错误，请重试"
 msgid "Country"
 msgstr "国家/地区"
 
-#: ../mdkonline:198
+#: ../mdkonline:199
 #, c-format
 msgid "Congratulations"
 msgstr "配置"
 
-#: ../mdkonline:198
+#: ../mdkonline:199
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "您的 Mandrakeonline 账户已经配置成功\n"
 
-#: ../mdkonline:214
+#: ../mdkonline:215
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "配置上传成功"
 
-#: ../mdkonline:215
+#: ../mdkonline:216
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "读取配置出错"
 
-#: ../mdkonline:216
+#: ../mdkonline:217
 #, c-format
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
@@ -531,7 +528,7 @@ msgstr "账户已存在\n"
 msgid "Problem connecting to server \n"
 msgstr "连接服务器出错\n"
 
-#: ../mdkupdate:52
+#: ../mdkupdate:56
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -547,41 +544,38 @@ msgstr ""
 "\n"
 "用法:\n"
 
-#: ../mdkupdate:57
+#: ../mdkupdate:61
 #, c-format
 msgid "  --help         - print this help message.\n"
 msgstr "  --help        - 打印本帮助信息。\n"
 
-#: ../mdkupdate:58
+#: ../mdkupdate:62
 #, c-format
 msgid "  --auto         - Mandrakeupdate launched automatically.\n"
 msgstr "  --auto        - 自动调用 Mandrakeupdate。\n"
 
-#: ../mdkupdate:59
+#: ../mdkupdate:63
 #, c-format
 msgid "  --applet       - launch Mandrakeupdate.\n"
 msgstr "  --applet      - 调用 Mandrakeupdate。\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:71
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
 msgstr "未找到 %s 文件。请先运行 mdkonline 向导"
 
-#: ../mdkupdate:126
+#: ../mdkupdate:129
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr "Mandrakeonline 无法连接网站，请稍后再试一次。"
 
-#: ../mdkupdate:176
+#: ../mdkupdate:180
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "无法从 mdkupdate 介质更新软件包。\n"
 
-#: ../mdkupdate:198
-#, c-format
-msgid ""
-"Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
-"mandrakeonline [dot] net"
-msgstr ""
-"Mandrakeupdate 无法上传差异文件。请给 support@mandrakeonline.net 发送邮件"
-
+#~ msgid ""
+#~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
+#~ "[at] mandrakeonline [dot] net"
+#~ msgstr ""
+#~ "Mandrakeupdate 无法上传差异文件。请给 support@mandrakeonline.net 发送邮件"
