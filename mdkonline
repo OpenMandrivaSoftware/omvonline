@@ -319,11 +319,6 @@ sub send_config {
 #    print STDERR "Sending config\n";
     my $result = -1;
     
-    #- added to allow .mdkupdate.rpms file creation.
-    open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
-    print FILE join ('', sort `rpm -qa`);
-    close FILE;
-
     report_config("/root/$login.$passwd.$box_name.online.log");
     `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.$box_name.online.log`;
 
@@ -360,6 +355,11 @@ sub send_config {
 
     # if informations were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $result) {
+	#- added to allow .mdkupdate.rpms file creation.
+	open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
+	print FILE join ('', sort `rpm -qa`);
+	close FILE;
+
 	# go to last page
 	$notebook_global->set_page(5); 
     } else {

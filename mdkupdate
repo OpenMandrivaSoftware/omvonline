@@ -40,7 +40,7 @@ sub _ {
     sprintf(Locale::gettext::gettext($format), @params);
 }
 
-$logfile = "/var/log/mdkupdate.log";
+my $logfile = "/var/log/mdkupdate.log";
 my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
 my $url_get_rpms = "https://www.mandrakeonline.net/online_update.php";
 my $rpms_rep = "/root/tmp/";
@@ -65,19 +65,23 @@ usage:
 grep { $_ !~ /^-?-(v|update|security)$/ } @ARGV and usage;
 
 my %o = getVarsFromSh("/root/.mdkupdate");
+update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
+rpm_qa("/root/rpm_qa_installed_after");
+my %new = getVarsFromSh("/root/.mdkupdate");
 if (! -s "/root/.mdkupdate.rpms" || $update) {
     #- added to allow .mdkupdate.rpms file creation.
     open FILE, ">/root/.mdkupdate.rpms" or die "Couldn't open /root/.mdkupdate.rpms : $!";
     print FILE join ('', sort `rpm -qa`);
     close FILE;
     #- send configuration and get back key to use...
-    $o{CURRENTKEY} = send_config($o{LOGIN},$o{PASS},$o{BOX});
+    $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{BOX});
+    delete $new{OLDKEY};
+    #- save back keys.
+    setVarsInSh("/root/.mdkupdate", \%new);
+} else {
+    #- this can safely be ignored if new configuration is sent.
+    send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
 }
-#rpm_qa("/root/rpm_qa_installed_before");
-update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
-rpm_qa("/root/rpm_qa_installed_after");
-my %new = getVarsFromSh("/root/.mdkupdate");
-send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
 clean_dir();
 
 ################################################################################
@@ -140,7 +144,7 @@ sub send_config {
     # Check the outcome of the response
     #print "REPONSE: ".$response->content."\n";
     if ($response->is_success) {
-	$result = ($response->content =~ /^TRUE(.*)/) ? 0 : -1;
+	$result = ($response->content =~ /TRUE(.*)/) ? 0 : -1;
 	#print("key is $1\n");
 	$key = $1; 
     } else {
@@ -167,9 +171,9 @@ sub update_rpms {
 	my $response = $ua->request($request);
 	$string = $response->content;
 	if ($response->is_success) {
-	    $result = ($response->content =~ /^TRUE/) ? 0 : -1;
+	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
-	    log_it(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
+	    log_i(_("Connection problem")."\n"._("MandrakeUpdate could not contact the site, we will try again"));
 	    clean_dir();
 	    exit 1;
 	}
@@ -193,10 +197,10 @@ sub update_rpms {
 	    my @junk= splice(@str_m,0,3);
 	    my $mir_full = "ftp://$l{MIRROR}/$l{VER}/RPMS/";
 	    update_packages($mir_full,@str_m);
-	} else { log_it("problem occur $str_m\n"); }
+	} else { log_i("problem occur $str_m\n"); }
 	    	    
     } else {
-	log_it(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
+	log_i(_("Your login or password may be wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription")."\n"._("For any problem send mail to support\@mandrakeonline.net\n"));
 	clean_dir();
 	exit 1;
     }
@@ -213,7 +217,7 @@ sub update_packages {
 	$? == 0 or die _("unable to update packages from mdkupdate medium\n");
     };
     $@ and die;
-#    chdir($rpms_rep) or log_it("\ncannot chdir to $rpms_rep\n");
+#    chdir($rpms_rep) or log_i("\ncannot chdir to $rpms_rep\n");
 #    $full_rpm = join(' ',@str);
 #    print "@str\n";
 #    foreach (@str) {
@@ -238,28 +242,34 @@ sub send_rpm_dif {
 				Content => [submit => "upload_dif",
 					    dif_file => ["/root/$login.$password.$box_name.$oldkey.dif"]
 					    ]);
+    #- update .mdkupdate.rpms with newer version just sent.
+    if ($response->content =~ /TRUE/) {
+	unlink "/root/.mdkupdate.rpms";
+	rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
+    }
+
     # Check the outcome of the response
     print "REPONSE: ".$response->content."\n";
 }
 
 sub clean_dir {
-    unlink "/root/.mdkupdate.rpms";
-    rename "/root/rpm_qa_installed_after", "/root/.mdkupdate.rpms";
-
-    system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
+    #system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
+    #system("rm -f /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
 }
 
 sub rpm_qa {
     my ($file) = @_;
     open (FILE,"> $file") || die "Couldn't open $file : $!"; 
     join '', map { chomp; print FILE "$_" }
-    join('',sort `rpm -qa`); 
+    join('',sort `rpm -qa`);
+    close FILE;
 }
 
-sub log_it {
+sub log_i {
     local *LOG;
-    open LOG, ">> $logfile" or die "can't output to log file\n";
+    open LOG, ">>/var/log/mdkupdate.log" or die "can't output to log file\n";
     print LOG @_;
+    close LOG;
 }
 
 sub fatal {
