@@ -1,3 +1,4 @@
+# translation of mdkonline-eu.po to EUSKARA
 # translation of mdkonline.po to EUSKARA
 # translation of Mandrakeonline-eu.po to EUSKARA
 # translation of Mandrakeonline-eu.po to basque
@@ -9,10 +10,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: mdkonline-eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-10-01 22:41+0200\n"
-"PO-Revision-Date: 2004-09-21 23:25+0200\n"
+"PO-Revision-Date: 2004-10-10 23:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: EUSKARA <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -307,9 +308,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Sortu Mandrakeonline kontua"
 
 #: ../mdkonline:107
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Ez dut Mandrakeonline konturik eta nahiko nuke "
+msgstr "Ez daukat Mandrakeonline konturik eta harpedetu nahi nuke "
 
 #: ../mdkonline:111 ../mdkonline:131 ../mdkonline_tui:114 ../mdkonline_tui:145
 #, c-format
@@ -511,26 +512,27 @@ msgstr ""
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
 msgstr ""
+"Erregistro izena eta pasahitza 12 karaktere baino laburragoa behar lukete\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Ez dira karaktere bereziak onartzen\n"
 
 #: ../mdkonline.pm:60
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Mesedez osatu eremu guztiak\n"
 
 #: ../mdkonline.pm:61
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "PostaE baliogabea\n"
 
 #: ../mdkonline.pm:62
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Kontua dagoeneko existitzen da\n"
 
 #: ../mdkonline.pm:68
 #, c-format
@@ -538,19 +540,19 @@ msgid "Problem connecting to server \n"
 msgstr "Arazoa zerbitzariarekin konektatzean \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:95
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Ongi etorri Mandrakeonline-ra"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Dagoeneko kontu bat daukat"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Harpidetu nahi dut"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:120
 #, c-format
@@ -560,22 +562,22 @@ msgstr "Itxaron"
 #: ../mdkonline_tui:103
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Kontu sorrera edo egiaztapena"
 
 #: ../mdkonline_tui:120
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Ongi etorri Mandrakeonline-ra"
+msgstr "Mandrakeonline webgunera konektatzen..."
 
 #: ../mdkonline_tui:130
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "edo"
 
 #: ../mdkonline_tui:130
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Pasahitza ez da zuzena"
+msgstr "Pasahitz okerra:"
 
 #: ../mdkonline_tui:158
 #, c-format
@@ -583,21 +585,23 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline Kontu sorrera arrakastatsua.\n"
+"Mesedez klikatu \"Hurrengoa\" egiaztatu eta zure konfigurazioa igotzeko\n"
 
 #: ../mdkonline_tui:175
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Estatua:"
+msgstr "Estatua"
 
 #: ../mdkonline_tui:187
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations"
-msgstr "Bidali konfigurazioa"
+msgstr "Zorionak"
 
 #: ../mdkonline_tui:187
 #, c-format
 msgid "Your Mandrakeonline account has been successfully configured\n"
-msgstr ""
+msgstr "Zure Mandrakeonline kontuaren konfiguraketa arrakastatsua izan da\n"
 
 #: ../mdkupdate:50
 #, c-format
@@ -639,17 +643,17 @@ msgstr "  --update       - Gakoak eguneratzen ditu\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Ez da %s fitxategia aurkitu. Aurrena exekutatu mdkonline morroia"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Ezin izan da Mandrakeonline-rekin kontaktatu, saiatu berriro geroago"
+msgstr "Mandrakeupdate-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Ezin dira mdkupdate euskarritik paketeak eguneratu.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -657,9 +661,5 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Saltatu morroia"
-
-#~ msgid "Subscribe"
-#~ msgstr "Harpidetu"
+"Mandrakeupdate-k ezin izan ditu diff fitxategiak igo. Bidali mezu bat "
+"support [at] mandrakeonline [dot] net helbidera"
