@@ -32,12 +32,19 @@ use common;
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
 my $logfile = "/var/log/mdkupdate.log";
-my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
-my $url_get_rpms = "https://www.mandrakeonline.net/online_update.php";
+my $conffile = "/root/.mdkupdate";
+
+my $onlineUrl = "https://www.mandrakeonline.net/";
+my %url;
+foreach (qw(online_dif online_update online3_RemoteAction)) {
+    $url->{$_} = $onlineUrl . $_ . 'php'
+}
 my $rpms_rep = "/root/tmp/";
 my $VERSION = "0.17";
 my $security = grep { /^-?-security$/ } @ARGV;
 my $update = grep { /^-?-update$/ } @ARGV;
+
+my ($scheduled, $noscheduled);
 
 sub usage {
     print STDERR N("mdkupdate version %s
@@ -46,35 +53,71 @@ This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
 ", $VERSION) . N("  --help         - print this help message.
-") . N("  --security     - use only security media.
-") . N("  --update       - launch MandrakeUpdate.
-") . N("  -v             - verbose mode.
+") . N("  --auto         - Mdkupdate launched automatically.
+") . N("  --applet       - launch MandrakeUpdate.
+") . N("  --update       - Update keys
 ");
     exit(0);
 }
 
-grep { $_ !~ /^-?-(v|update|security)$/ } @ARGV and usage;
+my ($opt) = @ARGV;
+@ARGV == 1 && ($opt eq '--auto' || $opt eq '--security' || $opt eq '--applet' || $opt eq '--help') or usage();
 
--s "/root/.mdkupdate" or die N("No /root/.mdkupdate file found. Run mdkonline wizard first");
+-s $conffile or die N("No $conffile file found. Run mdkonline wizard first");
 
-my %o = getVarsFromSh("/root/.mdkupdate");
-update_rpms($o{LOGIN},$o{PASS},$o{BOX},$o{CURRENTKEY});
-rpm_qa("/root/rpm_qa_installed_after");
-my %new = getVarsFromSh("/root/.mdkupdate");
-if (! -s "/root/.mdkupdate.rpms" || $update) {
-    #- send configuration and get back key to use...
-    $new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{BOX});
-    delete $new{OLDKEY};
-    #- save back keys.
-    setVarsInSh("/root/.mdkupdate", \%new);
+my %o = getVarsFromSh($conffile);
+if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
+    my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{BOX} . '&key=' . $o{CURRENTKEY};
+    my $resp = getFromURL($MandrakeUpdateURL);
+    my $contents = $resp->content;
+    print " \n\n *****  Response from Online3_RemoteAction is : \n $contents \n end update_rpms answer **********\n\n";
+    if ($resp->is_success) {
+	$ret = ($contents =~ /TRUE/) ? 0 : -1;
+    } else {
+	log_i(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
+    }
 } else {
-    #- this can safely be ignored if new configuration is sent.
-    send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
+    $ret = -1; 
 }
-clean_dir();
+if(!$ret) {
+    my $c2h = splitContents($contents);
+    if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
+    if ($c2h->{FTP}) { addMedia($c2h->{FTP}) }
+    $scheduled = join(',',@{$c2h->{sched}});
+    $noscheduled = join(',',@{$c2h->{nosched}});
+    if ($opt eq '--applet') {
+	system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
+    } else {
+	autoInstallRpms($c2h->{sched});
+    }
+    rpm_qa("/root/rpm_qa_installed_after");
+    my %new = getVarsFromSh($conffile);
+    if (! -s "/root/.mdkupdate.rpms" || $update) {
+	#- send configuration and get back key to use...
+	$new{CURRENTKEY} = send_config($new{LOGIN},$new{PASS},$new{BOX});
+	delete $new{OLDKEY};
+	#- save back keys.
+	setVarsInSh($conffile, \%new);
+    } else {
+	#- this can safely be ignored if new configuration is sent.
+	send_rpm_dif($new{LOGIN},$new{PASS},$new{BOX},$new{OLDKEY});
+    }
+    clean_dir();
+}
+sub splitContents {
+    my $cont = shift;
+    my ($elem, $s);
+    $s = [ split /\n/, $cont ];
+    $elem->{torf} = $s->[0];
+    if ($elem->{torf} eq 'TRUE') {
+	($elem->{torf},$elem->{OLDKEY},$elem->{NEWKEY},$elem->{FTP}) = splice(@$s,0,4);
+	($elem->{sched},$elem->{nosched}) = partition { $_ =~/i586$/ } @$s;
+    }
+    $elem
+}
 
 ################################################################################
-# taken from mdkonline to perform complete update of rpm list (by diff), it has
+# Taken from mdkonline to perform complete update of rpm list (by diff), it has
 # been decided to do exactly what mdkonline does the first time to update the db.
 ################################################################################
 sub report_config {
@@ -101,6 +144,14 @@ map { chomp; print FILE "$_\n" }
     header("rpm -qa"), join ('', sort `rpm -qa`),
     header("mandrake version"), cat_('/etc/redhat-release');
 close(FILE);
+}
+sub getFromURL {
+    my ($link) = @_;
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("MdkUpdateAgent/$VERSION" . $ua->agent);
+    my $request = HTTP::Request->new(GET => $link);
+    my $response = $ua->request($request);
+    $response
 }
 sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
@@ -151,67 +202,47 @@ sub send_config {
 }
 ################################################################################
 
-sub update_rpms {
-    my ($login,$password,$box_name,$curkey) =@_;
-    my $result = -1;
-    my $string;
-    
-    if ($login && $password && $login !~ /\s+/ && $password !~ /\s+/) {
-	my $ua = LWP::UserAgent->new;
-	$ua->agent("MdkUpdateAgent/$VERSION" . $ua->agent);
-	my $request = HTTP::Request->new(GET => $url_get_rpms.'?log='.$login.'&pass='.$password.'&host='.$box_name.'&key='.$curkey);
-	my $response = $ua->request($request);
-	$string = $response->content;
-	print " \n\n *****  Response from update_rpms is : \n $string \n end update_rpms answer **********\n\n";
-	if ($response->is_success) {
-	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
-	} else {
-	    log_i(N("Connection problem")."\n" . N("MandrakeUpdate could not contact the site, we will try again."));
-	    clean_dir();
-	    exit 1;
-	}
-    } else {
-	$result = -1; 
-    }
-    # if correct, return 0
-    if (! $result) {
-	@str_m = split '\n', $string;
-	my %l = getVarsFromSh "/root/.mdkupdate";
-	if ($str_m[0] eq 'TRUE') {
-	    setVarsInSh("/root/.mdkupdate", {
-		OLDKEY => $str_m[2],
-		CURRENTKEY => $str_m[1],
-		MIRROR => $l{MIRROR},
+sub autoInstallRpms {
+    my ($pkgs) = shift;
+    my @pkg;
+    push(@pkg, $_ . '.rpm') foreach @{$pkgs};
+    updatePkgs(@pkg);
+}
+sub updateConf {
+    my ($oldkey, $newkey) = @_;
+    my %l = getVarsFromSh $conffile;
+    setVarsInSh($conffile, {
+		OLDKEY => $oldkey,
+		CURRENTKEY => $newkey,
 		VER => $l{VER},
-		BOX => $l{BOX},
+       	        BOX => $l{BOX},
 		PASS => $l{PASS},
 		LOGIN => $l{LOGIN} ,
-	    });
-	    my @junk= splice(@str_m,0,3);
-	    my $mir_full = "ftp://$l{MIRROR}/$l{VER}/RPMS/";
-	    update_packages($mir_full, @str_m);
-	} else { log_i("problem occur $str_m\n"); }
-	    	    
-    } else {
-	log_i(N("Your login or password may be wrong") . "\n" . N("You need to have an account on MandrakeOnline, or update your subscription.")."\n" . N("For any problem send an e-mail to support\@mandrakeonline.net\n"));
-	clean_dir();
-	exit 1;
-    }
+	      });
 }
-
-sub update_packages {
-    my ($mir, @str) = @_;
-    @str or return;
+sub addMedia {
+    my $mirror = shift;
+    my $r = getRelease();
+    my $fullpath2mir = "ftp://" . "$mirror". "/$r" . "/RPMS" . "/" ;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "mdkupdate", $mir;
-	$? == 0 or die N("Unable to create mdkupdate medium.\n");
+	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with ../base/hdlist.cz";
+    };
+    $@ and die "Problem adding Update Media with urpmi";
+}
+sub getRelease() {
+    my $release = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
+    $release
+}
+sub updatePkgs {
+    my (@str) = @_;
+    @str or return;
+    eval {
 	system "/usr/sbin/urpmi", "--auto", "--media", "mdkupdate", map { /^(.*)\.rpm$/ && $1 } @str;
 	$? == 0 or die N("Unable to update packages from mdkupdate medium.\n");
     };
     $@ and die "Problem upgrading with urpmi";
 }
-
 sub send_rpm_dif {
     my ($login,$password,$box_name,$oldkey) =@_;
     #`sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
