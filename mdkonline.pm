@@ -66,6 +66,12 @@ sub subscribe_online {
     $str
 }
 
+sub check_valid_email {
+    my $email = shift;
+    my $st = $email->get_text=~/^[a-z][a-z0-9_\-]+(\.[a-z][a-z0-9_]+)?@([a-z][a-z0-9_\-]+\.){1,3}(\w{2,4})(\.[a-z]{2})?$/ix ? 1 : 0;
+    return $st
+}
+
 sub rpm_ver_parse {
     my ($ver) = @_;
     my @verparts = ();
