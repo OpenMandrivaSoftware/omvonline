@@ -40,7 +40,7 @@ Mdkapplet is an KDE/Gnome applet for Security update notification.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT install 
+make PREFIX=$RPM_BUILD_ROOT install 
 
 #symbolic link to drakonline and older path
 mkdir -p %buildroot%_prefix/X11R6/bin/
@@ -79,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %{_sbindir}/*
 %{_bindir}/*
+%{_prefix}/usr/X11R6/bin/*
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
