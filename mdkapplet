@@ -307,7 +307,7 @@ sub setAutoStart {
     my $state = shift;
     my $file = "$ENV{HOME}/.mdkonline";
     if (-f $file) { 
-	my %s = getVarsInSh($file);
+	my %s = getVarsFromSh($file);
 	$s{AUTOSTART} = $state;
 	setVarsInSh($file, \%s);
     } else { output_p $file, 
