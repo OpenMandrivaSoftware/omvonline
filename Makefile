@@ -14,13 +14,13 @@ all: mdkonline
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 clean:
-	$(MAKE) -C po $@
+#	$(MAKE) -C po $@
 	rm -f core .#*[0-9]
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 	find . -name '*~' | xargs rm -f
 
 install: all
-	$(MAKE) -C po $@
+#	$(MAKE) -C po $@
 	install -d $(RPM_BUILD_ROOT)/usr/{sbin/,bin,share/icons/{mini,large},share/nautilus/default-desktop}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/sbin/
 	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
@@ -28,7 +28,7 @@ install: all
 	install -m644 pixmaps/$(NAME)16.png $(RPM_BUILD_ROOT)/usr/share/icons/mini/
 	install -m644 pixmaps/$(NAME)32.png $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 pixmaps/$(NAME)48.png $(RPM_BUILD_ROOT)/usr/share/icons/large/	
-	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
+#	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 # rules to build a test rpm
 
