@@ -331,7 +331,7 @@ sub send_config {
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
     my $w = $in->wait_message('',"Sending configuration...");
-    my $response = $ua->request(POST 'https://www.mandrakeonline.net/testonline/wizard.php',
+    my $response = $ua->request(POST 'https://www.mandrakeonline.net/wizard.php',
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_wizard",
