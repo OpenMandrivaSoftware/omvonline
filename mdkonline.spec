@@ -89,6 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
+%{_datadir}/autorun/*
 
 %changelog
 * Mon Mar  1 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
