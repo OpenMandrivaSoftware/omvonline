@@ -275,7 +275,7 @@ sub silentCheck {
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical') },
                    500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
-    eval { $retcode->{$u}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
+    eval { $retcode->{$u}->() }; if ($@) { logIt(N("Problem occurred while connecting to the server, please contact the support team")); go2State('critical') }
 }
 sub okState { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('okay') }
 sub compareWithInstalled {
