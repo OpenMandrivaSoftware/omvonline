@@ -42,12 +42,12 @@ my %state = (
 		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
 		     },
 	     critical => {
-			  colour => [ 'yellow' ],
+			  colour => [ 'orange' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
 			 },
 	     busy => {
-		      colour => [ 'yellow' ], 
+		      colour => [ 'orange' ], 
 		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
 		      menu => [ ],
 		     },
@@ -57,12 +57,12 @@ my %state = (
 		       menu => [ 'update', 'check' ],
 		      },
 	     noconfig => {
-			  colour => [ 'yellow' ],
+			  colour => [ 'orange' ],
 			  changes => [ 'okay' ],
 			  menu => [ 'update', 'weblink', 'register' ],
 			 },
 	     disconnected => {
-			      colour => [ 'yellow' ],
+			      colour => [ 'orange' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
 			     } 
@@ -84,8 +84,8 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 	       )
       );
 
-print "Setting yellow ...\n";
-$menu = setImage('yellow');
+print "Setting orange ...\n";
+$menu = setImage('orange');
 $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 1 and showMainWindow(); #just for testing
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
