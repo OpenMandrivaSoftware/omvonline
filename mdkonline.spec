@@ -34,6 +34,7 @@ make prefix=$RPM_BUILD_ROOT install
 
 #symbolic link to drakonline
 ln -sf %_sbindir/mdkonline %buildroot/%_sbindir/drakonline
+ln -sf %_sbindir/mdkonline %buildroot/%_prefix/X11R6/bin/mdkonline
 
 #install lang
 %{find_lang} %{name}
@@ -71,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING
 %{_sbindir}/*
 %{_bindir}/*
+%{_prefix}/X11R6/bin/*
 %{_datadir}/%{name}
 %{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
 %{_menudir}/%{name}
@@ -80,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Mon Sep  2 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-2mdk
+- symbolic link for compatibility with old versions
 - fix LANG detection 
 - cleanups
 
