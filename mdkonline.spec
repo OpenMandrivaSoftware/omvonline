@@ -91,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 * Thu Mar 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
 - 8.2 release 
 - code update 
-- automated updates
+- automated updates features
 
 * Mon Jan 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-15mdk
 - add missing png file.
