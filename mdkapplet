@@ -199,7 +199,7 @@ sub silentCheck {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   my $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   if ($comp) { $isAvailable = 1; $mLog .= N("Checkin ... Updates are available $comp\n"); go2State('error') and last }
+			   if ($comp) { $isAvailable = 1; $mLog .= N("Checkin ... Updates are available\n"); go2State('error') and last };
 		       }
 		   },
 		   97 => sub { $mLog .= N("Online services disabled. Contact MandrakeOnline site\n") ; go2State('disabled'); },
