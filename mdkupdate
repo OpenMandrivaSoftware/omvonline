@@ -39,8 +39,8 @@ sub _ {
 }
 
 $logfile = "/var/log/mdkupdate.log";
-my $url_upload_diff = "https://www.mandrakeonline.net/testonline/online_dif.php";
-my $url_get_rpms = "https://www.mandrakeonline.net/testonline/online_update.php";
+my $url_upload_diff = "https://www.mandrakeonline.net/online_dif.php";
+my $url_get_rpms = "https://www.mandrakeonline.net/online_update.php";
 my $rpms_rep = "/var/cache/urpmi/rpms/";
 my $VERSION = "0.16";
 my $security = 0;
@@ -130,7 +130,7 @@ sub send_rpm_dif {
     `sdiff -s /root/rpm_qa_installed_after /root/rpm_qa_installed_before >/root/$login.$password.$box_name.$oldkey.dif`;
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $response = $ua->request(POST "https://www.mandrakeonline.net/testonline/online_dif.php",
+    my $response = $ua->request(POST "https://www.mandrakeonline.net/online_dif.php",
 
 				Content_Type => 'form-data',
 				Content => [submit => "upload_dif",
