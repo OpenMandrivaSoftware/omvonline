@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	21mdk
+Release: 	22mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -94,6 +94,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Tue Jul  9 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-22mdk
+- fixes:
+		o use no-clobber for wget (prevent multiples downloads of same files)
+		o interactive wait message centered
+		o cleanups 
+
 * Thu Jun 13 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-21mdk
 - moving from test to prod.
 
