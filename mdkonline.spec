@@ -129,6 +129,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Sep 20 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-10mdk
 - upload config into hardware database (hw_client)
+- sync config with server every night when mdkupdate is run.
 
 * Tue Sep 14 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
 - po updates
