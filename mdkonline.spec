@@ -84,11 +84,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %{_sbindir}/*
 %{_bindir}/*
-%{_prefix}/usr/X11R6/bin/*
+%{_prefix}/X11R6/bin/*
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
+%{_datadir}/%{name}/pixmaps/*.png
 %{_datadir}/autorun/*
 
 %changelog
