@@ -94,8 +94,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Tue May 28 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-20mdk
-- bug fixing
+* Sun Jun  9 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-20mdk
+- bug fixing 
+		o chdir/wget to safe directory
+		o clean after upgrades
 
 * Wed Apr 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-19mdk
 - cleanups, 8.1 support.
