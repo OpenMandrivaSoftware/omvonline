@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 ################################################################################
-# Mandrake Online                                                              #
+# Mandrake Online                                                              # 
 #                                                                              #
 # Copyright (C) 2001 MandrakeSoft                                              #
 # Daouda Lo <daouda@mandrakesoft.com>                                          #
@@ -55,6 +55,7 @@ my $nb_pages=6; # 0 to 5
 my $page;
 my $xpm_path="/usr/share/mdkonline/pixmaps";
 my $path_to_welcome="/usr/share/doc/HTML/welcome.html";
+my $link_to_mdkonline="http://www.mandrakeexpert.com";
 my $check_custid;
 my $true=1;
 my $false=0;
@@ -182,6 +183,19 @@ sub on_prev_clicked {
 #    print "Go BACK to page $page\n";
 }
 
+sub subscribe_mdkonline() {
+    my $browser=$ENV{'BROWSER'};
+    #my $initial_user=$ENV{'INITIAL_USER'};
+    #my $user_current=$ENV{'USER'};
+    
+    if (!$browser) {splash_warning( " ". _("Warning: No browser specified") ." "); return;}
+#    if ($initial_user ne "root" && $initial_user ne undef) {
+#	system("su -m -l $initial_user -c \"$browser $link_to_mdkonline &\"");
+    
+#    } else {
+    system("$browser $link_to_mdkonline &");
+	
+}
 
 sub test_passwd () {
 
@@ -241,11 +255,21 @@ sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to Mandrake Online"),540,100);
-    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online.\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
+    my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
+    my $hbox_subs= new Gtk::HBox(0,0);
+    $hbox_subs->set_uposition(20,300);
+    $vbox_welc->pack_start($hbox_subs,0,0,1);
+    my $check_subs = new Gtk::CheckButton(_("I don't have a Mandrake Online account and I want to  "));
+    $hbox_subs->pack_start($check_subs,0,0,1);
+    my $button_subs = new Gtk::Button("Subscribe");
+    $button_subs->set_sensitive(0);
+    $check_subs->signal_connect (clicked => sub { $test_tog=$check_subs->get_active(); $button_subs->set_sensitive($test_tog);});
+    $button_subs->signal_connect(clicked => \&subscribe_mdkonline);
+    $hbox_subs->pack_start($button_subs,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
-
+    
     my $vbox_priv = new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
     get_on_privacy($vbox_priv);
@@ -320,9 +344,9 @@ sub confirm_quit {
     my $button_quit = new Gtk::Button(_("Quit"));
     $button_quit->signal_connect_object("clicked",\&gtk_main_quit);
     $bbox1->add($button_quit);
-
+    
     my $label = new Gtk::Label( 
-	_("Do you really want to abort Mandrake Online?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
+				_("Do you really want to abort Mandrake Online?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
     my $style1 = new Gtk::Style;
     $style1->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style1); 
@@ -411,6 +435,26 @@ sub write_on_pixmaps {
 					 $step_label );
 	}
     });
+}
+
+sub splash_warning {
+    my ($label) = @_;
+    my $win_about = new Gtk::Dialog();
+    $win_about->set_position(1);
+
+    my $bbox1 = new Gtk::HButtonBox;
+    $win_about->action_area->pack_start($bbox1,0,0,0);
+    
+    my $button = new Gtk::Button(_("Close"));
+    $button->signal_connect_object("clicked",$win_about => 'destroy');
+    $bbox1->add($button);
+    
+    my $lab = new Gtk::Label($label);
+    my $style1 = new Gtk::Style;
+    $win_about->vbox->pack_start($lab, 1, 1, 0);
+
+    $win_about->show_all();
+    $win_about->set_modal(1);
 }
 
 sub gtk_main_quit {
