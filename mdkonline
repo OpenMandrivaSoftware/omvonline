@@ -115,9 +115,9 @@ gtkappend_page($o->{nb},
 					   1, gtkpack_($o->{vbox_account} = Gtk2::VBox->new(0, 3),
 						       1, create_packtable({ homogeneous => 1, col_spacings => 10, row_spacings => 10, mcc => 1 },
 									   [],
-									   [ N("Login:"), $o->{clogin} = Gtk2::Entry->new(), " " ],
-									   [ N("Password:"), $o->{cpasswd} = entry_hidepass(), " " ],
-									   [ N("Confirm Password:"), $o->{cconfirm} = entry_hidepass(), " " ],
+									   [ N("Login:"), $o->{clogin} = Gtk2::Entry->new() ],
+									   [ N("Password:"), $o->{cpasswd} = entry_hidepass() ],
+									   [ N("Confirm Password:"), $o->{cconfirm} = entry_hidepass() ],
 									   [ N("Mail contact:"), $o->{cmail} = Gtk2::Entry->new() ]
 									  ))
 					  )
