@@ -99,7 +99,6 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  if (! -s "$confdir/mdkupdate.rpms" || $opt eq '--auto') {
 			      #- send configuration and get back key to use...
 			      my $r;
-			      
 			      ($r, $new{CURRENTKEY}) = send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
 			      if ($r eq 'TRUE') { delete $new{OLDKEY}; setVarsInSh($conffile, \%new) }
 			  } else {
