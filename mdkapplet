@@ -110,6 +110,8 @@ $eventbox->signal_connect(button_press_event => sub {
 				  $raisedwindow = 1;
 			      }
 			  });
+my ($opt) = @ARGV;
+if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') };
 
 shouldStart() or die "$ENV{HOME}/.mdkonline should be set to TRUE";
 
@@ -301,10 +303,14 @@ sub about {
     my $b = browser();
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
-sub mainQuit() {
+sub setAutoStart {
+    my $state = shift;
     output_p "$ENV{HOME}/.mdkonline",
-    qq(AUTOSTART=FALSE
+    qq(AUTOSTART=$state
 );
     chmod 0644, "$ENV{HOME}/.mdkonline";
+}
+sub mainQuit() {
+    setAutoStart('FALSE');
     Gtk2->main_quit
 }
