@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.8mdk
+Release: 	0.9mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,12 +94,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
-* Tue Mar 23 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.8mdk
+* Wed Mar 24 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.9mdk
+- update status when performing 'check updates'
 - better perl rpmvercmp for version and release comparisons
 - Report status dynamically
 - launch applet main window only once
 - autograb hostname and prefill wizard fields
-- update status
 - handle error codes from Mandrakeonline server 
 - die properly when AUTOSTART is set TO FALSE
 - mdkupdate --applet call
