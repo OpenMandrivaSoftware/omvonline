@@ -129,7 +129,8 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-13mdk
+* Thu Sep 30 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-13mdk
+- backward compatibilities for mandrakelinux release files
 - use correct mdkonline version/release to track down useragent connections
 - po updates
 - mdkapplet: decrease timeout for network config check (oblin)
