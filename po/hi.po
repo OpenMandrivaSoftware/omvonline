@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-04-13 22:50+0200\n"
+"POT-Creation-Date: 2004-05-11 15:00+0200\n"
 "PO-Revision-Date: 2004-04-06 22:50+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma) <dysxhi@yahoo.co.in>\n"
 "Language-Team: हिन्दी (Hindi) <dysxhi@yahoo.co.in>\n"
@@ -85,7 +85,7 @@ msgstr "अपडेटों का संसाधन"
 msgid "Configure"
 msgstr "संरचना"
 
-#: ../mdkapplet:145 ../mdkapplet:157 ../mdkapplet:334
+#: ../mdkapplet:145 ../mdkapplet:157 ../mdkapplet:337
 msgid "Available"
 msgstr "उपलब्ध"
 
@@ -97,7 +97,7 @@ msgstr "अपडेटो की जाँच"
 msgid "Checking ..."
 msgstr "जाँच की जा रही है..."
 
-#: ../mdkapplet:145 ../mdkapplet:157 ../mdkapplet:334
+#: ../mdkapplet:145 ../mdkapplet:157 ../mdkapplet:337
 msgid "Not Available"
 msgstr "उपलब्ध नहीं"
 
@@ -129,7 +129,7 @@ msgstr "नये अपडेट: "
 msgid "Last check: "
 msgstr "अंतिम जाँच: "
 
-#: ../mdkapplet:166 ../mdkapplet:384
+#: ../mdkapplet:166 ../mdkapplet:387
 msgid "Close"
 msgstr "बन्द"
 
@@ -138,23 +138,19 @@ msgid "Launching drakconnect\n"
 msgstr "ड्रैककनेक्ट को आरम्भ किया जा रहा है\n"
 
 #: ../mdkapplet:179
-msgid "Launching MandrakeUpdate\n"
-msgstr "मैनड्रैकअपडेट को आरम्भ किया जा रहा है\n"
-
-#: ../mdkapplet:180
 msgid "Launching mdkupdate --applet\n"
 msgstr "एमडीकेअपडेट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:188
+#: ../mdkapplet:187
 msgid "Computing new updates...\n"
 msgstr "नये अपडेटो की गणना की जा रही है...\n"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:194
 #, fuzzy
 msgid "Connecting to"
 msgstr "सम्बन्ध स्थापन समस्या"
 
-#: ../mdkapplet:199
+#: ../mdkapplet:198
 #, fuzzy
 msgid "Response from MandrakeOnline server\n"
 msgstr "मैनड्रैकऑनलाइन में स्वागत"
@@ -164,62 +160,66 @@ msgid "Checking... Updates are available\n"
 msgstr "जाँच की जा रही है... अपडेट्स उपलब्ध है\n"
 
 #: ../mdkapplet:219
+msgid "Unknown state"
+msgstr ""
+
+#: ../mdkapplet:220
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "ऑनलाइन सेवायें निष्क्रिय है । मैनड्रैकऑनलाइन स्थल से सम्पर्क करें\n"
 
-#: ../mdkapplet:220
+#: ../mdkapplet:221
 msgid "Wrong Password.\n"
 msgstr "गलत कूटशब्द।\n"
 
-#: ../mdkapplet:221
+#: ../mdkapplet:222
 msgid "Wrong Action or host or login.\n"
 msgstr "गलत एक्शन या होस्ट या लॉग-इन।\n"
 
-#: ../mdkapplet:225
+#: ../mdkapplet:226
 msgid "System is up to date\n"
 msgstr "तंत्र आज-तक अपडेट है\n"
 
-#: ../mdkapplet:313
+#: ../mdkapplet:314
 msgid "No check"
 msgstr "कोई जाँच नहीं"
 
-#: ../mdkapplet:326
+#: ../mdkapplet:327
 msgid "Checking Network: seems disabled\n"
 msgstr "नेटवर्क की जाँच की जा रही है: लगता है निष्क्रिय है\n"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking config file: Not present\n"
 msgstr "कॉन्फ़िग संचिका की जाँच की जा रही है: विलुप्त है\n"
 
-#: ../mdkapplet:374
+#: ../mdkapplet:377
 msgid "Logs"
 msgstr "रोज़नामचे"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:393
 msgid "Clear"
 msgstr "साफ़ करना "
 
-#: ../mdkapplet:416
+#: ../mdkapplet:419
 msgid "About.."
 msgstr "के बारे में ।"
 
-#: ../mdkapplet:417
+#: ../mdkapplet:420
 msgid "Quit"
 msgstr "निकास"
 
-#: ../mdkapplet:444
+#: ../mdkapplet:447
 msgid "Attempting to connect to mandrakeonline.net\n"
 msgstr ""
 
-#: ../mdkonline:95
+#: ../mdkonline:96
 msgid "Skip Wizard"
 msgstr "विज़ार्ड को छोड़ कर आगे बढ़े"
 
-#: ../mdkonline:109
+#: ../mdkonline:110
 msgid "Welcome to MandrakeOnline"
 msgstr "मैनड्रैकऑनलाइन में स्वागत"
 
-#: ../mdkonline:110
+#: ../mdkonline:111
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -231,55 +231,55 @@ msgstr ""
 "आपके तंत्र की संरचना को (पैकेजों, हार्डवेयर संरचना), एक केन्द्रीय डाटाबेस में\n"
 "अपलोड करने के लिए, यह सहायक आपकी सहायता करेगा ।\n"
 
-#: ../mdkonline:111
+#: ../mdkonline:112
 msgid "Create a MandrakeOnline Account"
 msgstr "एक मैनड्रैकऑनलाइन खाता खोलें"
 
-#: ../mdkonline:113
+#: ../mdkonline:114
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "मेरे पास एक मैनड्रैकऑनलाइन खाता नहीं है और मै चाहता हूँ "
 
-#: ../mdkonline:113
+#: ../mdkonline:114
 msgid "Subscribe"
 msgstr "ग्राहक बनें"
 
-#: ../mdkonline:117 ../mdkonline:137
+#: ../mdkonline:118 ../mdkonline:138
 msgid "Login:"
 msgstr "लॉग-इन:"
 
-#: ../mdkonline:118 ../mdkonline:138
+#: ../mdkonline:119 ../mdkonline:139
 msgid "Password:"
 msgstr "कूटशब्द: "
 
-#: ../mdkonline:119
+#: ../mdkonline:120
 msgid "Confirm Password:"
 msgstr "कूटशब्द की संपुष्टि करें:"
 
-#: ../mdkonline:120
+#: ../mdkonline:121
 msgid "Mail contact:"
 msgstr "विपत्र सम्पर्क:"
 
-#: ../mdkonline:127
+#: ../mdkonline:128
 msgid "Mandrakelinux Privacy Policy"
 msgstr "मैनड्रैक गोपनीयता नीति"
 
-#: ../mdkonline:133
+#: ../mdkonline:134
 msgid "Authentification"
 msgstr "प्रमाणीकरण"
 
-#: ../mdkonline:134
+#: ../mdkonline:135
 msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "अपना मैनड्रैकऑनलाइन लॉग-इन, कूटशब्द और मशीन नाम बतायें:"
 
-#: ../mdkonline:139
+#: ../mdkonline:140
 msgid "Machine name:"
 msgstr "मशीन नाम:"
 
-#: ../mdkonline:144
+#: ../mdkonline:145
 msgid "Send Configuration"
 msgstr "संरचना भेजें"
 
-#: ../mdkonline:145
+#: ../mdkonline:146
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -315,11 +315,11 @@ msgstr ""
 "अंत में, एक विपत्र उपनाम आपके username@mandrakeonline.net के साथभी आपको प्रदान किया "
 "जायेगा ।"
 
-#: ../mdkonline:150 ../mdkonline:255 ../mdkonline:284
+#: ../mdkonline:151 ../mdkonline:262 ../mdkonline:291
 msgid "Finish"
 msgstr "समाप्त"
 
-#: ../mdkonline:151
+#: ../mdkonline:152
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
@@ -327,7 +327,7 @@ msgstr ""
 "अब से आप सुरक्षा व अपडेटो की घोषणाओं को प्राप्त करेगें \n"
 "मैनड्रैकऑनलाइन को धन्यवाद।"
 
-#: ../mdkonline:151
+#: ../mdkonline:152
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
@@ -336,79 +336,75 @@ msgstr ""
 "करता है।\n"
 "आपके तंत्र में एक कार्यक्रम लगातार नये अपडेटो की प्रतीक्षा में चलता रहेगा\n"
 
-#: ../mdkonline:151
+#: ../mdkonline:152
 msgid "Your upload was successful!"
 msgstr "आपका अपलोड सफ़ल रहा था !"
 
-#: ../mdkonline:152
+#: ../mdkonline:153
 msgid "automated Upgrades"
 msgstr "स्वचालित किये हुए अपग्रेड"
 
-#: ../mdkonline:154
-msgid "Yes I want automated updates"
-msgstr "हाँ मै स्वचालित रूप से अपडेटो को चाहता हूँ"
-
-#: ../mdkonline:157
+#: ../mdkonline:158
 msgid "Country:"
 msgstr "देश:"
 
-#: ../mdkonline:184
+#: ../mdkonline:191
 msgid "Creation"
 msgstr "रचना"
 
-#: ../mdkonline:184
+#: ../mdkonline:191
 msgid "Login and password should be less than 12 characters\n"
 msgstr "लॉग-इन व कूटशब्द को १२ शब्दों से कम का होना चाहिए\n"
 
-#: ../mdkonline:185
+#: ../mdkonline:192
 msgid "Special characters"
 msgstr "विशेष प्रकार के शब्द"
 
-#: ../mdkonline:185
+#: ../mdkonline:192
 msgid "Special characters are not allowed\n"
 msgstr "विशेष प्रकार के शब्दों को अनुमति नहीं है\n"
 
-#: ../mdkonline:186
+#: ../mdkonline:193
 msgid "Empty fields"
 msgstr "शून्य प्रविष्टियां"
 
-#: ../mdkonline:186
+#: ../mdkonline:193
 msgid "Please fill in all fields\n"
 msgstr "कृपया सभी प्रविष्टियों को भरें\n"
 
-#: ../mdkonline:187
+#: ../mdkonline:194
 msgid "Email"
 msgstr "विपत्र"
 
-#: ../mdkonline:187
+#: ../mdkonline:194
 msgid "Email not valid\n"
 msgstr "विपत्र वैध नहीं है\n"
 
-#: ../mdkonline:188
+#: ../mdkonline:195
 msgid "Account already exist\n"
 msgstr "खाता पहिले से विद्यमान है\n"
 
-#: ../mdkonline:188
+#: ../mdkonline:195
 msgid "Change account"
 msgstr "खाता परिवर्तन"
 
-#: ../mdkonline:194
+#: ../mdkonline:201
 msgid "Problem connecting to server \n"
 msgstr "सर्वर से कनेक्ट होने में समस्या \n"
 
-#: ../mdkonline:194
+#: ../mdkonline:201
 msgid "Server Problem"
 msgstr "सर्वर समस्या"
 
-#: ../mdkonline:199 ../mdkonline:201 ../mdkonline:203
+#: ../mdkonline:206 ../mdkonline:208 ../mdkonline:210
 msgid "Error"
 msgstr "त्रुटि"
 
-#: ../mdkonline:199
+#: ../mdkonline:206
 msgid "Please provide a login"
 msgstr "कृपया एक लॉग-इन प्रदान करें"
 
-#: ../mdkonline:201
+#: ../mdkonline:208
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
@@ -416,32 +412,32 @@ msgstr ""
 "कूटशब्द मेल नहीं खाते है\n"
 "कृपया पुनः प्रयास करें\n"
 
-#: ../mdkonline:203
+#: ../mdkonline:210
 msgid "Not a valid mail address!\n"
 msgstr "एक वैध विपत्र पता नहीं!\n"
 
-#: ../mdkonline:233
+#: ../mdkonline:240
 msgid "Sending configuration..."
 msgstr "संरचना के बारे में सूचित किया जा रहा है..."
 
-#: ../mdkonline:259 ../mdkonline:335
+#: ../mdkonline:266 ../mdkonline:342
 msgid "Connection problem"
 msgstr "सम्बन्ध स्थापन समस्या"
 
-#: ../mdkonline:259 ../mdkonline:335
+#: ../mdkonline:266 ../mdkonline:342
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "मैनड्रैकऑनलाइन से सम्पर्क स्थापित नहीं हो पाया, कृपया कुछ समय उपरान्त पुनः प्रयास करें ।"
 
-#: ../mdkonline:301
+#: ../mdkonline:308
 msgid "Quitting Wizard\n"
 msgstr "विजार्ड से बाहर निकला जा रहा है\n"
 
-#: ../mdkonline:347
+#: ../mdkonline:354
 msgid "Wrong password"
 msgstr "गलत कूटशब्द"
 
-#: ../mdkonline:347
+#: ../mdkonline:354
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -458,11 +454,11 @@ msgstr ""
 " ध्यान रहें कि आपको एक मशीन का नाम भी प्रदान करना चाहिए\n"
 " (सिर्फ़ वर्णमाला अक्षरों को ही अनुमति है)"
 
-#: ../mdkonline:354
+#: ../mdkonline:361
 msgid "Reading configuration\n"
 msgstr "संरचना पढ़ी जा रही है\n"
 
-#: ../mdkupdate:57
+#: ../mdkupdate:58
 #, perl-format
 msgid ""
 "mdkupdate version %s\n"
@@ -473,28 +469,34 @@ msgid ""
 "usage:\n"
 msgstr ""
 "एम०डी०के० नवीनीकरण (अपडेट) संस्मरण (mdkupdate version) %s\n"
-"। सर्वाधिकार (C) २००२ मैनड्रेकसाफ़्ट (MandrakeSoft) ।\n"
+"। सर्वाधिकार (C) %s मैनड्रेकसाफ़्ट (Mandrakesoft) ।\n"
 "यह एक मुक्त प्रक्रिया सामग्री (साफ़्टवेयर) है और इसे जी०एन०यू० जी०पी०एल० की शर्तों के "
 "अन्तर्गत बाँटा जा सकता है।\n"
 "\n"
 "प्रयोग:\n"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:63
 msgid "  --help         - print this help message.\n"
 msgstr "  --help         - यह सहायता संदेश छापें ।\n"
 
-#: ../mdkupdate:63
+#: ../mdkupdate:64
 msgid "  --auto         - Mdkupdate launched automatically.\n"
 msgstr "  --auto         - एमडीकेअपडेट का स्वचालित रूप से शुरू होना ।\n"
 
-#: ../mdkupdate:64
+#: ../mdkupdate:65
 msgid "  --applet       - launch MandrakeUpdate.\n"
 msgstr "  --applet       - मैनड्रैकअपडेट की शुरूवात।\n"
 
-#: ../mdkupdate:65
+#: ../mdkupdate:66
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - कुँजियों को अपडेट करना\n"
 
-#: ../mdkupdate:275
+#: ../mdkupdate:276
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "एम०डी०के० नवीनीकरण(mdkupdate) माध्यम से पैकजों को अपडेट करने में असफ़ल ।\n"
+
+#~ msgid "Launching MandrakeUpdate\n"
+#~ msgstr "मैनड्रैकअपडेट को आरम्भ किया जा रहा है\n"
+
+#~ msgid "Yes I want automated updates"
+#~ msgstr "हाँ मै स्वचालित रूप से अपडेटो को चाहता हूँ"
