@@ -430,6 +430,7 @@ sub shouldStart() {
 }
 sub setState {
     my $state_type = shift;
+    my $checkme;
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
     $img->set_from_pixbuf($tmp);
@@ -442,6 +443,8 @@ sub setState {
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About.."))), activate => sub { getSite($online_site) }));
+    $menu->append(gtksignal_connect(gtkset_active($checkme = Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), shouldStart()), toggled => sub { setAutoStart(uc(bool2text($checkme->get_active))) }));
+    $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu
 }
@@ -470,6 +473,6 @@ LASTCHECK=$date
 	 }
 }
 sub mainQuit() {
-    setAutoStart('FALSE');
+#    setAutoStart('FALSE');
     Gtk2->main_quit
 }
