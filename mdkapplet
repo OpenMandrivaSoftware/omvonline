@@ -136,7 +136,7 @@ sub showMainWindow() {
 			    gtkpack_(Gtk2::VBox->new(0, 3),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking...")); checkUpdates(); }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates(); }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
 				    )
 			   ),
@@ -166,9 +166,9 @@ sub showMainWindow() {
 }
 sub setLabel {
     my $label = shift;
-    $update_label->set_label($label);
+    defined $update_label and $update_label->set_label($label);
 }
-sub confNetwork { system "/usr/sbin/drakconnect &" }
+sub configNetwork { system "/usr/sbin/drakconnect &" }
 sub launchUpdate { system "/usr/sbin/MandrakeUpdate &" } 
 sub installUpdates { system "/usr/sbin/mdkupdate", "--applet" }
 sub silentCheck {
@@ -242,8 +242,10 @@ sub checkUpdates {
     } elsif (!-e $conffile) {
 	go2State('noconfig')
     } else {				   
+	setLabel(N("Checking..."));
 	silentCheck();
     }
+    setLabel($isAvailable ? N("Available") : N("Not Available"));
 }
 sub go2State {
     my $state = shift;
