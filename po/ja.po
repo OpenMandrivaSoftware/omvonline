@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-11-05 13:34+0100\n"
-"PO-Revision-Date: 2004-10-03 23:35+0900\n"
+"PO-Revision-Date: 2004-11-15 21:15+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -184,9 +184,9 @@ msgid "Connecting to"
 msgstr "接続しています"
 
 #: ../mdkapplet:244
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Mandrakeonline へようこそ"
+msgstr "Mandrakeonlineサーバからの応答\n"
 
 #: ../mdkapplet:262
 #, c-format
@@ -230,7 +230,7 @@ msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
-"ネットワークの設定に問題があります(ルート、ファイアウォール、プロキシの設定を"
+"ネットワークの設定に問題があります(ルート/ファイアウォール/プロキシの設定を"
 "確認して下さい)\n"
 
 #: ../mdkapplet:277
@@ -453,7 +453,7 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Mandrakeonlineアカウントを作成しました。\n"
-"「次へ」をクリックして認証と設定のアップロードを行なってください。\n"
+"「次へ」をクリックし、認証と設定の送信を行なってください。\n"
 
 #: ../mdkonline:178
 #, c-format
@@ -499,14 +499,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Mandrakeonlineアカウントの設定が完了しました\n"
 
 #: ../mdkonline:214
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "送信成功"
+msgstr "設定を送信しました"
 
 #: ../mdkonline:215
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "設定を読み込み中\n"
+msgstr "設定を送信中に問題が発生しました"
 
 #: ../mdkonline:216
 #, c-format
@@ -514,6 +514,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"Mandrakeonlineウェブサイトに接続できません(ログイン名/パスワードが間違っているか、"
+"ルータ/ファイアウォールの設定に問題があります)"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -597,8 +599,8 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
-"Mandrakeupdateは差異ファイルをアップロードできませんでした。support [at] "
-"mandrakeonline [dot] net にメールしてください。"
+"差分ファイルを送信できませんでした。support [at] mandrakeonline [dot] net "
+"にメールしてください。"
 
 #, fuzzy
 #~ msgid "Please Wait"
