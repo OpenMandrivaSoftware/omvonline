@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fi - MDK  10.0 Release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-24 20:07+0200\n"
 "Last-Translator: Thomas Backlund <tmb@mandrake.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrakelinux.xom>\n"
@@ -91,9 +91,22 @@ msgstr "Asenna päivitykset"
 msgid "Configure"
 msgstr "Aseta"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "saatavilla"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Tarkista päivitykset"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Tarkistetaan..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "ei saatavilla"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -119,14 +132,6 @@ msgstr "päällä"
 msgid "New Updates: "
 msgstr "Uusimmat päivitykset:"
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "saatavilla"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "ei saatavilla"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Viimeisin tarkistus:"
@@ -135,63 +140,65 @@ msgstr "Viimeisin tarkistus:"
 msgid "Close"
 msgstr "Sulje"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "Käynnistetään drakconnect\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "Käynnistä MandrakePäivitys\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "käynnistetään mdkupdate --applet\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Tarkistetaan päivityksien saatavuus..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "Online palvelut pois käytöstä. Ota yhteys MandrakeOnline sivustoon\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Väärä salasana\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "Väärä tili, kone tai kirjautuminen.\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "Järjestelmä on ajan tasalla"
+#: ../mdkapplet:217
+#, fuzzy
+msgid "System is up to date\n"
+msgstr "Järjestelmä on varattu. Odota ..."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Ei tarkistusta"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "Tarkistetaan verkko: Näyttää poistettu käytöstä\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "Tarkistetaan asetustiedostoa: Ei olemassa\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "Tarkistetaan päivityksien saatavuus..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "Lokit"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Tietoa.."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Poistu"
 
@@ -341,7 +348,8 @@ msgstr "Luonti"
 
 #: ../mdkonline:178
 msgid "Login and password should be less than 12 characters\n"
-msgstr "Tunnuksen ja salasanan pituuden pitäisi olla vähemmän kuin 12 merkkiä\n"
+msgstr ""
+"Tunnuksen ja salasanan pituuden pitäisi olla vähemmän kuin 12 merkkiä\n"
 
 #: ../mdkonline:179
 msgid "Special characters"
@@ -477,16 +485,12 @@ msgstr "  --applet       - käynnistä MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Päivitä avaimet\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Ei pystytty päivittämään paketteja mdkupdate-lähteestä.\n"
 
-#, fuzzy
-#~ msgid "System is up to date\n"
-#~ msgstr "Järjestelmä on varattu. Odota ..."
-
-#~ msgid "Checking..."
-#~ msgstr "Tarkistetaan..."
+#~ msgid "System is up to date"
+#~ msgstr "Järjestelmä on ajan tasalla"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "MandrakeUpdate ei saanut yhteyttä sivustoon, kokeilemme uudelleen."
@@ -536,4 +540,3 @@ msgstr "Ei pystytty päivittämään paketteja mdkupdate-lähteestä.\n"
 
 #~ msgid "Unable to create mdkupdate medium.\n"
 #~ msgstr "Ei pystytty luomaan mdkupdate lähdettä.\n"
-

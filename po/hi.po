@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-23 23:36+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma) <dysxhi@yahoo.co.in>\n"
 "Language-Team: हिन्दी, भारत (Hindi, India) <dysxhi@yahoo.co.in>\n"
@@ -85,9 +85,22 @@ msgstr "अपडेटों का संसाधन"
 msgid "Configure"
 msgstr "संरचना"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "उपलब्ध"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "अपडेटो की जाँच"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "अपडेटो हेतु जाँच की जा रही है..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "उपलब्ध नहीं"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -113,14 +126,6 @@ msgstr "ऊपर"
 msgid "New Updates: "
 msgstr "नये अपडेट: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "उपलब्ध"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "उपलब्ध नहीं"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "अंतिम जाँच: "
@@ -129,63 +134,64 @@ msgstr "अंतिम जाँच: "
 msgid "Close"
 msgstr "बन्द"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "ड्रैककनेक्ट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "मैनड्रैकअपडेट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "एमडीकेअपडेट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "अपडेटो हेतु जाँच की जा रही है..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "जाँच की जा रही है... अपडेट्स उपलब्ध है\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "ऑनलाइन सेवायें निष्क्रिय है । मैनड्रैकऑनलाइन स्थल से सम्पर्क करें\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "गलत कूटशब्द।\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "गलत एक्शन या होस्ट या लॉग-इन।\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "तंत्र आज-तक अपडेट है"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "तंत्र आज-तक अपडेट है\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "कोई जाँच नहीं"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "नेटवर्क की जाँच की जा रही है: लगता है निष्क्रिय है\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "कॉन्फ़िग संचिका की जाँच की जा रही है: विलुप्त है\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "अपडेटो हेतु जाँच की जा रही है..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "रोज़नामचे"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "के बारे में ।"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "निकास"
 
@@ -473,9 +479,9 @@ msgstr "  --applet       - मैनड्रैकअपडेट की शु
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - कुँजियों को अपडेट करना\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "एम०डी०के० नवीनीकरण(mdkupdate) माध्यम से पैकजों को अपडेट करने में असफ़ल ।\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "तंत्र आज-तक अपडेट है\n"
+#~ msgid "System is up to date"
+#~ msgstr "तंत्र आज-तक अपडेट है"

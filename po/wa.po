@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-01 00:04+0100\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -86,9 +86,21 @@ msgstr "Astaler les metaedjes a djoû"
 msgid "Configure"
 msgstr "Apontyî"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Disponibe"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Verifyî les metaedjes a djoû"
+
+#: ../mdkapplet:139
+msgid "Checking ..."
+msgstr "Verifiaedje..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Nén disponibe"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -114,14 +126,6 @@ msgstr "En alaedje"
 msgid "New Updates: "
 msgstr "Noveas metaedjes a djoû: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Disponibe"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Nén disponibe"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Dierin verifiaedje: "
@@ -130,64 +134,64 @@ msgstr "Dierin verifiaedje: "
 msgid "Close"
 msgstr "Clôre"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "Enondant drakconnect\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "Enondant les metaedjes a djoû di Mandrake\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "Enondant «mdkupdate --applet»\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+msgid "Computing new updates...\n"
+msgstr "Carculaedje des metaedjes a djoû...\n"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "Verifiant... Des metaedjes a djoû sont disponibes\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 "Les siervices so les fyis sont essoctés. Contactez li site MandrakeOnline\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Måva scret.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "Accion, no d' lodjoe ou no d' elodjaede nén corek.\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "Li sistinme est a djoû"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "Li sistinme est a djoû\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Pont d' verifiaedje"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "Verifiaedje del rantoele: i shonreut k' ele ni soeye nén en alaedje\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "Verifiaedje do fitchî d' apontiaedje: nén la\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "Verifiaedje des metaedjes a djoû..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "Djournås"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Å dfait..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Cwiter"
 
@@ -475,15 +479,12 @@ msgstr " --applet       - enonder les metaedjes a djoû di Mandrake.\n"
 msgid "  --update       - Update keys\n"
 msgstr " --applet       - mete a djoû les clés.\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Dji n' a savou mete a djoû les pacaedje foû do sopoirt mdkupdate.\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "Li sistinme est a djoû\n"
-
-#~ msgid "Checking..."
-#~ msgstr "Verifiaedje..."
+#~ msgid "System is up to date"
+#~ msgstr "Li sistinme est a djoû"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""

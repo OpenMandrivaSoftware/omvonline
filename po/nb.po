@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-23 18:10+0100\n"
 "Last-Translator: Per Øyvind Karlsen <peroyvind@sintrax.net>\n"
 "Language-Team: Norwegian Bokmål <nb@li.org>\n"
@@ -87,9 +87,22 @@ msgstr "Installer oppdateringer"
 msgid "Configure"
 msgstr "Konfigurer"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Tilgjengelig"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Sjekk etter oppdateringer"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Sjekker..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Ikke tilgjengelig"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -105,23 +118,15 @@ msgstr "Nettverkstilkobling"
 
 #: ../mdkapplet:147
 msgid "Down"
-msgstr "Ned"
+msgstr "Nede"
 
 #: ../mdkapplet:147
 msgid "Up"
-msgstr "Opp"
+msgstr "Oppe"
 
 #: ../mdkapplet:150
 msgid "New Updates: "
 msgstr "Nye oppdateringer: "
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Tilgjengelig"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Ikke tilgjengelig"
 
 #: ../mdkapplet:154
 msgid "Last check: "
@@ -131,63 +136,64 @@ msgstr "Siste sjekk: "
 msgid "Close"
 msgstr "Lukk"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "Starter drakconnect\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "Starter MandrakeUpdate\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "Starter mdkupdate --applet\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Sjekker etter oppdateringer..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "Sjekker... Opdateringer er tilgjengelig\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "Onlinetjenester deaktivert. Kontakt MandrakeOnline-siden\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Feil passord.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "Feil Handling eller vert eller  brukernavn.\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "Systemet er oppdatert"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "Systemet er oppdatert\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Ingen sjekk"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "Sjekker nettverk. ser ut til å være deaktivert\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "Sjekker konfigurasjonsfil. Ikke til stede\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "Sjekker etter oppdateringer..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "Logger"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Om.."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Avslutt"
 
@@ -293,7 +299,7 @@ msgstr ""
 "epostvarslinger.\n"
 "Videre så drar du nytte av betalt kundestøttetjenester med rabatter på\n"
 "www.mandrakeexpert.com.\n"
-"Til slutt så vil et epostalaias med ditt brukernavn@mandrakeline.net bli "
+"Til slutt så vil et epostalaias med ditt brukernavn@mandrakeonline.net bli "
 "tilbudt til deg."
 
 #: ../mdkonline:144 ../mdkonline:249 ../mdkonline:278
@@ -478,12 +484,15 @@ msgstr "  --applet       - start MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Oppdater nøkler\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "Kunne ikke oppdatere pakker fra mdkupdate media.\n"
+msgstr "Kunne ikke oppdatere pakker fra mdkupdate-medium.\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "Systemet er oppdatert\n"
+#~ msgid "System is up to date"
+#~ msgstr "Systemet er oppdatert"
+
+#~ msgid "Checking for Updates..."
+#~ msgstr "Sjekker etter oppdateringer..."
 
 #~ msgid "Checking..."
 #~ msgstr "Sjekker..."

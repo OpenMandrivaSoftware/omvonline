@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-23 20:42+0200\n"
 "Last-Translator: dovix <dovix2003@yahoo.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -89,9 +89,22 @@ msgstr "התקן עדכונים"
 msgid "Configure"
 msgstr "הגדר"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "זמין"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "חפש עדכונים"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "בודק..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "לא זמין"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -117,14 +130,6 @@ msgstr "למעלה"
 msgid "New Updates: "
 msgstr "עדכונים חדשים:"
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "זמין"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "לא זמין"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "בדיקה אחרונה:"
@@ -133,63 +138,64 @@ msgstr "בדיקה אחרונה:"
 msgid "Close"
 msgstr "סגור"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "מפעיל את drakconnect\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "מפעיל את MandrakeUpdate\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "מפעיל את mdkupdate --applet\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "מחפש עדכונים..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "בודק... יש עדכונים זמינים\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "השרותים המקוונים הופסקו. עליך להתעדכן באתר MandrakeOnline\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "סיסמה שגוייה.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "פעולה לא תקינה או שם מחשב או שם משתמש שגויים.\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "המערכת מעודכנת"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "המערכת מעודכנת\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "ללא בדיקה"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "בודק זמינות רשת: אין תגובה\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "בודק קובץ הגדרות: לא קיים\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "מחפש עדכונים..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "רישומים"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "אודות.."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "יציאה"
 
@@ -470,15 +476,12 @@ msgstr "  --applet       - הרץ את MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - עדכן את המפתחות.\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "נכשל שדרוג החבילות ממדית mdkupdate.\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "המערכת מעודכנת\n"
-
-#~ msgid "Checking..."
-#~ msgstr "בודק..."
+#~ msgid "System is up to date"
+#~ msgstr "המערכת מעודכנת"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "לא יכול להתחבר לאתר של MandrakeUpdate, נא לנסות שוב מאוחר יותר."

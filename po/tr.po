@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-02-26 20:24+0200\n"
 "Last-Translator: S. Alp ŞENYER <ssenyer@linux-sevenler.org>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -87,10 +87,23 @@ msgstr "Güncellemeleri kur"
 msgid "Configure"
 msgstr "Yapılandır"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Mevcut"
+
 #: ../mdkapplet:139
 #, fuzzy
 msgid "Check updates"
 msgstr "Güncellemeleri Kontrol Et"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Bağlantı problemi...\n"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Mevcut Değil"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -116,14 +129,6 @@ msgstr "Yukarı"
 msgid "New Updates: "
 msgstr "Yeni Güncellemeler:"
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Mevcut"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Mevcut Değil"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Son Kontrol:"
@@ -132,67 +137,67 @@ msgstr "Son Kontrol:"
 msgid "Close"
 msgstr "Kapat"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "Mandrake Update Uygulamasını Çalıştır"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Güncellemeleri Kontrol Et"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Yanlış parola.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
-msgid "System is up to date"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 #, fuzzy
 msgid "No check"
 msgstr "Son Kontrol:"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Güncellemeleri Kontrol Et"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Giriş:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Hakkında..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Çıkış"
 
@@ -484,13 +489,9 @@ msgstr " --update        - Mandrake Update'yi çalıştır.\n"
 msgid "  --update       - Update keys\n"
 msgstr " --update        - Mandrake Update'yi çalıştır.\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "mdkupdate medyasından paketler güncellenemiyor.\n"
-
-#, fuzzy
-#~ msgid "Checking..."
-#~ msgstr "Bağlantı problemi...\n"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""

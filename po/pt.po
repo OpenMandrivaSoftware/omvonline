@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-21 18:51+0100\n"
 "Last-Translator: Jose Jorge <jjorge@free.fr>\n"
 "Language-Team: português <pt@li.org>\n"
@@ -89,9 +89,22 @@ msgstr "Instalar actualizações"
 msgid "Configure"
 msgstr "Configurar"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Disponível"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Verificar actualizações"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "A verificar ..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Não Disponível"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -117,14 +130,6 @@ msgstr "Ligado"
 msgid "New Updates: "
 msgstr "Novas Actualizações : "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Disponível"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Não Disponível"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Última verificação : "
@@ -133,67 +138,67 @@ msgstr "Última verificação : "
 msgid "Close"
 msgstr "Fechar"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "Iniciar o Actualizador da Mandrake"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Verificar actualizações"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Senha errada.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:217
 #, fuzzy
-msgid "System is up to date"
+msgid "System is up to date\n"
 msgstr "O sistema está ocupado. Espere ..."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Nenhuma verificação"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Verificar actualizações"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Identificador:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Acerca de ..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Sair"
 
@@ -481,17 +486,14 @@ msgstr "  --applet       - lança MandrakeUpdate..\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - actualiza as chaves\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
 "Impossível actualizar pacotes a partir do média de actualização mdkupdate.\n"
 
 #, fuzzy
-#~ msgid "System is up to date\n"
+#~ msgid "System is up to date"
 #~ msgstr "O sistema está ocupado. Espere ..."
-
-#~ msgid "Checking..."
-#~ msgstr "A verificar ..."
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""

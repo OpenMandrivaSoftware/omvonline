@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-23 01:28+0800\n"
 "Last-Translator: Arys P. Deloso <arys@deloso.org>\n"
 "Language-Team: Filipino <salinpinoy@list.comitus.net>\n"
@@ -85,9 +85,22 @@ msgstr "I-install ang mga update"
 msgid "Configure"
 msgstr "I-configure"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Available"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Suriin ang mga update"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Nagsusuri..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Hindi Available"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -113,14 +126,6 @@ msgstr "Up"
 msgid "New Updates: "
 msgstr "Mga Bagong Update: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Available"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Hindi Available"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Huling pagsuri: "
@@ -129,67 +134,67 @@ msgstr "Huling pagsuri: "
 msgid "Close"
 msgstr "Isara"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "Ilunsad ang Mandrake Update"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Suriin ang mga Update"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Maling password.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:217
 #, fuzzy
-msgid "System is up to date"
+msgid "System is up to date\n"
 msgstr "Abala ang sistema. Maghintay ..."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Walang pagsuri"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Suriin ang mga Update"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Login:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Tungkol sa.."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Quit"
 
@@ -482,16 +487,13 @@ msgstr "  --applet       - ilunsad ang MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - mga Update key\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Hindi ma-update ang mga package mula sa medium ng mdkupdate.\n"
 
 #, fuzzy
-#~ msgid "System is up to date\n"
+#~ msgid "System is up to date"
 #~ msgstr "Abala ang sistema. Maghintay ..."
-
-#~ msgid "Checking..."
-#~ msgstr "Nagsusuri..."
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "Hindi ma-contact ng MandrakeUpdate ang site, susubukan natin muli."

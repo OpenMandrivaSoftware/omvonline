@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-12 08:36-0000\n"
 "Last-Translator: Rhoslyn Prys <rhoslyn.prys@meddal.org.uk>\n"
 "Language-Team: Cymraeg/Welsh <rhoslyn.prys@meddal.org.uk>\n"
@@ -83,9 +83,22 @@ msgstr "Gosod diweddariadau"
 msgid "Configure"
 msgstr "Ffurfweddu"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Ar Gael"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Gwirio diweddaiad"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Gwirio Diweddaiad"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Ddim ar Gael"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -111,14 +124,6 @@ msgstr "Fyny"
 msgid "New Updates: "
 msgstr "Diweddariadau Newydd:"
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Ar Gael"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Ddim ar Gael"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Gwiriad diwethaf:"
@@ -127,67 +132,67 @@ msgstr "Gwiriad diwethaf:"
 msgid "Close"
 msgstr "Cau"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "Cychwyn Diweddariad Mandrake"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Gwirio Diweddaiad"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Y cyfrinair anghywir\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:217
 #, fuzzy
-msgid "System is up to date"
+msgid "System is up to date\n"
 msgstr "Mae'r system yn brysur. Arhoswch..."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Dim gwiriad"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Gwirio Diweddaiad"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Mewngofnod:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Ynghylch..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Gadael"
 
@@ -473,12 +478,12 @@ msgstr "  --applet       - cychwyn MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Allwedd diweddaru\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Methu diweddaru pecynnau o gyfrwng mdkupdate\n"
 
 #, fuzzy
-#~ msgid "System is up to date\n"
+#~ msgid "System is up to date"
 #~ msgstr "Mae'r system yn brysur. Arhoswch..."
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."

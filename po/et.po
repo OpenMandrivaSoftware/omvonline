@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-23 19:27+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -85,9 +85,22 @@ msgstr "Uuenduste paigaldamine"
 msgid "Configure"
 msgstr "Seadistused"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Saadaval"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Uuenduste kontrollimine"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Kontroll..."
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Pole saadaval"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -113,14 +126,6 @@ msgstr "Olemas"
 msgid "New Updates: "
 msgstr "Uuendused: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Saadaval"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Pole saadaval"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Viimati kontrollitud: "
@@ -129,63 +134,64 @@ msgstr "Viimati kontrollitud: "
 msgid "Close"
 msgstr "Sulge"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "Drakconnecti käivitamine\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "MandrakeUpdate'i käivitamine\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "mdkupdate --applet käivitamine\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Uuenduste kontrollimine..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "Kontroll... On uuendusi\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "Võrguteenused ei ole lubatud. Ühendumine MandrakeOnline'i saidiga\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Vale parool.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "Vale toiming või masin või kasutajatunnus.\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "Midagi pole uuendada"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "Midagi pole uuendada\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "Pole kontrollitud"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "Võrgu kontroll: paistab, et see on maas\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "Konfiguratsioonifaili kontroll: puudub\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "Uuenduste kontrollimine..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "Logid"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Info..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Välju"
 
@@ -472,15 +478,12 @@ msgstr "  --applet       - käivitatakse MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - uuendatakse võtmeid\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Pakettide värskendamine mdkupdate andmekandjalt ebaõnnestus.\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "Midagi pole uuendada\n"
-
-#~ msgid "Checking..."
-#~ msgstr "Kontroll..."
+#~ msgid "System is up to date"
+#~ msgstr "Midagi pole uuendada"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""

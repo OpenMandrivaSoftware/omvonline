@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-24 00:28+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -83,9 +83,22 @@ msgstr "安装更新"
 msgid "Configure"
 msgstr "配置"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "可用"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "检查更新"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "正在检查...\n"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "不可用"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -111,14 +124,6 @@ msgstr "向上"
 msgid "New Updates: "
 msgstr "新更新: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "可用"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "不可用"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "上次检查: "
@@ -127,63 +132,64 @@ msgstr "上次检查: "
 msgid "Close"
 msgstr "关闭"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr "调用 Drak 连接\n"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "调用 MandrakeUpdate\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr "调用 mdkupdate --applet\n"
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "正在检查更新..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr "正在检查... 有可用的更新\n"
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr "在线服务已禁用。请浏览 MandrakeOnline 网站\n"
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "密码错误。\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr "动作、主机或用户名错误。\n"
 
-#: ../mdkapplet:215
-msgid "System is up to date"
-msgstr "系统已为最新"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
+msgstr "系统已为最新\n"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "不检查"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr "检查网络：似乎已禁用\n"
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr "检查配置文件：不存在\n"
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "正在检查更新..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr "日志"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "关于..."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "退出"
 
@@ -461,15 +467,12 @@ msgstr "  --applet      - 调用 MandrakeUpdate。\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update      - 更新密钥\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "无法从 mdkupdate 介质中更新包。\n"
 
-#~ msgid "System is up to date\n"
-#~ msgstr "系统已为最新\n"
-
-#~ msgid "Checking..."
-#~ msgstr "正在检查...\n"
+#~ msgid "System is up to date"
+#~ msgstr "系统已为最新"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "MandrakeUpdate 无法连接到站点, 请再试一次。"

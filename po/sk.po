@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-02-23 00:21+0100\n"
 "Last-Translator: Tibor Pittich <Tibor.Pittich@mandrake.org>\n"
 "Language-Team: Slovak <i18n@mandrake.sk>\n"
@@ -83,9 +83,22 @@ msgstr "Inštalácia aktualizácií"
 msgid "Configure"
 msgstr "Nastaviť"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Dostupné"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Skontrolovať aktualizácie"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Pripájanie...\n"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Nedostupné"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -111,14 +124,6 @@ msgstr "Hore"
 msgid "New Updates: "
 msgstr "Nové aktualizácie:"
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Dostupné"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Nedostupné"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Posledná kontrola:"
@@ -127,67 +132,67 @@ msgstr "Posledná kontrola:"
 msgid "Close"
 msgstr "Zatvoriť"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "Spustiť Mandrake aktualizácie"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Skontrolovať aktualizácie"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Zlé heslo.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
-msgid "System is up to date"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 #, fuzzy
 msgid "No check"
 msgstr "Posledná kontrola:"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Skontrolovať aktualizácie"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Prihlasovacie meno:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "O.."
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Koniec"
 
@@ -476,13 +481,9 @@ msgstr "  --applet       - aktualizovať všetky informácie.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --applet       - aktualizovať všetky informácie.\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Nemôžem aktualizovať balíčky z mdkupdate média.\n"
-
-#, fuzzy
-#~ msgid "Checking..."
-#~ msgstr "Pripájanie...\n"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""

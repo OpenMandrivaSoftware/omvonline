@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-03-24 00:17+0100\n"
 "Last-Translator: Albert Astals Cid <astals11@terra.es>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -87,9 +87,22 @@ msgstr "Instal·la actualitzacions"
 msgid "Configure"
 msgstr "Configura"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Disponible"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Comprova actualitzacions"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "S'està connectant ...\n"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "No disponible"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -115,14 +128,6 @@ msgstr "Funcionant"
 msgid "New Updates: "
 msgstr "Noves actualitzacions: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Disponible"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "No disponible"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Última comprovació: "
@@ -131,64 +136,65 @@ msgstr "Última comprovació: "
 msgid "Close"
 msgstr "Tanca"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 msgid "Launching MandrakeUpdate\n"
 msgstr "S'està executant MandrakeUpdate\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "S'està comprovant si hi ha actualitzacions..."
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Contrasenya incorrecta.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:217
 #, fuzzy
-msgid "System is up to date"
+msgid "System is up to date\n"
 msgstr "El sistema està ocupat. Espereu ..."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 msgid "No check"
 msgstr "No comprovis"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-msgid "Checking for Updates..."
-msgstr "S'està comprovant si hi ha actualitzacions..."
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 msgid "Logs"
 msgstr ""
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Quant a"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Surt"
 
@@ -343,7 +349,8 @@ msgstr "Creació"
 
 #: ../mdkonline:178
 msgid "Login and password should be less than 12 characters\n"
-msgstr "Tant el nom d'usuari com la contrasenya han de tenir menys de 12 caràcters\n"
+msgstr ""
+"Tant el nom d'usuari com la contrasenya han de tenir menys de 12 caràcters\n"
 
 #: ../mdkonline:179
 msgid "Special characters"
@@ -415,7 +422,8 @@ msgstr "Problema de connexió"
 
 #: ../mdkonline:253 ../mdkonline:329
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "No s'ha pogut contactar amb MandrakeOnline, si us plau, provi-ho més tard"
+msgstr ""
+"No s'ha pogut contactar amb MandrakeOnline, si us plau, provi-ho més tard"
 
 #: ../mdkonline:295
 msgid "Quitting Wizard\n"
@@ -479,17 +487,13 @@ msgstr "  --applet       - actualitza MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Actualitza les claus\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "No es poden actualitzar els paquets des del suport mdkupdate.\n"
 
 #, fuzzy
-#~ msgid "System is up to date\n"
+#~ msgid "System is up to date"
 #~ msgstr "El sistema està ocupat. Espereu ..."
-
-#, fuzzy
-#~ msgid "Checking..."
-#~ msgstr "S'està connectant ...\n"
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""
@@ -642,4 +646,3 @@ msgstr "No es poden actualitzar els paquets des del suport mdkupdate.\n"
 
 #~ msgid "Sans Italic 17"
 #~ msgstr "Sans Italic 17"
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-03-24 01:45+0100\n"
+"POT-Creation-Date: 2004-03-25 09:19+0100\n"
 "PO-Revision-Date: 2004-02-29 22:31-0500\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <uz-li@yahoogroups.com>\n"
@@ -86,9 +86,22 @@ msgstr "Янгиланишларни ўрнатиш"
 msgid "Configure"
 msgstr "Мослаш"
 
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Available"
+msgstr "Мавжуд"
+
 #: ../mdkapplet:139
 msgid "Check updates"
 msgstr "Янгиланишларни текшириш"
+
+#: ../mdkapplet:139
+#, fuzzy
+msgid "Checking ..."
+msgstr "Алоқа ўрнатилмоқда...\n"
+
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+msgid "Not Available"
+msgstr "Мавжуд эмас"
 
 #: ../mdkapplet:140
 msgid "See logs"
@@ -114,14 +127,6 @@ msgstr "Ишлаяпти"
 msgid "New Updates: "
 msgstr "Янги янгиланишлар: "
 
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Available"
-msgstr "Мавжуд"
-
-#: ../mdkapplet:151 ../mdkapplet:340
-msgid "Not Available"
-msgstr "Мавжуд эмас"
-
 #: ../mdkapplet:154
 msgid "Last check: "
 msgstr "Охирги текширув:"
@@ -130,67 +135,67 @@ msgstr "Охирги текширув:"
 msgid "Close"
 msgstr "Ёпиш"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:172
+#: ../mdkapplet:173
 #, fuzzy
 msgid "Launching MandrakeUpdate\n"
 msgstr "  --applet       - MandrakeUpdate хизматини ишга тушириш.\n"
 
-#: ../mdkapplet:173
+#: ../mdkapplet:174
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:201
+#, fuzzy
+msgid "Computing new updates...\n"
+msgstr "Янгиланишларни текшириш"
+
+#: ../mdkapplet:207
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:209
+#: ../mdkapplet:211
 msgid "Online services disabled. Contact MandrakeOnline site\n"
 msgstr ""
 
-#: ../mdkapplet:210
+#: ../mdkapplet:212
 msgid "Wrong Password.\n"
 msgstr "Махфий сўз нотўғри.\n"
 
-#: ../mdkapplet:211
+#: ../mdkapplet:213
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:215
-msgid "System is up to date"
+#: ../mdkapplet:217
+msgid "System is up to date\n"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:317
 #, fuzzy
 msgid "No check"
 msgstr "Охирги текширув:"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:330
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:333
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:335
-#, fuzzy
-msgid "Checking for Updates..."
-msgstr "Янгиланишларни текшириш"
-
-#: ../mdkapplet:377
+#: ../mdkapplet:375
 #, fuzzy
 msgid "Logs"
 msgstr "Фойдаланувчи:"
 
-#: ../mdkapplet:397
+#: ../mdkapplet:395
 msgid "About.."
 msgstr "Ҳақида"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:396
 msgid "Quit"
 msgstr "Чиқиш"
 
@@ -447,13 +452,9 @@ msgstr "  --applet       - MandrakeUpdate хизматини ишга тушир
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Калитларни янгилаш.\n"
 
-#: ../mdkupdate:269
+#: ../mdkupdate:270
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Checking..."
-#~ msgstr "Алоқа ўрнатилмоқда...\n"
 
 #~ msgid "Mandrake Online Team"
 #~ msgstr "MandrakeOnline жамоаси"
