@@ -12,6 +12,9 @@ use Net::HTTPS;
 use HTTP::Request::Common;
 use HTTP::Request;
 
+#Don't change version manually
+$::VERSION = '1.1-13mdk';
+
 sub get_release() {
     my ($release) = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
     ($release)
@@ -20,7 +23,7 @@ sub get_release() {
 sub get_from_URL {
     my ($link, $agent_name) = @_;
     my $ua = LWP::UserAgent->new;
-    $ua->agent($agent_name . $ua->agent);
+    $ua->agent($agent_name . $ua->agent . $::VERSION);
     $ua->env_proxy;
     my $request = HTTP::Request->new(GET => $link);
     my $response = $ua->request($request);
@@ -48,7 +51,7 @@ sub browser {
 
 sub subscribe_online {
     my ($full_link) = shift;
-    my $ret = get_from_URL($full_link, "MdkOnlineAgent/1.1");
+    my $ret = get_from_URL($full_link, "MdkOnlineAgent/");
     my $str;
     my $result = {
 		  10 => 'OK',
@@ -154,7 +157,7 @@ sub send_config {
     my ($link, $content) = @_;
     my ($res, $key);
     my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    $ua->agent("MdkOnlineAgent" . '/' . $ua->agent . $::VERSION);
     $ua->env_proxy;
     my $response = $ua->request(POST $link,
 				Content_Type => 'form-data',
