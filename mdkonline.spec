@@ -81,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/security/console.apps/%{name}
 #%{_prefix}/bin/*
 %{_prefix}/X11R6/bin/*
+%{_bindir}/*
 %{_datadir}/%{name}
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
@@ -88,7 +89,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Thu Mar  7 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
+* Thu Mar 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
+- 8.2 release 
 - code update 
 - automated updates
 
