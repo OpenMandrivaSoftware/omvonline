@@ -482,11 +482,13 @@ sub pack_box_identity {
     my $table = new Gtk::Table( 2, 2, $true);
     my $Label_wg1=new Gtk::Label($label1);
     my $Label_wg2=new Gtk::Label($label2);
+    Gtk::Label::set_justify($Label_wg1,right);
+    Gtk::Label::set_justify($Label_wg2,right);
     $table->attach_defaults( $Label_wg1, 0, 1, 0, 1);
     $table->attach_defaults( $entry1, 1, 2, 0, 1);
     $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);
     $table->attach_defaults( $entry2, 1, 2, 1, 2);
-    $Label_wg1->set_uposition(50,170);
+    $Label_wg1->set_uposition(40,170);
     $Label_wg2->set_uposition(40,200);
     $entry1->set_uposition(210,170);
     $entry2->set_uposition(210,200);
