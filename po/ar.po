@@ -7,7 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2004-03-25 09:19+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-03-31 09:01+0200\n"
 "PO-Revision-Date: 2004-03-21 22:20+0100\n"
 "Last-Translator: Youcef Rabah Rahal <rahal@arabeyes.org>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -29,6 +30,7 @@ msgid "System is busy. Wait ..."
 msgstr "النّظام مشغول. إنتظر..."
 
 #: ../mdkapplet:68
+#, perl-format
 msgid "%s packages available for update"
 msgstr "%s حزمة متوفّرة للتّحديث"
 
@@ -84,7 +86,7 @@ msgstr "ثبّت التّحديثات"
 msgid "Configure"
 msgstr "أعدّ"
 
-#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:325
 msgid "Available"
 msgstr "متوفّرة"
 
@@ -97,7 +99,7 @@ msgstr "إفحص التّحديثات"
 msgid "Checking ..."
 msgstr "جاري الإتّصال...\n"
 
-#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:338
+#: ../mdkapplet:139 ../mdkapplet:151 ../mdkapplet:325
 msgid "Not Available"
 msgstr "غير متوفّرة"
 
@@ -172,28 +174,28 @@ msgstr ""
 msgid "System is up to date\n"
 msgstr "النّظام مشغول. إنتظر..."
 
-#: ../mdkapplet:317
+#: ../mdkapplet:304
 msgid "No check"
 msgstr "دون فحص"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:317
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:333
+#: ../mdkapplet:320
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:375
+#: ../mdkapplet:362
 #, fuzzy
 msgid "Logs"
 msgstr "إسم الدّخول:"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:382
 msgid "About.."
 msgstr "حول..."
 
-#: ../mdkapplet:396
+#: ../mdkapplet:383
 msgid "Quit"
 msgstr "خروج"
 
@@ -441,6 +443,7 @@ msgid "Reading configuration\n"
 msgstr "جاري قراءة اعداداتك\n"
 
 #: ../mdkupdate:52
+#, perl-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) 2002 MandrakeSoft.\n"
