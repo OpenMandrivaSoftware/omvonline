@@ -38,7 +38,7 @@ my $nowindow = 1;
 my $arch = arch();
 my $av_pkgs;
 my $need_update = 0;
-
+my $confpers = "$ENV{HOME}/.mdkonline";
 my $conffile = '/etc/sysconfig/mdkonline';
 
 my %state = (
@@ -108,6 +108,7 @@ $eventbox->signal_connect(button_press_event => sub {
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
+shouldStart();
 checkUpdates();
 cronUpdate();
 
@@ -264,6 +265,10 @@ sub browser {
 sub displayLogs {
     system "/usr/sbin/logdrake --explain=drakxtools &"
 }
+sub shouldStart() {
+    my %p = getVarsFromSh($confpers);
+    $p{AUTOSTART} eq 'FALSE' and mainQuit();
+}
 sub setState {
     my $state_type = shift;
     my $arr = $state{$state_type}{menu};
@@ -278,10 +283,16 @@ sub setState {
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About.."))), activate => sub { about() }));
-    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { Gtk2->main_quit }));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu
 }
 sub about {
     my $b = browser();
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
+}
+sub mainQuit() {
+    output_with_perm $confpers, 644,
+    qq(AUTOSTART=false
+);
+    Gtk2->main_quit
 }
