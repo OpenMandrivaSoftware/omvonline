@@ -96,6 +96,13 @@ my %state = (
 			  menu => [ 'configureApplet', 'weblink' ],
 			  tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 			 }
+	     notsupported => {
+			colour => [ 'disabled' ],
+			changes => [ 'okay', 'busy', 'critical', 'error' ],
+			menu => [ 'configureApplet', 'weblink' ],
+			tt => [ N_("Release not supported (too old release, or development release)") ]
+		}
+																    
 	    );
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
@@ -243,6 +250,8 @@ sub silentCheck {
 		       }
 		       !$comp and okState();
 		   },
+		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported'); },
+		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported'); },
 		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') },
 		   97 => sub { logIt(N("Online services disabled. Contact Mandrakeonline site\n")) ; go2State('disabled'); },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
