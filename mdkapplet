@@ -41,7 +41,12 @@ my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my @proctable;
 my $conffile = '/etc/sysconfig/mdkonline';
-my $localfile = "$ENV{HOME}/.mdkonline";
+my $localdir = '$ENV{HOME}/.MdkOnline';
+my $localfile = "$localdir/mdkonline";
+
+#compatibility
+mkdir_p($localdir) if !-d $localdir;
+-e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", "$localfile");
 
 my %state = (
 	     okay => {
@@ -391,7 +396,7 @@ sub displayLogs {
     $w
 }
 sub shouldStart() {
-    my %p = getVarsFromSh("$ENV{HOME}/.mdkonline");
+    my %p = getVarsFromSh("$localfile");
     my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
     $ret
 }
