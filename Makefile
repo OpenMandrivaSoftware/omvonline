@@ -18,11 +18,12 @@ clean:
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(RPM_BUILD_ROOT)/usr/{X11R6/bin/,bin,share/icons,share/mdkonline/pixmaps}
+	install -d $(RPM_BUILD_ROOT)/usr/{X11R6/bin/,bin,share/icons,share/mdkonline/pixmaps,share/nautilus/default-desktop}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/X11R6/bin/
-	install -s -m755 $MDKUPDATE $(RPM_BUILD_ROOT)/usr/bin/
+	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
+	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
 	#install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
-	install -m644 pixmaps/*.png $(RPM_BUILD_ROOT)/usr/share/mdkonline/pixmaps
+	install -m644 pixmaps/*.png $(RPM_BUILD_ROOT)/usr/share/mdkonline/pixmaps/
 	install -m644 *.txt $(RPM_BUILD_ROOT)/usr/share/mdkonline/
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
