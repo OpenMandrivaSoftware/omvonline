@@ -1,18 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# translation of mdkonline-et.po to Estonian
+# Copyright (C) 2003 Free Software Foundation, Inc.
 # Riho Kurg <rx@linux.ee>, 2002
+# Marek Laane <bald@online.ee>, 2003
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 0.15\n"
+"Project-Id-Version: mdkonline-et\n"
 "POT-Creation-Date: 2003-01-17 19:41+0100\n"
-"PO-Revision-Date: 2002-10-23 17:31+0200\n"
+"PO-Revision-Date: 2003-01-20 00:58+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
-"Language-Team: Estonian\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 0.9.6\n"
+"X-Generator: KBabel 1.0\n"
 
 #: ../mdkonline_.c:73
 msgid "Africa"
@@ -59,7 +60,6 @@ msgstr "Tagasi"
 msgid "I don't have a MandrakeOnline account and I want to "
 msgstr "Mul ei ole veel MandrakeOnline'i kontot, aga ma tahan seda"
 
-# Sisu on õieti tabatud
 #: ../mdkonline_.c:104
 msgid "Subscribe"
 msgstr "Konto loomine"
@@ -74,12 +74,10 @@ msgid "Quitting Wizard\n"
 msgstr "Nõustajast väljumine\n"
 
 #: ../mdkonline_.c:265
-#, fuzzy
 msgid "Warning: No browser specified."
-msgstr "Hoiatus: brauserit ei ole määratud"
+msgstr "Hoiatus: brauserit ei ole määratud."
 
 #: ../mdkonline_.c:292
-#, fuzzy
 msgid "Connecting...\n"
 msgstr "Ühendan...\n"
 
@@ -88,17 +86,15 @@ msgid "Connection problem"
 msgstr "Probleem ühendusega"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr ""
-"Ei ole võimalik ühendust saada MandrakeOnline'iga, proovi hiljem uuesti"
+"Ei ole võimalik ühendust saada MandrakeOnline'iga, proovige hiljem uuesti."
 
 #: ../mdkonline_.c:312
 msgid "Wrong password"
 msgstr "Vale parool"
 
 #: ../mdkonline_.c:312
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -108,12 +104,12 @@ msgid ""
 " Be aware that you must also provide a machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
-"Sinu kasutajatunnus või parool oli vale.\n"
-" Sa pead selle uuesti sisestama või siis looma endale konto "
+"Teie kasutajatunnus või parool oli vale.\n"
+" Te peate selle uuesti sisestama või siis looma endale konto "
 "MandrakeOnline'is.\n"
-" Viimasel juhul mine tagasi esimese sammu juurde, et saada ühendus "
+" Viimasel juhul minge tagasi esimese sammu juurde, et saada ühendus "
 "MandrakeOnline'iga.\n"
-" Pane tähele, et sa pead teatama ka oma masina nime \n"
+" Pange tähele, et peate teatama ka oma masina nime \n"
 " (lubatud on ainult tähed)"
 
 #: ../mdkonline_.c:376
@@ -121,7 +117,6 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Tere tulemast MandrakeOnline'i"
 
 #: ../mdkonline_.c:377
-#, fuzzy
 msgid ""
 "At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -129,9 +124,9 @@ msgid ""
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
 "Siin eeldatakse, et Teil on olemas MandrakeOnline'i konto.\n"
-"See abiline aitab saata sinu konfiguratsiooni\n"
+"See abiline aitab saata Teie konfiguratsiooni\n"
 "(paketid, riistvara) tsentraalsesse andmebaasi, et edaspidi\n"
-"teavitada sind turvaparandustest ja kasulikest uuendustest.\n"
+"teavitada Teid turvaparandustest ja kasulikest uuendustest.\n"
 
 #: ../mdkonline_.c:394
 msgid "Mandrake Privacy Policy"
@@ -143,14 +138,13 @@ msgstr "Autentimine"
 
 #: ../mdkonline_.c:400
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "Sisesta oma MandrakeOnline'i kasutajatunnus, parool ja masina nimi:"
+msgstr "Sisestage oma MandrakeOnline'i kasutajatunnus, parool ja masina nimi:"
 
 #: ../mdkonline_.c:402
 msgid "Login:"
 msgstr "Kasutajatunnus:"
 
 #: ../mdkonline_.c:402
-#, fuzzy
 msgid "Machine Name:"
 msgstr "Masina nimi:"
 
@@ -163,7 +157,6 @@ msgid "Sending your Configuration"
 msgstr "Konfiguratsiooni saatmine"
 
 #: ../mdkonline_.c:408
-#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -182,7 +175,7 @@ msgid ""
 "Finally, an e-mail alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
-"Et Te saaksite kasu MandrakeOnline'i teenustest,\n"
+"Et saaksite kasu MandrakeOnline'i teenustest,\n"
 "saadame praegu teele Teie konfiguratsiooni.\n"
 "\n"
 "Nõustaja saadab nüüd MandrakeSoft'ile järgmise info:\n"
@@ -190,7 +183,7 @@ msgstr ""
 "2) Teie riistvara kirjelduse.\n"
 "\n"
 "Kui see mõte Teile ei meeldi või Te ei soovi meie teenustest kasu saada,\n"
-"vajutage nupule ' Loobu', Vajutades 'Järgmine', annate meile võimaluse\n"
+"vajutage nupule 'Loobu'. Vajutades 'Järgmine', annate meile võimaluse\n"
 "teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike "
 "meilidega.\n"
 "Lisaks saate hinnaalandust www.mandrakeexpert.com tasuliste\n"
@@ -202,31 +195,28 @@ msgid "Error while sending informations"
 msgstr "Viga info saatmisel"
 
 #: ../mdkonline_.c:417
-#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
 "Press 'Next' to try and send your configuration again."
 msgstr ""
-"Sinu info saatmisel tekkis viga.\n"
+"Teie info saatmisel tekkis viga.\n"
 "\n"
-"Vajuta nupule 'Järgmine', et püüda konfiguratsiooni uuesti saata."
+"Vajutage nupule 'Järgmine', et püüda konfiguratsiooni uuesti saata."
 
 #: ../mdkonline_.c:423
 msgid "Finished"
 msgstr "Lõpetatud"
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "From now on you will receive security and update \n"
 "announcements through MandrakeOnline."
 msgstr ""
-"Nüüdsest alates saad tänu MandrakeOnline'ile \n"
+"Nüüdsest alates saate tänu MandrakeOnline'ile \n"
 "teateid turvaparanduste ja uuenduste kohta."
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary on your system waiting for new updates\n"
@@ -239,22 +229,21 @@ msgid "Your upload was successful!"
 msgstr "Saatmine õnnestus!"
 
 #: ../mdkonline_.c:429
-#, fuzzy
 msgid "Automated Upgrades"
-msgstr "automaatne uuendamine"
+msgstr "Automaatne uuendamine"
 
 #: ../mdkonline_.c:436
 msgid "Choose your geographical location"
-msgstr "Vali oma geograafiline asukoht"
+msgstr "Valige oma geograafiline asukoht"
 
 #: ../mdkonline_.c:454
 msgid "Reading configuration\n"
 msgstr "Konfiguratsiooni tuvastamine\n"
 
 #: ../mdkonline_.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open this file for read: %s"
-msgstr "ei suutnud avada lugemiseks faili: %s"
+msgstr "Ei suutnud avada lugemiseks faili: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -269,15 +258,14 @@ msgid "Cancel"
 msgstr "Loobu"
 
 #: ../mdkonline_.c:552
-#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel'.\n"
 "To really quit it press 'Quit'."
 msgstr ""
 "Kas tõesti loobute MandrakeOnline'ist?\n"
-"Tagasipöördumiseks Nõustajasse vajutage nupule 'Loobu',\n"
-"kui tahate kindlasti loobuda, siis 'Välju'."
+"Tagasipöördumiseks nõustajasse vajutage nupule 'Loobu',\n"
+"kui tahate kindlasti lahkuda, siis 'Välju'."
 
 #: ../mdkonline_.c:556
 msgid "Really abort? - MandrakeOnline"
@@ -329,36 +317,28 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - tegevuse näitamine.\n"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr ""
-"MandrakeUpdate ei suutnud saidiga ühendust saada, aga proovib kohe uuesti"
+"MandrakeUpdate ei suutnud saidiga ühendust saada, aga proovib kohe uuesti."
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr ""
 "Ükspuha millise probleemi korral saatke meil support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
-msgstr "Teil peab olema kehtiv konto MandrakeOnline'is"
+msgstr "Teil peab olema kehtiv konto MandrakeOnline'is."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
 msgstr "Kasutajatunnus või parool võib olla vale"
 
 #: ../mdkupdate_.c:214
-#, fuzzy
 msgid "Unable to create mdkupdate medium.\n"
-msgstr "mdkupdate meediumi loomine ebaõnnestus\n"
+msgstr "mdkupdate meediumi loomine ebaõnnestus.\n"
 
 #: ../mdkupdate_.c:216
-#, fuzzy
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "pakettide värskendamine mdkupdate meediumilt ebaõnnestus\n"
-
-#~ msgid "wget is missing\n"
-#~ msgstr "wget puudub\n"
+msgstr "Pakettide värskendamine mdkupdate meediumilt ebaõnnestus\n"
