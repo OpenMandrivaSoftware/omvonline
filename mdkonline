@@ -221,6 +221,7 @@ sub sendConfig {
     close (FILEOUT);
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+    $ua->env_proxy;
     my $w = wait_msg(N("Sending configuration..."));
     my $response = $ua->request(POST 'http://www.mandrakeonline.net/wizard.php',
 
@@ -312,7 +313,8 @@ sub testPasswd () {
 	my $w = wait_msg(("Connecting ...\n"));
 	$passwd = md5_hex($passwd); # or md5 () or md5_base64 ()
 	my $ua = LWP::UserAgent->new;
-	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
+	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);	
+	$ua->env_proxy;
 	my $request = HTTP::Request->new(GET => 'http://www.mandrakeexpert.com/firsttimewizard/validusercheck.php?u=' . $login . '&p=' . $passwd);
 	my $response = $ua->request($request);
 	remove_wait_msg($w);
