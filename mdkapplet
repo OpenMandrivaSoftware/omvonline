@@ -36,7 +36,7 @@ add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $url, $timeout);
 my $nowindow = 1;
 my $arch = arch();
-my $av_pkgs = $::testing ? 13 : 0;
+my $av_pkgs;
 my $need_update = 0;
 
 my $conffile = '/etc/sysconfig/mdkonline';
@@ -153,7 +153,7 @@ sub showMainWindow() {
     $w->show_all
 }
 sub confNetwork {
-    system "/usr/sbin/net_monitor &";
+    system "/usr/sbin/drakconnect &";
 }
 sub launchUpdate {
     system "/usr/sbin/MandrakeUpdate &";
