@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	0.4mdk
+Release: 	0.5mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -94,6 +94,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
+* Thu Mar  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.5mdk
+- die properly when AUTOSTART is set TO FALSE
+- po updates (load mdkonline domain for po in mdkappplet)
+- bited by chmod novice mode
+
 * Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.4mdk
 - require drakfirsttime (>= 1.0-0.6mdk)
 - proxy support (olivier blin)
