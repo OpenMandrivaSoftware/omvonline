@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-11-22 14:01+0100\n"
-"PO-Revision-Date: 2004-10-10 12:38+0200\n"
+"PO-Revision-Date: 2004-11-07 20:42+0100\n"
 "Last-Translator: Jaime Crespo <505201@unizar.es>\n"
 "Language-Team: Español <es@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -193,9 +193,9 @@ msgid "Connecting to"
 msgstr "Conectando con"
 
 #: ../mdkapplet:244
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Bienvenido a Mandrakeonline"
+msgstr "Respuesta desde el servidor de Mandrakeonline\n"
 
 #: ../mdkapplet:262
 #, c-format
@@ -509,14 +509,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Su cuenta de Mandrakeonline se ha configurado con éxito\n"
 
 #: ../mdkonline:215
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Actualización exitosa"
+msgstr "Configuración enviada con éxito"
 
 #: ../mdkonline:216
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Leyendo la configuración\n"
+msgstr "Problema enviando la configuración"
 
 #: ../mdkonline:217
 #, c-format
@@ -524,6 +524,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"No se pudo conectar con el sitio web de mandrakeonline: nombre de usuario/"
+"contraseña incorrectos o configuración errónea del router/firewall"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -609,56 +611,3 @@ msgstr "Incapaz de actualizar paquetes desde el soporte mdkupdate.\n"
 #~ msgstr ""
 #~ "Mandrakeupdate no pudo enviar los archivos diff. Envíe un correo a "
 #~ "support [at] mandrakeonline [dot] net"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Espere, por favor"
-
-#~ msgid "Next"
-#~ msgstr "Siguiente"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
-#~ msgid "Previous"
-#~ msgstr "Anterior"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "No tengo cuenta Mandrakeonline y deseo suscribir a una"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Política de privacidad de Mandrakelinux"
-
-#~ msgid "Authentification"
-#~ msgstr "Autentificación"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Enviar la configuración"
-
-# evitar el termino "acabar" que tiene otras connotaciones
-#~ msgid "Finish"
-#~ msgstr "Terminar"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "actualizaciones automatizadas"
-
-#~ msgid "Country:"
-#~ msgstr "País:"
-
-#~ msgid "Error"
-#~ msgstr "Error"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Saliendo del asistente\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "No se pudo contactar con Mandrakeupdate, por favor, vuélvalo a intentar "
-#~ "más tarde"
-
-#~ msgid "Wrong password"
-#~ msgstr "Contraseña incorrecta"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - Actualizar llaves\n"
