@@ -34,7 +34,7 @@ BEGIN { unshift @::textdomains, 'mdkupdate' }
 require_root_capability();
 
 my $logfile = "/var/log/mdkupdate.log";
-my $confdir = '/root/.mdkonline';
+my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
 my $onlineUrl = "https://www.mandrakeonline.net/";
@@ -46,6 +46,10 @@ my $rpms_rep = "/root/tmp/";
 my $VERSION = "1.0";
 my $security = grep { /^-?-security$/ } @ARGV;
 my $update = grep { /^-?-update$/ } @ARGV;
+
+#for compatibilities
+mkdir_p($confdir) if !-d $confdir;
+-e '/root/.mdkupdate' and system("mv","/root/.mdkupdate", "$confdir/mdkupdate");
 
 my ($scheduled, $noscheduled);
 
