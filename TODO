@@ -2,6 +2,10 @@ $Id$
 Things to do on mdkonline
 -------------------------------------------------------------------------------
 
+ * whole package:
+   force package update if available, before any other update,
+   then restart update process (mdkapplet/mdkupdate)
+
  * mdkapplet:
    several releases of the same package may be installed along each other
    (seen for libaspell15, ~december); check that at least the most up to
@@ -28,6 +32,8 @@ Things to do on mdkonline
  * mdkupdate:
    at start, first query the server to check if anything should be done;
    if nothing, don't run urpmi, just upload the config.
+   if not in command-line mode, an alert box should inform that no update
+   is available.
 
  * mdkupdate:
    should exit, if another mdkupdate is running (done),
@@ -38,7 +44,7 @@ Things to do on mdkonline
 
  * mdkupdate --auto 
    when failing, informative feedback should be displayed (not authenticated,
-   not subscribed, not activated, st like that).
+   not subscribed, not activated, st like that) (command line)
 
  * mdkupdate --auto
    MAILTO to the email of the user instead of root.
