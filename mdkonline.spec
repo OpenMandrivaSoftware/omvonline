@@ -77,7 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %config(noreplace) %{_sysconfdir}/pam.d/%{name}
 %config(noreplace) %{_sysconfdir}/security/console.apps/%{name}
-%{_prefix}/bin/*
+#%{_prefix}/bin/*
 %{_prefix}/X11R6/bin/*
 %{_datadir}/%{name}
 %{_menudir}/%{name}
