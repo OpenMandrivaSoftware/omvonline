@@ -1,21 +1,21 @@
 # translation of mdkonline-uk.po to ukrainian
 # Ukrainian translation for MDKOnline
-# Copyright (C) 2003 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # Gladky Dima <gladimdim@inbox.ru>, 2002.
-# Taras Boychuk <btr1@torba.com>, 2003
+# Taras Boychuk <btr1@torba.com>, 2003, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-16 22:53+0100\n"
-"PO-Revision-Date: 2003-08-26 08:38+0300\n"
+"PO-Revision-Date: 2004-02-17 18:23+0200\n"
 "Last-Translator: Taras Boychuk <btr1@torba.com>\n"
 "Language-Team: ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.1\n"
+"X-Generator: KBabel 1.0.2\n"
 
 #: ../mdkonline:85
 msgid "Skip Wizard"
@@ -32,6 +32,10 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
+"У цьому кроці передбачається, що Ви маєте рахунок на MandrakeOnline.\n"
+" Цей Помічник допоможе переслати Вашу конфігурацію\n"
+"(пакунки, конфігурацію системи) до централізованої бази,\n"
+"щоб інформувати Вас про поновлення безпеки та інші корисні оновлення.\n"
 
 #: ../mdkonline:101
 #, fuzzy
@@ -69,15 +73,15 @@ msgstr "Mandrake Privacy Policy"
 
 #: ../mdkonline:123
 msgid "Authentification"
-msgstr ""
+msgstr "Аутентифікація"
 
 #: ../mdkonline:124
 msgid "Enter your MandrakeOnline login, password and machine name:"
-msgstr "Введіть ваше ім'я на MandrakeOnline, пароль і ім'я машини: "
+msgstr "Введіть своє ім'я на MandrakeOnline, пароль та назву машини: "
 
 #: ../mdkonline:129
 msgid "Machine name:"
-msgstr ""
+msgstr "Назва машини:"
 
 #: ../mdkonline:135
 msgid ""
@@ -98,26 +102,45 @@ msgid ""
 "Finally, an email alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
+"Для того, щоб можна було використовувати послуги MandrakeOnline,\n"
+"ми відішлемо Вашу конфігурацію.\n"
+"\n"
+"Помічник зараз відправить наступну інформацію до MandrakeSoft:\n"
+"1) список пакунків, встановлених на Вашу систему,\n"
+"2) конфігурацію обладнання.\n"
+"\n"
+"Якщо Вам не подобається ця ідея, або не хочете користуватися цією послугою,\n"
+" натисніть 'Скасувати'. Натиснувши на 'Далі', Ви дозволите нам інформувати "
+"Вас\n"
+" про поновлення безпеки і корисні оновлення через персональні попередження "
+"електронною поштою.\n"
+" До того ж, Ви отримуєте знижку на послуги підтримки на\n"
+"username@mandrakeonline.net.\n"
+"На завершення, Вам буде надано електронну адресу username@mandrakeonline.net"
 
 #: ../mdkonline:141
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
 msgstr ""
+"Відтепер завдяки MandrakeOnline Ви отримуватимете оновлення безпеки \n"
+"оголошення про поновлення."
 
 #: ../mdkonline:141
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
+"MandrakeOnline пропонує Вам можливість автоматизувати поновлення.\n"
+"Програма регулярно виконуватиметься і очікуватиме нових поновлень\n"
 
 #: ../mdkonline:141
 msgid "Your upload was successful!"
-msgstr "Закачка пройшла успішно!"
+msgstr "звантаження пройшло успішно!"
 
 #: ../mdkonline:142
 msgid "automated Upgrades"
-msgstr ""
+msgstr "автоматичні Оновлення"
 
 #: ../mdkonline:144
 msgid "Yes I want automated updates"
@@ -199,25 +222,25 @@ msgstr "Завершити"
 
 #: ../mdkonline:227
 msgid "Quitting Wizard\n"
-msgstr "Вийти з Менеджеру\n"
+msgstr "Вийти з Менеджера\n"
 
 #: ../mdkonline:252
-#, fuzzy
 msgid "Connecting ...\n"
-msgstr "Проблеми зі з'єднанням"
+msgstr "Під'єднання ...\n"
 
 #: ../mdkonline:261 ../mdkonline:327 ../mdkupdate:169
 msgid "Connection problem"
 msgstr "Проблеми зі з'єднанням"
 
 #: ../mdkonline:261 ../mdkonline:327
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "MandrakeUpdate не може зв'язатися з сайтом, ми спробуємо ще раз."
+msgstr ""
+"Неможливо встановити зв'язок з MandrakeOnline, будь ласка, спробуйте ще раз "
+"пізніше"
 
 #: ../mdkonline:273
 msgid "Wrong password"
-msgstr "Невірний пароль"
+msgstr "Неправильний пароль"
 
 #: ../mdkonline:273
 msgid ""
@@ -229,14 +252,20 @@ msgid ""
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
+"Ваше ім'я реєстрації або пароль помилкові.\n"
+" Наберіть знову або створіть рахунок на MandrakeOnline.\n"
+" В другому випадку поверніться до першого кроку, щоб з'єднатися з "
+"MandrakeOnline.\n"
+" Знайте, що Ви повинні також вказати назву машини \n"
+" (можна використовувати тільки алфавітні символи)."
 
 #: ../mdkonline:300
 msgid "Sending configuration..."
-msgstr ""
+msgstr "Надсилається конфігурація..."
 
 #: ../mdkonline:335
 msgid "Reading configuration\n"
-msgstr "Зчитую конфігурацію\n"
+msgstr "Читається конфігурація\n"
 
 #: ../mdkupdate:43
 #, perl-format
@@ -316,25 +345,43 @@ msgstr "Не можу поновити пакунки з носія mdkupdate.\n
 #~ msgstr "Південна Америка"
 
 #~ msgid "Next"
-#~ msgstr "Наступна"
+#~ msgstr "Далі"
 
 #~ msgid "Quit"
-#~ msgstr "Вихід"
+#~ msgstr "Вийти"
 
 #~ msgid "Back"
 #~ msgstr "Назад"
 
+#~ msgid "Empty Mirror"
+#~ msgstr "Порожнє Дзеркало"
+
+#~ msgid "Empty Mirror. Please choose a place."
+#~ msgstr "Порожнє Дзеркало. Виберіть місце."
+
+#~ msgid "Warning: No browser specified"
+#~ msgstr "Попередження: Не вказано переглядач"
+
 #~ msgid "Sending your Configuration"
-#~ msgstr "Відсилаю ваші дані"
+#~ msgstr "Відсилаються Ваші дані"
 
 #~ msgid "Error while sending informations"
 #~ msgstr "Помилка під час відсилання інформації"
+
+#~ msgid ""
+#~ "There was an error while sending your personal informations.\n"
+#~ "\n"
+#~ "Press Next to try and send your configuration again."
+#~ msgstr ""
+#~ "Сталася помилка, поки передавалася Ваша персональна інформація.\n"
+#~ "\n"
+#~ "Натисніть Далі, щоб знову спробувати надіслати свою конфігурацію."
 
 #~ msgid "Finished"
 #~ msgstr "Завершено"
 
 #~ msgid "Choose your geographical location"
-#~ msgstr "Виберіть ваше географічне розташування"
+#~ msgstr "Виберіть Ваше географічне розташування"
 
 #~ msgid "OK"
 #~ msgstr "Гаразд"
@@ -342,8 +389,148 @@ msgstr "Не можу поновити пакунки з носія mdkupdate.\n
 #~ msgid "Cancel"
 #~ msgstr "Скасувати"
 
+#~ msgid ""
+#~ "Do you really want to abort MandrakeOnline?\n"
+#~ "To return to the Wizard press 'Cancel',\n"
+#~ "to really quit it press 'Quit'."
+#~ msgstr ""
+#~ "Ви дійсно хочете вийти з MandrakeOnline?\n"
+#~ " Щоб повернутися до Помічника натисніть 'Скасувати',\n"
+#~ "щоб вийти натисніть 'Вийти'."
+
 #~ msgid "Really abort? - MandrakeOnline"
 #~ msgstr "Дійсно вийти? - MandrakeOnline"
+
+#~ msgid ""
+#~ " You are just starting our Free Mandrake Linux Download Edition for the "
+#~ "first time. \n"
+#~ "\n"
+#~ "There are now over three million Mandrake Linux users all over the "
+#~ "world!\n"
+#~ "\n"
+#~ "Please take a few seconds to fill a short questionnaire. The data from "
+#~ "this \n"
+#~ "questionnaire will be used only for aggregate market studies.\n"
+#~ "The text below is the privacy policy of MandrakeSoft about your personal "
+#~ "data."
+#~ msgstr ""
+#~ " Ви щойно вперше запустили безкоштовну версію Mandrake Linux. \n"
+#~ "\n"
+#~ "В даний час є понад три мільйони користувачів Mandrake Linux по всьому "
+#~ "світі!\n"
+#~ "\n"
+#~ "Будь ласка, знайдіть декілька секунд, щоб заповнити коротку анкету. Дані "
+#~ "цієї \n"
+#~ " анкети використовуватимуться тільки для вивчення ринку.\n"
+#~ "Текст нижче - це політика конфіденційності MandrakeSoft щодо Ваших "
+#~ "особистих даних."
+
+#~ msgid ""
+#~ "What personal data do we collect ?         \n"
+#~ "                               \n"
+#~ "Various information is collected in different areas of the website;\n"
+#~ "what follows is an overview of the data we keep:\n"
+#~ "\n"
+#~ "Firstly, we record your email address, name and postal address.\n"
+#~ "Secondly we give you a unique customer ID. This ID will be used to \n"
+#~ "add additional information related to your Mandrake account such as:\n"
+#~ "    - Your subscription to mailling lists.\n"
+#~ "    - When registering a purchased product, we ask for personal\n"
+#~ "information as well as system/hardware details so that we may deliver\n"
+#~ "the best support services customized to your needs.\n"
+#~ "    - On our donation page and on our online store (MandrakeStore), we\n"
+#~ "record data for billing purpose (we do not store any credit card data).\n"
+#~ "    \n"
+#~ "What do we do with this information?\n"
+#~ "\n"
+#~ "We never share personal information with other persons or companies -\n"
+#~ "we use this data strictly for the following purposes:\n"
+#~ "    - If you have subscribed to a mailing list, we keep this email\n"
+#~ "address in our database to provide you with customized information\n"
+#~ "and/or to enable you to participate in discussions in various mailing\n"
+#~ "lists. If you send a message to such a list, other people will see\n"
+#~ "your email address but no external parties have access to our database\n"
+#~ "of subscribers. At any time you may unsubscribe to any list by using\n"
+#~ "the appropriate form.\n"
+#~ "    - If you provide information when registering a purchased product\n"
+#~ "to receive support, we keep this information private unless the\n"
+#~ "information is required by one of our partners to deliver the support\n"
+#~ "you require.\n"
+#~ "    - If you use MandrakeStore, we also use your Customer ID to track\n"
+#~ "your order and deliver your products.\n"
+#~ "    - If you provide us with marketing information, we keep it for \n"
+#~ "internal use only in order to improve our products so that they can \n"
+#~ "better fit your needs whether you have purchased a product or not.), How "
+#~ "to change / correct your personal data?\n"
+#~ "\n"
+#~ "French law gives individuals the right to access, correct, modify or \n"
+#~ "remove their own personal data that we have on record. We offer this \n"
+#~ "as a worldwide privilege. You may execute this right at any time by \n"
+#~ "logging to your account with your customer ID and editing your\n"
+#~ "personnal data. You can log on to this page: http://www.mandrakeonline.net"
+#~ msgstr ""
+#~ "Які особисті дані ми збираємо ?         \n"
+#~ "                               \n"
+#~ "В різних місцях нашого сайта збирається різноманітна інформація;\n"
+#~ "нижче подано короткий огляд даних, які ми збираємо:\n"
+#~ "\n"
+#~ "По-перше, ми записуємо адресу Вашої електронної пошти, ім'я і поштову "
+#~ "адресу.\n"
+#~ "По-друге, ми надаємо Вам унікальне код замовника. Цей код "
+#~ "використовується \n"
+#~ "для отримання додаткової інформації, наприклад:\n"
+#~ "    - Ваша підписка до списків розсилки.\n"
+#~ "    - При реєстрації купленого продукту ми запитуємо про особисту "
+#~ "інформацію,\n"
+#~ "     конфігурацію системи/обладнання, щоб ми могли надавати\n"
+#~ " кращі послуги з врахуванням Ваших потреб.\n"
+#~ "    - На нашій сторінці пожертвувань і у нашому онлайновому магазині "
+#~ "(MandrakeStore) ми\n"
+#~ " записуємо дані для економічних розрахунків (ми не зберігаємо жодних "
+#~ "даних кредитних карток).\n"
+#~ "    \n"
+#~ "Що ми робимо з цією інформацією?\n"
+#~ "\n"
+#~ "Ми ніколи не надаємо особистої інформації іншим особам або компаніям -\n"
+#~ "ми використовуємо її тільки для наступних цілей:\n"
+#~ "    - Якщо Ви підписані на список розсилки, ми зберігаємо Вашу електронну "
+#~ "адресу\n"
+#~ "в базі даних, щоб повідомляти Вам свіжу інформацію\n"
+#~ "та/або щоб зробити можливою Вашу участь в обговореннях в різних поштових\n"
+#~ "розсилках. Якщо Ви відправляєте повідомлення в такий список, інші "
+#~ "учасники будуть бачити\n"
+#~ "адресу Вашої електронної пошти, але ніхто інший не матиме доступу до "
+#~ "нашої бази даних\n"
+#~ "абонентів. В будь який час Ви можете відписатися від будь якого списку з "
+#~ "допомогою\n"
+#~ "відповідної форми.\n"
+#~ "    - Якщо Ви надаєте інформацію при реєстрації купленого продукту,\n"
+#~ "щоб отримати підтримку, ми зберігаємо її тільки для себе за винятком "
+#~ "випадку,\n"
+#~ "коли така інформація потрібна якомусь із наших партнерів для забезпечення "
+#~ "підтримки,\n"
+#~ "якої Ви потребуєте.\n"
+#~ "    - Якщо Ви використовуєте MandrakeStore, ми також використовуємо Ваш "
+#~ "код замовника, \n"
+#~ "щоб провести Ваше замовлення і доставити продукцію.\n"
+#~ "    - Якщо Ви надаєте нам маркетингову інформацію, ми зберігаємо її для \n"
+#~ "внутрішнього використання винятково для покращення наших продуктів щоб "
+#~ "вони краще \n"
+#~ "відповідали Вашим (не залежно від того, купили Ви продукт чи ні).\n"
+#~ " Як змінити / виправити свої особисті дані?\n"
+#~ "\n"
+#~ "Закони Франції дають кожному право мати доступ, виправляти, змінювати "
+#~ "або \n"
+#~ "видаляти свої особисті дані, які ми записали. Ми розповсюджуємо це \n"
+#~ "право на всіх. Ви можете скористатися ним в будь який час. Для цього "
+#~ "потрібно \n"
+#~ "зареєструватися з Вашим кодом замовника і внести виправлення в свої "
+#~ "особисті\n"
+#~ "дані. Ви можете реєструватися на цій сторінці: http://www.mandrakeonline."
+#~ "net"
+
+#~ msgid "Sans Italic 17"
+#~ msgstr "Sans Italic 17"
 
 #~ msgid "Close"
 #~ msgstr "Закрити"

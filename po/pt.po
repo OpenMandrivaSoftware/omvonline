@@ -1,26 +1,28 @@
+# translation of mdkonline-pt.po to português
 # translation of mdkonline-pt.po to Portugal
 # translation of mdkonline-pt.po to Português
 # MDKONLINE EM PORTUGUES
-# Copyright (C) 2002,2003 Free Software Foundation, Inc.
-# José JORGE <jose.jorge@oreka.com>, 2002,2003.
+# Copyright (C) 2002,2003, 2004 Free Software Foundation, Inc.
 # Fernando Ribeiro <fa.ribeiro(at)gmx.net>, 2003
+# José JORGE <jose.jorge@oreka.com>, 2002,2003.
+# Jose Jorge <jjorge@free.fr>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-02-16 22:53+0100\n"
-"PO-Revision-Date: 2003-02-09 01:36+0100\n"
-"Last-Translator: Fernando Ribeiro <fa.ribeiro(at)gmx.net>\n"
-"Language-Team: Portugal\n"
+"PO-Revision-Date: 2004-02-18 17:34+0100\n"
+"Last-Translator: Jose Jorge <jjorge@free.fr>\n"
+"Language-Team: português <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.3\n"
 
 #: ../mdkonline:85
 msgid "Skip Wizard"
-msgstr ""
+msgstr "Saltar o Assistente"
 
 #: ../mdkonline:99
 msgid "Welcome to MandrakeOnline"
@@ -33,11 +35,14 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
+"Agora você deve ter uma conta em MandrakeOnline.\n"
+"Este assistente vai ajudar-lo a enviar a sua configuração\n"
+"(pacotes, lista do material) a uma base centralizada para\n"
+"o manter informado das actualizações de segurança e novas versoes úteis.\n"
 
 #: ../mdkonline:101
-#, fuzzy
 msgid "Create a MandrakeOnline Account"
-msgstr "Bem-vindo a MandrakeOnline"
+msgstr "Criar uma Conta MandrakeOnline"
 
 #: ../mdkonline:103
 msgid "I don't have a MandrakeOnline account and I want to "
@@ -56,13 +61,12 @@ msgid "Password:"
 msgstr "Senha:"
 
 #: ../mdkonline:109
-#, fuzzy
 msgid "Confirm Password:"
-msgstr "Senha:"
+msgstr "Confirme a Senha :"
 
 #: ../mdkonline:110
 msgid "Mail contact:"
-msgstr ""
+msgstr "Contacto mail :"
 
 #: ../mdkonline:117
 msgid "Mandrake Privacy Policy"
@@ -70,7 +74,7 @@ msgstr "Regras de privacidade Mandrake"
 
 #: ../mdkonline:123
 msgid "Authentification"
-msgstr ""
+msgstr "Autenticação"
 
 #: ../mdkonline:124
 msgid "Enter your MandrakeOnline login, password and machine name:"
@@ -79,7 +83,7 @@ msgstr ""
 
 #: ../mdkonline:129
 msgid "Machine name:"
-msgstr ""
+msgstr "Nome da máquina :"
 
 #: ../mdkonline:135
 msgid ""
@@ -100,18 +104,39 @@ msgid ""
 "Finally, an email alias with your username@mandrakeonline.net will be "
 "provided to you."
 msgstr ""
+"Para beneficiar dos serviços MandrakeOnline,\n"
+"está prestes a enviar a sua configuração.\n"
+"\n"
+"O Assistente vai agora enviar as informações seguintes à MandrakeSoft :\n"
+"1) a lista dos pacotes instalados no seu sistema,\n"
+"2) a lista do seu material.\n"
+"\n"
+"Se não gostar disto, ou se não deseja beneficiar deste serviço,\n"
+"carregue por favor em 'Anular'. Ao carregar em 'Seguinte', permite-nos de o "
+"manter informado\n"
+"das actualizações de segurança e de novas versoes úteis com alertas "
+"personalizadas por email.\n"
+"Além disso, beneficiar-se-á de descontos nos serviços de suporte em\n"
+"www.mandrakeexpert.com.\n"
+"Enfim, um alias de email da forma utilizador@mandrakeonline.net vai-lhe ser "
+"fornecido."
 
 #: ../mdkonline:141
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to MandrakeOnline."
 msgstr ""
+"A partir de agora vai receber os anúncios de segurança\n"
+"e de novas versões graças a MandrakeOnline."
 
 #: ../mdkonline:141
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
+"MandrakeOnline propõe-lhe de automatizar as actualizações.\n"
+"Um programa vai ser lançado regularmente no seu sistema esperando "
+"actualizações.\n"
 
 #: ../mdkonline:141
 msgid "Your upload was successful!"
@@ -119,7 +144,7 @@ msgstr "O seu envio conseguiu!"
 
 #: ../mdkonline:142
 msgid "automated Upgrades"
-msgstr ""
+msgstr "Actualizações automáticas"
 
 #: ../mdkonline:144
 msgid "Yes I want automated updates"
@@ -127,73 +152,75 @@ msgstr "Sim desejo instalar as novidades automáticamente"
 
 #: ../mdkonline:147
 msgid "Country:"
-msgstr ""
+msgstr "País :"
 
 #: ../mdkonline:172
 msgid "Creation"
-msgstr ""
+msgstr "Criação"
 
 #: ../mdkonline:172
 msgid "Login and Password should be < 12 characters\n"
-msgstr ""
+msgstr "O Identificante e a Senha deveriam ter mais de 12 caráteres\n"
 
 #: ../mdkonline:173
 msgid "Special Characters"
-msgstr ""
+msgstr "Caráteres Especiais"
 
 #: ../mdkonline:173
 msgid "Special Characters are not allowed\n"
-msgstr ""
+msgstr "Os Caráteres Especiais não são permitidos.\n"
 
 #: ../mdkonline:174
 msgid "Empty Fields"
-msgstr ""
+msgstr "Zonas Vazias"
 
 #: ../mdkonline:174
 msgid "Please fill up all fields\n"
-msgstr ""
+msgstr "Por favor preencha todas as zonas\n"
 
 #: ../mdkonline:175
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../mdkonline:175
 msgid "Email not valid\n"
-msgstr ""
+msgstr "O Email não é válido\n"
 
 #: ../mdkonline:176
 msgid "Account already exist\n"
-msgstr ""
+msgstr "A conta já existe\n"
 
 #: ../mdkonline:176
 msgid "Change account"
-msgstr ""
+msgstr "Mudar a conta"
 
 #: ../mdkonline:181
 msgid "Problem connecting to server \n"
-msgstr ""
+msgstr "Problema ao ligar ao servidor \n"
 
 #: ../mdkonline:181
 msgid "Server Problem"
-msgstr ""
+msgstr "Problema de Servidor"
 
 #: ../mdkonline:186 ../mdkonline:188 ../mdkonline:190
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #: ../mdkonline:186
 msgid "Please provide a login"
-msgstr ""
+msgstr "Por favor indique um identificante"
 
 #: ../mdkonline:188
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr ""
+"As senhas não são iguais\n"
+" Por favor tente outra vez\n"
 
 #: ../mdkonline:190
 msgid "Not a valid mail address!\n"
-msgstr ""
+msgstr "Não é um email válido!\n"
 
 #: ../mdkonline:210
 msgid "Finish"
@@ -204,19 +231,17 @@ msgid "Quitting Wizard\n"
 msgstr "Saindo de Assistente\n"
 
 #: ../mdkonline:252
-#, fuzzy
 msgid "Connecting ...\n"
-msgstr "Problema na ligação"
+msgstr "A ligar ...\n"
 
 #: ../mdkonline:261 ../mdkonline:327 ../mdkupdate:169
 msgid "Connection problem"
 msgstr "Problema na ligação"
 
 #: ../mdkonline:261 ../mdkonline:327
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
-"MandrakeUpdate não conseguiu contactar o servidor, vai tentar outra vez."
+"MandrakeOnline não pode ser contactado, por favor tente outra vez mais tarde"
 
 #: ../mdkonline:273
 msgid "Wrong password"
@@ -232,10 +257,16 @@ msgid ""
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
+"A sua identificação ou senha erra errada.\n"
+" Ou vai dever escrever-la outra vez, ou vai precisar de criar uma conta em "
+"MandrakeOnline.\n"
+" No segundo caso, volte ao princípio para se ligar a MandrakeOnline.\n"
+" Seja atento ao facto que também deve indicar um nome de Máquina\n"
+" (só os Caráteres alfabéticos são aceites)"
 
 #: ../mdkonline:300
 msgid "Sending configuration..."
-msgstr ""
+msgstr "A enviar a configuração..."
 
 #: ../mdkonline:335
 msgid "Reading configuration\n"
