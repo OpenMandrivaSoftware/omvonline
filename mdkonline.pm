@@ -37,14 +37,14 @@ sub get_site {
     system("$b " . $link . "&")
 }
 
-sub browser {
+sub browser() {
     require any;
     my $wm = any::running_window_manager();
-    member ($wm, 'kwin', 'gnome-session') or $wm = 'other';
+    member($wm, 'kwin', 'gnome-session') or $wm = 'other';
     my %Br = (
 	      'kwin' => 'webclient-kde',
 	      'gnome-session' => 'webclient-gnome',
-	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(epiphany mozilla konqueror galeon)
+	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_" } qw(epiphany mozilla konqueror galeon)
 	     );
     $Br{$wm}
 }
@@ -77,17 +77,15 @@ sub check_valid_email {
 
 sub rpm_ver_parse {
     my ($ver) = @_;
-    my @verparts = ();
-    while ( $ver ne "" ) {
-        if ( $ver =~ /^([A-Za-z]+)/ ) {    # leading letters
-            push ( @verparts, $1 );
+    my @verparts;
+    while ($ver ne "") {
+        if ($ver =~ /^([A-Za-z]+)/) {    # leading letters
+            push(@verparts, $1);
             $ver =~ s/^[A-Za-z]+//;
-        }
-        elsif ( $ver =~ /^(\d+)/ ) {       # leading digits
-            push ( @verparts, $1 );
+        } elsif ($ver =~ /^(\d+)/) {       # leading digits
+            push(@verparts, $1);
             $ver =~ s/^\d+//;
-        }
-        else {                             # remove non-letter, non-digit
+        } else {                             # remove non-letter, non-digit
             $ver =~ s/^.//;
         }
     }
@@ -101,25 +99,23 @@ sub rpm_ver_cmp {
     my @bparts;
     # individual token from array
     my ($apart, $bpart, $result);
-    if ( $a eq $b ) {
+    if ($a eq $b) {
         return 0;
     }
-    @aparts = rpmverparse($a); 
-    @bparts = rpmverparse($b); 
-    while ( @aparts && @bparts ) {
+    @aparts = rpm_ver_parse($a); 
+    @bparts = rpm_ver_parse($b); 
+    while (@aparts && @bparts) {
         $apart = shift (@aparts);
         $bpart = shift (@bparts);
-	if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
-            if ( $result = ( $apart <=> $bpart ) ) {
+	if ($apart =~ /^\d+$/ && $bpart =~ /^\d+$/) {    # numeric
+            if ($result = $apart <=> $bpart) {
                 return $result;
             }
-        }
-        elsif ( $apart =~ /^[A-Za-z]+/ && $bpart =~ /^[A-Za-z]+/ ) {    # alpha
-            if ( $result = ( $apart cmp $bpart ) ) {
+        } elsif ($apart =~ /^[A-Za-z]+/ && $bpart =~ /^[A-Za-z]+/) {    # alpha
+            if ($result = $apart cmp $bpart) {
                 return $result;
             }
-        }
-        else {    # "arbitrary" in original code
+        } else {    # "arbitrary" in original code
 	    my $rema = shift(@aparts);
 	    my $remb = shift(@bparts);
 	    if ($rema && !$remb) { return 1 } elsif (!$rema && $remb) { return -1 }
