@@ -127,11 +127,12 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Thu Sep  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-7mdk
-- i18n is back
+- i18n is back (#11064)
 - launch one instance of mdkapplet per desktop.
 - resynced po
 - remove strings incoherencies
 - don't display the same desktop icon for mdkapplet and net_applet
+- print errors in popup action area
 
 * Wed Aug  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-6mdk
 - automatically launch mdkapplet for KDE, GNOME and IceWM (via xinit)
