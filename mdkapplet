@@ -368,7 +368,7 @@ sub configure {
 					1;
 				    });
 }
-sub dislayLogs {
+sub displayLogs {
     my $w = ugtk2->new(N("Logs"), center => 1);
     gtkset_size_request($w->{window}, 500, 400);
     $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog });
