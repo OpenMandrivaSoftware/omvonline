@@ -169,7 +169,7 @@ sub setLabel {
 }
 sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
 sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
-sub installUpdates { $mLog .= N("Launching mdkupdate --applet"); system "/usr/sbin/mdkupdate", "--applet" }
+sub installUpdates { $mLog .= N("Launching mdkupdate --applet\n"); system "/usr/sbin/mdkupdate", "--applet" }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
@@ -191,7 +191,7 @@ sub silentCheck {
     #   98 - wrong pass
     #   97 - host not active
     my $retcode = {
-		   10 => sub { $isAvailable = 0; $mLog .= N("System is up to date") ;go2State('okay') },
+		   10 => sub { $isAvailable = 0; $mLog .= N("System is up to date\n") ;go2State('okay') },
 		   11 => sub {
 		       my @contents = sort ( split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
@@ -204,7 +204,7 @@ sub silentCheck {
 		   },
 		   97 => sub { $mLog .= N("Online services disabled. Contact MandrakeOnline site\n") ; go2State('disabled'); },
 		   98 => sub { $mLog .= N("Wrong Password.\n"); go2State('critical'); },
-		   99 => sub { $mLog .= N("Wrong Action or host or login. "); go2State('critical'); }
+		   99 => sub { $mLog .= N("Wrong Action or host or login.\n"); go2State('critical'); }
 		  };
     $retcode->{$u}->();
 }
