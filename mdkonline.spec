@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	16mdk
+Release: 	17mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -82,12 +82,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/X11R6/bin/*
 %{_bindir}/*
 %{_datadir}/%{name}
+%{_datadir}/nautilus/default-desktop/gnome-mandrakeonline.desktop
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 
 %changelog
+* Fri Mar 15 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-17mdk
+- add desktop entry for gnome.
+
 * Thu Mar 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-16mdk
 - 8.2 release 
 - code update 
