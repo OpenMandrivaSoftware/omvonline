@@ -236,6 +236,8 @@ sub test_passwd () {
 #    }
 #    print "Exec: $ssh_script $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
+# TODO: avoid starting a shell (which will eval args...) 
+# by using system() with several distinct args
 #    `$ssh_script $login $authentication_host $passwd`;
 	
 # NEW METHOD (http)
@@ -299,6 +301,8 @@ sub send_config {
 #    }
 #    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
+# TODO: avoid starting a shell (which will eval args...) 
+# by using system() with several distinct args
 #    `$scp_script /root/drakbug_report.log $login $authentication_host $passwd`;
 
 # NEW METHOD (http)
