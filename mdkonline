@@ -88,18 +88,13 @@ $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
 my $login_user= new Gtk::Entry();
 my $passwd_user= new Gtk::Entry();
-my $login_user2= new Gtk::Entry();
-my $passwd_user2= new Gtk::Entry();
 
 my $login   = "";
-my $login2  = "";
 my $passwd  = "";
-my $passwd2 = "";
 
 my %actions = ( 
 		2 => \&test_passwd,
-		3 => \&test_passwd,
-		4 => \&send_config
+		3 => \&send_config
 		);
 
 init_ui();
@@ -156,11 +151,7 @@ sub test_passwd () {
 
     # test the password
     $login   = $login_user->get_text();
-    $login2  = $login_user2->get_text();
     $passwd  = $passwd_user->get_text();
-    $passwd2 = $passwd_user2->get_text();
-    if ($login2)  { $login = $login2; }
-    if ($passwd2) { $passwd = $passwd2; }
     print STDERR "Login: $login\n";
 
     my $ssh_script = "";
@@ -173,12 +164,11 @@ sub test_passwd () {
 
     # if correct (exit code: 0 from ssh script), go to page 4
     if (! $?) {
-	$notebook_global->set_page(4); 
+	$notebook_global->next_page(); 
     } else {
-    # if incorrect, clear passwd and go/stay on page 3
+    # if incorrect, clear passwd and stay on page 2
 	info_popup (_("Wrong password"), _("Your login or password was wrong, you'll have to type it again"));
-	$passwd_user2->set_text("");
-	$notebook_global->set_page(3);
+	$passwd_user->set_text("");
     }
 
 }
@@ -187,20 +177,22 @@ sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
     print STDERR "Sending config\n";
 
+    `/usr/sbin/drakbug_report > /root/drakbug_report.log`;
+
     my $scp_script = "";
     foreach ("./scpcall.exp", "/usr/bin/scpcall.exp") {
 	[ -e "$_" ] and $scp_script="$_", last;
     }
-    print "Exec: $scp_script $login $authentication_host $passwd \n";
+    print "Exec: $scp_script /root/drakbug_report.log $login $authentication_host $passwd \n";
     # TODO: beware if the script was not found
-    `$scp_script $login $authentication_host $passwd`;
+    `$scp_script /root/drakbug_report.log $login $authentication_host $passwd`;
 
-    # if informations were sent correctly (exit code: 0 from scp script), go to page 6
+    # if informations were sent correctly (exit code: 0 from scp script), go to page 5
     if (! $?) {
-	$notebook_global->set_page(6); 
+	$notebook_global->set_page(5); 
     } else {
-    # if incorrect, go/stay on page 5 to retry sending data
-	$notebook_global->set_page(5);
+    # if incorrect, go/stay on page 4 to retry sending data
+	$notebook_global->set_page(4);
     }
 
 }
@@ -225,14 +217,6 @@ sub step_wizard {
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
-
-    # building the "retype passwd page"
-    my $vbox_ident2= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_ident2,"identity.png",_("Mandrake Online Authentification"),540,100);
-    my $label_wrong = new Gtk::Label("\n\n" . _("Wrong login/password, please try again:"));
-    $vbox_ident2->pack_start($label_wrong,$false ,$false,1);
-    pack_box_identity($vbox_ident2,"Login:",$login_user2,"Password:",$passwd_user2);
-    $notebook_global->append_page($vbox_ident2,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
