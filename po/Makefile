@@ -27,7 +27,7 @@ clean:
 %.mo: %.po
 	msgfmt -o $@ $<
 
-$(PGOAL).pot: $(PL_CFILES) $(CFILES)
+$(PGOAL).pot: $(PL_FILES) $(CFILES)
 	perl_checker -q --generate-pot $(PGOAL).pot $(PL_FILES)
 
 merge: $(PGOAL).pot
