@@ -124,9 +124,10 @@ sub step_wizard {
     write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
     map {
 	pack_box_identity($vbox_ident,$_->[0],$_->[1],$_->[2]);
-    } ([_("Login:"),$login_user], [_("Password:"),$passwd_user]);
+    } ([_("Login:"),$login_user,0], [_("Password:"),$passwd_user,1]);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
-    my $vbox_ident=new Gtk::VBox(0,0);
+    my $vbox_rev=new Gtk::VBox(0,0);
+    
 }
 
 sub confirm_quit {
@@ -155,13 +156,17 @@ sub confirm_quit {
 }
 
 sub pack_box_identity {
-    my ($vbox,$label,$entry)=@_;
+    my ($vbox,$label,$entry,$i)=@_;
     my $table = new Gtk::Table( 1, 2, $false);
     my $Label_wg=new Gtk::Label($label);
     $Label_wg->set_justify('center');
-    $entry->set_justify('left');
     $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
     $table->attach( $entry, 1, 2, 0, 1, 'shrink' , 'shrink', 0, 0);
+    if ($i==0){
+	$Label_wg->set_uposition(60,90);
+    }elsif ($i==1) {
+	$Label_wg->set_uposition(56,120);
+    }
     $vbox->pack_start($table,$true ,$true ,1);
 }
 
