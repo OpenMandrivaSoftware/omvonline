@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	8mdk
+Release: 	9mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -126,6 +126,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon Sep 13 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
+- po updates
+
 * Fri Sep 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-8mdk
 - fixed typos in sprintf_fixutf8 and output functions
 
