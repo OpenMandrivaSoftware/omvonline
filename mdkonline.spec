@@ -113,6 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 %{_datadir}/%{name}/pixmaps/*.png
+%_sysconfdir/X11/xinit.d/mdkapplet
 #%{_datadir}/autostart/*
 
 ##################################################################
