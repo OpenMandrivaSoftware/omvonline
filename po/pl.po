@@ -59,7 +59,7 @@ msgstr "Usługa jest nieaktywna. Kliknij na Witryna internetowa\""
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Nieobsługiwane wydanie (za stare, lub wydanie rozwojowe)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -185,12 +185,12 @@ msgstr "Sprawdzanie... Uaktualnienia są dostępne\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Wydanie rozwojowe nie jest obsługiwane przez usługę"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "Za stare wydanie nie jest obsługiwane przez usługę"
 
 #: ../mdkapplet:256
 #, c-format
@@ -304,9 +304,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Utwórz konto Mandrakeonline "
 
 #: ../mdkonline:108
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Nie posiadam konta Mandrakeonline i chcę je otrzymać "
+msgstr "Nie posiadam konta Mandrakeonline i chcę się zapisać"
 
 #: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:113 ../mdkonline_tui:144
 #, c-format
@@ -504,27 +504,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Login i hasło muszą być krótsze niż 12 znaków\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Nie można używać specjalnych znaków\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Wypełnij wszystkie pola\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Adres e-mail jest nieprawidłowy\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Konto już istnieje\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -532,19 +532,19 @@ msgid "Problem connecting to server \n"
 msgstr "Problem podczas nawiązywania połączenia z serwerem\n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Witamy w Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Mam już konto"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Chcę się zapisać"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -554,22 +554,22 @@ msgstr "Proszę czekać"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Tworzenie konta lub uwierzytelnianie"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Witamy w Mandrakeonline"
+msgstr "Łączenie z witryną Mandrakeonline..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "lub"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Niepoprawne hasło"
+msgstr "niepoprawne hasło:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -577,11 +577,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Pomyślnie utworzono konto Mandrakeonline.\n"
+"Kliknij \"Naprzód\" aby uwierzytlenić się i pobrać swoją konfigurację\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Kraj:"
+msgstr "Kraj"
 
 #: ../mdkupdate:50
 #, c-format
@@ -623,18 +625,18 @@ msgstr "  --update       - uaktualnia klucze\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Nie znaleziono pliku %s. Uruchom najpierw druida mdkonline"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr ""
-"Nie można nawiązać połączenia z Mandrakeonline. Spróbuj ponownie później."
+"Mandrakeupdate nie może nawiązać połączenia z witryną, spróbujemy później."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Nie można uaktualnić pakietów z nośnika mdkupdate.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -642,9 +644,5 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Pomiń druida"
-
-#~ msgid "Subscribe"
-#~ msgstr "Zasubskrybuj"
+"Mandrakeupdate nie może przesłać plików diff. Prześlij e-mail na adres "
+"support [at] mandrakeonline [dot] net"
