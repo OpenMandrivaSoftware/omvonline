@@ -72,14 +72,13 @@ sub connect_site () {
     if ($login && $passwd && $login !~ /\s+/ && $passwd !~ /\s+/) {
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkUpdateAgent/0.15" . $ua->agent);
-	my $request = HTTP::Request->new(GET => $url.'?log='.$login.'&pass='.$passwd);
+	my $request = HTTP::Request->new(GET => $url.'?log='.$login.'&pass='.$passwd.'$name_machine');
 	#add hostname to authentication.
 	my $response = $ua->request($request);
 	# Check the outcome of the response
 	if ($response->is_success) {
 	    $result = ($response->content =~ /TRUE/) ? 0 : -1;
 	} else {
-	    # pb with the connection ? stay on page 2
 	    print STDERR _("Connection problem")."\n"._("MandrakeOnline could not be contacted, we will try again");
 	    return;
 	}
@@ -91,7 +90,6 @@ sub connect_site () {
     if (! $result) {
 	$result;
     } else {
-	# if incorrect, clear passwd and stay on page 2
 	print STDERR _("Wrong password")."\n"._("Your login or password was wrong")."\n"._("You'll need to have an account on MandrakeOnline, or update your subscription. For any problems send mail to support@mandrakeonline.com");
 	return -1;
     }
