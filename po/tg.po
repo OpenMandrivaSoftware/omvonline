@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-05 21:30+0000\n"
 "Last-Translator: Hiromon\n"
 "Language-Team:  Tajik\n"
@@ -23,60 +23,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Барои системаи шумо навсозиҳои дастрас мавҷуд нетанд"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Системаи навкуниро талаб намекунад\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Мушкилоти танзимкунӣ. Аз нав \"танзимкунӣ\"-ро бор кунед"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Система банд аст. Интизор шавед ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s бастаҳо барои иловакунӣ дастрасанд"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Барои системаи шумо навсозиҳои дастрас мавҷуд нетанд"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Хидматрасон дастрас нест. Ба \"танзимкунӣ\" ангушт занед"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Шабака дастрас аст. Ба \"танзимкунии Шабака\" ангушт занед"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Хидматрасонӣ ғайри фаъол сохта шудааст. Интизори пардохт гардед..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Хидматрасон дастрас нест. Ба \"танзимкунӣ\" ангушт занед"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Кор гузоштани навигариҳо"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Танзимкунии Шабака"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Сардиҳии Навкунии Mandrake"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Танзимкунӣ"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Тафтиши Навкуниҳо"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "WebПойгоҳи Ғайрихудмухтор"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Танзимкунии Шабака"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Ҳозир Танзим кунед!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Апплети Mandrake Навкунӣ"
 
@@ -84,29 +91,13 @@ msgstr "Апплети Mandrake Навкунӣ"
 msgid "Actions"
 msgstr "Амалиёт"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Кор гузоштани навигариҳо"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Ба танзим даровардан"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Дастрас"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Навкуниҳоро тафтиш кунед"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Тафтишкунӣ ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Дастнорас"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -116,75 +107,76 @@ msgstr "Ба номнависҳо нигаред"
 msgid "Status"
 msgstr "Вазъият"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Пайвастшавии Шабакавӣ:  "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Ба поён"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Ба боло"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Навкуниҳои Тоза: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Тафтиши охирон: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Пӯшидан"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Ба поён"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Пайвастшавии Шабакавӣ:  "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Ба боло"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Тафтиши охирон: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Навкуниҳои Тоза: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Сардиҳии drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "Сардиҳии mdkupdate --апплет\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Дар назар чунин аст, ки Mdkonline боз коргузорӣ шудааст, бозборкунии "
 "апплет ...."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Ҳисобкунии навозиҳои тоза...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Пайвастшавӣ ба"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Тафтишкунӣ... Навкуниҳо имконпазиранд\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Ҳолати номаълум"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "Хидматрасониҳои ғайрихудмухтор хомӯш карда мешаванд. Ба пойгоҳи "
 "MandrakeOnline пайваст шавед\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Гузарвожаи нодуруст.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Амалиёти нодурусти ё соҳиб ё ворид.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -192,39 +184,39 @@ msgstr ""
 "Чизе дар гузоришҳои шабакаи шумо нодуруст аст (гардиш, фейрвол ва гузоришҳои "
 "проксии худро санҷед)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Системаи навкуниро талаб намекунад\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Бе тафтишот"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Тафтиши Шабака: эҳтимолан хомӯш карда шудааст\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Тафтиши файли config: ҳозир нест\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Воридҳо"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Пок кардан"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Дар бораи..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Баромадан"
 
@@ -396,7 +388,7 @@ msgstr "Танзимдарорӣ хонда шуда истодааст\n"
 msgid "Sending configuration..."
 msgstr "Танзимкуниҳо фиристода шуда истодаанд..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Муаммои пайвастагӣ"
 
@@ -408,17 +400,17 @@ msgstr "Ҳангоми боркунии файлҳо мушкилие рух д�
 msgid "Quitting Wizard\n"
 msgstr "Баромад аз Устод\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Пайвастшавӣ бо MandrakeOnline нашуда истодаст, марҳамат карда дертар бори "
 "дигар кӯшиш кунед"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Гузарвожаи нодуруст"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -468,3 +460,27 @@ msgstr "  --applet       - сардиҳии MandrakeНавкунӣ.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Навкунии калидҳо\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Мушкилоти танзимкунӣ. Аз нав \"танзимкунӣ\"-ро бор кунед"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s бастаҳо барои иловакунӣ дастрасанд"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Хидматрасонӣ ғайри фаъол сохта шудааст. Интизори пардохт гардед..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Сардиҳии Навкунии Mandrake"
+
+#~ msgid "Configuration"
+#~ msgstr "Танзимкунӣ"
+
+#~ msgid "Available"
+#~ msgstr "Дастрас"
+
+#~ msgid "Checking ..."
+#~ msgstr "Тафтишкунӣ ..."
+
+#~ msgid "Not Available"
+#~ msgstr "Дастнорас"

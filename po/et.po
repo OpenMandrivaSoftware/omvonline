@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-10 09:00+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-09 16:29+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -16,60 +16,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Teie süsteemile uuendusi ei ole"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Midagi pole uuendada\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Probleemid seadistusega. Proovige uuesti seadistada"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Süsteem on tegevuses. Palun oodake..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "Uuendusi on %s paketile"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Teie süsteemile uuendusi ei ole"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Teenus ei ole saadaval. Palun seadistage see"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Võrk on maas. Palun seadistage võrk"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Teenus on välja lülitatud: oodatakse tasumist..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Teenus ei ole saadaval. Palun seadistage see"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Uuenduste paigaldamine"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Võrgu seadistamine"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Mandrake uuenduste käivitamine"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Seadistused"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Uuenduste kontrollimine"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Veebilehekülg"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Võrgu seadistamine"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Seadista"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake uuenduste aplett"
 
@@ -77,29 +84,13 @@ msgstr "Mandrake uuenduste aplett"
 msgid "Actions"
 msgstr "Toimingud"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Uuenduste paigaldamine"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Seadistused"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Saadaval"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Uuenduste kontrollimine"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Kontroll..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Pole saadaval"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -109,72 +100,73 @@ msgstr "Logide vaatamine"
 msgid "Status"
 msgstr "Olek"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Võrguühendus: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Puudub"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Olemas"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Uuendused: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Viimati kontrollitud: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Sulge"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Puudub"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Võrguühendus: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Olemas"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Viimati kontrollitud: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Uuendused: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Drakconnecti käivitamine\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "mdkupdate --applet käivitamine\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mdkonline paistab olevat uuesti paigaldatud, aplett laaditakse uuesti..."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Uuenduste kontrollimine...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Ühendumine saidiga"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Kontroll... On uuendusi\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Tundmatu olek"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Võrguteenused ei ole lubatud. Ühendumine MandrakeOnline'i saidiga\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Vale parool.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Vale toiming või masin või kasutajatunnus.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -182,39 +174,39 @@ msgstr ""
 "Teie võrguseadistustega on midagi valesti (palun kontrollige ruuteri, "
 "tulemüüri või vahendaja (proxy) seadistusi)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Midagi pole uuendada\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Pole kontrollitud"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Võrgu kontroll: paistab, et see on maas\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Konfiguratsioonifaili kontroll: puudub\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Logid"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Puhasta"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Info..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Välju"
 
@@ -451,6 +443,30 @@ msgstr "  --applet       - käivitatakse MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - uuendatakse võtmeid\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Probleemid seadistusega. Proovige uuesti seadistada"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "Uuendusi on %s paketile"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Teenus on välja lülitatud: oodatakse tasumist..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Mandrake uuenduste käivitamine"
+
+#~ msgid "Configuration"
+#~ msgstr "Seadistused"
+
+#~ msgid "Available"
+#~ msgstr "Saadaval"
+
+#~ msgid "Checking ..."
+#~ msgstr "Kontroll..."
+
+#~ msgid "Not Available"
+#~ msgstr "Pole saadaval"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "Püütakse ühenduda saidiga mandrakeonline.net\n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-06-20 22:32+0400\n"
 "Last-Translator: Aiet Kolkhi <aiet@qartuli.net>\n"
 "Language-Team: Georgian <aiet@qartuli.com>\n"
@@ -14,60 +14,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "თქვენი სისტემას განახლება არ ჭირდება"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "სისტემა განახლებულია\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "კონფიგურაციის პროლემა. ისევ გამოიძახეთ „კონფიგურირება“"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "სისტემა დაკავებულია. მოთმინება იქონიეთ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "შეგიძლიათ განაახლოთ %s პაკეტი"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "თქვენი სისტემას განახლება არ ჭირდება"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "სერვისი არ არსებობს. დააწკაპუნეთ „კონფიგურირება“-ზე"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "ქსელი მიუწვდომელია. ამოირჩიეთ „ქსელის კონფიგურირება“"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "სერვისი შეწყვეტილია. ველი გადასახადს..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "სერვისი არ არსებობს. დააწკაპუნეთ „კონფიგურირება“-ზე"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "განახლებების ინსტალირება"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "ქსელის კონფიგურირება"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "მენდრეიქის განახლების გამოძახება"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "კონფიგურაცია"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "განახლებების შეამოწმება"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Online WebSite"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "ქსელის კონფიგურირება"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "კონფიგურირება ახლა!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "მენდრეიქის განახლების აპლეტი"
 
@@ -75,29 +82,13 @@ msgstr "მენდრეიქის განახლების აპლ�
 msgid "Actions"
 msgstr "მოქმედებები"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "განახლებების ინსტალირება"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "კონფიგურაცია"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "არსებობს"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "განახლებების შემოწმება"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "ვამოწმებ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "არ არსებობს"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -107,73 +98,74 @@ msgstr "აჩვენე აღრიცხვები"
 msgid "Status"
 msgstr "სტატუსი"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "ქსელის კავშირი:"
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "ძინავს"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "ღვიძავს"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "ახალი განახლებები:"
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "ბოლო შემოწმება:"
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "დახურვა"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "ძინავს"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "ქსელის კავშირი:"
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "ღვიძავს"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "ბოლო შემოწმება:"
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "ახალი განახლებები:"
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "ვიძახებ drakconnect-ს\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "ვიძახებ mdkupdate --applet-ს\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "როგორ ჩანს Mdkonline ხელმეორედ იქნა ინსტალირებული. ხელახლა ვიძახებ აპლეტს..."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "ვანგარიშობ გასაახლებელ პაკეტებს...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "ვუკავშირდები:"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "ვამოწმებ... არსებობს გასაახლებელი პაკეტები\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "უცნობი მდგომარეობა"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "ონლაინ მომსახურებები შეწყვეტილია. მიაკითხეთ MandrakeOnline-ის ვებგვერდს\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "არასწორი პაროლი\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "არასწორი მოქმედება, ჰოსტი ან შესვლა.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -181,39 +173,39 @@ msgstr ""
 "თქვენი ქსელის პარამეტრებში რაღაც გაუგებრობაა (გადაამოწმეთ route, firewall ან "
 "proxy პარამეტრები)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "სისტემა განახლებულია\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "შეამოწმების გარეშე"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "ვამოწმებ ქსელს: როგორც ჩანს გამორთულია\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "ვამოწმებ config ფაილს: არა იძებნება\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "ლოგები (აღრიცხვები)"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "ამოშლა"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "შესახებ..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "გასვლა"
 
@@ -385,7 +377,7 @@ msgstr "ვკითხულობ კონფიგურაცას\n"
 msgid "Sending configuration..."
 msgstr "ვაგზავნი კონფიგურაციას..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "კავშირის პრობლემა"
 
@@ -397,15 +389,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "ოსტატის დასრულება\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline-ს ვერ ვუკავშირდები. გთხოვთ მოგვიანებით სცადოთ"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "არასწორი პაროლი"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -454,6 +446,30 @@ msgstr "  --applet       - გამოიძახე MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - განახლების კვანძები\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "კონფიგურაციის პროლემა. ისევ გამოიძახეთ „კონფიგურირება“"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "შეგიძლიათ განაახლოთ %s პაკეტი"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "სერვისი შეწყვეტილია. ველი გადასახადს..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "მენდრეიქის განახლების გამოძახება"
+
+#~ msgid "Configuration"
+#~ msgstr "კონფიგურაცია"
+
+#~ msgid "Available"
+#~ msgstr "არსებობს"
+
+#~ msgid "Checking ..."
+#~ msgstr "ვამოწმებ..."
+
+#~ msgid "Not Available"
+#~ msgstr "არ არსებობს"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "ვცდილობ დავუკავშირდე mandrakeonline.net-ს\n"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-08 18:22+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma) <dysxhi@yahoo.co.in>\n"
 "Language-Team: हिन्दी (Hindi) <dysxhi@yahoo.co.in>\n"
@@ -18,60 +18,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "आपके तंत्र हेतु कोई अपडेट उपलब्ध नहीं है"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "तंत्र आज-तक अपडेट है\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "संरचना करने में समस्याऐं । \"संरचना\" को पुनः चलायें"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "तंत्र व्यस्त है । प्रतीक्षा करें ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s पैकेजों की उपलब्धी अपडेट हेतु है"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "आपके तंत्र हेतु कोई अपडेट उपलब्ध नहीं है"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "सेवा उपलब्ध नहीं है । \"संरचना\" पर क्लिक करें"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "नेटवर्क डॉउन है । \"नेटवर्क की संरचना\" पर क्लिक करें"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "सेवायें निष्क्रिय कर दी गयी है । भुगतान की प्रतीक्षा में..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "सेवा उपलब्ध नहीं है । \"संरचना\" पर क्लिक करें"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "अपडेटों का संसाधन"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "नेटवर्क की संरचना"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "मैनड्रैक अपडेट की शुरूवात"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "संरचना"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "अपडेटो की जाँच"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "ऑनलाइन वेबस्थल"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "नेटवर्क की संरचना"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "अभी संरचित करें!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "मैनड्रैक अपडेटो का एपलेट"
 
@@ -79,29 +86,13 @@ msgstr "मैनड्रैक अपडेटो का एपलेट"
 msgid "Actions"
 msgstr "कार्यवाहिया"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "अपडेटों का संसाधन"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "संरचना"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "उपलब्ध"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "अपडेटो की जाँच"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "जाँच की जा रही है..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "उपलब्ध नहीं"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -111,73 +102,74 @@ msgstr "लॉगो को देखना"
 msgid "Status"
 msgstr "स्थिति"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "नेटवर्क कनेक्शन: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "नीचे"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "ऊपर"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "नये अपडेट: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "अंतिम जाँच: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "बन्द"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "नीचे"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "नेटवर्क कनेक्शन: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "ऊपर"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "अंतिम जाँच: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "नये अपडेट: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "ड्रैककनेक्ट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "एमडीकेअपडेट को आरम्भ किया जा रहा है\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "एमडीकेऑनलाइन का लगता है कि पुनः संसाधन किया गया है, एपलेट को पुनः लाया जा रहा "
 "है .... "
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "नये अपडेटो की गणना की जा रही है...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "से सम्बन्ध स्थापित हो रहा है"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "जाँच की जा रही है... अपडेट्स उपलब्ध है\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "अज्ञात अवस्था"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "ऑनलाइन सेवायें निष्क्रिय है । मैनड्रैकऑनलाइन स्थल से सम्पर्क करें\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "गलत कूटशब्द।\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "गलत एक्शन या होस्ट या लॉग-इन।\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -185,39 +177,39 @@ msgstr ""
 "आपकी नेटवर्क समायोजनाओं में कुछ त्रुटि है (अपने पथ, अग्नि-भीतिका या प्रोक्सी समायोजनाओं की "
 "जाँच करें)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "तंत्र आज-तक अपडेट है\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "कोई जाँच नहीं"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "नेटवर्क की जाँच की जा रही है: लगता है निष्क्रिय है\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "कॉन्फ़िग संचिका की जाँच की जा रही है: विलुप्त है\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "रोज़नामचे"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "साफ़ करना "
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "के बारे में ।"
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr "शुरूवात में सदैव आरम्भ करें"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "निकास"
 
@@ -386,7 +378,7 @@ msgstr "संरचना पढ़ी जा रही है\n"
 msgid "Sending configuration..."
 msgstr "संरचना के बारे में सूचित किया जा रहा है..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "सम्बन्ध स्थापन समस्या"
 
@@ -398,16 +390,16 @@ msgstr "संचिकाओं को अपलोड करते समय �
 msgid "Quitting Wizard\n"
 msgstr "विजार्ड से बाहर निकला जा रहा है\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "मैनड्रैकऑनलाइन से सम्पर्क स्थापित नहीं हो पाया, कृपया कुछ समय उपरान्त पुनः प्रयास करें ।"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "गलत कूटशब्द"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -456,3 +448,27 @@ msgstr "  --applet       - मैनड्रैकअपडेट की शु
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - कुँजियों को अपडेट करना\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "संरचना करने में समस्याऐं । \"संरचना\" को पुनः चलायें"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s पैकेजों की उपलब्धी अपडेट हेतु है"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "सेवायें निष्क्रिय कर दी गयी है । भुगतान की प्रतीक्षा में..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "मैनड्रैक अपडेट की शुरूवात"
+
+#~ msgid "Configuration"
+#~ msgstr "संरचना"
+
+#~ msgid "Available"
+#~ msgstr "उपलब्ध"
+
+#~ msgid "Checking ..."
+#~ msgstr "जाँच की जा रही है..."
+
+#~ msgid "Not Available"
+#~ msgstr "उपलब्ध नहीं"

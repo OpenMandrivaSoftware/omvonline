@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-07-20 15:48+0430\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian\n"
@@ -17,60 +17,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "هیچ بروزسازیی برای سیستم‌تان در دسترس نیست"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "سیستم به روز است\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "مشکلات پیکربندی. دوباره \"پیکربندی\" را اجرا کنید"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "سیستم اشغال است. صبر کنید..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s بسته‌ها برای بروزسازی در دسترس هستند"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "هیچ بروزسازیی برای سیستم‌تان در دسترس نیست"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "سرویس در دسترس نیست. بر \"پیکربندی\" کلیک کنید"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "شبکه پایین است. بر \"پیکربندی شبکه\" را کلیک کنید"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "سرویس غیر فعال شده است. منتظر پرداخت کردن..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "سرویس در دسترس نیست. بر \"پیکربندی\" کلیک کنید"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "نصب کردن بروزسازی‌ها"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "پیکربندی شبکه"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "راه‌اندازی بروزسازی ماندرایک"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "پیکربندی"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "بررسی بروزسازی‌ها"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "وب‌گاه اینترنت"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "پیکربندی شبکه"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "پیکربندی اکنون!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "برنامک بروزسازی ماندرایک"
 
@@ -78,29 +85,13 @@ msgstr "برنامک بروزسازی ماندرایک"
 msgid "Actions"
 msgstr "کنش‌ها"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "نصب کردن بروزسازی‌ها"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "پیکربندی"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "موجود"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "بررسی بروزسازی‌ها"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "در حال بررسی کردن..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "غیر موجود"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -110,72 +101,73 @@ msgstr "دیدن ثبت‌ها"
 msgid "Status"
 msgstr "وضعیت"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "اتصال شبکه: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "پایین"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "بالا"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "بروزسازی‌های جدید: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "آخرین بررسی: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "بستن"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "پایین"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "اتصال شبکه: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "بالا"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "آخرین بررسی: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "بروزسازی‌های جدید: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "راه انداختن drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "به راه انداختن mdkupdate-applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "بنظر می‌رسد که mdkonline نصب مجدد شده است، برنامک بارگذاری مجدد می‌شود ..."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "در حال محاسبه کردن بروزسازی‌های جدید...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "در حال اتصال به"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "در حال بررسی... بروزسازی‌هایی در دسترس هستند\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "وضعیت ناشناخته"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "خدمات برخطی از کار افتاده‌اند. با وبگاه MandrakeOnline تماس بگیرید\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "گذرواژه‌ی اشتباه\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "کنش یا میزبان یا ثبت‌ورود اشتباه.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -183,39 +175,39 @@ msgstr ""
 "تنظیمات شبکه شما اشکال دارد (تنظیمات مسیریاب، دیوار آتش یا پراکسی خود را "
 "بررسی کنید)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "سیستم به روز است\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "بدون بررسی"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "بررسی کردن شبکه: بنظر از کار افتاده است\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "بررسی کردن پرونده‌ی config: حضور ندارد\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "ثبت‌ها"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "درباره‌ی.."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "ترک"
 
@@ -384,7 +376,7 @@ msgstr "خواندن پیکربندی\n"
 msgid "Sending configuration..."
 msgstr "فرستادن پیکربندی..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "مشکل اتصال"
 
@@ -396,15 +388,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "ترک جادوگر\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "نتوانست با MandrakeOnline تماس گرفت، لطفاً بعداً دوباره امتحان کنید"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "گذرواژه‌ی اشتباه"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -452,6 +444,30 @@ msgstr "  --applet       - اجرای MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - بروزسازی کلیدها.\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "مشکلات پیکربندی. دوباره \"پیکربندی\" را اجرا کنید"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s بسته‌ها برای بروزسازی در دسترس هستند"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "سرویس غیر فعال شده است. منتظر پرداخت کردن..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "راه‌اندازی بروزسازی ماندرایک"
+
+#~ msgid "Configuration"
+#~ msgstr "پیکربندی"
+
+#~ msgid "Available"
+#~ msgstr "موجود"
+
+#~ msgid "Checking ..."
+#~ msgstr "در حال بررسی کردن..."
+
+#~ msgid "Not Available"
+#~ msgstr "غیر موجود"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "در حال اقدام به اتصال به mandrakeonline.net\n"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-06-11 21:06-0000\n"
 "Last-Translator: Rhoslyn Prys <rhoslyn.prys@meddal.org.uk>\n"
 "Language-Team: Cymraeg/Welsh <rhoslyn.prys@meddal.org.uk>\n"
@@ -14,60 +14,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Dim diweddariadau ar gael ar gyfer eich system"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Mae'r system yn gyfredol\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Problem ffurfweddu. Cychwyn \"ffurfweddu\" eto"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Mae'r system yn brysur. Arhoswch..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s pecyn ar gael i'w diweddaru"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Dim diweddariadau ar gael ar gyfer eich system"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Nid yw'r gwasanaeth ar gael. Cliciwch \"ffurfweddiad\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Nid yw'r rhwydwaith ar gael.  Cliciwch \"ffurfweddu'r Rhwydwaith\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Gwasanaeth wedi ei derfynu. Disgwyl taliad..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Nid yw'r gwasanaeth ar gael. Cliciwch \"ffurfweddiad\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Gosod diweddariadau"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Ffurfweddu'r Rhwydwaith"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Cychwyn Diweddariad Mandrake"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Ffurfweddiad"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Gwirio Diweddaiad"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Safle Gwe Ar-lein"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Ffurfweddu'r Rhwydwaith"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Ffurfweddu!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Rhaglennig Diweddaru Mandrake"
 
@@ -75,29 +82,13 @@ msgstr "Rhaglennig Diweddaru Mandrake"
 msgid "Actions"
 msgstr "Gweithredoedd"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Gosod diweddariadau"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Ffurfweddu"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Ar Gael"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Gwirio diweddaiad"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Gwirio..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Ddim ar Gael"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -107,72 +98,73 @@ msgstr "Darllen cofnodion"
 msgid "Status"
 msgstr "Statws"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Cyswllt Rhwydwaith:"
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Lawr"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Fyny"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Diweddariadau Newydd:"
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Gwiriad diwethaf:"
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Cau"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Lawr"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Cyswllt Rhwydwaith:"
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Fyny"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Gwiriad diwethaf:"
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Diweddariadau Newydd:"
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Cychwyn drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "Cychwyn mdkupdate --applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Cyfrifo diweddariadau newydd...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Cysylltu â"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Gwirio... Mae diweddariadau ar gael\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Cyflwr anhysbys"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "Mae'r gwasanaethau ar-lein wedi eu hatal. Cysylltwch â safle MandrakeOnline\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Y cyfrinair anghywir\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Gweithred, gwestai neu fewngofnod anghywir.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -180,39 +172,39 @@ msgstr ""
 "Mae rhywbeth o'i le ar osodiadau eich rhwydwaith (gwiriwch eich llwybr, mur "
 "cadarn neu osodiadau dirprwy)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Mae'r system yn gyfredol\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Dim gwiriad"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Gwirio'r Rhwydwaith: i weld wedi ei anablu\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Gwirio ffeil ffurfweddiad: Nid yw ar gael\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Cofnodion"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Clirio"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Ynghylch..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Gadael"
 
@@ -381,7 +373,7 @@ msgstr "Darllen ffurfweddiad\n"
 msgid "Sending configuration..."
 msgstr "Anfon ffurfweddiad..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Problem cysylltu"
 
@@ -393,15 +385,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Gadael y Dewin\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Methu cysylltu â MandrakeOnline, ceisiwch eto'n nes ymlaen"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Y cyfrinair anghywir"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -449,6 +441,30 @@ msgstr "  --applet       - cychwyn MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Allwedd diweddaru\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Problem ffurfweddu. Cychwyn \"ffurfweddu\" eto"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s pecyn ar gael i'w diweddaru"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Gwasanaeth wedi ei derfynu. Disgwyl taliad..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Cychwyn Diweddariad Mandrake"
+
+#~ msgid "Configuration"
+#~ msgstr "Ffurfweddiad"
+
+#~ msgid "Available"
+#~ msgstr "Ar Gael"
+
+#~ msgid "Checking ..."
+#~ msgstr "Gwirio..."
+
+#~ msgid "Not Available"
+#~ msgstr "Ddim ar Gael"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "Ceisio cysylltu â mandrakeonline.net\n"

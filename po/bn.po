@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-09 10:16+0600\n"
 "Last-Translator: Jamil Ahmed <jamil@bengalinux.org>\n"
 "Language-Team: Bangla <mdk-translation@bengalinux.org>\n"
@@ -16,61 +16,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "আপনার সিষ্টেমের জন্য কোনো আপডেট নেই"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "সিষ্টেম আপ-টু-ডেট আছে\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Config এর সমস্যা। \"কনফিগার\" পুনরায় চালু করুন"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "সিষ্টেম বর্তমানে ব্যস্ত রয়েছে। অনুগ্রহ করে অপেক্ষা করুন..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "আপডেটের জন্য %s প্যাকেজ গুলো রয়েছে"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "আপনার সিষ্টেমের জন্য কোনো আপডেট নেই"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "পরিসেবা (service) বর্তমানে নেই। \"কনফিগারেশন\"-এ ক্লিক করুন"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "নেটওয়ার্ক বর্তমানে বন্ধ আছে। \"নেটওয়ার্ক কনফিগার\"-এ ক্লিক করুন"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr ""
-"পরিসেবা (service) বর্তমানে নিষ্ক্রিয় আছে। বিল পরিশোধ এর জন্য অপেক্ষা করছে..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "পরিসেবা (service) বর্তমানে নেই। \"কনফিগারেশন\"-এ ক্লিক করুন"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "আপডেট গুলো ইনষ্টল করো"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "নেটওয়ার্ক কনফিগার করো"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "ম্যান্ড্রেক আপডেট চালু করো"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "কনফিগারেশন"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "আপডেট পরীক্ষা করো"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "অনলাইন ওয়েবসাইট"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "নেটওয়ার্ক কনফিগার করো"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "এক্ষুনি কনফিগার করো!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "ম্যান্ড্রেক আপডেট অ্যাপ্লেট"
 
@@ -78,29 +84,13 @@ msgstr "ম্যান্ড্রেক আপডেট অ্যাপ্ল�
 msgid "Actions"
 msgstr "কার্য"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "আপডেট গুলো ইনষ্টল করো"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "কনফিগার"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "পাওয়া যাচ্ছে"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "আপডেট পরীক্ষা করো"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "পরীক্ষা করা হচ্ছে ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "পাওয়া যাচ্ছে না"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -110,73 +100,74 @@ msgstr "লগ দেখুন"
 msgid "Status"
 msgstr "অবস্থা"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "নেটওয়ার্ক সংযোগ: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "নিচে"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "উপরে"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "নতুন আপডেট: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "সর্বশেষ পরীক্ষা: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "বন্ধ"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "নিচে"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "নেটওয়ার্ক সংযোগ: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "উপরে"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "সর্বশেষ পরীক্ষা: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "নতুন আপডেট: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "drakconnect চালু করা হচ্ছে\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "mdkupdate --applet চালু করা হচ্ছে\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "মনে হচ্ছে Mdkonline পুনরায় ইনষ্টল করা হয়েছে, পুনরায় applet চালানো হচ্ছে ...."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "নতুন আপডেট পরীক্ষা করা হচ্ছে...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "এর সাথে সংযোগ করা হচ্ছে"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "পরীক্ষা চলছে... আপডেট পাওয়া গেছে\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "অজ্ঞাত অবস্হা"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "অনলাইন পরিসেবা নিষ্ক্রিয় করা রয়েছে। ম্যান্ড্রেকঅনলাইন সাইটের সাথে যোগাযোগ করুন\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "ভূল পাসওয়ার্ড।\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "কাজ অথবা হোষ্ট অথবা লগ-ইন সঠিক নয়।\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -184,39 +175,39 @@ msgstr ""
 "আপনার নেটওয়ার্ক সেটিংস এ কিছু সমস্যা হয়েছে (আপনার route, firewall or proxy "
 "সেটিংস পুনায় পরীক্ষা করুন)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "সিষ্টেম আপ-টু-ডেট আছে\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "কোন পরীক্ষণ নেই"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "নেটওয়ার্ক পরীক্ষা করা হচ্ছে: সম্ভবত নিষ্ক্রিয় করা আছে\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "config ফাইল পরীক্ষা করা হচ্ছে: উপস্থিত নেই\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "লগ"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "পরিষ্কার করো"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "পরিচিতি..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr "সবসময় স্টার্টআপে আরম্ভ করো"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "প্রস্থান"
 
@@ -383,7 +374,7 @@ msgstr "কনফিগারেশন পড়া হচ্ছে\n"
 msgid "Sending configuration..."
 msgstr "কনফিগারেশন প্রেরণ করে হচ্ছে..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "সংযোগ সমস্যা"
 
@@ -395,17 +386,17 @@ msgstr "ফাইল আপলোড করার সময় সমস্যা �
 msgid "Quitting Wizard\n"
 msgstr "উইজার্ড থেকে প্রস্থান করা হচ্ছে\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "ম্যান্ড্রেকঅনলাইন-এর সাথে সংযোগ করা সম্ভব হয় নি, অনুগ্রহ করে কিছুক্ষণ পর পুনরায় চেষ্টা "
 "করুন"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "ভূল পাসওয়ার্ড"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -454,3 +445,28 @@ msgstr "  --applet       - MandrakeUpdate চালু করো।\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - আপডেট কী (keys)\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Config এর সমস্যা। \"কনফিগার\" পুনরায় চালু করুন"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "আপডেটের জন্য %s প্যাকেজ গুলো রয়েছে"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr ""
+#~ "পরিসেবা (service) বর্তমানে নিষ্ক্রিয় আছে। বিল পরিশোধ এর জন্য অপেক্ষা করছে..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "ম্যান্ড্রেক আপডেট চালু করো"
+
+#~ msgid "Configuration"
+#~ msgstr "কনফিগারেশন"
+
+#~ msgid "Available"
+#~ msgstr "পাওয়া যাচ্ছে"
+
+#~ msgid "Checking ..."
+#~ msgstr "পরীক্ষা করা হচ্ছে ..."
+
+#~ msgid "Not Available"
+#~ msgstr "পাওয়া যাচ্ছে না"

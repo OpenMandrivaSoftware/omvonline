@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-08 23:53+0300\n"
 "Last-Translator: dovix <dovix2003@yahoo.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -19,60 +19,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.2\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "אין עדכונים זמינים עבור המערכת שלך"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "המערכת מעודכנת\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "בעיות תצורה. הרץ את \"הגדר\" שוב"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "המערכת עסוקה, אנא המתן..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s חבילות מוכנות לעדכון "
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "אין עדכונים זמינים עבור המערכת שלך"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "השירות לא זמין. לחץ על \"תצורה\"."
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "הרשת לא פעילה. לחץ על \"תצורת הרשת\"."
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "השירות הופסק. ממתין לתשלום..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "השירות לא זמין. לחץ על \"תצורה\"."
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "התקן עדכונים"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "הגדר את הרשת"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "הפעל את עדכוני Mandrake"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "הגדרות"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "בדוק עדכונים"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "אתר מקוון"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "הגדר את הרשת"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "הגדר כעת"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "יישומון עדכוני Mandrake"
 
@@ -80,29 +87,13 @@ msgstr "יישומון עדכוני Mandrake"
 msgid "Actions"
 msgstr "פעולות"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "התקן עדכונים"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "הגדר"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "זמין"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "בדוק עדכונים"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "בודק ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "לא זמין"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -112,71 +103,72 @@ msgstr "צפה ברישומי המערכת"
 msgid "Status"
 msgstr "מצב"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "חיבור רשת: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "למטה"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "למעלה"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "עדכונים חדשים:"
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "בדיקה אחרונה:"
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "סגור"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "למטה"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "חיבור רשת: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "למעלה"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "בדיקה אחרונה:"
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "עדכונים חדשים:"
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "מפעיל את drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "מפעיל את mdkupdate --applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr "נראה ש Mdkonline הותקן מחדש, טוען את היישומון ..."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "מנתח עדכונים חדשים...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "מתחבר אל"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "בודק... יש עדכונים זמינים\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "מצב לא מוכר"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "השירותים המקוונים הופסקו. עליך להתעדכן באתר MandrakeOnline\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "סיסמה שגוייה.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "הפעולה או שם מחשב או שם משתמש שגויים.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -184,39 +176,39 @@ msgstr ""
 "כנראה קיימת בעיה עם הגדרות הרשת שלך )עליך לבדוק את ה routing, חומת האש "
 "והגדרות השרת המתווך)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "המערכת מעודכנת\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "ללא בדיקה"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "בודק זמינות רשת: אין תגובה\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "בודק קובץ הגדרות: לא קיים\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "רישומים"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "נקה"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "אודות..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr "הפעל תמיד באתחול המערכת"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "יציאה"
 
@@ -381,7 +373,7 @@ msgstr "קורא את קובץ התצורה \n"
 msgid "Sending configuration..."
 msgstr "שולח תצורה..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "ההתחברות נכשלה"
 
@@ -393,15 +385,15 @@ msgstr "ישנה בעיה בעת העלאת קבצים, עליך לנסות שנ
 msgid "Quitting Wizard\n"
 msgstr "יוצא מהאשף\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "לא יכול להתחבר לאתר של MandrakeOnline, עליך לנסות שוב מאוחר יותר"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "סיסמה שגוייה"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -448,6 +440,30 @@ msgstr "  --applet       - הרץ את MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - עדכן את המפתחות.\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "בעיות תצורה. הרץ את \"הגדר\" שוב"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s חבילות מוכנות לעדכון "
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "השירות הופסק. ממתין לתשלום..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "הפעל את עדכוני Mandrake"
+
+#~ msgid "Configuration"
+#~ msgstr "הגדרות"
+
+#~ msgid "Available"
+#~ msgstr "זמין"
+
+#~ msgid "Checking ..."
+#~ msgstr "בודק ..."
+
+#~ msgid "Not Available"
+#~ msgstr "לא זמין"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "מנסה להתחבר אל mandrakeonline.net\n"

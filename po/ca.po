@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-09 11:29+0200\n"
 "Last-Translator: Albert Astals Cid <astals11@terra.es>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -18,60 +18,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "No hi ha actualitzacions disponibles pel vostre sistema"
-
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Problemes de configuració. Executeu \"configura\" un altre cop"
-
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
 msgstr "El sistema està ocupat. Espereu ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "Hi ha %s paquets disponibles per actualitzar"
+#: ../mdkapplet:70
+#, fuzzy
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
+"Si teniu qualsevol problema, envieu un correu a support@mandrakeonline.net\n"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
+msgstr "El sistema està ocupat. Espereu ..."
+
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "No hi ha actualitzacions disponibles pel vostre sistema"
+
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "El servei no està disponible. Premeu a \"configuració\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "La xarxa està inactiva. Premeu a \"configura la xarxa\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Servei desactivat. S'està esperant el pagament..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "El servei no està disponible. Premeu a \"configuració\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Instal·la actualitzacions"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Configura la xarxa"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Executa Mandrake Update"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Configuració"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Comprova actualitzacions"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Configura la xarxa"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Configura ara!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Applet Mandrake Update"
 
@@ -79,29 +88,13 @@ msgstr "Applet Mandrake Update"
 msgid "Actions"
 msgstr "Accions"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Instal·la actualitzacions"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Configura"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Disponible"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Comprova actualitzacions"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "S'està comprovant ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "No disponible"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -111,109 +104,111 @@ msgstr ""
 msgid "Status"
 msgstr "Estat"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Connexió de xarxa: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Caiguda"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Funcionant"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Noves actualitzacions: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Última comprovació: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Tanca"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Caiguda"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Connexió de xarxa: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Funcionant"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Última comprovació: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Noves actualitzacions: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "S'està executant drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "S'estan computant les noves actualitzacions...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "S'està connectant a"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "S'està comprovant ...Hi ha actualitzacions disponibles\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Estat desconegut"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Contrasenya incorrecta.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "El sistema està actualitzat\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "No comprovis"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "S'està comprovant la xarxa: sembla estar desactivada\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
-msgstr "S'està comprovant l'existència del fitxer de configuració: No està present\n"
+msgstr ""
+"S'està comprovant l'existència del fitxer de configuració: No està present\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr ""
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Neteja"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Quant a"
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr "Executa sempre al inici"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Surt"
 
@@ -386,7 +381,7 @@ msgstr "S'està llegint la configuració\n"
 msgid "Sending configuration..."
 msgstr "S'està enviant la configuració..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Problema de connexió"
 
@@ -398,15 +393,16 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "S'està sortint de l'auxiliar\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
-msgstr "No s'ha pogut contactar amb MandrakeOnline, si us plau, provi-ho més tard"
+msgstr ""
+"No s'ha pogut contactar amb MandrakeOnline, si us plau, provi-ho més tard"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Contrasenya incorrecta"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -455,6 +451,30 @@ msgstr "  --applet       - actualitza MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Actualitza les claus\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Problemes de configuració. Executeu \"configura\" un altre cop"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "Hi ha %s paquets disponibles per actualitzar"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Servei desactivat. S'està esperant el pagament..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Executa Mandrake Update"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuració"
+
+#~ msgid "Available"
+#~ msgstr "Disponible"
+
+#~ msgid "Checking ..."
+#~ msgstr "S'està comprovant ..."
+
+#~ msgid "Not Available"
+#~ msgstr "No disponible"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "S'està intentant la connexió a mandrakeonline.net\n"
@@ -509,10 +529,6 @@ msgstr "  --update       - Actualitza les claus\n"
 #~ msgid "Yes I want automated updates"
 #~ msgstr "Sí, vull actualitzacions automàtiques"
 
-#, fuzzy
-#~ msgid "System is up to date"
-#~ msgstr "El sistema està ocupat. Espereu ..."
-
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr ""
 #~ "MandrakeUpdate no ha pogut contactar amb el lloc, ho provarem més tard."
@@ -546,11 +562,6 @@ msgstr "  --update       - Actualitza les claus\n"
 
 #~ msgid "  -v             - verbose mode.\n"
 #~ msgstr "  -v             - mode detallat.\n"
-
-#~ msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-#~ msgstr ""
-#~ "Si teniu qualsevol problema, envieu un correu a support@mandrakeonline."
-#~ "net\n"
 
 #~ msgid ""
 #~ "You need to have an account on MandrakeOnline, or update your "
@@ -664,4 +675,3 @@ msgstr "  --update       - Actualitza les claus\n"
 
 #~ msgid "Sans Italic 17"
 #~ msgstr "Sans Italic 17"
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-08-07 18:52+0200\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
@@ -16,61 +16,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Nincsenek frissítések az Ön rendszeréhez"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "A rendszer naprakész.\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Beállítási problémák vannak. Indítsa el újra a \"Beállítás\" funkciót."
+#: ../mdkapplet:70
+#, fuzzy
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
+"Probléma esetén küldjön levelet a következő címre: support@mandrakeonline."
+"net\n"
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Kis türelmet - a rendszer egy feldolgozást végez..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s csomag frissíthető"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Nincsenek frissítések az Ön rendszeréhez"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "A szolgáltatás nem elérhető. Kattintson a \"Beállítás\" funkcióra."
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "A hálózat nem aktív. Kattintson \"A hálózat beállítása\" funkcióra."
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr ""
-"A szolgáltatás inaktiválva van - várakozás az ellenérték megfizetésére..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "A szolgáltatás nem elérhető. Kattintson a \"Beállítás\" funkcióra."
+
+# "Rendszerfrissítések telepítése" volt a 8.2-ben,
+#  ebből az utolsó 2 betű nem fért ki
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Frissítések telepítése"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "A hálózat beállítása"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "MandrakeUpdate (Mandrake-frissítés) indítása"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Beállítás"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Frissítések keresése"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Online weboldal"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "A hálózat beállítása"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Beállítás most"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake-frissítési alkalmazás"
 
@@ -78,31 +89,13 @@ msgstr "Mandrake-frissítési alkalmazás"
 msgid "Actions"
 msgstr "Műveletek"
 
-# "Rendszerfrissítések telepítése" volt a 8.2-ben,
-#  ebből az utolsó 2 betű nem fért ki
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Frissítések telepítése"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Beállítás"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Elérhető"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Frissítések keresése"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Ellenőrzés..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Nem elérhető"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -112,75 +105,76 @@ msgstr "Információ a naplóban"
 msgid "Status"
 msgstr "Állapot"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Hálózati kapcsolat: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Inaktív"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Aktív"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Új frissítések: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Legutóbbi ellenőrzés: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Bezárás"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Inaktív"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Hálózati kapcsolat: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Aktív"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Legutóbbi ellenőrzés: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Új frissítések: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "A DrakConnect indítása\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "\"mdkupdate --applet\" indítása\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Úgy tűnik, a MandrakeOnline újra lett telepítve - az alkalmazás "
 "újratöltése..."
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Új frissítések meghatározása...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Kapcsolódás:"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Ellenőrzés... vannak elérhető frissítések\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Ismeretlen állapot"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "Az online szolgáltatások inaktiválva vannak. Lépjen kapcsolatba a "
 "MandrakeOnline weboldallal.\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Helytelen jelszó.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Helytelen művelet, gép, vagy bejelentkezési név.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -188,39 +182,39 @@ msgstr ""
 "A hálózatbeállítások nem megfelelők (ellenőrizze az útválasztást, a tűzfalat "
 "és a proxybeállításokat).\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "A rendszer naprakész.\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Nincs ellenőrzés"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "A hálózat ellenőrzése: úgy tűnik, nem aktív\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Beállításfájl ellenőrzése: nem található\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Naplók"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Törlés"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Névjegy..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr "Minden rendszerindításnál induljon el"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Kilépés"
 
@@ -393,7 +387,7 @@ msgstr "Konfiguráció beolvasása\n"
 msgid "Sending configuration..."
 msgstr "Konfiguráció küldése..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Kapcsolati hiba"
 
@@ -405,16 +399,16 @@ msgstr "A fájlok feltöltésénél probléma lépett fel - próbálja meg ismé
 msgid "Quitting Wizard\n"
 msgstr "Kilépés a Varázslóból\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Nem sikerült kapcsolatba lépni a MandrakeOnline-nal; próbálja meg később."
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Helytelen jelszó"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -463,6 +457,32 @@ msgstr "  --applet       - MandrakeUpdate indítása\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - kulcsok frissítése\n"
 
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr ""
+#~ "Beállítási problémák vannak. Indítsa el újra a \"Beállítás\" funkciót."
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s csomag frissíthető"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr ""
+#~ "A szolgáltatás inaktiválva van - várakozás az ellenérték megfizetésére..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "MandrakeUpdate (Mandrake-frissítés) indítása"
+
+#~ msgid "Configuration"
+#~ msgstr "Beállítás"
+
+#~ msgid "Available"
+#~ msgstr "Elérhető"
+
+#~ msgid "Checking ..."
+#~ msgstr "Ellenőrzés..."
+
+#~ msgid "Not Available"
+#~ msgstr "Nem elérhető"
+
 #~ msgid "Email"
 #~ msgstr "E-mail"
 
@@ -497,11 +517,6 @@ msgstr "  --update       - kulcsok frissítése\n"
 
 #~ msgid "  -v             - verbose mode.\n"
 #~ msgstr "  -v             - részletes információ\n"
-
-#~ msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-#~ msgstr ""
-#~ "Probléma esetén küldjön levelet a következő címre: support@mandrakeonline."
-#~ "net\n"
 
 #~ msgid ""
 #~ "You need to have an account on MandrakeOnline, or update your "

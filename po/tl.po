@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-05-20 19:04+0800\n"
 "Last-Translator: Arys P. Deloso <arys@deloso.org>\n"
 "Language-Team: Filipino <salinpinoy@comitus.net>\n"
@@ -17,60 +17,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Walang mga available na update para sa iyong sistema"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Ang Sistema ay naka-update\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Problema sa config. Ilunsad muli ang \"I-configure\""
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Abala ang sistema. Maghintay ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s mga package available para sa update"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Walang mga available na update para sa iyong sistema"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Service ay hindi available. I-click ang \"Configuration\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Down ang network. I-click ang \"I-configure ang Network\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Dini-activate ang service. Naghihintay para sa payment..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Service ay hindi available. I-click ang \"Configuration\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "I-install ang mga update"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "I-configure ang Network"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Ilunsad ang Mandrake Update"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Configuration"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Suriin ang mga Update"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Online WebSite"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "I-configure ang Network"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "I-configure Ngayon!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Updates Applet"
 
@@ -78,29 +85,13 @@ msgstr "Mandrake Updates Applet"
 msgid "Actions"
 msgstr "Mga Aksiyon"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "I-install ang mga update"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "I-configure"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Available"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Suriin ang mga update"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Nagsusuri ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Hindi Available"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -110,72 +101,73 @@ msgstr "Tingnan ang mga log"
 msgid "Status"
 msgstr "Kalagayan"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Network Connection: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Down"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Up"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Mga Bagong Update: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Huling pagsuri: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Isara"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Down"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Network Connection: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Up"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Huling pagsuri: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Mga Bagong Update: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Inilulunsad ang drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "Inilulunsad ang mdkupdate --applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Naghahanap ng mga bagong update...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Kumukonekta sa"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Nagsusuri... mayroong mga Update\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr "Di-kilalang state"
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 "Naka-disable ang mga online service. Makipag-alam sa MandrakeOnline site\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Maling password.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Maling aksyon o host o login.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
@@ -183,39 +175,39 @@ msgstr ""
 "May mali sa mga setting ng iyong network (pakisuri ang mga setting ng iyong "
 "route, firewall o proxy)\n"
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Ang Sistema ay naka-update\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Walang pagsuri"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Sinusuri ang Network: tila naka-disable\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Sinusuri ang config file: Wala\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Mga Log"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "I-clear"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Tungkol sa.."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Quit"
 
@@ -389,7 +381,7 @@ msgstr "Binabasa ang configuration\n"
 msgid "Sending configuration..."
 msgstr "Ipinapadala ang configuration..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Problema sa koneksyon"
 
@@ -401,15 +393,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Lumalabas ng Wizard\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Hindi ma-contact ang MandrakeOnline, pakisubukan muli mamaya"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Maling password"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -459,6 +451,30 @@ msgstr "  --applet       - ilunsad ang MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - mga Update key\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Problema sa config. Ilunsad muli ang \"I-configure\""
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s mga package available para sa update"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Dini-activate ang service. Naghihintay para sa payment..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Ilunsad ang Mandrake Update"
+
+#~ msgid "Configuration"
+#~ msgstr "Configuration"
+
+#~ msgid "Available"
+#~ msgstr "Available"
+
+#~ msgid "Checking ..."
+#~ msgstr "Nagsusuri ..."
+
+#~ msgid "Not Available"
+#~ msgstr "Hindi Available"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "Sinusubukang kumonekta sa mandrakeonline.net\n"

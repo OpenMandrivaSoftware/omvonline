@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-03-25 22:49+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -23,60 +23,67 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Pro váš systém nejsou k dispozici žádné aktualizace"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Systém je aktuální"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Problém s nastavením. Spusťte znovu \"nastavení\""
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Systém je zaneprázdněn. Počkejte..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "Počet balíčků k aktualizaci: %s"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Pro váš systém nejsou k dispozici žádné aktualizace"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Služba není dostupná. Klikněte na \"nastavení\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Síť není dostupná. Klikněte na \"nastavení sítě\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Služba je odpojená. Čeká se na zaplacení..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Služba není dostupná. Klikněte na \"nastavení\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Instalovat aktualizace"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Nastavit síť"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Spustit Mandrake Update"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Nastavení"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Online webové stránky"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Nastavit síť"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Nastavit teď!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Aplet pro aktualizace Mandrake"
 
@@ -84,30 +91,13 @@ msgstr "Aplet pro aktualizace Mandrake"
 msgid "Actions"
 msgstr "Akce"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Instalovat aktualizace"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Nastavit"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Dostupné"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Zkontrolovat aktualizace"
-
-#: ../mdkapplet:155
-#, fuzzy
-msgid "Checking ..."
-msgstr "Připojuji se...\n"
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Nedostupné"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -117,111 +107,112 @@ msgstr "Prohlížet záznamy"
 msgid "Status"
 msgstr "Stav"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Připojení k síti: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Není"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Připojeno"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Nové aktualizace: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Poslední kontrola: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Zavřít"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Není"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Připojení k síti: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Připojeno"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Poslední kontrola: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Nové aktualizace: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Spouští se drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "Spouští se mdkupdate --applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 #, fuzzy
 msgid "Computing new updates...\n"
 msgstr "Zkontrolovat aktualizace"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 #, fuzzy
 msgid "Connecting to"
 msgstr "Problémy při spojení"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Zjišťuji... Aktualizace jsou dostupné\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr ""
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Online služby jsou vypnuty. Kontaktujte stránky MandrakeOnline\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Špatné heslo\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Chybná akce nebo počítač nebo přihlášení.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr ""
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Nezjištěno"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontroluji síť: zdá se nedostupná\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Kontroluji soubor s nastavením: Nenalezen\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Záznamy"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Vyčistit"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "O aplikaci..."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Konec"
 
@@ -389,7 +380,7 @@ msgstr "Načíst konfiguraci\n"
 msgid "Sending configuration..."
 msgstr "Posílám konfiguraci..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Problémy při spojení"
 
@@ -401,17 +392,17 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Ukončuji průvodce\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Službě MandrakeOnline se nepodařilo připojit k serveru, zkuste to prosím "
 "znovu později."
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Špatné heslo"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -462,6 +453,31 @@ msgstr "  --applet       - spustí MandrakeUpdate.\n"
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - aktualizace klíčů\n"
 
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Problém s nastavením. Spusťte znovu \"nastavení\""
+
+#~ msgid "%s packages available for update"
+#~ msgstr "Počet balíčků k aktualizaci: %s"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Služba je odpojená. Čeká se na zaplacení..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Spustit Mandrake Update"
+
+#~ msgid "Configuration"
+#~ msgstr "Nastavení"
+
+#~ msgid "Available"
+#~ msgstr "Dostupné"
+
+#, fuzzy
+#~ msgid "Checking ..."
+#~ msgstr "Připojuji se...\n"
+
+#~ msgid "Not Available"
+#~ msgstr "Nedostupné"
+
 #~ msgid "Creation"
 #~ msgstr "Vytvoření"
 
@@ -510,9 +526,6 @@ msgstr "  --update       - aktualizace klíčů\n"
 
 #~ msgid "Yes I want automated updates"
 #~ msgstr "Ano, chci automatické aktualizace"
-
-#~ msgid "System is up to date"
-#~ msgstr "Systém je aktuální"
 
 #~ msgid "Checking for Updates..."
 #~ msgstr "Zjišťuji dostupnost aktualizací..."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-04-26 23:11+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandrake.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrakelinux.com>\n"
@@ -22,60 +22,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Päivityksiä järjestelmällesi ei ole saatavilla"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Järjestelmä on ajan tasalla"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Asetusongelmia. Suorita \"Asetukset\" uudelleen"
+#: ../mdkapplet:70
+#, fuzzy
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
+"Ongelmatilanteissa, lähetä viesti osoitteeseen: support@mandrakeonline.net\n"
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Järjestelmä on varattu. Odota ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s päivitetyjä paketteja saatavilla"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Päivityksiä järjestelmällesi ei ole saatavilla"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Palvelu ei ole käytettävissä. Paina \"Asetukset\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Verkko on alhaalla. Valitse \"Aseta Verkko\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Palvelu poistettu käytöstä. Odotetaan maksua..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Palvelu ei ole käytettävissä. Paina \"Asetukset\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Asenna päivitykset"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Aseta verkko"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Käynnistä Mandraken päivitys"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Asetukset"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Tarkista päivitykset"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Online-sivusto"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Aseta verkko"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Aseta Nyt!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandraken päivityssovelma"
 
@@ -83,29 +92,13 @@ msgstr "Mandraken päivityssovelma"
 msgid "Actions"
 msgstr "Toiminnot"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Asenna päivitykset"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Aseta"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "saatavilla"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Tarkista päivitykset"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Tarkistetaan ..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "ei saatavilla"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -115,109 +108,110 @@ msgstr "Katso lokitiedostot"
 msgid "Status"
 msgstr "Tila"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Verkkoyhteys:"
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "pois päältä"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "päällä"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Uusimmat päivitykset:"
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Viimeisin tarkistus:"
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Sulje"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "pois päältä"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Verkkoyhteys:"
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "päällä"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Viimeisin tarkistus:"
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Uusimmat päivitykset:"
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "Käynnistetään drakconnect\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "käynnistetään mdkupdate --applet\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Lasketaan  uudet päivitykset...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Yhdistetään kohteeseen"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr ""
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Online palvelut pois käytöstä. Ota yhteys MandrakeOnline sivustoon\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Väärä salasana\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Väärä tili, kone tai kirjautuminen.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Järjestelmäsi on ajan tasalla\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Ei tarkistusta"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Tarkistetaan verkko: Näyttää poistettu käytöstä\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Tarkistetaan asetustiedostoa: Ei olemassa\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Lokit"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Tyhjennä"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Tietoa.."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Poistu"
 
@@ -385,7 +379,7 @@ msgstr "Luetaan asetukset\n"
 msgid "Sending configuration..."
 msgstr "Lähetän asetustiedot..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Yhteysongelma"
 
@@ -397,15 +391,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Poistutaan velhosta\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Ei saatu yhteyttä MandrakeOnlineen kokeile myöhemmin uudelleen."
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Väärä salasana"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -454,6 +448,30 @@ msgstr "  --applet       - käynnistä MandrakeUpdate.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Päivitä avaimet\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Asetusongelmia. Suorita \"Asetukset\" uudelleen"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s päivitetyjä paketteja saatavilla"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Palvelu poistettu käytöstä. Odotetaan maksua..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Käynnistä Mandraken päivitys"
+
+#~ msgid "Configuration"
+#~ msgstr "Asetukset"
+
+#~ msgid "Available"
+#~ msgstr "saatavilla"
+
+#~ msgid "Checking ..."
+#~ msgstr "Tarkistetaan ..."
+
+#~ msgid "Not Available"
+#~ msgstr "ei saatavilla"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "Yritän yhdistää mandrakeonline.net sivustoon\n"
@@ -507,9 +525,6 @@ msgstr "  --update       - Päivitä avaimet\n"
 #~ msgid "Yes I want automated updates"
 #~ msgstr "Kyllä, haluan automaattiset päivitykset"
 
-#~ msgid "System is up to date"
-#~ msgstr "Järjestelmä on ajan tasalla"
-
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "MandrakeUpdate ei saanut yhteyttä sivustoon, kokeilemme uudelleen."
 
@@ -542,11 +557,6 @@ msgstr "  --update       - Päivitä avaimet\n"
 
 #~ msgid "  -v             - verbose mode.\n"
 #~ msgstr "  -v             - yksityiskohtainen tyyli.\n"
-
-#~ msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
-#~ msgstr ""
-#~ "Ongelmatilanteissa, lähetä viesti osoitteeseen: support@mandrakeonline."
-#~ "net\n"
 
 #~ msgid ""
 #~ "You need to have an account on MandrakeOnline, or update your "

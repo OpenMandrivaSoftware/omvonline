@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-03-20 23:50+0300\n"
 "Last-Translator: Lilit Azizbekyan <l@freenet.am>\n"
 "Language-Team: hy <yes@hay.am>\n"
@@ -15,60 +15,67 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Ձեր համակարգի համար չկան առկա նորացումներ"
-
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Ձևակերպման պրոբլեմ: Նորեն աշխատացրեք \"ձևակերպումը\""
-
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
 msgstr "Համակարգը զբաղված է: Սպասեք..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s փաթեթներ առկա են նորացման"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
+msgstr "Համակարգը զբաղված է: Սպասեք..."
+
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Ձեր համակարգի համար չկան առկա նորացումներ"
+
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Ծառայությունը մատչելի չէ: Հպեք \"ձևակերպել\""
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Ցանցը անհասանելի է: Ստուգեք \"Ցանցի ձևակերպումը\""
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Ծառայությունը անջատված է մինչ վճարում..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Ծառայությունը մատչելի չէ: Հպեք \"ձևակերպել\""
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Տեղադրել Նորացումները"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Ցանցի Ձևակերպում"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Սկսել Mandrake-ի Նորացումը"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Ձևակերպում"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Ստուգել Նորացումները"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Օնլայն ՎեբԷջ"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Ցանցի Ձևակերպում"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Ձևակերպել"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Նորացումների Ապլետ"
 
@@ -76,30 +83,13 @@ msgstr "Mandrake Նորացումների Ապլետ"
 msgid "Actions"
 msgstr "Գործողություններ"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Տեղադրել Նորացումները"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Ձևակերպել"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Առկա են"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Ստուգել նորացումները"
-
-#: ../mdkapplet:155
-#, fuzzy
-msgid "Checking ..."
-msgstr "Ստուգել Նորացումները"
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Առկա չեն"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -109,113 +99,114 @@ msgstr "Ընթերցել արձանագրերը"
 msgid "Status"
 msgstr "Կարգավիճակ"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Ցանցի Միացում`"
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Ներքև"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Վերև"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Վերջին Նորացումներ` "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Նախորդ ստուգում` "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Փակել"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Ներքև"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Ցանցի Միացում`"
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Վերև"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Նախորդ ստուգում` "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Վերջին Նորացումներ` "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 #, fuzzy
 msgid "Computing new updates...\n"
 msgstr "Ստուգել Նորացումները"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 #, fuzzy
 msgid "Connecting to"
 msgstr "Միացման պրոբլեմ"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr ""
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr ""
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Սխալ գաղտնաբառ է\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:251
+#: ../mdkapplet:256
 #, fuzzy
-msgid "System is up to date\n"
+msgid "System is up-to-date\n"
 msgstr "Համակարգը զբաղված է: Սպասեք..."
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Ստուգված չէ"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 #, fuzzy
 msgid "Logs"
 msgstr "Մուտք`"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Մաքրել"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Ծրագրի մասին.."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Ելք"
 
@@ -381,7 +372,7 @@ msgstr "Ձևակերպման ընթերցում\n"
 msgid "Sending configuration..."
 msgstr "Ուղարկվում են ձևակերպումները..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Միացման պրոբլեմ"
 
@@ -393,15 +384,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Ելք Ուղեկցորդից\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Անհնար է միանալ MandrakeOnline, ուշով կրկին փորձեք"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Սխալ գաղտնաբառ է"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -448,6 +439,31 @@ msgstr "  --applet       - աշխատացնել MandrakeUpdate:\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - Նորացնել բանալիները\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Ձևակերպման պրոբլեմ: Նորեն աշխատացրեք \"ձևակերպումը\""
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s փաթեթներ առկա են նորացման"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Ծառայությունը անջատված է մինչ վճարում..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Սկսել Mandrake-ի Նորացումը"
+
+#~ msgid "Configuration"
+#~ msgstr "Ձևակերպում"
+
+#~ msgid "Available"
+#~ msgstr "Առկա են"
+
+#, fuzzy
+#~ msgid "Checking ..."
+#~ msgstr "Ստուգել Նորացումները"
+
+#~ msgid "Not Available"
+#~ msgstr "Առկա չեն"
 
 #~ msgid "Creation"
 #~ msgstr "Ստեղծում"
@@ -498,10 +514,6 @@ msgstr "  --update       - Նորացնել բանալիները\n"
 
 #~ msgid "Yes I want automated updates"
 #~ msgstr "Այո, ցանկանում եմ ավտոմատ ստանալ նորացումներ"
-
-#, fuzzy
-#~ msgid "System is up to date"
-#~ msgstr "Համակարգը զբաղված է: Սպասեք..."
 
 #~ msgid "MandrakeUpdate could not contact the site, we will try again."
 #~ msgstr "MandrakeUpdate -ը չի կարողանում միանալ էջին. կփորձենք կրկին:"

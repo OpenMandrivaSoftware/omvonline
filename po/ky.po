@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ky\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-08-07 02:11+0200\n"
+"POT-Creation-Date: 2004-08-11 20:32+0200\n"
 "PO-Revision-Date: 2004-05-03 11:41+0600\n"
 "Last-Translator: Timur Jamakeev <ztimur@mail.ru>\n"
 "Language-Team: Kyrgyz\n"
@@ -16,60 +16,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.0.1\n"
 
-#: ../mdkapplet:66
-msgid "No updates available for your system"
-msgstr "Сиздин системаңыз үчүн мүмкүн болгон жаңылоолор жок"
+#: ../mdkapplet:64
+#, fuzzy
+msgid "Your system is up-to-date"
+msgstr "Система жаңылоону талап кылбайт\n"
 
-#: ../mdkapplet:72
-msgid "Config problems. Launch \"configure\" again"
-msgstr "Конфигурация проблемасы. \"конфигурацияны\" кайра иштетиңиз"
+#: ../mdkapplet:70
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrakeonline.net"
+msgstr ""
 
-#: ../mdkapplet:78
-msgid "System is busy. Wait ..."
+#: ../mdkapplet:76
+msgid "System is busy. Please wait ..."
 msgstr "Система бош эмес. Күтүү ..."
 
-#: ../mdkapplet:84
-#, perl-format
-msgid "%s packages available for update"
-msgstr "%s пакетти жаңылоо мүмкүнчүлүгү бар"
+#: ../mdkapplet:82
+#, fuzzy
+msgid "New updates are available for your system"
+msgstr "Сиздин системаңыз үчүн мүмкүн болгон жаңылоолор жок"
 
-#: ../mdkapplet:90
-msgid "Service not available. Click on \"configuration\""
+#: ../mdkapplet:88
+#, fuzzy
+msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Кызмат мүмүкүн эмес. \"конфигурацияны\" басыңыз"
 
-#: ../mdkapplet:96
-msgid "Network is down. Click on \"configure Network\""
+#: ../mdkapplet:94
+#, fuzzy
+msgid "Network is down. Please configure your network"
 msgstr "Тармак иштеген эмес. \"Тармакты конфигурациялоону\" басыңыз"
 
-#: ../mdkapplet:102
-msgid "Service deactivated. Waiting for payment..."
-msgstr "Кызмат деактивдештирилген. Акы төлөмү күтүлүүдө..."
+#: ../mdkapplet:100
+#, fuzzy
+msgid "Service is not activated. Please click on \"Online Website\""
+msgstr "Кызмат мүмүкүн эмес. \"конфигурацияны\" басыңыз"
+
+#: ../mdkapplet:104 ../mdkapplet:153
+msgid "Install updates"
+msgstr "Жаңылоолорду орнотуу"
+
+#: ../mdkapplet:105
+#, fuzzy
+msgid "Configure the service"
+msgstr "Тармакты конфигурациялоо"
 
 #: ../mdkapplet:106
-msgid "Launch Mandrake Update"
-msgstr "Mandrake Update иштетүү"
-
-#: ../mdkapplet:107
-msgid "Configuration"
-msgstr "Конфигурациялоо"
-
-#: ../mdkapplet:108
 msgid "Check Updates"
 msgstr "Жаңылоолорду текшерүү"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:107
 msgid "Online WebSite"
 msgstr "Онлайндагы веб-сайт"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:108
 msgid "Configure Network"
 msgstr "Тармакты конфигурациялоо"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:109
 msgid "Configure Now!"
 msgstr "Азыр конфигурациялоо!"
 
-#: ../mdkapplet:143
+#: ../mdkapplet:141
 msgid "Mandrake Updates Applet"
 msgstr "Mandrake Updates апплети"
 
@@ -77,29 +84,13 @@ msgstr "Mandrake Updates апплети"
 msgid "Actions"
 msgstr "Аракеттер"
 
-#: ../mdkapplet:153
-msgid "Install updates"
-msgstr "Жаңылоолорду орнотуу"
-
 #: ../mdkapplet:154
 msgid "Configure"
 msgstr "Конфигурациялоо"
 
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Available"
-msgstr "Мүмкүн"
-
 #: ../mdkapplet:155
 msgid "Check updates"
 msgstr "Жаңылоолорду текшерүү"
-
-#: ../mdkapplet:155
-msgid "Checking ..."
-msgstr "Текшерүү..."
-
-#: ../mdkapplet:155 ../mdkapplet:167 ../mdkapplet:360
-msgid "Not Available"
-msgstr "Мүмкүн эмес"
 
 #: ../mdkapplet:156
 msgid "See logs"
@@ -109,109 +100,110 @@ msgstr "Логдорду кара"
 msgid "Status"
 msgstr "Абалы"
 
-#: ../mdkapplet:162
-msgid "Network Connection: "
-msgstr "Тармак байланышы: "
-
-#: ../mdkapplet:163
-msgid "Down"
-msgstr "Төмөн"
-
-#: ../mdkapplet:163
-msgid "Up"
-msgstr "Жогору"
-
-#: ../mdkapplet:166
-msgid "New Updates: "
-msgstr "Жаңы жаңылоолор: "
-
-#: ../mdkapplet:170
-msgid "Last check: "
-msgstr "Акыркы текшерүү: "
-
-#: ../mdkapplet:176 ../mdkapplet:412
+#: ../mdkapplet:163 ../mdkapplet:411
 msgid "Close"
 msgstr "Жабуу"
 
 #: ../mdkapplet:198
+msgid "Down"
+msgstr "Төмөн"
+
+#: ../mdkapplet:198
+msgid "Network Connection: "
+msgstr "Тармак байланышы: "
+
+#: ../mdkapplet:198
+msgid "Up"
+msgstr "Жогору"
+
+#: ../mdkapplet:199
+msgid "Last check: "
+msgstr "Акыркы текшерүү: "
+
+#: ../mdkapplet:200
+#, fuzzy
+msgid "Updates: "
+msgstr "Жаңы жаңылоолор: "
+
+#: ../mdkapplet:204
 msgid "Launching drakconnect\n"
 msgstr "drakconnect иштетүү\n"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:208
 msgid "Launching mdkupdate --applet\n"
 msgstr "mdkupdate --applet иштетүү\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:212
 msgid "Mdkonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:215
+#: ../mdkapplet:220
 msgid "Computing new updates...\n"
 msgstr "Жаңы жаңылоолор эсептелүүдө...\n"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 msgid "Connecting to"
 msgstr "Төмөнкүгө туташуу"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:244
 msgid "Checking... Updates are available\n"
 msgstr "Текшерүү... Жаңылоолор мүмүкүн\n"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:248
 msgid "Unknown state"
 msgstr ""
 
-#: ../mdkapplet:244
-msgid "Online services disabled. Contact MandrakeOnline site\n"
+#: ../mdkapplet:249
+msgid "Online services disabled. Contact Mandrakeonline site\n"
 msgstr "Онлайн кызматы өчүрүлгөн. MandrakeOnline сайты менен байланышыңыз\n"
 
-#: ../mdkapplet:245
+#: ../mdkapplet:250
 msgid "Wrong Password.\n"
 msgstr "Туура эмес пароль.\n"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:251
 msgid "Wrong Action or host or login.\n"
 msgstr "Туура эмес аракет, же хост, же логин.\n"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:252
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:251
-msgid "System is up to date\n"
+#: ../mdkapplet:256
+msgid "System is up-to-date\n"
 msgstr "Система жаңылоону талап кылбайт\n"
 
-#: ../mdkapplet:339
+#: ../mdkapplet:337
 msgid "No check"
 msgstr "Текшерүүсүз"
 
-#: ../mdkapplet:352
+#: ../mdkapplet:350
 msgid "Checking Network: seems disabled\n"
 msgstr "Тармак текшерилүүдө: өчүрүлгөн көрүнөт\n"
 
-#: ../mdkapplet:355
+#: ../mdkapplet:353
 msgid "Checking config file: Not present\n"
 msgstr "Конфиг файлы текшерилүүдө: жок\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:401
 msgid "Logs"
 msgstr "Логдор"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:417
 msgid "Clear"
 msgstr "Тазалоо"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:444
 msgid "About.."
 msgstr "Жөнүндө.."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:445
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:448
+#: ../mdkapplet:447
 msgid "Quit"
 msgstr "Чыгуу"
 
@@ -355,7 +347,7 @@ msgstr "Конфигурация окулууда\n"
 msgid "Sending configuration..."
 msgstr "Конфигурация жөнөтүлүүдө..."
 
-#: ../mdkonline:210 ../mdkonline:274
+#: ../mdkonline:210 ../mdkonline:275
 msgid "Connection problem"
 msgstr "Туташуу проблемасы"
 
@@ -367,15 +359,15 @@ msgstr ""
 msgid "Quitting Wizard\n"
 msgstr "Устадан чыгуу\n"
 
-#: ../mdkonline:274
+#: ../mdkonline:275
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline туташылбады, кийинчерээк кайталаңыз"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid "Wrong password"
 msgstr "Туура эмес пароль"
 
-#: ../mdkonline:286
+#: ../mdkonline:287
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -412,6 +404,30 @@ msgstr "  --applet       - MandrakeUpdate иштетүү.\n"
 #: ../mdkupdate:61
 msgid "  --update       - Update keys\n"
 msgstr "  --update       - ачкычтарды жаңылоо\n"
+
+#~ msgid "Config problems. Launch \"configure\" again"
+#~ msgstr "Конфигурация проблемасы. \"конфигурацияны\" кайра иштетиңиз"
+
+#~ msgid "%s packages available for update"
+#~ msgstr "%s пакетти жаңылоо мүмкүнчүлүгү бар"
+
+#~ msgid "Service deactivated. Waiting for payment..."
+#~ msgstr "Кызмат деактивдештирилген. Акы төлөмү күтүлүүдө..."
+
+#~ msgid "Launch Mandrake Update"
+#~ msgstr "Mandrake Update иштетүү"
+
+#~ msgid "Configuration"
+#~ msgstr "Конфигурациялоо"
+
+#~ msgid "Available"
+#~ msgstr "Мүмкүн"
+
+#~ msgid "Checking ..."
+#~ msgstr "Текшерүү..."
+
+#~ msgid "Not Available"
+#~ msgstr "Мүмкүн эмес"
 
 #~ msgid "Attempting to connect to mandrakeonline.net\n"
 #~ msgstr "mandrakeonline.net сайтына туташуу аракети\n"
