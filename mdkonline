@@ -66,15 +66,16 @@ local $_ = join '', @ARGV;
 require Gtk;
 require Gtk::Gdk::ImlibImage;
 
-init Gtk;
-Gtk->set_locale;
+#init Gtk;
+#Gtk->set_locale;
 Gtk::Gdk::ImlibImage->init;
 
 my $Main_Window = new Gtk::Window -toplevel;
 $Main_Window->set_policy($false,$false,$true);
 $Main_Window->set_position( 1 );
 $Main_Window->border_width( 5 );
-$Main_Window->set_title(_("Mandrake Online"));
+# For translators : the MandrakeOnline (in one world) should not be translated.
+$Main_Window->set_title("MandrakeOnline");
 $Main_Window->set_usize(540, 430);
 $Main_Window->realize();
 $Main_Window->signal_connect( "delete_event", \&gtk_main_quit);
@@ -153,7 +154,7 @@ sub on_next_clicked {
 	$hbox->remove($Button_Next);
 	$hbox->pack_end($Button_End, 0, 1, 0);
 	$hbox->pack_end($Button_Prev, 0, 1, 0);
-    }
+    }4
 #    print "Go to page $page\n";
 }
 
@@ -254,7 +255,7 @@ sub send_config {
 sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to Mandrake Online"),540,100);
+    write_on_pixmaps($vbox_welc,"welcome.png",_("Welcome to MandrakeOnline"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on Mandrake Online [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
@@ -276,7 +277,7 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
 
     my $vbox_ident= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
+    write_on_pixmaps($vbox_ident,"identity.png",_("MandrakeOnline Authentification"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your Mandrake Online login and password:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
@@ -346,11 +347,11 @@ sub confirm_quit {
     $bbox1->add($button_quit);
     
     my $label = new Gtk::Label( 
-				_("Do you really want to abort Mandrake Online?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
+				_("Do you really want to abort MandrakeOnline?\nTo return to the Wizard press 'Cancel',\nto really quit it press 'Quit'."));
     my $style1 = new Gtk::Style;
     $style1->font(Gtk::Gdk::Font->fontset_load(_("-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*")));
     $label->set_style($style1); 
-    $window_about->set_title(_("Really abort? - Mandrake Online"));
+    $window_about->set_title(_("Really abort? - MandrakeOnline"));
     $window_about->vbox->pack_start( $label, 1, 1, 0 );
     $window_about->show_all();
     $window_about->set_modal(1);
