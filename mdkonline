@@ -603,6 +603,8 @@ sub get_on_privacy {
 	load_text($text,"$sharepath/privacy-es.txt");
     }elsif ($ENV{LANG} eq "fr") {
 	load_text($text,"$sharepath/privacy-fr.txt");
+    }elsif ($ENV{LANG} eq "ro") {
+	load_text($text,"$sharepath/privacy-ro.txt");
     }elsif ($ENV{LANG} eq "sv") {
 	load_text($text,"$sharepath/privacy-sv.txt");
     }else {
