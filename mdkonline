@@ -28,12 +28,11 @@ use standalone;
 use interactive;
 use lang;
 use ugtk2 qw(:all);
-
 use mdkonline;
 use comdialog;
 use data;
 
-BEGIN { unshift @::textdomains, 'mdkonline', 'drakfw' }
+#BEGIN { unshift @::textdomains, 'mdkonline', 'drakfw' }
 use Config;
 
 #use LWP::Debug qw(+);
