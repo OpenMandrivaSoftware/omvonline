@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 17mdk
+%define release 18mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -11,15 +11,17 @@ URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	%{name}-backend = %{version}-%{release}, drakfirsttime >= 1.0-0.6mdk
-Requires:   perl-Crypt-SSLeay >= 0.51-2mdk, perl-Gtk2-TrayIcon >= 0.03-3mdk
-BuildRequires: gettext
+Requires:   	perl-Gtk2-TrayIcon >= 0.03-3mdk
+BuildRequires: 	gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildArch: noarch
+BuildArch: 	noarch
 
 %package backend
 Summary: MandrakeOnline libraries and background tools
 Group: System/Configuration/Other
 Requires: drakxtools-newt >= 10-54mdk
+Requires: perl-Crypt-SSLeay >= 0.51-2mdk
+Requires: hwdb-clients >= 0.15.1-1mdk
 Conflicts: %{name} < 1.1-4mdk
 
 %description
@@ -128,6 +130,12 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon Oct 11 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.1-18mdk
+- put the right dependencies on the backend sub-package
+- make parsing of output from server more error safe
+- create working directory in mdkonline_tui
+- po updates
+
 * Tue Oct 05 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 1.1-17mdk
 - update mdkupdate with new 10.1 mirror structure
 
