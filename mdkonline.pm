@@ -67,7 +67,7 @@ sub subscribe_online {
 		  12 => N("Special characters are not allowed\n"),
 		  13 => N("Please fill in all fields\n"),
 		  14 => N("Email not valid\n"),
-		  15 => N("Account already exist\n"),
+		  15 => N("Account already exists\n"),
 		 };
     if ($ret->is_success) {
 	my $content = $ret->content;
