@@ -37,8 +37,9 @@ add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
-my ($av_pkgs, $update_label, $lastch, $mLog);
+my ($av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog);
 my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
+my @proctable;
 my $conffile = '/etc/sysconfig/mdkonline';
 my $localfile = "$ENV{HOME}/.mdkonline";
 
@@ -106,7 +107,7 @@ $eventbox->signal_connect(button_press_event => sub {
 				  if ($_[1]->button == 1) {
 				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
 				  }
-			      }			      
+			      }
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 my ($opt) = @ARGV;
@@ -134,10 +135,10 @@ sub showMainWindow() {
            gtkpack__(Gtk2::VBox->new(0,5),
 		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
 			    gtkpack_(Gtk2::VBox->new(0, 3),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates(); }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking ...")); gtkflush(); checkUpdates(); $update_label->set_label($isAvailable ? N("Available") : N("Not Available")); setLastTime(); $lastch->set_label(lastCheck()); gtkflush() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main }}),
 				    )
 			   ),
 		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
@@ -158,7 +159,7 @@ sub showMainWindow() {
 			   ),
 		     gtkpack(Gtk2::HSeparator->new),
                      gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
-						   $w->destroy; $raisedwindow = 0;
+						    if (defined $wlog) { $wlog->destroy; undef $wlog }; $w->destroy; $raisedwindow = 0;
 					       })
 			    )
 		    ));
@@ -169,9 +170,9 @@ sub setLabel {
     $widget->set_label($string) if defined $widget;
     gtkflush();
 }
-sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
-sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
-sub installUpdates { $mLog .= N("Launching mdkupdate --applet\n"); system "/usr/sbin/mdkupdate", "--applet" }
+sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
+sub launchUpdate { logIt(N("Launching MandrakeUpdate\n")); system "/usr/sbin/MandrakeUpdate &" }
+sub installUpdates { logIt(N("Launching mdkupdate --applet\n")); system "/usr/sbin/mdkupdate", "--applet"; -e conffile and $silentCheck() }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
@@ -179,15 +180,18 @@ sub silentCheck {
     require LWP::UserAgent;
     require HTTP::Request::Common;
     require HTTP::Request;
+    logIt(N("Computing new updates...\n"));
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkAppletAgent/0.1" . $ua->agent);
     $ua->env_proxy;
     #    my $request = HTTP::Request->new(GET => $link . '&log=' . "ayomigration" . '&host=' . "online");
     my $request = HTTP::Request->new(GET => $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE});
     my $lnk = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
+    logIt(N("Connecting to") . " $lnk ...\n");
     my $response = $ua->request($request);
     my $ct = $response->content;
     #print "\nCONTENTS = $ct\n";
+    logIt(N("Response from MandrakeOnline server\n") . "$ct");
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
@@ -198,30 +202,29 @@ sub silentCheck {
 		       my @contents = sort ( split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
 		       my $comp = 0;
-		       $mLog .= N("Computing new updates...\n");
 		       foreach my $cand (@contents) {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   $comp = compareWithInstalled($name, $ver, $rel, \@t);
 			   #print "COMP =  $comp\n";
-			   if ($comp) { $isAvailable = 1; $mLog .= N("Checking... Updates are available\n"); go2State('error') and last } else { $isAvailable = 0 };
+			   if ($comp) { $isAvailable = 1; logIt(N("Checking... Updates are available\n") . "\n"); go2State('error') and last } else { $isAvailable = 0 }
 		       }
 		       !$comp and okState();
 		   },
-		   97 => sub { $mLog .= N("Online services disabled. Contact MandrakeOnline site\n") ; go2State('disabled'); },
-		   98 => sub { $mLog .= N("Wrong Password.\n"); go2State('critical'); },
-		   99 => sub { $mLog .= N("Wrong Action or host or login.\n"); go2State('critical'); }
+		   97 => sub { logIt(N("Online services disabled. Contact MandrakeOnline site\n")) ; go2State('disabled'); },
+		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
+		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); }
 		  };
     $retcode->{$u}->();
 }
-sub okState { $isAvailable = 0; $mLog=N("System is up to date\n"); go2State('okay') }
+sub okState { $isAvailable = 0; logIt(N("System is up to date\n")); go2State('okay') }
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
     foreach my $p (@{$t}) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
-	    my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel,$r); 
+	    #my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel,$r); 
 	    if (rpmvercmp($ver, $v) > 0 || ( rpmvercmp($ver, $v) == 0 && rpmvercmp( $rel, $r) > 0)) {
 		#print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
 		$isUpdate = 1 and last;
@@ -258,12 +261,12 @@ sub rpmvercmp {
     if ( $a eq $b ) {
         return 0;
     }
-    @aparts = rpmverparse($a);
-    @bparts = rpmverparse($b);
+    @aparts = rpmverparse($a); 
+    @bparts = rpmverparse($b); 
     while ( @aparts && @bparts ) {
         $apart = shift (@aparts);
         $bpart = shift (@bparts);
-        if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
+	if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
             if ( $result = ( $apart <=> $bpart ) ) {
                 return $result;
             }
@@ -274,19 +277,20 @@ sub rpmvercmp {
             }
         }
         else {    # "arbitrary" in original code
-	    shift (@aparts);
-	    shift (@bparts);
-            #return -1;
+	    my $rema = shift(@aparts);
+	    my $remb = shift(@bparts);
+	    if ($rema && !$remb) { return 1 } elsif (!$rema && $remb) { return -1 }
+	    #return -1;
         }
     }
     if (@aparts) {    # left over stuff in a, assume it's newer
-        return 1;
+	return 1;
     }
     elsif (@bparts) {    # leftover in b, assume it's newer
-        return -1;
+	return -1;
     }
     else {               # "should never happen"
-        return 0;
+	return 0;
     }
 }
 sub cronUpdate {
@@ -314,10 +318,10 @@ sub setLastTime {
 }
 sub checkUpdates {
     if (!isNetwork()) {
-	$mLog .= N("Checking Network: seems disabled\n");
+	logIt(N("Checking Network: seems disabled\n"));
 	go2State('disconnected')
     } elsif (!-e $conffile) {
-	$mLog .= N("Checking config file: Not present\n");
+	logIt(N("Checking config file: Not present\n"));
 	go2State('noconfig')
     } else {
 	silentCheck();
@@ -335,10 +339,12 @@ sub isNetwork {
     $network;
 }
 sub configure {
-    system "/usr/sbin/mdkonline &";
-    $refreshtm = Glib::Timeout->add(1*60*1000, sub {
-					-e $conffile and Glib::Source->remove($refreshtm);
-					silentCheck();
+    system("/usr/sbin/mdkonline &");
+    $refreshtm = Glib::Timeout->add(1*10*1000, sub {
+					if (-e $conffile) { 
+					    Glib::Source->remove($refreshtm);
+					    silentCheck();
+					}
 					1;
 				    });
 }
@@ -359,7 +365,30 @@ sub browser {
 }
 sub displayLogs {
     #    system "/usr/sbin/logdrake --explain=drakxtools &"
-    create_dialog(N("Logs"), $mLog, { use_markup => 1, height => 480, width => 580, scroll => 1 })
+    #create_dialog(N("Logs"), $mLog, { use_markup => 1, height => 480, width => 580, scroll => 1 })
+    my $w = ugtk2->new(N("Logs"), center => 1);
+    gtkset_size_request($w->{window}, 500, 400);
+    $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog});
+    $textview = Gtk2::TextView->new;
+    $buffer = $textview->get_buffer;
+    gtkadd($w->{window},
+	   gtkpack_(Gtk2::VBox->new(0, 2),
+		    1, create_scrolled_window(gtktext_insert($textview, $mLog)),
+		    0, Gtk2::HSeparator->new,
+		    0,  gtkpack_(Gtk2::HBox->new(0, 5),
+				 0, gtksignal_connect(my $close = Gtk2::Button->new(N("Close")), 
+						      clicked => sub { 
+							  $w->destroy;
+							  undef $wlog
+						      }),
+				 1, Gtk2::Label->new(""),
+				 0, gtksignal_connect(my $clear = Gtk2::Button->new(N("Clear")),
+						      clicked => sub {
+							  $mLog = '';
+							  $buffer->set_text($mLog);
+						      }),
+				)));
+    $w
 }
 sub shouldStart() {
     my %p = getVarsFromSh("$ENV{HOME}/.mdkonline");
@@ -383,8 +412,31 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu
 }
+sub forkEm {
+    my ($command) = shift;
+    my $pid = fork();
+    if (defined $pid) {
+	!$pid and do { exec($command) or POSIX::_exit(1) };
+	push @proctable, $pid;
+	return $pid
+    } else {
+	print "Fork unsuccessful\n";
+    }
+}
+sub killEm {
+    map { if__($_, kill 'TERM', $_) } @proctable;
+    @proctable = ();
+}
+sub logIt {
+    my $log = shift;
+    $mLog .= $log;
+    if (defined $wlog) {
+	$buffer->insert_at_cursor($log)
+    } else { print "no log shown" }
+}
 sub about {
     my $b = browser();
+    logIt(N("Attempting to connect to mandrakeonline.net\n"));
     system("$b " . "https://mandrakeonline.net/info.php" . "&")
 }
 sub setVar {
