@@ -20,8 +20,7 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	drakxtools >= 9.1-0.19mdk, gtk+mdk, perl-GTK2 > 0.0.cvs.2003.01.27.1
-Requires:	perl-libwww-perl, perl-Crypt-SSLeay >= 0.37,
+Requires:	drakfirsttime >= 0.91-4mdk
 BuildRequires: gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: noarch
@@ -31,6 +30,7 @@ The Mandrake Online tool is designed for registered users
 who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
+Since 9.1 MandrakeClub and MandrakeOnline have been merged.
 
 %prep
 %setup -q
@@ -43,11 +43,9 @@ make prefix=$RPM_BUILD_ROOT install
 
 #symbolic link to drakonline and older path
 mkdir -p %buildroot%_prefix/X11R6/bin/
+ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakclub
 ln -sf %_sbindir/mdkonline %buildroot%_sbindir/drakonline
 ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
-
-#install lang
-%{find_lang} %{name}
 
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
@@ -77,7 +75,7 @@ install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline48.png $RPM_BUILD_R
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files 
 %defattr(-,root,root)
 %doc COPYING ChangeLog
 %{_sbindir}/*
@@ -91,8 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Mon Feb  3 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
+* Mon Feb 17 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
 - rewrite / port to Gtk2.
+- MandrakeOnline && MandrakeClub merge.
 - spec cleanup.
 
 * Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-4mdk
