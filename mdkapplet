@@ -194,12 +194,13 @@ sub silentCheck {
     logIt(N("Connecting to") . " $lnk ...\n");
     my $response = $ua->request($request);
     my $ct = $response->content;
-    #print "\nCONTENTS = $ct\n";
+    print "\nCONTENTS = $ct\n";
     logIt(N("Response from MandrakeOnline server\n") . "$ct");
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
     #   97 - host not active
+    print "Returned value = $u\n";
     my $retcode = {
 		   10 => sub { okState() },
 		   11 => sub {
@@ -215,6 +216,7 @@ sub silentCheck {
 		       }
 		       !$comp and okState();
 		   },
+		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') }
 		   97 => sub { logIt(N("Online services disabled. Contact MandrakeOnline site\n")) ; go2State('disabled'); },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); }
