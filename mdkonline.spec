@@ -128,7 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
 * Mon Sep 20 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-10mdk
-- upload config into hardware databases
+- upload config into hardware database (hw_client)
 
 * Tue Sep 14 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-9mdk
 - po updates
