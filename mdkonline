@@ -419,7 +419,7 @@ sub step_wizard {
     write_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
     my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!\nFrom now you will receive on security\nand upgrade announcements thanks to MandrakeOnline."));
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
-    my $check_cron = new Gtk::CheckButton(_("I want to automated the upgrades"));
+    my $check_cron = new Gtk::CheckButton(_("I want to automate the upgrades"));
     $vbox_oksend->pack_start($check_cron, $false,$false,1);
     $check_cron->set_uposition(80,200);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
