@@ -1,10 +1,11 @@
 %define version 1.1
 %define name mdkonline
+%define release 11mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	10mdk
+Release: 	11mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -127,6 +128,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Tue Sep 21 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-11mdk
+- strict requirement on mdkonline-backend
+- new applet status when distrib is not supported (too old or cooker)
+
 * Mon Sep 20 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-10mdk
 - upload config into hardware database (hw_client)
 - sync config with server every night when mdkupdate is run with option --auto.
