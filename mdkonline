@@ -206,7 +206,7 @@ sub test_passwd () {
     $login   = $login_user->get_text();
     $passwd  = $passwd_user->get_text();
 
-    if ($login !~ /\s*/ && $passwd !~ /\s*/) {
+    if ($login !~ /\s+/ && $passwd !~ /\s+/) {
 
 # OLD METHOD, keep it for next version ?...
 #    my $ssh_script = "";
@@ -257,7 +257,8 @@ sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
 #    print STDERR "Sending config\n";
 
-    `/usr/sbin/drakbug_report > /root/drakbug_report.log`;
+    `/usr/sbin/drakbug_report > /root/$login-drakbug_report.log`;
+    `/usr/bin/bzip2 -9 /root/$login-drakbug_report.log`;
 
     my $scp_script = "";
     foreach ("/usr/bin/scpcall.exp","./scpcall.exp") {
