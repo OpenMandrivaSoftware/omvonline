@@ -87,7 +87,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			      addMedia($c2h->{FTP}) }
 			  $scheduled = join(',',@{$c2h->{sched}});
 			  $noscheduled = join(',',@{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
-			  printf "SCHEDULED = $scheduled\n; NOSCHEDULED = $noscheduled\n";
+			  printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  if ($opt eq '--applet') {
 			      system "MandrakeUpdate","--media=mdkupdate","--pkg-sel=$scheduled","--pkg-nosel=$nosheduled";
 			  } elsif ($opt eq '--auto') {
