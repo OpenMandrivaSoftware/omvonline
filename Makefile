@@ -6,7 +6,6 @@ TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 NAME = mdkonline
 MDKUPDATE = mdkupdate
 MDKAPPLET = mdkapplet
-MDKTUI = mdkonline_tui
 SUBDIRS = po
 
 PREFIX = /
@@ -37,7 +36,6 @@ install: all
 	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME)/pixmaps,autostart,icons/{mini,large}},lib/libDrakX/drakfirsttime}
 	install -m755 $(NAME) $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
-	install -m755 $(MDKTUI) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
 	install -m644 icons/$(NAME)16.png $(ICONSDIR)/mini/$(NAME).png
 	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png

@@ -32,6 +32,8 @@ require_root_capability();
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
+my $logfile = '/tmp/mdkupdate.log';
+
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
@@ -42,7 +44,7 @@ my $YEARS = "2002-2004";
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
--e '/root/.mdkupdate' and system("mv", "/root/.mdkupdate", $conffile);
+-e '/root/.mdkupdate' and system "/bin/mv", "/root/.mdkupdate", $conffile;
 
 my ($scheduled, $noscheduled);
 
@@ -55,7 +57,6 @@ usage:
 ", $VERSION, $YEARS) . N("  --help         - print this help message.
 ") . N("  --auto         - Mandrakeupdate launched automatically.
 ") . N("  --applet       - launch Mandrakeupdate.
-") . N("  --update       - Update keys
 ");
     exit(0);
 }
@@ -72,6 +73,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent');
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
+    -e $logfile and system "/bin/rm", "$logfile";
     if ($resp->is_success) {
 	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 };
 	my $action = {
@@ -89,7 +91,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  $noscheduled = join(',', @{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  if ($opt eq '--applet') {
-			      system "MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			  } elsif ($opt eq '--auto') {
 			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched});
 			  }
@@ -107,21 +109,21 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  clean_dir();
 		      },
 		      80 => sub { 
-			  log::l("[mdkupdate] Client password does not match in database")
+			  output($logfile, "[mdkupdate] Error 80: Client password does not match in database")
 		      },
 		      81 => sub {
-			  log::l("[mdkupdate] Bad Authentification key. Please rerun mdkonline wizard")
+			  output($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard")
 		      },
 		      82 => sub {
-			  log::l("[mdkupdate] No active Online service found for this host.")
+			  output($logfile, "[mdkupdate] Error 82: No active Online service found for this host.")
 		      },
 		      83 => sub {
-			  log::l("[mdkupdate] Unknown problem, better relaunch mdkonline wizard or check connexion")
+			  output($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion")
 		      }
 		     };
 	$action->{$u}->();
     } else {
-	log::l(N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
+	output($logfile, N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
     }
 } else {
     my $ret = -1; 
@@ -159,10 +161,11 @@ sub update_conf {
 sub add_media {
     my $mirror = shift;
     my ($r) = mdkonline::get_release();
-    my $fullpath2mir = "ftp://" . $mirror . "/$r" . "/main_updates" . "/";
+    my $dist_type = mdkonline::get_distro_type();
+    my $fullpath2mir = "ftp://" . $mirror . if_($dist_type, "/$dist_type") ."/$r" . "/RPMS" . "/";
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", "media_info/synthesis.hdlist.cz";
+	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", "../base/synthesis.hdlist.cz";
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
@@ -192,17 +195,15 @@ sub send_rpm_dif {
 	unlink "$confdir/mdkupdate.rpms";
 	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
     } else {
-	log::l(N("Connection problem") . "\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
+	output($logfile, 'send_rpm_dif' . N("Connection problem") . "\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
 	return
     }
 }
-
 sub clean_dir() {
-    system("rm -f $confdir/*log.bz2 $confdir/*log.bz2.uue $confdir/*.dif $confdir/rpm_qa_installed_before $confdir/rpm_qa_installed_after");    
+    system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
+    output($logfile, 'OK')
 }
-
 sub rpm_qa {
     my ($file) = @_;
     output($file, chomp_(join('', sort(`rpm -qa`))));
 }
-

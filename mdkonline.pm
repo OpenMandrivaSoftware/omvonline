@@ -13,11 +13,19 @@ use HTTP::Request::Common;
 use HTTP::Request;
 
 #Don't change version manually
-$::VERSION = '1.1-13mdk';
+$::VERSION = '1.1-20mdk';
+
+my $release_file = find { -f $_ } '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
 sub get_release() {
-    my ($release) = cat_('/etc/mandrake-release') =~ /release\s+(\S+)/;
+    my ($release) = cat_($release_file) =~ /release\s+(\S+)/;
     ($release)
+}
+
+sub get_distro_type() {
+    my $d;
+    cat_($release_file) =~ /(corporate|mnf)/i, and $d = $1;
+    $d
 }
 
 sub get_from_URL {
@@ -133,10 +141,9 @@ sub header { "
 * $_[0]
 ********************************************************************************";
 }
-my $releasefile = find { -f $_ } '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 output($file, map { chomp; "$_\n" }
   header("rpm -qa"), join('', sort `rpm -qa`),
-  header("mandrake version"), cat_($releasefile));
+  header("mandrake version"), cat_($release_file));
 system("/usr/bin/bzip2 -f $file");
 open(my $F, $file . ".bz2") or die "Cannot open file : $!";
 my ($chunk, $buffer);

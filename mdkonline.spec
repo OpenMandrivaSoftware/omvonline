@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 18mdk
+%define release 20mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -10,19 +10,12 @@ Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Requires:	%{name}-backend = %{version}-%{release}, drakfirsttime >= 1.0-0.6mdk
-Requires:   	perl-Gtk2-TrayIcon >= 0.03-3mdk
+Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
+Provides:   %{name}-backend
+#Requires: hwdb-clients >= 0.15.1-1mdk
 BuildRequires: 	gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: 	noarch
-
-%package backend
-Summary: MandrakeOnline libraries and background tools
-Group: System/Configuration/Other
-Requires: drakxtools-newt >= 10-54mdk
-Requires: perl-Crypt-SSLeay >= 0.51-2mdk
-Requires: hwdb-clients >= 0.15.1-1mdk
-Conflicts: %{name} < 1.1-4mdk
 
 %description
 The MandrakeOnline tool is designed for registered users 
@@ -36,9 +29,6 @@ The package include :
   automatically,
 * Mdkapplet which is a KDE/Gnome applet for security updates 
   notification and installation. 
-
-%description backend
-This package contains the mdkonline library and backend tools.
 
 %prep
 %setup -q
@@ -86,8 +76,6 @@ EOF
 %post
 %{update_menus}
 
-%post backend
-
 if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
 fi
@@ -98,27 +86,22 @@ fi
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files backend
-%defattr(-,root,root)
-%{_sbindir}/mdkupdate
-%{_sbindir}/mdkonline_tui
-%dir %{_prefix}/lib/libDrakX/drakfirsttime
-%{_prefix}/lib/libDrakX/drakfirsttime/*.pm
-
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc COPYING ChangeLog
+%{_sbindir}/mdkupdate
 %{_sbindir}/mdkonline
 %{_sbindir}/drakonline
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
+%dir %{_prefix}/lib/libDrakX/drakfirsttime
+%{_prefix}/lib/libDrakX/drakfirsttime/*.pm
 %{_menudir}/%{name}
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 %{_datadir}/%{name}/pixmaps/*.png
 %_sysconfdir/X11/xinit.d/mdkapplet
-#%{_datadir}/autostart/*
 
 ##################################################################
 #
@@ -130,6 +113,23 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Thu Nov  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-20mdk
+- remerge mdkonline to one package 
+- superseded gtk based wizard by interactive one
+- MNF support (config upload and misc)
+- horodate log strings
+- added a debug option to mdkapplet (--debug option)
+- check updates fixes
+
+* Tue Oct 26 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-19mdk
+- 
+
+* Thu Oct 21 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-19mdk
+- branch cvs to MDK10_0_update and MDK10_1 for concurrent devel
+- release for 10.0 and corpo
+- remove strict requires on drakxtools_newt
+- revert urpmi new media handling repositories
+
 * Mon Oct 11 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.1-18mdk
 - put the right dependencies on the backend sub-package
 - make parsing of output from server more error safe
