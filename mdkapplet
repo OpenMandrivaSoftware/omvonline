@@ -81,7 +81,7 @@ my %state = (
 	     disabled => {
 			  colour => [ 'red' ],
 			  changes => [ 'okay', 'busy', 'critical', 'error' ],
-			  menu => [ 'weblink' ],
+			  menu => [ 'configureApplet', 'weblink' ],
 			  tt => [ N("Service deactivated. Waiting for payment...") ]
 			 }
 	    );
