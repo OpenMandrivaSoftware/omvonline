@@ -128,7 +128,7 @@ sub showMainWindow() {
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     $w->set_position('center');
     $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
-    my ($choice, $time);
+    my ($choice, $time, $update_label, $lastch);
     my $autocheck;
     gtkadd($w,
            gtkpack__(Gtk2::VBox->new(0,5),
@@ -136,7 +136,7 @@ sub showMainWindow() {
 			    gtkpack_(Gtk2::VBox->new(0, 3),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { checkUpdates(); }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub { $update_label->set_label(N("Checking for Updates...")); gtkflush(); checkUpdates(); $update_label->set_label($isAvailable ? N("Available") : N("Not Available")); setLastTime(); $lastch->set_label(lastCheck()); gtkflush() }),
 				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
 				    )
 			   ),
@@ -166,7 +166,8 @@ sub showMainWindow() {
 }
 sub setLabel {
     my ($widget, $string) = shift;
-    $widget->set_text($string) if defined $widget;
+    $widget->set_label($string) if defined $widget;
+    gtkflush();
 }
 sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
 sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
@@ -186,7 +187,7 @@ sub silentCheck {
     my $lnk = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     my $response = $ua->request($request);
     my $ct = $response->content;
-    #print "\nCONTENTS = $ct\n";
+    print "\nCONTENTS = $ct\n";
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
@@ -197,11 +198,12 @@ sub silentCheck {
 		       my @contents = sort ( split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
 		       my $comp = 0;
+		       $mLog .= N("Computing new updates...\n");
 		       foreach my $cand (@contents) {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   #print "COMP =  $comp\n";
+			   print "COMP =  $comp\n";
 			   if ($comp) { $isAvailable = 1; $mLog .= N("Checking... Updates are available\n"); go2State('error') and last } else { $isAvailable = 0 };
 		       }
 		       !$comp and okState();
@@ -212,17 +214,16 @@ sub silentCheck {
 		  };
     $retcode->{$u}->();
 }
-sub okState { $isAvailable = 0; $mLog=N("System is up to date"); go2State('okay') }
+sub okState { $isAvailable = 0; $mLog=N("System is up to date\n"); go2State('okay') }
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
     foreach my $p (@{$t}) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
-	    #my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel,
-	    #$r); print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
-	    
+	    my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel,$r); 
 	    if (rpmvercmp($ver, $v) > 0 || ( rpmvercmp($ver, $v) == 0 && rpmvercmp( $rel, $r) > 0)) {
+		print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
 		$isUpdate = 1 and last;
 	    }
 	}
@@ -332,9 +333,6 @@ sub checkUpdates {
 	$mLog .= N("Checking config file: Not present\n");
 	go2State('noconfig')
     } else {
-	$update_label and setLabel($update_label, N("Checking for Updates..."));
-	setLastTime();
-	$lastch and setLabel($lastch, lastCheck());
 	silentCheck();
     }
     setLabel($update_label, $isAvailable ? N("Available") : N("Not Available"));
