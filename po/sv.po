@@ -1,6 +1,7 @@
+# Översättning av mdkonline-sv.po till svenska
 # translation of mdkonline-sv.po to Svenska
-# Copyright (C) 2001,2002 Free Software Foundation, Inc.
-# Mattias Newzella <newzella@linux.nu>, 2001, 2002.
+# Copyright (C) 2001,2002,2003 Free Software Foundation, Inc.
+# Mattias Newzella <newzella@linux.nu>, 2001, 2002,2003.
 # Cecilia Johnsson <datb@swipnet.se>, 2002
 # Henrik Borg <datb@swipnet.se>, 2002
 # Mattias Dahlberg <voz@home.se>, 2002.
@@ -9,13 +10,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "POT-Creation-Date: 2003-01-17 19:41+0100\n"
-"PO-Revision-Date: 2002-12-15 14:12+0100\n"
+"PO-Revision-Date: 2003-02-01 14:47+0100\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
-"Language-Team: Svenska <sv@li.org>\n"
+"Language-Team: svenska <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0\n"
+"X-Generator: KBabel 1.2\n"
 
 #: ../mdkonline_.c:73
 msgid "Africa"
@@ -75,12 +76,10 @@ msgid "Quitting Wizard\n"
 msgstr "Avslutar guiden\n"
 
 #: ../mdkonline_.c:265
-#, fuzzy
 msgid "Warning: No browser specified."
-msgstr "Varning: Ingen webbläsare specificerad"
+msgstr "Varning: Ingen webbläsare specificerad."
 
 #: ../mdkonline_.c:292
-#, fuzzy
 msgid "Connecting...\n"
 msgstr "Ansluter...\n"
 
@@ -89,7 +88,6 @@ msgid "Connection problem"
 msgstr "Anslutningsproblem"
 
 #: ../mdkonline_.c:300 ../mdkonline_.c:368
-#, fuzzy
 msgid "MandrakeOnline could not be contacted, please try again later."
 msgstr ""
 "Mandrake Online kunde inte kontaktas, försök igen vid ett senare tillfälle."
@@ -99,7 +97,6 @@ msgid "Wrong password"
 msgstr "Felaktigt lösenord"
 
 #: ../mdkonline_.c:312
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -122,7 +119,6 @@ msgid "Welcome to MandrakeOnline"
 msgstr "Välkommen till Mandrake Online"
 
 #: ../mdkonline_.c:377
-#, fuzzy
 msgid ""
 "At this step you are supposed to have an account on MandrakeOnline.\n"
 "This assistant will help you to upload your configuration\n"
@@ -131,7 +127,7 @@ msgid ""
 msgstr ""
 "Vid det här steget är det meningen att du ska ha ett konto hos Mandrake\n"
 "Online. Den här assistenten kommer hjälpa dig att ladda upp din\n"
-"konfiguration (paket, hårdvarukonfiguration) till en centraliserad\n"
+"konfiguration (paket, hårdvarukonfiguration) till en central\n"
 "databas för att kunna hålla dig informerad om säkerhetsuppdateringar\n"
 "och andra användbara uppdateringar.\n"
 
@@ -152,7 +148,6 @@ msgid "Login:"
 msgstr "Användarnamn:"
 
 #: ../mdkonline_.c:402
-#, fuzzy
 msgid "Machine Name:"
 msgstr "Datornamn:"
 
@@ -165,7 +160,6 @@ msgid "Sending your Configuration"
 msgstr "Skickar konfiguration"
 
 #: ../mdkonline_.c:408
-#, fuzzy
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -193,11 +187,11 @@ msgstr ""
 "\n"
 "Om du inte känner dig komfortabel med denna idé, eller inte vill dra nytta "
 "av fördelarna med denna tjänst,\n"
-"klicka på \"Avbryt\". Genom att klicka på \"Nästa\", tillåter du oss att "
+"klicka på \"Avbryt\". Genom att klicka på \"Nästa\" tillåter du oss att "
 "hålla dig informerad\n"
 "om säkerhetsuppdateringar och användbara uppgraderingar via personligt "
 "utformad e-post.\n"
-"Du kan även dra nytta av de rabbatterade supporttjänsterna på \n"
+"Du kan även dra nytta av de rabbatterade supporttjänsterna på\n"
 "www.mandrakeexpert.com.\n"
 "Slutligen kommer ett e-postalias med ditt användarnamn@mandrakeonline.net "
 "att tillhandahållas dig."
@@ -207,7 +201,6 @@ msgid "Error while sending informations"
 msgstr "Fel vid sändning av information"
 
 #: ../mdkonline_.c:417
-#, fuzzy
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -222,16 +215,14 @@ msgid "Finished"
 msgstr "Klar"
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "From now on you will receive security and update \n"
 "announcements through MandrakeOnline."
 msgstr ""
-"Från och med nu kommer du att få säkerhets-\n"
+"Från och med nu kommer du att få säkerhets- \n"
 "och uppdateringsannonseringar tack vare Mandrake Online."
 
 #: ../mdkonline_.c:424
-#, fuzzy
 msgid ""
 "MandrakeOnline offers you the ability to automate the updates.\n"
 "A program will run regulary on your system waiting for new updates\n"
@@ -245,9 +236,8 @@ msgid "Your upload was successful!"
 msgstr "Uppladdningen lyckades!"
 
 #: ../mdkonline_.c:429
-#, fuzzy
 msgid "Automated Upgrades"
-msgstr "automatiska uppdateringar"
+msgstr "Automatiska uppdateringar"
 
 #: ../mdkonline_.c:436
 msgid "Choose your geographical location"
@@ -258,9 +248,9 @@ msgid "Reading configuration\n"
 msgstr "Läser konfiguration\n"
 
 #: ../mdkonline_.c:481
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open this file for read: %s"
-msgstr "kan inte öppna den här filen för läsning: %s"
+msgstr "Kan inte öppna den här filen för läsning: %s"
 
 #: ../mdkonline_.c:522
 msgid "OK"
@@ -275,7 +265,6 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: ../mdkonline_.c:552
-#, fuzzy
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel'.\n"
@@ -334,32 +323,27 @@ msgid "  -v             - verbose mode.\n"
 msgstr "  -v             - utförligt läge.\n"
 
 #: ../mdkupdate_.c:175
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again."
 msgstr "MandrakeUpdate kunde inte kontakta platsen, kommer att försöka igen"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid "For any problem send an e-mail to support@mandrakeonline.net\n"
 msgstr "Vid problem, skicka e-post till support@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:202
-#, fuzzy
 msgid ""
 "You need to have an account on MandrakeOnline, or update your subscription."
 msgstr ""
-"Du måste ha ett konto hos MandrakeOnline, eller uppdatera din prenumeration"
+"Du måste ha ett konto hos MandrakeOnline, eller uppdatera din prenumeration."
 
 #: ../mdkupdate_.c:202
 msgid "Your login or password may be wrong"
 msgstr "Ditt användarnamn eller lösenord kan vara felaktigt"
 
 #: ../mdkupdate_.c:214
-#, fuzzy
 msgid "Unable to create mdkupdate medium.\n"
-msgstr "kunde inte skapa mdkupdate-medium\n"
+msgstr "Kunde inte skapa mdkupdate-medium.\n"
 
 #: ../mdkupdate_.c:216
-#, fuzzy
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr "kunde inte uppdatera paket från mdkupdate-medium\n"
+msgstr "Kunde inte uppdatera paket från mdkupdate-medium.\n"
