@@ -199,7 +199,7 @@ sub checkErrors {
 }
 sub setEntryWithConf {
     my %t = getVarsFromSh($wideconf);
-    foreach (qw(login machine)) { $o->{$_}->set_text($t->{uc{$_}}) }
+    foreach (qw(login machine)) { $o->{$_}->set_text($t{uc($_)}) }
 }
 sub sendConfig {
     # When we arrive here, we're sure the login/passwd is correct
@@ -251,8 +251,12 @@ sub sendConfig {
     }
 }
 sub setConf {
-    if ($o->{autoup}->get_active) { automatedUpgrades() }
-    writeWideConf();
+    my $login = $o->{login}->get_text;
+    my $passwd = md5_hex($o->{passwd}->get_text);
+    my $boxname = $o->{machine}->get_text; my $country = getCountry($o->{country}->entry->get_text);
+    my $key = $o->{currentkey};
+    if ($o->{autoup}->get_active) { automatedUpgrades($login, $passwd, $boxname, $key, $country) }
+    writeWideConf($login, $boxname, $country);
 }
 sub init {
     my $i = shift;
@@ -375,11 +379,8 @@ sub wait_msg {
 }
 sub remove_wait_msg { $_[0]->destroy }
 sub automatedUpgrades {
+    my ($login, $passwd, $boxname, $key, $country) = @_;
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
-    my $login = $o->{login}->get_text;
-    my $passwd = md5_hex($o->{passwd}->get_text);
-    my $boxname = $o->{machine}->get_text; my $country = getCountry($o->{country}->entry->get_text);
-    my $key = $o->{currentkey};
     output "/root/.mdkupdate",
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
@@ -397,7 +398,7 @@ if [ -f /root/.mdkupdate ]; then /usr/bin/mdkupdate --auto; fi
 chmod 0755, "/etc/cron.daily/mdkupdate";
 }
 sub writeWideConf {
-    my $date = chomp_(`date`);
+    my ($login, $boxname, $country) = @_;
     output_with_perm $wideconf, 644,
     qq(LOGIN=$login
 MACHINE=$boxname
