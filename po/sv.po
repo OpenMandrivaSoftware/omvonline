@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2001-09-08 15:15+0200\n"
+"POT-Creation-Date: 2001-09-21 09:10+0200\n"
 "PO-Revision-Date: 2001-09-16 12:54GMT\n"
 "Last-Translator: Mattias Newzella <newzella@linux.nu>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 0.9.5\n"
 
-#: mdkonline:89 mdkonline:166 mdkonline:199
+#: mdkonline:89 mdkonline:180 mdkonline:213
 msgid "Next"
 msgstr "Nästa"
 
@@ -21,32 +21,36 @@ msgstr "Nästa"
 msgid "Finish"
 msgstr "Klar"
 
-#: mdkonline:91 mdkonline:429
+#: mdkonline:91 mdkonline:453
 msgid "Quit"
 msgstr "Avsluta"
 
-#: mdkonline:92 mdkonline:167 mdkonline:201 mdkonline:203
+#: mdkonline:92 mdkonline:181 mdkonline:215 mdkonline:217
 msgid "Back"
 msgstr "Tillbaka"
 
-#: mdkonline:213
+#: mdkonline:146
+msgid "Quitting Wizard\n"
+msgstr "Avslutar guiden\n"
+
+#: mdkonline:227
 msgid "Warning: No browser specified"
 msgstr "Varning: Ingen webbläsare specificerad"
 
-#: mdkonline:260 mdkonline:323
+#: mdkonline:274 mdkonline:355
 msgid "Connection problem"
 msgstr "Anslutningsproblem"
 
-#: mdkonline:260 mdkonline:323
+#: mdkonline:274 mdkonline:355
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "MandrakeOnline kunde inte kontaktas, försök igen vid ett senare tillfälle"
 
-#: mdkonline:272
+#: mdkonline:286
 msgid "Wrong password"
 msgstr "Felaktigt lösenord"
 
-#: mdkonline:272
+#: mdkonline:286
 msgid ""
 "Your login or password was wrong.\n"
 "Either you'll have to type it again, or you'll need to create an account on "
@@ -59,11 +63,11 @@ msgstr ""
 " I det senare fallet, gå tillbaka till det första steget för att ansluta "
 "till Mandrake Online."
 
-#: mdkonline:340
+#: mdkonline:364
 msgid "Welcome to MandrakeOnline"
 msgstr "Välkommen till MandrakeOnline"
 
-#: mdkonline:341
+#: mdkonline:365
 msgid ""
 "At this step You are supposed to have an account on Mandrake Online [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -77,51 +81,57 @@ msgstr ""
 "att kunna hålla dig informerad om säkerhetsuppdateringar och andra "
 "användbara uppdateringar.\n"
 
-#: mdkonline:347
+#: mdkonline:371
 msgid "I don't have a Mandrake Online account and I want to "
 msgstr "Jag har inget Mandrake Online-konto och jag vill "
 
-#: mdkonline:349
+#: mdkonline:373
 msgid "Subscribe"
 msgstr "Prenumerera"
 
-#: mdkonline:359
+#: mdkonline:383
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrakes integritetspolicy"
 
-#: mdkonline:364
+#: mdkonline:388
 msgid "MandrakeOnline Authentification"
 msgstr "MandrakeOnline autentisering"
 
-#: mdkonline:365
+#: mdkonline:389
 msgid "Enter your Mandrake Online login and password:"
 msgstr "Ange ditt användarnamn och lösenord hos Mandrake Online:"
 
-#: mdkonline:367
+#: mdkonline:391
 msgid "Login:"
 msgstr "Användarnamn:"
 
-#: mdkonline:367
+#: mdkonline:391
 msgid "Password:"
 msgstr "Lösenord:"
 
-#: mdkonline:371
+#: mdkonline:395
 msgid "Sending your Configuration"
 msgstr "Skickar din konfiguration"
 
-#: mdkonline:372
+#: mdkonline:396
+#, fuzzy
 msgid ""
-"This is your chance, to help us improving Mandrake Linux.\n"
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
 "\n"
-"The Wizard will now send the following informations to MandrakeSoft:\n"
-"1) the packages you have installed on your system,\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable, by that idea, press 'Cancel'.\n"
-"By pressing 'Next', you will grant us the privilege\n"
-"to learn more about about you as our customer\n"
-"and it gives us the chance to keep you informed\n"
-"about security updates and useful upgrades."
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username\\@mandrakeonline.net will be "
+"provided to you."
 msgstr ""
 "Det här är din chans att hjälpa oss att förbättra Mandrake Linux.\n"
 "\n"
@@ -134,11 +144,11 @@ msgstr ""
 "som vår kund och det ger oss också chansen att hålla dig informerad\n"
 "om säkerhetsuppdateringar och andra användbara uppdateringar."
 
-#: mdkonline:379
+#: mdkonline:403
 msgid "Error while sending informations"
 msgstr "Fel vid sändning av information"
 
-#: mdkonline:380
+#: mdkonline:404
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -148,27 +158,30 @@ msgstr ""
 "\n"
 "Klicka på \"Nästa\" för att försöka skicka den igen."
 
-#: mdkonline:386
+#: mdkonline:410
 msgid "Finished"
 msgstr "Klar"
 
-#: mdkonline:387
-msgid "Your personal informations are now stored at MdkOnline"
-msgstr "Din personliga information är nu lagrad hos MdkOnline"
+#: mdkonline:411
+msgid ""
+"Your upload was successfull!\n"
+"From now you will receive on security\n"
+"and upgrade annoucements thanks to MandrakeOnline."
+msgstr ""
 
-#: mdkonline:404
+#: mdkonline:428
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:410 mdkonline:436
+#: mdkonline:434 mdkonline:460
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:425
+#: mdkonline:449
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: mdkonline:434
+#: mdkonline:458
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -178,22 +191,21 @@ msgstr ""
 "För att återgå till guiden, klicka på \"Avbryt\",\n"
 "för att verkligen avsluta klicka på \"Avsluta\"."
 
-#: mdkonline:438
+#: mdkonline:462
 msgid "Really abort? - MandrakeOnline"
 msgstr "Verkligen avbryta? - MandrakeOnline"
 
-#: mdkonline:508
+#: mdkonline:534
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:509
+#: mdkonline:535
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: mdkonline:533
+#: mdkonline:559
 msgid "Close"
 msgstr "Stäng"
 
-#: mdkonline:546
-msgid "Quitting Wizard\n"
-msgstr "Avslutar guiden\n"
+#~ msgid "Your personal informations are now stored at MdkOnline"
+#~ msgstr "Din personliga information är nu lagrad hos MdkOnline"
