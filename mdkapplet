@@ -38,7 +38,7 @@ my ($menu, $url, $timeout, $refreshtm);
 my $nowindow = 1;
 my $arch = arch();
 my $av_pkgs;
-my $need_update = 0;
+my ($need_update, $raisedwindow, $isAvailable) = (0, 0, 0);
 my $conffile = '/etc/sysconfig/mdkonline';
 
 my %state = (
@@ -102,10 +102,13 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 	       )
       );
 $eventbox->signal_connect(button_press_event => sub {
-			      if ($_[1]->button == 1) {
-				  if (-e $conffile) { showMainWindow() } else { configure() }
+			      if (!$raisedwindow) {
+				  if ($_[1]->button == 1) {
+				      if (-e $conffile) { showMainWindow() } else { configure() }
+				  }
+				  $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
+				  $raisedwindow = 1;
 			      }
-			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 
 shouldStart() or die "$ENV{HOME}/.mdkonline should be set to TRUE";
@@ -121,9 +124,9 @@ ugtk2::exit(0);
 sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
     $w->set_title(N("Mandrake Updates Applet"));
-    $w->signal_connect(delete_event => sub { $w->destroy });
+    $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     $w->set_position('center');
-    my ($choice, $isAvailable, $time);
+    my ($choice, $time);
     my $autocheck;
     gtkadd($w,
            gtkpack__(Gtk2::VBox->new(0,5),
@@ -153,21 +156,15 @@ sub showMainWindow() {
 			   ),
 		     gtkpack(Gtk2::HSeparator->new),
                      gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
-						   $w->destroy;
+						   $w->destroy; $raisedwindow = 0;
 					       })
 			    )
 		    ));
     $w->show_all
 }
-sub confNetwork {
-    system "/usr/sbin/drakconnect &";
-}
-sub launchUpdate {
-    system "/usr/sbin/MandrakeUpdate &";
-}
-sub installUpdates {
-    system "/usr/sbin/mdkupdate", "--applet";
-}
+sub confNetwork { system "/usr/sbin/drakconnect &" }
+sub launchUpdate { system "/usr/sbin/MandrakeUpdate &" } 
+sub installUpdates { system "/usr/sbin/mdkupdate", "--applet" }
 sub silentCheck {
     my $link = "http://www.mandrakeonline.net/online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
@@ -189,7 +186,7 @@ sub silentCheck {
     #   98 - wrong pass
     #   97 - host not active
     my $retcode = {
-		   10 => sub { go2State('okay') },
+		   10 => sub { $isAvailable = 0; go2State('okay') },
 		   11 => sub {
 		       my @contents = sort ( split /\n/, $ct);
 		       my @t = split /\n/, `rpm -qa`;
@@ -197,8 +194,7 @@ sub silentCheck {
 			   $cand =~ s/\.(i586|ppc|ia64).rpm//;
 			   $cand =~ /(.*)-(.*)-(.*)$/; my ($name, $ver, $rel) = ($1, $2, $3);
 			   my $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   $comp and go2State('error');
-			   $comp and last;
+			   if ($comp) { $isAvailable = 1; go2State('error') and last }
 		       }
 		   },
 		   97 => sub { go2State('disabled'); },
