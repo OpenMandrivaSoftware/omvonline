@@ -5,20 +5,17 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	24mdk
+Release: 	25mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
-Source1:	%{name}16.png.bz2
-Source2:	%{name}32.png.bz2
-Source3:	%{name}48.png.bz2
-URL:		http://people.mandrakesoft.com/~daouda/mandrake/mdkonline.html
+URL:		http://www.mandrakesoft.com/
 License:	GPL
 Group:		System/Configuration/Other
 Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
 Requires:	popt >= 1.6, perl-libwww-perl, perl-Crypt-SSLeay >= 0.37
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildArchitectures: noarch
+BuildArch: noarch
 
 %description
 The Mandrake Online tool is designed for registered users 
@@ -64,9 +61,9 @@ EOF
 #install menu icon
 mkdir -p $RPM_BUILD_ROOT%{_miconsdir}
 mkdir -p $RPM_BUILD_ROOT%{_liconsdir}
-bzcat %{SOURCE1} > $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
-bzcat %{SOURCE2} > $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
-bzcat %{SOURCE3} > $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
+install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline16.png $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
+install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline32.png $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
+install -m 0644 $RPM_BUILD_DIR/%name-%version/icons/mdkonline48.png $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
 
 %post
 %{update_menus}
@@ -94,6 +91,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Wed Jul 31 2002 David BAUDENS <baudens@mandrakesoft.com> 0.15-25mdk
+- New 16 & 48 icons.
+- Fix "make rpm"
+
 * Sat Jul 20 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-24mdk
 - 32 x 32 new icon.
 

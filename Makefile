@@ -39,7 +39,6 @@ dis: clean
 
 rpm: dis ../$(NAME)-$(VERSION).tar.bz2 $(RPM)
 	cp -f ../$(NAME)-$(VERSION).tar.bz2 $(RPM)/SOURCES
-	cp -f icons/*.png.bz2 $(RPM)/SOURCES
 	cp -f $(NAME).spec $(RPM)/SPECS/
 	rpm -ba --clean --rmsource $(NAME).spec
 	rm -f ../$(NAME)-$(VERSION).tar.bz2
