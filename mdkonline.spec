@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 8mdk
+Release: 	9mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Fri Sep 21 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-8mdk
+* Fri Sep 21 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-9mdk
 - code update
 - definitive links
 
