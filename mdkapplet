@@ -165,7 +165,7 @@ sub showMainWindow() {
 }
 sub setLabel {
     my $label = shift;
-    defined $update_label and $update_label->set_label($label);
+    $update_label->set_text($label) if defined $update_label;
 }
 sub configNetwork { $mLog .= N("Launching drakconnect\n"); system "/usr/sbin/drakconnect &" }
 sub launchUpdate { $mLog .= N("Launching MandrakeUpdate\n"); system "/usr/sbin/MandrakeUpdate &" } 
@@ -253,13 +253,15 @@ sub checkUpdates {
 	$mLog .= N("Checking Network: seems disabled\n");
 	go2State('disconnected')
     } elsif (!-e $conffile) {
-	$mLog .= N("Checking config file: Not present");
+	$mLog .= N("Checking config file: Not present\n");
 	go2State('noconfig')
     } else {				   
 	setLabel(N("Checking for Updates..."));
 	silentCheck();
     }
-    setLabel($isAvailable ? N("Available") : N("Not Available"));
+    if ($update_label && $update_label->get_text eq N("Checking for Updates...")) {
+	setLabel($isAvailable ? N("Available") : N("Not Available"));
+    }
 }
 sub go2State {
     my $state = shift;
