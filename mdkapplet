@@ -51,11 +51,7 @@ my $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", "$localfile");
 
-my @pids =  `ps -u $ENV{USER} | grep mdkapplet`;
-@pids > 1 and die "mdkapplet already running\n";
-#don't launch it twice :)
-#my @pids = fuzzy_pidofs(qr/\bmdkapplet\b/);
-#@pids > 1 and die "mdkapplet already running\n";
+is_running('mdkapplet') and die "mdkapplet already running\n";
 
 my %state = (
 	     okay => {
@@ -270,6 +266,10 @@ sub compareWithInstalled {
 	}
     }
     $isUpdate
+}
+sub is_running {
+    my ($name) = @_;
+    any { !/^\s*$$\b/ && /\b\Q$name\E$/ } `ps -u $ENV{USER}`;
 }
 sub rpmverparse {
     my ($ver) = @_;
