@@ -259,7 +259,7 @@ sub step_wizard {
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
     my $hbox_subs= new Gtk::HBox(0,0);
-    $hbox_subs->set_uposition(20,300);
+    $hbox_subs->set_uposition(50,300);
     $vbox_welc->pack_start($hbox_subs,0,0,1);
     my $check_subs = new Gtk::CheckButton(_("I don't have a Mandrake Online account and I want to  "));
     $hbox_subs->pack_start($check_subs,0,0,1);
