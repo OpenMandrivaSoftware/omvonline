@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 25mdk
+%define release 26mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -13,7 +13,7 @@ Group:		System/Configuration/Other
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
-Requires: hwdb-clients >= 0.15.1-1mdk
+Requires:	hwdb-clients >= 0.15.1-1mdk
 BuildRequires: 	gettext, perl-MDK-Common-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: 	noarch
@@ -115,6 +115,11 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.linuxmandrake.com/en/cvs.php3)
 
 %changelog
+* Thu Dec 23 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-26mdk
+- fixed permissions of generated conf file (use octal with perl chmod)
+- do not go to 'End' step when upload fails, give choice to user 
+  to reupload their config 
+
 * Fri Dec 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-25mdk
 - fix typo when --debug is passed to mdkapplet (warly)
 

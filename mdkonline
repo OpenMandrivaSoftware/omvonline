@@ -188,10 +188,14 @@ $wiz = {
 				 }
 			     },
 			     post => sub {
-				 mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
-				 mdkonline::write_wide_conf($login, $boxname, $country);
-				 mdkonline::clean_confdir();
-				 "end"
+				 if ($sendconfres eq 'TRUE' && $key) {
+				     mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
+				     mdkonline::write_wide_conf($login, $boxname, $country);
+				     mdkonline::clean_confdir();
+				     "end" 
+				 } else {
+				     "authenticate"
+				 }
 			     },
 			    },
 		  end => {

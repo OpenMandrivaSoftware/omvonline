@@ -24,7 +24,7 @@ sub get_release() {
 
 sub get_distro_type() {
     my $d;
-    cat_($release_file) =~ /(corporate|mnf)/i, and $d = $1;
+    cat_($release_file) =~ /(corporate|mnf)/i, and $d = lc($1);
     $d
 }
 
@@ -213,7 +213,7 @@ sub write_wide_conf {
     my $wideconf = '/etc/sysconfig/mdkonline';
     my $d = localtime();
     $d =~ s/\s+/_/g;
-    output_with_perm $wideconf, 644,
+    output_with_perm $wideconf, 0644,
     qq(LOGIN=$login
 MACHINE=$boxname
 COUNTRY=$country
