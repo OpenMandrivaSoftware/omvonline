@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	7mdk
+Release: 	8mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Tue May 25 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-8mdk
+- fix broken regexp in error handling code (flepied)
+
 * Mon May 17 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-7mdk
 - avoid displaying the applet twice on the panel (using fuzzy_pidofs)
 - handle network proxy/routing misconfiguration.
