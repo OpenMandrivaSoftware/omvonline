@@ -151,7 +151,7 @@ sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
     $w->set_title(N("Mandrakelinux Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
-    gtkset_size_request($w, 360, 240);
+    gtkset_size_request($w, 400, 300);
     $w->set_position('center');
     $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
     $textvw = Gtk2::TextView->new;
@@ -203,6 +203,7 @@ sub refresh_status {
 sub refresh_contents {
     my $status = shift;
     my $color = {};
+    my %h = getVarsFromSh($conffile); 
     foreach my $l (['first', 'red'], ['second', 'royalblue3'], ['third', 'green']) { 
 	$color->{$l->[0]} = { 'foreground' => $l->[1], 'weight' => Gtk2::Pango->PANGO_WEIGHT_BOLD } 
     }
@@ -210,6 +211,7 @@ sub refresh_contents {
     my $last = lastCheck();
     my $contents = [ [ N("Network Connection: "), $color->{second} ], [ isNetwork() ? N("Up") . "\n" : N("Down") . "\n", isNetwork() ? $color->{third} : $color->{first} ], 
 		     [ N("Last check: "), $color->{second} ], [ "$last\n", $fixed_tag ],
+		     [ N("Machine name:"), $color->{second} ], [ $h{MACHINE} . "\n", $fixed_tag ],
 		     [ N("Updates: "), $color->{second} ], [ common::sprintf_fixutf8($state{$status}{tt}[0]), $status eq 'okay' ? $color->{third} : $color->{first} ],
 		   ];
     $contents
@@ -225,8 +227,8 @@ sub installUpdates {
     my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush(); 
     undef $w;
-    my $mdkupdate_status = cat_('/tmp/mdkupdate.log');
-    if ($mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandrakelinux Updates Applet"), $mdkupdate_status) }
+    my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
+    if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandrakelinux Updates Applet"), $mdkupdate_status) }
 }
 sub silentCheck {
     my $link = $online_site . "/online3_RemoteAction.php" . '?action=UpdateList';
@@ -282,7 +284,7 @@ sub compareWithInstalled {
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
 	    my ($iu, $ir);
-	    if ($debug) { $iu = mdkonline::rpmvercmp($ver, $v); $ir = mdkonline::rpmvercmp($rel, $r) }; 
+	    if ($debug) { $iu = mdkonline::rpm_ver_cmp($ver, $v); $ir = mdkonline::rpm_ver_cmp($rel, $r) }; 
 	    if (mdkonline::rpm_ver_cmp($ver, $v) > 0 || mdkonline::rpm_ver_cmp($ver, $v) == 0 && mdkonline::rpm_ver_cmp($rel, $r) > 0) {
 		logIt("$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n") if $debug;
 		$isUpdate = 1 and last;

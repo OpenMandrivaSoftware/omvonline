@@ -43,7 +43,7 @@ my $online_link = 'https://www.mandrakeonline.net';
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
-my $logfile = '/tmp/mdkonline.log';
+my $logfile = '/var/tmp/mdkonline.log';
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
@@ -212,9 +212,9 @@ if ($login && $password && $boxname) {
 	if ($sendconfres eq 'TRUE' && $key) {
 	    mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
 	    mdkonline::write_wide_conf($login, $boxname, $country);
-	    output($logfile, N("Configuration uploaded successfully"))
-	} else { output($logfile, N("Problem uploading configuration")) }
-    } else { output($logfile, N("Cannot connect to mandrakeonline website: wrong login/password or router/firewall bad settings")) }
+	    output_p($logfile, N("Configuration uploaded successfully"))
+	} else { output_p($logfile, N("Problem uploading configuration")) }
+    } else { output_p($logfile, N("Cannot connect to mandrakeonline website: wrong login/password or router/firewall bad settings")) }
 } else {
     wizards->new->safe_process($wiz, $in);
 }

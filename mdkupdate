@@ -31,12 +31,12 @@ require_root_capability();
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
-my $difflog = '/tmp/diff.log';
+my $difflog = '/var/tmp/diff.log';
 
 my $currentrpm = "$confdir/rpm_qa_installed_current";
 my $afterrpm =  "$confdir/rpm_qa_installed_after";
 
-my $logfile = '/tmp/mdkupdate.log';
+my $logfile = '/var/tmp/mdkupdate.log';
 
 my $onlineUrl = "https://www.mandrakeonline.net/";
 my $url;
@@ -102,7 +102,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  }
 			  rpm_qa($afterrpm);
 			  my %new = getVarsFromSh($conffile);
-			  my $need_upload = get_rpm_dif();
+			  my $need_upload = get_rpm_diff();
 			  if ($need_upload || $opt eq '--auto') {
 			      #- send configuration and get back key to use...
 			      my $r;
@@ -112,21 +112,21 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  clean_dir();
 		      },
 		      80 => sub { 
-			  output($logfile, "[mdkupdate] Error 80: Client password does not match in database")
+			  output_p($logfile, "[mdkupdate] Error 80: Client password does not match in database")
 		      },
 		      81 => sub {
-			  output($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard")
+			  output_p($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard")
 		      },
 		      82 => sub {
-			  output($logfile, "[mdkupdate] Error 82: No active Online service found for this host.")
+			  output_p($logfile, "[mdkupdate] Error 82: No active Online service found for this host.")
 		      },
 		      83 => sub {
-			  output($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion")
+			  output_p($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion")
 		      }
 		     };
 	$action->{$u}->();
     } else {
-	output($logfile, N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
+	output_p($logfile, N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
     }
 } else {
     my $ret = -1; 
@@ -165,8 +165,9 @@ sub add_media {
     my $mirror = shift;
     my ($r) = mdkonline::get_release();
     my $dist_type = mdkonline::get_distro_type();
-    my $fullpath2mir = $r <= 10.0 ? "ftp://" . $mirror . if_($dist_type, "/$dist_type") ."/$r" . "/RPMS" . "/" :
-	"ftp://" . $mirror . "/$r" . "/main_updates" . "/";
+    #sometimes server returns the full link http:// or ftp://
+    my $fullpath2mir = $r <= 10.0 ? if_($mirror !~ /^(http|ftp):\/\// , "ftp://") . $mirror . if_($dist_type, "/$dist_type") ."/$r" . "/RPMS" . "/" :
+      "ftp://" . $mirror . "/$r" . "/main_updates" . "/";
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
 	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with", $r <= 10.0 ? "../base/synthesis.hdlist.cz" : "media_info/synthesis.hdlist.cz";
@@ -190,7 +191,7 @@ sub send_conf_update {
 }
 sub get_rpm_diff {
     my $isdif = `sdiff -s $afterrpm $currentrpm`;
-    $isdif and output($difflog, $isdif), return 1;
+    $isdif and output_p($difflog, $isdif), return 1;
     return 0
 }
 sub new_rpm_base {
@@ -199,7 +200,7 @@ sub new_rpm_base {
 sub clean_dir() {
     new_rpm_base();
     mdkonline::clean_confdir();
-    output($logfile, 'OK')
+    output_p($logfile, 'OK')
 }
 sub rpm_qa {
     my ($file) = @_;

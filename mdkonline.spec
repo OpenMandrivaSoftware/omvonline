@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 20mdk
+%define release 25mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -12,7 +12,8 @@ License:	GPL
 Group:		System/Configuration/Other
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 Provides:   %{name}-backend
-#Requires: hwdb-clients >= 0.15.1-1mdk
+Obsoletes:  %{name}-backend
+Requires: hwdb-clients >= 0.15.1-1mdk
 BuildRequires: 	gettext
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: 	noarch
@@ -112,8 +113,21 @@ rm -rf $RPM_BUILD_ROOT
 ##################################################################
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
+
 %changelog
-* Fri Nov 19 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-20mdk
+* Fri Dec 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-25mdk
+- fix typo when --debug is passed to mdkapplet (warly)
+
+* Thu Dec  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-24mdk
+- don't append protocol when url name is fully qualified (for corporate)
+- fixed empty message when update are done
+- cosmetics fixes (window sizes, more wait messages)
+
+* Mon Nov 29 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.1-22mdk
+- use /corporate/ instead of /Corporate/ in update path.
+
+* Thu Nov 25 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-21mdk
+- add online host on GUI (submitted by rwira)
 - remerge mdkonline to one package 
 - superseded gtk based wizard by interactive one
 - MNF support (config upload and misc)
