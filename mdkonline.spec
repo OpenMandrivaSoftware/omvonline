@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	1mdk
+Release: 	2mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -79,6 +79,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Mon Sep  2 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-2mdk
+- fix LANG detection 
+- cleanups
+
 * Wed Aug 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-1mdk
 - release 0.16
 - add sl drakonline -> mdkonline
