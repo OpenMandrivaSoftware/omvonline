@@ -137,7 +137,7 @@ sub split_contents {
     $elem->{torf} = $s->[0];
     if ($elem->{torf} eq 'TRUE') {
 	($elem->{torf}, $elem->{NEWKEY}, $elem->{OLDKEY}, $elem->{FTP}) = splice(@$s, 0, 4);
-	($elem->{sched}, $elem->{nosched}) = partition { /i586$/ } @$s;
+	($elem->{sched}, $elem->{nosched}) = partition { /i586|ppc|ia64|noarch|x86_64|amd64|ppc64$/ } @$s;
     }
     $elem
 }
