@@ -84,8 +84,8 @@ $hbox->pack_end($Button_Next, 0, 1, 0);
 $hbox->pack_end($Button_Prev, 0, 1, 0);
 $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
-my $login_user= new Gtk::Entry(20);
-my $passwd_user= new Gtk::Entry(20);
+my $login_user= new Gtk::Entry();
+my $passwd_user= new Gtk::Entry();
 init_ui();
 $Main_Window->show_all;
 
@@ -122,6 +122,8 @@ sub step_wizard {
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
     my $vbox_ident= new Gtk::VBox(0,0);
     write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
+    my $label_log = new Gtk::Label(_("\n\n Enter your Mandrake Online login and password \n"));
+    $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
     my $vbox_rev=new Gtk::VBox(0,0);
@@ -162,10 +164,11 @@ sub pack_box_identity {
     $table->attach_defaults( $entry1, 1, 2, 0, 1);
     $table->attach_defaults( $Label_wg2, 0, 1, 1, 2);
     $table->attach_defaults( $entry2, 1, 2, 1, 2);
-    $Label_wg1->set_uposition(50,100);
-    $Label_wg2->set_uposition(40,130);
-    $entry1->set_uposition(210,100);
-    $entry2->set_uposition(210,130);
+    $Label_wg1->set_uposition(50,170);
+    $Label_wg2->set_uposition(40,200);
+    $entry1->set_uposition(210,170);
+    $entry2->set_uposition(210,200);
+    $entry2->set_visibility($false);
     $vbox->pack_start($table,$true ,$true ,1);
 }
 
