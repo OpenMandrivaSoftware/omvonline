@@ -292,7 +292,9 @@ sub step_wizard {
     $hbox_subs->pack_start($check_subs,0,0,1);
     my $button_subs = new Gtk::Button("  " . _("Subscribe") . "  ");
     $button_subs->set_sensitive(0);
-    $check_subs->signal_connect (clicked => sub { $test_tog=$check_subs->get_active(); $button_subs->set_sensitive($test_tog);});
+    $check_subs->signal_connect (clicked => sub {$test_tog=$check_subs->get_active(); 
+						 $button_subs->set_sensitive($test_tog); 
+						 $Button_Next->set_sensitive(!$test_tog); });
     $button_subs->signal_connect(clicked => \&subscribe_mdkonline);
     $hbox_subs->pack_start($button_subs,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
