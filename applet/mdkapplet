@@ -187,6 +187,5 @@ sub setImage {
 }
 sub about {
     create_dialog(N("About Online Applet"), 
-#-PO Do not alter the <span ..> and </span> tags
-		  "\t" . N("<span foreground=\"#21449C\"><u><b>Mandrake Update Notification Applet</b></u></span>\n\n<u>Version</u>: %s \n\n<u>Team</u>: Mandrake Online Team &lt;mot\@mandrakeonline.net&gt;\n\n<span foreground=\"#006666\"><i>This Software is under GPL</i></span>", ' 10.0 ') , { use_markup => 1 });
+		  "\t" . "<span foreground=\"#21449C\"><u><b>" . N_("Mandrake Update Notification Applet") . "</b></u></span>\n\n<u>" . N_("Version:") . "</u> %s \n\n<u>" . N_("Team:"). "</u> " . N_("Mandrake Online Team"). " &lt;mot\@mandrakeonline.net&gt;\n\n<span foreground=\"#006666\"><i>" . N_("This Software is under GPL") . "</i></span>", ' 10.0 ') , { use_markup => 1 });
 }
