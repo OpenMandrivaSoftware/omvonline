@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2001-09-08 15:15+0200\n"
+"POT-Creation-Date: 2001-09-25 20:52+0200\n"
 "PO-Revision-Date: 2001-09-08 15:15+0200\n"
 "Last-Translator: Mohammed Gamal <f2c2001@yahoo.com>\n"
 "Language-Team: Arabic\n"
@@ -13,56 +13,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
-#: mdkonline:89 mdkonline:166 mdkonline:199
+#: mdkonline:90 mdkonline:183 mdkonline:216
 msgid "Next"
 msgstr "التالي"
 
-#: mdkonline:90
+#: mdkonline:91
 msgid "Finish"
 msgstr "انهاء"
 
-#: mdkonline:91 mdkonline:429
+#: mdkonline:92 mdkonline:455
 msgid "Quit"
 msgstr "خروج"
 
-#: mdkonline:92 mdkonline:167 mdkonline:201 mdkonline:203
+#: mdkonline:93 mdkonline:184 mdkonline:218 mdkonline:220
 msgid "Back"
 msgstr "السابق"
 
-#: mdkonline:213
+#: mdkonline:95
+#, fuzzy
+msgid "I don't have a MandrakeOnline account and I want to "
+msgstr "ليس لدي حساب في Mandrake Online و أريد أن"
+
+#: mdkonline:96
+msgid "Subscribe"
+msgstr "اشتراك"
+
+#: mdkonline:149
+msgid "Quitting Wizard\n"
+msgstr "جاري الخروج من المعالج\n"
+
+#: mdkonline:230
 msgid "Warning: No browser specified"
 msgstr "تحذير: لم يتم تحديد المتصفح"
 
-#: mdkonline:260 mdkonline:323
+#: mdkonline:278 mdkonline:359
 msgid "Connection problem"
 msgstr "مشكلة في الإتصال"
 
-#: mdkonline:260 mdkonline:323
+#: mdkonline:278 mdkonline:359
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "لم يمكن الإتصال بMandrakeOnline, يرجى اعادة المحاولة في وقت آخر"
 
-#: mdkonline:272
+#: mdkonline:290
 msgid "Wrong password"
 msgstr "كلمة مرور خاطئة"
 
-#: mdkonline:272
+#: mdkonline:290
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 "Either you'll have to type it again, or you'll need to create an account on "
-"Mandrake Online.\n"
-" In the latter case, go back to the first step to connect to Mandrake Online."
+"MandrakeOnline.\n"
+" In the latter case, go back to the first step to connect to MandrakeOnline."
 msgstr ""
 "اسم الدخول أو كلمة المرور كانت خاطئة.\n"
 "إما أن تكتبها مرة أخرى, أو ستحتاج الى عمل حساب لك في MandrakeOnline.\n"
 " بعد ذلك, اذهب ثانية الى الخطوة الأولى و اتصل بMandrakeOnline."
 
-#: mdkonline:340
+#: mdkonline:368
 msgid "Welcome to MandrakeOnline"
 msgstr "أهلا بكم في MandrakeOnline"
 
-#: mdkonline:341
+#: mdkonline:369
+#, fuzzy
 msgid ""
-"At this step You are supposed to have an account on Mandrake Online [1].\n"
+"At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
@@ -72,51 +87,51 @@ msgstr ""
 "(حزم البرامج, اعدادات العتاد) الى قاعدة بيانات مركزية كي يتسني\n"
 "لك أن تعلم بالتحديثات الأمنية و الترقيات المفيدة.\n"
 
-#: mdkonline:347
-msgid "I don't have a Mandrake Online account and I want to "
-msgstr "ليس لدي حساب في Mandrake Online و أريد أن"
-
-#: mdkonline:349
-msgid "Subscribe"
-msgstr "اشتراك"
-
-#: mdkonline:359
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "سيساسة الخصوصية في ماندريك"
 
-#: mdkonline:364
-msgid "MandrakeOnline Authentification"
+#: mdkonline:390
+#, fuzzy
+msgid "Authentification"
 msgstr "مصادقة MandrakeOnline"
 
-#: mdkonline:365
-msgid "Enter your Mandrake Online login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login and password:"
 msgstr "أدخل اسم الدخول و كلمة المرور لMandrake Online:"
 
-#: mdkonline:367
+#: mdkonline:393
 msgid "Login:"
 msgstr "اشم الدخول"
 
-#: mdkonline:367
+#: mdkonline:393
 msgid "Password:"
 msgstr "كلمة المرور:"
 
-#: mdkonline:371
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "جاري ارسال اعداداتك"
 
-#: mdkonline:372
+#: mdkonline:398
+#, fuzzy
 msgid ""
-"This is your chance, to help us improving Mandrake Linux.\n"
+"In order to benefit from MandrakeOnline services,\n"
+"we are about to upload your configuration.\n"
 "\n"
-"The Wizard will now send the following informations to MandrakeSoft:\n"
-"1) the packages you have installed on your system,\n"
+"The Wizard will now send the following information to MandrakeSoft:\n"
+"1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable, by that idea, press 'Cancel'.\n"
-"By pressing 'Next', you will grant us the privilege\n"
-"to learn more about about you as our customer\n"
-"and it gives us the chance to keep you informed\n"
-"about security updates and useful upgrades."
+"If you feel uncomfortable by that idea, or do not want to benefit from this "
+"service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+"informed\n"
+"about security updates and useful upgrades via personalized email alerts.\n"
+"Furthermore, you benefit from discounted paid support services on\n"
+"www.mandrakeexpert.com.\n"
+"Finally, an email alias with your username\\@mandrakeonline.net will be "
+"provided to you."
 msgstr ""
 "هذه فرصتك لمساعدتنا في تحسين ماندريك لينكس.\n"
 "\n"
@@ -129,11 +144,11 @@ msgstr ""
 "كما أن هذا يعطينا الفرصة لكي ننبهك الى التحديثات الأمنية\n"
 "و الترقيات المفيدة."
 
-#: mdkonline:379
+#: mdkonline:405
 msgid "Error while sending informations"
 msgstr "ظهر خطأ أثناء ارسال المعلومات"
 
-#: mdkonline:380
+#: mdkonline:406
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -143,27 +158,30 @@ msgstr ""
 "\n"
 "اضغط التالي لمحاولة ارسال اعداداتك من جديد."
 
-#: mdkonline:386
+#: mdkonline:412
 msgid "Finished"
 msgstr "انتهى"
 
-#: mdkonline:387
-msgid "Your personal informations are now stored at MdkOnline"
-msgstr "معلوماتك الشخصية مخزنة الآن في MdkOnline"
+#: mdkonline:413
+msgid ""
+"Your upload was successful!\n"
+"From now you will receive on security\n"
+"and upgrade announcements thanks to MandrakeOnline."
+msgstr ""
 
-#: mdkonline:404
+#: mdkonline:430
 msgid "OK"
 msgstr "موافق"
 
-#: mdkonline:410 mdkonline:436
+#: mdkonline:436 mdkonline:462
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:425
+#: mdkonline:451
 msgid "Cancel"
 msgstr "الغاء"
 
-#: mdkonline:434
+#: mdkonline:460
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -173,22 +191,21 @@ msgstr ""
 "للرجوع الى المعالج اضغط 'الغاء',\n"
 "للخروج فعلا اضغط 'خروج'."
 
-#: mdkonline:438
+#: mdkonline:464
 msgid "Really abort? - MandrakeOnline"
 msgstr "متأكد أنك تريد الإنهاء؟ - MandrakeOnline"
 
-#: mdkonline:508
+#: mdkonline:544
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:509
+#: mdkonline:545
 msgid "Welcome"
 msgstr "أهلا بكم"
 
-#: mdkonline:533
+#: mdkonline:569
 msgid "Close"
 msgstr "اغلاق"
 
-#: mdkonline:546
-msgid "Quitting Wizard\n"
-msgstr "جاري الخروج من المعالج\n"
+#~ msgid "Your personal informations are now stored at MdkOnline"
+#~ msgstr "معلوماتك الشخصية مخزنة الآن في MdkOnline"
