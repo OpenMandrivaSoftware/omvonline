@@ -23,7 +23,7 @@ BuildArchitectures: noarch
 
 %description
 The Mandrake Online tool is designed for registered users 
-who want to upload their configurattion (packages, hardware infos). 
+who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
 
