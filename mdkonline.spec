@@ -94,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Tue Jul 16 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-23mdk
+* Wed Jul 17 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-23mdk
 - delete redondant 'ftp://' when choosing ftp mirrors
 
 * Tue Jul  9 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-22mdk
