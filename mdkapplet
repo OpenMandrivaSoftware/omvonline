@@ -216,7 +216,7 @@ sub silentCheck {
 		       }
 		       !$comp and okState();
 		   },
-		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') }
+		   96 => sub { logIt(N("Unknown state")) ; go2State('okay') },
 		   97 => sub { logIt(N("Online services disabled. Contact MandrakeOnline site\n")) ; go2State('disabled'); },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical'); },
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical'); }
@@ -330,7 +330,8 @@ sub checkUpdates {
 	logIt(N("Checking config file: Not present\n"));
 	go2State('noconfig')
     } else {
-	go2State('busy');
+	gtkflush();
+	go2State('busy'); gtkflush();
 	silentCheck();
     }
     setLabel($update_label, $isAvailable ? N("Available") : N("Not Available"));
