@@ -81,7 +81,10 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  my $c2h = splitContents($contents);
 			  printf("\nCONTENTS = $contents \n torf = %s\n OLDKEY = %s = %s \n NEWKEY = %s \n FTP = %s", $c2h->{torf}, $c2h->{OLDKEY}, $o{CURRENTKEY}, $c2h->{NEWKEY}, $c2h->{FTP} );
 			  if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { updateConf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
-			  if ($c2h->{FTP}) { addMedia($c2h->{FTP}) }
+			  if ($c2h->{FTP}) { 
+			      # for debugging purpose
+			      $c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
+			      addMedia($c2h->{FTP}) }
 			  $scheduled = join(',',@{$c2h->{sched}});
 			  $noscheduled = join(',',@{$c2h->{nosched}});
 			  if ($opt eq '--applet') {
@@ -245,7 +248,7 @@ sub updateConf {
 sub addMedia {
     my $mirror = shift;
     my $r = getRelease();
-    my $fullpath2mir = "ftp://" . "$mirror". "/$r" . "/RPMS" . "/" ;
+    my $fullpath2mir = "$mirror". "/$r" . "/RPMS" . "/" ;
     eval {
 	system "/usr/sbin/urpmi.removemedia", "mdkupdate";
 	system "/usr/sbin/urpmi.addmedia", "--update", "mdkupdate", $fullpath2mir, "with ../base/hdlist.cz";
