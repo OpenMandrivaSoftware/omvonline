@@ -240,7 +240,11 @@ sub silentCheck {
     logIt(N("Connecting to") . " $link ...\n");
     gtkflush(); go2State('busy'); gtkflush();
     my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
-    $response->is_success or go2State('disconnected'), return;
+    if ($response->is_error) { 
+	my $status_err = $response->status_line;
+	go2State('critical'); 
+	logIt("Unable to contact Mandrakeonline server: $status_err") and return; 
+    }
     $ct = $response->content;
     if ($debug) {
 	print "\nCONTENTS = $ct\n" if $debug;
