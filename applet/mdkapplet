@@ -1,0 +1,192 @@
+#!/usr/bin/perl
+################################################################################
+# MandrakeOnline                                                               # 
+#                                                                              #
+# Copyright (C) 2003-2004 MandrakeSoft                                         #
+#                                                                              #
+# Daouda Lo <daouda@mandrakesoft.com>                                          #
+#                                                                              #
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
+
+use strict;
+use lib qw(/usr/lib/libDrakX);
+use common;
+
+use Gtk2::TrayIcon;
+
+eval { require ugtk2; ugtk2->import(qw(:all)); require Gtk2::Pango; };
+if ($@) {
+    print "This program cannot be run in console mode.\n";
+    c::_exit(0);  #- skip ugtk2::END
+}
+my ($eventbox, $img);
+add_icon_path("/usr/share/mdkonline/pixmaps/");
+my $menu;
+my $nowindow = 1;
+my %state = (
+	     okay => {
+		      colour => [ 'green' ],
+		      changes => [ 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
+		     },
+	     critical => {
+			  colour => [ 'yellow' ],
+			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+			  menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
+			 },
+	     busy => {
+		      colour => [ 'yellow' ], 
+		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
+		      menu => [ ],
+		     },
+	     error => {
+		       colour => [ 'red' ],
+		       changes => [ 'okay' ],
+		       menu => [ 'update', 'check' ],
+		      },
+	     noconfig => {
+			  colour => [ 'yellow' ],
+			  changes => [ 'okay' ],
+			  menu => [ 'update', 'weblink', 'register' ],
+			 },
+	     disconnected => {
+			      colour => [ 'yellow' ],
+			      changes => [ 'okay', 'busy', 'critical', 'error' ],
+			      menu => [ 'confNetwork' ],
+			     } 
+	    );
+my %actions = (
+	       'update' => { name => N("Launch Mandrake Update"), launch => sub { launchUpdate() } },
+	       'configureApplet' => { name => N("Configuration"), launch => sub { configure() } },
+	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
+	       'weblink' => { name => N("Online WebSite"), launch => sub { getsite() } },
+	       'confNetwork' => { name => N("Configure Network"), sub { configNetwork() } },
+	       'register' => { name => N("Register Now!"), sub { register() } }
+	      );
+
+gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"), 
+       gtkpack_( Gtk2::VBox->new(0, 3), 
+		 0, gtkadd($eventbox = Gtk2::EventBox->new, 
+			   gtkpack($img = Gtk2::Image->new)
+			  )
+	       )
+      );
+
+print "Setting applet-critical ...\n";
+$menu = setImage('yellow');
+$eventbox->signal_connect(button_press_event => sub {
+			      $_[1]->button == 1 and showMainWindow(); #just for testing
+			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
+			  });
+
+$icon->show_all;
+Gtk2->main;
+
+ugtk2::exit(0);
+
+sub showMainWindow() {
+    my $w = Gtk2::Window->new('toplevel');
+    $w->set_title(N("Mandrake Updates Applet"));
+    $w->signal_connect(delete_event => sub { $w->destroy });
+    $w->set_position('center');
+    my ($choice, $isAvailable, $isNetwork, $time);
+    $time = `date`; chomp($time); 
+    my $autocheck;
+    gtkadd($w,
+           gtkpack__(Gtk2::VBox->new(0,5),
+		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
+			    gtkpack_(Gtk2::VBox->new(0, 3),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Check Updates")), clicked => sub { checkUpdates() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Start MandrakeUpdate")), clicked => sub { mdkUpdate() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { launchMdkOnline() }),
+				     1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { displayLogs() }),
+				    )
+			   ),
+		     gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
+			    gtkpack_(Gtk2::VBox->new(0, 3),
+				     0, gtkpack_(Gtk2::HBox->new(0, 3),
+						 0, Gtk2::Label->new(N("Network Connection: ")),
+						 0, Gtk2::Label->new($isNetwork ? N("Up") : N("Down"))
+						),
+				     0, gtkpack_(Gtk2::HBox->new(0, 3),
+						 0, Gtk2::Label->new(N("New Updates: ")),
+						 0, Gtk2::Label->new($isAvailable ? N("Available") : N("Not Available"))
+						),
+				     0, gtkpack_(Gtk2::HBox->new(0, 3),
+						 0, Gtk2::Label->new(N("Last check: ")),
+						 0, Gtk2::Label->new($time)
+						),
+				    )
+			   ),
+		     gtkpack(Gtk2::HSeparator->new),
+                     gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
+						   $w->destroy;
+					       })
+			    )
+		    ));
+    $w->show_all
+}
+sub displayLogs() {
+    
+}
+sub confNetwork {
+    system("/usr/sbin/net_monitor" . "&")
+}
+sub launchUpdate {
+    system("/usr/sbin/MandrakeUpdate" . "&");
+}
+sub CheckUpdates {
+    
+}
+sub register {
+    system("/usr/sbin/mdkonline" . "&")
+}
+sub getsite {
+    my $b = browser();
+    system("$b " . "https://www.mandrakeonline.com" . "&")
+}
+sub browser {
+    require any;
+    my $wm = any::running_window_manager();
+    member ($wm, 'kwin', 'gnome-seession') or $wm = 'other';
+    my %Br = (
+	      'kwin' => 'konqueror',
+	      'gnome-session' => 'mozilla',
+	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(mozilla konqueror galeon)
+	     );
+    $Br{$wm}
+}
+sub setImage {
+    my $file = shift;
+    my $applet = 'applet' . '-' . $file;
+    my $arr = $state{$file}{menu};
+    my $tmp = gtkcreate_pixbuf($applet);
+    $img->set_from_pixbuf($tmp);
+    my $menu = Gtk2::Menu->new;
+    foreach (@$arr) { 
+	my $l = $actions{$_}{name};
+	print "***** $_ = $l ****\n";
+	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
+    }
+    $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About.."))), activate => sub { about() }));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { Gtk2->main_quit }));
+    $menu
+}
+sub about {
+    create_dialog(N("About Online Applet"), 
+#-PO Do not alter the <span ..> and </span> tags
+		  "\t" . N("<span foreground=\"#21449C\"><u><b>Mandrake Update Notification Applet</b></u></span>\n\n<u>Version</u>: %s \n\n<u>Team</u>: Mandrake Online Team &lt;mot\@mandrakeonline.net&gt;\n\n<span foreground=\"#006666\"><i>This Software is under GPL</i></span>", ' 10.0 ') , { use_markup => 1 });
+}
