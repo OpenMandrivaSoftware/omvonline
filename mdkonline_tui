@@ -58,7 +58,7 @@ sub read_conf() {
     my %t = getVarsFromSh($wideconf);
     my $host = chomp_(`hostname`);
     $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
-    $login = $t{LOGIN}; $boxname = $t{MACHINE}
+    $login = defined $nlogin ? $nlogin : $t{LOGIN}; $boxname = $t{MACHINE}
 }
 sub check_login {
     my ($log, $pass, $box) = @_;
@@ -78,7 +78,7 @@ sub send_conf {
     mdkonline::report_config("$confdir/$log.$pp.$box.online.log");
     my $tag = { submit => "upload_wizard", wizard => ["$confdir/$log.$pp.$box.online.log.bz2.uue"] };
     undef $w;
-    my $ww = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
+    my $ww = $in->wait_message(N("Please wait"), N("Sending configuration..."));
     ($sendconfres, $key) = mdkonline::send_config($uplink, $tag);
     mdkonline::hw_upload($login, $pass, $boxname);
     undef $ww;
@@ -148,7 +148,7 @@ $wiz = {
 				    ]
 				},
 				post => sub {
-				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : $nlogin eq '' ? N("Please provide a login") : mdkonline::check_valid_email($email) ?  N("Not a valid mail address!\n") : create_new_account($nlogin, $npassword, $email);
+				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : $nlogin eq '' ? N("Please provide a login") : mdkonline::check_valid_email($email) == 0 ?  N("Not a valid mail address!\n") : create_new_account($nlogin, $npassword, $email);
 				    "createaccount"
 				}
 			       },
