@@ -37,6 +37,8 @@ use MIME::Base64 qw(encode_base64);
 use Sys::Hostname;
 use my_gtk qw(:helpers :wrappers :ask);
 
+$::isStandalone = 1;
+
 my $in = 'interactive'->vnew('su', 'default');
 
 #-------------------------------------------------------------
