@@ -289,19 +289,6 @@ sub rpmvercmp {
         return 0;
     }
 }
-sub isNewVersion {   
-    my ($f, $d) = @_;
-    if (($f =~ /^[0-9\.]+$/) && ($d =~ /^[0-9\.]+$/)) {
-        while (1) {
-            my ($f_d, $f_l) = $f =~ /^\.?([^\.]+)(.*)$/ or return $f gt $d;
-            my ($d_d, $d_l) = $d =~ /^\.?([^\.]+)(.*)$/ or return $f gt $d;
-            return 1 if ($f_d > $d_d);
-            return 0 if ($f_d < $d_d);
-            ($f, $d) = ($f_l, $d_l);
-        }   
-    }   
-    return $f gt $d;
-}
 sub cronUpdate {
     my ($to) = shift;
     $timeout = Glib::Timeout->add(60*60*1000, sub {
