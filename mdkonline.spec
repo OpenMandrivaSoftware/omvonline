@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Thu Sep 12 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-5mdk
-- Use cvs spec file (for Pablo)
+- Use cvs spec file to update package (for Pablo and co)
 
 * Thu Sep 12 2002 Daouda LO <daouda@mandrakesoft.com> 0.16-4mdk
 - mdkupdate perl-Locale-gettext move.
