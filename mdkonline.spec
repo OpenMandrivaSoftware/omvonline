@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT install 
 
 #symbolic link to drakonline
-ln -sf %_sbindir/drakonline %buildroot/%_sbindir/mdkonline
+ln -sf %_sbindir/mdkonline %buildroot/%_sbindir/drakonline
 
 #install lang
 %{find_lang} %{name}
