@@ -157,8 +157,10 @@ sub on_next_clicked {
     # change "Next" to "Finish" in the last page
     if ($page == $nb_pages - 1) {
 	$hbox->remove($Button_Prev);
+	$hbox->remove($Step_Label);
 	$hbox->remove($Button_Next);
 	$hbox->pack_end($Button_End, 0, 1, 0);
+	$hbox->pack_end($Step_Label, 0, 1, 0);
 	$hbox->pack_end($Button_Prev, 0, 1, 0);
     }
 
@@ -242,7 +244,7 @@ sub test_passwd () {
 	
 # NEW METHOD (http)
 	# first, MD5ify the password
-	$passwd = md5 ($passwd); # or md5_hex () or md5_base64 ()
+	$passwd = md5_hex ($passwd); # or md5 () or md5_base64 ()
 	
 	my $ua = LWP::UserAgent->new;
 	$ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
@@ -280,17 +282,17 @@ sub send_config {
 #    print STDERR "Sending config\n";
     my $result = -1;
 
-    `/usr/sbin/drakbug_report > /root/$login-drakbug_report.log`;
-    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login-drakbug_report.log`;
+    `/usr/sbin/drakbug_report > /root/$login.$passwd.online.log`;
+    `/usr/bin/bzip2 \\\-9 \\\-f /root/$login.$passwd.online.log`;
 
     # Turn the binary file into a uuencoded ascii file
-    open (FILE, " /root/$login-drakbug_report.log.bz2") or die "$!";
+    open (FILE, " /root/$login.$passwd.online.log.bz2") or die "$!";
     my ($chunk, $buffer);
     while (read(FILE, $chunk, 60*57)) {
 	$buffer .= $chunk;
     }
     close (FILE);
-    open (FILEOUT, "> /root/$login-drakbug_report.log.bz2.uue") or die "$!";
+    open (FILEOUT, "> /root/$login.$passwd.online.log.bz2.uue") or die "$!";
 	print FILEOUT encode_base64($buffer);
     close (FILEOUT);
 
@@ -311,7 +313,7 @@ sub send_config {
     my $response = $ua->request(POST 'http://dev-online/upload/test-up-wizard.php',
 				Content_Type => 'form-data',
 				Content => [submit => "test_upload",
-					    wizard => ["/root/$login-drakbug_report.log.bz2.uue"]
+					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
 					    ]);
 
     # Check the outcome of the response
