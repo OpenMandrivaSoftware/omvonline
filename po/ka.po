@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2004-09-28 14:29+0200\n"
-"PO-Revision-Date: 2004-09-26 15:24+0400\n"
+"PO-Revision-Date: 2004-09-28 23:43+0400\n"
 "Last-Translator: Aiet Kolkhi <aiet@qartuli.net>\n"
 "Language-Team: Georgian <aiet@qartuli.com>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,8 @@ msgstr "თქვენი სისტემა განახლებულ�
 
 #: ../mdkapplet:67
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrakeonline.net"
-msgstr ""
-"პრობლემა სერვისების კონფიგურაციაში. გთხოვთ გადაამოწმოთ აღრიცხვის ფაილები "
-"(logs) დაგამოაგზავნოთ ფოსტა მისმართზე support@mandrakeonline.net"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrakeonline.net"
+msgstr "პრობლემა სერვისების კონფიგურაციაში. გთხოვთ გადაამოწმოთ აღრიცხვის ფაილები (logs) დაგამოაგზავნოთ ფოსტა მისმართზე support@mandrakeonline.net"
 
 #: ../mdkapplet:73
 #, c-format
@@ -40,8 +36,7 @@ msgstr "თქვენი სისტემა განახლებას 
 #: ../mdkapplet:85
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"სერვისი არ არის კონფიგურირებული. დააწკაპუნეთ „სერვისების კონფიგურირება“-ზე"
+msgstr "სერვისი არ არის კონფიგურირებული. დააწკაპუნეთ „სერვისების კონფიგურირება“-ზე"
 
 #: ../mdkapplet:91
 #, c-format
@@ -56,11 +51,10 @@ msgstr "სერვისი არ არის აქტივირებუ
 #: ../mdkapplet:103
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"ამ გამოშვების (Release) მხარდაჭერა არ გამაჩნია (ან მოძველებულია, ან "
-"development release არის)"
+msgstr "ამ გამოშვების (Release) მხარდაჭერა არ გამაჩნია (ან მოძველებულია, ან development release არის)"
 
-#: ../mdkapplet:108 ../mdkapplet:157
+#: ../mdkapplet:108
+#: ../mdkapplet:157
 #, c-format
 msgid "Install updates"
 msgstr "განახლებების ინსტალირება"
@@ -120,7 +114,9 @@ msgstr "აჩვენე აღრიცხვები"
 msgid "Status"
 msgstr "სტატუსი"
 
-#: ../mdkapplet:167 ../mdkapplet:356
+#: ../mdkapplet:167
+#: ../mdkapplet:422
+#: ../mdkapplet:356
 #, c-format
 msgid "Close"
 msgstr "დახურვა"
@@ -163,9 +159,7 @@ msgstr "ვიძახებ mdkupdate --applet-ს\n"
 #: ../mdkapplet:216
 #, c-format
 msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
-msgstr ""
-"როგორ ჩანს Mandrakeonline ხელმეორედ იქნა ინსტალირებული. ხელახლა ვიძახებ "
-"აპლეტს..."
+msgstr "როგორ ჩანს Mandrakeonline ხელმეორედ იქნა ინსტალირებული. ხელახლა ვიძახებ აპლეტს..."
 
 #: ../mdkapplet:224
 #, c-format
@@ -200,8 +194,7 @@ msgstr "უცნობი მდგომარეობა"
 #: ../mdkapplet:256
 #, c-format
 msgid "Online services disabled. Contact Mandrakeonline site\n"
-msgstr ""
-"ონლაინ მომსახურებები შეწყვეტილია. მიაკითხეთ Mandrakeonline-ის ვებგვერდს\n"
+msgstr "ონლაინ მომსახურებები შეწყვეტილია. მიაკითხეთ Mandrakeonline-ის ვებგვერდს\n"
 
 #: ../mdkapplet:257
 #, c-format
@@ -215,12 +208,8 @@ msgstr "არასწორი მოქმედება, ჰოსტი �
 
 #: ../mdkapplet:259
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"თქვენი ქსელის პარამეტრებში რაღაც გაუგებრობაა (გადაამოწმეთ route, firewall ან "
-"proxy პარამეტრები)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
+msgstr "თქვენი ქსელის პარამეტრებში რაღაც გაუგებრობაა (გადაამოწმეთ route, firewall ან proxy პარამეტრები)\n"
 
 #: ../mdkapplet:263
 #, c-format
@@ -287,7 +276,9 @@ msgstr "წინა"
 msgid "Welcome to Mandrakeonline"
 msgstr "კეთილი იყოს თქვენი ფეხი Mandrakeonline-ზე."
 
-#: ../mdkonline:105 ../mdkonline_tui:97
+#: ../mdkonline:105
+#: ../mdkonline_tui:93
+#: ../mdkonline_tui:97
 #, c-format
 msgid ""
 "This assistant will help you to upload your configuration\n"
@@ -295,12 +286,12 @@ msgid ""
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
 "ეს ასისტენტი დაგეხმარებათ თქვენი კონფიგურაციის განახლებაში\n"
-"(პაკეტები, აპარატურის კონფიგურაცია) ცენტრალურ მონაცემთა ბაზაში, იმისთვის, "
-"რომ\n"
-"თქვენ ავტომატურად შეიტყოთ უსაფრთხობასთან დაკავშირებულ და მნიშვნელოვან "
-"გაუმჯობესებებზე.\n"
+"(პაკეტები, აპარატურის კონფიგურაცია) ცენტრალურ მონაცემთა ბაზაში, იმისთვის, რომ\n"
+"თქვენ ავტომატურად შეიტყოთ უსაფრთხობასთან დაკავშირებულ და მნიშვნელოვან გაუმჯობესებებზე.\n"
 
-#: ../mdkonline:106 ../mdkonline_tui:141
+#: ../mdkonline:106
+#: ../mdkonline_tui:133
+#: ../mdkonline_tui:141
 #, c-format
 msgid "Create a Mandrakeonline Account"
 msgstr "Mandrakeonline-ზე ანგარიშის გახსნა"
@@ -315,22 +306,36 @@ msgstr "მე არ მაქვს Mandrakeonline ანგარიში, �
 msgid "Subscribe"
 msgstr "გაწევრიანება"
 
-#: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:113 ../mdkonline_tui:144
+#: ../mdkonline:112
+#: ../mdkonline:132
+#: ../mdkonline_tui:109
+#: ../mdkonline_tui:136
+#: ../mdkonline_tui:113
+#: ../mdkonline_tui:144
 #, c-format
 msgid "Login:"
 msgstr "მომხმარებელი:"
 
-#: ../mdkonline:113 ../mdkonline:133 ../mdkonline_tui:114 ../mdkonline_tui:145
+#: ../mdkonline:113
+#: ../mdkonline:133
+#: ../mdkonline_tui:110
+#: ../mdkonline_tui:137
+#: ../mdkonline_tui:114
+#: ../mdkonline_tui:145
 #, c-format
 msgid "Password:"
 msgstr "პაროლი:"
 
-#: ../mdkonline:114 ../mdkonline_tui:146
+#: ../mdkonline:114
+#: ../mdkonline_tui:138
+#: ../mdkonline_tui:146
 #, c-format
 msgid "Confirm Password:"
 msgstr "გაიმეორეთ პაროლი:"
 
-#: ../mdkonline:115 ../mdkonline_tui:147
+#: ../mdkonline:115
+#: ../mdkonline_tui:139
+#: ../mdkonline_tui:147
 #, c-format
 msgid "Mail contact:"
 msgstr "ელფოსტით კავშირი:"
@@ -345,14 +350,16 @@ msgstr "Mandrakelinux-ის პირადი უფლებების პ�
 msgid "Authentification"
 msgstr "რეგისტრაცია"
 
-#: ../mdkonline:129 ../mdkonline_tui:107
+#: ../mdkonline:129
+#: ../mdkonline_tui:103
+#: ../mdkonline_tui:107
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr ""
-"შეიყვანეთ თქვენი Mandrakeonline-ის მომხმარებლის სახელი, პაროლი და სისტემის "
-"სახელი:"
+msgstr "შეიყვანეთ თქვენი Mandrakeonline-ის მომხმარებლის სახელი, პაროლი და სისტემის სახელი:"
 
-#: ../mdkonline:134 ../mdkonline_tui:115
+#: ../mdkonline:134
+#: ../mdkonline_tui:111
+#: ../mdkonline_tui:115
 #, c-format
 msgid "Machine name:"
 msgstr "სისტემის სახელი (Machine name):"
@@ -362,7 +369,9 @@ msgstr "სისტემის სახელი (Machine name):"
 msgid "Send Configuration"
 msgstr "კონფიგურაცის გადაგზავნა"
 
-#: ../mdkonline:140 ../mdkonline_tui:127
+#: ../mdkonline:140
+#: ../mdkonline_tui:124
+#: ../mdkonline_tui:127
 #, c-format
 msgid ""
 "In order to benefit from Mandrakeonline services,\n"
@@ -372,13 +381,10 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrakeexpert.com."
 msgstr ""
 "იმისათვის, რომ გამოიყენოთ Mandrakeonline-ის სერვისი, ჩვენ ვაპირებთ\n"
 "თქვენი კონფიგურაციის განახლებას.\n"
@@ -390,39 +396,42 @@ msgstr ""
 "თუ თქვენ ეს არ გსურთ, ან არ გინდათ სერვისის გამოყენება, გთხოვთ\n"
 "დააჭიროთ 'სტოპ!'-ს. თუ 'შემდეგი'-ს დააჭერთ, მაშინ უფლებას გვეძლევა\n"
 "შეგატყობინოთ უსაფრთხოებასთან დაკავშირებული და მნიშვნელოვანი\n"
-"გაუმჯობესებების შესახებ. ასევე ისარგებლებთ ფასდაკლებული ფასიანი "
-"მომსახურებით\n"
-"www.mandrakeexpert.com.-ზე"
 
-#: ../mdkonline:145 ../mdkonline:212 ../mdkonline:235
+#: ../mdkonline:145
+#: ../mdkonline:212
+#: ../mdkonline:235
 #, c-format
 msgid "Finish"
 msgstr "დამთავრება"
 
-#: ../mdkonline:146 ../mdkonline_tui:171
+#: ../mdkonline:146
+#: ../mdkonline_tui:152
+#: ../mdkonline_tui:171
 #, c-format
 msgid "Your upload was successful!"
 msgstr "განახლება წარმატებით დაგვირგვინდა!"
 
-#: ../mdkonline:146 ../mdkonline_tui:171
+#: ../mdkonline:146
+#: ../mdkonline_tui:152
+#: ../mdkonline_tui:171
 #, c-format
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
 msgstr ""
-"Mandrakeonline-ის მეშვეობით დღეიდან თქვენ მიიღებთ უსაფრთხოებასთან "
-"დაკავშირებულ\n"
+"Mandrakeonline-ის მეშვეობით დღეიდან თქვენ მიიღებთ უსაფრთხოებასთან დაკავშირებულ\n"
 "და მნიშვნელოვან გაუმჯობესებების განცხადებებს."
 
-#: ../mdkonline:146 ../mdkonline_tui:171
+#: ../mdkonline:146
+#: ../mdkonline_tui:152
+#: ../mdkonline_tui:171
 #, c-format
 msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Mandrakeonline გაძლევთ საშუალებას ავტომატურად განაახლოთ სისტემა.\n"
-"თქვენს სისტემაზე რეგულარურად გაიშვება პროგრამა, რომელიც განახლებებს "
-"დაელოდება\n"
+"თქვენს სისტემაზე რეგულარურად გაიშვება პროგრამა, რომელიც განახლებებს დაელოდება\n"
 
 #: ../mdkonline:147
 #, c-format
@@ -434,17 +443,22 @@ msgstr "ავტომატიზირებული განახლე�
 msgid "Country:"
 msgstr "ქვეყანა:"
 
-#: ../mdkonline:179 ../mdkonline:184 ../mdkonline:186 ../mdkonline:188
+#: ../mdkonline:179
+#: ../mdkonline:184
+#: ../mdkonline:186
+#: ../mdkonline:188
 #, c-format
 msgid "Error"
 msgstr "შეცდომა"
 
-#: ../mdkonline:184 ../mdkonline_tui:152
+#: ../mdkonline:184
+#: ../mdkonline_tui:152
 #, c-format
 msgid "Please provide a login"
 msgstr "გთხოვთ მიუთითოთ შესასვლელი სახელი"
 
-#: ../mdkonline:186 ../mdkonline_tui:151
+#: ../mdkonline:186
+#: ../mdkonline_tui:151
 #, c-format
 msgid ""
 "The passwords do not match\n"
@@ -453,12 +467,17 @@ msgstr ""
 "პროლები არ ემთხვევა\n"
 " გთხოვთ ცადოთ ისევ\n"
 
-#: ../mdkonline:188 ../mdkonline_tui:153
+#: ../mdkonline:188
+#: ../mdkonline_tui:153
 #, c-format
 msgid "Not a valid mail address!\n"
 msgstr "გთხოვთ სწორი მისამართი შეიყვანოთ!\n"
 
-#: ../mdkonline:200 ../mdkonline_tui:77 ../mdkonline_tui:81
+#: ../mdkonline:200
+#: ../mdkonline_tui:78
+#: ../mdkonline_tui:82
+#: ../mdkonline_tui:77
+#: ../mdkonline_tui:81
 #, c-format
 msgid "Reading configuration\n"
 msgstr "ვკითხულობ კონფიგურაცას\n"
@@ -468,13 +487,21 @@ msgstr "ვკითხულობ კონფიგურაცას\n"
 msgid "Sending configuration..."
 msgstr "ვაგზავნი კონფიგურაციას..."
 
-#: ../mdkonline:214 ../mdkonline:274 ../mdkonline_tui:129 ../mdkonline_tui:173
-#: ../mdkupdate:124 ../mdkupdate:195
+#: ../mdkonline:214
+#: ../mdkonline:274
+#: ../mdkonline_tui:126
+#: ../mdkonline_tui:154
+#: ../mdkupdate:124
+#: ../mdkupdate:195
+#: ../mdkonline_tui:129
+#: ../mdkonline_tui:173
 #, c-format
 msgid "Connection problem"
 msgstr "კავშირის პრობლემა"
 
-#: ../mdkonline:214 ../mdkonline_tui:173
+#: ../mdkonline:214
+#: ../mdkonline_tui:154
+#: ../mdkonline_tui:173
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
 msgstr "ფაილების ატვირთვისას პრობლემებია. გთხოვთ კვლავ ცადოთ"
@@ -494,22 +521,20 @@ msgstr "Mandrakeonline-ს ვერ ვუკავშირდები. გ�
 msgid "Wrong password"
 msgstr "არასწორი პაროლი"
 
-#: ../mdkonline:286 ../mdkonline_tui:129
+#: ../mdkonline:286
+#: ../mdkonline_tui:126
+#: ../mdkonline_tui:129
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"Mandrakeonline.\n"
-" In the latter case, go back to the first step to connect to "
-"Mandrakeonline.\n"
+" Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n"
+" In the latter case, go back to the first step to connect to Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "თქვენი მომხმარებლის სახელი ან პაროლი არასწორია.\n"
 " ან ხელახლა უნდა ჩაწეროთ, ან ახალი ანგარიში შექმნათ Mandrakeonline-ზე.\n"
-" ამ უკანასკნელის გასაკეთებლად მიუბრუნდით პირველ მოქმედებას Mandrakeonline-ზე "
-"დასაკავშირებლად. გაითვალისწინეთ, რომ თქვენ ასევე უნდა მიუთითოთ სისტემის "
-"სახელი(Machine name) \n"
+" ამ უკანასკნელის გასაკეთებლად მიუბრუნდით პირველ მოქმედებას Mandrakeonline-ზე დასაკავშირებლად. გაითვალისწინეთ, რომ თქვენ ასევე უნდა მიუთითოთ სისტემის სახელი(Machine name) \n"
 " (ნებადართულია მხოლოდ ანბანის ასოები)"
 
 #: ../mdkonline.pm:55
@@ -542,7 +567,9 @@ msgstr "ანგარიში უკვე არსებობს\n"
 msgid "Problem connecting to server \n"
 msgstr "სერვერს ვერ ვუკავშირდები \n"
 
-#: ../mdkonline_tui:45 ../mdkonline_tui:94
+#: ../mdkonline_tui:45
+#: ../mdkonline_tui:90
+#: ../mdkonline_tui:94
 #, c-format
 msgid "Mandrakeonline"
 msgstr "Mandrakeonline"
@@ -557,7 +584,11 @@ msgstr "მე უკვე გამაჩნია ანგარიში"
 msgid "I want to subscribe"
 msgstr "მინდა გავწევრიანდე"
 
-#: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
+#: ../mdkonline_tui:78
+#: ../mdkonline_tui:82
+#: ../mdkonline_tui:119
+#: ../mdkonline_tui:77
+#: ../mdkonline_tui:81
 #, c-format
 msgid "Please wait"
 msgstr "გთხოვთ იქონიოთ მოთმინება"
@@ -588,6 +619,8 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline-ზე წარმატებით განხორციელდა თქვენი ანგარიშის რეგისტრაცია.\n"
+"გთხოვთ დააჭიროთ \"შემდეგ\" ღილაკს რათა გაიაროთ ვტორიზაცია და ატვირთოთ თვენი კონფიგურაცია\n"
 
 #: ../mdkonline_tui:179
 #, c-format
@@ -599,15 +632,13 @@ msgstr "ქვეყანა"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate ვერსია %s\n"
 "საავტორო უფლებები (C) %s Mandrakesoft.\n"
-"პროგრამა უფასო გახლავთ და ნებადართულია მისი GNU GPL ლიცენზიის პირობების "
-"თანახმად გავრცელება.\n"
+"პროგრამა უფასო გახლავთ და ნებადართულია მისი GNU GPL ლიცენზიის პირობების თანახმად გავრცელება.\n"
 "\n"
 "გამოყენება:\n"
 
@@ -648,12 +679,6 @@ msgstr "mdkupdate-ის მედიუმიდან პაკეტები
 
 #: ../mdkupdate:195
 #, c-format
-msgid ""
-"Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
-"mandrakeonline [dot] net"
-msgstr ""
-"Mandrakeupdate–მა ვერ შეძლო diff ფაილების ატვირთვა. გააგზავნეთ ელფოსტა "
-"მისამართზე support [at] mandrakeonline [dot] net"
+msgid "Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"
+msgstr "Mandrakeupdate–მა ვერ შეძლო diff ფაილების ატვირთვა. გააგზავნეთ ელფოსტა მისამართზე support [at] mandrakeonline [dot] net"
 
-#~ msgid "No diff found"
-#~ msgstr "განსხვავება (diff) ვერ ვიპოვე"
