@@ -24,7 +24,7 @@ install: all
 	install -d $(RPM_BUILD_ROOT)/usr/{sbin/,bin,share/icons/{mini,large},share/nautilus/default-desktop}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/sbin/
 	install -s -m755 $(MDKUPDATE) $(RPM_BUILD_ROOT)/usr/bin/
-	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
+#	install -m644 *.desktop $(RPM_BUILD_ROOT)/usr/share/nautilus/default-desktop/
 	install -m644 pixmaps/$(NAME)16.png $(RPM_BUILD_ROOT)/usr/share/icons/mini/$(NAME).png
 	install -m644 pixmaps/$(NAME)32.png $(RPM_BUILD_ROOT)/usr/share/icons/$(NAME).png
 	install -m644 pixmaps/$(NAME)48.png $(RPM_BUILD_ROOT)/usr/share/icons/large/$(NAME).png	
