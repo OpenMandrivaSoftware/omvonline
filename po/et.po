@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-09-26 07:20+0200\n"
-"PO-Revision-Date: 2004-09-22 12:29+0200\n"
+"POT-Creation-Date: 2004-09-27 14:07+0200\n"
+"PO-Revision-Date: 2004-09-27 11:03+0200\n"
 "Last-Translator: Marek Laane <bald@online.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -268,7 +268,7 @@ msgstr "Välju"
 #: ../mdkonline:90
 #, c-format
 msgid "Next"
-msgstr "Järgm"
+msgstr "Järgmine"
 
 #: ../mdkonline:90
 #, c-format
@@ -380,7 +380,7 @@ msgstr ""
 "Et Te saaksite kasu Mandrakeonline'i teenustest,\n"
 "saadame praegu teele Teie konfiguratsiooni.\n"
 "\n"
-"Nõustaja saadab nüüd Mandrakesoft'ile järgmise info:\n"
+"Nõustaja saadab nüüd Mandrakesoftile järgmise info:\n"
 "1) Teie süsteemi paigaldatud pakettide nimekirja,\n"
 "2) Teie riistvara kirjelduse.\n"
 "\n"
@@ -540,49 +540,49 @@ msgid "Problem connecting to server \n"
 msgstr "Probleem serveriga ühendumisel \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:90
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Tere tulemast Mandrakeonline'i"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Mul on juba konto"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Tahan konto luua"
 
 #: ../mdkonline_tui:78 ../mdkonline_tui:82 ../mdkonline_tui:119
 #, c-format
 msgid "Please wait"
-msgstr ""
+msgstr "Palun oodake"
 
 #: ../mdkonline_tui:98
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Konto loomine või autentimine"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Tere tulemast Mandrakeonline'i"
+msgstr "Ühendumine Mandrakeonline'i saidiga..."
 
 #: ../mdkonline_tui:126
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "või"
 
 #: ../mdkonline_tui:126
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Vale parool"
+msgstr "vale parool:"
 
 #: ../mdkonline_tui:160
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Riik:"
+msgstr "Riik"
 
 #: ../mdkupdate:50
 #, c-format
@@ -624,22 +624,17 @@ msgstr "  --update       - uuendatakse võtmeid\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "%s faili ei leitud. Käivitage palun mdkonline'i nõustaja"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Mandrakeonline'iga ei saadud ühendust, palun proovige hiljem uuesti"
+msgstr "Mandrakeupdate ei suutnud ühendust luua, palun proovige hiljem uuesti."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
 msgstr "Pakettide värskendamine mdkupdate andmekandjalt ebaõnnestus.\n"
-
-#: ../mdkupdate:187
-#, c-format
-msgid "No diff found"
-msgstr ""
 
 #: ../mdkupdate:195
 #, c-format
@@ -647,177 +642,8 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate ei suutnud võrdlusfaile laadida. Saatke palun e-kiri "
+"aadressile support@mandrakeonline.net"
 
-#~ msgid "No updates available for your system"
-#~ msgstr "Teie süsteemile uuendusi ei ole"
-
-#~ msgid "Config problems. Launch \"configure\" again"
-#~ msgstr "Probleemid seadistusega. Proovige uuesti seadistada"
-
-#~ msgid "%s packages available for update"
-#~ msgstr "Uuendusi on %s paketile"
-
-#~ msgid "Service not available. Please click on \"configuration\""
-#~ msgstr "Teenus ei ole saadaval. Palun seadistage see"
-
-#~ msgid "Network is down. Please click on \"configure Network\""
-#~ msgstr "Võrk on maas. Palun seadistage võrk"
-
-#~ msgid "Service deactivated. Waiting for payment..."
-#~ msgstr "Teenus on välja lülitatud: oodatakse tasumist..."
-
-#~ msgid "Launch Mandrakelinux Update"
-#~ msgstr "Mandrakelinux uuenduste käivitamine"
-
-#~ msgid "Configuration"
-#~ msgstr "Seadistused"
-
-#~ msgid "Available"
-#~ msgstr "Saadaval"
-
-#~ msgid "Checking ..."
-#~ msgstr "Kontroll..."
-
-#~ msgid "Not Available"
-#~ msgstr "Pole saadaval"
-
-#~ msgid "New Updates: "
-#~ msgstr "Uuendused: "
-
-#~ msgid "Attempting to connect to mandrakeonline.net\n"
-#~ msgstr "Püütakse ühenduda saidiga mandrakeonline.net\n"
-
-#~ msgid "Creation"
-#~ msgstr "Loomine"
-
-#~ msgid "Special characters"
-#~ msgstr "Erisümbolid"
-
-#~ msgid "Empty fields"
-#~ msgstr "Tühjad väljad"
-
-#~ msgid "Email"
-#~ msgstr "E-posti aadress"
-
-#~ msgid "Change account"
-#~ msgstr "Muuda kontot"
-
-#~ msgid "Server Problem"
-#~ msgstr "Probleem serveriga"
-
-#~ msgid ""
-#~ " You are just starting our Free Mandrakelinux Download Edition for the "
-#~ "first time. \n"
-#~ "\n"
-#~ "There are now over three million Mandrakelinux users all over the world!\n"
-#~ "\n"
-#~ "Please take a few seconds to fill a short questionnaire. The data from "
-#~ "this \n"
-#~ "questionnaire will be used only for aggregate market studies.\n"
-#~ "The text below is the privacy policy of Mandrakesoft about your personal "
-#~ "data."
-#~ msgstr ""
-#~ "Te olete esimest korda käivitamas Mandrakelinuxi vaba allalaaditavat "
-#~ "versiooni. \n"
-#~ "\n"
-#~ "Te olete üks kolmest miljonist inimesest maailmas, kes kasutab "
-#~ "Mandrakelinux Linuxit!\n"
-#~ "\n"
-#~ "Palun hoidke end veel mõni hetk tagasi ja täitke järgnev küsimustik. "
-#~ "Selle \n"
-#~ "andmeid kasutatakse turuandmete üldistamiseks.\n"
-#~ "Allolev tekst tutvustab Mandrakesofti poliitikat Teie andmete turvalisuse "
-#~ "kaitsmisel."
-
-#~ msgid ""
-#~ "What personal data do we collect ?         \n"
-#~ "                               \n"
-#~ "Various information is collected in different areas of the website;\n"
-#~ "what follows is an overview of the data we keep:\n"
-#~ "\n"
-#~ "Firstly, we record your email address, name and postal address.\n"
-#~ "Secondly we give you a unique customer ID. This ID will be used to \n"
-#~ "add additional information related to your Mandrakelinux account such "
-#~ "as:\n"
-#~ "    - Your subscription to mailling lists.\n"
-#~ "    - When registering a purchased product, we ask for personal\n"
-#~ "information as well as system/hardware details so that we may deliver\n"
-#~ "the best support services customized to your needs.\n"
-#~ "    - On our donation page and on our online store (MandrakeStore), we\n"
-#~ "record data for billing purpose (we do not store any credit card data).\n"
-#~ "    \n"
-#~ "What do we do with this information?\n"
-#~ "\n"
-#~ "We never share personal information with other persons or companies -\n"
-#~ "we use this data strictly for the following purposes:\n"
-#~ "    - If you have subscribed to a mailing list, we keep this email\n"
-#~ "address in our database to provide you with customized information\n"
-#~ "and/or to enable you to participate in discussions in various mailing\n"
-#~ "lists. If you send a message to such a list, other people will see\n"
-#~ "your email address but no external parties have access to our database\n"
-#~ "of subscribers. At any time you may unsubscribe to any list by using\n"
-#~ "the appropriate form.\n"
-#~ "    - If you provide information when registering a purchased product\n"
-#~ "to receive support, we keep this information private unless the\n"
-#~ "information is required by one of our partners to deliver the support\n"
-#~ "you require.\n"
-#~ "    - If you use MandrakeStore, we also use your Customer ID to track\n"
-#~ "your order and deliver your products.\n"
-#~ "    - If you provide us with marketing information, we keep it for \n"
-#~ "internal use only in order to improve our products so that they can \n"
-#~ "better fit your needs whether you have purchased a product or not.), How "
-#~ "to change / correct your personal data?\n"
-#~ "\n"
-#~ "French law gives individuals the right to access, correct, modify or \n"
-#~ "remove their own personal data that we have on record. We offer this \n"
-#~ "as a worldwide privilege. You may execute this right at any time by \n"
-#~ "logging to your account with your customer ID and editing your\n"
-#~ "personnal data. You can log on to this page: http://www.mandrakeonline.net"
-#~ msgstr ""
-#~ "Milliseid isiklikke andmeid me kogume?\n"
-#~ "\n"
-#~ "Veebilehekülje erinevates osades leidub erinevat infot; siinkohal anname\n"
-#~ "ülevaate andmetest, mida me seal säilitame:\n"
-#~ "\n"
-#~ "Kõigepealt salvestame Teie e-posti aadressi, nime ja postiaadressi.\n"
-#~ "Teiseks anname Teile unikaalse kasutaja-ID. Seda läheb tarvis Teie\n"
-#~ "Mandrakeonline'i kontoga seonduva uue info lisamiseks, milleks võib "
-#~ "olla:\n"
-#~ "    - Meililistide tellimise info.\n"
-#~ "    - Ostetud toote registreerimisel palume Teilt nii erainfot kui infot\n"
-#~ "süsteemi ja riistvara üksikasjade kohta, et võiksime pakkuda Teile just\n"
-#~ "Teie vajadustega sobivat ja parimat teenindust.\n"
-#~ "    - Meie annetusteleheküljel ja internetikaupluses (MandrakeStore)\n"
-#~ "salvestatakse andmed, mis hõlbustavad ostmist (krediitkaardi andmeid ei "
-#~ "salvestata).\n"
-#~ "\n"
-#~ "\n"
-#~ "Mida me selle infoga peale hakkame?\n"
-#~ "Me ei jaga kindlasti Teie erainfot teistele inimestele või firmadele - \n"
-#~ "kogutud andmeid kasutatakse väga piiratud eesmärgil:\n"
-#~ "    - Kui olete tellinud mõne meililisti, hoiame Teie e-posti aadressi\n"
-#~ "oma andmebaasis, et pakkuda just Teile sobivat infot ja/või võimalust\n"
-#~ "osaleda meililistide diskussioonides. Kui saadate listi kirja, näevad\n"
-#~ "Teie aadressi ka teised inimesed, kuid meie tellijate andmebaasile ei "
-#~ "ole\n"
-#~ "ligipääsu ühelgi kolmandal poolel. Vastavat vormi kasutades on Teil ka\n"
-#~ "iga hetk võimalik meililisti tellimisest loobuda.\n"
-#~ "    - Kui annate meile ostetud toote registreerimisel teenuste\n"
-#~ "osutamiseks vajaliku info, säilitame me selle teiste eest varjatuna,\n"
-#~ "vähemalt seni, kuni mõni meie partneritest ei soovi infot, mida läheb\n"
-#~ "vaja Teie soovitud teenuse osutamiseks.\n"
-#~ "    - Kui olete MandrakeStore kasutaja, tarvitame Teie kasutaja-ID-d\n"
-#~ "tellimuse sidumiseks Teie isikuga ning selle kättetoimetamiseks.\n"
-#~ "    - Kui jagate meiega turundusinfot, kasutame me seda ainult ise,\n"
-#~ "et muuta oma tooted paremaks ja sobivamaks Teie vajadustele sõltumata\n"
-#~ "sellest, kas Te olete neid ostnud või mitte.\n"
-#~ "\n"
-#~ "\n"
-#~ "Kuidas muuta/täpsustada oma eraandmeid?\n"
-#~ "\n"
-#~ "Vastavalt Prantsuse seadustele on eraisikul õigus pääseda ligi,\n"
-#~ "täpsustada, muuta või eemaldada andmeid, mida me oleme kogunud.\n"
-#~ "Meie pakume sellist võimalust kogu maailmale. Te võite seda õigust\n"
-#~ "kasutada iga hetk, logides end kasutaja-ID abil oma kontole\n"
-#~ "sisse ning muutes neid andmeid, mida vajalikuks peate. Sisse logida\n"
-#~ "saab leheküljel http://www.mandrakeonline.net"
+#~ msgid "No diff found"
+#~ msgstr "Võrdlusfaili ei leitud"
