@@ -1,24 +1,23 @@
+# Translation of cs.po to Czech
 # Translation of mdkonline-cs.po to Czech
 # Czech translation of Madrake Online.
 # Copyright (C) 2001 Mandrakesoft S.A.
 # Radek Vybíral <Radek.Vybiral@vsb.cz>, 2001.
-# Michal Bukovjan <bukm@centrum.cz>, 2002, 2003, 2004.
+# Michal Bukovjan <bukm@centrum.cz>, 2002, 2003, 2004, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-cs\n"
+"Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2004-10-02 10:06+0200\n"
+"PO-Revision-Date: 2005-02-06 11:35+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.9.1\n"
 "Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../mdkapplet:63
@@ -192,9 +191,9 @@ msgid "Connecting to"
 msgstr "Připojuji se k"
 
 #: ../mdkapplet:247
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Vítá vás Mandrakeonline"
+msgstr "Odpověď od serveru Mandrakeonline\n"
 
 #: ../mdkapplet:265
 #, c-format
@@ -246,6 +245,8 @@ msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
+"Při připojování se k serveru se vyskytl problém, kontaktuje prosím tým "
+"technické podpory"
 
 #: ../mdkapplet:280
 #, c-format
@@ -508,14 +509,14 @@ msgid "Your Mandrakeonline account has been successfully configured\n"
 msgstr "Váš účet na Mandrakeonline byl úspěšně nastaven\n"
 
 #: ../mdkonline:219
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Zaslání informací proběhlo úspěšně!"
+msgstr "Informace o nastavení byly poslány úspěšně"
 
 #: ../mdkonline:220
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Načíst konfiguraci\n"
+msgstr "Problém při posílání nastavení"
 
 #: ../mdkonline:221
 #, c-format
@@ -523,6 +524,8 @@ msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
+"Nelze se připojit k webovým stránkám mandrakeonline: chybné přihlášení či "
+"heslo nebo špatně nastavený firewall či router"
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -589,8 +592,7 @@ msgstr "  --applet       - spustí Mandrakeupdate.\n"
 #: ../mdkupdate:73
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
-"Nebyl nalezen soubor %s. Spusťte prosím nejprve průvodce pro MandrakeOnline"
+msgstr "Nebyl nalezen soubor %s. Spusťte prosím nejprve průvodce pro MandrakeOnline"
 
 #: ../mdkupdate:131
 #, c-format
@@ -604,64 +606,3 @@ msgstr ""
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Nelze aktualizovat balíčky ze zdroje mdkupdate.\n"
-
-#~ msgid ""
-#~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
-#~ "[at] mandrakeonline [dot] net"
-#~ msgstr ""
-#~ "Službě MandrakeUpdate se nepodařilo nahrát soubory diff. Pošlete prosím "
-#~ "email na adresu support [at] mandrakeonline.net."
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Prosím počkejte"
-
-#~ msgid "Next"
-#~ msgstr "Další"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušit"
-
-#~ msgid "Previous"
-#~ msgstr "Zpět"
-
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Nemám účet na Mandrakeonline a chci se zaregistrovat"
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Ochrana soukromí společnosti Mandrakelinux"
-
-#~ msgid "Authentification"
-#~ msgstr "Ověřování"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Poslat nastavení"
-
-#~ msgid "Finish"
-#~ msgstr "Hotovo"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "automatické aktualizace"
-
-#~ msgid "Country:"
-#~ msgstr "Země:"
-
-#~ msgid "Error"
-#~ msgstr "Chyba"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Ukončuji průvodce\n"
-
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "Službě Mandrakeonline se nepodařilo připojit k serveru, zkuste to prosím "
-#~ "znovu později."
-
-#~ msgid "Wrong password"
-#~ msgstr "Špatné heslo"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - aktualizace klíčů\n"
