@@ -15,7 +15,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	1mdk
+Release: 	2mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
-* Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-1mdk
+* Mon Feb 24 2003 Daouda LO <daouda@mandrakesoft.com> 0.91-2mdk
 - add urpmi source for club member.
 - remove icon on gnome desktop (handled in mandrake-galaxy)
 
