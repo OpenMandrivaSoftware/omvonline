@@ -1,13 +1,21 @@
+##################################################################
+#
+#
+# !!!!!!!! WARNING => THIS HAS TO BE EDITED IN THE CVS !!!!!!!!!!!
+#
+#
+##################################################################
 # Changed by Makefile of cvs.
+# get the source from our cvs repository (see
+# http://www.linuxmandrake.com/en/cvs.php3)
+
 %define version 0.18
 %define name mdkonline
 
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	2mdk
-# get the source from our cvs repository (see
-# http://www.linuxmandrake.com/en/cvs.php3)
+Release: 	3mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 License:	GPL
@@ -82,6 +90,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Thu Nov 14 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-3mdk
+- resync with cvs (please use the spec file !)
+
 * Wed Nov 13 2002 Daouda LO <daouda@mandrakesoft.com> 0.18-2mdk
 - release for mandrakeonline.net customers
 
