@@ -5,7 +5,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	11mdk
+Release: 	12mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -100,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 %files backend
 %defattr(-,root,root)
 %{_sbindir}/mdkupdate
+%{_sbindir}/mdkonline_tui
 %dir %{_libdir}/libDrakX/drakfirsttime
 %{_libdir}/libDrakX/drakfirsttime/*.pm
 
@@ -128,6 +129,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Sun Sep 26 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
+- introduced mdkonline text based wizard for server products
+- po updates
+
 * Tue Sep 21 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-11mdk
 - strict requirement on mdkonline-backend
 - new applet status when distrib is not supported (too old or cooker)
