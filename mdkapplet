@@ -89,7 +89,7 @@ my %state = (
 			  tt => [ N_("Service is not configured. Please click on \"Configure the service\"") ]
 			 },
 	     disconnected => {
-			      colour => [ 'disconnected' ],
+			      colour => [ 'disconnect' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
 			      tt => [ N_("Network is down. Please configure your network") ]
@@ -222,10 +222,10 @@ sub silentCheck {
     my $link = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     logIt(N("Connecting to") . " $link ...\n");
     gtkflush(); go2State('busy'); gtkflush();
-    print "$link\n";
+#    print "$link\n";
     my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
     my $ct = $response->content;
-    print "\nCONTENTS = $ct\n";
+#    print "\nCONTENTS = $ct\n";
 #    logIt(N("Response from Mandrakeonline server\n") . "$ct");
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d",$1); } else { $u = 10 };
     #   99 - log or host or action or pass empty, wrong action
@@ -436,7 +436,7 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
     $img->set_from_pixbuf($tmp);
     #my $tooltip = Gtk2::Tooltips->new;
-    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprintf_fixutf8(translate$state{$state_type}{tt}[0])));
+    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprint4f_fixutf8(translate$state{$state_type}{tt}[0])));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	my $l = $actions{$_}{name};
