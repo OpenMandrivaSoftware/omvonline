@@ -1,5 +1,6 @@
 VERSION = $(shell awk '/define version/ { print $$3 }' $(NAME).spec)
 NAME = mdkonline
+SCRIPTS = sshlogin.exp scpcall.exp
 SUBDIRS = po
 localedir = $(prefix)/usr/share/locale
 RPM=$(HOME)/RPM
@@ -16,15 +17,17 @@ clean:
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(RPM_BUILD_ROOT)/usr/{X11R6/bin/,share/icons,share/mdkonline/pixmaps}
+	install -d $(RPM_BUILD_ROOT)/usr/{X11R6/bin/,bin,share/icons,share/mdkonline/pixmaps}
 	install -s -m755 $(NAME) $(RPM_BUILD_ROOT)/usr/X11R6/bin/
+	install -s -m755 $(SCRIPTS) $(RPM_BUILD_ROOT)/usr/bin/
 #	install -m644 icons/*.png $(RPM_BUILD_ROOT)/usr/share/icons/
 	install -m644 pixmaps/*.png $(RPM_BUILD_ROOT)/usr/share/mdkonline/pixmaps
+	install -m644 privacy.txt $(RPM_BUILD_ROOT)/usr/share/mdkonline/
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 dis: clean
 	rm -rf $(NAME)-$(VERSION) ../$(NAME)-$(VERSION).tar*
-	cvs commit 
+#	cvs commit 
 	mkdir -p $(NAME)-$(VERSION)
 	find . -not -name "$(NAME)-$(VERSION)"|cpio -pd $(NAME)-$(VERSION)/
 	find $(NAME)-$(VERSION) -type d -name CVS -o -name .cvsignore |xargs rm -rf

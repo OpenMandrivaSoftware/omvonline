@@ -14,14 +14,18 @@ Source0:	%{name}-%{version}.tar.bz2
 #Source3:	%{name}48.xpm.bz2
 Copyright:	GPL
 Group:		System/Configuration/Other
-Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode, 
+Requires:	drakxtools >= 1.1.5-97mdk, gtk+mdk, perl-GTK, perl-GTK-GdkImlib, usermode
 Requires:	popt >= 1.6, 
+Requires: expect
+Requires: openssh-clients
 BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildArchitectures: noarch
 
 %description
-The Mandrake Online tool is designed for registered users who want to upload their
-configurattion (packages, hardware infos). This allow them to be kept informed about
-security updates, hardware support/enhancements and other high value services.
+The Mandrake Online tool is designed for registered users 
+who want to upload their configurattion (packages, hardware infos). 
+This allows them to be kept informed about security updates, 
+hardware support/enhancements and other high value services.
 
 %prep
 %setup -q
@@ -65,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%{_prefix}/bin/*
 %{_prefix}/X11R6/bin/*
 %{_datadir}/%{name}
 %{_menudir}/%{name}
@@ -76,6 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 * Fri Aug 31 2001 Renaud Chaillat <rchaillat@mandrakesoft.com> 0.15-2mdk
 - added ssh/scp backend with expect scripts
 - improved ui
+- updated requirements
 
 * Mon Aug 27 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-1mdk
 - First mandrake package
