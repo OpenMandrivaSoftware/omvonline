@@ -95,12 +95,11 @@ my %actions = (
 	      );
 
 gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"), 
-       gtkpack_( Gtk2::VBox->new(0, 0), 
-		 0, gtkadd($eventbox = Gtk2::EventBox->new, 
-			   gtkpack($img = Gtk2::Image->new)
-			  )
-	       )
+       gtkadd($eventbox = Gtk2::EventBox->new, 
+	      gtkpack($img = Gtk2::Image->new)
+	     )
       );
+#$icon->shape_combine_mask($img, 0, 0);
 $eventbox->signal_connect(button_press_event => sub {
 			      if (!$raisedwindow) {
 				  if ($_[1]->button == 1) {
