@@ -253,8 +253,7 @@ sub send_rpm_dif {
 }
 
 sub clean_dir {
-    #system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
-    #system("rm -f /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
+    system("rm -f /root/*.dif /root/rpm_qa_installed_before /root/rpm_qa_installed_after");    
 }
 
 sub rpm_qa {
