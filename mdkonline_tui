@@ -66,7 +66,7 @@ sub check_login {
     my $pp = md5_hex($pass);
     $log && $pass && $box or return 0;
     my $clink = $expert_link . '/firsttimewizard/validusercheck.php' . '?u=' . $log . '&p=' . $pp;
-    $resp = mdkonline::get_from_URL($clink);
+    $resp = mdkonline::get_from_URL($clink, "MdkOnline_tuiAgent/");
     $resp->is_success and $res = $resp->content =~ /TRUE/ ? 1 : 0;
     $res
 }
