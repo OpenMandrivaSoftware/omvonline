@@ -27,9 +27,28 @@ sub get_from_URL {
     $response
 }
 
+sub get_site {
+    my $link = shift;
+    $link .= join('', @_);
+    my $b = browser();
+    system("$b " . $link . "&")
+}
+
+sub browser {
+    require any;
+    my $wm = any::running_window_manager();
+    member ($wm, 'kwin', 'gnome-session') or $wm = 'other';
+    my %Br = (
+	      'kwin' => 'webclient-kde',
+	      'gnome-session' => 'webclient-gnome',
+	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(epiphany mozilla konqueror galeon)
+	     );
+    $Br{$wm}
+}
+
 sub subscribe_online {
     my ($full_link) = shift;
-    my $ret = get_from_URL($full_link, "MdkOnlineAgent");
+    my $ret = get_from_URL($full_link, "MdkOnlineAgent/1.1");
     my $str;
     my $result = {
 		  10 => 'OK',
@@ -45,6 +64,61 @@ sub subscribe_online {
 	if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1); $str = $result->{$code} }
     } else { $str = N("Problem connecting to server \n") }
     $str
+}
+
+sub rpm_ver_parse {
+    my ($ver) = @_;
+    my @verparts = ();
+    while ( $ver ne "" ) {
+        if ( $ver =~ /^([A-Za-z]+)/ ) {    # leading letters
+            push ( @verparts, $1 );
+            $ver =~ s/^[A-Za-z]+//;
+        }
+        elsif ( $ver =~ /^(\d+)/ ) {       # leading digits
+            push ( @verparts, $1 );
+            $ver =~ s/^\d+//;
+        }
+        else {                             # remove non-letter, non-digit
+            $ver =~ s/^.//;
+        }
+    }
+    return @verparts;
+}
+
+sub rpm_ver_cmp {
+    my ($a, $b) = @_;
+    # list of version/release tokens
+    my @aparts;
+    my @bparts;
+    # individual token from array
+    my ($apart, $bpart, $result);
+    if ( $a eq $b ) {
+        return 0;
+    }
+    @aparts = rpmverparse($a); 
+    @bparts = rpmverparse($b); 
+    while ( @aparts && @bparts ) {
+        $apart = shift (@aparts);
+        $bpart = shift (@bparts);
+	if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
+            if ( $result = ( $apart <=> $bpart ) ) {
+                return $result;
+            }
+        }
+        elsif ( $apart =~ /^[A-Za-z]+/ && $bpart =~ /^[A-Za-z]+/ ) {    # alpha
+            if ( $result = ( $apart cmp $bpart ) ) {
+                return $result;
+            }
+        }
+        else {    # "arbitrary" in original code
+	    my $rema = shift(@aparts);
+	    my $remb = shift(@bparts);
+	    if ($rema && !$remb) { return 1 } elsif (!$rema && $remb) { return -1 }
+	    #return -1;
+        }
+    }
+    # left over stuff in a or b, assume one of the two is newer
+    if (@aparts) { return 1 } elsif (@bparts) {	return -1 } else { return 0 }
 }
 
 sub report_config {
@@ -93,6 +167,7 @@ sub hw_upload {
     my ($login, $passwd, $hostname) = @_;
     system("HWDB_PASSWD=$passwd hwdb_add_system $login $hostname &");
 }
+
 sub automated_upgrades {
     my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = get_release();
