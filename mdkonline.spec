@@ -113,7 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
-* Thu Nov  4 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-20mdk
+* Fri Nov 19 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-20mdk
 - remerge mdkonline to one package 
 - superseded gtk based wizard by interactive one
 - MNF support (config upload and misc)

@@ -176,6 +176,11 @@ sub mv_files {
     -e $source and system("mv", $source, $dest);
 }
 
+sub clean_confdir {
+    my $confdir = '/root/.MdkOnline';
+    system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
+}
+
 sub hw_upload {
     my ($login, $passwd, $hostname) = @_;
     my $hw_exec = '/usr/sbin/hwdb_add_system';

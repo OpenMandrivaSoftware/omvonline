@@ -31,6 +31,10 @@ require_root_capability();
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
+my $difflog = '/tmp/diff.log';
+
+my $currentrpm = "$confdir/rpm_qa_installed_current";
+my $afterrpm =  "$confdir/rpm_qa_installed_after";
 
 my $logfile = '/tmp/mdkupdate.log';
 
@@ -73,7 +77,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent');
     my $contents = $resp->content;
     #print "CONTENTS = $contents \n";
-    -e $logfile and system "/bin/rm", "$logfile";
+    -e $logfile and system "/bin/rm", $logfile;
     if ($resp->is_success) {
 	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 };
 	my $action = {
@@ -90,21 +94,20 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  $scheduled = join(',', @{$c2h->{sched}});
 			  $noscheduled = join(',', @{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
+			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=mdkupdate", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled"
 			  } elsif ($opt eq '--auto') {
-			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched});
+			      $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched})
 			  }
-			  rpm_qa("$confdir/rpm_qa_installed_after");
+			  rpm_qa($afterrpm);
 			  my %new = getVarsFromSh($conffile);
-			  if (! -s "$confdir/mdkupdate.rpms" || $opt eq '--auto') {
+			  my $need_upload = get_rpm_dif();
+			  if ($need_upload || $opt eq '--auto') {
 			      #- send configuration and get back key to use...
 			      my $r;
 			      ($r, $new{CURRENTKEY}) = send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
 			      if ($r eq 'TRUE') { delete $new{OLDKEY}; setVarsInSh($conffile, \%new) }
-			  } else {
-			      #- this can safely be ignored if new configuration is sent.
-			      send_rpm_dif($new{LOGIN}, $new{PASS}, $new{MACHINE}, $new{OLDKEY});
 			  }
 			  clean_dir();
 		      },
@@ -185,23 +188,17 @@ sub send_conf_update {
     my ($res, $key) = mdkonline::send_config($url->{wizard}, $tag);
     ($res, $key)
 }
-sub send_rpm_dif {
-    my ($login, $password, $boxname, $oldkey) = @_;
-    `sdiff -s $confdir/rpm_qa_installed_after $confdir/mdkupdate.rpms > $confdir/$login.$password.$boxname.$oldkey.dif`;
-    -s "$confdir/$login.$password.$boxname.$oldkey.dif" or exit(1);
-    my $tag = { submit => "upload_dif", dif_file => [ "$confdir/$login.$password.$boxname.$oldkey.dif" ] };
-    my ($res, $key) = mdkonline::send_config($url->{online_dif}, $tag);
-    #- update mdkupdate.rpms with newer version just sent.
-    if ($res eq 'TRUE') {
-	unlink "$confdir/mdkupdate.rpms";
-	rename "$confdir/rpm_qa_installed_after", "$confdir/mdkupdate.rpms";
-    } else {
-	output($logfile, 'send_rpm_dif' . N("Connection problem") . "\n" . N("Mandrakeupdate could not upload the diff files. Send a mail to support [at] mandrakeonline [dot] net"));
-	return
-    }
+sub get_rpm_diff {
+    my $isdif = `sdiff -s $afterrpm $currentrpm`;
+    $isdif and output($difflog, $isdif), return 1;
+    return 0
+}
+sub new_rpm_base {
+    -f $afterrpm and system('/bin/mv', $afterrpm, $currentrpm);
 }
 sub clean_dir() {
-    system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
+    new_rpm_base();
+    mdkonline::clean_confdir();
     output($logfile, 'OK')
 }
 sub rpm_qa {
