@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	11mdk
+Release: 	12mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -86,6 +86,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Tue Sep 25 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-12mdk
+- When you hit the button subscribe, launch the browser and un grayed the 
+  next button.
+
 * Tue Sep 25 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-11mdk
 - typo in privacy-fr file
 
