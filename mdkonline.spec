@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	17mdk
+Release: 	18mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -89,6 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Tue Mar 19 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-18mdk
+- clean dir after updates.
+
 * Fri Mar 15 2002 Daouda LO <daouda@mandrakesoft.com> 0.15-17mdk
 - add desktop entry for gnome.
 - po updates
