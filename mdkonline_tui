@@ -1,0 +1,171 @@
+#!/usr/bin/perl
+################################################################################
+# Mandrakeonline Text User Interface                                           # 
+#                                                                              #
+# Copyright (C) 2001-2002-2003-2004 Mandrakesoft                               #
+#                                                                              #
+# Daouda Lo <daouda@mandrakesoft.com>                                          #
+#
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
+
+use strict;
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
+use standalone;
+
+use interactive;
+use common;
+use wizards;
+use lang;
+
+BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' };
+
+use mdkonline;
+use Digest::MD5  qw(md5 md5_hex md5_base64);
+
+my $in = interactive->vnew('su');
+
+my $expert_link = 'http://www.mandrakeexpert.com/';
+my $online_link = 'https://www.mandrakeonline.net';
+
+my $confdir = '/root/.MdkOnline';
+my $conffile = "$confdir/mdkupdate";
+
+$::Wizard_title = N("Mandrakeonline");
+
+my %choices = (
+	       account => N("I already have an account"),
+	       noaccount => N("I want to subscribe")
+	      );
+my $choice = $choices{account};
+
+my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key);
+
+sub read_conf {
+    my $wideconf = '/etc/sysconfig/mdkonline';
+    my %t = getVarsFromSh($wideconf);
+    my $host = chomp_(`hostname`);
+    $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
+    $login = $t{LOGIN}; $boxname = $t{MACHINE}
+}
+
+sub check_login {
+    my ($log, $pass, $box) = @_;
+    my ($res, $resp);
+    my $pp = md5_hex($pass);
+    $log && $pass && $box or return 0;
+    my $clink = $expert_link . 'firsttimewizard/validusercheck.php' . '?u=' . $log . '&p=' . $pp;
+    $resp = mdkonline::get_from_URL($clink);
+    $resp->is_success and $res = $resp->content =~ /TRUE/ ? 1 : 0;
+    $res
+}
+sub send_conf {
+    my ($log, $pass, $box) = @_;
+    my $uplink = $online_link . 'wizard.php';
+    my $pp = md5_hex($pass); my $res;
+    my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
+    mdkonline::report_config("$confdir/$log.$pass.$box.online.log");
+    my $tag = { submit => "upload_wizard", wizard => ["$confdir/$log.$pass.$box.online.log.bz2.uue"] };
+    undef $w;
+    my $ww = $in->wait_message(N("Please wait"), N("Reading configuration\n"));
+    ($res, $key) = mdkonline::send_config($link, $tag);
+    mdkonline::hw_upload($login, $pass, $boxname);
+    undef $ww;
+    $res
+}
+
+$wiz = {
+	name => N("Mandrakeonline"),
+	pages => {
+		  welcome => {
+			      name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
+			      no_back => 1,
+			      next => 'choices'
+			     },
+		  choices => {
+			      name => N("Account creation or authentication"),
+			      data => [ { val => \$choice, type => 'list', list => [values %choices ] } ],
+			      post => sub { +{ reverse %choices }->{$choice} },
+			     },
+		  account => {
+			      name => N("Enter your Mandrakeonline login, password and machine name:"),
+			      pre => sub {
+				  read_conf();
+			      },
+			      data => sub {
+				  [
+				   { label => N("Login:"),   val => \$login },
+				   { label => N("Password:"), val => \$password },
+				   { label => N("Machine name:"), val => \$boxname },
+				  ],
+			      },
+			      next => 'authenticate'
+			     },
+		  authenticate => {
+				   pre => sub {
+				       local $::isWizard;
+				       my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandrakeonline website..."));
+				       $is_success = check_login($login, $password, $boxname);
+				   },
+				   name => sub {
+				       if ($is_success) {
+					   N("In order to benefit from Mandrakeonline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you.")
+				       } else {
+					   N("Connection problem") . "  " . N("or") . "  " . N("wrong password:") . "\n" . N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n In the latter case, go back to the first step to connect to Mandrakeonline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)")
+				       }
+				   },
+				   no_back => $is_success ? 1 : 0,
+				   next => $is_success ? 'end' : 'choices'
+				  },
+		  noaccount => {
+				name => N("Create a Mandrakeonline Account"),
+				data => sub {
+				    [
+				     { label => N("Login:"),   val => \$nlogin },
+				     { label => N("Password:"), val => \$npassword },
+				     { label => N("Confirm Password:"), val => \$cfmpassword },
+				     { label => N("Mail contact:"),   val => \$email },
+				    ]
+				},
+				post => sub {
+				    "end"
+				}
+			       },
+		  end => {
+			  pre => sub {
+			      my $r = send_conf($login, $password, $boxname);
+			      my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
+			  },
+			  name => sub {
+			      if ($r eq 'TRUE' && $key) {
+				  "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
+			      } else {
+				  N("Connection problem") . N("Problem occurs when uploading files, please try again")
+			      }
+			  },
+			  data => sub {
+			      $r eq 'TRUE' && $key and 
+				[ 
+				 { label => N("Country"), val => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
+				   list => [ sort keys %countries ], not_edit => 0 }
+				];
+			  },
+			  end => 1,
+			  no_back => 1,
+			  next => 0,
+			 }
+		 }
+       };
+
+wizards->new->safe_process($wiz, $in);
