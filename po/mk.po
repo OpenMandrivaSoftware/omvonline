@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-mk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-29 18:14+0200\n"
-"PO-Revision-Date: 2004-09-24 21:59+0200\n"
+"PO-Revision-Date: 2004-09-29 20:57+0200\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
@@ -308,9 +308,9 @@ msgid "Create a Mandrakeonline Account"
 msgstr "Создади Mandrakeonline сметка"
 
 #: ../mdkonline:108
-#, fuzzy, c-format
+#, c-format
 msgid "I don't have a Mandrakeonline account and I want to subscribe"
-msgstr "Немам Mandrakeonline сметка, но сакам"
+msgstr "Немам Mandrakeonline сметка и сакам да се зачленам"
 
 #: ../mdkonline:112 ../mdkonline:132 ../mdkonline_tui:113 ../mdkonline_tui:144
 #, c-format
@@ -510,27 +510,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Корисничкото име и лозинката треба да се помалку од 12 карактери\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Не се дозволени специјални карактери\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Ве молиме пополнете ги сите полиња\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Е-пошта адресата не е валидна\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Сметката веќе постои\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -538,19 +538,19 @@ msgid "Problem connecting to server \n"
 msgstr "Проблем при поврзување со серверот \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Добредојдовте во Mandrakeonline"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Веќе имам сметка"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Сакам да се зачленам"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -560,22 +560,22 @@ msgstr "Ве молиме, почекајте"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Создавање на сметка или автентикација"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Добредојдовте во Mandrakeonline"
+msgstr "Се поврзувам на веб страницата Mandrakeonline..."
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "или"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Погрешна лозинка"
+msgstr "погрешна лозинка:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -583,11 +583,14 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline сметката е успешно креирана.\n"
+"Ве молиме притиснете \"следно\" за автентикација и испраќање на вашата "
+"конфигурација\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Држава:"
+msgstr "Држава"
 
 #: ../mdkupdate:50
 #, c-format
@@ -628,17 +631,18 @@ msgstr "  --update       - ажурирање на клучевите\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Не е пронајдена датотека %s. Најпрво вклучете го волшебникот mdkonline"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Не можам да контактирам со Mandrakeonline, ве молам обидете се подоцна"
+msgstr ""
+"Mandrakeupdate не може да контактира со страницата, ќе се обидеме повторно."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Не можам да ги ажурирам пакетите од медиумот mdkupdate.\n"
 
 #: ../mdkupdate:195
 #, c-format
@@ -646,46 +650,8 @@ msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate не може да ги прати diff датотеките. Пратете е-пошта на "
+"support [at] mandrakeonline [dot] net"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "Прескокни Волшебник"
-
-#~ msgid "Subscribe"
-#~ msgstr "Зачлени се"
-
-#~ msgid ""
-#~ "In order to benefit from Mandrakeonline services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandrakesoft:\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrakeexpert.com.\n"
-#~ "Finally, an email alias with your username@mandrakeonline.net will be "
-#~ "provided to you."
-#~ msgstr ""
-#~ "За да придобивате од сервисите на Mandrakeonline,\n"
-#~ "сега ќе ја пратиме вашата конфигурација.\n"
-#~ "\n"
-#~ "Волшебникот сега ќе ги испрати следниве информации на Mandrakesoft:\n"
-#~ "1) листа на пакетите кои се инсталирани на вашиот систем,\n"
-#~ "2) вашата хардверска конфигурација.\n"
-#~ "\n"
-#~ "Ако се чествувате неудобно од оваа идеја, или не сакате да придобиете од "
-#~ "овој сервис,\n"
-#~ "ве молиме притиснете 'Откажи'. Со притискање на 'Следно', ни дозволувате "
-#~ "постојано да ве известуваме\n"
-#~ "за сигурносни ажурирања и корисни надоградувања преку персонализирани "
-#~ "email пораки.\n"
-#~ "Дури и придобивате од сервисите за подршка со намалена наплата на\n"
-#~ "www.mandrakeexpert.com.\n"
-#~ "И за крај, добивате email прекар со вашето корисничкоиме@mandrakeonline."
-#~ "net."

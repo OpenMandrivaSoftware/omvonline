@@ -1,4 +1,5 @@
 # translation of mdkonline-sv.po to 
+# translation of mdkonline-sv.po to
 # Översättning av Mandrakeonline-sv.po till svenska
 # translation of Mandrakeonline-sv.po to Svenska
 # Copyright (C) 2001,2002,2003, 2004 Free Software Foundation, Inc.
@@ -7,14 +8,15 @@
 # Henrik Borg <datb@swipnet.se>, 2002.
 # Mattias Dahlberg <voz@home.se>, 2002.
 # Kenneth Krekula <kenneth.krekula@kiruna.se>, 2004.
+# Lars Westergren <lars.westergren@home.se>, 2004.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-09-29 18:14+0200\n"
-"PO-Revision-Date: 2004-09-09 19:02+0200\n"
-"Last-Translator: Kenneth Krekula <kenneth.krekula@kiruna.se>\n"
+"PO-Revision-Date: 2004-09-29 09:49+0200\n"
+"Last-Translator: Lars Westergren <lars.westergren@home.se>\n"
 "Language-Team:  <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,6 +66,7 @@ msgstr "Tjänsten är ej aktiverad. Klicka på \"Online webbsajt\""
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
+"Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
 #: ../mdkapplet:108 ../mdkapplet:158
 #, c-format
@@ -188,12 +191,12 @@ msgstr "Kontrollerar... Uppdateringar finns tillgängliga\n"
 #: ../mdkapplet:254
 #, c-format
 msgid "Development release not supported by service"
-msgstr ""
+msgstr "Utvecklingsversion stöds inte av tjänsten"
 
 #: ../mdkapplet:255
 #, c-format
 msgid "Too old release not supported by service"
-msgstr ""
+msgstr "För gammal version för att stödjas av tjänsten"
 
 #: ../mdkapplet:256
 #, c-format
@@ -511,27 +514,27 @@ msgstr ""
 #: ../mdkonline.pm:55
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr ""
+msgstr "Användarnamn och lösenord bör vara mindre än 12 tecken\n"
 
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Specialtecken är ej tillåtna\n"
 
 #: ../mdkonline.pm:57
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr ""
+msgstr "Fyll i alla fält\n"
 
 #: ../mdkonline.pm:58
 #, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "Ogiltig epostadress\n"
 
 #: ../mdkonline.pm:59
 #, c-format
 msgid "Account already exist\n"
-msgstr ""
+msgstr "Kontot existerar redan\n"
 
 #: ../mdkonline.pm:65
 #, c-format
@@ -539,19 +542,19 @@ msgid "Problem connecting to server \n"
 msgstr "Problem med att kontakta servern \n"
 
 #: ../mdkonline_tui:45 ../mdkonline_tui:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeonline"
-msgstr "Välkommen till Mandrakelinux Online"
+msgstr "Mandrakeonline"
 
 #: ../mdkonline_tui:48
 #, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Jag har redan ett konto"
 
 #: ../mdkonline_tui:49
 #, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Jag vill prenumerera"
 
 #: ../mdkonline_tui:77 ../mdkonline_tui:81 ../mdkonline_tui:119
 #, c-format
@@ -561,22 +564,22 @@ msgstr "Vänta"
 #: ../mdkonline_tui:102
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Skapar eller autentiserar konto"
 
 #: ../mdkonline_tui:119
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Välkommen till Mandrakelinux Online"
+msgstr "Kontaktar Mandrakeonlines websajt"
 
 #: ../mdkonline_tui:129
 #, c-format
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #: ../mdkonline_tui:129
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Felaktigt lösenord"
+msgstr "felaktigt lösenord:"
 
 #: ../mdkonline_tui:157
 #, c-format
@@ -584,11 +587,13 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Mandrakeonline konto skapades.\n"
+"Klicka \"Nästa\" för att autentisera och ladda upp din konfiguration\n"
 
 #: ../mdkonline_tui:174
-#, fuzzy, c-format
+#, c-format
 msgid "Country"
-msgstr "Land:"
+msgstr "Land"
 
 #: ../mdkupdate:50
 #, c-format
@@ -629,27 +634,37 @@ msgstr "  --update       - Uppdatera nycklar\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "%s fil ej funnen. Kör mdkonline guiden först"
 
 #: ../mdkupdate:124
-#, fuzzy, c-format
+#, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr "Mandrakeonline kunde inte kontaktas, var vänlig försök igen senare"
+msgstr "Mandrakeupdate kunde ej nå sajten, kommer försöka igen senare."
 
 #: ../mdkupdate:173
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Kunde ej uppdatera paket från mdkupdate källan.\n"
 
+# Varför skriva specialtecken inom hakparenteser??
+# Jag översätter i alla fall, och antar att det bara är
+# någon som är van vid att skriva enkla spamfällor
+# i sina mailadresser. Men varför i intern websida?
+# /Lars
 #: ../mdkupdate:195
 #, c-format
 msgid ""
 "Mandrakeupdate could not upload the diff files. Send a mail to support [at] "
 "mandrakeonline [dot] net"
 msgstr ""
+"Mandrakeupdate kunde inte ladda upp diff filerna. Skicka ett mail till "
+"support[at]mandrakeonline[punkt]net"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "Skippa guide"
+
+#~ msgid "I don't have a Mandrakeonline account and I want to "
+#~ msgstr "Jag har inget Mandrakelinux Online-konto och jag vill "
 
 #~ msgid "Subscribe"
 #~ msgstr "Prenumerera"
