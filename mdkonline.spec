@@ -1,6 +1,6 @@
 %define version 1.1
 %define name mdkonline
-%define release 12mdk
+%define release 13mdk
 
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
@@ -129,6 +129,10 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-13mdk
+- po updates
+- mdkapplet: decrease timeout for network config check (oblin)
+
 * Wed Sep 29 2004 Daouda LO <daouda@mandrakesoft.com> 1.1-12mdk
 - introduced mdkonline text based wizard for server products
 - po updates
