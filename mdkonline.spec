@@ -98,6 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 - launch applet main window only once
 - autograb hostname and prefill wizard fields
 - update status
+- handle error codes from Mandrakeonline server 
 - die properly when AUTOSTART is set TO FALSE
 - mdkupdate --applet call
 - mdkapplet --force to set AUTOSTART to TRUE
