@@ -50,43 +50,43 @@ mkdir_p($localdir) if !-d $localdir;
 
 my %state = (
 	     okay => {
-		      colour => [ 'green' ],
+		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'update', 'configureApplet', 'check', 'weblink' ],
 		      tt => [ N("No updates available for your system") ]
 		     },
  	     critical => {
-			  colour => [ 'orange' ],
+			  colour => [ 'noconf' ],
 			  changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 			  menu => [ 'configureApplet', 'check', 'weblink' ],
 			  tt => [ N("Config problems. Launch \"configure\" again") ]
 			 },
 	     busy => {
-		      colour => [ 'orange' ], 
+		      colour => [ 'busy' ], 
 		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
 		      menu => [ ],
 		      tt => [ N("System is busy. Wait ...") ]
 		     },
 	     error => {
-		       colour => [ 'red' ],
+		       colour => [ 'error' ],
 		       changes => [ 'okay' ],
 		       menu => [ 'update', 'check', 'weblink' ],
 		       tt => [ N("%s packages available for update", $av_pkgs) ]
 		      },
 	     noconfig => {
-			  colour => [ 'orange' ],
+			  colour => [ 'noconf' ],
 			  changes => [ 'okay' ],
 			  menu => [ 'weblink', 'register' ],
 			  tt => [ N("Service not available. Click on \"configuration\"") ]
 			 },
 	     disconnected => {
-			      colour => [ 'orange' ],
+			      colour => [ 'disconnected' ],
 			      changes => [ 'okay', 'busy', 'critical', 'error' ],
 			      menu => [ 'confNetwork' ],
 			      tt => [ N("Network is down. Click on \"configure Network\"") ]
 			     },
 	     disabled => {
-			  colour => [ 'red' ],
+			  colour => [ 'disabled' ],
 			  changes => [ 'okay', 'busy', 'critical', 'error' ],
 			  menu => [ 'configureApplet', 'weblink' ],
 			  tt => [ N("Service deactivated. Waiting for payment...") ]

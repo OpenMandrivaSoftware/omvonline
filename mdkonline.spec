@@ -4,7 +4,7 @@
 Summary:	The MandrakeOnline Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 	4mdk
+Release: 	5mdk
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://www.mandrakeonline.net
 Packager:	Daouda Lo <daouda@mandrakesoft.com>
@@ -96,6 +96,9 @@ rm -rf $RPM_BUILD_ROOT
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 %changelog
+* Mon May 10 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-5mdk
+- more meaningful icons set for applet state (big up 2 ln)
+
 * Thu May  6 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-4mdk
 - Wed May  5 2004 Frederic Lepied <flepied@mandrakesoft.com> 1.0-4mdk
   o mdkonline:
