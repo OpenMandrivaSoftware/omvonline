@@ -1,18 +1,18 @@
 # Translation of nn to Norwegian Nynorsk
-# Copyright (C) 2004 Free Software Foundation, Inc.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004.
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "POT-Creation-Date: 2004-12-23 17:43+0100\n"
-"PO-Revision-Date: 2004-12-10 17:49+0100\n"
+"PO-Revision-Date: 2005-01-19 20:07+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #: ../mdkapplet:63
 #, c-format
@@ -46,8 +46,7 @@ msgstr "Tenesta er ikkje sett opp enno. Vel «Set opp tenesta»."
 #: ../mdkapplet:93
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr ""
-"Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
+msgstr "Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
 
 #: ../mdkapplet:99
 #, c-format
@@ -311,16 +310,20 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
+"Denne vegvisaren vil hjelpa deg å lasta opp oppsettet ditt\n"
+"(pakkar og maskinvareoppsett) til ein sentralisert database,\n"
+"slik at du kan varslast om viktige tryggleiksoppdateringar\n"
+"og andre viktige oppdaterte programpakkar.\n"
 
 #: ../mdkonline:114
 #, c-format
 msgid "Account creation or authentication"
-msgstr ""
+msgstr "Oppretting eller autentisering av konto"
 
 #: ../mdkonline:119
 #, c-format
 msgid "Enter your Mandrakeonline login, password and machine name:"
-msgstr ""
+msgstr "Skriv inn brukarnamn, passord og maskinnamn frå Mandrakeonline-kontoen:"
 
 #: ../mdkonline:125 ../mdkonline:156
 #, c-format
@@ -355,6 +358,16 @@ msgid ""
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com."
 msgstr ""
+"For å kunna bruka Mandrakeonline-tenestene, må du først lasta opp oppsettet ditt.\n"
+"\n"
+"Denne vegvisaren vil no senda følgjande informasjon til Mandrakesoft:\n"
+"1  Oversikta over pakkane du har installert på systemet.\n"
+"2  Oversikt over maskinvareoppsettet ditt.\n"
+"\n"
+"Om du ikkje ønskjer dette, og ikkje vil bruka tenesta, må du velja «Avbryt».\n"
+"Ved å trykkja «Neste» samtykkjer du i å la oss varsla deg via e-post når det\n"
+"kjem nye tryggleiksoppdateringar og andre nyttige oppdateringar.\n"
+"Du får òg rabattar på kundestøttetenestene våre på www.mandrakeexpert.com."
 
 #: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:129
 #, c-format
@@ -382,6 +395,10 @@ msgid ""
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
+"Brukarnamnet eller passordet du skreiv inn er feil.\n"
+" Anten må du skriva det inn på nytt, eller så må du oppretta ein konto på Mandrakeonline.\n"
+" Viss du vil oppretta ein konto, må du gå tilbake til første steg.\n"
+" Merk at du òg må skriva inn eit maskinnamn (som berre kan innehelda bokstavane a til z)."
 
 #: ../mdkonline:153
 #, c-format
@@ -423,6 +440,8 @@ msgid ""
 "Mandrakeonline Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
+"Fullført oppretting av Mandrakeonline-konto.\n"
+"Trykk «Neste» for å autentisera og lasta opp oppsettet ditt.\n"
 
 #: ../mdkonline:178
 #, c-format
@@ -435,6 +454,8 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandrakeonline."
 msgstr ""
+"Frå no av vil du motta varsel om programoppdateringar\n"
+"frå Mandrakeonline."
 
 #: ../mdkonline:178
 #, c-format
@@ -442,11 +463,13 @@ msgid ""
 "Mandrakeonline offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
+"Mandrakelinux gjer det mogleg å automatisera mottak av oppdateringar.\n"
+"Eit program køyrer regelmessig og ser om nye oppdateringar er tilgjengelege.\n"
 
 #: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
+msgstr "Feil ved opplasting av filer. Prøv på nytt."
 
 #: ../mdkonline:186
 #, c-format
@@ -478,7 +501,7 @@ msgstr "Feil ved opplasting av oppsett"
 msgid ""
 "Cannot connect to mandrakeonline website: wrong login/password or router/"
 "firewall bad settings"
-msgstr ""
+msgstr "Klarte ikkje kopla til Mandrakeonline-nettstaden: Feil brukarnamn/passord eller feil rutar/brannmur-oppsett."
 
 #: ../mdkonline.pm:66
 #, c-format
@@ -520,33 +543,39 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate – versjon %s\n"
+"Copyright © %s Mandrakesoft.\n"
+"Dette er fri programvare, og kan distribuerast under vilkåra i GNU GPL-lisensen.\n"
+"\n"
+"Bruk:\n"
 
 #: ../mdkupdate:61
 #, c-format
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr "  --help         – Vis denne hjelpeteksten.\n"
 
 #: ../mdkupdate:62
 #, c-format
 msgid "  --auto         - Mandrakeupdate launched automatically.\n"
-msgstr ""
+msgstr "  --auto         – Mandrakeupdate køyrd automatisk.\n"
 
 #: ../mdkupdate:63
 #, c-format
 msgid "  --applet       - launch Mandrakeupdate.\n"
-msgstr ""
+msgstr "  --applet       – Køyr Mandrakeupdate.\n"
 
 #: ../mdkupdate:71
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
+msgstr "Fann inga «%s»-fil. Du må køyra mdkonline-vegvisaren først."
 
 #: ../mdkupdate:129
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
-msgstr ""
+msgstr "Klarte ikkje kontakta nettstaden, men vil prøva på nytt."
 
 #: ../mdkupdate:181
 #, c-format
 msgid "Unable to update packages from mdkupdate medium.\n"
-msgstr ""
+msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
+
