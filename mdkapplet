@@ -171,7 +171,7 @@ sub browser {
 sub setState {
     my $state_type = shift;
     my $arr = $state{$state_type}{menu};
-    my $tmp = gtkcreate_pixbuf($state{$state_type}{colour});
+    my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}->[0]);
     $img->set_from_pixbuf($tmp);
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
