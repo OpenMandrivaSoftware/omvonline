@@ -36,7 +36,7 @@ use Gtk2::TrayIcon;
 
 my ($eventbox, $img);
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
-my ($menu, $timeout, $refreshtm);
+my ($menu, $timeout, $refreshtm, $networktm);
 my $nowindow = 1;
 my $arch = arch();
 my $online_site = "http://www.mandrakeonline.net/";
@@ -108,7 +108,7 @@ my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { checkUpdates() } }, 
-	       'weblink' => { name => N("Online WebSite"), launch => sub { getSite($online_site, 'info.php') } },
+	       'weblink' => { name => N("Online WebSite"), launch => sub { mdkonline::get_site($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'register' => { name => N("Configure Now!"), launch => sub { configure() } }
 	      );
@@ -205,7 +205,7 @@ sub refresh_contents {
 		   ];
     $contents
 }
-sub configNetwork { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
+sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &"; }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
     my $oldmd5 = md5file($binfile);
@@ -267,8 +267,8 @@ sub compareWithInstalled {
     foreach my $p (@{$t}) { 
 	$p =~ /(.*)-(.*)-(.*)$/; my ($n, $v, $r) = ($1, $2, $3);
 	if ($name eq $n) {
-	    #my $iu = rpmvercmp($ver, $v); my $ir = rpmvercmp( $rel,$r); 
-	    if (rpmvercmp($ver, $v) > 0 || ( rpmvercmp($ver, $v) == 0 && rpmvercmp( $rel, $r) > 0)) {
+	    #my $iu = mdkonline::rpmvercmp($ver, $v); my $ir = mdkonline::rpmvercmp( $rel,$r); 
+	    if (mdkonline::rpmvercmp($ver, $v) > 0 || ( mdkonline::rpmvercmp($ver, $v) == 0 && mdkonline::rpmvercmp( $rel, $r) > 0)) {
 		#print "$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n";
 		$isUpdate = 1 and last;
 	    }
@@ -283,59 +283,6 @@ sub is_running {
 	#- to run ps, perl may create some process with $name as name and 1 as ppid
 	$ppid ne 1 && $pid ne $$ && $n eq $name;
     } `ps -o '%P %p %c' -u $ENV{USER}`;
-}
-sub rpmverparse {
-    my ($ver) = @_;
-    my @verparts = ();
-    while ( $ver ne "" ) {
-        if ( $ver =~ /^([A-Za-z]+)/ ) {    # leading letters
-            push ( @verparts, $1 );
-            $ver =~ s/^[A-Za-z]+//;
-        }
-        elsif ( $ver =~ /^(\d+)/ ) {       # leading digits
-            push ( @verparts, $1 );
-            $ver =~ s/^\d+//;
-        }
-        else {                             # remove non-letter, non-digit
-            $ver =~ s/^.//;
-        }
-    }
-    return @verparts;
-}
-sub rpmvercmp {
-    my ($a, $b) = @_;
-    # list of version/release tokens
-    my @aparts;
-    my @bparts;
-    # individual token from array
-    my ($apart, $bpart, $result);
-    if ( $a eq $b ) {
-        return 0;
-    }
-    @aparts = rpmverparse($a); 
-    @bparts = rpmverparse($b); 
-    while ( @aparts && @bparts ) {
-        $apart = shift (@aparts);
-        $bpart = shift (@bparts);
-	if ( $apart =~ /^\d+$/ && $bpart =~ /^\d+$/ ) {    # numeric
-            if ( $result = ( $apart <=> $bpart ) ) {
-                return $result;
-            }
-        }
-        elsif ( $apart =~ /^[A-Za-z]+/ && $bpart =~ /^[A-Za-z]+/ ) {    # alpha
-            if ( $result = ( $apart cmp $bpart ) ) {
-                return $result;
-            }
-        }
-        else {    # "arbitrary" in original code
-	    my $rema = shift(@aparts);
-	    my $remb = shift(@bparts);
-	    if ($rema && !$remb) { return 1 } elsif (!$rema && $remb) { return -1 }
-	    #return -1;
-        }
-    }
-    # left over stuff in a or b, assume one of the two is newer
-    if (@aparts) { return 1 } elsif (@bparts) {	return -1 } else { return 0 }
 }
 sub cronUpdate {
     my ($to) = shift;
@@ -393,23 +340,6 @@ sub configure {
 					1;
 				    });
 }
-sub getSite {
-    my $link = shift;
-    $link .= join('', @_);
-    my $b = browser();
-    system("$b " . $link . "&")
-}
-sub browser {
-    require any;
-    my $wm = any::running_window_manager();
-    member ($wm, 'kwin', 'gnome-session') or $wm = 'other';
-    my %Br = (
-	      'kwin' => 'webclient-kde',
-	      'gnome-session' => 'webclient-gnome',
-	      'other' => $ENV{BROWSER} || find { -x "/usr/bin/$_"} qw(epiphany mozilla konqueror galeon)
-	     );
-    $Br{$wm}
-}
 sub displayLogs {
     #    system "/usr/sbin/logdrake --explain=drakxtools &"
     #create_dialog(N("Logs"), $mLog, { use_markup => 1, height => 480, width => 580, scroll => 1 })
@@ -456,7 +386,7 @@ sub setState {
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
-    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About..."))), activate => sub { getSite($online_site) }));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About..."))), activate => sub { mdkonline::get_site($online_site) }));
     $menu->append(gtksignal_connect(gtkset_active($checkme = Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), shouldStart()), toggled => sub { setAutoStart(uc(bool2text($checkme->get_active))) }));
     $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
