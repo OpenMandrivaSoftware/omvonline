@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-05 18:01+0100\n"
+"POT-Creation-Date: 2002-02-28 04:30+0100\n"
 "PO-Revision-Date: 2002-02-06 21:11GMT\n"
 "Last-Translator: Nick Niktaris(Νίκος Νύκταρης) <niktarin@yahoo.com>\n"
 "Language-Team: Greek <nls@hellug.gr>\n"
@@ -38,7 +38,7 @@ msgstr "Η.Π.Α."
 msgid "South America"
 msgstr "Νότια Αμερική"
 
-#: mdkonline:97 mdkonline:204 mdkonline:237
+#: mdkonline:97 mdkonline:215 mdkonline:248
 msgid "Next"
 msgstr "Επόμενο"
 
@@ -46,11 +46,11 @@ msgstr "Επόμενο"
 msgid "Finish"
 msgstr "Τέλος"
 
-#: mdkonline:99 mdkonline:536
+#: mdkonline:99 mdkonline:522
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: mdkonline:100 mdkonline:205 mdkonline:239 mdkonline:241
+#: mdkonline:100 mdkonline:216 mdkonline:250 mdkonline:252
 msgid "Back"
 msgstr "Πίσω"
 
@@ -66,34 +66,38 @@ msgstr "Εγγραφή"
 msgid "Yes I want automated updates"
 msgstr "Ναι θέλω να αυτοματοποιήσω τις αναβαθμίσεις"
 
-#: mdkonline:163
+#: mdkonline:164
 msgid "Quitting Wizard\n"
 msgstr "Τερματίζεται ο Οδηγός\n"
 
-#: mdkonline:251
+#: mdkonline:262
 msgid "Warning: No browser specified"
 msgstr "Προειδοποίηση: Δεν έχει επιλεγεί περιηγητής"
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "Connection problem"
 msgstr "Πρόβλημα σύνδεσης"
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr ""
 "Δεν μπόρεσε να γίνει επικοινωνία με το MandrakeOnline,παρακαλώ δοκιμάστε "
 "αργότερα"
 
-#: mdkonline:311
+#: mdkonline:308
 msgid "Wrong password"
 msgstr "Λάθος κωδικός πρόσβασης"
 
-#: mdkonline:311
+#: mdkonline:308
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
-"Either you'll have to type it again, or you'll need to create an account on "
+" Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to MandrakeOnline."
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
 msgstr ""
 "Το όνομα ή ο κωδικός πρόσβασης ήταν λάθος.\n"
 "Θα πρέπει να το ξαναπληκτρολογήσετε ή θα πρέπει να δημιουργήσετε έναν "
@@ -101,11 +105,11 @@ msgstr ""
 " Στην δεύτερη περίπτωση επιστρέψτε στο πρώτο βήμα για να συνδεθείτε με το "
 "Mandrake Online."
 
-#: mdkonline:388
+#: mdkonline:367
 msgid "Welcome to MandrakeOnline"
 msgstr "Καλώς ήρθατε στο MandrakeOnlline"
 
-#: mdkonline:389
+#: mdkonline:368
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -118,32 +122,37 @@ msgstr ""
 "(πακέτα, υλικό του υπολογιστή σας) σε μια κεντρική βάση για να μπορείτε\n"
 "να ενημερώνεστε για αναβαθμίσεις ασφαλείας και χρήσιμες αναβαθμίσεις.\n"
 
-#: mdkonline:405
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "Πολιτική Προσωπικού Απορρήτου της Mandrake"
 
-#: mdkonline:410
+#: mdkonline:390
 msgid "Authentification"
 msgstr "Πιστοποίηση"
 
-#: mdkonline:411
-msgid "Enter your MandrakeOnline login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr ""
 "Εισάγετε το όνομα χρήστη και τον κωδικό πρόσβασης για το MandrakeOnline:"
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Login:"
 msgstr "Όνομα χρήστη:          "
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Password:"
 msgstr "Κωδικός πρόσβασης:               "
 
-#: mdkonline:417
+#: mdkonline:393
+msgid "Machine name:"
+msgstr ""
+
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "Γίνεται η αποστολή των στοιχείων σας"
 
-#: mdkonline:418
+#: mdkonline:398
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -179,11 +188,11 @@ msgstr ""
 "Και τέλος θα σας προμηθεύσουμε με μια διεύθυνση με το δικό σας ΌνομαΧρήστη"
 "\\@mandrakeonline.net."
 
-#: mdkonline:425
+#: mdkonline:406
 msgid "Error while sending informations"
 msgstr "Σφάλμα κατά την αποστολή των στοιχείων"
 
-#: mdkonline:426
+#: mdkonline:407
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -193,15 +202,15 @@ msgstr ""
 "\n"
 "Επιλέξτε Επόμενο για να επαναλάβετε την αποστολή."
 
-#: mdkonline:432
+#: mdkonline:413
 msgid "Finished"
 msgstr "Τέλος"
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "Your upload was successful!"
 msgstr "Η αποστολή ήταν επιτυχής!"
 
-#: mdkonline:433
+#: mdkonline:414
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -209,47 +218,43 @@ msgstr ""
 "Από εδώ και πέρα θα παραλαβάνετε ανακοινώσεις\n"
 "σχετικά με ενημερώσεις ασφαλείας και αναβαθμίσεις χάρη στο MandrakeOnline."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 "Το MandrakeOnline σας παρέχει τη δυνατότητα αυτοματοποιημένων ενημερώσεων."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Ένα πρόγραμμα θα εκτελείται τακτικά στο σύστημά σας αναμένοντας νέες "
 "αναβαθμίσεις\n"
 
-#: mdkonline:437
+#: mdkonline:419
 msgid "automated Upgrades"
 msgstr "αυτοματοποιημένες Αναβαθμίσεις"
 
-#: mdkonline:443
-msgid "I want this (local) user to get email alerts"
-msgstr "Θέλω αυτός (ο τοπικός) χρήστης να λαμβάνει ειδοποιήσεις με email"
-
-#: mdkonline:448
+#: mdkonline:430
 msgid "Choose your geographical location"
 msgstr "Επιλέξτε τη γεωγραφική σας θέση"
 
-#: mdkonline:479
+#: mdkonline:461
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "δεν είναι δυνατό το άνοιγμα αυτού του αρχείου για ανάγνωση: %s"
 
-#: mdkonline:511
+#: mdkonline:497
 msgid "OK"
 msgstr "ΟΚ"
 
-#: mdkonline:517 mdkonline:543
+#: mdkonline:503 mdkonline:529
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-7,*-r-*"
 
-#: mdkonline:532
+#: mdkonline:518
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: mdkonline:541
+#: mdkonline:527
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -259,18 +264,21 @@ msgstr ""
 "Για να επιστρέψετε στο Βοηθό επιλέξτε 'Άκυρο',\n"
 "για τερματισμό επιλέξτε  'Έξοδος'."
 
-#: mdkonline:545
+#: mdkonline:531
 msgid "Really abort? - MandrakeOnline"
 msgstr "Να γίνει οπωσδήποτε τερματισμός; - MandrakeOnline"
 
-#: mdkonline:615
+#: mdkonline:607
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-7,*-r-*"
 
-#: mdkonline:616
+#: mdkonline:608
 msgid "Welcome"
 msgstr "Καλώς ορίσατε"
 
-#: mdkonline:640
+#: mdkonline:632
 msgid "Close"
 msgstr "Κλείσιμο"
+
+#~ msgid "I want this (local) user to get email alerts"
+#~ msgstr "Θέλω αυτός (ο τοπικός) χρήστης να λαμβάνει ειδοποιήσεις με email"

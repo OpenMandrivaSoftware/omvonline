@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 1.0\n"
-"POT-Creation-Date: 2002-02-05 18:01+0100\n"
+"POT-Creation-Date: 2002-02-28 04:30+0100\n"
 "PO-Revision-Date: 2002-02-09 10:14--500\n"
 "Last-Translator: Jaegeum Choe <baedaron@hananet.net>\n"
 "Language-Team: korean <baedaron@hananet.net>\n"
@@ -37,7 +37,7 @@ msgstr "미국"
 msgid "South America"
 msgstr "남아메리카"
 
-#: mdkonline:97 mdkonline:204 mdkonline:237
+#: mdkonline:97 mdkonline:215 mdkonline:248
 msgid "Next"
 msgstr "다음"
 
@@ -45,11 +45,11 @@ msgstr "다음"
 msgid "Finish"
 msgstr "완료"
 
-#: mdkonline:99 mdkonline:536
+#: mdkonline:99 mdkonline:522
 msgid "Quit"
 msgstr "종료"
 
-#: mdkonline:100 mdkonline:205 mdkonline:239 mdkonline:241
+#: mdkonline:100 mdkonline:216 mdkonline:250 mdkonline:252
 msgid "Back"
 msgstr "뒤로"
 
@@ -65,42 +65,46 @@ msgstr "구독"
 msgid "Yes I want automated updates"
 msgstr "예, 자동 업데이트하고 싶습니다."
 
-#: mdkonline:163
+#: mdkonline:164
 msgid "Quitting Wizard\n"
 msgstr "마법사 종료 중\n"
 
-#: mdkonline:251
+#: mdkonline:262
 msgid "Warning: No browser specified"
 msgstr "경고: 브라우저가 지정되지 않았습니다."
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "Connection problem"
 msgstr "연결 문제"
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "맨드레이크 온라인에 접속할 수 없습니다. 나중에 다시 시도하세요."
 
-#: mdkonline:311
+#: mdkonline:308
 msgid "Wrong password"
 msgstr "잘못된 암호"
 
-#: mdkonline:311
+#: mdkonline:308
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
-"Either you'll have to type it again, or you'll need to create an account on "
+" Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to MandrakeOnline."
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
 msgstr ""
 "사용자명이나 암호가 틀렸습니다.\n"
 "다시 시도해 보거나, 맨드레이크 온라인에 새 계정을 만들어 보세요.\n"
 "새 계정을 만들려면, 맨드레이크 온라인에 접속하기 위한 첫 단계로 돌아가세요."
 
-#: mdkonline:388
+#: mdkonline:367
 msgid "Welcome to MandrakeOnline"
 msgstr "맨드레이크 온라인에 잘 오셨습니다."
 
-#: mdkonline:389
+#: mdkonline:368
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -114,31 +118,36 @@ msgstr ""
 "이는 님께 보안 업데이트나 유용한 업그레이드에 대해 지속적으로 알리기 위함입니"
 "다.\n"
 
-#: mdkonline:405
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "맨드레이크 프라이버시 정책"
 
-#: mdkonline:410
+#: mdkonline:390
 msgid "Authentification"
 msgstr "인증"
 
-#: mdkonline:411
-msgid "Enter your MandrakeOnline login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "맨드레이크 온라인의 사용자명과 암호를 입력하세요:"
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Login:"
 msgstr "로그인:"
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Password:"
 msgstr "암호:"
 
-#: mdkonline:417
+#: mdkonline:393
+msgid "Machine name:"
+msgstr ""
+
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "님의 설정을 전송 중"
 
-#: mdkonline:418
+#: mdkonline:398
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -171,11 +180,11 @@ msgstr ""
 "받으실 수도 있습니다.\n"
 "또한, 「사용자명\\@mandrakeonline.net」의 이메일 별칭을 부여받게 됩니다."
 
-#: mdkonline:425
+#: mdkonline:406
 msgid "Error while sending informations"
 msgstr "정보를 보내는 동안 오류 발생"
 
-#: mdkonline:426
+#: mdkonline:407
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -185,15 +194,15 @@ msgstr ""
 "\n"
 "님의 설정을 다시 보내려면,「다음」을 누르세요."
 
-#: mdkonline:432
+#: mdkonline:413
 msgid "Finished"
 msgstr "완료했습니다."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "Your upload was successful!"
 msgstr "성공적으로 전송되었습니다!"
 
-#: mdkonline:433
+#: mdkonline:414
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -201,47 +210,43 @@ msgstr ""
 "이제부터 보안과 업그레이드에 대한 정보를 \n"
 "맨드레이크 온라인을 통해 받아 보실 수 있습니다."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "맨들레크 온라인은 님께 자동업데이트 기능을 제공합니다."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "새로운 업데이트를 확인하기 위하여 프로그램이 정기적으로 실행될 것입니다.\n"
 
-#: mdkonline:437
+#: mdkonline:419
 msgid "automated Upgrades"
 msgstr "자동 업그레이드"
 
-#: mdkonline:443
-msgid "I want this (local) user to get email alerts"
-msgstr "이 (지역) 사용자가 경고 이메일 받기를 원합니다."
-
-#: mdkonline:448
+#: mdkonline:430
 msgid "Choose your geographical location"
 msgstr "님이 거주하는 지역을 선택하세요."
 
-#: mdkonline:479
+#: mdkonline:461
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "이 파일을 읽을 수 없습니다: %s"
 
-#: mdkonline:511
+#: mdkonline:497
 msgid "OK"
 msgstr "확인"
 
-#: mdkonline:517 mdkonline:543
+#: mdkonline:503 mdkonline:529
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr ""
 "-adobe-times-bold-r-normal--12-*-75-75-p-*-iso8859-1,-*-batang-bold-r-"
 "normal--12-*-75-75-c-*-ksc5601.1987-0,*-r-*"
 
-#: mdkonline:532
+#: mdkonline:518
 msgid "Cancel"
 msgstr "취소"
 
-#: mdkonline:541
+#: mdkonline:527
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -251,20 +256,23 @@ msgstr ""
 "마법사로 돌아가려면 「취소」를 누르고,\n"
 "정말 종료하려면 「종료」를 누르세요."
 
-#: mdkonline:545
+#: mdkonline:531
 msgid "Really abort? - MandrakeOnline"
 msgstr "정말 종료합니까? - 맨드레이크 온라인"
 
-#: mdkonline:615
+#: mdkonline:607
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr ""
 "-adobe-times-bold-r-normal--16-*-75-75-p-*-iso8859-1,-*-batang-bold-r-"
 "normal--16-*-75-75-c-*-ksc5601.1987-0,*-r-*"
 
-#: mdkonline:616
+#: mdkonline:608
 msgid "Welcome"
 msgstr "어서 오세요,"
 
-#: mdkonline:640
+#: mdkonline:632
 msgid "Close"
 msgstr "닫기"
+
+#~ msgid "I want this (local) user to get email alerts"
+#~ msgstr "이 (지역) 사용자가 경고 이메일 받기를 원합니다."

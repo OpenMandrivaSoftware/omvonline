@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-17 23:11+0100\n"
+"POT-Creation-Date: 2002-02-28 04:30+0100\n"
 "PO-Revision-Date: 2002-02-25 20:39+0200\n"
 "Last-Translator: Ömer Fadýl USTA <omer_fad@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "USA"
 msgid "South America"
 msgstr "Güney Amerika"
 
-#: mdkonline:97 mdkonline:205 mdkonline:238
+#: mdkonline:97 mdkonline:215 mdkonline:248
 msgid "Next"
 msgstr "Ýleri"
 
@@ -46,11 +46,11 @@ msgstr "Ýleri"
 msgid "Finish"
 msgstr "Son"
 
-#: mdkonline:99 mdkonline:544
+#: mdkonline:99 mdkonline:522
 msgid "Quit"
 msgstr "Çýkýþ"
 
-#: mdkonline:100 mdkonline:206 mdkonline:240 mdkonline:242
+#: mdkonline:100 mdkonline:216 mdkonline:250 mdkonline:252
 msgid "Back"
 msgstr "Geri"
 
@@ -70,28 +70,32 @@ msgstr "Evet Otomatikmen Güncellemeleri istiyorum"
 msgid "Quitting Wizard\n"
 msgstr "Sihirbaz Kapatýlýyor\n"
 
-#: mdkonline:252
+#: mdkonline:262
 msgid "Warning: No browser specified"
 msgstr "Uyarý: internet tarayýcýsý bulunamadý"
 
-#: mdkonline:300 mdkonline:380
+#: mdkonline:296 mdkonline:358
 msgid "Connection problem"
 msgstr "Baðlantý problemi"
 
-#: mdkonline:300 mdkonline:380
+#: mdkonline:296 mdkonline:358
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "MandrakeOnline 'la baðlantý saðlanamadý , sonra tekrar deneyiniz"
 
-#: mdkonline:312
+#: mdkonline:308
 msgid "Wrong password"
 msgstr "Yanlýþ Parola"
 
-#: mdkonline:312
+#: mdkonline:308
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
-"Either you'll have to type it again, or you'll need to create an account on "
+" Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to MandrakeOnline."
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
 msgstr ""
 "Kullanýcýadý veya parolanýz yanlýþ.\n"
 "Aksi halinde parolanýzý kontrollü þekilde tekrar giriniz , veya "
@@ -99,11 +103,11 @@ msgstr ""
 "O halde Þimdi Geri tuþuna basýn ve MandrakeOnline a baðlanmak için\n"
 "talimatlarý izleyin!."
 
-#: mdkonline:389
+#: mdkonline:367
 msgid "Welcome to MandrakeOnline"
 msgstr "MandrakeOnline 'a Hoþgeldiniz"
 
-#: mdkonline:390
+#: mdkonline:368
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -116,31 +120,36 @@ msgstr ""
 "oluþturulacak ve sisteminiz hakkýnda güvenlik yamalarý ve güncellemelerden\n"
 "her an haberdar olacaksýnýz.\n"
 
-#: mdkonline:407
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake Gizlilik Poliçesi"
 
-#: mdkonline:412
+#: mdkonline:390
 msgid "Authentification"
 msgstr "Kimlikleme"
 
-#: mdkonline:413
-msgid "Enter your MandrakeOnline login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "MandrakeOnline kullanýcýadý ve parolanýzý giriniz:"
 
-#: mdkonline:415
+#: mdkonline:393
 msgid "Login:"
 msgstr "Kullanýcýadý:"
 
-#: mdkonline:415
+#: mdkonline:393
 msgid "Password:"
 msgstr "Parola:"
 
-#: mdkonline:419
+#: mdkonline:393
+msgid "Machine name:"
+msgstr ""
+
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "Yapýlandýrmanýz Yollanýyor"
 
-#: mdkonline:420
+#: mdkonline:398
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -173,11 +182,11 @@ msgstr ""
 "Sisteminiz hakkýnda yeni çýkan güncellemelerden haberdar olacaksýnýz.Bunun "
 "sonucunda kullanýcýadýnýz\\@mandrakeonline.net size ayrýlacaktýr."
 
-#: mdkonline:428
+#: mdkonline:406
 msgid "Error while sending informations"
 msgstr "Bilgi yollama esnasýnda HATA"
 
-#: mdkonline:429
+#: mdkonline:407
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -187,15 +196,15 @@ msgstr ""
 "\n"
 "Ýleri tuþuna basarak yeniden deneyiniz."
 
-#: mdkonline:435
+#: mdkonline:413
 msgid "Finished"
 msgstr "Bitti"
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "Your upload was successful!"
 msgstr "Göndermeniz Tamamlanmýþtýr!"
 
-#: mdkonline:436
+#: mdkonline:414
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -204,47 +213,43 @@ msgstr ""
 "hakkýnda ki tüm geliþmeler ve güvenlik açýklarý size bildirilecektir.\n"
 "MandrakeSoft Teþekkürlerini Sunar..."
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr ""
 "MandrakeOnline otamatikmen uygulanabilecek güncellemeleri teklif edecektir."
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Sistemizde belirli aralýklarla çalýþacak ve\n"
 "güncellemeleri takip edecek olan bir programdýr\n"
 
-#: mdkonline:441
+#: mdkonline:419
 msgid "automated Upgrades"
 msgstr "Otomatikmen Güncellemeler"
 
-#: mdkonline:447
-msgid "I want this (local) user to get email alerts"
-msgstr "Bu kullanýcýnýn(yerel) E-posta uyarýlarýný almasýný istiyorum"
-
-#: mdkonline:452
+#: mdkonline:430
 msgid "Choose your geographical location"
 msgstr "Sizin Coðrafik konumunuzu belirtin"
 
-#: mdkonline:483
+#: mdkonline:461
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "%s dosyasý okunmak amacý ile açýlamýyor."
 
-#: mdkonline:519
+#: mdkonline:497
 msgid "OK"
 msgstr "TAMAM"
 
-#: mdkonline:525 mdkonline:551
+#: mdkonline:503 mdkonline:529
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal-14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:540
+#: mdkonline:518
 msgid "Cancel"
 msgstr "Vazgeç"
 
-#: mdkonline:549
+#: mdkonline:527
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -254,18 +259,21 @@ msgstr ""
 "Sihirbaza gönmek için 'Vazgeç'i týklayýn,\n"
 "Çýkmak istediðinizden eminseniz 'Çýkýþ' Tuþuna basýnýz."
 
-#: mdkonline:553
+#: mdkonline:531
 msgid "Really abort? - MandrakeOnline"
 msgstr "Gerçekten iptal etmek istiyor musumuz? - Mandrake Online"
 
-#: mdkonline:623
+#: mdkonline:607
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:624
+#: mdkonline:608
 msgid "Welcome"
 msgstr "Hoþgeldiniz"
 
-#: mdkonline:648
+#: mdkonline:632
 msgid "Close"
 msgstr "Kapat"
+
+#~ msgid "I want this (local) user to get email alerts"
+#~ msgstr "Bu kullanýcýnýn(yerel) E-posta uyarýlarýný almasýný istiyorum"

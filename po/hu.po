@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-05 18:01+0100\n"
+"POT-Creation-Date: 2002-02-28 04:30+0100\n"
 "PO-Revision-Date: 2002-02-06 01:10GMT+1\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
@@ -39,7 +39,7 @@ msgstr "USA"
 msgid "South America"
 msgstr "Dél-Amerika"
 
-#: mdkonline:97 mdkonline:204 mdkonline:237
+#: mdkonline:97 mdkonline:215 mdkonline:248
 msgid "Next"
 msgstr "Következõ"
 
@@ -47,11 +47,11 @@ msgstr "Következõ"
 msgid "Finish"
 msgstr "Befejezés"
 
-#: mdkonline:99 mdkonline:536
+#: mdkonline:99 mdkonline:522
 msgid "Quit"
 msgstr "Kilépés"
 
-#: mdkonline:100 mdkonline:205 mdkonline:239 mdkonline:241
+#: mdkonline:100 mdkonline:216 mdkonline:250 mdkonline:252
 msgid "Back"
 msgstr "Vissza"
 
@@ -67,32 +67,36 @@ msgstr "Feliratkozás"
 msgid "Yes I want automated updates"
 msgstr "Szeretnék automatikus frissítéseket"
 
-#: mdkonline:163
+#: mdkonline:164
 msgid "Quitting Wizard\n"
 msgstr "Kilépés a Varázslóból\n"
 
-#: mdkonline:251
+#: mdkonline:262
 msgid "Warning: No browser specified"
 msgstr "Figyelmeztetés: nincs megadva böngészõ"
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "Connection problem"
 msgstr "Kapcsolati hiba"
 
-#: mdkonline:299 mdkonline:379
+#: mdkonline:296 mdkonline:358
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "A MandrakeOnline-hoz való kapcsolódás sikertelen; próbálja meg késõbb"
 
-#: mdkonline:311
+#: mdkonline:308
 msgid "Wrong password"
 msgstr "Helytelen jelszó"
 
-#: mdkonline:311
+#: mdkonline:308
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
-"Either you'll have to type it again, or you'll need to create an account on "
+" Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to MandrakeOnline."
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
 msgstr ""
 "A bejelentkezési név vagy a jelszó helytelen.\n"
 "Gépelje be újra; ha viszont nincs létrehozva ilyen felhasználónév a "
@@ -100,11 +104,11 @@ msgstr ""
 "Az utóbbi esetben lépjen vissza az elsõ lépéshez, hogy kapcsolódhasson a "
 "MandrakeOnline-hoz."
 
-#: mdkonline:388
+#: mdkonline:367
 msgid "Welcome to MandrakeOnline"
 msgstr "Üdvözli a MandrakeOnline!"
 
-#: mdkonline:389
+#: mdkonline:368
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -117,31 +121,36 @@ msgstr ""
 "(csomagok és hardverkonfiguráció) egy központi adatbázisba annak érdekében,\n"
 "hogy informálhassuk a biztonsági és egyéb frissítésekrõl.\n"
 
-#: mdkonline:405
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "Mandrake adatvédelmi elvek"
 
-#: mdkonline:410
+#: mdkonline:390
 msgid "Authentification"
 msgstr "Azonosítás"
 
-#: mdkonline:411
-msgid "Enter your MandrakeOnline login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Adja meg MandrakeOnline azonosítóját és jelszavát:"
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Login:"
 msgstr "Azonosító:"
 
-#: mdkonline:413
+#: mdkonline:393
 msgid "Password:"
 msgstr "Jelszó:"
 
-#: mdkonline:417
+#: mdkonline:393
+msgid "Machine name:"
+msgstr ""
+
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "Konfiguráció küldése"
 
-#: mdkonline:418
+#: mdkonline:398
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -179,11 +188,11 @@ msgstr ""
 "Egy új e-mail-címet is rendelkezésére bocsátunk:\n"
 "felhasználónév\\@mandrakeonline.net"
 
-#: mdkonline:425
+#: mdkonline:406
 msgid "Error while sending informations"
 msgstr "Hiba az adatok küldése közben"
 
-#: mdkonline:426
+#: mdkonline:407
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -193,15 +202,15 @@ msgstr ""
 "\n"
 "Nyomja le a 'Következõ' gombot, ha szeretné újra megpróbálni."
 
-#: mdkonline:432
+#: mdkonline:413
 msgid "Finished"
 msgstr "Kész"
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "Your upload was successful!"
 msgstr "A feltöltés sikeresen megtörtént."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -209,45 +218,41 @@ msgstr ""
 "Mostantól kezdve információkat fog kapni a biztonsági\n"
 "és egyéb frissítésekrõl - a MandrakeOnline-nak köszönhetõen."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "A MandrakeOnline lehetõséget nyújt a frissítések automatizálására."
 
-#: mdkonline:433
+#: mdkonline:414
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Egy program fog futni rendszeresen az Ön gépén, a frissítéseket figyelve\n"
 
-#: mdkonline:437
+#: mdkonline:419
 msgid "automated Upgrades"
 msgstr "automatizált frissítések"
 
-#: mdkonline:443
-msgid "I want this (local) user to get email alerts"
-msgstr "Ezen (helyi) felhasználó kapjon email-értesítéseket"
-
-#: mdkonline:448
+#: mdkonline:430
 msgid "Choose your geographical location"
 msgstr "Válassza ki a földrajzi helyét"
 
-#: mdkonline:479
+#: mdkonline:461
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "nem nyitható meg olvasásra: %s"
 
-#: mdkonline:511
+#: mdkonline:497
 msgid "OK"
 msgstr "OK"
 
-#: mdkonline:517 mdkonline:543
+#: mdkonline:503 mdkonline:529
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:532
+#: mdkonline:518
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: mdkonline:541
+#: mdkonline:527
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -257,18 +262,21 @@ msgstr ""
 "A Varázslóhoz való visszatéréshez nyomjon 'Mégsem'-et;\n"
 "ha viszont ki szeretne lépni, nyomjon 'Kilépés'-t."
 
-#: mdkonline:545
+#: mdkonline:531
 msgid "Really abort? - MandrakeOnline"
 msgstr "Valóban kilép? - MandrakeOnline"
 
-#: mdkonline:615
+#: mdkonline:607
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:616
+#: mdkonline:608
 msgid "Welcome"
 msgstr "Üdvözöljük"
 
-#: mdkonline:640
+#: mdkonline:632
 msgid "Close"
 msgstr "Bezárás"
+
+#~ msgid "I want this (local) user to get email alerts"
+#~ msgstr "Ezen (helyi) felhasználó kapjon email-értesítéseket"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
-"POT-Creation-Date: 2002-02-17 23:11+0100\n"
+"POT-Creation-Date: 2002-02-28 04:30+0100\n"
 "PO-Revision-Date: 2002-02-20 23:25EET\n"
 "Last-Translator: Matias Griese <mahagr@utu.fi>\n"
 "Language-Team: Finnish\n"
@@ -38,7 +38,7 @@ msgstr "Yhdysvallat"
 msgid "South America"
 msgstr "Etelä-Amerikka"
 
-#: mdkonline:97 mdkonline:205 mdkonline:238
+#: mdkonline:97 mdkonline:215 mdkonline:248
 msgid "Next"
 msgstr "Seuraava"
 
@@ -46,11 +46,11 @@ msgstr "Seuraava"
 msgid "Finish"
 msgstr "Valmis"
 
-#: mdkonline:99 mdkonline:544
+#: mdkonline:99 mdkonline:522
 msgid "Quit"
 msgstr "Poistu"
 
-#: mdkonline:100 mdkonline:206 mdkonline:240 mdkonline:242
+#: mdkonline:100 mdkonline:216 mdkonline:250 mdkonline:252
 msgid "Back"
 msgstr "Takaisin"
 
@@ -70,28 +70,32 @@ msgstr "Kyllä, haluan automaattiset päivitykset"
 msgid "Quitting Wizard\n"
 msgstr "Poistutaan velhosta\n"
 
-#: mdkonline:252
+#: mdkonline:262
 msgid "Warning: No browser specified"
 msgstr "Varoitus: selainta ei ole asetettu"
 
-#: mdkonline:300 mdkonline:380
+#: mdkonline:296 mdkonline:358
 msgid "Connection problem"
 msgstr "Yhteysongelma"
 
-#: mdkonline:300 mdkonline:380
+#: mdkonline:296 mdkonline:358
 msgid "MandrakeOnline could not be contacted, please try again at a later time"
 msgstr "Ei yhteyttä MandrakeOnlineen, kokeile myöhemmin uudelleen"
 
-#: mdkonline:312
+#: mdkonline:308
 msgid "Wrong password"
 msgstr "Väärä salasana"
 
-#: mdkonline:312
+#: mdkonline:308
+#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
-"Either you'll have to type it again, or you'll need to create an account on "
+" Either you'll have to type it again, or you'll need to create an account on "
 "MandrakeOnline.\n"
-" In the latter case, go back to the first step to connect to MandrakeOnline."
+" In the latter case, go back to the first step to connect to "
+"MandrakeOnline.\n"
+" Be aware that you must also provide a Machine name \n"
+" (only alphabetical characters are admitted)"
 msgstr ""
 "Käyttäjätunnuksesi tai salasanasi oli väärä.\n"
 "Sinun pitää joko kirjoittaa se uudelleen tai luoda uusi tunnus "
@@ -99,11 +103,11 @@ msgstr ""
 " Jälkimmäisessä tapauksessa mene takaisin ensimmäiseen vaiheeseen ottaaksesi "
 "yhteyden MandrakeOnlineen."
 
-#: mdkonline:389
+#: mdkonline:367
 msgid "Welcome to MandrakeOnline"
 msgstr "Tervetuloa MandrakeOnlineen"
 
-#: mdkonline:390
+#: mdkonline:368
 msgid ""
 "At this step You are supposed to have an account on MandrakeOnline [1].\n"
 "This assistant will help you to upload your configuration\n"
@@ -116,31 +120,36 @@ msgstr ""
 "sinut voitaisiin pitää ajan tasalla turvapäivityksistä ja hyödyllisistä\n"
 "päivityksistä.\n"
 
-#: mdkonline:407
+#: mdkonline:385
 msgid "Mandrake Privacy Policy"
 msgstr "Mandraken yksityisyyspolitiikka"
 
-#: mdkonline:412
+#: mdkonline:390
 msgid "Authentification"
 msgstr "Aidonnus"
 
-#: mdkonline:413
-msgid "Enter your MandrakeOnline login and password:"
+#: mdkonline:391
+#, fuzzy
+msgid "Enter your MandrakeOnline login, password and machine name:"
 msgstr "Syötä tunnuksesi MandrakeOnlineen ekä salasanasi:"
 
-#: mdkonline:415
+#: mdkonline:393
 msgid "Login:"
 msgstr "Tunnus:"
 
-#: mdkonline:415
+#: mdkonline:393
 msgid "Password:"
 msgstr "Salasana:"
 
-#: mdkonline:419
+#: mdkonline:393
+msgid "Machine name:"
+msgstr ""
+
+#: mdkonline:397
 msgid "Sending your Configuration"
 msgstr "Lähetän asetuksesi"
 
-#: mdkonline:420
+#: mdkonline:398
 msgid ""
 "In order to benefit from MandrakeOnline services,\n"
 "we are about to upload your configuration.\n"
@@ -160,11 +169,11 @@ msgid ""
 "provided to you."
 msgstr ""
 
-#: mdkonline:428
+#: mdkonline:406
 msgid "Error while sending informations"
 msgstr "Virhe lähetettäessä tietoja"
 
-#: mdkonline:429
+#: mdkonline:407
 msgid ""
 "There was an error while sending your personal informations.\n"
 "\n"
@@ -174,15 +183,15 @@ msgstr ""
 "\n"
 "Paina Seuraava lähettääksesi asetuksesi uudelleen."
 
-#: mdkonline:435
+#: mdkonline:413
 msgid "Finished"
 msgstr "Valmis"
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "Your upload was successful!"
 msgstr "Imurointi onnistui!"
 
-#: mdkonline:436
+#: mdkonline:414
 msgid ""
 "From now you will receive on security\n"
 "and updates announcements thanks to MandrakeOnline."
@@ -190,46 +199,42 @@ msgstr ""
 "Tästä lähtien saat turva- ja päivitysilmoitukset\n"
 "suoraan MandrakeOnlinesta."
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "MandrakeOnline offers you the ability to automate the updates."
 msgstr "MandrakeOnline mahdollistaa päivitysten automatisoinnin."
 
-#: mdkonline:436
+#: mdkonline:414
 msgid "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Ohjelma käynnistyy säännöllisesti järjestelmässäsi odottamaan uusia "
 "päivityksiä\n"
 
-#: mdkonline:441
+#: mdkonline:419
 msgid "automated Upgrades"
 msgstr "automaattiset päivitykset"
 
-#: mdkonline:447
-msgid "I want this (local) user to get email alerts"
-msgstr "Haluan että tämä (paikallinen) käyttäjä saa sähköpostihälytyksiä"
-
-#: mdkonline:452
+#: mdkonline:430
 msgid "Choose your geographical location"
 msgstr "Vaihda geograafinen sijaintisi"
 
-#: mdkonline:483
+#: mdkonline:461
 #, c-format
 msgid "cannot open this file for read: %s"
 msgstr "tätä tiedostoa ei voi avata luettavaksi: %s"
 
-#: mdkonline:519
+#: mdkonline:497
 msgid "OK"
 msgstr "Ok"
 
-#: mdkonline:525 mdkonline:551
+#: mdkonline:503 mdkonline:529
 msgid "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--14-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:540
+#: mdkonline:518
 msgid "Cancel"
 msgstr "Peruuta"
 
-#: mdkonline:549
+#: mdkonline:527
 msgid ""
 "Do you really want to abort MandrakeOnline?\n"
 "To return to the Wizard press 'Cancel',\n"
@@ -239,18 +244,21 @@ msgstr ""
 "Palataksesi velhoon paina 'Peruuta',\n"
 "jos haluat todella poistua, paina 'Poistu'."
 
-#: mdkonline:553
+#: mdkonline:531
 msgid "Really abort? - MandrakeOnline"
 msgstr "Haluatko todella poistua? - MandrakeOnline"
 
-#: mdkonline:623
+#: mdkonline:607
 msgid "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 msgstr "-adobe-times-bold-r-normal--17-*-100-100-p-*-iso8859-*,*-r-*"
 
-#: mdkonline:624
+#: mdkonline:608
 msgid "Welcome"
 msgstr "Tervetuloa"
 
-#: mdkonline:648
+#: mdkonline:632
 msgid "Close"
 msgstr "Sulje"
+
+#~ msgid "I want this (local) user to get email alerts"
+#~ msgstr "Haluan että tämä (paikallinen) käyttäjä saa sähköpostihälytyksiä"
