@@ -94,8 +94,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/autostart/*
 
 %changelog
-* Fri Apr  9 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-2mdk
-- move mdkonline process files to /root/.mdkonline directory (#8621)
+* Tue Apr 13 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-2mdk
+- move mdkonline process and conf files  to /root/.MdkOnline directory (#8621)
 - add migration code to ensure compatibility with old versions
 - one more fix for rpmvercmp (remove extra shift to avoid comparing numbers and strings)
 - better logs
