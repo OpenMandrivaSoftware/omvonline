@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: mdkonline 0.01\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-01-31 20:23+0100\n"
-"PO-Revision-Date: 2003-02-20 03:30--730\n"
-"Last-Translator: Yuzz <yuzz@likom.com.my>\n"
+"PO-Revision-Date: 2005-04-02 22:59+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Bahasa Melayu <yuzz@emasonline.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,20 +18,17 @@ msgstr ""
 #: ../mdkapplet:63
 #, c-format
 msgid "Your system is up-to-date"
-msgstr ""
+msgstr "Sistem anda telah dikemaskini"
 
 #: ../mdkapplet:69
 #, fuzzy, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrakeonline.net"
-msgstr ""
-"Untuk sebarang masalah sila hantar emel kepada support@mandrakeonline.net\n"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrakeonline.net"
+msgstr "Untuk sebarang masalah sila hantar emel kepada support@mandrakeonline.net\n"
 
 #: ../mdkapplet:75
-#, c-format
+#, fuzzy, c-format
 msgid "System is busy. Please wait ..."
-msgstr ""
+msgstr "Melaksanakan anaconda, pemasang sistem %s  - sila tunggu...\n"
 
 #: ../mdkapplet:81
 #, fuzzy, c-format
@@ -41,68 +38,77 @@ msgstr "Konfigurasikan penjimatan tenaga bagi sistem anda"
 #: ../mdkapplet:87
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
+msgstr "Servis tidak ditetapkan. Sila klik pada \"Tetapkan servis\""
 
 #: ../mdkapplet:93
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr ""
+msgstr "Rangkaian tidak berfungsi. Sila tetapkan rangkaian anda"
 
 #: ../mdkapplet:99
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
+msgstr "Servis tidak diaktifkan. Sila klik pada \"Laman Web Online\""
 
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
+msgstr "Keluaran tidak disokong (keluaran terlalu lama, atau keluaran pembangunan)"
 
-#: ../mdkapplet:110 ../mdkapplet:164
+#: ../mdkapplet:110
+#: ../mdkapplet:164
 #, fuzzy, c-format
 msgid "Install updates"
-msgstr "Install"
+msgstr "Kemaskini Cakera"
 
 #: ../mdkapplet:111
 #, fuzzy, c-format
 msgid "Configure the service"
-msgstr "Peranti dikonfigurasikan:\n"
+msgstr "                    [--initscript <service>]\n"
 
 #: ../mdkapplet:112
 #, fuzzy, c-format
 msgid "Check Updates"
-msgstr "Kemaskini sekuriti"
+msgstr "Periksa kemaskini"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:228 ../mdkonline:89
-#: ../mdkonline:93 ../mdkonline:131
+#: ../mdkapplet:113
+#: ../mdkapplet:167
+#: ../mdkapplet:228
+#: ../mdkonline:89
+#: ../mdkonline:93
+#: ../mdkonline:131
 #, c-format
 msgid "Please wait"
 msgstr "Sila tunggu"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:228
-#, fuzzy, c-format
+#: ../mdkapplet:113
+#: ../mdkapplet:166
+#: ../mdkapplet:167
+#: ../mdkapplet:228
+#, c-format
 msgid "Check updates"
-msgstr "Kemaskini sekuriti"
+msgstr "Periksa kemaskini"
 
 #: ../mdkapplet:115
-#, c-format
+#, fuzzy, c-format
 msgid "Online WebSite"
-msgstr ""
+msgstr "Laman web _RHN..."
 
 #: ../mdkapplet:116
 #, fuzzy, c-format
 msgid "Configure Network"
-msgstr "Konfigurasikan Gema"
+msgstr "Konfigurasikan Pemasangan Rangkaian"
 
 #: ../mdkapplet:117
 #, fuzzy, c-format
 msgid "Configure Now!"
-msgstr "Membaca konfigurasi\n"
+msgstr "_Konfigurasikan Firewall"
 
-#: ../mdkapplet:152 ../mdkapplet:232
+#: ../mdkapplet:152
+#: ../mdkapplet:232
 #, fuzzy, c-format
 msgid "Mandrakelinux Updates Applet"
-msgstr "Polisi Peribadi Mandrakelinux"
+msgstr "Membaca kemaskini anaconda..."
 
 #: ../mdkapplet:162
 #, c-format
@@ -117,14 +123,15 @@ msgstr "Buat konfigurasi"
 #: ../mdkapplet:169
 #, fuzzy, c-format
 msgid "See logs"
-msgstr "Lihat +5s"
+msgstr "Log Sistem"
 
 #: ../mdkapplet:172
 #, c-format
 msgid "Status"
 msgstr "Status"
 
-#: ../mdkapplet:176 ../mdkapplet:370
+#: ../mdkapplet:176
+#: ../mdkapplet:370
 #, c-format
 msgid "Close"
 msgstr "Tutup"
@@ -132,7 +139,7 @@ msgstr "Tutup"
 #: ../mdkapplet:213
 #, fuzzy, c-format
 msgid "Network Connection: "
-msgstr "Perhubungan"
+msgstr "Sambungan daripada %s:%u"
 
 #: ../mdkapplet:213
 #, c-format
@@ -145,19 +152,20 @@ msgid "Down"
 msgstr "Turun"
 
 #: ../mdkapplet:214
-#, c-format
+#, fuzzy, c-format
 msgid "Last check: "
-msgstr ""
+msgstr "Memeriksa Kebergantungan"
 
-#: ../mdkapplet:215 ../mdkonline:127
+#: ../mdkapplet:215
+#: ../mdkonline:127
 #, c-format
 msgid "Machine name:"
 msgstr "Nama mesin:"
 
 #: ../mdkapplet:216
-#, c-format
+#, fuzzy, c-format
 msgid "Updates: "
-msgstr ""
+msgstr "Kemaskini"
 
 #: ../mdkapplet:220
 #, c-format
@@ -165,9 +173,9 @@ msgid "Launching drakconnect\n"
 msgstr ""
 
 #: ../mdkapplet:224
-#, c-format
+#, fuzzy, c-format
 msgid "Launching mdkupdate --applet\n"
-msgstr ""
+msgstr "Wanda & George: Perkara Aplet"
 
 #: ../mdkapplet:227
 #, c-format
@@ -175,24 +183,24 @@ msgid "Mandrakeonline seems to be reinstalled, reloading applet ...."
 msgstr ""
 
 #: ../mdkapplet:238
-#, c-format
+#, fuzzy, c-format
 msgid "Computing new updates...\n"
-msgstr ""
+msgstr "Membaca kemaskini anaconda..."
 
 #: ../mdkapplet:240
 #, fuzzy, c-format
 msgid "Connecting to"
-msgstr "Masalah perhubungan"
+msgstr "Menyambung ke %s:%u..."
 
 #: ../mdkapplet:247
 #, fuzzy, c-format
 msgid "Response from Mandrakeonline server\n"
-msgstr "Selamat Datang di Mandrakeonline"
+msgstr "DISCON, Putus daripada pelayan"
 
 #: ../mdkapplet:265
-#, c-format
+#, fuzzy, c-format
 msgid "Checking... Updates are available\n"
-msgstr ""
+msgstr "Tiada kemaskini didapati (%d diabaikan)"
 
 #: ../mdkapplet:270
 #, c-format
@@ -207,7 +215,7 @@ msgstr ""
 #: ../mdkapplet:272
 #, fuzzy, c-format
 msgid "Unknown state"
-msgstr "Nama hos tidak diketahui"
+msgstr "keadaan tidak diketahui"
 
 #: ../mdkapplet:273
 #, c-format
@@ -226,16 +234,12 @@ msgstr ""
 
 #: ../mdkapplet:276
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
 msgstr ""
 
 #: ../mdkapplet:278
 #, c-format
-msgid ""
-"Problem occurred while connecting to the server, please contact the support "
-"team"
+msgid "Problem occurred while connecting to the server, please contact the support team"
 msgstr ""
 
 #: ../mdkapplet:280
@@ -244,9 +248,9 @@ msgid "System is up-to-date\n"
 msgstr ""
 
 #: ../mdkapplet:312
-#, c-format
+#, fuzzy, c-format
 msgid "No check"
-msgstr ""
+msgstr "Memeriksa Kebergantungan"
 
 #: ../mdkapplet:325
 #, c-format
@@ -274,29 +278,30 @@ msgid "About..."
 msgstr "Keterangan..."
 
 #: ../mdkapplet:404
-#, c-format
+#, fuzzy, c-format
 msgid "Always launch on startup"
-msgstr ""
+msgstr "Tiada senarai pelayan pada permulaan"
 
 #: ../mdkapplet:406
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
 
-#: ../mdkonline:52 ../mdkonline:106
+#: ../mdkonline:52
+#: ../mdkonline:106
 #, c-format
 msgid "Mandrakeonline"
 msgstr "Mandrakeonline"
 
 #: ../mdkonline:55
-#, c-format
+#, fuzzy, c-format
 msgid "I already have an account"
-msgstr ""
+msgstr "Nama akaun:"
 
 #: ../mdkonline:56
-#, c-format
+#, fuzzy, c-format
 msgid "I want to subscribe"
-msgstr ""
+msgstr "Saya mahu pempartisyenan automatik:"
 
 #: ../mdkonline:89
 #, c-format
@@ -306,7 +311,7 @@ msgstr "Membaca konfigurasi\n"
 #: ../mdkonline:93
 #, fuzzy, c-format
 msgid "Sending configuration..."
-msgstr "Membaca konfigurasi\n"
+msgstr "Status konfigurasi bagi %s %s\n"
 
 #: ../mdkonline:109
 #, c-format
@@ -329,12 +334,14 @@ msgstr ""
 msgid "Enter your Mandrakeonline login, password and machine name:"
 msgstr "Masukkan login, katalaluan, dan nama mesin  Mandrakeonline Anda:"
 
-#: ../mdkonline:125 ../mdkonline:156
+#: ../mdkonline:125
+#: ../mdkonline:156
 #, c-format
 msgid "Login:"
 msgstr "Login:"
 
-#: ../mdkonline:126 ../mdkonline:157
+#: ../mdkonline:126
+#: ../mdkonline:157
 #, c-format
 msgid "Password:"
 msgstr "Katalaluan:"
@@ -342,7 +349,7 @@ msgstr "Katalaluan:"
 #: ../mdkonline:131
 #, fuzzy, c-format
 msgid "Connecting to Mandrakeonline website..."
-msgstr "Selamat Datang di Mandrakeonline"
+msgstr "Ralat menyambung ke RHN..."
 
 #: ../mdkonline:139
 #, c-format
@@ -354,10 +361,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrakeexpert.com."
@@ -369,14 +374,14 @@ msgstr ""
 "1) daftar pakej yang diinstal di dalam sistem Anda,\n"
 "2) konfigurasi perkakasan Anda.\n"
 "\n"
-"Jika Anda merasa tidak sesuai dengan idea ini, atau tidak ingin "
-"memanfaatkan\n"
+"Jika Anda merasa tidak sesuai dengan idea ini, atau tidak ingin memanfaatkan\n"
 "servis ini, tekan 'Batal'. Dengan menekan 'Lanjut', Anda mengizinkan kami\n"
-"memberitahu Anda mengenai kemaskini sekuriti dan upgrade bermanfaat melalui "
-"email.\n"
+"memberitahu Anda mengenai kemaskini sekuriti dan upgrade bermanfaat melalui email.\n"
 "Tambahan pula, Anda akan mendapat diskaun servis di www.mandrakeexpert.com."
 
-#: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:131
+#: ../mdkonline:141
+#: ../mdkonline:180
+#: ../mdkupdate:131
 #, c-format
 msgid "Connection problem"
 msgstr "Masalah perhubungan"
@@ -389,30 +394,27 @@ msgstr "atau"
 #: ../mdkonline:141
 #, fuzzy, c-format
 msgid "wrong password:"
-msgstr "Salah katalaluan"
+msgstr "Salah katalaluan.\n"
 
 #: ../mdkonline:141
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"Mandrakeonline.\n"
-" In the latter case, go back to the first step to connect to "
-"Mandrakeonline.\n"
+" Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n"
+" In the latter case, go back to the first step to connect to Mandrakeonline.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Login atau katalaluan Anda salah.\n"
 " Anda harus taip sekali lagi, atau membuat akaun di Mandrakeonline.\n"
-" Pada kes terakhir, kembali ke langkah pertama utk menghubungi "
-"Mandrakeonline.\n"
+" Pada kes terakhir, kembali ke langkah pertama utk menghubungi Mandrakeonline.\n"
 " Ingat, Anda juga harus memberikan nama Mesin \n"
 " (hanya karektor alfabet sahaj dibenarkan)"
 
 #: ../mdkonline:153
 #, fuzzy, c-format
 msgid "Create a Mandrakeonline Account"
-msgstr "Selamat Datang di Mandrakeonline"
+msgstr "Tetapan Akaun Pengguna"
 
 #: ../mdkonline:158
 #, c-format
@@ -436,7 +438,7 @@ msgstr ""
 #: ../mdkonline:163
 #, fuzzy, c-format
 msgid "Please provide a login"
-msgstr "Mainkan cereka dan lagu"
+msgstr "Sila pilih jenis logmasuk anda:"
 
 #: ../mdkonline:163
 #, c-format
@@ -496,18 +498,16 @@ msgstr ""
 #: ../mdkonline:219
 #, fuzzy, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Upload Anda berjaya!"
+msgstr "Sambungan berjaya ditutup."
 
 #: ../mdkonline:220
 #, fuzzy, c-format
 msgid "Problem uploading configuration"
-msgstr "Membaca konfigurasi\n"
+msgstr "Konfigurasi Pemuat But"
 
 #: ../mdkonline:221
 #, c-format
-msgid ""
-"Cannot connect to mandrakeonline website: wrong login/password or router/"
-"firewall bad settings"
+msgid "Cannot connect to mandrakeonline website: wrong login/password or router/firewall bad settings"
 msgstr ""
 
 #: ../mdkonline.pm:66
@@ -516,9 +516,9 @@ msgid "Login and password should be less than 12 characters\n"
 msgstr ""
 
 #: ../mdkonline.pm:67
-#, c-format
+#, fuzzy, c-format
 msgid "Special characters are not allowed\n"
-msgstr ""
+msgstr "Logmasuk root tak diizinkan."
 
 #: ../mdkonline.pm:68
 #, c-format
@@ -526,14 +526,14 @@ msgid "Please fill in all fields\n"
 msgstr ""
 
 #: ../mdkonline.pm:69
-#, c-format
+#, fuzzy, c-format
 msgid "Email not valid\n"
-msgstr ""
+msgstr "%s adalah nama hos yang tidak sah"
 
 #: ../mdkonline.pm:70
-#, c-format
+#, fuzzy, c-format
 msgid "Account already exists\n"
-msgstr ""
+msgstr "Akaun dengan namapengguna '%s' tersedia wujud."
 
 #: ../mdkonline.pm:76
 #, c-format
@@ -545,8 +545,7 @@ msgstr "Masalah menyambung ke pelayan \n"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandrakesoft.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -569,7 +568,7 @@ msgstr "  --applet       - kemaskini semua maklumat.\n"
 #: ../mdkupdate:65
 #, fuzzy, c-format
 msgid "  --applet       - launch Mandrakeupdate.\n"
-msgstr "  --applet       - kemaskini semua maklumat.\n"
+msgstr "Wanda & George: Perkara Aplet"
 
 #: ../mdkupdate:73
 #, c-format
@@ -586,146 +585,3 @@ msgstr "Mandrakeupdate gagal dihubungi, sila cuba sekali lagi."
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal mengemaskini pakej dari media update_source.\n"
 
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Gagal mengemaskini pakej dari media mdkupdate.\n"
-
-#~ msgid "Next"
-#~ msgstr "Lanjut"
-
-#~ msgid "Cancel"
-#~ msgstr "Batal"
-
-#, fuzzy
-#~ msgid "Previous"
-#~ msgstr "Pralihat"
-
-#, fuzzy
-#~ msgid "I don't have a Mandrakeonline account and I want to subscribe"
-#~ msgstr "Saya tak punya account Mandrakeonline dan saya ingin "
-
-#~ msgid "Mandrakelinux Privacy Policy"
-#~ msgstr "Polisi Peribadi Mandrakelinux"
-
-#~ msgid "Authentification"
-#~ msgstr "Otentifikasi"
-
-#, fuzzy
-#~ msgid "Send Configuration"
-#~ msgstr "Membaca konfigurasi\n"
-
-#~ msgid "Finish"
-#~ msgstr "Selesai"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "upgrade automatik"
-
-#, fuzzy
-#~ msgid "Country:"
-#~ msgstr "Kawalan:"
-
-#~ msgid "Error"
-#~ msgstr "Ralat"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Keluar Wizard\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "Mandrakeonline could not be contacted, please try again at a later time"
-#~ msgstr "Mandrakeupdate gagal dihubungi, sila cuba sekali lagi."
-
-#~ msgid "Wrong password"
-#~ msgstr "Salah katalaluan"
-
-#, fuzzy
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --applet       - kemaskini semua maklumat.\n"
-
-#, fuzzy
-#~ msgid "Skip Wizard"
-#~ msgstr " Langkau Wizard"
-
-#~ msgid "Subscribe"
-#~ msgstr "Ikut"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "Ya saya ingin upgrade automatik"
-
-#~ msgid "  --security     - use only security media.\n"
-#~ msgstr "  --security     - hanya guna media keselamatan.\n"
-
-#~ msgid "  -v             - verbose mode.\n"
-#~ msgstr "  -v             - mod verbose.\n"
-
-#~ msgid ""
-#~ "You need to have an account on Mandrakeonline, or update your "
-#~ "subscription."
-#~ msgstr ""
-#~ "Anda perlu memiliki akaun dalam Mandrakeonline, atau kemaskini "
-#~ "pendaftaran anda."
-
-#~ msgid "Your login or password may be wrong"
-#~ msgstr "Kemasukan atau katalaluan tidak betul"
-
-#~ msgid "Unable to create mdkupdate medium.\n"
-#~ msgstr "Gagal mencipta media mdkupdate.\n"
-
-#~ msgid "Africa"
-#~ msgstr "Afrika"
-
-#~ msgid "Asia"
-#~ msgstr "Asia"
-
-#~ msgid "Australia"
-#~ msgstr "Australia"
-
-#~ msgid "Europe"
-#~ msgstr "Eropa"
-
-#~ msgid "North America"
-#~ msgstr "Amerika Utara"
-
-#~ msgid "South America"
-#~ msgstr "Amerika Selatan"
-
-#~ msgid "Back"
-#~ msgstr "Kembali"
-
-#~ msgid "Warning: No browser specified"
-#~ msgstr "Awas: Tiada browser spesifik"
-
-#~ msgid "Sending your Configuration"
-#~ msgstr "Mengirim Konfigurasi Anda"
-
-#~ msgid "Error while sending informations"
-#~ msgstr "Error semasa mengirim informasi"
-
-#~ msgid ""
-#~ "There was an error while sending your personal informations.\n"
-#~ "\n"
-#~ "Press Next to try and send your configuration again."
-#~ msgstr ""
-#~ "Ada error semasa mengirim info personal Anda.\n"
-#~ "\n"
-#~ "Tekan Lanjut untuk mencuba dan mengirim konfigurasi Anda lagi."
-
-#~ msgid "Finished"
-#~ msgstr "Selesai"
-
-#~ msgid "Choose your geographical location"
-#~ msgstr "Pilih letak geografi Anda"
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid ""
-#~ "Do you really want to abort Mandrakeonline?\n"
-#~ "To return to the Wizard press 'Cancel',\n"
-#~ "to really quit it press 'Quit'."
-#~ msgstr ""
-#~ "Anda ingin keluar dari Mandrakeonline?\n"
-#~ "Untuk kembali ke Wizard tekan 'Batal',\n"
-#~ "untuk benar-benar keluar tekan 'Keluar'."
-
-#~ msgid "Really abort? - Mandrakeonline"
-#~ msgstr "Benar ingin keluar? - Mandrakeonline"
