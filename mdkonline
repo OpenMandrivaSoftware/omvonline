@@ -310,9 +310,9 @@ sub send_config {
 # NEW METHOD (http)
     my $ua = LWP::UserAgent->new;
     $ua->agent("MdkOnlineAgent/0.15" . $ua->agent);
-    my $response = $ua->request(POST 'http://dev-online/upload/test-up-wizard.php',
+    my $response = $ua->request(POST 'http://dev-online/upload/wizard.php',
 				Content_Type => 'form-data',
-				Content => [submit => "test_upload",
+				Content => [submit => "upload_wizard",
 					    wizard => ["/root/$login.$passwd.online.log.bz2.uue"]
 					    ]);
 
