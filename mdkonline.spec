@@ -18,7 +18,7 @@ BuildArch: noarch
 %package backend
 Summary: MandrakeOnline libraries and background tools
 Group: System/Configuration/Other
-Requires: drakxtools-newt
+Requires: drakxtools-newt >= 10-54mdk
 Conflicts: %{name} < 1.1-3mdk
 
 %description
