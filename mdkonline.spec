@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Tue Mar  2 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.2mdk
 - autostart mdkapplet (KDE/GNOME)
-- timeout set to 1 hour checks.
+- timeout set to 1 hour checks (decrease server loads).
 
 * Mon Mar  1 2004 Daouda LO <daouda@mandrakesoft.com> 1.0-0.1mdk
 - Mandrake Online Resurrected/Rewrited
