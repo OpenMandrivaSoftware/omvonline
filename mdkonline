@@ -2,9 +2,9 @@
 ################################################################################
 # MandrakeOnline                                                               # 
 #                                                                              #
-# Copyright (C) 2001 MandrakeSoft                                              #
+# Copyright (C) 2001-2002 MandrakeSoft                                         #
+#
 # Daouda Lo <daouda@mandrakesoft.com>                                          #
-# Renaud Chaillat <rchaillat@mandrakesoft.com>                                 #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License Version 2 as            #
@@ -34,6 +34,7 @@ use HTTP::Request;
 use HTTP::Request::Common;
 use LWP::UserAgent;
 use MIME::Base64 qw(encode_base64);
+use my_gtk qw(:helpers :wrappers :ask);
 
 my $in = 'interactive'->vnew('su', 'default');
 
@@ -48,7 +49,6 @@ sub _ {
     my $s = shift @_; my $t = translate($s);
     sprintf $t, @_;
 }
-
 sub translate {
     my ($s) = @_;
     $s ? c::dgettext('mdkonline', $s) : '';
@@ -68,6 +68,13 @@ my $false=0;
 $::isWizard = "@ARGV" =~ /--wizard/;
 $::isWizard=1;
 local $_ = join '', @ARGV;
+my %locations = ( _("Africa") => 'ftp://africa',
+		  _("Asia") => 'ftp://asia',
+		  _("Australia") => 'ftp://australia',
+		  _("Europe") => 'ftp://europe',
+		  _("USA") =>'ftp://usa',
+		  _("South America") => 'ftp://southamerica',
+		  );
 
 require Gtk;
 require Gtk::Gdk::ImlibImage;
@@ -109,6 +116,9 @@ $hbox->pack_end($Step_Label, 0, 1, 0);
 $hbox->pack_end($Button_Prev, 0, 1, 0);
 $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
+my $check_cron = new Gtk::CheckButton(_("Yes I want automated updates"));
+my $gtkcombo_user = new Gtk::Combo();
+my $gtkcombo_mirror = new Gtk::Combo();
 my $login_user= new Gtk::Entry();
 my $passwd_user= new Gtk::Entry();
 
@@ -119,7 +129,6 @@ my %actions = (
 		2 => \&test_passwd,
 		3 => \&send_config,
 		4 => \&send_config,
-		5 => \&automated_upgrades
 		);
 my @no_back_button_pages = (0,3,4,5);
 
@@ -145,10 +154,11 @@ sub gtk_main_quit {
 	[ -f "/root/$login.$passwd.online.log.bz2.uue" ] && unlink ("/root/$login.$passwd.online.log.bz2.uue");
 	[ -f "/root/$login.$passwd.online.log.bz2" ] && unlink ("/root/$login.$passwd.online.log.bz2");
     }
-
+    
     # setting up the automated updates
-    automated_upgrades();
-
+    if ($check_cron->get_active()) {
+	automated_upgrades();
+    }
     # quit
     print _("Quitting Wizard\n");
     main_quit Gtk;
@@ -160,6 +170,13 @@ sub on_end_clicked {
 
 sub on_next_clicked {
     $page=$notebook_global->get_current_page();
+
+#---- 8<-----------to remove for page 5 test -----------
+    if ($page == 0) {
+	$notebook_global->set_page(5); 
+    }
+#-------------8<----------------------------------------
+
     if ( $actions{$page} ) {
 	$actions{$page}->();
     } else {
@@ -248,7 +265,7 @@ sub test_passwd () {
 
     $login   = $login_user->get_text();
     $passwd  = $passwd_user->get_text();
-
+    
     if ($login && $passwd && $login !~ /\s+/ && $passwd !~ /\s+/) {
 
 # OLD METHOD, keep it for next version ?...
@@ -285,7 +302,7 @@ sub test_passwd () {
     } else {
 	$result = -1; # not needed, but this way it's clear
     }
-
+    
     # if correct, go to page 4
     if (! $result) {
 	$notebook_global->next_page(); 
@@ -294,12 +311,8 @@ sub test_passwd () {
 	info_popup (_("Wrong password"), _("Your login or password was wrong.\nEither you'll have to type it again, or you'll need to create an account on MandrakeOnline.\n In the latter case, go back to the first step to connect to MandrakeOnline."));
 	$passwd_user->set_text("");
     }
-
 }
 
-sub automated_upgrades {
-    
-} 
 sub send_config {
     # When we arrive here, we're sure the login/passwd is correct
 #    print STDERR "Sending config\n";
@@ -372,7 +385,7 @@ sub send_config {
 sub step_wizard {
 
     my $vbox_welc= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to MandrakeOnline"),540,100);
+    writ_on_pixmaps($vbox_welc,"mdkonline.png",_("Welcome to MandrakeOnline"),540,100);
     my $label_welc = new Gtk::Label(_("At this step You are supposed to have an account on MandrakeOnline [1].\nThis assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"));
     $label_welc->set_uposition(20,150);
     $vbox_welc->pack_start($label_welc,0,0,1);
@@ -389,19 +402,19 @@ sub step_wizard {
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     
     my $vbox_priv = new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
+    writ_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy Policy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
 
     my $vbox_ident= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_ident,"identity.png","MandrakeOnline"." "._("Authentification"),540,100);
+    writ_on_pixmaps($vbox_ident,"identity.png","MandrakeOnline"." "._("Authentification"),540,100);
     my $label_log = new Gtk::Label("\n\n" . _("Enter your MandrakeOnline login and password:"));
     $vbox_ident->pack_start($label_log,$false ,$false,1);
     pack_box_identity($vbox_ident,_("Login:"),$login_user,_("Password:"),$passwd_user);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
 
     my $vbox_rev=new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
+    writ_on_pixmaps($vbox_rev,"mailnews.png",_("Sending your Configuration"),540,100);
     my $label_rev = new Gtk::Label(_("In order to benefit from MandrakeOnline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to MandrakeSoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.\nFinally, an email alias with your username\@mandrakeonline.net will be provided to you."));
     $label_rev->set_uposition(20,150);
     $vbox_rev->pack_start($label_rev,0,0,1);
@@ -409,22 +422,80 @@ sub step_wizard {
 
     # building the "Error sending data" page
     my $vbox_errorsend= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_errorsend,"identity.png",_("Error while sending informations"),540,100);
+    writ_on_pixmaps($vbox_errorsend,"identity.png",_("Error while sending informations"),540,100);
     my $label_errorsend = new Gtk::Label("\n\n" . _("There was an error while sending your personal informations.\n\nPress Next to try and send your configuration again."));
     $vbox_errorsend->pack_start($label_errorsend,$false ,$false,1);
     $notebook_global->append_page($vbox_errorsend,new Gtk::Label("errorsend"));
     
     # building the "OK data sent" page
     my $vbox_oksend= new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
-    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!\nFrom now you will receive on security\nand upgrade announcements thanks to MandrakeOnline."));
+    writ_on_pixmaps($vbox_oksend,"identity.png",_("Finished"),540,100);
+    my $label_oksend = new Gtk::Label("\n\n" . _("Your upload was successful!From now you will receive on security")."\n"._("and updates announcements thanks to MandrakeOnline.")."\n\n"._("MandrakeOnline offers you the ability to automate the updates.")."\n"._(" A program will run regulary in your system waiting for new updates\n "));
     $vbox_oksend->pack_start($label_oksend,$false ,$false,1);
-    my $check_cron = new Gtk::CheckButton(_("I want to automate the upgrades"));
-    $vbox_oksend->pack_start($check_cron, $false,$false,1);
-    $check_cron->set_uposition(80,200);
+
+#automated mode
+    my $frame_auto = new Gtk::Frame(_("automated Upgrades"));
+    my $vbox_frame_auto = new Gtk::VBox(0,0);
+    $frame_auto->add($vbox_frame_auto);
+    $vbox_frame_auto->pack_start($check_cron,$false ,$false,1);
+    #$check_cron->set_uposition(70,245);
+    my $hboxfr1 = new Gtk::HBox(0,0);
+    my $label_user_mail = new Gtk::Label(_("I want this (local) user to get email alerts"));
+    $hboxfr1->pack_start($label_user_mail,$true ,$true,5);
+    $gtkcombo_user->set_popdown_strings(parse_etc_passwd());
+    $hboxfr1->pack_end($gtkcombo_user,$true ,$true,5);
+    my $hboxfr2 = new Gtk::HBox(0,0);
+    my $label_mirror = new Gtk::Label(_("Choose your geographical location"));
+    $hboxfr2->pack_start($label_mirror,$true ,$true,5);
+    $gtkcombo_mirror->set_popdown_strings('',sort(keys %locations));
+    $hboxfr2->pack_end($gtkcombo_mirror,$true ,$true,5);
+    $hboxfr1->set_sensitive(0); 
+    $hboxfr2->set_sensitive(0);
+    $check_cron->signal_connect (clicked => sub {my $test_cron=$check_cron->get_active(); 
+						 $hboxfr1->set_sensitive($test_cron); 
+						 $hboxfr2->set_sensitive($test_cron); });
+    $vbox_frame_auto->pack_start($hboxfr1,$false ,$false,5);
+    $vbox_frame_auto->pack_start($hboxfr2,$false ,$false,5);
+    $vbox_oksend->pack_start($frame_auto, $true,$false,1);
     $notebook_global->append_page($vbox_oksend,new Gtk::Label("oksend"));
-    
 }
+
+sub parse_etc_passwd ()
+{
+    my (@usernames,$uname, $uid);
+    my $uid=0;
+    setpwent();
+    do {
+	@user_info = getpwent();
+	($uname, $uid) = @user_info[0,2];
+         push (@usernames, $uname) if ($uid > 500);
+    } while (@user_info);
+    unshift @usernames,'root';
+    @usernames;
+}
+
+sub automated_upgrades {
+# set up a daily cron to check connection and if there is one upgrade the system
+    open VERS,  "/etc/mandrake-release" or die _("cannot open this file for read: %s", $!);
+    my @info_tree;
+    while (<VERS>) { 
+	@info_tree = split / /, $_;
+    }
+    $usertomail = $gtkcombo_user->entry->get_text();
+    $mirror_site = $locations{$gtkcombo_mirror->entry->get_text()};
+    my $version=$info_tree[3];
+    output "/root/.mdkupdate",
+    qq(# automatically generated file. Please don't edit
+$usertomail
+$version
+$mirror_site
+);
+    output_p "/etc/cron.daily/mdkupdate",
+    qq(#!/bin/sh
+if [ -f /root/.mdkupdate ]; then mdkupdate; fi
+);
+}
+
 
 sub info_popup ($$) {
     # must have been translated by the caller
@@ -458,7 +529,7 @@ sub confirm_quit {
     my $bbox1 = new Gtk::HButtonBox;
     $window_about->action_area->pack_start($bbox1,0,0,0);
    
-    my $button_cancel = new Gtk::Button(" " . _("Cancel") . " ");
+    My $button_cancel = new Gtk::Button(" " . _("Cancel") . " ");
     $button_cancel->signal_connect_object("clicked",$window_about => 'destroy');
     $bbox1->add($button_cancel);
 
@@ -533,19 +604,7 @@ sub get_on_privacy {
     
 }    
 
-sub gtkpng { new Gtk::Pixmap(gtkcreate_png(@_)) }
-
-sub gtkcreate_png {
-    my ($f) = @_;
-    $f =~ m|.png$| or $f="$f.png";
-#    if ( $f !~ /\//) { -e "$_/$f" and $f="$_/$f", last foreach $ENV{SHARE_PATH}, "$pixmaps", "pixmaps" }
-    if ( $f !~ /\//) { -e "$_/$f" and $f="$_/$f", last foreach $ENV{SHARE_PATH}, "pixmaps" }
-    my $im = Gtk::Gdk::ImlibImage->load_image($f) or die "gtkcreate_png: missing png file $f";
-    $im->render($im->rgb_width, $im->rgb_height);
-    ($im->move_image(), $im->move_mask);
-}
-
-sub write_on_pixmaps {
+sub writ_on_pixmaps {
     my ($vbox, $pix_name, $step_label, $width, $height)=@_;
     my $darea= new Gtk::DrawingArea();
     $darea->set_usize($width,$height);
