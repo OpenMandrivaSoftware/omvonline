@@ -84,8 +84,8 @@ $hbox->pack_end($Button_Next, 0, 1, 0);
 $hbox->pack_end($Button_Prev, 0, 1, 0);
 $Button_SkipWiz->signal_connect( clicked => \&confirm_quit);
 $hbox->pack_start($Button_SkipWiz, 0, 1, 0);
-my $login_user= new Gtk::Entry();
-my $passwd_user= new Gtk::Entry();
+my $login_user= new Gtk::Entry(20);
+my $passwd_user= new Gtk::Entry(20);
 init_ui();
 $Main_Window->show_all;
 
@@ -117,15 +117,16 @@ sub step_wizard {
     $vbox_welc->pack_start($label_welc,0,0,1);
     $notebook_global->append_page($vbox_welc,new Gtk::Label("welcome"));
     my $vbox_priv = new Gtk::VBox(0,0);
-    write_on_pixmaps($vbox_priv,"$x/privacy.png",_("Mandrake Privacy"),540,100);
+    write_on_pixmaps($vbox_priv,"privacy.png",_("Mandrake Privacy"),540,100);
     get_on_privacy($vbox_priv);
     $notebook_global->append_page($vbox_priv,new Gtk::Label("club"));
     my $vbox_ident= new Gtk::VBox(0,0);
+    write_on_pixmaps($vbox_ident,"identity.png",_("Mandrake Online Authentification"),540,100);
     map {
 	pack_box_identity($vbox_ident,$_->[0],$_->[1],$_->[2]);
-    } ([_("Login:"),$login_user], [_("Password"),$passwd_user]);
+    } ([_("Login:"),$login_user], [_("Password:"),$passwd_user]);
     $notebook_global->append_page($vbox_ident,new Gtk::Label("login"));
-    
+    my $vbox_ident=new Gtk::VBox(0,0);
 }
 
 sub confirm_quit {
@@ -155,12 +156,13 @@ sub confirm_quit {
 
 sub pack_box_identity {
     my ($vbox,$label,$entry)=@_;
-    my $table = new Gtk::Table( 1, 2, $true );
+    my $table = new Gtk::Table( 1, 2, $false);
     my $Label_wg=new Gtk::Label($label);
-    $Label_wg->set_justify(left);
+    $Label_wg->set_justify('center');
+    $entry->set_justify('left');
     $table->attach_defaults( $Label_wg, 0, 1, 0, 1);
-    $table->attach_defaults( $entry, 1, 2, 0, 1 );
-    $vbox->pack_start($table,$true,$true,1);
+    $table->attach( $entry, 1, 2, 0, 1, 'shrink' , 'shrink', 0, 0);
+    $vbox->pack_start($table,$true ,$true ,1);
 }
 
 sub load_text {
