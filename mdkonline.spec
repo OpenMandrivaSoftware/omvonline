@@ -5,7 +5,7 @@
 Summary:	The Mandrake Online Tool  
 Name:		%{name}
 Version:	%{version}
-Release: 6mdk
+Release: 8mdk
 # get the source from our cvs repository (see
 # http://www.linuxmandrake.com/en/cvs.php3)
 Source0:	%{name}-%{version}.tar.bz2
@@ -35,6 +35,14 @@ hardware support/enhancements and other high value services.
 %install
 rm -rf $RPM_BUILD_ROOT
 make prefix=$RPM_BUILD_ROOT install 
+
+mv ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name} \
+   ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}.real
+ln -sf %{_bindir}/consolehelper ${RPM_BUILD_ROOT}%{_prefix}/X11R6/bin/%{name}
+
+mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/{pam.d,security/console.apps}
+cp pam.%{name} $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/%{name}
+cp apps.%{name}  $RPM_BUILD_ROOT%{_sysconfdir}/security/console.apps/%{name}
 
 #install lang
 %{find_lang} %{name}
@@ -69,6 +77,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(-,root,root)
+%config(noreplace) %{_sysconfdir}/pam.d/%{name}
+%config(noreplace) %{_sysconfdir}/security/console.apps/%{name}
 %{_prefix}/bin/*
 %{_prefix}/X11R6/bin/*
 %{_datadir}/%{name}
@@ -78,6 +88,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Thu Sep 20 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-8mdk
+- resync with cvs (Pablo s**)
+- switch to usermode
+- spec cleanup
+
+* Fri Sep 14 2001 Pablo Saratxaga <pablo@mandrakesoft.com> 0.15-7mdk
+- rebuild including latest translations
+
 * Tue Sep 11 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-6mdk
 - cvs snapshot
 - new http authentification
