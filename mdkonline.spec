@@ -55,8 +55,8 @@ ln -sf %_sbindir/mdkonline %buildroot%_prefix/X11R6/bin/mdkonline
 mkdir -p $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d
 cat > $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet <<EOF
 #!/bin/sh
-DESKTOP=$1
-case $DESKTOP in
+DESKTOP=\$1
+case \$DESKTOP in
    KDE|GNOME|IceWM) exec /usr/bin/mdkapplet;;
 esac
 EOF
