@@ -44,7 +44,7 @@ use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use comdialog;
 use data;
 
-my $confdir = '/root/.mdkonline';
+my $confdir = '/root/.MdkOnline';
 
 add_icon_path("/usr/share/drakfirsttime/pixmaps/");
 
@@ -57,7 +57,10 @@ my $wideconf = '/etc/sysconfig/mdkonline';
 
 my ($o, $p);
 
-mkdir_p($confdir);
+#for compatibilities
+mkdir_p($confdir) if !-d confdir;
+mvfiles("/root/.mdkupdate", "$confdir/mdkupdate");
+#mvfiles("/root/.mdkonline", "$confdir/mdkonline");
 
 $o->{mw} = ugtk2->new("MandrakeOnline" . " " . $VERSION, center => 1);
 gtkset_size_request($o->{mw}{window}, 580, 470);
@@ -386,6 +389,10 @@ sub wait_msg {
     $mainw;
 }
 sub remove_wait_msg { $_[0]->destroy }
+sub mvfiles {
+    my ($source, $dest) = @_;
+    -e $source and system("mv","$source","$dest");
+}
 sub automatedUpgrades {
     my ($login, $passwd, $boxname, $key, $country, $auto) = @_;
     my ($r) = cat_('/etc/mandrake-release') =~ /release\s(\S+)/;
