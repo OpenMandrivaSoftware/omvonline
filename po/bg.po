@@ -30,9 +30,8 @@ msgid "Europe"
 msgstr "Европа"
 
 #: ../mdkonline_.c:75
-#, fuzzy
 msgid "North America"
-msgstr "Южна Америка"
+msgstr "Северна Америка"
 
 #: ../mdkonline_.c:76
 msgid "South America"
@@ -73,12 +72,11 @@ msgstr "Излизам\n"
 
 #: ../mdkonline_.c:263
 msgid "Warning: No browser specified"
-msgstr "Внимание: няма избран браузер"
+msgstr "Внимание: няма избран четец на страници"
 
 #: ../mdkonline_.c:290
-#, fuzzy
 msgid "Connecting ...\n"
-msgstr "Проблем с връзката"
+msgstr "Свързване ...\n"
 
 #: ../mdkonline_.c:298 ../mdkonline_.c:361 ../mdkupdate_.c:83
 msgid "Connection problem"
@@ -93,7 +91,6 @@ msgid "Wrong password"
 msgstr "Грешна парола"
 
 #: ../mdkonline_.c:310
-#, fuzzy
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
@@ -106,7 +103,9 @@ msgstr ""
 "Вашето име или парола са грешни.\n"
 "Или го напишете отново,или ще ви трябва нова сметка за MandrakeOnline.\n"
 "Във втория случай се върнете на стъпка номер 1 за да се свържете с "
-"Mandrakeonline."
+"Mandrakeonline.\n"
+"Знайте,че ще трябва също да зададете име на Машината \n"
+" (само букви се признават)"
 
 #: ../mdkonline_.c:369
 msgid "Welcome to MandrakeOnline"
@@ -122,7 +121,7 @@ msgstr ""
 "За начало се предполага че имате сметка в MandrakeOnline.\n"
 "Този асистент ще Ви помогне да качите своята конфигурация\n"
 "(пакети и хардуерни настройки) в централизираната база данни,за да\n"
-"ви дръжим в течение относно необходими обновявания и полезни новости.\n"
+"ви държим в течение относно необходими обновявания и полезни новости.\n"
 
 #: ../mdkonline_.c:387
 msgid "Mandrake Privacy Policy"
@@ -143,7 +142,7 @@ msgstr "Име:"
 
 #: ../mdkonline_.c:395
 msgid "Machine name:"
-msgstr ""
+msgstr "Име на Машината:"
 
 #: ../mdkonline_.c:395
 msgid "Password:"
@@ -200,7 +199,7 @@ msgid ""
 msgstr ""
 "Получи се грешка при изпращане на личната ви информация.\n"
 "\n"
-"Натиснете \"Нататък\" за да пробвате да пратите конфигурациятаси отново."
+"Натиснете \"Нататък\" за да пробвате да пратите конфигурацията си отново."
 
 #: ../mdkonline_.c:416
 msgid "Finished"
@@ -212,7 +211,7 @@ msgid ""
 "announcements thanks to MandrakeOnline."
 msgstr ""
 "От сега нататък,Вие ще получавате информация\n"
-"относно сигуността и новостите,благодарение на MandrakeOnline."
+"относно сигурността и новостите,благодарение на MandrakeOnline."
 
 #: ../mdkonline_.c:417
 msgid ""
@@ -220,7 +219,7 @@ msgid ""
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "MandrakeOnline ви предлага автоматизиране на обновлението.\n"
-"Програмата ще се пуска регулярно на системаа Ви и ще следи за обновявания\n"
+"Програмата ще се пуска регулярно на системата Ви и ще следи за обновявания\n"
 
 #: ../mdkonline_.c:417
 msgid "Your upload was successful!"
@@ -235,9 +234,8 @@ msgid "Choose your geographical location"
 msgstr "Изберете Вашето местоположение"
 
 #: ../mdkonline_.c:447
-#, fuzzy
 msgid "Reading configuration\n"
-msgstr "Изпращам вашата конфигурация"
+msgstr "Прочитам вашата конфигурация\n"
 
 #: ../mdkonline_.c:474
 #, c-format
@@ -296,44 +294,51 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
+"mdkupdate версия %s\n"
+"MandrakeSoft 2002,всички права запазени.\n"
+"Това е свободен софтуер и може да бъде разпространяван според условиятана "
+"GNU GPL.\n"
+"\n"
+"начин на ползване:\n"
 
 #: ../mdkupdate_.c:54
 msgid "  --help         - print this help message.\n"
-msgstr ""
+msgstr " --help         - показва това помощно съобщение.\n"
 
 #: ../mdkupdate_.c:55
 msgid "  --security     - use only security media.\n"
-msgstr ""
+msgstr " --security     - използва само сигурни носители\n"
 
 #: ../mdkupdate_.c:56
 msgid "  -v             - verbose mode.\n"
-msgstr ""
+msgstr " -v             - показва всички съобщения\n"
 
 #: ../mdkupdate_.c:83
-#, fuzzy
 msgid "MandrakeUpdate could not contact the site, we will try again"
 msgstr "Не можах да се свържа с MandrakeOnline,моля опитайте по-късно"
 
 #: ../mdkupdate_.c:110
 msgid "For any problem send mail to support\\@mandrakeonline.net\n"
-msgstr ""
+msgstr "Ако има проблем,изпратете поща на support\\@mandrakeonline.net\n"
 
 #: ../mdkupdate_.c:110
 msgid ""
 "You'll need to have an account on MandrakeOnline, or update your subscription"
 msgstr ""
+"Ще трябва да си откриете сметка в МандрейкОнлайн,или пък да обновите "
+"абонамента си"
 
 #: ../mdkupdate_.c:110
 msgid "Your login or password may be wrong"
-msgstr ""
+msgstr "Името и паролата ви може да са грешни"
 
 #: ../mdkupdate_.c:122
 msgid "wget is missing\n"
-msgstr ""
+msgstr "wget липсва\n"
 
 #~ msgid "A program will run regulary in your system waiting for new updates\n"
 #~ msgstr ""
-#~ "Програмата ще се пуска регулярно на системаа Ви и ще следи за "
+#~ "Програмата ще се пуска регулярно на системата Ви и ще следи за "
 #~ "обновявания\n"
 
 #~ msgid "USA"
