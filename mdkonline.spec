@@ -88,6 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_liconsdir}/*.png
 
 %changelog
+* Fri Sep 21 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-8mdk
+- code update
+- definitive links
+
 * Thu Sep 20 2001 Daouda LO <daouda@mandrakesoft.com> 0.15-8mdk
 - resync with cvs (Pablo s**)
 - switch to usermode
