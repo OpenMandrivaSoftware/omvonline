@@ -52,6 +52,7 @@ my $choice = $choices{account};
 
 my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres, $country);
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
+$country = lang::c2name(lang::read('', $>)->{country});
 
 sub read_conf() {
     my $wideconf = '/etc/sysconfig/mdkonline';
@@ -171,8 +172,7 @@ $wiz = {
 			     data => sub {
 				 if ($sendconfres eq 'TRUE' && $key) {
 				     [ 
-				      { label => N("Country"), val => \$country, format => \&lang::c2name(lang::read('', $>)->{country}) , type => "combo", 
-					list => [ sort keys %countries ], not_edit => 0 }
+				      { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
 				     ]
 				 }
 			     },
