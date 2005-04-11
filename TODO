@@ -2,8 +2,11 @@ $Id$
 Things to do on mdkonline
 -------------------------------------------------------------------------------
 
- * whole package:
-   force package update if available, before any other update,
+ * change URLS from mandrake* => mandriva*. note that mandrakeonline.net
+   becomes mandrivaonline.com
+
+ * mdkonline package: 
+   force update if available, before any other update,
    then restart update process (mdkapplet/mdkupdate)
 
  * kernel updates:
@@ -35,6 +38,10 @@ Things to do on mdkonline
 
    * configuration: should allow to supersed env vars such as PROXY_*,
      should include online help
+
+   * when the server is not reachable (name does not resolve, ip does
+     not answer) or an unmanaged error is received, change icon status
+     to something stating 'service under maintenance', or st like that.
 
  * mdkonline:
    
