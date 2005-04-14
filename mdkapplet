@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 ################################################################################
-# Mandrakeonline                                                               # 
+# Mandriva Online                                                              # 
 #                                                                              #
-# Copyright (C) 2003-2004 Mandrakesoft                                         #
+# Copyright (C) 2003-2005 Mandriva                                             #
 #                                                                              #
-# Daouda Lo <daouda@mandrakesoft.com>                                          #
+# Daouda Lo <daouda at mandriva dot com>                                       #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License Version 2 as            #
@@ -41,7 +41,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
-my $online_site = "http://www.mandrakeonline.net/";
+my $online_site = "http://www.mandrivaonline.net/";
 my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
 my ($need_update, $raisedwindow, $isAvailable, $debug) = (0, 0, 0, 0);
 
@@ -66,7 +66,7 @@ my %state = (
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'configureApplet', 'check', 'weblink' ],
-		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrakeonline.net") ]
+		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.net") ]
 		     },
 	     busy => {
 		      colour => [ 'busy' ], 
@@ -148,7 +148,7 @@ ugtk2::exit(0);
 
 sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
-    $w->set_title(N("Mandrakelinux Updates Applet"));
+    $w->set_title(N("Mandriva Linux Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     gtkset_size_request($w, 400, 300);
     $w->set_position('center');
@@ -224,12 +224,12 @@ sub installUpdates {
     logIt(N("Launching mdkupdate --applet\n"));
     system "/usr/sbin/mdkupdate", "--applet";
     my $newmd5 = md5file($binfile);
-    if ($newmd5 ne $oldmd5) { logIt(N("Mandrakeonline seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
+    if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush(); 
     #undef $w;
     my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
-    if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandrakelinux Updates Applet"), $mdkupdate_status) }
+    if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
 sub silentCheck {
     my $link = $online_site . "/online3_RemoteAction.php" . '?action=UpdateList';
@@ -243,12 +243,12 @@ sub silentCheck {
     if ($response->is_error) { 
 	my $status_err = $response->status_line;
 	go2State('critical'); 
-	logIt("Unable to contact Mandrakeonline server: $status_err") and return; 
+	logIt("Unable to contact Mandriva Online server: $status_err") and return; 
     }
     $ct = $response->content;
     if ($debug) {
 	print "\nCONTENTS = $ct\n" if $debug;
-	logIt(N("Response from Mandrakeonline server\n") . $ct);
+	logIt(N("Response from Mandriva Online server\n") . $ct);
     }
     if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 10 }
     #   99 - log or host or action or pass empty, wrong action
@@ -274,7 +274,7 @@ sub silentCheck {
 		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported') },
 		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported') },
 		   96 => sub { logIt(N("Unknown state")); go2State('critical') },
-		   97 => sub { logIt(N("Online services disabled. Contact Mandrakeonline site\n")); go2State('disabled') },
+		   97 => sub { logIt(N("Online services disabled. Contact Mandriva Online site\n")); go2State('disabled') },
 		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical') },
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical') },
                    500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
@@ -351,7 +351,7 @@ sub isNetwork {
     #    my $h = mdkonline::get_distro_type();
     my $network;
     if ($r <= 10.0) {
-	$network = gethostbyname("mandrakeonline.net") ? 1 : 0;
+	$network = gethostbyname("mandrivaonline.net") ? 1 : 0;
     } else {
 	require network::netconnect;
 	require network::tools;
