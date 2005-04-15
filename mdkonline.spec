@@ -1,16 +1,16 @@
 %define version 1.2
 %define name mdkonline
-%define release 0.1mdk
+%define release 1mdk
 
-Summary:	The MandrakeOnline Tool  
+Summary:	Mandriva Online Update Tool  
 Name:		%{name}
 Version:	%{version}
 Release: 	%{release}
 Source0:	%{name}-%{version}.tar.bz2
-URL:		http://www.mandrakeonline.net
+URL:		http://www.mandrivaonline.net
 License:	GPL
 Group:		System/Configuration/Other
-Packager:	Mandrakeonline Team <http://www.mandrakeonline.net>
+Packager:	Mandriva Online Team <http://www.mandrivaonline.net>
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
@@ -20,17 +20,16 @@ BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch: 	noarch
 
 %description
-The MandrakeOnline tool is designed for registered users 
+The Mandriva Online tool is designed for registered users 
 who want to upload their configuration (packages, hardware infos). 
 This allows them to be kept informed about security updates, 
 hardware support/enhancements and other high value services.
 The package include :
-* MandrakeOnline wizard for users registration and configuration 
-  uploads, 
-* Mdkupdate daemon which allows you to install security updates 
+* Wizard for users registration and configuration uploads, 
+* Update daemon which allows you to install security updates 
   automatically,
-* Mdkapplet which is a KDE/Gnome applet for security updates 
-  notification and installation. 
+* A KDE/Gnome compliant applet for security updates notification
+  and installation. 
 
 %prep
 %setup -q
@@ -113,9 +112,12 @@ rm -rf $RPM_BUILD_ROOT
 #
 ##################################################################
 # get the source from our cvs repository (see
-# http://www.linuxmandrake.com/en/cvs.php3)
+# http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Fri Apr 15 2005 Daouda LO <daouda@mandriva.com> 1.2-1mdk
+- switch to Mandriva
+
 * Wed Apr  6 2005 Daouda LO <daouda@mandrakesoft.com> 1.2-0.1mdk
 - better error handling and log messages when server is down or broken
 - po updates
