@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-01-31 20:23+0100\n"
+"POT-Creation-Date: 2005-04-18 17:18+0200\n"
 "PO-Revision-Date: 2005-04-17 11:56+0200\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
@@ -56,7 +56,8 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:99
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr ""
+"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:105
 #, c-format
@@ -65,7 +66,7 @@ msgstr "Nem támogatott verzió (túl régi, vagy fejlesztői verzió)"
 
 # "Rendszerfrissítések telepítése" volt a 8.2-ben,
 #  ebből az utolsó 2 betű nem fért ki
-#: ../mdkapplet:110 ../mdkapplet:164
+#: ../mdkapplet:110 ../mdkapplet:163
 #, c-format
 msgid "Install updates"
 msgstr "Frissítések telepítése"
@@ -80,13 +81,13 @@ msgstr "A szolgáltatás beállítása"
 msgid "Check Updates"
 msgstr "Frissítések keresése"
 
-#: ../mdkapplet:113 ../mdkapplet:167 ../mdkapplet:228 ../mdkonline:89
-#: ../mdkonline:93 ../mdkonline:131
+#: ../mdkapplet:113 ../mdkapplet:166 ../mdkonline:93 ../mdkonline:97
+#: ../mdkonline:135 ../mdkupdate:171
 #, c-format
 msgid "Please wait"
 msgstr "Kis türelmet"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkapplet:167 ../mdkapplet:228
+#: ../mdkapplet:113 ../mdkapplet:165 ../mdkapplet:166
 #, c-format
 msgid "Check updates"
 msgstr "Frissítések keresése"
@@ -106,32 +107,32 @@ msgstr "A hálózat beállítása"
 msgid "Configure Now!"
 msgstr "Beállítás most"
 
-#: ../mdkapplet:152 ../mdkapplet:232
+#: ../mdkapplet:151 ../mdkapplet:232
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Mandriva Linux-frissítési alkalmazás"
 
-#: ../mdkapplet:162
+#: ../mdkapplet:161
 #, c-format
 msgid "Actions"
 msgstr "Műveletek"
 
-#: ../mdkapplet:165
+#: ../mdkapplet:164
 #, c-format
 msgid "Configure"
 msgstr "Beállítás"
 
-#: ../mdkapplet:169
+#: ../mdkapplet:168
 #, c-format
 msgid "See logs"
 msgstr "Információ a naplóban"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:171
 #, c-format
 msgid "Status"
 msgstr "Állapot"
 
-#: ../mdkapplet:176 ../mdkapplet:370
+#: ../mdkapplet:175 ../mdkapplet:385
 #, c-format
 msgid "Close"
 msgstr "Bezárás"
@@ -156,7 +157,7 @@ msgstr "Inaktív"
 msgid "Last check: "
 msgstr "Legutóbbi ellenőrzés: "
 
-#: ../mdkapplet:215 ../mdkonline:127
+#: ../mdkapplet:215 ../mdkonline:131
 #, c-format
 msgid "Machine name:"
 msgstr "Gépnév:"
@@ -193,49 +194,49 @@ msgstr "Új frissítések meghatározása...\n"
 msgid "Connecting to"
 msgstr "Kapcsolódás:"
 
-#: ../mdkapplet:247
+#: ../mdkapplet:251
 #, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Válasz a Mandriva Online-kiszolgálótól\n"
 
-#: ../mdkapplet:265
+#: ../mdkapplet:269
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Ellenőrzés... vannak elérhető frissítések\n"
 
-#: ../mdkapplet:270
+#: ../mdkapplet:274
 #, c-format
 msgid "Development release not supported by service"
 msgstr "A szolgáltatás nem támogat fejlesztői verziókat"
 
-#: ../mdkapplet:271
+#: ../mdkapplet:275
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Túl régi, a szolgáltatás által nem támogatott verzió"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:276
 #, c-format
 msgid "Unknown state"
 msgstr "Ismeretlen állapot"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:277
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
-"Az online szolgáltatások inaktiválva vannak. Lépjen kapcsolatba a "
-"Mandriva Online weboldallal.\n"
+"Az online szolgáltatások inaktiválva vannak. Lépjen kapcsolatba a Mandriva "
+"Online weboldallal.\n"
 
-#: ../mdkapplet:274
+#: ../mdkapplet:278
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Helytelen jelszó.\n"
 
-#: ../mdkapplet:275
+#: ../mdkapplet:279
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Helytelen művelet, gép, vagy bejelentkezési név.\n"
 
-#: ../mdkapplet:276
+#: ../mdkapplet:280
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -244,88 +245,88 @@ msgstr ""
 "A hálózatbeállítások nem megfelelők (ellenőrizze az útválasztást, a tűzfalat "
 "és a proxybeállításokat).\n"
 
-#: ../mdkapplet:278
+#: ../mdkapplet:282
 #, c-format
 msgid ""
-"Problem occurred while connecting to the server, please contact the support "
+"Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
 "Probléma lépett fel a kiszolgálóhoz való kapcsolódáskor. Lépjen kapcsolatba "
 "a támogatási csapattal."
 
-#: ../mdkapplet:280
+#: ../mdkapplet:284
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "A rendszer naprakész.\n"
 
-#: ../mdkapplet:312
+#: ../mdkapplet:316
 #, c-format
 msgid "No check"
 msgstr "Nincs ellenőrzés"
 
-#: ../mdkapplet:325
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "A hálózat ellenőrzése: úgy tűnik, nem aktív\n"
-
-#: ../mdkapplet:328
+#: ../mdkapplet:329
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Beállításfájl ellenőrzése: nem található\n"
 
-#: ../mdkapplet:360
+#: ../mdkapplet:332
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "A hálózat ellenőrzése: úgy tűnik, nem aktív\n"
+
+#: ../mdkapplet:375
 #, c-format
 msgid "Logs"
 msgstr "Naplók"
 
-#: ../mdkapplet:376
+#: ../mdkapplet:391
 #, c-format
 msgid "Clear"
 msgstr "Törlés"
 
-#: ../mdkapplet:403
+#: ../mdkapplet:418
 #, c-format
 msgid "About..."
 msgstr "Névjegy..."
 
-#: ../mdkapplet:404
+#: ../mdkapplet:419
 #, c-format
 msgid "Always launch on startup"
 msgstr "Minden rendszerindításnál induljon el"
 
-#: ../mdkapplet:406
+#: ../mdkapplet:421
 #, c-format
 msgid "Quit"
 msgstr "Kilépés"
 
-#: ../mdkonline:52 ../mdkonline:106
+#: ../mdkonline:58 ../mdkonline:110
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:55
+#: ../mdkonline:61
 #, c-format
 msgid "I already have an account"
 msgstr "Már van azonosítóm"
 
-#: ../mdkonline:56
+#: ../mdkonline:62
 #, c-format
 msgid "I want to subscribe"
 msgstr "Szeretnék feliratkozni"
 
-#: ../mdkonline:89
+#: ../mdkonline:93
 #, c-format
 msgid "Reading configuration\n"
 msgstr "Konfiguráció beolvasása\n"
 
-#: ../mdkonline:93
+#: ../mdkonline:97
 #, c-format
 msgid "Sending configuration..."
 msgstr "Konfiguráció küldése..."
 
-#: ../mdkonline:109
-#, c-format
 # \n-ek szandekosan hianyoznak: automatikus tordeles legyen
+#: ../mdkonline:113
+#, c-format
 msgid ""
 "This assistant will help you to upload your configuration\n"
 "(packages, hardware configuration) to a centralized database in\n"
@@ -335,32 +336,32 @@ msgstr ""
 "(csomagok és hardverkonfiguráció) egy központi adatbázisba annak érdekében, "
 "hogy informálhassuk a biztonsági és egyéb frissítésekről.\n"
 
-#: ../mdkonline:114
+#: ../mdkonline:118
 #, c-format
 msgid "Account creation or authentication"
 msgstr "Azonosító létrehozása vagy azonosítás"
 
-#: ../mdkonline:119
+#: ../mdkonline:123
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Adja meg Mandriva Online-azonosítóját, jelszavát és a gépnevet:"
 
-#: ../mdkonline:125 ../mdkonline:156
+#: ../mdkonline:129 ../mdkonline:160
 #, c-format
 msgid "Login:"
 msgstr "Azonosító:"
 
-#: ../mdkonline:126 ../mdkonline:157
+#: ../mdkonline:130 ../mdkonline:161
 #, c-format
 msgid "Password:"
 msgstr "Jelszó:"
 
-#: ../mdkonline:131
+#: ../mdkonline:135
 #, c-format
 msgid "Connecting to Mandriva Online website..."
 msgstr "Kapcsolódás a Mandriva Online weboldalhoz..."
 
-#: ../mdkonline:139
+#: ../mdkonline:143
 #, c-format
 msgid ""
 "In order to benefit from Mandriva Online services,\n"
@@ -378,11 +379,11 @@ msgid ""
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
 msgstr ""
-"Annak érdekében, hogy használatba vehesse a Mandriva Online szolgáltatásait,\n"
+"Annak érdekében, hogy használatba vehesse a Mandriva Online "
+"szolgáltatásait,\n"
 "fel kell tölteni a konfigurációs adatait.\n"
 "\n"
-"A Varázsló most a következő adatokat fogja elküldeni a Mandriva "
-"részére:\n"
+"A Varázsló most a következő adatokat fogja elküldeni a Mandriva részére:\n"
 "\n"
 "  1.  a rendszeren telepített csomagok listája,\n"
 "  2.  az Ön hardverkonfigurációja.\n"
@@ -395,55 +396,55 @@ msgstr ""
 "hogy a megszokottnál kedvezőbb feltételekkel vegye igénybe a\n"
 "www.mandrivaexpert.com honlapon elérhető szolgáltatásokat."
 
-#: ../mdkonline:141 ../mdkonline:180 ../mdkupdate:131
+#: ../mdkonline:145 ../mdkonline:184 ../mdkupdate:141
 #, c-format
 msgid "Connection problem"
 msgstr "Kapcsolati hiba"
 
-#: ../mdkonline:141
+#: ../mdkonline:145
 #, c-format
 msgid "or"
 msgstr "vagy"
 
-#: ../mdkonline:141
+#: ../mdkonline:145
 #, c-format
 msgid "wrong password:"
 msgstr "helytelen jelszó:"
 
-#: ../mdkonline:141
+#: ../mdkonline:145
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
 " Either you'll have to type it again, or you'll need to create an account on "
 "Mandriva Online.\n"
-" In the latter case, go back to the first step to connect to "
-"Mandriva Online.\n"
+" In the latter case, go back to the first step to connect to Mandriva "
+"Online.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "A bejelentkezési név vagy a jelszó helytelen.\n"
-"Gépelje be újra; ha viszont nincs létrehozva ilyen felhasználónév a "
-"Mandriva Online-on, akkor létre kell hozni azt.\n"
+"Gépelje be újra; ha viszont nincs létrehozva ilyen felhasználónév a Mandriva "
+"Online-on, akkor létre kell hozni azt.\n"
 "Az utóbbi esetben lépjen vissza az első lépéshez, hogy kapcsolódhasson a "
 "Mandriva Online-hoz.\n"
 "Egy gépnevet is meg kell adnia; a név csak normál betűket tartalmazhat."
 
-#: ../mdkonline:153
+#: ../mdkonline:157
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Online-azonosító létrehozása"
 
-#: ../mdkonline:158
+#: ../mdkonline:162
 #, c-format
 msgid "Confirm Password:"
 msgstr "Jelszó (még egyszer):"
 
-#: ../mdkonline:159
+#: ../mdkonline:163
 #, c-format
 msgid "Mail contact:"
 msgstr "Levélcím:"
 
-#: ../mdkonline:163
+#: ../mdkonline:167
 #, c-format
 msgid ""
 "The passwords do not match\n"
@@ -452,17 +453,17 @@ msgstr ""
 "A jelszavak nem egyeznek meg.\n"
 "Adja meg azokat még egyszer.\n"
 
-#: ../mdkonline:163
+#: ../mdkonline:167
 #, c-format
 msgid "Please provide a login"
 msgstr "Adjon meg egy azonosítót"
 
-#: ../mdkonline:163
+#: ../mdkonline:167
 #, c-format
 msgid "Not a valid mail address!\n"
 msgstr "Helytelen levélcím.\n"
 
-#: ../mdkonline:169
+#: ../mdkonline:173
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -472,12 +473,12 @@ msgstr ""
 "A felhasználóazonosításhoz és a beállítások feltöltéséhez kattintson a "
 "\"Következő\" gombra.\n"
 
-#: ../mdkonline:178
+#: ../mdkonline:182
 #, c-format
 msgid "Your upload was successful!"
 msgstr "A feltöltés megtörtént."
 
-#: ../mdkonline:178
+#: ../mdkonline:182
 #, c-format
 msgid ""
 "From now you will receive on security and updates \n"
@@ -486,7 +487,7 @@ msgstr ""
 "Mostantól kezdve információkat fog kapni a biztonsági\n"
 "és egyéb frissítésekről - a Mandriva Online-nak köszönhetően."
 
-#: ../mdkonline:178
+#: ../mdkonline:182
 #, c-format
 msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
@@ -495,37 +496,37 @@ msgstr ""
 "A Mandriva Online lehetőséget nyújt a frissítések automatizálására.\n"
 "Egy program fog futni rendszeresen az Ön gépén, a frissítéseket figyelve.\n"
 
-#: ../mdkonline:180
+#: ../mdkonline:184
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
 msgstr "A fájlok feltöltésénél probléma lépett fel - próbálja meg ismét."
 
-#: ../mdkonline:186
+#: ../mdkonline:190
 #, c-format
 msgid "Country"
 msgstr "Ország"
 
-#: ../mdkonline:203
+#: ../mdkonline:207
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulálunk"
 
-#: ../mdkonline:203
+#: ../mdkonline:207
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "A Mandriva Online-azonosító beállítása megtörtént\n"
 
-#: ../mdkonline:219
+#: ../mdkonline:223
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "A konfiguráció feltöltése megtörtént"
 
-#: ../mdkonline:220
+#: ../mdkonline:224
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "A konfiguráció feltöltése közben probléma lépett fel"
 
-#: ../mdkonline:221
+#: ../mdkonline:226
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -534,39 +535,39 @@ msgstr ""
 "Nem sikerült kapcsolódni a Mandriva Online weboldalhoz: helytelen azonosító, "
 "jelszó, útválasztó-beállítás vagy tűzfalbeállítás"
 
-#: ../mdkonline.pm:66
+#: ../mdkonline.pm:54
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
 msgstr ""
 "A bejelentkezési névnek és a jelszónak 12 karakternél rövidebbnek kell "
 "lennie\n"
 
-#: ../mdkonline.pm:67
+#: ../mdkonline.pm:55
 #, c-format
 msgid "Special characters are not allowed\n"
 msgstr "Speciális karakterek nem használhatók\n"
 
-#: ../mdkonline.pm:68
+#: ../mdkonline.pm:56
 #, c-format
 msgid "Please fill in all fields\n"
 msgstr "Töltse ki az összes mezőt\n"
 
-#: ../mdkonline.pm:69
+#: ../mdkonline.pm:57
 #, c-format
 msgid "Email not valid\n"
 msgstr "Az email-cím érvénytelen\n"
 
-#: ../mdkonline.pm:70
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Account already exists\n"
 msgstr "Ilyen azonosító már létezik\n"
 
-#: ../mdkonline.pm:76
+#: ../mdkonline.pm:64
 #, c-format
 msgid "Problem connecting to server \n"
 msgstr "Probléma a kiszolgálóhoz való kapcsolódáskor \n"
 
-#: ../mdkupdate:58
+#: ../mdkupdate:60
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -582,32 +583,52 @@ msgstr ""
 "\n"
 "Használat:\n"
 
-#: ../mdkupdate:63
+#: ../mdkupdate:65
 #, c-format
 msgid "  --help         - print this help message.\n"
 msgstr "  --help         - jelen segítség megjelenítése\n"
 
-#: ../mdkupdate:64
+#: ../mdkupdate:66
 #, c-format
 msgid "  --auto         - Mandrakeupdate launched automatically.\n"
 msgstr "  --auto         - Mandrakeupdate automatikus indítása\n"
 
-#: ../mdkupdate:65
+#: ../mdkupdate:67
 #, c-format
 msgid "  --applet       - launch Mandrakeupdate.\n"
 msgstr "  --applet       - Mandrakeupdate indítása\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:68
+#, c-format
+msgid "  --mnf          - launch mnf specific scripts.\n"
+msgstr ""
+
+#: ../mdkupdate:69
+#, fuzzy, c-format
+msgid "  --noX          - MandrakeUpdate newt version.\n"
+msgstr "  --auto         - Mandrakeupdate automatikus indítása\n"
+
+#: ../mdkupdate:77
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
 msgstr "%s fájl nem található. Futtassa a Mandriva Online varázslót."
 
-#: ../mdkupdate:131
+#: ../mdkupdate:141
 #, c-format
 msgid "Mandrakeupdate could not contact the site, we will try again."
 msgstr "A Mandrakeupdate nem tudott kapcsolatba lépni a géppel; újabb próba."
 
-#: ../mdkupdate:186
+#: ../mdkupdate:149
+#, c-format
+msgid "Choose which packages should be installed and Press Ok"
+msgstr ""
+
+#: ../mdkupdate:171
+#, c-format
+msgid "Installing packages ...\n"
+msgstr "Csomagok telepítése...\n"
+
+#: ../mdkupdate:174 ../mdkupdate:259
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "A csomagok Mandrakeupdate-adatforrásból való frissítése sikertelen.\n"
@@ -802,4 +823,3 @@ msgstr "A csomagok Mandrakeupdate-adatforrásból való frissítése sikertelen.
 
 #~ msgid "Really abort? - Mandriva Online"
 #~ msgstr "Valóban kilép? - Mandriva Online"
-
