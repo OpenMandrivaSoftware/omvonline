@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-04-18 17:18+0200\n"
-"PO-Revision-Date: 2005-04-17 11:56+0200\n"
+"PO-Revision-Date: 2005-04-19 22:59+0200\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -56,8 +56,7 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:99
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:105
 #, c-format
@@ -601,12 +600,13 @@ msgstr "  --applet       - Mandrakeupdate indítása\n"
 #: ../mdkupdate:68
 #, c-format
 msgid "  --mnf          - launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf          - MNF-specifikus szkriptek indítása\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+# Newt is a programming library for color text mode, widget based user interfaces.
+#, c-format
 msgid "  --noX          - MandrakeUpdate newt version.\n"
-msgstr "  --auto         - Mandrakeupdate automatikus indítása\n"
+msgstr "  --noX          - a Mandrakeupdate Newt-felületet használó verziója\n"
 
 #: ../mdkupdate:77
 #, c-format
@@ -621,7 +621,7 @@ msgstr "A Mandrakeupdate nem tudott kapcsolatba lépni a géppel; újabb próba.
 #: ../mdkupdate:149
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
+msgstr "Válassza ki a telepítendő csomagokat, majd nyomja meg az OK-t"
 
 #: ../mdkupdate:171
 #, c-format
@@ -823,3 +823,4 @@ msgstr "A csomagok Mandrakeupdate-adatforrásból való frissítése sikertelen.
 
 #~ msgid "Really abort? - Mandriva Online"
 #~ msgstr "Valóban kilép? - Mandriva Online"
+
