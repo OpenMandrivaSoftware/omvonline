@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "POT-Creation-Date: 2005-04-18 17:18+0200\n"
-"PO-Revision-Date: 2004-09-29 19:58+0400\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2005-04-30 17:06+0300\n"
+"Last-Translator: Aiet Kolkhi <aiet@qartuli.net>\n"
 "Language-Team: Georgian <aiet@qartuli.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +20,8 @@ msgstr "თქვენი სისტემა განახლებულ�
 
 #: ../mdkapplet:69
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.net"
-msgstr ""
-"პრობლემა სერვისების კონფიგურაციაში. გთხოვთ გადაამოწმოთ აღრიცხვის ფაილები "
-"(logs) დაგამოაგზავნოთ ფოსტა მისმართზე support@mandrivaonline.net"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.net"
+msgstr "პრობლემა სერვისების კონფიგურაციაში. გთხოვთ გადაამოწმოთ აღრიცხვის ფაილები (logs) დაგამოაგზავნოთ ფოსტა მისმართზე support@mandrivaonline.net"
 
 #: ../mdkapplet:75
 #, c-format
@@ -40,8 +36,7 @@ msgstr "თქვენი სისტემა განახლებას 
 #: ../mdkapplet:87
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"სერვისი არ არის კონფიგურირებული. დააწკაპუნეთ „სერვისების კონფიგურირება“-ზე"
+msgstr "სერვისი არ არის კონფიგურირებული. დააწკაპუნეთ „სერვისების კონფიგურირება“-ზე"
 
 #: ../mdkapplet:93
 #, c-format
@@ -56,11 +51,10 @@ msgstr "სერვისი არ არის აქტივირებუ
 #: ../mdkapplet:105
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"ამ გამოშვების (Release) მხარდაჭერა არ გამაჩნია (ან მოძველებულია, ან "
-"development release არის)"
+msgstr "ამ გამოშვების (Release) მხარდაჭერა არ გამაჩნია (ან მოძველებულია, ან development release არის)"
 
-#: ../mdkapplet:110 ../mdkapplet:163
+#: ../mdkapplet:110
+#: ../mdkapplet:163
 #, c-format
 msgid "Install updates"
 msgstr "განახლებების ინსტალირება"
@@ -75,13 +69,19 @@ msgstr "სერვისის კონფიგურირება"
 msgid "Check Updates"
 msgstr "განახლებების შეამოწმება"
 
-#: ../mdkapplet:113 ../mdkapplet:166 ../mdkonline:93 ../mdkonline:97
-#: ../mdkonline:135 ../mdkupdate:171
+#: ../mdkapplet:113
+#: ../mdkapplet:166
+#: ../mdkonline:93
+#: ../mdkonline:97
+#: ../mdkonline:135
+#: ../mdkupdate:171
 #, c-format
 msgid "Please wait"
 msgstr "გთხოვთ იქონიოთ მოთმინება"
 
-#: ../mdkapplet:113 ../mdkapplet:165 ../mdkapplet:166
+#: ../mdkapplet:113
+#: ../mdkapplet:165
+#: ../mdkapplet:166
 #, c-format
 msgid "Check updates"
 msgstr "განახლებების შემოწმება"
@@ -101,7 +101,8 @@ msgstr "ქსელის კონფიგურირება"
 msgid "Configure Now!"
 msgstr "კონფიგურირება ახლა!"
 
-#: ../mdkapplet:151 ../mdkapplet:232
+#: ../mdkapplet:151
+#: ../mdkapplet:232
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "მენდრეიქის განახლების აპლეტი"
@@ -126,7 +127,8 @@ msgstr "აჩვენე აღრიცხვები"
 msgid "Status"
 msgstr "სტატუსი"
 
-#: ../mdkapplet:175 ../mdkapplet:385
+#: ../mdkapplet:175
+#: ../mdkapplet:385
 #, c-format
 msgid "Close"
 msgstr "დახურვა"
@@ -151,7 +153,8 @@ msgstr "ძინავს"
 msgid "Last check: "
 msgstr "ბოლო შემოწმება:"
 
-#: ../mdkapplet:215 ../mdkonline:131
+#: ../mdkapplet:215
+#: ../mdkonline:131
 #, c-format
 msgid "Machine name:"
 msgstr "სისტემის სახელი (Machine name):"
@@ -174,9 +177,7 @@ msgstr "ვიძახებ mdkupdate --applet-ს\n"
 #: ../mdkapplet:227
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"როგორ ჩანს Mandriva Online ხელმეორედ იქნა ინსტალირებული. ხელახლა ვიძახებ "
-"აპლეტს..."
+msgstr "როგორ ჩანს Mandriva Online ხელმეორედ იქნა ინსტალირებული. ხელახლა ვიძახებ აპლეტს..."
 
 #: ../mdkapplet:238
 #, c-format
@@ -189,9 +190,9 @@ msgid "Connecting to"
 msgstr "ვუკავშირდები:"
 
 #: ../mdkapplet:251
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandriva Online server\n"
-msgstr "კეთილი იყოს თქვენი ფეხი Mandriva Online-ზე."
+msgstr "პასუხი Mandriva Online სერვერისაგან\n"
 
 #: ../mdkapplet:269
 #, c-format
@@ -216,8 +217,7 @@ msgstr "უცნობი მდგომარეობა"
 #: ../mdkapplet:277
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"ონლაინ მომსახურებები შეწყვეტილია. მიაკითხეთ Mandriva Online-ის ვებგვერდს\n"
+msgstr "ონლაინ მომსახურებები შეწყვეტილია. მიაკითხეთ Mandriva Online-ის ვებგვერდს\n"
 
 #: ../mdkapplet:278
 #, c-format
@@ -231,19 +231,13 @@ msgstr "არასწორი მოქმედება, ჰოსტი �
 
 #: ../mdkapplet:280
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"თქვენი ქსელის პარამეტრებში რაღაც გაუგებრობაა (გადაამოწმეთ route, firewall ან "
-"proxy პარამეტრები)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
+msgstr "თქვენი ქსელის პარამეტრებში რაღაც გაუგებრობაა (გადაამოწმეთ route, firewall ან proxy პარამეტრები)\n"
 
 #: ../mdkapplet:282
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
+msgid "Problem occured while connecting to the server, please contact the support team"
+msgstr "პრობლემა სერვერთან დაკავშირებისას, გთხოვთ დაუკავშირდეთ ტექნიკურ დახმარების ჯგუფს"
 
 #: ../mdkapplet:284
 #, c-format
@@ -290,7 +284,8 @@ msgstr "მუდამ გამოიძახე სისტემის ჩ
 msgid "Quit"
 msgstr "გასვლა"
 
-#: ../mdkonline:58 ../mdkonline:110
+#: ../mdkonline:58
+#: ../mdkonline:110
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
@@ -323,10 +318,8 @@ msgid ""
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
 "ეს ასისტენტი დაგეხმარებათ თქვენი კონფიგურაციის განახლებაში\n"
-"(პაკეტები, აპარატურის კონფიგურაცია) ცენტრალურ მონაცემთა ბაზაში, იმისთვის, "
-"რომ\n"
-"თქვენ ავტომატურად შეიტყოთ უსაფრთხობასთან დაკავშირებულ და მნიშვნელოვან "
-"გაუმჯობესებებზე.\n"
+"(პაკეტები, აპარატურის კონფიგურაცია) ცენტრალურ მონაცემთა ბაზაში, იმისთვის, რომ\n"
+"თქვენ ავტომატურად შეიტყოთ უსაფრთხობასთან დაკავშირებულ და მნიშვნელოვან გაუმჯობესებებზე.\n"
 
 #: ../mdkonline:118
 #, c-format
@@ -336,16 +329,16 @@ msgstr "ანგარიშის შექმნა ან ავტორი
 #: ../mdkonline:123
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"შეიყვანეთ თქვენი Mandriva Online-ის მომხმარებლის სახელი, პაროლი და სისტემის "
-"სახელი:"
+msgstr "შეიყვანეთ თქვენი Mandriva Online-ის მომხმარებლის სახელი, პაროლი და სისტემის სახელი:"
 
-#: ../mdkonline:129 ../mdkonline:160
+#: ../mdkonline:129
+#: ../mdkonline:160
 #, c-format
 msgid "Login:"
 msgstr "მომხმარებელი:"
 
-#: ../mdkonline:130 ../mdkonline:161
+#: ../mdkonline:130
+#: ../mdkonline:161
 #, c-format
 msgid "Password:"
 msgstr "პაროლი:"
@@ -365,10 +358,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -386,7 +377,9 @@ msgstr ""
 "განახლებების შესახებ. ასევე, თქვენ საშუალება მოგეცემათ ისარგებლოთ\n"
 "ფასდაკლებებით www.mandrivaexpert.com-ზე არსებული ფასიან მომსახურებებზე."
 
-#: ../mdkonline:145 ../mdkonline:184 ../mdkupdate:141
+#: ../mdkonline:145
+#: ../mdkonline:184
+#: ../mdkupdate:141
 #, c-format
 msgid "Connection problem"
 msgstr "კავშირის პრობლემა"
@@ -405,18 +398,14 @@ msgstr "არასწორი პაროლი:"
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"Mandriva Online.\n"
-" In the latter case, go back to the first step to connect to Mandriva "
-"Online.\n"
+" Either you'll have to type it again, or you'll need to create an account on Mandriva Online.\n"
+" In the latter case, go back to the first step to connect to Mandriva Online.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "თქვენი მომხმარებლის სახელი ან პაროლი არასწორია.\n"
 " ან ხელახლა უნდა ჩაწეროთ, ან ახალი ანგარიში შექმნათ Mandriva Online-ზე.\n"
-" ამ უკანასკნელის გასაკეთებლად მიუბრუნდით პირველ მოქმედებას Mandriva Online-"
-"ზე დასაკავშირებლად. გაითვალისწინეთ, რომ თქვენ ასევე უნდა მიუთითოთ სისტემის "
-"სახელი(Machine name) \n"
+" ამ უკანასკნელის გასაკეთებლად მიუბრუნდით პირველ მოქმედებას Mandriva Online-ზე დასაკავშირებლად. გაითვალისწინეთ, რომ თქვენ ასევე უნდა მიუთითოთ სისტემის სახელი(Machine name) \n"
 " (ნებადართულია მხოლოდ ანბანის ასოები)"
 
 #: ../mdkonline:157
@@ -460,8 +449,7 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Mandriva Online-ზე წარმატებით განხორციელდა თქვენი ანგარიშის რეგისტრაცია.\n"
-"გთხოვთ დააჭიროთ \"შემდეგ\" ღილაკს რათა გაიაროთ ვტორიზაცია და ატვირთოთ თვენი "
-"კონფიგურაცია\n"
+"გთხოვთ დააჭიროთ \"შემდეგ\" ღილაკს რათა გაიაროთ ვტორიზაცია და ატვირთოთ თვენი კონფიგურაცია\n"
 
 #: ../mdkonline:182
 #, c-format
@@ -474,8 +462,7 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandriva Online."
 msgstr ""
-"Mandriva Online-ის მეშვეობით დღეიდან თქვენ მიიღებთ უსაფრთხოებასთან "
-"დაკავშირებულ\n"
+"Mandriva Online-ის მეშვეობით დღეიდან თქვენ მიიღებთ უსაფრთხოებასთან დაკავშირებულ\n"
 "და მნიშვნელოვან გაუმჯობესებების განცხადებებს."
 
 #: ../mdkonline:182
@@ -485,8 +472,7 @@ msgid ""
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Mandriva Online გაძლევთ საშუალებას ავტომატურად განაახლოთ სისტემა.\n"
-"თქვენს სისტემაზე რეგულარურად გაიშვება პროგრამა, რომელიც განახლებებს "
-"დაელოდება\n"
+"თქვენს სისტემაზე რეგულარურად გაიშვება პროგრამა, რომელიც განახლებებს დაელოდება\n"
 
 #: ../mdkonline:184
 #, c-format
@@ -499,31 +485,29 @@ msgid "Country"
 msgstr "ქვეყანა"
 
 #: ../mdkonline:207
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations"
-msgstr "კონფიგურაცის გადაგზავნა"
+msgstr "გილოცავთ"
 
 #: ../mdkonline:207
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr ""
+msgstr "თქვენი Mandriva Online ანგარიშის კონფიგურაცია  წარმატებით დასრულდა\n"
 
 #: ../mdkonline:223
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "განახლება წარმატებით დაგვირგვინდა!"
+msgstr "კონფიგურაციის ატვირთვა წარმატებით დაგვირგვინდა"
 
 #: ../mdkonline:224
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "ვკითხულობ კონფიგურაცას\n"
+msgstr "შეფერხება კონფიგურაციის ატვირთვისას"
 
 #: ../mdkonline:226
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
+msgstr "ვერ ვუკავშირდები Mandriva Online ვებ-გვერდს: ან მომხმ. სახელი და პაროლია არასწორი, ან თქვენი როუტერი/firewall არის ცუდად კონფიგურირებული"
 
 #: ../mdkonline.pm:54
 #, c-format
@@ -560,15 +544,13 @@ msgstr "სერვერს ვერ ვუკავშირდები \n"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate ვერსია %s\n"
 "საავტორო უფლებები (C) %s Mandriva.\n"
-"პროგრამა უფასო გახლავთ და ნებადართულია მისი GNU GPL ლიცენზიის პირობების "
-"თანახმად გავრცელება.\n"
+"პროგრამა უფასო გახლავთ და ნებადართულია მისი GNU GPL ლიცენზიის პირობების თანახმად გავრცელება.\n"
 "\n"
 "გამოყენება:\n"
 
@@ -590,12 +572,12 @@ msgstr "  --applet       - გამოიძახე Mandrakeupdate.\n"
 #: ../mdkupdate:68
 #, c-format
 msgid "  --mnf          - launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf          - mnf სპეფიციკის სკრიფტების გამოძახევა.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX          - MandrakeUpdate newt version.\n"
-msgstr "  --auto         - Mandrakeupdate-ის ავტომატური გამოძახებ.\n"
+msgstr "  --noX          - MandrakeUpdate-ის newt ვერსია.\n"
 
 #: ../mdkupdate:77
 #, c-format
@@ -610,21 +592,21 @@ msgstr "Mandrakeupdate-მა ვერ შეძლო დაკავშირ
 #: ../mdkupdate:149
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
+msgstr "ამოირჩიეთ, თუ რომელი პაკეტის ინსტალირება გსურთ და დააწკაპუნეთ ღილაკზე [Ok]"
 
 #: ../mdkupdate:171
-#, fuzzy, c-format
+#, c-format
 msgid "Installing packages ...\n"
-msgstr "განახლებების ინსტალირება\n"
+msgstr "მიმდინარეობს პაკეტების ინსტალირება ...\n"
 
-#: ../mdkupdate:174 ../mdkupdate:259
+#: ../mdkupdate:174
+#: ../mdkupdate:259
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source-ის მედიუმიდან პაკეტები ვერ განვაახლე.\n"
 
 #~ msgid "Unable to update packages from mdkupdate medium.\n"
 #~ msgstr "mdkupdate-ის მედიუმიდან პაკეტები ვერ განვაახლე.\n"
-
 #~ msgid ""
 #~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
 #~ "[at] mandrivaonline [dot] net"
@@ -635,52 +617,37 @@ msgstr "update_source-ის მედიუმიდან პაკეტე�
 #, fuzzy
 #~ msgid "Please Wait"
 #~ msgstr "გთხოვთ იქონიოთ მოთმინება"
-
 #~ msgid "Next"
 #~ msgstr "შემდეგი"
-
 #~ msgid "Cancel"
 #~ msgstr "სტოპ!"
-
 #~ msgid "Previous"
 #~ msgstr "წინა"
-
 #~ msgid "I don't have a Mandriva Online account and I want to subscribe"
 #~ msgstr "მე ჯერ არ მაქვს ანგარიში Mandriva Online-ზე და მსურს გაწევრიანება"
-
 #~ msgid "Mandriva Linux Privacy Policy"
 #~ msgstr "Mandriva Linux-ის პირადი უფლებების პოლისი"
-
 #~ msgid "Authentification"
 #~ msgstr "რეგისტრაცია"
-
 #~ msgid "Send Configuration"
 #~ msgstr "კონფიგურაცის გადაგზავნა"
-
 #~ msgid "Finish"
 #~ msgstr "დამთავრება"
-
 #~ msgid "automated Upgrades"
 #~ msgstr "ავტომატიზირებული განახლება"
-
 #~ msgid "Country:"
 #~ msgstr "ქვეყანა:"
-
 #~ msgid "Error"
 #~ msgstr "შეცდომა"
-
 #~ msgid "Quitting Wizard\n"
 #~ msgstr "ოსტატის დასრულება\n"
-
 #~ msgid ""
 #~ "Mandriva Online could not be contacted, please try again at a later time"
 #~ msgstr "Mandriva Online-ს ვერ ვუკავშირდები. გთხოვთ მოგვიანებით სცადოთ"
-
 #~ msgid "Wrong password"
 #~ msgstr "არასწორი პაროლი"
-
 #~ msgid "  --update       - Update keys\n"
 #~ msgstr "  --update       - განახლების კვანძები\n"
-
 #~ msgid "Skip Wizard"
 #~ msgstr "ჯადოქარის დასრულება"
+
