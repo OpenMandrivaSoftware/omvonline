@@ -211,6 +211,8 @@ LASTCHECK=$d
 
 sub is_running {
     my ($name) = @_;
+    # Set USER environment variable if necessary:
+    $ENV{USER} ||= getlogin || (getpwuid($<))[0];
     any {
 	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
 	#- to run ps, perl may create some process with $name as name and 1 as ppid
