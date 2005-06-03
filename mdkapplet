@@ -26,7 +26,6 @@ use interactive;
 use common;
 
 use Gtk2::Pango;
-use Digest::MD5;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -183,11 +182,12 @@ sub showMainWindow() {
 }
 sub md5file {
     my @md5;
+    require Digest::MD5;
     foreach my $file (@_) {
-	open(FILE, $file) or do { print STDERR "Can't open '$file': $!"; push @md5, "" };
-	binmode(FILE);
-	push @md5, Digest::MD5->new->addfile(*FILE)->hexdigest;
-	close(FILE);
+	open(my $FILE, $file) or do { print STDERR "Can not open '$file': $!"; push @md5, "" };
+	binmode($FILE);
+	push @md5, Digest::MD5->new->addfile($FILE)->hexdigest;
+	close($FILE);
     }
     return wantarray() ? @md5 : $md5[0];
 }
