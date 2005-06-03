@@ -346,18 +346,25 @@ sub go2State {
     defined $textvw and refresh_status($state);
 }
 sub isNetwork {
-    my ($netcnx, $netc, $intf) = ({}, {}, {});
     my $r = mdkonline::get_release();
     #    my $h = mdkonline::get_distro_type();
     my $network;
     if ($r <= 10.0) {
 	$network = gethostbyname("mandrivaonline.net") ? 1 : 0;
-    } else {
+    } elsif ($r <= 10.2) {
 	require network::netconnect;
-	require network::tools;
+ 	require network::tools;
+	my ($netcnx, $netc, $intf) = ({}, {}, {});
     	network::netconnect::read_net_conf($netcnx, $netc, $intf);
-	my ($gw_intf, $is_up, $gw_address, $dns_server) = network::tools::get_internet_connection($netc, $intf);
-	$network = $gw_address ? 1 : 0;
+	my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($netc, $intf);
+	$network = to_bool($gw_address);
+    } else {
+	require network::network;
+	require network::tools;
+	my $net = {};
+    	network::network::read_net_conf($net);
+	my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($net);
+	$network = to_bool($gw_address);
     }
     $network;
 }
