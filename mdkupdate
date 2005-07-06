@@ -42,7 +42,7 @@ my $afterrpm =  "$confdir/rpm_qa_installed_after";
 
 my $logfile = '/var/tmp/mdkupdate.log';
 
-my $onlineUrl = "https://www.mandrivaonline.net/";
+my $onlineUrl = "https://www.mandrivaonline.com/";
 my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php';
@@ -63,10 +63,10 @@ This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
 ", $VERSION, $YEARS) . N("  --help         - print this help message.
-") . N("  --auto         - Mandrakeupdate launched automatically.
-") . N("  --applet       - launch Mandrakeupdate.
+") . N("  --auto         - Mandriva Update launched automatically.
+") . N("  --applet       - launch Mandriva Update.
 ") . N("  --mnf          - launch mnf specific scripts.
-") . N("  --noX          - text mode version of MandrakeUpdate.
+") . N("  --noX          - text mode version of Mandriva Update.
 ");
     exit(0);
 }
@@ -138,7 +138,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 		     };
 	$action->{$u}->();
     } else {
-	output_p($logfile, N("Connection problem") . "\n" . N("Mandrakeupdate could not contact the site, we will try again."));
+	output_p($logfile, N("Connection problem") . "\n" . N("Mandriva Update could not contact the site, we will try again."));
     }
 } else {
     my $ret = -1; 

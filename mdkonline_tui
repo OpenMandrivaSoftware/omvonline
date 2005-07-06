@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 ################################################################################
-# Mandrakeonline Text User Interface                                           # 
+# Mandriva Online Text User Interface                                          # 
 #                                                                              #
-# Copyright (C) 2001-2002-2003-2004 Mandrakesoft                               #
+# Copyright (C) 2001-2002-2003-2004-2005 Mandriva                              #
 #                                                                              #
-# Daouda Lo <daouda@mandrakesoft.com>                                          #
+# Daouda Lo <daouda@mandriva.com>                                              #
 #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License Version 2 as            #
@@ -36,8 +36,8 @@ use Digest::MD5  qw(md5 md5_hex md5_base64);
 
 my $in = interactive->vnew('su');
 
-my $expert_link = 'http://www.mandrakeexpert.com';
-my $online_link = 'https://www.mandrakeonline.net';
+my $expert_link = 'http://www.mandrivaexpert.com';
+my $online_link = 'https://www.mandrivaonline.com';
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
@@ -46,7 +46,7 @@ my $conffile = "$confdir/mdkupdate";
 mkdir_p($confdir) if !-d $confdir;
 -e '/root/.mdkupdate' and system("mv", "/root/.mdkupdate", $conffile);
 
-$::Wizard_title = N("Mandrakeonline");
+$::Wizard_title = N("Mandriva Online");
 
 my %choices = (
 	       account => N("I already have an account"),
@@ -96,7 +96,7 @@ sub create_new_account {
     $ca
 }
 $wiz = {
-	name => N("Mandrakeonline"),
+	name => N("Mandriva Online"),
 	pages => {
 		  welcome => {
 			      name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
@@ -109,7 +109,7 @@ $wiz = {
 			      post => sub { +{ reverse %choices }->{$choice} },
 			     },
 		  account => {
-			      name => N("Enter your Mandrakeonline login, password and machine name:"),
+			      name => N("Enter your Mandriva Online login, password and machine name:"),
 			      pre => sub {
 				  read_conf();
 			      },
@@ -121,7 +121,7 @@ $wiz = {
 				  ],
 			      },
 			      post => sub {
-				  my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandrakeonline website..."));
+				  my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website..."));
 				  $is_success = check_login($login, $password, $boxname); undef($_wait);
 				  "authenticate"
 			      },
@@ -129,9 +129,9 @@ $wiz = {
 		  authenticate => {
 				   name => sub {
 				       if ($is_success) {
-					   N("In order to benefit from Mandrakeonline services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrakeexpert.com.")
+					   N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandrakesoft:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.")
 				       } else {
-					   N("Connection problem") . "  " . N("or") . "  " . N("wrong password:") . "\n" . N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandrakeonline.\n In the latter case, go back to the first step to connect to Mandrakeonline.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)")
+					   N("Connection problem") . "  " . N("or") . "  " . N("wrong password:") . "\n" . N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandriva Online.\n In the latter case, go back to the first step to connect to Mandriva Online.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)")
 				       }
 				   },
 				   no_back => $is_success ? 1 : 0,
@@ -143,7 +143,7 @@ $wiz = {
 				   }
 				  },
 		  noaccount => {
-				name => N("Create a Mandrakeonline Account"),
+				name => N("Create a Mandriva Online Account"),
 				data => sub {
 				    [
 				     { label => N("Login:"),   val => \$nlogin },
@@ -159,7 +159,7 @@ $wiz = {
 			       },
 		  createaccount => {
 				    name => sub { 
-					$createaccount eq 'OK' ? "\n\n" . N("Mandrakeonline Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n") : $createaccount;
+					$createaccount eq 'OK' ? "\n\n" . N("Mandriva Online Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n") : $createaccount;
 				    },
 				    post => sub {
 					$createaccount eq 'OK' ? "account" : "noaccount"
@@ -168,7 +168,7 @@ $wiz = {
 		  upload => {
 			     name => sub {
 				 if ($sendconfres eq 'TRUE' && $key) {
-				     "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandrakeonline.") . "\n\n" . N("Mandrakeonline offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
+				     "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 				 } else {
 				     N("Connection problem") . N("Problem occurs when uploading files, please try again")
 				 }
@@ -188,7 +188,7 @@ $wiz = {
 			    },
 		  end => {
 			  name => sub {
-			      N("Congratulations") . "\n\n" . N("Your Mandrakeonline account has been successfully configured\n")
+			      N("Congratulations") . "\n\n" . N("Your Mandriva Online account has been successfully configured\n")
 			  },
 			  end => 1,
 			  no_back => 1,
