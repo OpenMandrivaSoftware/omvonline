@@ -314,7 +314,7 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"本助手将会帮助您将您的配置"
+"您需要在本步骤中提供您在 Mandriva Online 的账户。而本助手将会帮助您将您的配置"
 "(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到安全更新和有"
 "用的升级。\n"
 
@@ -559,12 +559,12 @@ msgstr "  --help        - 打印本帮助信息。\n"
 #: ../mdkupdate:66
 #, c-format
 msgid "  --auto         - Mandriva Update launched automatically.\n"
-msgstr "  --auto        - 自动调用 Mandriva 更新。\n"
+msgstr "  --auto        - 自动调用 Mandriva Update。\n"
 
 #: ../mdkupdate:67
 #, c-format
 msgid "  --applet       - launch Mandriva Update.\n"
-msgstr "  --applet      - 调用 Mandriva 更新。\n"
+msgstr "  --applet      - 调用 Mandriva Update。\n"
 
 #: ../mdkupdate:68
 #, c-format
@@ -579,12 +579,12 @@ msgstr "  --noX          - Mandriva 更新的文本模式版本。\n"
 #: ../mdkupdate:77
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr "未找到 %s 文件。请先运行 Mandriva Online 向导"
+msgstr "未找到 %s 文件。请先运行 mdkonline 向导"
 
 #: ../mdkupdate:141
 #, c-format
 msgid "Mandriva Update could not contact the site, we will try again."
-msgstr "Mandriva 更新无法连接网站，请稍后再试一次。"
+msgstr "Mandriva Online 无法连接网站，请稍后再试一次。"
 
 #: ../mdkupdate:149
 #, c-format
@@ -601,3 +601,16 @@ msgstr "正在安装软件包...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "无法从 update_source 介质更新软件包。\n"
 
+#~ msgid ""
+#~ "Problem occurred while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr "连接到服务器时发生问题，请联系支持团队"
+
+#~ msgid "Unable to update packages from mdkupdate medium.\n"
+#~ msgstr "无法从 mdkupdate 介质更新软件包。\n"
+
+#~ msgid ""
+#~ "Mandriva Update could not upload the diff files. Send a mail to support "
+#~ "[at] mandrivaonline [dot] net"
+#~ msgstr ""
+#~ "Mandriva Update 无法上传差异文件。请给 support@mandrivaonline.net 发送邮件"

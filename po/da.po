@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-07 06:30+0800\n"
-"PO-Revision-Date: 2005-07-06 00:21+0200\n"
+"PO-Revision-Date: 2005-02-23 22:30+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"Language-Team: Danish <<dansk@klid.dk>>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -571,14 +571,14 @@ msgid "  --help         - print this help message.\n"
 msgstr "  --help         - print denne hjælpebesked.\n"
 
 #: ../mdkupdate:66
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto         - Mandriva Update launched automatically.\n"
-msgstr "  --auto         - Mandrakeupdate startes automatisk.\n"
+msgstr "  --auto         - Mandriva Update startes automatisk.\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet       - launch Mandriva Update.\n"
-msgstr "  --applet       - start MandrakeOpdatér op.\n"
+msgstr "  --applet       - start MandrivaOpdatér op.\n"
 
 #: ../mdkupdate:68
 #, c-format
@@ -586,9 +586,9 @@ msgid "  --mnf          - launch mnf specific scripts.\n"
 msgstr "  --mnf          - start mnf-specifikke skripter.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --noX          - teksttilstandsversion af MandrakeUpdate.\n"
+msgstr "  --noX          - teksttilstandsversion af Mandriva Update.\n"
 
 #: ../mdkupdate:77
 #, c-format
@@ -596,9 +596,9 @@ msgid "No %s file found. Run mdkonline wizard first"
 msgstr "Ingen %s-fil fundet. Kør mdkonline-hjælperen først"
 
 #: ../mdkupdate:141
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Update could not contact the site, we will try again."
-msgstr "Mandrakeupdate kunne ikke kontakte stedet, vi vil prøve igen."
+msgstr "Mandriva Update kunne ikke kontakte stedet, vi vil prøve igen."
 
 #: ../mdkupdate:149
 #, c-format
@@ -615,15 +615,26 @@ msgstr "Installerer pakker...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 
+#~ msgid ""
+#~ "Problem occurred while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr ""
+#~ "Problem indtraf ved forbindelse til serveren, kontakt venligst "
+#~ "kundetjenesten"
+
 #~ msgid "Unable to update packages from mdkupdate medium.\n"
 #~ msgstr "Kan ikke opdatere pakker fra mdkupdate-medium.\n"
 
 #~ msgid ""
-#~ "Mandrakeupdate could not upload the diff files. Send a mail to support "
+#~ "Mandriva Update could not upload the diff files. Send a mail to support "
 #~ "[at] mandrivaonline [dot] net"
 #~ msgstr ""
-#~ "Mandrakeupdate kunne ikke lægge diff-filerne op. Send et brev til "
+#~ "Mandriva Update kunne ikke lægge diff-filerne op. Send et brev til "
 #~ "support@mandrivaonline.net"
+
+#, fuzzy
+#~ msgid "Please Wait"
+#~ msgstr "Vent venligst"
 
 #~ msgid "Next"
 #~ msgstr "Næste"
@@ -722,7 +733,7 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ msgid "Server Problem"
 #~ msgstr "Serverproblem"
 
-#~ msgid "Launching Mandrakeupdate\n"
+#~ msgid "Launching Mandriva Update\n"
 #~ msgstr "Start Mandriva Linux Opdatering op\n"
 
 #~ msgid "Yes I want automated updates"
@@ -749,8 +760,8 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ msgid "Version:"
 #~ msgstr "Version:"
 
-#~ msgid "Start Mandrakeupdate"
-#~ msgstr "Start Mandrakeupdate"
+#~ msgid "Start Mandriva Update"
+#~ msgstr "Start Mandriva Update"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - brug kun sikkerhedsmeddia.\n"
@@ -874,7 +885,7 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ "    - When registering a purchased product, we ask for personal\n"
 #~ "information as well as system/hardware details so that we may deliver\n"
 #~ "the best support services customized to your needs.\n"
-#~ "    - On our donation page and on our online store (MandrakeStore), we\n"
+#~ "    - On our donation page and on our online store (MandrivaStore), we\n"
 #~ "record data for billing purpose (we do not store any credit card data).\n"
 #~ "    \n"
 #~ "What do we do with this information?\n"
@@ -892,7 +903,7 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ "to receive support, we keep this information private unless the\n"
 #~ "information is required by one of our partners to deliver the support\n"
 #~ "you require.\n"
-#~ "    - If you use MandrakeStore, we also use your Customer ID to track\n"
+#~ "    - If you use MandrivaStore, we also use your Customer ID to track\n"
 #~ "your order and deliver your products.\n"
 #~ "    - If you provide us with marketing information, we keep it for \n"
 #~ "internal use only in order to improve our products so that they can \n"
@@ -920,7 +931,7 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ "    - Ved registrering af et købt produkt spørger vi om personlige\n"
 #~ "oplysninger samtidigt med system- og udstyrsdetaljer så vi kan give\n"
 #~ "den bedste understøttelsesservice tilpasset dine behov.\n"
-#~ "    - På vores bidragsside og på vores netbutik (MandrakeStore) gemmer\n"
+#~ "    - På vores bidragsside og på vores netbutik (MandrivaStore) gemmer\n"
 #~ "vi data omkring betaling (vi gemmer ikke nogen kreditkortsdata).\n"
 #~ "    \n"
 #~ "Hvad gør vi med denne information?\n"
@@ -942,7 +953,7 @@ msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 #~ "for at få support, holder vi denne information fortroligt med mindre \n"
 #~ "oplysningerne er krævet af en af vores partnere for at levere den\n"
 #~ "support du har brug for.\n"
-#~ "    - Hvis du bruger MandrakeStore, bruger vi også din kunde-ID til at "
+#~ "    - Hvis du bruger MandrivaStore, bruger vi også din kunde-ID til at "
 #~ "holde styr\n"
 #~ "på din ordre og levere dine varer.\n"
 #~ "    - Hvis du giver os marketingsoplysninger, opbevarer vi disse kun "

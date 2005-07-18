@@ -521,7 +521,7 @@ msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
-"Не е възможна връза с Mandriva Online: грешно име/парола или грешно "
+"Не е възможна връза с mandrivaonline: грешно име/парола или грешно "
 "конфигуриран маршрутизатор/огнена стена"
 
 #: ../mdkonline.pm:54
@@ -577,14 +577,14 @@ msgid "  --help         - print this help message.\n"
 msgstr " --help         - показва това помощно съобщение.\n"
 
 #: ../mdkupdate:66
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto         - Mandriva Update launched automatically.\n"
-msgstr "  --auto       - стартира автоматично Mandrakeupdate.\n"
+msgstr "  --auto       - стартира автоматично Mandriva Update.\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet       - launch Mandriva Update.\n"
-msgstr "  --applet       -  стартира Mandrakeupdate.\n"
+msgstr "  --applet       -  стартира Mandriva Update.\n"
 
 #: ../mdkupdate:68
 #, c-format
@@ -594,7 +594,7 @@ msgstr ""
 #: ../mdkupdate:69
 #, fuzzy, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --auto       - стартира автоматично Mandrakeupdate.\n"
+msgstr "  --applet       -  стартира Mandriva Update.\n"
 
 #: ../mdkupdate:77
 #, c-format
@@ -602,9 +602,9 @@ msgid "No %s file found. Run mdkonline wizard first"
 msgstr "Файлът %s не е намерен. Първо стартирайте помощникът mdkonline"
 
 #: ../mdkupdate:141
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Update could not contact the site, we will try again."
-msgstr "Mandrakeupdate не е успя да се свърже със сайта, опитайте отново."
+msgstr "Mandriva Update не е успя да се свърже със сайта, опитайте отново."
 
 #: ../mdkupdate:149
 #, c-format
@@ -622,44 +622,11 @@ msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не е възможна актуализацията на пакетите от източника.\n"
 
 #~ msgid ""
-#~ "Service configuration problem. Please check logs and send mail to "
-#~ "support@mandrakeonline.net"
+#~ "Problem occurred while connecting to the server, please contact the "
+#~ "support team"
 #~ msgstr ""
-#~ "Проблем в конфигурация на услуга. Моля проверете журналните файлове и "
-#~ "изпратете е-поща на support@mandrakeonline.net"
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrakeexpert.com."
-#~ msgstr ""
-#~ "За да се възползвате от услугите на Mandriva Online,\n"
-#~ "трябва да качите Вашата конфигурация.\n"
-#~ "\n"
-#~ "Тази програма ще изпрати следната информация на Mandriva:\n"
-#~ "1) списък с пакетите, които са инсталирани на системата Ви,\n"
-#~ "2) информация за Вашият хардуер.\n"
-#~ "\n"
-#~ "Ако идеята не ви харесва, или не искате да се възползвате от тази "
-#~ "услуга,\n"
-#~ "моля натиснете 'Отказ'. Натискайки 'Напред', Вие ни позволявате да ви "
-#~ "държим в течение\n"
-#~ "за актуализация на системата за сигурност, както и полезни нововъведения, "
-#~ "чрез е-писма.\n"
-#~ "Освен това, Вие печелите още и намаление от цената за поддръжка от www."
-#~ "mandrakeexpert.com."
+#~ "Възникнал е проблем при връзка със сървъра, моля свържете се с екипа по "
+#~ "поддръжка"
 
 #~ msgid "Unable to update packages from mdkupdate medium.\n"
 #~ msgstr "Не мога да обновя пакети от източник mdkupdate.\n"
