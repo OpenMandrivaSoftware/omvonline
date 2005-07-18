@@ -180,17 +180,6 @@ sub showMainWindow() {
 	  );
     $w->show_all;
 }
-sub md5file {
-    my @md5;
-    require Digest::MD5;
-    foreach my $file (@_) {
-	open(my $FILE, $file) or do { print STDERR "Can not open '$file': $!"; push @md5, "" };
-	binmode($FILE);
-	push @md5, Digest::MD5->new->addfile($FILE)->hexdigest;
-	close($FILE);
-    }
-    return wantarray() ? @md5 : $md5[0];
-}
 sub setLabel {
     my ($widget, $string) = shift;
     $widget->set_label($string) if defined $widget;
@@ -220,10 +209,10 @@ sub refresh_contents {
 sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
-    my $oldmd5 = md5file($binfile);
+    my $oldmd5 = common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
     system "/usr/sbin/mdkupdate", "--applet";
-    my $newmd5 = md5file($binfile);
+    my $newmd5 = common::md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush(); 
