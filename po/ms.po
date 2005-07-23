@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline 0.01\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-07-07 06:30+0800\n"
-"PO-Revision-Date: 2005-04-02 22:59+0800\n"
+"PO-Revision-Date: 2005-07-24 01:01+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Bahasa Melayu <yuzz@emasonline.com>\n"
 "MIME-Version: 1.0\n"
@@ -22,21 +22,18 @@ msgstr "Sistem anda telah dikemaskini"
 
 #: ../mdkapplet:68
 #, fuzzy, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.net"
-msgstr ""
-"Untuk sebarang masalah sila hantar emel kepada support@mandrivaonline.net\n"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.net"
+msgstr "Masalah tetapan servis. Sila periksa log dan hantar mel ke support@mandrivaonline.net"
 
 #: ../mdkapplet:74
-#, fuzzy, c-format
+#, c-format
 msgid "System is busy. Please wait ..."
-msgstr "Melaksanakan anaconda, pemasang sistem %s  - sila tunggu...\n"
+msgstr "Sistem sibuk. Sila tunggu ..."
 
 #: ../mdkapplet:80
-#, fuzzy, c-format
+#, c-format
 msgid "New updates are available for your system"
-msgstr "Konfigurasikan penjimatan tenaga bagi sistem anda"
+msgstr "Kemaskini baru terdapat untuk sistem anda"
 
 #: ../mdkapplet:86
 #, c-format
@@ -56,31 +53,37 @@ msgstr "Servis tidak diaktifkan. Sila klik pada \"Laman Web Online\""
 #: ../mdkapplet:104
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Keluaran tidak disokong (keluaran terlalu lama, atau keluaran pembangunan)"
+msgstr "Keluaran tidak disokong (keluaran terlalu lama, atau keluaran pembangunan)"
 
-#: ../mdkapplet:109 ../mdkapplet:162
-#, fuzzy, c-format
+#: ../mdkapplet:109
+#: ../mdkapplet:162
+#, c-format
 msgid "Install updates"
-msgstr "Kemaskini Cakera"
+msgstr "Pasang kemaskini"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "Configure the service"
-msgstr "                    [--initscript <service>]\n"
+msgstr "Tetapkan servis"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "Check Updates"
-msgstr "Periksa kemaskini"
+msgstr "Periksa Kemaskini"
 
-#: ../mdkapplet:112 ../mdkapplet:165 ../mdkonline:93 ../mdkonline:97
-#: ../mdkonline:135 ../mdkupdate:171
+#: ../mdkapplet:112
+#: ../mdkapplet:165
+#: ../mdkonline:93
+#: ../mdkonline:97
+#: ../mdkonline:135
+#: ../mdkupdate:171
 #, c-format
 msgid "Please wait"
 msgstr "Sila tunggu"
 
-#: ../mdkapplet:112 ../mdkapplet:164 ../mdkapplet:165
+#: ../mdkapplet:112
+#: ../mdkapplet:164
+#: ../mdkapplet:165
 #, c-format
 msgid "Check updates"
 msgstr "Periksa kemaskini"
@@ -88,22 +91,23 @@ msgstr "Periksa kemaskini"
 #: ../mdkapplet:114
 #, fuzzy, c-format
 msgid "Online WebSite"
-msgstr "Laman web _RHN..."
+msgstr "Lamanweb Dalam Talian"
 
 #: ../mdkapplet:115
 #, fuzzy, c-format
 msgid "Configure Network"
-msgstr "Konfigurasikan Pemasangan Rangkaian"
+msgstr "Tetapkan Rangkaian"
 
 #: ../mdkapplet:116
 #, fuzzy, c-format
 msgid "Configure Now!"
-msgstr "_Konfigurasikan Firewall"
+msgstr "Tetapkan Sekarang!"
 
-#: ../mdkapplet:150 ../mdkapplet:232
+#: ../mdkapplet:150
+#: ../mdkapplet:232
 #, fuzzy, c-format
 msgid "Mandriva Linux Updates Applet"
-msgstr "Membaca kemaskini anaconda..."
+msgstr "Aplet Kemaskini Mandriva Linux"
 
 #: ../mdkapplet:160
 #, c-format
@@ -118,14 +122,15 @@ msgstr "Buat konfigurasi"
 #: ../mdkapplet:167
 #, fuzzy, c-format
 msgid "See logs"
-msgstr "Log Sistem"
+msgstr "Lihat log"
 
 #: ../mdkapplet:170
 #, c-format
 msgid "Status"
 msgstr "Status"
 
-#: ../mdkapplet:174 ../mdkapplet:392
+#: ../mdkapplet:174
+#: ../mdkapplet:392
 #, c-format
 msgid "Close"
 msgstr "Tutup"
@@ -133,7 +138,7 @@ msgstr "Tutup"
 #: ../mdkapplet:213
 #, fuzzy, c-format
 msgid "Network Connection: "
-msgstr "Sambungan daripada %s:%u"
+msgstr "Sambungan Rangkaian:"
 
 #: ../mdkapplet:213
 #, c-format
@@ -148,9 +153,10 @@ msgstr "Turun"
 #: ../mdkapplet:214
 #, fuzzy, c-format
 msgid "Last check: "
-msgstr "Memeriksa Kebergantungan"
+msgstr "Pemeriksaan terakhir:"
 
-#: ../mdkapplet:215 ../mdkonline:131
+#: ../mdkapplet:215
+#: ../mdkonline:131
 #, c-format
 msgid "Machine name:"
 msgstr "Nama mesin:"
@@ -158,7 +164,7 @@ msgstr "Nama mesin:"
 #: ../mdkapplet:216
 #, fuzzy, c-format
 msgid "Updates: "
-msgstr "Kemaskini"
+msgstr "Kemaskini:"
 
 #: ../mdkapplet:220
 #, c-format
@@ -168,7 +174,7 @@ msgstr "Melaksanakan drakconnect\n"
 #: ../mdkapplet:224
 #, fuzzy, c-format
 msgid "Launching mdkupdate --applet\n"
-msgstr "Wanda & George: Perkara Aplet"
+msgstr "Melaksanakan mdkupdate --applet\n"
 
 #: ../mdkapplet:227
 #, c-format
@@ -178,22 +184,22 @@ msgstr ""
 #: ../mdkapplet:238
 #, fuzzy, c-format
 msgid "Computing new updates...\n"
-msgstr "Membaca kemaskini anaconda..."
+msgstr "Memeriksa kemaskini baru...\n"
 
 #: ../mdkapplet:240
 #, fuzzy, c-format
 msgid "Connecting to"
-msgstr "Menyambung ke %s:%u..."
+msgstr "Menyambung ke"
 
 #: ../mdkapplet:251
 #, fuzzy, c-format
 msgid "Response from Mandriva Online server\n"
-msgstr "DISCON, Putus daripada pelayan"
+msgstr "Jawapan dari pelayan Mandriva Online\n"
 
 #: ../mdkapplet:269
 #, fuzzy, c-format
 msgid "Checking... Updates are available\n"
-msgstr "Tiada kemaskini didapati (%d diabaikan)"
+msgstr "Memeriksa... Terdapat kemaskini\n"
 
 #: ../mdkapplet:274
 #, c-format
@@ -208,7 +214,7 @@ msgstr "Keluaran terlalu lama tidak disokong oleh servis"
 #: ../mdkapplet:276
 #, fuzzy, c-format
 msgid "Unknown state"
-msgstr "keadaan tidak diketahui"
+msgstr "Keadaan tidak diketahui"
 
 #: ../mdkapplet:277
 #, c-format
@@ -227,16 +233,12 @@ msgstr ""
 
 #: ../mdkapplet:280
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
 msgstr ""
 
 #: ../mdkapplet:282
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
+msgid "Problem occured while connecting to the server, please contact the support team"
 msgstr ""
 
 #: ../mdkapplet:284
@@ -247,12 +249,12 @@ msgstr "Sistem adalah terkini\n"
 #: ../mdkapplet:316
 #, fuzzy, c-format
 msgid "No check"
-msgstr "Memeriksa Kebergantungan"
+msgstr "Tiada pemeriksaan"
 
 #: ../mdkapplet:329
 #, fuzzy, c-format
 msgid "Checking config file: Not present\n"
-msgstr "Periksa sistem fail\n"
+msgstr "Memeriksa fail tetapan: Tidak wujud\n"
 
 #: ../mdkapplet:332
 #, c-format
@@ -277,14 +279,15 @@ msgstr "Keterangan..."
 #: ../mdkapplet:426
 #, fuzzy, c-format
 msgid "Always launch on startup"
-msgstr "Tiada senarai pelayan pada permulaan"
+msgstr "Sentiasa lancar ketika permulaan"
 
 #: ../mdkapplet:428
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
 
-#: ../mdkonline:58 ../mdkonline:110
+#: ../mdkonline:58
+#: ../mdkonline:110
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
@@ -292,12 +295,12 @@ msgstr "Mandriva Online"
 #: ../mdkonline:61
 #, fuzzy, c-format
 msgid "I already have an account"
-msgstr "Nama akaun:"
+msgstr "Saya sudah mempunyai akaun"
 
 #: ../mdkonline:62
 #, fuzzy, c-format
 msgid "I want to subscribe"
-msgstr "Saya mahu pempartisyenan automatik:"
+msgstr "Saya mahu melanggan"
 
 #: ../mdkonline:93
 #, c-format
@@ -307,7 +310,7 @@ msgstr "Membaca konfigurasi\n"
 #: ../mdkonline:97
 #, fuzzy, c-format
 msgid "Sending configuration..."
-msgstr "Status konfigurasi bagi %s %s\n"
+msgstr "Menghantar tetapan..."
 
 #: ../mdkonline:113
 #, c-format
@@ -330,12 +333,14 @@ msgstr ""
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Masukkan login, katalaluan, dan nama mesin  Mandriva Online Anda:"
 
-#: ../mdkonline:129 ../mdkonline:160
+#: ../mdkonline:129
+#: ../mdkonline:160
 #, c-format
 msgid "Login:"
 msgstr "Login:"
 
-#: ../mdkonline:130 ../mdkonline:161
+#: ../mdkonline:130
+#: ../mdkonline:161
 #, c-format
 msgid "Password:"
 msgstr "Katalaluan:"
@@ -355,10 +360,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -370,14 +373,14 @@ msgstr ""
 "1) daftar pakej yang diinstal di dalam sistem Anda,\n"
 "2) konfigurasi perkakasan Anda.\n"
 "\n"
-"Jika Anda merasa tidak sesuai dengan idea ini, atau tidak ingin "
-"memanfaatkan\n"
+"Jika Anda merasa tidak sesuai dengan idea ini, atau tidak ingin memanfaatkan\n"
 "servis ini, tekan 'Batal'. Dengan menekan 'Lanjut', Anda mengizinkan kami\n"
-"memberitahu Anda mengenai kemaskini sekuriti dan upgrade bermanfaat melalui "
-"email.\n"
+"memberitahu Anda mengenai kemaskini sekuriti dan upgrade bermanfaat melalui email.\n"
 "Tambahan pula, Anda akan mendapat diskaun servis di www.mandrivaexpert.com."
 
-#: ../mdkonline:145 ../mdkonline:184 ../mdkupdate:141
+#: ../mdkonline:145
+#: ../mdkonline:184
+#: ../mdkupdate:141
 #, c-format
 msgid "Connection problem"
 msgstr "Masalah perhubungan"
@@ -396,24 +399,21 @@ msgstr "Salah katalaluan.\n"
 #, c-format
 msgid ""
 "Your login or password was wrong.\n"
-" Either you'll have to type it again, or you'll need to create an account on "
-"Mandriva Online.\n"
-" In the latter case, go back to the first step to connect to Mandriva "
-"Online.\n"
+" Either you'll have to type it again, or you'll need to create an account on Mandriva Online.\n"
+" In the latter case, go back to the first step to connect to Mandriva Online.\n"
 " Be aware that you must also provide a Machine name \n"
 " (only alphabetical characters are admitted)"
 msgstr ""
 "Login atau katalaluan Anda salah.\n"
 " Anda harus taip sekali lagi, atau membuat akaun di Mandriva Online.\n"
-" Pada kes terakhir, kembali ke langkah pertama utk menghubungi Mandriva "
-"Online.\n"
+" Pada kes terakhir, kembali ke langkah pertama utk menghubungi Mandriva Online.\n"
 " Ingat, Anda juga harus memberikan nama Mesin \n"
 " (hanya karektor alfabet sahaj dibenarkan)"
 
 #: ../mdkonline:157
 #, fuzzy, c-format
 msgid "Create a Mandriva Online Account"
-msgstr "Tetapan Akaun Pengguna"
+msgstr "Up2date - Cipta Akaun Baru"
 
 #: ../mdkonline:162
 #, c-format
@@ -437,7 +437,7 @@ msgstr ""
 #: ../mdkonline:167
 #, fuzzy, c-format
 msgid "Please provide a login"
-msgstr "Sila pilih jenis logmasuk anda:"
+msgstr "Sila Nyatakan Fail Kulit"
 
 #: ../mdkonline:167
 #, c-format
@@ -506,9 +506,7 @@ msgstr "Konfigurasi Pemuat But"
 
 #: ../mdkonline:226
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
 msgstr ""
 
 #: ../mdkonline.pm:54
@@ -546,8 +544,7 @@ msgstr "Masalah menyambung ke pelayan \n"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -570,7 +567,7 @@ msgstr "  --applet       - kemaskini semua maklumat.\n"
 #: ../mdkupdate:67
 #, fuzzy, c-format
 msgid "  --applet       - launch Mandriva Update.\n"
-msgstr "Wanda & George: Perkara Aplet"
+msgstr "Mandriva Club Kemaskini Pendaftaran"
 
 #: ../mdkupdate:68
 #, c-format
@@ -604,7 +601,9 @@ msgstr ""
 "Memasang pakej %s\n"
 "\n"
 
-#: ../mdkupdate:174 ../mdkupdate:259
+#: ../mdkupdate:174
+#: ../mdkupdate:259
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal mengemaskini pakej dari media update_source.\n"
+
