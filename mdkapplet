@@ -40,7 +40,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
-my $online_site = "http://www.mandrivaonline.net/";
+my $online_site = "https://www.mandrivaonline.com/";
 my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
 my ($need_update, $raisedwindow, $isAvailable, $debug) = (0, 0, 0, 0);
 
@@ -65,7 +65,7 @@ my %state = (
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'configureApplet', 'check', 'weblink' ],
-		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.net") ]
+		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.com") ]
 		     },
 	     busy => {
 		      colour => [ 'busy' ], 
@@ -339,7 +339,7 @@ sub isNetwork {
     #    my $h = mdkonline::get_distro_type();
     my $network;
     if ($r <= 10.0) {
-	$network = gethostbyname("mandrivaonline.net") ? 1 : 0;
+	$network = gethostbyname("mandrivaonline.com") ? 1 : 0;
     } elsif ($r <= 10.2) {
 	require network::netconnect;
  	require network::tools;
