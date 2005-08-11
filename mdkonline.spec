@@ -7,10 +7,9 @@ Name:		%{name}
 Version:	%{version}
 Release: 	%{release}
 Source0:	%{name}-%{version}.tar.bz2
-URL:		http://www.mandrivaonline.net
+URL:		http://www.mandrivaonline.com
 License:	GPL
 Group:		System/Configuration/Other
-Packager:	Mandriva Online Team <http://www.mandrivaonline.net>
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
