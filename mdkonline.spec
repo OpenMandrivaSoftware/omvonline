@@ -116,6 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Aug 11 2005 Daouda LO <daouda@mandriva.com> 1.2-1mdk
 - switch to Mandriva
+- po updates
 
 * Wed Apr  6 2005 Daouda LO <daouda@mandrakesoft.com> 1.2-0.1mdk
 - better error handling and log messages when server is down or broken
