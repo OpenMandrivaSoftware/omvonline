@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Fri Apr 15 2005 Daouda LO <daouda@mandriva.com> 1.2-1mdk
+* Thu Aug 11 2005 Daouda LO <daouda@mandriva.com> 1.2-1mdk
 - switch to Mandriva
 
 * Wed Apr  6 2005 Daouda LO <daouda@mandrakesoft.com> 1.2-0.1mdk
