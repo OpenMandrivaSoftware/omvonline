@@ -4,15 +4,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline 0.15\n"
+"Project-Id-Version: mdkonline-lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-08-08 16:17+0200\n"
-"PO-Revision-Date: 2003-02-20 13:28+0200\n"
-"Last-Translator: Darius Liepuonis <dariusle@takas.lt>\n"
-"Language-Team: Lithuanian <>\n"
+"PO-Revision-Date: 2005-08-11 18:02+0200\n"
+"Last-Translator: Arvydas Svirka <arvydas@arvis.lt>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Lithuanian\n"
+"X-Poedit-Country: LITHUANIA\n"
 
 #: ../mdkapplet:62
 #, c-format
@@ -20,12 +22,13 @@ msgid "Your system is up-to-date"
 msgstr "Jūsų sistema yra naujausia"
 
 #: ../mdkapplet:68
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Dėl visų kilusių problemų galite rašyti adresu support@mandrivaonline.com\n"
+"Paslaugos konfigūravimo problema. Patikrinkite įrašus ir išsiųskite el. "
+"laišką adresu support@mandrivaonline.com"
 
 #: ../mdkapplet:74
 #, c-format
@@ -33,9 +36,9 @@ msgid "System is busy. Please wait ..."
 msgstr "Sistema užimta. Palaukite ..."
 
 #: ../mdkapplet:80
-#, fuzzy, c-format
+#, c-format
 msgid "New updates are available for your system"
-msgstr "Tavo sistemoje nerasta jokia tinklo plokštė!"
+msgstr "Jūsų sistemai yra atnaujinimų"
 
 #: ../mdkapplet:86
 #, c-format
@@ -58,19 +61,19 @@ msgid "Release not supported (too old release, or development release)"
 msgstr "Versija nepalaikoma (versija per sena arba dar kuriama)"
 
 #: ../mdkapplet:109 ../mdkapplet:162
-#, fuzzy, c-format
+#, c-format
 msgid "Install updates"
-msgstr "Įdiegti sistemą"
+msgstr "Įdiegti atnaujinimus"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "Configure the service"
-msgstr "Nustatyti servisus"
+msgstr "Konfigūruoti paslaugą"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "Check Updates"
-msgstr "Atnaujinti"
+msgstr "Patikrinti atnaujinimus"
 
 #: ../mdkapplet:112 ../mdkapplet:165 ../mdkonline:93 ../mdkonline:97
 #: ../mdkonline:135 ../mdkupdate:171
@@ -79,9 +82,9 @@ msgid "Please wait"
 msgstr "Prašom palaukti"
 
 #: ../mdkapplet:112 ../mdkapplet:164 ../mdkapplet:165
-#, fuzzy, c-format
+#, c-format
 msgid "Check updates"
-msgstr "Saugumo atnaujinimai"
+msgstr "Patikrinti atnaujinimus"
 
 #: ../mdkapplet:114
 #, c-format
@@ -89,19 +92,19 @@ msgid "Online WebSite"
 msgstr "Interneto svetainė"
 
 #: ../mdkapplet:115
-#, fuzzy, c-format
+#, c-format
 msgid "Configure Network"
-msgstr "Nustatyti tinklą"
+msgstr "Konfigūruoti tinklą"
 
 #: ../mdkapplet:116
-#, fuzzy, c-format
+#, c-format
 msgid "Configure Now!"
-msgstr "Skaitau nustatymus\n"
+msgstr "Konfigūruoti dabar!"
 
 #: ../mdkapplet:150 ../mdkapplet:221
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux valdymo centras %s\n"
+msgstr "Mandriva Linux atnaujinimų programėlė"
 
 #: ../mdkapplet:160
 #, c-format
@@ -111,17 +114,17 @@ msgstr "Veiksmai"
 #: ../mdkapplet:163
 #, c-format
 msgid "Configure"
-msgstr "Nustatyti"
+msgstr "Konfigūruoti"
 
 #: ../mdkapplet:167
-#, fuzzy, c-format
+#, c-format
 msgid "See logs"
-msgstr "Siekti +5s"
+msgstr "Peržiūrėti įrašus"
 
 #: ../mdkapplet:170
 #, c-format
 msgid "Status"
-msgstr "Statusas"
+msgstr "Būsena"
 
 #: ../mdkapplet:174 ../mdkapplet:381
 #, c-format
@@ -129,9 +132,9 @@ msgid "Close"
 msgstr "Uždaryti"
 
 #: ../mdkapplet:202
-#, fuzzy, c-format
+#, c-format
 msgid "Network Connection: "
-msgstr "Tinklo konfigūravimas"
+msgstr "Prisijungimas prie tinklo: "
 
 #: ../mdkapplet:202
 #, c-format
@@ -151,12 +154,12 @@ msgstr "Paskutinis patikrinimas: "
 #: ../mdkapplet:204 ../mdkonline:131
 #, c-format
 msgid "Machine name:"
-msgstr "Mašinos vardas:"
+msgstr "Kompiuterio vardas:"
 
 #: ../mdkapplet:205
-#, fuzzy, c-format
+#, c-format
 msgid "Updates: "
-msgstr "Atnaujinti"
+msgstr "Atnaujinimai: "
 
 #: ../mdkapplet:209
 #, c-format
@@ -166,27 +169,27 @@ msgstr "Paleidžiama drakconnect\n"
 #: ../mdkapplet:213
 #, c-format
 msgid "Launching mdkupdate --applet\n"
-msgstr "Paleidžiama mdkupdate --applet\n"
+msgstr "Paleidžiama mdkupdate --programėlė\n"
 
 #: ../mdkapplet:216
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online buvo įdiegta iš naujo, įkraunu programą ...."
+msgstr "Mandriva Online buvo įdiegta iš naujo, įkraunu programėlę ...."
 
 #: ../mdkapplet:227
-#, fuzzy, c-format
+#, c-format
 msgid "Computing new updates...\n"
-msgstr "Sujungimo klaida"
+msgstr "Skaičiuojami paskutiniai atnaujinimai...\n"
 
 #: ../mdkapplet:229
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to"
-msgstr "Sujungimo klaida"
+msgstr "Jungiamasi prie"
 
 #: ../mdkapplet:240
-#, fuzzy, c-format
+#, c-format
 msgid "Response from Mandriva Online server\n"
-msgstr "Sveiki atvykę į Mandriva Online"
+msgstr "Atsakymas iš Mandriva Online serverio\n"
 
 #: ../mdkapplet:258
 #, c-format
@@ -204,15 +207,15 @@ msgid "Too old release not supported by service"
 msgstr "Tarnyba nepalaiko per senos versijos"
 
 #: ../mdkapplet:265
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown state"
-msgstr "Nežinomas vartotojas."
+msgstr "Nežinoma būsena"
 
 #: ../mdkapplet:266
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
-"Internetinės paslaugos išjungtos. Susisiekite su Mandriva Online svetaine\n"
+"Internetinės paslaugos išjungtos. Kreipkitės į Mandriva Online svetainę\n"
 
 #: ../mdkapplet:267
 #, c-format
@@ -242,9 +245,9 @@ msgstr ""
 "Jungiantis prie serverio įvyko klaida, susisiekite su palaikymo komanda"
 
 #: ../mdkapplet:273
-#, fuzzy, c-format
+#, c-format
 msgid "System is up-to-date\n"
-msgstr "Sistemos režimas"
+msgstr "Siatema yra naujausia\n"
 
 #: ../mdkapplet:305
 #, c-format
@@ -264,7 +267,7 @@ msgstr "Tikrinamas tinklas: atrodo, neveikia\n"
 #: ../mdkapplet:371
 #, c-format
 msgid "Logs"
-msgstr "Logai"
+msgstr "Įrašai"
 
 #: ../mdkapplet:387
 #, c-format
@@ -279,7 +282,7 @@ msgstr "Apie..."
 #: ../mdkapplet:415
 #, c-format
 msgid "Always launch on startup"
-msgstr "Visada įjungti paleidimo metu"
+msgstr "Visada paleisti įkrovimo metu"
 
 #: ../mdkapplet:417
 #, c-format
@@ -287,9 +290,9 @@ msgid "Quit"
 msgstr "Išeiti"
 
 #: ../mdkonline:58 ../mdkonline:110
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online"
-msgstr "Sveiki atvykę į Mandriva Online"
+msgstr "Mandriva Online"
 
 #: ../mdkonline:61
 #, c-format
@@ -304,7 +307,7 @@ msgstr "Noriu užsiregistruoti"
 #: ../mdkonline:93
 #, c-format
 msgid "Reading configuration\n"
-msgstr "Skaitau nustatymus\n"
+msgstr "Skaitau konfigūraciją\n"
 
 #: ../mdkonline:97
 #, c-format
@@ -331,12 +334,14 @@ msgstr "Abonento sukūrimas arba atpažinimas"
 #: ../mdkonline:123
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Įveskite savo Mandriva Online sąskaitos vardą ir slaptažodį:"
+msgstr ""
+"Įveskite savo Mandriva Online abonento vardą, slaptažodį ir kompiuterio "
+"vardą:"
 
 #: ../mdkonline:129 ../mdkonline:160
 #, c-format
 msgid "Login:"
-msgstr "Vardas:"
+msgstr "Prisijungimo vardas:"
 
 #: ../mdkonline:130 ../mdkonline:161
 #, c-format
@@ -344,9 +349,9 @@ msgid "Password:"
 msgstr "Slaptažodis"
 
 #: ../mdkonline:135
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to Mandriva Online website..."
-msgstr "Sveiki atvykę į Mandriva Online"
+msgstr "Jungiamasi prie Mandriva Online svetainės..."
 
 #: ../mdkonline:143
 #, c-format
@@ -393,9 +398,9 @@ msgid "or"
 msgstr "arba"
 
 #: ../mdkonline:145
-#, fuzzy, c-format
+#, c-format
 msgid "wrong password:"
-msgstr "Neteisingas slaptažodis"
+msgstr "neteisingas slaptažodis:"
 
 #: ../mdkonline:145
 #, c-format
@@ -416,9 +421,9 @@ msgstr ""
 " (leidžiami tik raidiniai simboliai)"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Create a Mandriva Online Account"
-msgstr "Sveiki atvykę į Mandriva Online"
+msgstr "Sukurti Mandriva Online abonentą"
 
 #: ../mdkonline:162
 #, c-format
@@ -426,9 +431,9 @@ msgid "Confirm Password:"
 msgstr "Patvirtinkite slaptažodį:"
 
 #: ../mdkonline:163
-#, fuzzy, c-format
+#, c-format
 msgid "Mail contact:"
-msgstr "E-pašto kontaktas:"
+msgstr "El. pašto kontaktas:"
 
 #: ../mdkonline:167
 #, c-format
@@ -437,17 +442,17 @@ msgid ""
 " Please try again\n"
 msgstr ""
 "Slaptažodžiai nesutampa\n"
-" Pabandyk dar kartą\n"
+" Pabandykite dar kartą\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please provide a login"
-msgstr "Prašom bandyti vėl"
+msgstr "Nurodykite prisijungimo vardą"
 
 #: ../mdkonline:167
 #, c-format
 msgid "Not a valid mail address!\n"
-msgstr "Neteisingas e-pašto adresas!\n"
+msgstr "Neteisingas el. pašto adresas!\n"
 
 #: ../mdkonline:173
 #, c-format
@@ -469,8 +474,8 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandriva Online."
 msgstr ""
-"Nuo dabar jūs gausite pranešimus apie saugumo pataisas \n"
-"ir atnaujinimus."
+"Dėka Mandriva online nuo šio momento jūs gausite\n"
+"pranešimus apie saugumo pataisas ir atnaujinimus."
 
 #: ../mdkonline:182
 #, c-format
@@ -478,8 +483,8 @@ msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"MandrivaOnlina jums siųlo galimybę automatizuoti jūsų atnaujinimus.\n"
-"Programa reguleriai pasileis jūsų sistemoje laukdama atnaujinimų\n"
+"MandrivaOnlina jums siūlo galimybę automatizuoti atnaujinimus.\n"
+"Programa bus reguliariai paleidžiama jūsų sistemoje ir lauks atnaujinimų\n"
 
 #: ../mdkonline:184
 #, c-format
@@ -492,9 +497,9 @@ msgid "Country"
 msgstr "Valstybė"
 
 #: ../mdkonline:207
-#, fuzzy, c-format
+#, c-format
 msgid "Congratulations"
-msgstr "Skaitau nustatymus\n"
+msgstr "Sveikinimai"
 
 #: ../mdkonline:207
 #, c-format
@@ -502,14 +507,14 @@ msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "Jūsų Mandriva Online abonentas buvo sėkmingai sukonfigūruotas\n"
 
 #: ../mdkonline:223
-#, fuzzy, c-format
+#, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Jūsų siuntimas buvo sėkmingas!"
+msgstr "Konfigūracija persiųsta sėkmingai"
 
 #: ../mdkonline:224
-#, fuzzy, c-format
+#, c-format
 msgid "Problem uploading configuration"
-msgstr "Skaitau nustatymus\n"
+msgstr "Konfigūracijos persiuntimo problema"
 
 #: ../mdkonline:226
 #, c-format
@@ -562,26 +567,25 @@ msgid ""
 "usage:\n"
 msgstr ""
 "mdkupdate versija %s\n"
-"Copyright (C) %s Mandriva.\n"
-"Tai laisvai platinama programa ir gali buti platinama pagal GNU GPL "
-"licenzija\n"
+"Autorinės teisės (C) %s Mandriva.\n"
+"Tai nemokama programa ir gali būti platinama pagal GNU GPL licenciją.\n"
 " \n"
 "naudojimas:\n"
 
 #: ../mdkupdate:65
 #, c-format
 msgid "  --help         - print this help message.\n"
-msgstr "  --help         - parodyti šį pagalbos langa.\n"
+msgstr "  --help         - spausdinti šį pagalbos pranešimą.\n"
 
 #: ../mdkupdate:66
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto         - Mandriva Update launched automatically.\n"
-msgstr "  --applet       - atnaujinti visa informaciją.\n"
+msgstr "  --auto         - Mandriva Update paleista automatiškai.\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet       - launch Mandriva Update.\n"
-msgstr "  --applet       - atnaujinti visa informaciją.\n"
+msgstr "  --applet       - paleisti Mandriva Update.\n"
 
 #: ../mdkupdate:68
 #, c-format
@@ -602,8 +606,7 @@ msgstr "Nerasta %s byla. Pirmiausia paleiskite mdkonline vedlį"
 #, c-format
 msgid "Mandriva Update could not contact the site, we will try again."
 msgstr ""
-"Mandriva Update negali prisijungti prie tarnybinės stoties, pabandysime "
-"vėliau."
+"Mandriva Update negali prisijungti prie svetainės, pabandysime dar kartą."
 
 #: ../mdkupdate:149
 #, c-format
