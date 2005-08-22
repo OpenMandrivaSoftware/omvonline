@@ -1,6 +1,6 @@
-%define version 1.2
+%define version 1.3
 %define name mdkonline
-%define release 1mdk
+%define release 0.1mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Mon Aug 22 2005 Daouda LO <daouda@mandriva.com> 1.3-0.1mdk
+- 1.3 pre-build for 2006
+
 * Thu Aug 11 2005 Daouda LO <daouda@mandriva.com> 1.2-1mdk
 - switch to Mandriva
 - po updates
