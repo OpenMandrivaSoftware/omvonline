@@ -14,7 +14,7 @@ use HTTP::Request;
 use SOAP::Lite;
 
 #For debugging
-use Data::Dumper;
+#use Data::Dumper;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 my $uri = 'https://my.mandriva.com/soap/';
@@ -27,6 +27,20 @@ my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'htt
 
 sub is_proxy () {
     return 1 if defined $ENV{http_proxy};
+}
+
+sub md5file {
+    require Digest::MD5;
+    my @md5 = map {
+        my $sum;
+        if (open(my $FILE, $_)) {
+            binmode($FILE);
+            $sum = Digest::MD5->new->addfile($FILE)->hexdigest;
+            close($FILE); 
+        }
+        $sum;
+    } @_;   
+    return wantarray() ? @md5 : $md5[0];
 }
 
 sub get_release() {
