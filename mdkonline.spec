@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 0.1mdk
+%define release 0.2mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,11 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Thu Sep 15 2005 Daouda LO <daouda@mandriva.com> 1.3-0.2mdk
+- use SOAP for client <-> server communication 
+  (account creation and authentication through my.mandriva.com)
+- http proxy support for SOAP
+
 * Mon Aug 22 2005 Daouda LO <daouda@mandriva.com> 1.3-0.1mdk
 - 1.3 pre-build for 2006
 
