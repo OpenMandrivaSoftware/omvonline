@@ -13,6 +13,9 @@ use HTTP::Request::Common;
 use HTTP::Request;
 use SOAP::Lite;
 
+#For debugging
+use Data::Dumper;
+
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 my $uri = 'https://my.mandriva.com/soap/';
 my $serviceProxy = 'https://my.mandriva.com/soap/';
@@ -71,7 +74,8 @@ sub get_site {
 }
 
 sub create_authenticate_account {
-    my ($type) = shift;
+    my $type = shift;
+    my @info = @_;
     my ($response, $code);
     my $hreturn = {
                    1  => [ N("Security error"), N("Unsecure invocation: Method available through httpS only") ],                  
@@ -91,7 +95,7 @@ sub create_authenticate_account {
     foreach my $num ([9, 8], [21, 20]) { $hreturn->{$num->[0]} = $hreturn->{$num->[1]} };
     my $action = {
 		  create => sub {
-		      eval { $response = soap_create_account(@_) };
+		      eval { $response = soap_create_account(@info) };
 		      if ($response->{status}) {
 			  return 'OK';
 		      } else {
@@ -100,7 +104,7 @@ sub create_authenticate_account {
 		      }
 		  },
 		  authenticate => sub {
-		      eval { $response = soap_authenticate_user(@_) };
+		      eval { $response = soap_authenticate_user(@info) };
 		      if ($response->{status}) {
 			  return 'OK'
 		      } else {
