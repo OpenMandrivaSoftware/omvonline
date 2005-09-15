@@ -28,7 +28,7 @@ sub get_release() {
 
 sub set_ua {
     my $package_name = shift;
-    my $qualified_name = chomp_(`rpm -q $name`);
+    my $qualified_name = chomp_(`rpm -q $package_name`);
     $qualified_name
 }
 
@@ -65,7 +65,7 @@ sub get_site {
     system("/usr/bin/www-browser  " . $link . "&");
 }
 
-sub subscribe_online {
+sub create_authenticate_account {
     my ($type) = shift;
     my ($response, $code);
     my $hreturn = {
@@ -86,22 +86,22 @@ sub subscribe_online {
     foreach my $num ([9, 8], [21, 20]) { $hreturn->{$num->[0]} = $hreturn->{$num->[1]} };
     my $action = {
 		  create => sub {
-		      eval { $response = $this->soap_create_account(@_) };
+		      eval { $response = soap_create_account(@_) };
 		      if ($response->{status}) {
-			  return 'OK'
+			  return 'OK';
 		      } else {
-			  $code = $this->{response}{code} || '99';
+			  $code = $response->{code} || '99';
 			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
-		      },
-		  }
+		      }
+		  },
 		  authenticate => sub {
-		      eval { $response = $this->soap_authenticate_user(@_) };
+		      eval { $response = soap_authenticate_user(@_) };
 		      if ($response->{status}) {
 			  return 'OK'
 		      } else {
-			  $code = $this->{response}{code} || '99';
+			  $code = $response->{code} || '99';
 			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
-		      },
+		      }
 		  }
 		 };
     $action->{$type}->();
