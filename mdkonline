@@ -43,7 +43,9 @@ my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 my $logfile = '/var/tmp/mdkonline.log';
 
-my ($wiz, $login, $nlogin, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres, $country, $ia);
+my ($wiz, $greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres, $country, $ia, $gr, $alias);
+
+my @info;
 
 $ia = 1;
 
@@ -64,10 +66,12 @@ my %choices = (
   
 my $choice = $choices{account};
 
-
+my @greets = (N("Mr."), N("Mrs."), N("Ms."));
 
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
-$country = lang::c2name(lang::read('', $>)->{country});
+my $locale = lang::read('', $>);
+$country = lang::c2name($locale->{country});
+my $lang = $locale->{lang} || 'en_US';
 
 sub read_conf() {
     my $wideconf = '/etc/sysconfig/mdkonline';
@@ -76,16 +80,7 @@ sub read_conf() {
     $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
     $login = $t{LOGIN}; $boxname = $t{MACHINE};
 }
-sub check_login {
-    my ($log, $pass, $box) = @_;
-    my ($res, $resp);
-    my $pp = md5_hex($pass);
-    $log && $pass && $box or return 0;
-    my $clink = $expert_link . '/firsttimewizard/validusercheck.php' . '?u=' . $log . '&p=' . $pp;
-    $resp = mdkonline::get_from_URL($clink, "MdkOnline_tuiAgent/");
-    $resp->is_success and $res = $resp->content =~ /TRUE/ ? 1 : 0;
-    $res;
-}
+
 sub send_conf {
     my ($log, $pass, $box) = @_;
     my $uplink = $online_link . '/wizard.php';
@@ -100,12 +95,7 @@ sub send_conf {
     undef $ww if $ww;
     ($sendconfres, $key);
 }
-sub create_new_account {
-    my ($log, $pass, $mail) = @_;
-    my $url = $expert_link . '/online3_CreateAccount.php' . '?desuserid=' . $log . '&despwd=' . $pass . '&user_email=' . $mail;
-    my $ca = mdkonline::subscribe_online($url);
-    $ca;
-}
+
 $wiz = {
 	name => N("Mandriva Online"),
 	pages => {
@@ -126,28 +116,30 @@ $wiz = {
 			      },
 			      data => sub {
 				  [
-				   { label => N("Login:"),   val => \$login },
+				   { label => N("Email address:"), val => \$login },
 				   { label => N("Password:"), val => \$password, hidden => 1 },
 				   { label => N("Machine name:"), val => \$boxname },
 				  ];
 			      },
 			      post => sub {
 				  my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
-				  $is_success = check_login($login, $password, $boxname); undef($_wait);
+				  @info = ($login, $password);
+				  $is_success = mdkonline::create_authenticate_account('authenticate', @info); undef($_wait);
 				  "authenticate";
 			      },
 			     },
 		  authenticate => {
 				   name => sub {
-				       if ($is_success) {
+				       if ($is_success eq 'OK') {
 					   N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.");
 				       } else {
-					   N("Connection problem") . "  " . N("or") . "  " . N("wrong password:") . "\n" . N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandriva Online.\n In the latter case, go back to the first step to connect to Mandriva Online.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)");
+					   $is_success
+#					   N("Connection problem") . "  " . N("or") . "  " . N("wrong password:") . "\n" . N("Your login or password was wrong.\n Either you'll have to type it again, or you'll need to create an account on Mandriva Online.\n In the latter case, go back to the first step to connect to Mandriva Online.\n Be aware that you must also provide a Machine name \n (only alphabetical characters are admitted)");
 				       }
 				   },
-				   no_back => $is_success ? 1 : 0,
+				   no_back => $is_success eq 'OK' ? 1 : 0,
 				   post => sub { 
-				       if ($is_success) {
+				       if ($is_success eq 'OK') {
 					   ($sendconfres, $key) = send_conf($login, $password, $boxname);
 					   "upload";
 				       } else { "choices" }
@@ -157,14 +149,19 @@ $wiz = {
 				name => N("Create a Mandriva Online Account"),
 				data => sub {
 				    [
-				     { label => N("Login:"),   val => \$nlogin },
+				     { label => N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo'},
+				     { label => N("First name:"), val => \$firstname },
+				     { label => N("Last name:"), val => \$lastname },
+				     { label => N("Email address:"), val => \$account },
 				     { label => N("Password:"), val => \$npassword, hidden => 1 },
 				     { label => N("Confirm Password:"), val => \$cfmpassword, hidden => 1 },
-				     { label => N("Mail contact:"),   val => \$email },
 				    ];
 				},
 				post => sub {
-				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : $nlogin eq '' ? N("Please provide a login") : mdkonline::check_valid_email($email) == 0 ?  N("Not a valid mail address!\n") : create_new_account($nlogin, $npassword, $email);
+				    $gr = find_index { /$gr/ } @greets;
+				    $alias = $firstname . $lastname;
+				    @info = ($account, $npassword, $firstname, $lastname, $lang, $greeting, $alias, 'home');
+				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : ($account || $firstname || $lastname) ? N("Please fill in each field") : mdkonline::check_valid_email($email) == 0 ?  N("Not a valid mail address!\n") : mdkonline::create_authenticate_account('create', @info);
 				    "createaccount";
 				}
 			       },
@@ -214,8 +211,8 @@ $wiz = {
        };
 
 if (!$ia && $login && $password && $boxname) { 
-    $is_success = check_login($login, $password, $boxname);
-    if ($is_success) {
+    $is_success = mdkonline::create_authenticate_account($login, $password);
+    if ($is_success eq 'OK') {
 	($sendconfres, $key) = send_conf($login, $password, $boxname);
 	if ($sendconfres eq 'TRUE' && $key) {
 	    mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
