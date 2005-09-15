@@ -1,4 +1,5 @@
-# translation of mdkonline-sl.po to 
+# translation of mdkonline-sl.po to Slovenian
+# translation of mdkonline-sl.po to
 # translation of mdkonline-sl.po to Slovenščina
 # translation of Mandriva Online-sl.po to Slovenščina
 # Copyright (C) 2004, 2005 Free Software Foundation, Inc.
@@ -7,19 +8,21 @@
 # Gregor Pirnaver <gregor.pirnaver@siol.net>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@mandrakeprinas.org>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@sdm-si.org>, 2005.
+# Jure Repinc <jlp@holodeck1.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-08-08 16:17+0200\n"
-"PO-Revision-Date: 2005-03-19 01:57+0100\n"
-"Last-Translator: MicKY <m@m.com>\n"
-"Language-Team:  <sl@li.org>\n"
+"PO-Revision-Date: 2005-09-11 20:22+0200\n"
+"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: ../mdkapplet:62
 #, c-format
@@ -32,13 +35,13 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Težava z nastavitvijo storitve. Prosim preverite dnevnike (loge) in pošljite "
-"pošto na support@mandrivaonline.com"
+"Težava z nastavitvijo storitve. Prosim preverite dnevnike "
+"in pošljite pošto na support@mandrivaonline.com"
 
 #: ../mdkapplet:74
 #, c-format
 msgid "System is busy. Please wait ..."
-msgstr "Sistem je zaposljen. Prosim, počakajte ..."
+msgstr "Sistem je zaposlen. Prosim počakajte ..."
 
 #: ../mdkapplet:80
 #, c-format
@@ -48,18 +51,19 @@ msgstr "Za vaš sistem so na voljo novi popravki"
 #: ../mdkapplet:86
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Storitev ni na nastavljena. Prosim kliknite na \"Nastavi storitev\""
+msgstr ""
+"Storitev ni na nastavljena. Prosim kliknite na »Nastavitev "
+"storitve«"
 
 #: ../mdkapplet:92
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Omrežje ni povezano. Prosim, nastavite vaše omrežje"
+msgstr "Ni povezave z omrežjem. Prosim nastavite omrežje"
 
 #: ../mdkapplet:98
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"Storitev ni aktivirana. Prosim, kliknite na \"Internetna spletna stran\""
+msgstr "Storitev ni aktivirana. Prosim kliknite na »Spletna stran«"
 
 #: ../mdkapplet:104
 #, c-format
@@ -74,7 +78,7 @@ msgstr "Namesti posodobitve"
 #: ../mdkapplet:110
 #, c-format
 msgid "Configure the service"
-msgstr "Nastavite storitev"
+msgstr "Nastavitev storitve"
 
 #: ../mdkapplet:111
 #, c-format
@@ -85,7 +89,7 @@ msgstr "Pregled posodobitev"
 #: ../mdkonline:135 ../mdkupdate:171
 #, c-format
 msgid "Please wait"
-msgstr "Prosim, počakajte!"
+msgstr "Prosim počakajte"
 
 #: ../mdkapplet:112 ../mdkapplet:164 ../mdkapplet:165
 #, c-format
@@ -95,12 +99,12 @@ msgstr "Pregled posodobitev"
 #: ../mdkapplet:114
 #, c-format
 msgid "Online WebSite"
-msgstr "Spletna stran na internetu"
+msgstr "Spletna stran"
 
 #: ../mdkapplet:115
 #, c-format
 msgid "Configure Network"
-msgstr "Nastavljanje omrežja"
+msgstr "Nastavitev omrežja"
 
 #: ../mdkapplet:116
 #, c-format
@@ -145,12 +149,12 @@ msgstr "Omrežna povezava: "
 #: ../mdkapplet:202
 #, c-format
 msgid "Up"
-msgstr "Povezana"
+msgstr "Vzpostavljena"
 
 #: ../mdkapplet:202
 #, c-format
 msgid "Down"
-msgstr "Nepovezana"
+msgstr "Prekinjena"
 
 #: ../mdkapplet:203
 #, c-format
@@ -170,19 +174,19 @@ msgstr "Posodobitve: "
 #: ../mdkapplet:209
 #, c-format
 msgid "Launching drakconnect\n"
-msgstr "Drakconnect se zaganja\n"
+msgstr "»drakconnect« se zaganja\n"
 
 #: ../mdkapplet:213
 #, c-format
 msgid "Launching mdkupdate --applet\n"
-msgstr "Mandriva Update --applet se zaganja\n"
+msgstr "»mdkupdate --applet« se zaganja\n"
 
 #: ../mdkapplet:216
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
-"Izgleda, da je Mandriva Online na novo nameščen, ponovno nalaganje "
-"vstavka ..."
+"Izgleda, da je Mandriva Online na novo nameščen. "
+"Ponovno nalaganje vstavka ..."
 
 #: ../mdkapplet:227
 #, c-format
@@ -192,7 +196,7 @@ msgstr "Procesiranje novih popravkov ...\n"
 #: ../mdkapplet:229
 #, c-format
 msgid "Connecting to"
-msgstr "Povezovanje na"
+msgstr "Povezovanje z"
 
 #: ../mdkapplet:240
 #, c-format
@@ -248,8 +252,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Težava pri povezovanju s strežnikom; prosim, obrnite se na skupino za podporo"
+msgstr "Težava pri povezovanju s strežnikom. Prosim obrnite se na skupino za podporo"
 
 #: ../mdkapplet:273
 #, c-format
@@ -269,7 +272,7 @@ msgstr "Preverjanje nastavitvene datoteke: Ne obstaja\n"
 #: ../mdkapplet:321
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr "Preverjam omrežje: izgleda onemogočeno\n"
+msgstr "Preverjanje omrežja: izgleda onemogočeno\n"
 
 #: ../mdkapplet:371
 #, c-format
@@ -279,7 +282,7 @@ msgstr "Dnevniki"
 #: ../mdkapplet:387
 #, c-format
 msgid "Clear"
-msgstr "Briši"
+msgstr "Počisti"
 
 #: ../mdkapplet:414
 #, c-format
@@ -294,7 +297,7 @@ msgstr "Vedno zaženi ob zagonu"
 #: ../mdkapplet:417
 #, c-format
 msgid "Quit"
-msgstr "Izhod"
+msgstr "Končaj"
 
 #: ../mdkonline:58 ../mdkonline:110
 #, c-format
@@ -329,7 +332,7 @@ msgid ""
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
 "Ta čarovnik vam bo v pomoč pri prenosu vaših nastavitev\n"
-"(paketov, sestave strojne opreme) v centralno bazo, tako da boste\n"
+"(paketi, sestave strojne opreme) v osrednjo zbirko, tako da boste\n"
 "obveščeni o varnostnih in drugih uporabnih nadgradnjah.\n"
 
 #: ../mdkonline:118
@@ -341,7 +344,8 @@ msgstr "Ustvarjanje računa ali overjanje"
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr ""
-"Vnesite vaše Mandriva Online uporabniško ime in geslo ter ime računalnika:"
+"Vnesite vaše uporabniško ime, geslo in ime računalnika "
+"za Mandriva Online:"
 
 #: ../mdkonline:129 ../mdkonline:160
 #, c-format
@@ -356,7 +360,7 @@ msgstr "Geslo:"
 #: ../mdkonline:135
 #, c-format
 msgid "Connecting to Mandriva Online website..."
-msgstr "Povezovanje na spletno stran Mandriva Online ..."
+msgstr "Povezovanje s spletno stranjo Mandriva Online ..."
 
 #: ../mdkonline:143
 #, c-format
@@ -376,19 +380,17 @@ msgid ""
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
 msgstr ""
-"Da boste lahko uporabljali Mandriva Online storitve,\n"
-"bomo shranili vaše nastavitve.\n"
+"Da bi lahko uporabljali storitve Mandriva Online,\n"
+"je potrebno poslati vaše nastavitve.\n"
 "\n"
-"Čarovnik bo sedaj poslal naslednje informacije Mandrivau:\n"
-"1) zbirko vseh paketov, ki so nameščeni na vašem sistemu,\n"
+"Čarovnik bo sedaj Mandrivi poslal sledeče podatke:\n"
+"1) seznam paketov, ki so nameščeni na vašem sistemu,\n"
 "2) podatke o vaši strojni opremi.\n"
 "\n"
 "Če se zaradi tega počutite nelagodno, ali ne potrebujete teh storitev,\n"
-"pritisnite 'Prekliči'. S pritiskom na 'Naprej', nam dovolite da vas "
-"obveščamo\n"
-"o varnostnih in drugih uporabnih nadgradnjah s pomočjo osebnih e-poštnih "
-"sporočil.\n"
-"Poleg tega boste imeli popust pri plačevanju storitev podpore na\n"
+"kliknite »Prekliči«. S pritiskom na »Naprej« nam dovolite, da vas\n"
+"obveščamo o varnostnih in drugih uporabnih nadgradnjah s pomočjo\n osebnih e-poštnih obvestil.\n"
+"Poleg tega boste imeli popust pri plačniških storitev podpore na\n"
 "www.mandrivaexpert.com."
 
 #: ../mdkonline:145 ../mdkonline:184 ../mdkupdate:141
@@ -423,7 +425,7 @@ msgstr ""
 " Če želite slednje, pojdite nazaj na prvi korak za povezavo z Mandriva "
 "Online.\n"
 " Zavedajte se, da morate vnesti tudi ime računalnika\n"
-" (samo črke so sprejete)"
+" (sprejete so samo črke)"
 
 #: ../mdkonline:157
 #, c-format
@@ -433,12 +435,12 @@ msgstr "Ustvari račun Mandriva Online"
 #: ../mdkonline:162
 #, c-format
 msgid "Confirm Password:"
-msgstr "Potrdite geslo:"
+msgstr "Potrditev gesla:"
 
 #: ../mdkonline:163
 #, c-format
 msgid "Mail contact:"
-msgstr "Poštni kontakt:"
+msgstr "Poštni stik:"
 
 #: ../mdkonline:167
 #, c-format
@@ -447,12 +449,12 @@ msgid ""
 " Please try again\n"
 msgstr ""
 "Gesli se ne ujemata\n"
-" Prosim, poskusite znova\n"
+" Prosim poskusite znova\n"
 
 #: ../mdkonline:167
 #, c-format
 msgid "Please provide a login"
-msgstr "Prosim, vpišite uporabniško ime"
+msgstr "Prosim vpišite uporabniško ime"
 
 #: ../mdkonline:167
 #, c-format
@@ -466,7 +468,7 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Račun Mandriva Online je uspešno ustvarjen.\n"
-"Prosim kliknite \"Naprej\" za overitev in nalaganje vaših nastavitev\n"
+"Prosim kliknite »Naprej« za overitev in pošiljanje vaših nastavitev.\n"
 
 #: ../mdkonline:182
 #, c-format
@@ -479,8 +481,8 @@ msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandriva Online."
 msgstr ""
-"Od zdaj naprej boste prejemali varnostna\n"
-"in druga obvestila o posodabljanju s pomočjo Mandriva Online."
+"Od zdaj naprej boste zahvaljujoč Mandrivi Online prejemali\n"
+"obvestila o varnostnih in drugih posodobitvah."
 
 #: ../mdkonline:182
 #, c-format
@@ -488,13 +490,13 @@ msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandriva Online vam omogoča, samodejno posodabljanje.\n"
-"Program bo tekel na vašem sistemu in čakal na nove posodobitve\n"
+"Mandriva Online vam omogoča samodejno posodabljanje.\n"
+"Program bo tekel v ozadju in čakal na nove posodobitve.\n"
 
 #: ../mdkonline:184
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr "Težava ob prenosu datotek na strežnik, prosim poskusite znova"
+msgstr "Težava pri pošiljanju datotek. Prosim poskusite znova."
 
 #: ../mdkonline:190
 #, c-format
@@ -514,12 +516,12 @@ msgstr "Vaš račun Mandriva Online je bil uspešno nastavljen\n"
 #: ../mdkonline:223
 #, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Nastavitve uspešno naložene"
+msgstr "Nastavitve uspešno poslane"
 
 #: ../mdkonline:224
 #, c-format
 msgid "Problem uploading configuration"
-msgstr "Težave pri nalaganju nastavitev (na strežnik)"
+msgstr "Težava pri pošiljanju nastavitev"
 
 #: ../mdkonline:226
 #, c-format
@@ -527,13 +529,14 @@ msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
-"Ni se mogoče povezati na spletno stran Mandriva Online: napačna prijava, "
-"geslo, ali napačne nastavitve usmerjevalnika oziroma požarnega zidu"
+"Ni se mogoče povezati s spletno stranjo Mandriva Online: napačno "
+"uporabniško ime, geslo, ali napačne nastavitve usmerjevalnika oziroma "
+"požarnega zidu"
 
 #: ../mdkonline.pm:54
 #, c-format
 msgid "Login and password should be less than 12 characters\n"
-msgstr "Prijavo in geslo mora sestavljati manj kot 12 znakov\n"
+msgstr "Uporabniško ime in geslo morata biti krajša od 12 znakov\n"
 
 #: ../mdkonline.pm:55
 #, c-format
@@ -543,7 +546,7 @@ msgstr "Posebni znaki niso dovoljeni\n"
 #: ../mdkonline.pm:56
 #, c-format
 msgid "Please fill in all fields\n"
-msgstr "Prosim, izpolnite vsa polja\n"
+msgstr "Prosim izpolnite vsa polja\n"
 
 #: ../mdkonline.pm:57
 #, c-format
@@ -571,7 +574,7 @@ msgid ""
 "usage:\n"
 msgstr ""
 "mdkupdate različica %s\n"
-"Avtorske pravice (C) %s Mandriva.\n"
+"Avtorske pravice © %s Mandriva.\n"
 "To je prosto programje in se sme razširjati pod pogoji licence GNU GPL.\n"
 "\n"
 "uporaba:\n"
@@ -594,18 +597,17 @@ msgstr "  --applet       - poženi Mandriva Update.\n"
 #: ../mdkupdate:68
 #, c-format
 msgid "  --mnf          - launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf          - poženi skripte specifične za mnf.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --applet       - poženi Mandriva Update.\n"
+msgstr "  --noX          - Mandriva Update v besedilnem načinu.\n"
 
 #: ../mdkupdate:77
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
-"Nobene datoteke %s  ni mogoče najti. Najprej poženite čarovnika mdkonline."
+msgstr "Ni moč najti datoteke %s. Najprej poženite čarovnika »mdkonline«."
 
 #: ../mdkupdate:141
 #, c-format
@@ -617,7 +619,7 @@ msgstr ""
 #: ../mdkupdate:149
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
+msgstr "Izberite pakete, ki naj se namestijo, in kliknite »V redu«."
 
 #: ../mdkupdate:171
 #, c-format
@@ -627,11 +629,5 @@ msgstr "Nameščanje paketov ...\n"
 #: ../mdkupdate:174 ../mdkupdate:259
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Paketov iz vira update_source ni mogoče obnoviti.\n"
+msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
 
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Težava pri povezovanju s strežnikom; prosim, obrnite se na skupino za "
-#~ "podporo"
