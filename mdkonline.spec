@@ -118,6 +118,7 @@ rm -rf $RPM_BUILD_ROOT
 - use SOAP for client <-> server communication 
   (account creation and authentication through my.mandriva.com)
 - http proxy support for SOAP
+- merge code amongst releases (10.0, 10.1, LE2005, 2006)
 
 * Mon Aug 22 2005 Daouda LO <daouda@mandriva.com> 1.3-0.1mdk
 - 1.3 pre-build for 2006
