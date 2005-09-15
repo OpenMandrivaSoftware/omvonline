@@ -43,11 +43,12 @@ my $afterrpm =  "$confdir/rpm_qa_installed_after";
 my $logfile = '/var/tmp/mdkupdate.log';
 
 my $onlineUrl = "https://www.mandrivaonline.com/";
+
 my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php';
 }
-my $VERSION = "1.1";
+my $VERSION = "1.3";
 my $YEARS = "2002-2005";
 
 #for compatibilities
@@ -102,7 +103,11 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      if ($release <= 10.1) {
+				  system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      } else {
+				  system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      }
 			  } elsif ($opt eq '--noX') {
 			      my $in = interactive->vnew;
 			      my $pkgs = ask_pkgs($in);
