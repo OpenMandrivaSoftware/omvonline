@@ -6,6 +6,11 @@ use MIME::Base64 qw(encode_base64);
 use lib qw(/usr/lib/libDrakX);
 use c;
 use common;
+
+use LWP::UserAgent;         
+use Net::HTTPS;
+use HTTP::Request::Common;
+use HTTP::Request;
 use SOAP::Lite;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
