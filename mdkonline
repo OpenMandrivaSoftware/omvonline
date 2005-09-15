@@ -161,7 +161,7 @@ $wiz = {
 				    $gr = find_index { /$gr/ } @greets;
 				    $alias = $firstname . $lastname;
 				    @info = ($account, $npassword, $firstname, $lastname, $lang, $greeting, $alias, 'home');
-				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : ($account || $firstname || $lastname) ? N("Please fill in each field") : mdkonline::check_valid_email($email) == 0 ?  N("Not a valid mail address!\n") : mdkonline::create_authenticate_account('create', @info);
+				    $createaccount = $npassword ne $cfmpassword ? N("The passwords do not match\n Please try again\n") : (!$account || !$firstname || !$lastname) ? N("Please fill in each field") : mdkonline::check_valid_email($email) == 0 ?  N("Not a valid mail address!\n") : mdkonline::create_authenticate_account('create', @info);
 				    "createaccount";
 				}
 			       },
