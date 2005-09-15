@@ -50,6 +50,8 @@ my $conffile = '/etc/sysconfig/mdkonline';
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
 
+my $release = mdkonline::get_release();
+
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
@@ -209,13 +211,13 @@ sub refresh_contents {
 sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
-    my $oldmd5 = common::md5file($binfile);
+    my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
     system "/usr/sbin/mdkupdate", "--applet";
-    my $newmd5 = common::md5file($binfile);
+    my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
-    silentCheck(); gtkflush(); 
+    silentCheck(); gtkflush();
     #undef $w;
     my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
@@ -335,12 +337,10 @@ sub go2State {
     defined $textvw and refresh_status($state);
 }
 sub isNetwork {
-    my $r = mdkonline::get_release();
-    #    my $h = mdkonline::get_distro_type();
     my $network;
-    if ($r <= 10.0) {
+    if ($release <= 10.0) {
 	$network = gethostbyname("mandrivaonline.com") ? 1 : 0;
-    } elsif ($r <= 10.2) {
+    } elsif ($release <= 10.2) {
 	require network::netconnect;
  	require network::tools;
 	my ($netcnx, $netc, $intf) = ({}, {}, {});
