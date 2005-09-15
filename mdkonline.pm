@@ -6,20 +6,30 @@ use MIME::Base64 qw(encode_base64);
 use lib qw(/usr/lib/libDrakX);
 use c;
 use common;
+use SOAP::Lite;
 
-use LWP::UserAgent;         
-use Net::HTTPS;
-use HTTP::Request::Common;
-use HTTP::Request;
+my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
+my $uri = 'https://my.mandriva.com/soap/';
+my $serviceProxy = 'https://my.mandriva.com/soap/';
+my $onlineProxy = 'https://onine.mandriva.com/soap';
 
-#Don't change version manually
-$::VERSION = '1.1-20mdk';
+my $useragent = set_ua('mdkonline');
 
-my $release_file = find { -f $_ } '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
+my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) : SOAP::Lite->uri($uri)->proxy($serviceProxy, agent => $useragent);
+
+sub is_proxy () {
+    return 1 if defined $ENV{http_proxy};
+}
 
 sub get_release() {
     my ($release) = cat_($release_file) =~ /release\s+(\S+)/;
     ($release)
+}
+
+sub set_ua {
+    my $package_name = shift;
+    my $qualified_name = chomp_(`rpm -q $name`);
+    $qualified_name
 }
 
 sub get_distro_type {
@@ -29,10 +39,20 @@ sub get_distro_type {
     { name => lc($name), arch => $arch };
 }
 
+sub soap_create_account {
+    my $register = $s->registerUserFromWizard(@_)->result();
+    $register;
+}
+
+sub soap_authenticate_user {
+    my $auth = $s->authenticateUser(@_)->result(); 
+    $auth
+}
+
 sub get_from_URL {
     my ($link, $agent_name) = @_;
     my $ua = LWP::UserAgent->new;
-    $ua->agent($agent_name . $ua->agent . $::VERSION);
+    $ua->agent($agent_name . $useragent);
     $ua->env_proxy;
     my $request = HTTP::Request->new(GET => $link);
     my $response = $ua->request($request);
@@ -46,23 +66,45 @@ sub get_site {
 }
 
 sub subscribe_online {
-    my ($full_link) = shift;
-    my $ret = get_from_URL($full_link, "MdkOnlineAgent/");
-    my $str;
-    my $result = {
-		  10 => 'OK',
-		  11 => N("Login and password should be less than 12 characters\n"),
-		  12 => N("Special characters are not allowed\n"),
-		  13 => N("Please fill in all fields\n"),
-		  14 => N("Email not valid\n"),
-		  15 => N("Account already exists\n"),
+    my ($type) = shift;
+    my ($response, $code);
+    my $hreturn = {
+                   1  => [ N("Security error"), N("Unsecure invocation: Method available through httpS only") ],                  
+                   2  => [ N("Database error"), N("Server Database failed\nPlease Try again Later") ],
+		   3  => [ N("Registration error"), N("Some parameters are missing") ],
+                   5  => [ N("Password error"), N("Wrong password") ],
+                   7  => [ N("Login error"), N("The email you provided is already in use\nPlease enter another one\n") ],         
+                   8  => [ N("Login error"), N("The email you provided is invalid or forbidden") ],
+		  10  => [ N("Login error"), N("Email address box is empty\nPlease provide one") ],
+		  12  => [ N("Restriction Error"), N("Database access forbidden") ],
+                  13  => [ N("Service error"), N("Mandriva web services are currently unavailable\nPlease Try again Later") ],    
+                  17  => [ N("Password error"), N("Password mismatch") ],
+		  20  => [ N("Service error"), N("Mandriva web services are under maintenance\nPlease Try again Later") ],        
+                  22  => [ N("User Forbidden"), N("User account forbidden by Mandriva web services") ],
+		  99  => [ N("Connection error"), N("Mandriva web services not reachable") ]
+                  };  
+    foreach my $num ([9, 8], [21, 20]) { $hreturn->{$num->[0]} = $hreturn->{$num->[1]} };
+    my $action = {
+		  create => sub {
+		      eval { $response = $this->soap_create_account(@_) };
+		      if ($response->{status}) {
+			  return 'OK'
+		      } else {
+			  $code = $this->{response}{code} || '99';
+			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
+		      },
+		  }
+		  authenticate => sub {
+		      eval { $response = $this->soap_authenticate_user(@_) };
+		      if ($response->{status}) {
+			  return 'OK'
+		      } else {
+			  $code = $this->{response}{code} || '99';
+			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
+		      },
+		  }
 		 };
-    if ($ret->is_success) {
-	my $content = $ret->content;
-#	    print "CODE_RETOUR = $content\n";
-	if ($content =~ m/(\d+)/) { my $code = sprintf("%d",$1); $str = $result->{$code} }
-    } else { $str = N("Problem connecting to server \n") }
-    $str
+    $action->{$type}->();
 }
 
 sub check_valid_email {
@@ -148,14 +190,14 @@ sub send_config {
     my ($link, $content) = @_;
     my ($res, $key);
     my $ua = LWP::UserAgent->new;
-    $ua->agent("MdkOnlineAgent" . '/' . $ua->agent . $::VERSION);
+    $ua->agent($useragent);
     $ua->env_proxy;
     my $response = $ua->request(POST $link,
 				Content_Type => 'form-data',
                                 Content => [ %$content ]);
     if ($response->is_success && $response->content =~ /^TRUE(.*?)([^a-zA-Z0-9].*)?$/) {
 	($res, $key) = ('TRUE', $1);
-    } 
+    }
     ($res, $key)
 }
 
@@ -211,12 +253,9 @@ LASTCHECK=$d
 
 sub is_running {
     my ($name) = @_;
-    # Set USER environment variable if necessary:
-    $ENV{USER} ||= getlogin || (getpwuid($<))[0];
     any {
-	my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
-	#- to run ps, perl may create some process with $name as name and 1 as ppid
-	$ppid != 1 && $pid != $$ && $n eq $name;
+        my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
+        $pid != $$ && $n eq $name;
     } `ps -o '%P %p %c' -u $ENV{USER}`;
 }
 
