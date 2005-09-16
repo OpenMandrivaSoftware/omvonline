@@ -214,7 +214,7 @@ sub installUpdates {
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
     system "/usr/sbin/mdkupdate", "--applet";
-    my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
+    my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush();
