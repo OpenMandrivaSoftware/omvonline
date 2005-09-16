@@ -121,9 +121,13 @@ $wiz = {
 				  ];
 			      },
 			      post => sub {
-				  my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
-				  @info = ($login, $password);
-				  $is_success = mdkonline::create_authenticate_account('authenticate', @info); undef($_wait);
+				  if (!mdkonline::check_valid_boxname($boxname)) {
+				      $is_success = N("Machine name must be 1 to 40 alphanumerical characters");
+				  } else {
+				      my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
+				      @info = ($login, $password);
+				      $is_success = mdkonline::create_authenticate_account('authenticate', @info); undef($_wait);
+				  }
 				  "authenticate";
 			      },
 			     },
