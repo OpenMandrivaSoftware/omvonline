@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 0.2mdk
+%define release 0.3mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Fri Sep 16 2005 Daouda LO <daouda@mandriva.com> 1.3-0.3mdk
+- fix bug on auto-upgrading mdkapplet
+- limit machine name possible chars and length 
+
 * Thu Sep 15 2005 Daouda LO <daouda@mandriva.com> 1.3-0.2mdk
 - use SOAP for client <-> server communication 
   (account creation and authentication through my.mandriva.com)
