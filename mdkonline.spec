@@ -116,7 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Fri Sep 16 2005 Daouda LO <daouda@mandriva.com> 1.3-0.3mdk
 - fix bug on auto-upgrading mdkapplet
-- limit machine name possible chars and length 
+- limit machine name to alphanum chars and length <= 40
 
 * Thu Sep 15 2005 Daouda LO <daouda@mandriva.com> 1.3-0.2mdk
 - use SOAP for client <-> server communication 
