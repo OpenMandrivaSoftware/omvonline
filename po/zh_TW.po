@@ -5,14 +5,15 @@
 # Kenduest Lee <kenduest@i18n.linux.org.tw>, 2002
 # hilbert <freehil@yahoo.com>, 2003
 # Shiva Huang <blueshiva@giga.net.tw>, 2005.
+# Shiva Huang <shivahuang@gmail.com>, 2005
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-02-06 00:04+0800\n"
-"Last-Translator: Shiva Huang <blueshiva@giga.net.tw>\n"
+"PO-Revision-Date: 2005-09-17 04:20+0800\n"
+"Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -358,9 +359,9 @@ msgid "Password:"
 msgstr "    密碼："
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "掛載點應該只有包含英文字母與數字與底線這類字元"
+msgstr "主機名稱必須由 1 到 40 個英文字母或數字的字元所組成"
 
 #: ../mdkonline:127
 #, c-format
@@ -406,9 +407,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "註冊 Mandriva Online 帳號"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "綠:"
+msgstr "歡迎："
 
 #: ../mdkonline:156
 #, c-format
@@ -416,9 +417,9 @@ msgid "First name:"
 msgstr "名字："
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "姓氏"
+msgstr "姓氏："
 
 #: ../mdkonline:160
 #, c-format
@@ -435,9 +436,9 @@ msgstr ""
 " 請再試一次\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "請填寫全部的欄位\n"
+msgstr "請填寫全部的欄位"
 
 #: ../mdkonline:167
 #, c-format
@@ -519,17 +520,17 @@ msgid ""
 msgstr "無法連線到 Mandriva Online 網站：錯誤的帳號/密碼或路由器/防火牆設定"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "安全警示："
+msgstr "安全性警示"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "不安全的請求：僅能使用 httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "資料庫錯誤"
 
@@ -539,65 +540,71 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"伺服器資料庫錯誤\n"
+"請稍後再試"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "註冊方式"
+msgstr "註冊錯誤"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "沒有指定印表機名稱 !"
+msgstr "某些參數遺失"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "%s 的密碼"
+msgstr "密碼錯誤"
 
 #: ../mdkonline.pm:98
 #, c-format
 msgid "Wrong password"
-msgstr "密碼錯誤"
+msgstr "錯誤密碼"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "沒有錯誤"
+msgstr "登入錯誤"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "目的目錄已經在使用了。請另外選一個。"
+msgstr ""
+"您提供的電子郵件信箱已經在使用了。\n"
+"請另外選一個\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "您提供的電子郵件信箱是不合法或遭拒的"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "名稱欄位是空白的，請提供一個名稱"
+msgstr ""
+"電子郵件位址欄位是空白的，\n"
+"請提供一個郵件位址"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "剩餘的錯誤："
+msgstr "限制錯誤"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "資料庫軟體"
+msgstr "連結資料庫遭拒"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "設備錯誤"
+msgstr "服務錯誤"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -605,11 +612,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva 網頁服務現在無法使用\n"
+"請稍候再試"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "密碼錯誤。"
+msgstr "密碼不符"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -617,26 +626,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva 網頁服務正在維護中\n"
+"請稍候再試"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "禁止"
+msgstr "使用者遭拒"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "使用者帳號遭到 Mandriva 網頁服務拒絕"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "連線到伺服器"
+msgstr "連線錯誤"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva web services not reachable"
-msgstr "郵件伺服器還沒準備好"
+msgstr "無法連線到 Mandriva 網頁服務"
 
 #: ../mdkupdate:61
 #, c-format
