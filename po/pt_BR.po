@@ -312,17 +312,17 @@ msgstr "Você precisa se inscrever"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Sr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Sra."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Sra."
 
 #: ../mdkonline:87
 #, c-format
@@ -357,9 +357,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Digite seu login do Mandriva Online, senha e o nome da máquina: "
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Endereço IP:"
+msgstr "Endereço email:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -367,9 +367,9 @@ msgid "Password:"
 msgstr "Senha:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "O ponto de montagem deve conter apenas caracteres alfanuméricos"
+msgstr "Nome da máquina deve ter de 1 a 40 caracteres alfanuméricos"
 
 #: ../mdkonline:127
 #, c-format
@@ -414,9 +414,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Criar uma conta Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Verde"
+msgstr "Saudação:"
 
 #: ../mdkonline:156
 #, c-format
@@ -424,9 +424,9 @@ msgid "First name:"
 msgstr "Primeiro Nome:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Nome do servidor:"
+msgstr "Último nome:"
 
 #: ../mdkonline:160
 #, c-format
@@ -443,9 +443,9 @@ msgstr ""
 " Por favor, tente de novo\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Por favor preencha todos os campos\n"
+msgstr "Por favor preencha cada campo"
 
 #: ../mdkonline:167
 #, c-format
@@ -530,17 +530,17 @@ msgstr ""
 "definições de firewall estão incorretas"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Alertas de Segurança:"
+msgstr "Erro de segurança"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Invocação insegura: Método disponível somente via https"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Erro do banco de dados"
 
@@ -550,21 +550,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Servidor de Banco de Dados falhou\n"
+"Por favor tente mais tarde"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Tipo de Registro"
+msgstr "Erro no registro"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "O nome da impressora remota está faltando!"
+msgstr "Alguns parâmetros estão faltando"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Senha do servidor"
+msgstr "Erro de senha"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -572,43 +574,47 @@ msgid "Wrong password"
 msgstr "Senha incorreta"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "Erro desconhecido"
+msgstr "Erro no login"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "O diretório de destino está em uso, favor escolher um outro."
+msgstr ""
+"O email fornecido já está em uso\n"
+"Favor informar outro\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "O email fornecido é inválido ou está bloqueado"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "O campo do nome está vazio! Coloque um nome"
+msgstr ""
+"Endereço email está vazio\n"
+"Favor informar"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP Restrito"
+msgstr "Erro de Restrição"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Servidor de Bancos de dados"
+msgstr "Acesso negado ao Bancos de dados"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Erro de escrita\n"
+msgstr "Erro no serviço"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -616,9 +622,11 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Serviços web da Mandriva não estão disponíveis no momento\n"
+"Por favor tente mais tarde"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
 msgstr "senhas não conferem"
 
@@ -628,26 +636,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Serviços web da Mandriva estão em manutenção\n"
+"Por favor tente mais tarde"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Login do usuário:"
+msgstr "Usuário bloqueado"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Conta de usuário bloqueada para os serviçoes web da Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Nome da conexão"
+msgstr "Erro de conexão"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Serviços web da Mandriva não acessíveis"
 
 #: ../mdkupdate:61
 #, c-format
