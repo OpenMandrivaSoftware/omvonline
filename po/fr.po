@@ -1,3 +1,4 @@
+# translation of fr.po to Français
 # translation of mdkonline-fr.po to Français
 # translation of mdkonline-fr.po to
 # translation of mdkonline-fr.po to francais
@@ -14,9 +15,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-fr\n"
+"Project-Id-Version: fr\n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-08-08 19:40+0200\n"
+"PO-Revision-Date: 2005-09-17 12:44+0200\n"
 "Last-Translator: Nicolas Lécureuil <neoclust@mandriva.org>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,12 +33,9 @@ msgstr "Votre système est à jour"
 
 #: ../mdkapplet:70
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
 msgstr ""
-"Problème lors de la configuration du service. Recherchez les journaux et "
-"envoyez-les à : \n"
+"Problème lors de la configuration du service. Recherchez les journaux et envoyez-les à : \n"
 "support@mandrivaonline.com"
 
 #: ../mdkapplet:76
@@ -68,11 +66,10 @@ msgstr "Service non activé. Cliquez sur « Site Mandriva Online »"
 #: ../mdkapplet:106
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Cette version de Mandriva Linux n'est pas supportée (obsolète ou en "
-"développement)"
+msgstr "Cette version de Mandriva Linux n'est pas supportée (obsolète ou en développement)"
 
-#: ../mdkapplet:111 ../mdkapplet:164
+#: ../mdkapplet:111
+#: ../mdkapplet:164
 #, c-format
 msgid "Install updates"
 msgstr "Installer les mises à jour"
@@ -87,13 +84,19 @@ msgstr "Configurer le service"
 msgid "Check Updates"
 msgstr "Vérifier la disponibilité de mises à jour"
 
-#: ../mdkapplet:114 ../mdkapplet:167 ../mdkonline:87 ../mdkonline:91
-#: ../mdkonline:127 ../mdkupdate:176
+#: ../mdkapplet:114
+#: ../mdkapplet:167
+#: ../mdkonline:87
+#: ../mdkonline:91
+#: ../mdkonline:127
+#: ../mdkupdate:176
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
 
-#: ../mdkapplet:114 ../mdkapplet:166 ../mdkapplet:167
+#: ../mdkapplet:114
+#: ../mdkapplet:166
+#: ../mdkapplet:167
 #, c-format
 msgid "Check updates"
 msgstr "Vérifier la disponibilité de mises à jour"
@@ -113,7 +116,8 @@ msgstr "Configurer le réseau"
 msgid "Configure Now!"
 msgstr "Configurer maintenant !"
 
-#: ../mdkapplet:152 ../mdkapplet:223
+#: ../mdkapplet:152
+#: ../mdkapplet:223
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Appliquette des mises à jour Mandriva Linux"
@@ -138,7 +142,8 @@ msgstr "Voir les journaux"
 msgid "Status"
 msgstr "Statut"
 
-#: ../mdkapplet:176 ../mdkapplet:381
+#: ../mdkapplet:176
+#: ../mdkapplet:381
 #, c-format
 msgid "Close"
 msgstr "Fermer"
@@ -146,7 +151,7 @@ msgstr "Fermer"
 #: ../mdkapplet:204
 #, c-format
 msgid "Network Connection: "
-msgstr "Connection réseau : "
+msgstr "Connexion réseau : "
 
 #: ../mdkapplet:204
 #, c-format
@@ -163,7 +168,8 @@ msgstr "Arrêté"
 msgid "Last check: "
 msgstr "Dernière vérification : "
 
-#: ../mdkapplet:206 ../mdkonline:120
+#: ../mdkapplet:206
+#: ../mdkonline:120
 #, c-format
 msgid "Machine name:"
 msgstr "Nom de l'ordinateur :"
@@ -186,9 +192,7 @@ msgstr "Lancement de mdkupdate --applet\n"
 #: ../mdkapplet:218
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online semble avoir été réinstallé, rechargement de "
-"l'appliquette ..."
+msgstr "Mandriva Online semble avoir été réinstallé, rechargement de l'appliquette ..."
 
 #: ../mdkapplet:229
 #, c-format
@@ -198,7 +202,7 @@ msgstr "Calcul des nouvelles mises à jour ...\n"
 #: ../mdkapplet:231
 #, c-format
 msgid "Connecting to"
-msgstr "Connection à"
+msgstr "Connexion à"
 
 #: ../mdkapplet:242
 #, c-format
@@ -228,8 +232,7 @@ msgstr "État inconnu"
 #: ../mdkapplet:268
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Service en-ligne désactivé. Veuillez contacter le site Mandriva Online\n"
+msgstr "Service en-ligne désactivé. Veuillez contacter le site Mandriva Online\n"
 
 #: ../mdkapplet:269
 #, c-format
@@ -243,22 +246,13 @@ msgstr "Mauvais hôte, identifiant ou action\n"
 
 #: ../mdkapplet:271
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"Une erreur semble être présente dans vos paramètres réseau (vérifiez votre "
-"table de routage, votre pare-feu ou les paramètres de votre serveur "
-"mandataire)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
+msgstr "Une erreur semble être présente dans vos paramètres réseau (vérifiez votre table de routage, votre pare-feu ou les paramètres de votre serveur mandataire)\n"
 
 #: ../mdkapplet:273
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Un problème est intervenu lors de la connexion au serveur, veuillez "
-"contacter le support technique"
+msgid "Problem occured while connecting to the server, please contact the support team"
+msgstr "Un problème est intervenu lors de la connexion au serveur, veuillez contacter le support technique"
 
 #: ../mdkapplet:275
 #, c-format
@@ -305,7 +299,8 @@ msgstr "Toujours lancer au démarrage"
 msgid "Quit"
 msgstr "Quitter"
 
-#: ../mdkonline:59 ../mdkonline:99
+#: ../mdkonline:59
+#: ../mdkonline:99
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
@@ -323,17 +318,17 @@ msgstr "Je veux m'inscrire"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Mr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Mme."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Mlle."
 
 #: ../mdkonline:87
 #, c-format
@@ -364,24 +359,24 @@ msgstr "Création de compte ou authentification"
 #: ../mdkonline:112
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Entrez vos identifiant, mot de passe et nom de machine Mandriva Online :"
+msgstr "Entrez vos identifiant, mot de passe et nom de machine Mandriva Online :"
 
-#: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#: ../mdkonline:118
+#: ../mdkonline:158
+#, c-format
 msgid "Email address:"
-msgstr "Adresse IP :"
+msgstr "Adresse électonique:"
 
-#: ../mdkonline:119 ../mdkonline:159
+#: ../mdkonline:119
+#: ../mdkonline:159
 #, c-format
 msgid "Password:"
 msgstr "Mot de passe :"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"Les points de montage ne doivent contenir que des caractères alphanumériques"
+msgstr "Le nom de machine doit être en 1 et 40 caractères alphanumériques"
 
 #: ../mdkonline:127
 #, c-format
@@ -398,10 +393,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -426,9 +419,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Créer un compte Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Vert"
+msgstr "Remerciements : "
 
 #: ../mdkonline:156
 #, c-format
@@ -436,9 +429,9 @@ msgid "First name:"
 msgstr "Prénom :"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Nom d'hôte :  :"
+msgstr "Nom de famille:"
 
 #: ../mdkonline:160
 #, c-format
@@ -455,9 +448,9 @@ msgstr ""
 "Veuillez essayer de nouveau\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Veuillez remplir tous les champs\n"
+msgstr "Veuillez remplir tous les champs"
 
 #: ../mdkonline:167
 #, c-format
@@ -471,8 +464,7 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Compte Mandriva Online créé avec succès.\n"
-"Cliquez sur « Suivant » pour vous authentifier et envoyer votre "
-"configuration au serveur\n"
+"Cliquez sur « Suivant » pour vous authentifier et envoyer votre configuration au serveur\n"
 
 #: ../mdkonline:182
 #, c-format
@@ -498,7 +490,8 @@ msgstr ""
 "Un programme se lancera régulièrement sur votre machine\n"
 "pour vérifier la présence de nouvelles mises-à-jour.\n"
 
-#: ../mdkonline:184 ../mdkupdate:146
+#: ../mdkonline:184
+#: ../mdkupdate:146
 #, c-format
 msgid "Connection problem"
 msgstr "Problème de connexion"
@@ -506,8 +499,7 @@ msgstr "Problème de connexion"
 #: ../mdkonline:184
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-"Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
+msgstr "Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
 
 #: ../mdkonline:190
 #, c-format
@@ -536,27 +528,23 @@ msgstr "Problème lors de l'envoi de votre configuration"
 
 #: ../mdkonline:226
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Ne peut se connecter au site internet mandrivaonline : mauvais identifiant/"
-"mot de passe ou mauvaise configuration routeur/pare-feu"
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
+msgstr "Ne peut se connecter au site internet mandrivaonline : mauvais identifiant/mot de passe ou mauvaise configuration routeur/pare-feu"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Alertes de sécurité :"
+msgstr "Erreur de sécurité"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Appel non sécurisé: Connection possible uniquement avec HTTPS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Erreur base de donnée"
+msgstr "Erreur de base de donnée"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -564,65 +552,75 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Base de données serveur inaccesible\n"
+"Veuillez réessayer plus tard s'il vous plait"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Type d'enregistrement"
+msgstr "Erreur d'enregistrement"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Le nom de l'imprimante est manquant !"
+msgstr "Des paramètres sont manquants"
 
-#: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#: ../mdkonline.pm:98
+#: ../mdkonline.pm:104
+#, c-format
 msgid "Password error"
-msgstr "Mot de passe pour %s"
+msgstr "Erreur de mot de passe"
 
 #: ../mdkonline.pm:98
 #, c-format
 msgid "Wrong password"
 msgstr "Mot de passe incorrect"
 
-#: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#: ../mdkonline.pm:99
+#: ../mdkonline.pm:100
+#: ../mdkonline.pm:101
+#, c-format
 msgid "Login error"
-msgstr "Erreur inconnue"
+msgstr "Erreur de nom d'utilisateur"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Le répertoire cible est déjà utilisé, veuillez en choisir un autre."
+msgstr ""
+"L'adresse électronique que vous avez renseignée est déjà utilisée\n"
+"Veuillez en fournir une autre\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "L'adresse électronique que vous fournissez est invalide ou interdite"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Le champ nom est vide veuillez fournir un nom"
+msgstr ""
+"Le champ d'adresse électronique est vide\n"
+"Veuillez en fournir une"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP restreint"
+msgstr "Erreur de restriction"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Serveur de base de données"
+msgstr "Accès à la base de données interdite"
 
-#: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#: ../mdkonline.pm:103
+#: ../mdkonline.pm:105
+#, c-format
 msgid "Service error"
-msgstr "Erreur d'écriture\n"
+msgstr "Erreur de service"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -630,11 +628,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Les services Web Mandriva sont temporairement indisponibles\n"
+"Veuillez réessayer plus tard s'il vous plait"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Mots de passe différents."
+msgstr "Mots de passe différents"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -642,41 +642,41 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Les services Web de mandriva sont en maintenance\n"
+"Veuillez réessayer plus tard s'il vous plait"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Nom d'utilisateur :"
+msgstr "Nom d'utilisateur interdit"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Compte utilisateur interdit par les services Web Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Nom de la connexion"
+msgstr "Erreur de connexion"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Les services Web Mandriva ne sont pas accessibles"
 
 #: ../mdkupdate:61
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate version %s\n"
 "Copyright © %s Mandriva.\n"
-"Ceci est un logiciel libre qui peut être redistribué selon les termes de la "
-"Licence Publique Générale GNU.\n"
+"Ceci est un logiciel libre qui peut être redistribué selon les termes de la Licence Publique Générale GNU.\n"
 "\n"
 "utilisation :\n"
 
@@ -708,9 +708,7 @@ msgstr "  --noX          - Mode texte de Mandriva Update. \n"
 #: ../mdkupdate:78
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
-"Fichier %s non trouvé. Relancer l'assistant de configuration mdkonline pour "
-"le générer à nouveau."
+msgstr "Fichier %s non trouvé. Relancer l'assistant de configuration mdkonline pour le générer à nouveau."
 
 #: ../mdkupdate:146
 #, c-format
@@ -727,62 +725,9 @@ msgstr "Choisissez les paquetages à installer et cliquez sur Ok"
 msgid "Installing packages ...\n"
 msgstr "Installation des paquetages...\n"
 
-#: ../mdkupdate:179 ../mdkupdate:264
+#: ../mdkupdate:179
+#: ../mdkupdate:264
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossible de mettre a jour les paquetages du média update_source.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Identifiant :"
-
-#~ msgid "or"
-#~ msgstr "ou"
-
-#~ msgid "wrong password:"
-#~ msgstr "mot de passe incorrect :"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Votre identifiant ou mot de passe était incorrect.\n"
-#~ "Vous devrez soit en recommencer la saisie, soit créer un compte Mandriva "
-#~ "Online.\n"
-#~ "Dans le second cas, revenez à la première étape pour vous connecter à "
-#~ "Mandriva Online.\n"
-#~ "Veuillez noter que vous devez aussi indiquer un nom de Machine \n"
-#~ "(seuls les caractères alphabétiques sont autorisés)."
-
-#~ msgid "Mail contact:"
-#~ msgstr "Adresse electronique :"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Veuillez fournir un identifiant"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Identifiant et mot de passe ne doivent pas excéder 12 caractères\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Caractères spéciaux non permis\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Email non valide\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Ce compte est déjà utilisé\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problème de connexion au serveur \n"
-
-#~ msgid ""
-#~ "Service configuration problem. Please check logs and send mail to "
-#~ "support@mandrivaonline.net"
-#~ msgstr ""
-#~ "Problème lors de la configuration du service. Recherchez les journaux et "
-#~ "envoyez-les à : \n"
-#~ "support@mandrivaonline.net"
