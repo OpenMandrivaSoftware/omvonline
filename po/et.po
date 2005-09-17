@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-06-23 11:31+0200\n"
+"PO-Revision-Date: 2005-09-17 12:14+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -308,17 +308,17 @@ msgstr "Tahan konto luua"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Hr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Pr."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Prl."
 
 #: ../mdkonline:87
 #, c-format
@@ -352,9 +352,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Sisestage oma Mandriva Online'i kasutajatunnus, parool ja masina nimi:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IP-aadress:"
+msgstr "E-posti aadress:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -362,9 +362,9 @@ msgid "Password:"
 msgstr "Parool:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Haakepunkti nimi tohib sisaldada vaid tähti ja numbreid"
+msgstr "Haakepunkti nimi tohib sisaldada vaid 1 kuni 40 tähte ja numbrit"
 
 #: ../mdkonline:127
 #, c-format
@@ -409,9 +409,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Online'i konto loomine"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Roheline"
+msgstr "Tiitel:"
 
 #: ../mdkonline:156
 #, c-format
@@ -419,9 +419,9 @@ msgid "First name:"
 msgstr "Eesnimi:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Masinanimi:"
+msgstr "Perekonnanimi:"
 
 #: ../mdkonline:160
 #, c-format
@@ -438,9 +438,9 @@ msgstr ""
 " Palun proovige uuesti\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Palun täitke kõik väljad\n"
+msgstr "Palun täitke kõik väljad"
 
 #: ../mdkonline:167
 #, c-format
@@ -525,17 +525,18 @@ msgstr ""
 "kasutajatunnus/parool või sobimatud ruuteri/tulemüüri seadistused"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Turvahoiatused:"
+msgstr "Turvalisusviga"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
 msgstr ""
+"Ebaturvaline väljakutsumine: meetod on kasutatav ainult HTTPS vahendusel"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Andmebaasi viga"
 
@@ -545,21 +546,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Serveri andmebaasi viga\n"
+"Palun proovige hilje uuesti"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Registreerimise tüüp"
+msgstr "Registreerimise viga"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Võrguprinteri nimi puudub!"
+msgstr "Mõned parameetrid puuduvad"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Parooliserver"
+msgstr "Parooli viga"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -567,43 +570,47 @@ msgid "Wrong password"
 msgstr "Vale parool"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "tundmatu viga"
+msgstr "Sisselogimise viga"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Sihtkataloog on juba kasutusel. Palun valige mõni muu."
+msgstr ""
+"Teie antud e-posti aadress on juba kasutusel\n"
+"Palum andke uus\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Teie antud e-posti aadress on vigane või keelatud"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Nimeväli on tühi. Palun määrake nimi"
+msgstr ""
+"E-posti aadressi väli on tühi\n"
+"Palun andke aadress"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Piiratud WEP"
+msgstr "Piiranguviga"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Andmebaasi server"
+msgstr "Ligipääs andmebaasile keelatud"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Viga kirjutamisel\n"
+msgstr "Teenuse viga"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -611,11 +618,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva veebiteenused pole praegu kättesaadavad\n"
+"Palun proovige hiljem uuesti"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Paroolid ei klapi."
+msgstr "Paroolid ei lange kokku"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -623,26 +632,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva veebiteenuseid parajasti hooldatakse\n"
+"Palun proovige hiljem uuesti"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Kasutajatunnus:"
+msgstr "Kasutaja keelatud"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Kasutajakontol pole lubatud ligipääs Mandriva veebiteenustele"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Ühenduse nimi"
+msgstr "Ühenduse viga"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandriva veebiteenused pole kättesaadavad"
 
 #: ../mdkupdate:61
 #, c-format
@@ -712,90 +723,3 @@ msgstr "Pakettide paigaldamine...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Pakettide värskendamine update_source andmekandjalt ebaõnnestus.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Kasutajatunnus:"
-
-#~ msgid "or"
-#~ msgstr "või"
-
-#~ msgid "wrong password:"
-#~ msgstr "vale parool:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Teie kasutajatunnus või parool oli vale.\n"
-#~ " Te peate selle uuesti sisestama või siis looma endale konto Mandriva "
-#~ "Online'is.\n"
-#~ " Viimasel juhul minge tagasi esimese sammu juurde, et saada ühendus "
-#~ "Mandriva Online'iga.\n"
-#~ " Pange tähele, et teatada tuleb ka oma masina nimi \n"
-#~ " (lubatud on ainult tähed)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "E-posti aadress:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Palun andke kasutajatunnus"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Kasutajatunnuses ja paroolis tohib olla kuni 12 sümbolit\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Erisümbolid ei ole lubatud\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "E-posti aadress pole korrektne\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Konto on juba olemas\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Probleem serveriga ühendumisel \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Serveriga ühendumisel tekkis probleem, palun võtke ühendust "
-#~ "tugimeeskonnaga"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Pakettide värskendamine mdkupdate andmekandjalt ebaõnnestus.\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "Mandriva Update ei suutnud võrdlusfaile laadida. Saatke palun e-kiri "
-#~ "aadressile support@mandrivaonline.com"
-
-#~ msgid "Please Wait"
-#~ msgstr "Palun oodake"
-
-#~ msgid "I don't have a Mandriva Online account and I want to subscribe"
-#~ msgstr "Mul ei ole veel Mandriva Online'i kontot, aga ma tahan seda"
-
-#~ msgid "Mandriva Linux Privacy Policy"
-#~ msgstr "Mandriva Linuxi privaatsuspoliitika"
-
-#~ msgid "Authentification"
-#~ msgstr "Autentimine"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Saada konfiguratsioon"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "Automaatne uuendamine"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Nõustajast väljumine\n"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - uuendatakse võtmeid\n"
