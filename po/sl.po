@@ -1,3 +1,4 @@
+# translation of mdkonline.po to Slovenian
 # translation of mdkonline-sl.po to Slovenian
 # translation of mdkonline-sl.po to
 # translation of mdkonline-sl.po to Slovenščina
@@ -12,18 +13,17 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-sl\n"
+"Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-09-11 20:22+0200\n"
+"PO-Revision-Date: 2005-09-17 10:48+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: ../mdkapplet:64
 #, c-format
@@ -251,8 +251,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Težava pri povezovanju s strežnikom. Prosim obrnite se na skupino za podporo"
+msgstr "Težava pri povezovanju s strežnikom. Prosim obrnite se na skupino za podporo"
 
 #: ../mdkapplet:275
 #, c-format
@@ -317,17 +316,17 @@ msgstr "Želim se registrirati"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "g."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "ga."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "gdč."
 
 #: ../mdkonline:87
 #, c-format
@@ -358,13 +357,12 @@ msgstr "Ustvarjanje računa ali overjanje"
 #: ../mdkonline:112
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Vnesite vaše uporabniško ime, geslo in ime računalnika za Mandriva Online:"
+msgstr "Vnesite vaše uporabniško ime, geslo in ime računalnika za Mandriva Online:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Odhajajoči poštni naslov"
+msgstr "E-poštni naslov:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -372,9 +370,9 @@ msgid "Password:"
 msgstr "Geslo:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Priklopne točke smejo vsebovati samo alfanumerične znake."
+msgstr "Ime računalnika mora biti dolgo od 1 do 40 znakov"
 
 #: ../mdkonline:127
 #, c-format
@@ -419,9 +417,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Ustvari račun Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Zelena"
+msgstr "Pozdrav:"
 
 #: ../mdkonline:156
 #, c-format
@@ -429,9 +427,9 @@ msgid "First name:"
 msgstr "Ime:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Ime:"
+msgstr "Priimek:"
 
 #: ../mdkonline:160
 #, c-format
@@ -448,9 +446,9 @@ msgstr ""
 " Prosim poskusite znova\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Prosim izpolnite vsa polja\n"
+msgstr "Prosim izpolnite vsa polja"
 
 #: ../mdkonline:167
 #, c-format
@@ -534,19 +532,19 @@ msgstr ""
 "ime, geslo, ali napačne nastavitve usmerjevalnika oziroma požarnega zidu"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Varnostna opozorila:"
+msgstr "Varnostna napaka"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Sklic ni varen: metoda je na voljo samo prek HTTPS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Napaka v bazi podatkov"
+msgstr "Napaka podatkovne zbirke"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -554,21 +552,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Povezava s podatkovno zbirko ni uspela\n"
+"Prosim poskusite kasneje"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Vrsta registracije"
+msgstr "Napaka pri registraciji"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Manjka ime oddaljenega tiskalnika!"
+msgstr "Manjkajo nekateri parametri"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Geslo za %s"
+msgstr "Napaka glede gesla"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -576,43 +576,47 @@ msgid "Wrong password"
 msgstr "Napačno geslo"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "neznana napaka"
+msgstr "Napaka pri prijavi"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Ciljni imenik je že v rabi. Prosim, izberite drugega."
+msgstr ""
+"E-pošta, ki ste jo navedli, je že v uporabi\n"
+"Prosim vnesite drugo e-pošto\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "E-pošta, ki ste jo navedli, ni veljavna ali pa je prepovedana"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Polje z imenom je prazno, prosim podajte ime"
+msgstr ""
+"Polje za e-pošto je prazno\n"
+"Prosim vnesite e-pošto"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Opis: "
+msgstr "Napaka glede omejitev"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Podatkovni strežnik"
+msgstr "Dostop do podatkovne zbirke je zavrnjen"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Napaka pri pisanju\n"
+msgstr "Napaka glede storitve"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -620,11 +624,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Trenutno spletne storitve Mandrive niso na voljo\n"
+"Prosim poskusite kasneje"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Neujemanje gesla."
+msgstr "Gesli se ne ujemata"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -632,26 +638,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Poteka vzdrževanje spletnih storitev Mandrive\n"
+"Prosim poskusite kasneje"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Uporabniško ime:"
+msgstr "Uporabnik je zavrnjen"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Spletne storitve Mandrive zavračajo ta uporabniški račun"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Ime povezave"
+msgstr "Napaka glede povezave"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Spletne storitve Mandrive niso dostopne"
 
 #: ../mdkupdate:61
 #, c-format
@@ -721,49 +729,3 @@ msgstr "Nameščanje paketov ...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Uporabniško ime:"
-
-#~ msgid "or"
-#~ msgstr "ali"
-
-#~ msgid "wrong password:"
-#~ msgstr "napačno geslo:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Uporabniško ime ali geslo je bilo napačno.\n"
-#~ " Poskusite oboje vtipkati ponovno ali pa ustvarite nov račun Mandriva "
-#~ "Online.\n"
-#~ " Če želite slednje, pojdite nazaj na prvi korak za povezavo z Mandriva "
-#~ "Online.\n"
-#~ " Zavedajte se, da morate vnesti tudi ime računalnika\n"
-#~ " (sprejete so samo črke)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Poštni stik:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Prosim vpišite uporabniško ime"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Uporabniško ime in geslo morata biti krajša od 12 znakov\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Posebni znaki niso dovoljeni\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "E-pošta ni veljavna\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Račun že obstaja\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Težava pri povezovanju s strežnikom \n"
