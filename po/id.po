@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-08-31 23:25+0700\n"
+"PO-Revision-Date: 2005-09-17 09:49+0700\n"
 "Last-Translator: Erwien Samantha Y <erwiensamantha@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -313,17 +313,17 @@ msgstr "Saya ingin mendaftar"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Tuan"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Nyonya"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Nona"
 
 #: ../mdkonline:87
 #, c-format
@@ -357,9 +357,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Masukkan login dan katasandi Mandriva Online serta nama mesin  Anda:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Alamat IP:"
+msgstr "Alamat email:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -367,9 +367,9 @@ msgid "Password:"
 msgstr "Katasandi:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Titik mount hanya mengandung huruf atau angka"
+msgstr "Nama komputer harus berupa karakter alphanumerik sebanyak 1 - 40"
 
 #: ../mdkonline:127
 #, c-format
@@ -412,9 +412,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Buat Account Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Hijau"
+msgstr "Salam:"
 
 #: ../mdkonline:156
 #, c-format
@@ -422,9 +422,9 @@ msgid "First name:"
 msgstr "Nama Depan:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Nama host:"
+msgstr "Nama belakang:"
 
 #: ../mdkonline:160
 #, c-format
@@ -441,9 +441,9 @@ msgstr ""
 "Harap coba lagi!\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Harap mengisi semua field\n"
+msgstr "Harap mengisi semua field"
 
 #: ../mdkonline:167
 #, c-format
@@ -527,19 +527,19 @@ msgstr ""
 "settingrouter/firewall yang buruk"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Pemberitahuan Keamanan:"
+msgstr "Kesalahan keamanan"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Pemanggilan tidak aman: Metode hanya tersedia melalui https"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Kesalahan Database"
+msgstr "Kesalahan basis data"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -547,21 +547,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Server Basis Data gagal\n"
+"Harap Mencoba Kembali Nanti"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Tipe Registrasi"
+msgstr "Kesalahan registrasi"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Nama printer remote hilang!"
+msgstr "Beberapa paramater hilang"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Server katasandi"
+msgstr "Kesalahan katasandi"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -569,43 +571,45 @@ msgid "Wrong password"
 msgstr "Katasandi salah"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "kesalahan yang tidak diketahui"
+msgstr "Kesalahan login"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Direktori tujuan sudah digunakan. Silahkan pilih yang lain."
+msgstr "Email yang Anda sediakan sudah digunakan\n"
+"Harap masukan yang lain\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Email yang Anda sediakan tidak valid atau dilarang"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Kolom nama kosong, silahkan tuliskan satu nama"
+msgstr "Kolom alamat email kosong\n"
+"Harap menyediakan satu"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP terbatas"
+msgstr "Kesalahan Pembatasan"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Server Database"
+msgstr "Akses basis data dilarang"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Error saat menulis\n"
+msgstr "Kesalahan layanan"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -613,11 +617,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Layanan web Mandriva sedang tidak tersedia\n"
+"Harap mencoba lagi nanti"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Katasandi tidak cocok."
+msgstr "Katasandi tidak cocok"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -625,26 +631,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Layanan web Mandriva sedang dalam perawatan\n"
+"Harap mencoba lagi nanti"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Login Pengguna:"
+msgstr "Pengguna Dilarang"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Account pengguna dilarang oleh layanan web Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Nama koneksi"
+msgstr "Kesalahan koneksi"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Layanan web Mandriva tidak dapat dicapai"
 
 #: ../mdkupdate:61
 #, c-format
