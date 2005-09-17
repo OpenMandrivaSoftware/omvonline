@@ -305,22 +305,22 @@ msgstr "Ik heb al een account"
 #: ../mdkonline:63
 #, c-format
 msgid "I want to subscribe"
-msgstr "Ik wil mijzelf afmelden"
+msgstr "Ik wil mijzelf aanmelden"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Dhr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrls"
+msgstr "Mw."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Mej."
 
 #: ../mdkonline:87
 #, c-format
@@ -355,9 +355,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Voer uw Mandriva Online gebruikersnaam, wachtwoord en computernaam in:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Uitgaand e-mailadres"
+msgstr "E-mailadres:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -365,9 +365,9 @@ msgid "Password:"
 msgstr "Wachtwoord:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Koppelpuntnamen kunnen slechts alfanumerieke tekens bevatten"
+msgstr "Machinenaam dient uit 1 tot 40 alfanumerieke tekens te bestaan"
 
 #: ../mdkonline:127
 #, c-format
@@ -412,9 +412,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Online account aanmaken"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Groen"
+msgstr "Aanhef:"
 
 #: ../mdkonline:156
 #, c-format
@@ -422,9 +422,9 @@ msgid "First name:"
 msgstr "Voornaam:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Voornaam:"
+msgstr "Achternaam:"
 
 #: ../mdkonline:160
 #, c-format
@@ -441,9 +441,9 @@ msgstr ""
 "Probeer het opnieuw\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Gelieve alle velden in te vullen\n"
+msgstr "Gelieve alle velden in te vullen"
 
 #: ../mdkonline:167
 #, c-format
@@ -530,19 +530,19 @@ msgstr ""
 "gebruikersnaam/wachtwoord of router/firewall instelling"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Beveiligingswaarschuwingen:"
+msgstr "Beveiligingsfout"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Onbeveiligde aanroep: Methode alleen beschikbaar via httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Databank fout"
+msgstr "Database-fout"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -550,21 +550,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Server-database werkte niet\n"
+"Probeer het later nog eens"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Registratietype"
+msgstr "Registratiefout"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "De naam van de printer op afstand ontbreekt!"
+msgstr "Enkele parameters ontbreken"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Wachtwoord voor %s"
+msgstr "Wachtwoordfout"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -572,43 +574,47 @@ msgid "Wrong password"
 msgstr "Wachtwoord onjuist"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "Onbekende fout"
+msgstr "Aanmeldingsfout"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "De bestemmingsmap is al in gebruik, kies een andere map."
+msgstr ""
+"Het e-mailadres dat u heeft opgegeven is reeds in gebruik\n"
+"Geef alstublieft een andere op\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Het door u opgegeven e-mailadres is ongeldig of niet toegestaan"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Naam-veld is leeg, geef een naam op"
+msgstr ""
+"E-mailadres-veld is leeg\n"
+"Geef alstublieft een adres op"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Beperkte WEP"
+msgstr "Restrictiefout"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Database-server"
+msgstr "Database-toegang niet toegestaan"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Schrijffout\n"
+msgstr "Service-fout"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -616,11 +622,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva webdiensten zijn momenteel niet beschikbaar\n"
+"Probeer het later nog eens"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Wachtwoorden kloppen niet."
+msgstr "Wachtwoorden kloppen niet"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -628,26 +636,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva webdiensten zijn momenteel in onderhoud\n"
+"Probeer het later nog eens"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Aanmeldnaam gebruiker:"
+msgstr "Gebruiker niet toegestaan"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Gebruikersaccount niet toegestaan door Mandriva webdiensten"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Verbindingsnaam"
+msgstr "Verbindingsfout"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandriva webdiensten niet bereikbaar"
 
 #: ../mdkupdate:61
 #, c-format
