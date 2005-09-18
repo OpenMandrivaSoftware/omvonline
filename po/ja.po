@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-02-13 14:00+0900\n"
+"PO-Revision-Date: 2005-09-18 21:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -308,17 +308,17 @@ msgstr "入会します"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Mr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Mrs."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Ms."
 
 #: ../mdkonline:87
 #, c-format
@@ -352,9 +352,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Mandriva Online のログイン名・パスワード・マシン名を入力して下さい:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IPアドレス:"
+msgstr "メールアドレス:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -362,9 +362,9 @@ msgid "Password:"
 msgstr "パスワード:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "マウントポイントにはアルファベットと数字しか使えません"
+msgstr "マシン名はアルファベットと数字(1から40まで)で指定してください"
 
 #: ../mdkonline:127
 #, c-format
@@ -411,19 +411,19 @@ msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Online のアカウント作成"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "緑"
+msgstr "敬称:"
 
 #: ../mdkonline:156
 #, c-format
 msgid "First name:"
-msgstr "下の名前:"
+msgstr "名:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "ホスト名:"
+msgstr "姓:"
 
 #: ../mdkonline:160
 #, c-format
@@ -440,9 +440,9 @@ msgstr ""
 "やり直してください\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "すべての項目を埋めてください\n"
+msgstr "すべての項目を埋めてください"
 
 #: ../mdkonline:167
 #, c-format
@@ -526,9 +526,9 @@ msgstr ""
 "るか、ルータ/ファイアウォールの設定に問題があります)"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "セキュリティ警告:"
+msgstr "セキュリティエラー"
 
 #: ../mdkonline.pm:95
 #, c-format
@@ -536,7 +536,7 @@ msgid "Unsecure invocation: Method available through httpS only"
 msgstr ""
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "データベースエラー"
 
@@ -546,21 +546,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"サーバのデータベースに問題が発生。\n"
+"しばらくたってからもう一度やり直してください。"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "登録タイプ"
+msgstr "登録エラー"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "リモートプリンタ名がありません"
+msgstr "足りないパラメータがあります"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "パスワードサーバ"
+msgstr "パスワードエラー"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -568,43 +570,47 @@ msgid "Wrong password"
 msgstr "パスワード誤り"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "不明なエラー"
+msgstr "ログインエラー"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "対象ディレクトリはすでに使用されています。別のものを選んでください。"
+msgstr ""
+"入力されたメールアドレスはすでに使用されています。\n"
+"別のものを入力してください。\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "入力されたメールアドレスは無効か禁止されています"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "名前欄が空白です。入力してください。"
+msgstr ""
+"メールアドレスが空白です。\n"
+"入力してください。"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "restrictedモードWEP"
+msgstr "アクセス制限エラー"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "データベースサーバ"
+msgstr "データベースへのアクセスが禁止されています"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "書き込みエラー\n"
+msgstr "サービスエラー"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -612,11 +618,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandrivaウェブサービスは現在ご利用頂けません。\n"
+"しばらくたってからもう一度やり直してください。"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "パスワードが一致していません"
+msgstr "パスワード不一致"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -624,26 +632,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandrivaウェブサービスはメンテナンス中です。\n"
+"しばらくたってからもう一度やり直してください。"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "ユーザログイン:"
+msgstr "ユーザが禁止されています"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "ユーザアカウントがMandrivaウェブサービスによって禁止されています"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "接続名"
+msgstr "接続エラー"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandrivaウェブサービスに接続できません"
 
 #: ../mdkupdate:61
 #, c-format
