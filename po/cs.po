@@ -10,15 +10,14 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-09-08 22:50+0200\n"
+"PO-Revision-Date: 2005-09-19 00:39+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../mdkapplet:64
 #, c-format
@@ -311,17 +310,17 @@ msgstr "Chci se zaregistrovat"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Pan"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Paní"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Slečna"
 
 #: ../mdkonline:87
 #, c-format
@@ -356,9 +355,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Zadejte jméno, heslo a název počítače pro Mandriva Online:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IP adresa:"
+msgstr "Emailová adresa:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -366,9 +365,9 @@ msgid "Password:"
 msgstr "Heslo:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Název přípojného bodu může obsahovat pouze písmena a číslice"
+msgstr "Název počítače musí být dlouhý 1 až 40 alfanumerických znaků"
 
 #: ../mdkonline:127
 #, c-format
@@ -414,9 +413,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Vytvořit účet na Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Zelená"
+msgstr "Pozdrav:"
 
 #: ../mdkonline:156
 #, c-format
@@ -424,9 +423,9 @@ msgid "First name:"
 msgstr "Jméno:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Název počítače:"
+msgstr "Příjmení:"
 
 #: ../mdkonline:160
 #, c-format
@@ -443,9 +442,9 @@ msgstr ""
 "Zkuste to prosím znovu\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Vyplňte prosím všechna pole\n"
+msgstr "Vyplňte prosím každé pole"
 
 #: ../mdkonline:167
 #, c-format
@@ -529,17 +528,17 @@ msgstr ""
 "heslo nebo špatně nastavený firewall či router"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Bezpečnostní varování:"
+msgstr "Bezpečnostní chyba"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Nezabezpečené volání: Metoda je dostupná pouze pomocí HTTPS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Chyba databáze"
 
@@ -549,21 +548,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Server s databází selhal\n"
+"Zkuste to prosím později"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Typ registrace"
+msgstr "Chyba registrace"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Chybí název vzdálené tiskárny!"
+msgstr "Některé parametry chybí"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Server s hesly"
+msgstr "Chyba hesla"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -571,43 +572,47 @@ msgid "Wrong password"
 msgstr "Špatné heslo"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "neznámá chyba"
+msgstr "Chyba přihlášení"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Cílový adresář se již používá, vyberte prosím jiný."
+msgstr ""
+"Zadaný email se již používá\n"
+"Zadejte prosím jiný\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Zadaný email je neplatný nebo zakázaný"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Pole se jménem je prázdné, zadejte prosím jméno"
+msgstr ""
+"Pole s emailovou adresou je prázdné\n"
+"Zadejte ji prosím"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Omezený WEP"
+msgstr "Chyba omezení"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Databázové servery"
+msgstr "Přístup k databázi zakázán"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Chyba při zápisu\n"
+msgstr "Chyba služby"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -615,11 +620,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Webové služby společnosti Mandriva jsou momentálně nedostupné\n"
+"Zkuste to prosím znovu později"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Hesla se neshodují."
+msgstr "Hesla se neshodují"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -627,26 +634,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Webové služby společnosti Mandriva jsou právě v režimu údržby\n"
+"Zkuste to prosím znovu později"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Přihlášení uživatele:"
+msgstr "Uživatel zakázán"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Uživatelský účet u webových služeb společnosti Mandriva zakázán"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Název připojení"
+msgstr "Chyba připojení"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "K webovým službám společnosti Mandriva se nelze připojit"
 
 #: ../mdkupdate:61
 #, c-format
@@ -693,8 +702,7 @@ msgstr "  --noX          - textová verze Mandriva Update.\n"
 #: ../mdkupdate:78
 #, c-format
 msgid "No %s file found. Run mdkonline wizard first"
-msgstr ""
-"Nebyl nalezen soubor %s. Spusťte prosím nejprve průvodce pro Mandriva Online"
+msgstr "Nebyl nalezen soubor %s. Spusťte prosím nejprve průvodce pro Mandriva Online"
 
 #: ../mdkupdate:146
 #, c-format
@@ -718,49 +726,3 @@ msgstr "Instaluji balíčky...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Jméno:"
-
-#~ msgid "or"
-#~ msgstr "nebo"
-
-#~ msgid "wrong password:"
-#~ msgstr "špatné heslo:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Přihlašovací jméno nebo heslo je špatné.\n"
-#~ "Buď je zkusíte znova zadat nebo potřebujete vytvořit účet služby Mandriva "
-#~ "Online.\n"
-#~ " V opačném případě se vraťte na první krok pro opětovné připojení k "
-#~ "Mandriva Online.\n"
-#~ " Uvědomte si, že musíte také zadat jméno počítače \n"
-#~ " (jsou povoleny pouze znaky abecedy bez diakritiky)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Emailový kontakt:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Zadejte prosím přihlášení"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Jméno a heslo by mělo být kratší než 12 znaků\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Speciální znaky nejsou povoleny\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Email není platný\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Účet již existuje\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problém s připojením k serveru \n"
