@@ -23,11 +23,11 @@ my $onlineProxy = 'https://onine.mandriva.com/soap';
 
 my $useragent = set_ua('mdkonline');
 
-my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) : SOAP::Lite->uri($uri)->proxy($serviceProxy, agent => $useragent);
-
 sub is_proxy () {
     return 1 if defined $ENV{http_proxy};
 }
+
+my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) : SOAP::Lite->uri($uri)->proxy($serviceProxy, agent => $useragent);
 
 sub md5file {
     require Digest::MD5;
