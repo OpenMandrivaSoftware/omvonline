@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w
 ################################################################################
 # Mandriva Online Text User Interface                                          # 
 #                                                                              #
@@ -214,7 +214,7 @@ $wiz = {
        };
 
 if (!$ia && $login && $password && $boxname) { 
-    $is_success = mdkonline::create_authenticate_account($login, $password);
+    $is_success = mdkonline::create_authenticate_account('authenticate', $login, $password);
     if ($is_success eq 'OK') {
 	($sendconfres, $key) = send_conf($login, $password, $boxname);
 	if ($sendconfres eq 'TRUE' && $key) {
