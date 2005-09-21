@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-09-07 17:39+0100\n"
+"PO-Revision-Date: 2005-09-21 14:06+0100\n"
 "Last-Translator: Tibor Pittich <Tibor.Pittich@mandriva.org>\n"
 "Language-Team: Slovak <i18n@mandrake.sk>\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +22,8 @@ msgstr "Váš systém je dostatočne aktualizovaný"
 
 #: ../mdkapplet:70
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Nastal problém v konfigurácii služby. Prosím skontrolujte log súbory a "
-"pošlite e-mail na support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Nastal problém v konfigurácii služby. Prosím skontrolujte log súbory a pošlite e-mail na support@mandrivaonline.com"
 
 #: ../mdkapplet:76
 #, c-format
@@ -42,8 +38,7 @@ msgstr "Sú dostupné nové aktualizácie pre váš systém"
 #: ../mdkapplet:88
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Služba nie je nakonfigurovaná. Prosím kliknite na \"Konfigurovať službu\""
+msgstr "Služba nie je nakonfigurovaná. Prosím kliknite na \"Konfigurovať službu\""
 
 #: ../mdkapplet:94
 #, c-format
@@ -58,10 +53,10 @@ msgstr "Služba nie je aktivovaná. Prosím kliknite na \"Online web\""
 #: ../mdkapplet:106
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Táto verzia nie je podporovaná (je príliš stará alebo je vo fáze vývoja)"
+msgstr "Táto verzia nie je podporovaná (je príliš stará alebo je vo fáze vývoja)"
 
-#: ../mdkapplet:111 ../mdkapplet:164
+#: ../mdkapplet:111
+#: ../mdkapplet:164
 #, c-format
 msgid "Install updates"
 msgstr "Inštalácia aktualizácií"
@@ -76,13 +71,19 @@ msgstr "Nastaviť službu"
 msgid "Check Updates"
 msgstr "Skontrolovať aktualizácie"
 
-#: ../mdkapplet:114 ../mdkapplet:167 ../mdkonline:87 ../mdkonline:91
-#: ../mdkonline:127 ../mdkupdate:176
+#: ../mdkapplet:114
+#: ../mdkapplet:167
+#: ../mdkonline:87
+#: ../mdkonline:91
+#: ../mdkonline:127
+#: ../mdkupdate:176
 #, c-format
 msgid "Please wait"
 msgstr "Prosím čakajte"
 
-#: ../mdkapplet:114 ../mdkapplet:166 ../mdkapplet:167
+#: ../mdkapplet:114
+#: ../mdkapplet:166
+#: ../mdkapplet:167
 #, c-format
 msgid "Check updates"
 msgstr "Skontrolovať aktualizácie"
@@ -102,7 +103,8 @@ msgstr "Nastaviť sieť"
 msgid "Configure Now!"
 msgstr "Nastaviť teraz!"
 
-#: ../mdkapplet:152 ../mdkapplet:223
+#: ../mdkapplet:152
+#: ../mdkapplet:223
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Mandriva Linux aktualizačný applet"
@@ -127,7 +129,8 @@ msgstr "Nahliadnuť do logov"
 msgid "Status"
 msgstr "Stav"
 
-#: ../mdkapplet:176 ../mdkapplet:381
+#: ../mdkapplet:176
+#: ../mdkapplet:381
 #, c-format
 msgid "Close"
 msgstr "Zatvoriť"
@@ -152,7 +155,8 @@ msgstr "Dole"
 msgid "Last check: "
 msgstr "Posledná kontrola:"
 
-#: ../mdkapplet:206 ../mdkonline:120
+#: ../mdkapplet:206
+#: ../mdkonline:120
 #, c-format
 msgid "Machine name:"
 msgstr "Meno počítača:"
@@ -229,20 +233,13 @@ msgstr "Nesprávna akcia, hostiteľ alebo prihlasovacie údaje\n"
 
 #: ../mdkapplet:271
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"Niečo s nastavením vašej siete nie je v poriadku (skontrolujte pripojenie "
-"firewall alebo nastavenie proxy)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
+msgstr "Niečo s nastavením vašej siete nie je v poriadku (skontrolujte pripojenie firewall alebo nastavenie proxy)\n"
 
 #: ../mdkapplet:273
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Nastal problém pri pripájaní na server, prosím kontaktujte podporný tím"
+msgid "Problem occured while connecting to the server, please contact the support team"
+msgstr "Nastal problém pri pripájaní na server, prosím kontaktujte podporný tím"
 
 #: ../mdkapplet:275
 #, c-format
@@ -289,7 +286,8 @@ msgstr "Spustiť po štarte"
 msgid "Quit"
 msgstr "Koniec"
 
-#: ../mdkonline:59 ../mdkonline:99
+#: ../mdkonline:59
+#: ../mdkonline:99
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
@@ -350,20 +348,22 @@ msgstr "Vytváranie účtu a autorizácia"
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Zadajte vaše prihlasovacie meno, heslo a názov počítača:"
 
-#: ../mdkonline:118 ../mdkonline:158
+#: ../mdkonline:118
+#: ../mdkonline:158
 #, c-format
 msgid "Email address:"
 msgstr "E-mailová adresa:"
 
-#: ../mdkonline:119 ../mdkonline:159
+#: ../mdkonline:119
+#: ../mdkonline:159
 #, c-format
 msgid "Password:"
 msgstr "Heslo:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Meno tlačiarne môže obsahovať iba alfanumerické znaky"
+msgstr "Meno tlačiarne môže byť 1 až 40 alfanumerických znakov"
 
 #: ../mdkonline:127
 #, c-format
@@ -380,10 +380,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -395,10 +393,8 @@ msgstr ""
 "1) zoznam balíkov ktoré ste si nainštalovali\n"
 "2) vašu hardvérovú konfiguráciu\n"
 "\n"
-"Ak sa vám nepozdáva tento nápad alebo nevyžadujete používanie takýchto "
-"služieb\n"
-"kliknite na 'Zrušiť'. Kliknutím na 'Pokračovať' nám umožníte, aby sme vás "
-"informovali\n"
+"Ak sa vám nepozdáva tento nápad alebo nevyžadujete používanie takýchto služieb\n"
+"kliknite na 'Zrušiť'. Kliknutím na 'Pokračovať' nám umožníte, aby sme vás informovali\n"
 "o bezpečnostných aktualizáciách a užitočných iných vylepšeniach pomocou\n"
 "personalizovaného emailu.\n"
 "Môžete tiež zúžitkovať rôzne zľavy pre platené podporné služby na\n"
@@ -480,7 +476,8 @@ msgstr ""
 "Mandriva Online vám prináša možnosť ako vykonávať aktualizácie.\n"
 "Program môže bežať na vašom systéme a čakať na nové aktualizácie\n"
 
-#: ../mdkonline:184 ../mdkupdate:146
+#: ../mdkonline:184
+#: ../mdkupdate:146
 #, c-format
 msgid "Connection problem"
 msgstr "Problém s pripojením"
@@ -517,12 +514,8 @@ msgstr "Nastal problém so zasielaním nastavenia"
 
 #: ../mdkonline:226
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Nebolo možné pripojiť sa na stránku mandrivaonline: nesprávne meno/heslo "
-"alebo nastavenie firewallu"
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
+msgstr "Nebolo možné pripojiť sa na stránku mandrivaonline: nesprávne meno/heslo alebo nastavenie firewallu"
 
 #: ../mdkonline.pm:95
 #, c-format
@@ -558,7 +551,8 @@ msgstr "Chyba pri registrácii"
 msgid "Some parameters are missing"
 msgstr "Niektoré údaje chýbajú"
 
-#: ../mdkonline.pm:98 ../mdkonline.pm:104
+#: ../mdkonline.pm:98
+#: ../mdkonline.pm:104
 #, c-format
 msgid "Password error"
 msgstr "Chyba v hesle"
@@ -568,7 +562,9 @@ msgstr "Chyba v hesle"
 msgid "Wrong password"
 msgstr "Nesprávne heslo"
 
-#: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
+#: ../mdkonline.pm:99
+#: ../mdkonline.pm:100
+#: ../mdkonline.pm:101
 #, c-format
 msgid "Login error"
 msgstr "Chyba pri prihlásení"
@@ -606,7 +602,8 @@ msgstr "Chyba v obmedzení"
 msgid "Database access forbidden"
 msgstr "Prístup k databáze zakázaný"
 
-#: ../mdkonline.pm:103 ../mdkonline.pm:105
+#: ../mdkonline.pm:103
+#: ../mdkonline.pm:105
 #, c-format
 msgid "Service error"
 msgstr "Chyba služby"
@@ -659,8 +656,7 @@ msgstr "Web služby Mandriva nie sú dostupné"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -715,20 +711,18 @@ msgstr "Vyberte balíky ktoré chcete inštalovať a kliknite na Ok"
 msgid "Installing packages ...\n"
 msgstr "Inštalujú sa balíky...\n"
 
-#: ../mdkupdate:179 ../mdkupdate:264
+#: ../mdkupdate:179
+#: ../mdkupdate:264
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie je možné aktualizovať balíky z média update_source.\n"
 
 #~ msgid "Login:"
 #~ msgstr "Prihlasovacie meno:"
-
 #~ msgid "or"
 #~ msgstr "alebo"
-
 #~ msgid "wrong password:"
 #~ msgstr "nesprávne heslo:"
-
 #~ msgid ""
 #~ "Your login or password was wrong.\n"
 #~ " Either you'll have to type it again, or you'll need to create an account "
@@ -744,33 +738,25 @@ msgstr "Nie je možné aktualizovať balíky z média update_source.\n"
 #~ " V opačnom prípade sa vráťte na prvý krok v pripojení k Mandriva Online.\n"
 #~ " Buďte si vedomí toho, že je potrebné zadať meno počítača \n"
 #~ " (akceptované sú iba abecedné znaky)"
-
 #~ msgid "Mail contact:"
 #~ msgstr "Mail kontakt:"
-
 #~ msgid "Please provide a login"
 #~ msgstr "Zadajte prosím prihlasovanie meno"
-
 #~ msgid "Login and password should be less than 12 characters\n"
 #~ msgstr "Prihlasovacie meno a heslo by mali mať menej ako 12 znakov\n"
-
 #~ msgid "Special characters are not allowed\n"
 #~ msgstr "Špeciálne znaky nie sú povolené\n"
-
 #~ msgid "Please fill in all fields\n"
 #~ msgstr "Vyplňte prosím všetky položky\n"
-
 #~ msgid "Email not valid\n"
 #~ msgstr "Email adresa nie je platná\n"
-
 #~ msgid "Account already exists\n"
 #~ msgstr "Účet už existuje\n"
-
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "Problém s pripojením k serveru\n"
-
 #~ msgid ""
 #~ "Problem occurred while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr ""
 #~ "Nastal problém pri pripájaní na server, prosím kontaktujte podporný tím"
+
