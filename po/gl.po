@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline.gl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-02-22 22:25+0100\n"
+"PO-Revision-Date: 2005-09-06 13:45+0100\n"
 "Last-Translator: Leandro Regueiro <unho@gulo.org>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -307,17 +307,17 @@ msgstr "Desexo subscribirme"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Sr."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Sra."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Srta."
 
 #: ../mdkonline:87
 #, c-format
@@ -352,9 +352,9 @@ msgstr ""
 "Introduza o seu login e contrasinal de Mandriva Online e o nome do ordenador:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Enderezo de correo-e saínte"
+msgstr "Enderezo de correo-e:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -362,9 +362,9 @@ msgid "Password:"
 msgstr "Contrasinal:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Os puntos de montaxe só poden conter caracteres alfanuméricos"
+msgstr ""
 
 #: ../mdkonline:127
 #, c-format
@@ -410,19 +410,19 @@ msgid "Create a Mandriva Online Account"
 msgstr "Crear unha Conta en Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Verde"
+msgstr "Benvida:"
 
 #: ../mdkonline:156
 #, c-format
 msgid "First name:"
-msgstr "Primeiro nome:"
+msgstr "Nome:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Primeiro nome:"
+msgstr "Apelidos:"
 
 #: ../mdkonline:160
 #, c-format
@@ -439,9 +439,9 @@ msgstr ""
 "Por favor, inténteo de novo\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Complete tódolos campos\n"
+msgstr "Complete tódolos campos"
 
 #: ../mdkonline:167
 #, c-format
@@ -526,19 +526,19 @@ msgstr ""
 "contrasinal incorrecto ou mala configuración do encamiñador/cortalumes"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Alertas de Seguridade:"
+msgstr "Erro de seguridade"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Invocación insegura: Método dispoñible só a través de httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Erro da base de datos"
+msgstr "Erro na base de datos"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -546,21 +546,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Fallo no Servidor da Base de Datos\n"
+"Por favor, inténteo de novo máis tarde"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Tipo de Rexistro"
+msgstr "Erro no rexistro"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Parámetros da hora"
+msgstr "Faltan algúns parámetros"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Contrasinal para %s"
+msgstr "Erro no contrasinal"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -568,43 +570,47 @@ msgid "Wrong password"
 msgstr "Contrasinal incorrecto"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "erro descoñecido"
+msgstr "Erro de rexistro"
 
 #: ../mdkonline.pm:99
 #, fuzzy, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "O directorio de destion xa se está usando. Escolla outro."
+msgstr ""
+"O enderezo de correo-e que proporcionou xa se está usando\n"
+"Escolla outro\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "O email que proporcionou é incorrecto ou está prohibido"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "O campo do nome está baleiro, por favor escriba un nome"
+msgstr ""
+"O cadro do enderezo de correo-e está baleiro\n"
+"Proporcione un"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Descrición: "
+msgstr ""
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Servidor de Bases de Datos"
+msgstr "Acceso á base de datos prohibido"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Erro de escritura\n"
+msgstr "Erro do servicio"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -612,11 +618,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Os servicios web de Mandriva non están dispoñibles\n"
+"Por favor, inténteo de novo máis tarde"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Os contrasinais non coinciden."
+msgstr "Os contrasinais non coinciden"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -624,21 +632,23 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Estáse realizando o mantemento dos servicios web de Mandriva\n"
+"Por favor, inténteo de novo máis tarde"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Nome de Usuario:"
+msgstr "Usuario Prohibido"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Conta de usuario prohibida polos servicios web de Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Nome da conexión"
+msgstr "Erro de conexión"
 
 #: ../mdkonline.pm:107
 #, c-format
@@ -682,9 +692,9 @@ msgid "  --mnf          - launch mnf specific scripts.\n"
 msgstr "  --mnf          - executa scripts mnf específicos.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --auto         - versión en modo texto de MandrivaUpdate.\n"
+msgstr "  --noX          - versión en modo texto de Mandriva Update.\n"
 
 #: ../mdkupdate:78
 #, c-format
@@ -752,6 +762,9 @@ msgstr ""
 
 #~ msgid "Special characters are not allowed\n"
 #~ msgstr "Non se permite usa-los caracteres especiais\n"
+
+#~ msgid "Please fill in all fields\n"
+#~ msgstr "Complete tódolos campos\n"
 
 #~ msgid "Email not valid\n"
 #~ msgstr "Correo-e non válido\n"
