@@ -1,3 +1,4 @@
+# translation of nb.po to Norwegian Bokmål
 # translation of nb.po to Norsk Bokmål
 # translation of mdkonline-nb.po to Norwegian Bokmål
 # translation of Mandriva Online-nb.po to Norwegian Bokmål
@@ -8,19 +9,20 @@
 # Per Øyvind Karlsen <peroyvind@sintrax.net>, 2004.
 # Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
 # Per Øyvind Karlsen <peroyvind@linux-mandrake.com>, 2005.
+# Per Øyvind Karlsen <pkarlsen@mandriva.com>, 2005.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-02-14 18:49+0100\n"
-"Last-Translator: Per Øyvind Karlsen <peroyvind@linux-mandrake.com>\n"
-"Language-Team: Norsk Bokmål <cooker-i18n@linux-mandrake.com>\n"
+"PO-Revision-Date: 2005-09-21 23:01+0200\n"
+"Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
+"Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../mdkapplet:64
 #, c-format
@@ -49,8 +51,7 @@ msgstr "Nye oppdateringer er tilgjengelig for ditt system"
 #: ../mdkapplet:88
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
+msgstr "Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
 
 #: ../mdkapplet:94
 #, c-format
@@ -65,8 +66,7 @@ msgstr "Tjenesten er ikke aktivert. Vennligst klikk på \"Online-nettsted\""
 #: ../mdkapplet:106
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:111 ../mdkapplet:164
 #, c-format
@@ -315,17 +315,17 @@ msgstr "Jeg vil abonnere"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Herr"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Fru"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Frøken"
 
 #: ../mdkonline:87
 #, c-format
@@ -359,9 +359,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Tast inn ditt Mandriva Online-brukernavn, passord og maskinnavn:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IP-adresse:"
+msgstr "E-postadresse:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -369,9 +369,9 @@ msgid "Password:"
 msgstr "Passord:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Monteringspunkt burde innholde alfanumeriske tegn"
+msgstr "Maskinnavn må være et til førti alfanumeriske tegn"
 
 #: ../mdkonline:127
 #, c-format
@@ -418,9 +418,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Opprett en Mandriva Online-konto"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Grønn"
+msgstr "Hilsen:"
 
 #: ../mdkonline:156
 #, c-format
@@ -428,9 +428,9 @@ msgid "First name:"
 msgstr "Fornavn:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Vertsnavn:"
+msgstr "Etternavn:"
 
 #: ../mdkonline:160
 #, c-format
@@ -447,9 +447,9 @@ msgstr ""
 " Vennligst prøv på nytt\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Vennligst fyll ut alle felter\n"
+msgstr "Vennligst fyll ut alle felter"
 
 #: ../mdkonline:167
 #, c-format
@@ -534,17 +534,17 @@ msgstr ""
 "feil innstillinger i router/brannmur."
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Sikkerhetvarsler:"
+msgstr "Sikkerhetsfeil"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Usikker påkalling: Metode tilgjengelig kun igjennom httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Databasefeil"
 
@@ -554,21 +554,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Tjenerdatabase feilet\n"
+"Prøv igjen senere"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Registrasjonstype"
+msgstr "Registrasjonsfeil"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Det eksterne skrivernavnet mangler!"
+msgstr "Noen parametre mangler"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Passord for %s"
+msgstr "Passordfeil"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -576,43 +578,47 @@ msgid "Wrong password"
 msgstr "Feil passord"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "ukjent feil"
+msgstr "Innloggingsfeil"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Mål-katalogen er allerede i bruk, velg en annen."
+msgstr ""
+"E-postadressen du oppga er allerede i bruk\n"
+"Velg et annet\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "E-postadressen du oppga er ugyldig eller nektet"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Navnfelt er tomt, vennligst gi et navn"
+msgstr ""
+"E-postadresseboks er tom\n"
+"Vennligst oppgi en"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Lukket WEP"
+msgstr "Restriksjonsfeil"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Databasetjener"
+msgstr "Databasetilgang nektet"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Feil under skriving\n"
+msgstr "Tjenestefeil"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -620,11 +626,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva-nettjenester er for øyeblikket ikk tilgjengelige\n"
+"Prøv igjen senere"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Passord stemmer ikke overens."
+msgstr "Passord stemmer ikke overens"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -632,26 +640,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva-nettjenester er under vedlikehold\n"
+"Prøv igjen senere"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Brukernavn:"
+msgstr "Bruker nektet"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Brukerkonto nektet av Mandriva-nettjenester"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Tilkoblingsnavn"
+msgstr "Tilkoblingsfeil"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandriva-nettjenester kan ikke nås"
 
 #: ../mdkupdate:61
 #, c-format
@@ -720,56 +730,3 @@ msgstr "Installerer pakke...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunne ikke oppdatere pakker fra update_source-medium.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Brukernavn:"
-
-#~ msgid "or"
-#~ msgstr "eller"
-
-#~ msgid "wrong password:"
-#~ msgstr "feil passord:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Ditt brukernavn eller passord var feil.\n"
-#~ " Enten så må du skrive det på nytt, eller så må du opprette en konto på "
-#~ "Mandriva Online.\n"
-#~ " I det siste tilfellet, gå tilbake til det første steget for å koble til "
-#~ "Mandriva Online.\n"
-#~ " Vær oppmerksom på at du også må oppgi maskinnavn \n"
-#~ " (bare alfabetiske tegn er tillatt)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Epostkontakt:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Vennligst oppgi et brukernavn"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Brukernavn og passord bør være på mindre enn 12 tegn\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Spesialtegn er ikke tillatt\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Epost ikke gyldig\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Konto eksisterer allerede\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problem med å koble til tjener \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Et problem oppstod under tilkobling til tjeneren, vennligst kontakt "
-#~ "brukerstøtte"
