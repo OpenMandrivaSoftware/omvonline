@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-07-18 00:58+0200\n"
+"PO-Revision-Date: 2005-09-25 16:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: EUSKARA <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -48,8 +48,7 @@ msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
 #: ../mdkapplet:88
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
+msgstr "Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
 
 #: ../mdkapplet:94
 #, c-format
@@ -64,8 +63,7 @@ msgstr "Zerbitzua ez dago aktibatuta. Mesedez klikatu \"Lerroko Webgunea\""
 #: ../mdkapplet:106
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:111 ../mdkapplet:164
 #, c-format
@@ -314,17 +312,17 @@ msgstr "Harpidetu nahi dut"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Jn."
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "And."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Adño."
 
 #: ../mdkonline:87
 #, c-format
@@ -360,9 +358,9 @@ msgstr ""
 "izena:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IP helbidea:"
+msgstr "Post@ helbidea:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -370,9 +368,9 @@ msgid "Password:"
 msgstr "Pasahitza:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Muntatze-puntuek karaktere alfanumerikoak bakarrik izan ditzakete"
+msgstr "Makina izena 1 eta 40 alfazenbakizko karaktere artean izan behar ditu"
 
 #: ../mdkonline:127
 #, c-format
@@ -417,9 +415,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Sortu Mandriva Online kontua"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Berdea"
+msgstr "Ongietorri:"
 
 #: ../mdkonline:156
 #, c-format
@@ -427,9 +425,9 @@ msgid "First name:"
 msgstr "Izena:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Ostalari izena:"
+msgstr "Abizena:"
 
 #: ../mdkonline:160
 #, c-format
@@ -446,9 +444,9 @@ msgstr ""
 " Saiatu berriro\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Mesedez osatu eremu guztiak\n"
+msgstr "Mesedez bete eremu bakoitza"
 
 #: ../mdkonline:167
 #, c-format
@@ -532,19 +530,19 @@ msgstr ""
 "bideratzaile/suhesi ezarpen okerrak"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Segurtasun-abisuak:"
+msgstr "Segurtasun akatsa"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Eskaera ez segurua: Metodoa soilik httpS bitartez dago eskuragarri"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Datu-baseko errorea"
+msgstr "Datubase akatsa"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -552,21 +550,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Zerbitzariaren Datubaseak huts egin du\n"
+"Mesedez Saituta berriro Beranduago"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Erregistratze-mota"
+msgstr "Erregistratzerakoan akatsa"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Urruneko inprimagailu-izena falta da!"
+msgstr "Parametro batzuk falta dira"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Pasahitz zerbitzaria"
+msgstr "Pasahitz okerra"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -574,43 +574,47 @@ msgid "Wrong password"
 msgstr "Pasahitza ez da zuzena"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "akats ezezakuna"
+msgstr "Login akatsa"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Helburu-direktorioa dagoeneko erabiltzen ari da, aukeratu beste bat."
+msgstr ""
+"Hornitu duzun post@ dagoeneko erabilita dago\n"
+"Mesedez sartu beste bat\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Hornitu duzun post@ baliogabea da edo debekatuta dago"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Izen eremua hutsik dago, mesedez eman izen bat"
+msgstr ""
+"Post@ helbidearen laukia hutsik dago\n"
+"Mesedez bat eman"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP mugatua"
+msgstr "Mugaketa Akatsa"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Datu-baseen zerbitzaria"
+msgstr "Datubase sarbidea debekatuta"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Errorea idaztean\n"
+msgstr "Zerbitzu akatsa"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -618,11 +622,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva web zerbitzuak une honetan eskuraezin daude\n"
+"Mesedez Saiatu berriro Beranduago"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Passahitzak ez datoz bat."
+msgstr "Passahitzak ez datoz bat"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -630,26 +636,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva web zerbitzuak mantenupean daude\n"
+"Mesedez Saiatu berriro Beranduago"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Erabiltzaile Sarrera:"
+msgstr "Erabiltzailea Debekatuta"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Mandriva web zerbitzuek debekatutako erabiltzaile kontua"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Konexio-izena"
+msgstr "Lotura akatsa"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandriva web zerbitzuak eskuraezin"
 
 #: ../mdkupdate:61
 #, c-format
@@ -701,8 +709,7 @@ msgstr "Ez da %s fitxategia aurkitu. Aurrena exekutatu mdkonline morroia"
 #: ../mdkupdate:146
 #, c-format
 msgid "Mandriva Update could not contact the site, we will try again."
-msgstr ""
-"Mandriva Update-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
+msgstr "Mandriva Update-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
 
 #: ../mdkupdate:154
 #, c-format
@@ -719,51 +726,3 @@ msgstr "Paketeak instalatzen...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Erabiltzaile-izena:"
-
-#~ msgid "or"
-#~ msgstr "edo"
-
-#~ msgid "wrong password:"
-#~ msgstr "Pasahitz okerra:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Izena edo pasahitza ez da zuzena.\n"
-#~ " Edo berriro idatzi behar duzu, edo kontu bat sortu behar duzu Mandriva "
-#~ "Online-n.\n"
-#~ " Kontua sortzeko, itzuli lehen urratsera, Mandriva Online-rekin "
-#~ "konektatzeko.\n"
-#~ " Kontuan izan makina-izena ere idatzi behar duzula \n"
-#~ " (alfabeto-karaktereak bakarrik onartzen dira)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Posta-kontaktua:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Idatzi erabiltzaile-izena"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr ""
-#~ "Erregistro izena eta pasahitza 12 karaktere baino laburragoa behar "
-#~ "lukete\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Ez dira karaktere bereziak onartzen\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "PostaE baliogabea\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Kontua dagoeneko existitzen da\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Arazoa zerbitzariarekin konektatzean \n"
