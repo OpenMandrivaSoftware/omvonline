@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-08-09 14:47+0300\n"
+"PO-Revision-Date: 2005-09-26 16:21+0300\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
 "Language-Team: Russian <doc@lafox.net>\n"
 "MIME-Version: 1.0\n"
@@ -311,9 +311,9 @@ msgid "Mr."
 msgstr "Г-н"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Г-жа"
 
 #: ../mdkonline:68
 #, c-format
@@ -353,9 +353,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Введите свой логин Mandriva Online, пароль и имя машины:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Адрес прослушивания:"
+msgstr "Адрес e-mail:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -363,9 +363,9 @@ msgid "Password:"
 msgstr "Пароль:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Точки монтирования должны содержать только символы букв и цифр"
+msgstr "Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
 
 #: ../mdkonline:127
 #, c-format
@@ -411,19 +411,19 @@ msgid "Create a Mandriva Online Account"
 msgstr "Создать учетную запись Mandriva Online"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Зеленый"
+msgstr "Приветствие:"
 
 #: ../mdkonline:156
 #, c-format
 msgid "First name:"
-msgstr "Первое имя:"
+msgstr "Имя:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Первое имя:"
+msgstr "Фамилия:"
 
 #: ../mdkonline:160
 #, c-format
@@ -440,9 +440,9 @@ msgstr ""
 "Попробуйте еще раз\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Пожалуйста, заполните все поля\n"
+msgstr "Пожалуйста, заполните все поля"
 
 #: ../mdkonline:167
 #, c-format
@@ -528,9 +528,9 @@ msgstr ""
 "или неверная настройка маршрутизатора/файервола"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Предупреждения о безопасности:"
+msgstr "Ошибка безопасности"
 
 #: ../mdkonline.pm:95
 #, c-format
@@ -538,7 +538,7 @@ msgid "Unsecure invocation: Method available through httpS only"
 msgstr "Небезопасное обращение: метод доступен только через httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Ошибка базы данных"
 
@@ -552,19 +552,19 @@ msgstr ""
 "Пожалуйста, попробуйте ещё раз позднее"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Тип регистрации"
+msgstr "Ошибка регистрации"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Отсутствует имя удаленного принтера!"
+msgstr "Отсутствуют некоторые параметры"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Сервер паролей"
+msgstr "Ошибка пароля"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -572,17 +572,18 @@ msgid "Wrong password"
 msgstr "Неверный пароль"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "неизвестная ошибка"
+msgstr "Ошибка логина"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"Каталог назначения уже используется, пожалуйста, выберите другой каталог."
+"Указанны вами e-mail уже используется\n"
+"Пожалуйста, выберите другой\n"
 
 #: ../mdkonline.pm:100
 #, c-format
@@ -590,26 +591,28 @@ msgid "The email you provided is invalid or forbidden"
 msgstr "Указанный вами e-mail является неверным или запрещённым"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Поле Имя не заполнено, укажите имя, пожалуйста"
+msgstr ""
+"Поле e-mail не заполнено\n"
+"Пожалуйста, укажите e-mail"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Описание:"
+msgstr "Ошибка ограничения"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Сервер базы данных"
+msgstr "Доступ к базе данных запрещён"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Ошибка записи\n"
+msgstr "Ошибка службы"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -621,9 +624,9 @@ msgstr ""
 "Пожалуйста, попробуйте ещё раз позднее"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Пароли не совпадают."
+msgstr "Пароли не совпадают"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -635,9 +638,9 @@ msgstr ""
 "Пожалуйста, попробуйте ещё раз позднее"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Логин:"
+msgstr "Пользователь запрещён"
 
 #: ../mdkonline.pm:106
 #, c-format
@@ -645,9 +648,9 @@ msgid "User account forbidden by Mandriva web services"
 msgstr "Учётная запись пользователя запрещена веб-службами Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Название соединения"
+msgstr "Ошибка подключения"
 
 #: ../mdkonline.pm:107
 #, c-format
@@ -721,49 +724,3 @@ msgstr "Устанавливаются пакеты...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Невозможно обновить пакеты из источника update_source.\n"
 
-#~ msgid "Login:"
-#~ msgstr "Логин:"
-
-#~ msgid "or"
-#~ msgstr "или"
-
-#~ msgid "wrong password:"
-#~ msgstr "неверный пароль:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Ваш логин или пароль были неверны.\n"
-#~ "Или вы должны ввести его снова, или вам необходимо создать учетную запись "
-#~ "в Mandriva Online.\n"
-#~ " В последнем случае вернитесь назад к первому шагу для соединения с "
-#~ "Mandriva Online.\n"
-#~ " Обратите внимание, что вы также должны указать имя машины \n"
-#~ " (допускаются только буквенные символы)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Почтовый контакт:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Пожалуйста, укажите логин"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Логин и пароль должны быть не менее 12 символов\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Специальные символы не допускаются\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Неверный e-mail\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Учётная запись уже существует\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Проблема подключения к серверу \n"
