@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-lt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-08-11 18:02+0200\n"
+"PO-Revision-Date: 2005-09-26 16:38+0200\n"
 "Last-Translator: Arvydas Svirka <arvydas@arvis.lt>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -307,17 +307,17 @@ msgstr "Noriu užsiregistruoti"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Ponas"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "Mures"
+msgstr "Ponia"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Panelė"
 
 #: ../mdkonline:87
 #, c-format
@@ -354,9 +354,9 @@ msgstr ""
 "vardą:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "IP adresas"
+msgstr "El. pašto adresas:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -367,6 +367,7 @@ msgstr "Slaptažodis"
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr ""
+"Kompiuterio vardą turi sudaryti nuo 1 iki 40 raidinių-skaitinių simbolių"
 
 #: ../mdkonline:127
 #, c-format
@@ -413,9 +414,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Sukurti Mandriva Online abonentą"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Žalia"
+msgstr "Sveikinimas:"
 
 #: ../mdkonline:156
 #, c-format
@@ -423,9 +424,9 @@ msgid "First name:"
 msgstr "Vardas:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Vardas:"
+msgstr "Pavardė:"
 
 #: ../mdkonline:160
 #, c-format
@@ -442,9 +443,9 @@ msgstr ""
 " Pabandykite dar kartą\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Užpildykite visus laukelius\n"
+msgstr "Užpildykite visus laukelius"
 
 #: ../mdkonline:167
 #, c-format
@@ -528,17 +529,17 @@ msgstr ""
 "vardas/slaptažodis arba blogi maršrutizatoriaus/ugniasienės nustatymai"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Saugumas"
+msgstr "Saugumo klaida"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Nesaugus kreipimasis: metodas galimas tik httpS protokolu"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Duomenų bazės klaida"
 
@@ -548,21 +549,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Serverio duomenų bazės klaida\n"
+"Pabandykite vėliau"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Registracijos tipas"
+msgstr "Registracijos klaida"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Laiko parametrai"
+msgstr "Trūksta kai kurių parametrų"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "%s slaptažodis"
+msgstr "Slaptažodžio klaida"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -570,43 +573,47 @@ msgid "Wrong password"
 msgstr "Neteisingas slaptažodis"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "nežinoma klaida"
+msgstr "Prisijungimo klaida"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Paskirties katalogas yra naudojamas. Pasirinkite kitą."
+msgstr ""
+"Jūsų pateiktas el. pašto adresas jau naudojamas\n"
+"Įrašykite kitą\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Jūsų pateiktas el. pašto adresas yra neteisingas arba draudžiamas"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Vardo laukelis yra tuščias, įrašykite vardą"
+msgstr ""
+"El. pašto adreso laukelis yra tuščias\n"
+"Įrašykite adresą"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Aprašas: "
+msgstr "Apribojimo klaida"
 
 #: ../mdkonline.pm:102
 #, c-format
 msgid "Database access forbidden"
-msgstr ""
+msgstr "Draudžiamas priėjimas prie duomenų bazės"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Rašymo klaida\n"
+msgstr "Paslaugos klaida"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -614,11 +621,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva internetinės paslaugos šiuo metu neteikiamos\n"
+"Pabandykite vėliau"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Slaptažodžiai neatitinka"
+msgstr "Slaptažodžio neatitikimas"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -626,26 +635,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva internetinės paslaugos šiuo metu tvarkomos\n"
+"Pabandykite vėliau"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Vartotojo prisijungimas:"
+msgstr "Vartotojas draudžiamas"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Mandriva draudžia internetinių paslaugų vartotojo abonentą"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Jungties pavadinimas"
+msgstr "Prisijungimo klaida"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Mandriva internetinės paslaugos nepasiekiamos"
 
 #: ../mdkupdate:61
 #, c-format
