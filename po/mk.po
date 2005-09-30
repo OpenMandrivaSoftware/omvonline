@@ -9,13 +9,13 @@ msgstr ""
 "Project-Id-Version: mdkonline-mk\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-02-07 17:04+0100\n"
+"PO-Revision-Date: 2005-09-29 01:36+0000\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
-"Language-Team: Macedonian <en@li.org>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../mdkapplet:64
 #, c-format
@@ -358,9 +358,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Внесете го вашиот Mandriva Online логин, лозинка и име на машината:"
 
 #: ../mdkonline:118 ../mdkonline:158
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Појдовна адреса на поштата"
+msgstr "Адреса на е-пошта:"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -368,9 +368,9 @@ msgid "Password:"
 msgstr "Лозинка:"
 
 #: ../mdkonline:125
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Точките на монтирање треба да содржат само алфанумерички карактери"
+msgstr "Името на машината море да има од 1-40 алфанумерички карактери"
 
 #: ../mdkonline:127
 #, c-format
@@ -417,9 +417,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Создади Mandriva Online сметка"
 
 #: ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Зелена"
+msgstr "Поздрав:"
 
 #: ../mdkonline:156
 #, c-format
@@ -427,9 +427,9 @@ msgid "First name:"
 msgstr "Име:"
 
 #: ../mdkonline:157
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Име:"
+msgstr "Презиме:"
 
 #: ../mdkonline:160
 #, c-format
@@ -446,9 +446,9 @@ msgstr ""
 " Ве молиме обидете се повторно\n"
 
 #: ../mdkonline:167
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Ве молиме пополнете ги сите полиња\n"
+msgstr "Ве молиме пополнете ги сите полиња"
 
 #: ../mdkonline:167
 #, c-format
@@ -533,17 +533,17 @@ msgstr ""
 "лозинка или лоши подесувања на рутерот/огнениот ѕид"
 
 #: ../mdkonline.pm:95
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Сигурност"
+msgstr "Безбедносна грешка"
 
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr ""
+msgstr "Несигурно побарување: Методот е достапен само преку httpS"
 
 #: ../mdkonline.pm:96
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Грешка на базата на податоци"
 
@@ -553,21 +553,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Серверот за бази на податоци е недостапен\n"
+"Ве молиме обидете се подоцна"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Тип на регистрација"
+msgstr "Грешка при регистрација"
 
 #: ../mdkonline.pm:97
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Недостига име на оддалечен принтер!"
+msgstr "Некои параметри недостигаат"
 
 #: ../mdkonline.pm:98 ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Лозинка за %s"
+msgstr "Грешка во лозинката"
 
 #: ../mdkonline.pm:98
 #, c-format
@@ -575,44 +577,47 @@ msgid "Wrong password"
 msgstr "Погрешна лозинка"
 
 #: ../mdkonline.pm:99 ../mdkonline.pm:100 ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "непозната грешка"
+msgstr "Грешка при најавување"
 
 #: ../mdkonline.pm:99
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"Дестинациониот директориум е веќе во употреба. Ве молиме изберете друг."
+"Е-поштата која ја внесовте е веќе во употреба\n"
+"Ве молиме внесете друга\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Е-поштата која ја внесовте е невалидна или забранета"
 
 #: ../mdkonline.pm:101
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Полето за име е празно. Ве молиме внесете име"
+msgstr ""
+"Сандачето на е-поштата е празно\n"
+"Ве молиме внесете едно"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Опис: "
+msgstr "Грешка при огранучување"
 
 #: ../mdkonline.pm:102
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Сервер за Бази на Податоци"
+msgstr "Пристапот кон базата на податоци е забранет"
 
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Грешка при запишување\n"
+msgstr "Грешка во сервисот"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -620,11 +625,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Веб сервисите на Mandriva тековно се недостапни\n"
+"Ве молиме обидете се подоцна"
 
 #: ../mdkonline.pm:104
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Лозинките не се совпаѓаат."
+msgstr "Лозинките не се совпаѓаат"
 
 #: ../mdkonline.pm:105
 #, c-format
@@ -632,26 +639,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Веб сервисите на Mandriva се сервисираат\n"
+"Ве молиме обидете се подоцна"
 
 #: ../mdkonline.pm:106
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Најава на корисник:"
+msgstr "Корисникот е забранет"
 
 #: ../mdkonline.pm:106
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Корисничката сметка е забранета од веб сервисите на Mandriva"
 
 #: ../mdkonline.pm:107
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Име на врската"
+msgstr "Грешка при поврзување"
 
 #: ../mdkonline.pm:107
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Веб сервисите на Mandriva се недостапни"
 
 #: ../mdkupdate:61
 #, c-format
@@ -690,9 +699,9 @@ msgid "  --mnf          - launch mnf specific scripts.\n"
 msgstr "  --mnf          - вклучува одредени mnf скрипти.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --noX          - MandrivaUpdate нова верзија.\n"
+msgstr "  --noX          - верзија на Mandriva Update во текстуален режим.\n"
 
 #: ../mdkupdate:78
 #, c-format
@@ -719,56 +728,3 @@ msgstr "Инсталирање на пакетите...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не можам да ги ажурирам пакетите од медиумот update_source.\n"
-
-#~ msgid "Login:"
-#~ msgstr "Логин:"
-
-#~ msgid "or"
-#~ msgstr "или"
-
-#~ msgid "wrong password:"
-#~ msgstr "погрешна лозинка:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Вашиот логин или лозиника се погрешни.\n"
-#~ " Треба да ѓи внесете повторно, или ќе треба да направите сметка на "
-#~ "Mandriva Online.\n"
-#~ " Подоцна, вратете се на првиот чекор и поврзете се со Mandriva Online.\n"
-#~ " Внимавајте, истотака треба да внесете и име на машината \n"
-#~ " (дозволени се само алфабетски карактери)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Пошта за контакт:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Ве молиме внесете логин"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Корисничкото име и лозинката треба да се помалку од 12 карактери\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Не се дозволени специјални карактери\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Е-пошта адресата не е валидна\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Сметката веќе постои\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Проблем при поврзување со серверот \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Се појави проблем при поврзување со серверот. Ве молиме контактирајте со "
-#~ "тимот за поддршка"
