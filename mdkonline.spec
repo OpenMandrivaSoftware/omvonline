@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 1mdk
+%define release 2mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,11 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Tue Oct  4 2005 Daouda LO <daouda@mandrakesoft.com> 1.3-2mdk
+- Major update for new SOAP based architecture (only account creation and 
+  authentication 
+- po updates
+
 * Tue Sep 20 2005 Daouda LO <daouda@mandriva.com> 1.3-1mdk
 - fix missing option when calling terminal based mdkonline
 - translations update
