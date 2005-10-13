@@ -103,11 +103,9 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
-			      if ($release <= 10.1) {
-				  system "/usr/bin/MandrivaUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
-			      } else {
-				  system "/usr/bin/MandrivaUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
-			      }
+			      my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
+			      my $is_no_media_update =  $release <= 10.1 ? "--no-media-update" : '';
+			      system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			  } elsif ($opt eq '--noX') {
 			      my $in = interactive->vnew;
 			      my $pkgs = ask_pkgs($in);
