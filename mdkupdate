@@ -83,7 +83,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
     my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
     my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent');
     my $contents = $resp->content;
-    #print "CONTENTS = $contents \n";
+    print "CONTENTS = $contents \n";
     -e $logfile and system "/bin/rm", $logfile;
     if ($resp->is_success) {
 	if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 }
@@ -104,9 +104,9 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  -f $currentrpm or rpm_qa($currentrpm);
 			  if ($opt eq '--applet') {
 			      if ($release <= 10.1) {
-				  system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+				  system "/usr/bin/MandrivaUpdate", "--no-confirmation", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			      } else {
-				  system "/usr/bin/MandrakeUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+				  system "/usr/bin/MandrivaUpdate", "--no-confirmation", "--no-media-update", "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
 			      }
 			  } elsif ($opt eq '--noX') {
 			      my $in = interactive->vnew;
