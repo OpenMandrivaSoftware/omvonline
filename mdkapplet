@@ -40,7 +40,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
-my $online_site = "https://www.mandrivaonline.com/";
+my $online_site = "https://www.mandrivaonline.com";
 my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
 my ($need_update, $raisedwindow, $isAvailable, $debug) = (0, 0, 0, 0);
 
