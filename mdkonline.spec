@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 3mdk
+%define release 4mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-4mdk
+- use strict 
+- call mdkonline::get_release method before computing
+
 * Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-3mdk
 - launch MandrivaUpdate instead of MandrakeUpdate for distro 
   newer than LE2005 (name change policy) #19211
