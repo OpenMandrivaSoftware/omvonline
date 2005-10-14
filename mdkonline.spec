@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-4mdk
-- use strict 
+- use strict pragma
 - call mdkonline::get_release method before computing
 
 * Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-3mdk
