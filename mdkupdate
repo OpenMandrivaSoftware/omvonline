@@ -20,6 +20,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
 ################################################################################
 
+use strict;
 use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
@@ -102,6 +103,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  $noscheduled = join(',', @{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
 			  #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
 			  -f $currentrpm or rpm_qa($currentrpm);
+			  my ($release) = mdkonline::get_release();
 			  if ($opt eq '--applet') {
 			      my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
 			      my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
