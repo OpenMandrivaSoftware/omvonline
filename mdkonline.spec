@@ -114,9 +114,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-4mdk
+* Mon Oct 17 2005 Daouda LO <daouda@mandriva.com> 1.3-4mdk
 - use strict pragma
-- call mdkonline::get_release method before computing
+- call mdkonline::get_release method before computing updates
 
 * Fri Oct 14 2005 Daouda LO <daouda@mandriva.com> 1.3-3mdk
 - launch MandrivaUpdate instead of MandrakeUpdate for distro 
