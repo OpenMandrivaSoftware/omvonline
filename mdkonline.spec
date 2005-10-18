@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 4mdk
+%define release 5mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Tue Oct 18 2005 Daouda LO <daouda@mandriva.com> 1.3-5mdk
+- extend the regex to match machine with underscore in name
+
 * Mon Oct 17 2005 Daouda LO <daouda@mandriva.com> 1.3-4mdk
 - use strict pragma
 - call mdkonline::get_release method before computing updates
