@@ -40,7 +40,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
-my $online_site = "https://www.mandrivaonline.com";
+my $online_site = "https://www.mandrivaonline.com/";
 my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
 my ($need_update, $raisedwindow, $isAvailable, $debug) = (0, 0, 0, 0);
 
@@ -223,7 +223,7 @@ sub installUpdates {
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
 sub silentCheck {
-    my $link = $online_site . "/online3_RemoteAction.php" . '?action=UpdateList';
+    my $link = $online_site . "online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
     my ($u, $ct);
     logIt(N("Computing new updates...\n"));
