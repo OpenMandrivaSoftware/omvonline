@@ -1,6 +1,6 @@
 %define version 1.3
 %define name mdkonline
-%define release 6mdk
+%define release 7mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -66,8 +66,8 @@ cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
 needs="x11" \
 icon="mdkonline.png" \
 section="Configuration/Other" \
-title="Discover custom services" \
-longtitle="Wizard tool for online registered user" \
+title="Mandriva Online" \
+longtitle="Wizard for update service subscription" \
 command="/usr/sbin/mdkonline"
 EOF
 
@@ -114,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Wed Nov 16 2005 Daouda LO <daouda@mandriva.com> 1.3-7mdk
+- update TODO
+- Change fuzzy menu title
+
 * Fri Oct 21 2005 Daouda LO <daouda@mandriva.com> 1.3-6mdk
 - add trailing '/' for online help
 
