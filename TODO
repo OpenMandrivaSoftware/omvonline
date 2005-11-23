@@ -2,6 +2,13 @@ $Id$
 Things to do on mdkonline
 -------------------------------------------------------------------------------
 
+ * mdkonline, mdkapplet
+     * probe remote web services before asking anything to user,
+       and display explicit warning with most frequent problem solutions
+       instead of just showing a network connectivity problem alert
+
+ * use popen() to call blocking/long processes?
+
  * in the last mdkonline wizard page, put a prechecked option box "launch
    mdkapplet if not running yet": if checked, mdkonline should check if
    mdkapplet is running, and if not, launch it (pb, with which user?)
