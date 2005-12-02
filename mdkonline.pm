@@ -90,7 +90,7 @@ sub get_site {
 sub create_authenticate_account {
     my $type = shift;
     my @info = @_;
-    my ($response, $code);
+    my ($response, $code, $ret);
     my $hreturn = {
                    1  => [ N("Security error"), N("Unsecure invocation: Method available through httpS only") ],                  
                    2  => [ N("Database error"), N("Server Database failed\nPlease Try again Later") ],
@@ -108,26 +108,18 @@ sub create_authenticate_account {
                   };  
     foreach my $num ([9, 8], [21, 20]) { $hreturn->{$num->[0]} = $hreturn->{$num->[1]} };
     my $action = {
-		  create => sub {
-		      eval { $response = soap_create_account(@info) };
-		      if ($response->{status}) {
-			  return 'OK';
-		      } else {
-			  $code = $response->{code} || '99';
-			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
-		      }
-		  },
-		  authenticate => sub {
-		      eval { $response = soap_authenticate_user(@info) };
-		      if ($response->{status}) {
-			  return 'OK'
-		      } else {
-			  $code = $response->{code} || '99';
-			  return $hreturn->{$code}->[0] . ' : ' . $hreturn->{$code}->[1];
-		      }
-		  }
+		  create => sub { eval { $response = soap_create_account(@info) }; },
+		  authenticate => sub { eval { $response = soap_authenticate_user(@info) }; }
 		 };
     $action->{$type}->();
+    $ret = check_server_response($response, $hreturn);
+    $ret;
+}
+
+sub check_server_response {
+    my ($response, $h) = @_;
+    my $code = $response->{code} || '99';
+    return $response->{status} ? 'OK' : $h->{$code}->[0] . ' : ' . $h->{$code}->[1];
 }
 
 sub check_valid_email {
