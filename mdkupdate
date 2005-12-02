@@ -107,7 +107,7 @@ if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
 			  if ($opt eq '--applet') {
 			      my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
 			      my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
-			      system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source", "--pkg-sel=$scheduled", "--pkg-nosel=$noscheduled";
+			      system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source";
 			  } elsif ($opt eq '--noX') {
 			      my $in = interactive->vnew;
 			      my $pkgs = ask_pkgs($in);
