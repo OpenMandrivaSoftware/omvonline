@@ -14,12 +14,13 @@ use HTTP::Request;
 use SOAP::Lite;
 
 #For debugging
-#use Data::Dumper;
+use Data::Dumper;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
-my $uri = 'https://my.mandriva.com/soap/';
-my $serviceProxy = 'https://my.mandriva.com/soap/';
-my $onlineProxy = 'https://onine.mandriva.com/soap';
+#my $uri          = 'https://localhost/~romain/online3/htdocs/soap';
+my $uri          = 'https://online.mandriva.com/soap';
+my $serviceProxy = $uri;
+my $onlineProxy  = $uri;
 
 my $useragent = set_ua('mdkonline');
 
@@ -28,6 +29,58 @@ sub is_proxy () {
 }
 
 my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) : SOAP::Lite->uri($uri)->proxy($serviceProxy, agent => $useragent);
+
+#
+sub upgrade_to_v3 {
+	my $oldconffile = '/root/.MdkOnline/mdkupdate';
+	if( ( -e $oldconffile ) && ( -s $oldconffile ) ) {
+		my %old = getVarsFromSh('/root/.MdkOnline/mdkupdate');
+		if( $old{LOGIN} ne '' && $old{PASS} ne '' && $old{MACHINE} ne '' ) {
+			my $res = mdkonline::soap_recover_service($old{LOGIN},'{md5}'.$old{PASS},$old{MACHINE},$old{COUNTRY});
+			print Dumper($res);
+			print 'code is: ' . $res->{code} . "\n";
+			print Dumper($res->{data});
+			if( $res->{code} eq '0' || $res->{code} == 0 ) {
+				#logsay "succeeded to register anew to service; configuring local host.";
+				my $dateset = chomp_(`LC_ALL=C date`);
+				my $auto = 'FALSE';
+				my $mobile = 'FALSE';
+				my $country = 'FR';
+				my $service = 'https://online.mandriva.com/service';
+				# TODO set config file differently: set vars in a hash
+				# and setVarsInSh() to save it (nicer in order to handle optional vars)
+    			output '/etc/sysconfig/mdkonline',
+					qq(# automatically generated file. Please don't edit.
+# use mdvonline_wizard instead.
+VERSION=3
+DATESET=$dateset
+SERVICE=$service
+CUSTOMER_ID=$res->{data}->{customer_id}
+HOST_ID=$res->{data}->{host_id}
+HOST_KEY=$res->{data}->{host_key}
+HOST_NAME=$res->{data}->{host_name}
+HOST_GROUPS=
+COUNTRY=$country
+MOBILE=$mobile
+AUTO=$auto
+);
+				return 1;
+			}
+			else {
+				#logwarn "failed to recover service; answer was: " . $res->{message} . "(" . $res->{code} . ")";	
+			}
+		}
+		else {
+			# missing info in config file; invalid;
+			#logwarn "failed to recover service; config file is missing some info.";
+		}
+	}
+	else {
+		# no config file found;
+		#logwarn "no config file has been found (" . $oldconffile . ")";
+	}
+	return 0;
+};
 
 sub md5file {
     require Digest::MD5;
@@ -62,13 +115,23 @@ sub get_distro_type {
 }
 
 sub soap_create_account {
-    my $register = $s->registerUserFromWizard(@_)->result();
+    my $register = $s->registerUser(@_)->result();
     $register;
 }
 
 sub soap_authenticate_user {
     my $auth = $s->authenticateUser(@_)->result(); 
     $auth
+}
+
+sub soap_recover_service {
+	my $auth = $s->recoverHostFromV2(@_)->result();
+	$auth;
+}
+
+sub soap_get_task {
+	my $auth = $s->getTask(@_)->result();
+	$auth;
 }
 
 sub get_from_URL {
