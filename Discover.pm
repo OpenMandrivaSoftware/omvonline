@@ -58,14 +58,6 @@ sub init
 };
 
 #
-sub trim {
-	my $s = shift;
-	$s =~ s/^\s+//;
-	$s =~ s/\s+$//;
-	return $s;
-};
-
-#
 sub commify_series {
     (@_ == 0) ? '' :
     (@_ == 1) ? $_[0] :
@@ -84,17 +76,10 @@ sub search {
 	my @domains     = ();
 	my @services    = ();
 	
-	if( ! defined $resolv ) {
-		logerr "No config found from /etc/resolv.conf .";
-		return 0;	
-	}
+	! defined $resolv and logerr "No config found from /etc/resolv.conf.", return 0;
 	
-	if( defined $resolv->{domain} ) {
-		@domains = $resolv->{domain};
-	}
-	if( defined $resolv->{search} ) {
-		push( @domains, @{$resolv->{search}} );
-	}
+	defined $resolv->{domain} and @domains = $resolv->{domain};
+	defined $resolv->{search} and push( @domains, @{$resolv->{search}} );
 	
 	@domains = uniq(@domains);
 	for my $domain ( @domains ) {
@@ -107,15 +92,13 @@ sub search {
 	@{$resolv->{nameserver}} = qw(localhost);
 	
 	# will try each nameserver listed
-	for my $ns ( @{$resolv->{nameserver}} ) {
+	foreach my $ns ( @{$resolv->{nameserver}} ) {
 		# for each possible service/domain
-		for my $serv ( @services ) {
+		foreach my $serv ( @services ) {
 			logsay "trying ns $ns, service $serv";
 			my $ret = $this->find_service( $ns, $serv );
-			if( $ret ) {
-				logsay "search is over: a service has been found.";
-				return $ret;
-			}
+			
+			$ret and logsay "service found", return $ret;
 		}
 	}
 	logwarn "no dns-declared service found";
@@ -125,6 +108,7 @@ sub search {
 # NOTE. here it is suppposed that for a given Service instance (PTR),
 # there is only _one_ SRV record and _one_ TXT record matches.
 # If there are more, no particular behaviour is expected as for now.
+# NOTE. replace this code with a wrapper around dig?
 sub find_service {
 	my ($this, $nameserver, $service) = @_;
 	my $return;
@@ -149,10 +133,9 @@ sub find_service {
 	if( $query ) {
 		# TODO better parsing of the struct
 		my $rr = $query->{answer}[0];
-		if( ! defined $rr ) {
-			logerr "not expected format found in PTR record.";
-			return 0;	
-		}
+		
+		! defined $rr and logerr "not expected format found in PTR record.", return 0;
+		
 		$instanceName = $rr->ptrdname;
 		$instanceName =~ s/\\032/ /g;
 		logsay "found '$instanceName'";
@@ -186,10 +169,8 @@ sub find_service {
 		my $rr = $query->{answer}[0];
 		logsay "yes: " . join(', ', $rr->char_str_list() );
 		$return->{config} = $this->parse_txt_config( $rr->char_str_list() );
-		if( ! defined $return->{config} ) {
-			logwarn "But no config found.";
-			return 0;	
-		}
+		
+		! defined $return->{config} and logwarn "But no config found.", return 0;
 	}
 	else {
 		logwarn "No matching TXT record found.";
@@ -199,31 +180,39 @@ sub find_service {
 	return $return;
 };
 
-# translate the txt records into a properly formatted hash.
+# translate the txt record* into a properly formatted hash.
+# 
+# * consists of a list of 'key=value' strings; handled strings are:
+# txtvers=n (integer)
+# conf=a,b (string: name of the config,integer: set time)
+# update=p (string: path to update server)
+# service=s (string: path to service resource)
+# user=s (string: default user name to use)
+# pass=s (string: default password to use)
+# auto=b (TRUE|FALSE: whether to act automatically or not)
+# mobile=b (TRUE|FALSE: whether to act as a mobile agent or not)
+#
 sub parse_txt_config {
 	my ($this, @config) = @_;
 	my $retconfig;
 	
-	for my $line ( @config ) {
-		my @line = split('=', $line);
-		my $key = $line[0];
-		shift(@line);
+	foreach my $line ( @config ) {
+		# TODO match these with a regexp
+		my @line  = split('=', $line);
+		my $key   = shift(@line);
 		my $value = join('=', @line);
-		#print "key: $key\tvalue: $value\n";	
 		switch( $key ) {
 			case 'txtvers' { $retconfig->{txtvers} = $value; }
 			case 'conf' {
 				my @co = split(',', $value);
 				$retconfig->{conf} = { 'name' => $co[0], 'time' => $co[1]	};
 			}
-			case 'update' {
-				my @up = split(',', $value);
-				$retconfig->{update} = { 'type' => $up[0], 'path' => $up[1] };
-			}
+			case 'update' { $retconfig->{update} = $value; }
 			case 'service' { $retconfig->{service} = $value; }
 			case 'user' { $retconfig->{user} = $value; }
 			case 'pass' { $retconfig->{pass} = $value; }
 			case 'auto' { $retconfig->{auto} = 1; }
+			case 'mobile' { $retconfig->{mobile} = 1; }
 			else {}
 		}
 	}

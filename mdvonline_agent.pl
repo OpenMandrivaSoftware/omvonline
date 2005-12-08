@@ -27,7 +27,9 @@ use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use mdkonline;
+use Switch;
 use Data::Dumper;
+use Error qw(:try);
 
 # DNS service discovery
 use Discover;
@@ -45,65 +47,32 @@ logconfig(
     -priority => [ -display => '[$priority]' ],
 );
 
-# TODO set this in mdkonline.pm ?
-my $conffile = '/etc/sysconfig/mdkonline';
-my $service  = 'https://localhost/~romain/online3/htdocs/service';
+logsay "==================";
+mdkonline::is_running('mdvonline_agent') and die "mdvonline_agent already running\n";
+require_root_capability();
 
-# script starts here
-mdkonline::is_running('mdvonline_agent')
-	and die "mdvonline_agent already running\n";
+my %conf = mdkonline::get_configuration();
+print Dumper(%conf);
 
-#require_root_capability();
+! defined %conf and logwarn "no configuration set", exit 0;
 
-my %conf;
-my $ret = 0;
+logsay "checking for tasks";
+print Dumper(%conf);
+my $answer = mdkonline::soap_get_task( $conf{HOST_ID}, $conf{HOST_KEY} );
 
-# 1. check configuration (local) or set from dns if any
-if( ( -e $conffile ) && ( -s $conffile ) ) {
-	%conf = getVarsFromSh($conffile);
+print Dumper($answer);
 
-	if( defined $conf{MACHINE} && ! defined $conf{VERSION} ) { #|| $conf{VERSION} lt 3 ) {
-		logsay "old configuration detected: trying to migrate to new scheme";
-		$ret = mdkonline::upgrade_to_v3();
-		if( $ret eq 1 ) { logsay "succeeded"; }
-		else { logsay "failed"; }
+if( $answer->{code} eq 0 ) {
+	if( $answer->{data}->{command} eq 'none' ) {
+		logsay "nothing to do";
 	}
 	else {
-		if( defined $conf{MOBILE} && $conf{MOBILE} eq 'TRUE' ) {
-			# TODO check dns service for a specific update server
-			# if there is one, it may supersedes default conf update server
-			# or the one provided by the Online server?
-		}
-		$ret = 1;
+		logsay "got something";
+		my $res = mdkonline::run_and_return_task( $answer->{data} );
 	}
+	exit 1;
 }
 else {
-	logsay "no configuration file found";
-	logsay "starting dns service discovery";
-	my $sd          = new Discover;
-	my $serviceinfo = $sd->search();
-	if ( $serviceinfo ) {
-		logsay "found service with info";
-		print Dumper($serviceinfo);		
-		# TODO check service certificate
-		# TODO register to service
-		# TODO set config file
-		$ret = 0;
-	}
-	else {
-		#print Dumper($sd);
-		logsay "no service found";
-		$ret = 0;
-	}	
-	$ret = 0;
+	logwarn "something went wrong " . $answer->{message} . " (".$answer->{code}.")";
+	exit 0;
 }
-
-if( $ret eq 1 ) {
-	# 2. now check and run task
-	print "checking for somethign to do.\n";
-	my $task = mdkonline::soap_get_task( $conf{HOST_ID}, $conf{HOST_KEY} );
-	print Dumper($task);
-}
-
-logsay "done";
-$ret;

@@ -12,13 +12,16 @@ use Net::HTTPS;
 use HTTP::Request::Common;
 use HTTP::Request;
 use SOAP::Lite;
+use Switch;
+use Log::Agent; # use settings from main file
+use Error qw(:try);
 
 #For debugging
 use Data::Dumper;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
-#my $uri          = 'https://localhost/~romain/online3/htdocs/soap';
-my $uri          = 'https://online.mandriva.com/soap';
+my $uri          = 'https://localhost/~romain/online3/htdocs/soap';
+#my $uri          = 'https://online.mandriva.com/soap';
 my $serviceProxy = $uri;
 my $onlineProxy  = $uri;
 
@@ -31,43 +34,121 @@ sub is_proxy () {
 my $s = is_proxy() ? SOAP::Lite->uri($uri)->proxy($serviceProxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) : SOAP::Lite->uri($uri)->proxy($serviceProxy, agent => $useragent);
 
 #
+sub get_configuration {
+	my $in = shift;
+	my $config_file = '/etc/sysconfig/mdkonline';
+	my %conf;
+	my $ret;
+
+	logsay "checking configuration";	
+	try {
+		# check local config file	
+		if( ! ( -e $config_file ) || ! ( -s $config_file ) ) {
+			logsay "checking dns service";
+			%conf = get_conf_from_dns();
+			print "from dns:\n",Dumper(%conf),"\n";
+			if( %conf ) {
+				
+			}
+			else { throw( ) }
+			if( %conf eq undef ) {
+				logwarn "found none";
+			} else {
+				logsay "found one";
+			}
+		}
+		else {
+			# found one
+			logsay "found $config_file";
+			%conf = getVarsFromSh($config_file);
+			if( defined $conf{MACHINE} && ! defined $conf{VERSION} ) {
+				# old (v2) config
+				logsay "old (v2) conf found; trying to upgrade to v3";
+				$ret = upgrade_to_v3();
+				print "\n", $ret, "\n";
+				if( $ret eq 1 ) {
+					logsay "succeeded; reloading configuration";
+					# reload config
+					%conf = getVarsFromSh($config_file);
+				}
+				else {
+					logsay "failed. stop.";
+					# TODO what do we do now? email warning? support? forget it?
+					%conf = undef;
+				}
+			}
+		}
+	}
+	catch Error with {
+		my $ex = shift;
+		print Dumper($ex);
+	}
+	finally {
+		
+	};
+	
+	# now, a valid working config file is loaded
+	if( defined $conf{MOBILE} && $conf{MOBILE} eq 'TRUE' ) {
+		logsay "checking for mobile options";
+		# client is mobile: we check for any dns-declared local option
+		# (like, a local update mirror)
+		# TODO set precedence rules. user may not want/have the right to
+		# follow local network rules (security of the update process).
+		# depends on host config, and on server commands.
+		my $sd   = new Discovery;
+		my $info = $sd->search();
+		if( $info ) {
+			# TODO
+		}
+		else {} # nothing to do
+	}
+	%conf;
+}
+
+# update current configuration values with those passed as argument
+sub save_config {
+	
+	my $params = shift;
+	my %current = getVarsFromSh('/etc/sysconfig/mdkonline');
+	
+	print Dumper($params);
+	
+	defined $params->{customer_id} and $current{CUSTOMER_ID} = $params->{customer_id};
+	defined $params->{host_id} and $current{HOST_ID} = $params->{host_id};
+	defined $params->{host_key} and $current{HOST_KEY} = $params->{host_key};
+	defined $params->{host_name} and $current{HOST_NAME} = $params->{host_name};
+	! defined $current{VERSION} and $current{VERSION} = 3;
+	defined $params->{country} and $current{COUNTRY} = $params->{country};
+	defined $params->{mobile} and $current{MOBILE} = $params->{mobile};
+	defined $params->{auto} and $current{AUTO} = $params->{auto};
+	$current{DATE_SET} = chomp_(`LC_ALL=C date`);
+
+	print Dumper(%current);
+	print setVarsInSh( '/etc/sysconfig/mdkonline', %current );
+	%current;
+};
+
+#
 sub upgrade_to_v3 {
 	my $oldconffile = '/root/.MdkOnline/mdkupdate';
 	if( ( -e $oldconffile ) && ( -s $oldconffile ) ) {
 		my %old = getVarsFromSh('/root/.MdkOnline/mdkupdate');
 		if( $old{LOGIN} ne '' && $old{PASS} ne '' && $old{MACHINE} ne '' ) {
 			my $res = mdkonline::soap_recover_service($old{LOGIN},'{md5}'.$old{PASS},$old{MACHINE},$old{COUNTRY});
-			print Dumper($res);
-			print 'code is: ' . $res->{code} . "\n";
-			print Dumper($res->{data});
 			if( $res->{code} eq '0' || $res->{code} == 0 ) {
 				#logsay "succeeded to register anew to service; configuring local host.";
-				my $dateset = chomp_(`LC_ALL=C date`);
-				my $auto = 'FALSE';
-				my $mobile = 'FALSE';
-				my $country = 'FR';
-				my $service = 'https://online.mandriva.com/service';
-				# TODO set config file differently: set vars in a hash
-				# and setVarsInSh() to save it (nicer in order to handle optional vars)
-    			output '/etc/sysconfig/mdkonline',
-					qq(# automatically generated file. Please don't edit.
-# use mdvonline_wizard instead.
-VERSION=3
-DATESET=$dateset
-SERVICE=$service
-CUSTOMER_ID=$res->{data}->{customer_id}
-HOST_ID=$res->{data}->{host_id}
-HOST_KEY=$res->{data}->{host_key}
-HOST_NAME=$res->{data}->{host_name}
-HOST_GROUPS=
-COUNTRY=$country
-MOBILE=$mobile
-AUTO=$auto
-);
+				my $cd = $res->{data};
+				$cd->{auto}    = 'FALSE';
+				$cd->{mobile}  = 'FALSE';
+				$cd->{country} = '';
+				$cd->{service} = 'https://online.mandriva.com/service';
+				
+				mdkonline::save_config( $res->{data} );
 				return 1;
 			}
 			else {
-				#logwarn "failed to recover service; answer was: " . $res->{message} . "(" . $res->{code} . ")";	
+				$res->{code} eq '1' and logwarn "this host may be already registered";
+				logwarn "failed to recover service; answer was: " . $res->{message} . "(" . $res->{code} . ")";	
 			}
 		}
 		else {
@@ -79,8 +160,87 @@ AUTO=$auto
 		# no config file found;
 		#logwarn "no config file has been found (" . $oldconffile . ")";
 	}
-	return 0;
+	return undef;
 };
+
+sub register_from_dns {
+	my $dnsconf = shift;
+
+	my $user = $dnsconf->{user}->{name} || '';
+	my $pass = $dnsconf->{user}->{pass} || '';
+	my $hostname = chomp_(`hostname`);
+	my $hostinfo = '';
+	my $country = ''; # FIXME
+	# TODO change SOAP proxy to the one indicated at $dnsconf->{service} before
+	# TODO wrap all soap calls into an object so we can update the proxy on the fly?
+	my $res = mdkonline::soap_register_host( $user, $pass, $hostname, $hostinfo, $country );
+	if( $res->{code} eq 0 ) {
+		$res->{data}->{service} = $dnsconf->{service};
+		return mdkonline::save_config( $res->{data} );
+	}
+	return undef;	
+}
+
+sub get_conf_from_dns {
+	my $sd   = new Discover;
+	my $info = $sd->search();
+	my $ret;
+	if( $info ) {
+		logsay "found service";
+		if( defined $info->{user}->{name} && defined $info->{user}->{pass}
+			&& $info->{user}->{name} ne '' && $info->{user}->{pass} ne '' ) {
+			print Dumper($info);
+			# TODO check service certificate
+			$ret = mdkonline::register_from_dns( $info );
+			if( $ret ) {
+				return $ret;
+			}
+			else {
+				logsay "failed to register to dns declared service";
+			}
+		}
+		else {
+			logsay "does not permit automatic registration (no user info)";
+		}
+	}
+	else {
+		logsay "no service info found";	
+	}
+	return;
+}
+
+#
+sub run_and_return_task {
+	my $task = shift;
+	my $ret;
+	
+	if( $task->{command} ne 'none' ) {
+#		switch( $task->{command} ) {
+#			case 'update' {
+#				#$task->{mirror}
+#				#$task->{packages}
+#			}
+#			case 'upload_config' {
+#				#
+#			}
+#			case 'set_params' {
+#				#$task->{params}
+#			}
+#			case 'none' {
+#				logsay "nothing to do";
+#			}
+#			else {
+#				logwarn "unknown task " . $task->{command};	
+#			}	
+#		}
+#		# TODO soap_return_task_result();
+	}
+	else {
+		$ret = 1;	
+	}
+	$ret;
+};
+
 
 sub md5file {
     require Digest::MD5;
@@ -121,7 +281,12 @@ sub soap_create_account {
 
 sub soap_authenticate_user {
     my $auth = $s->authenticateUser(@_)->result(); 
-    $auth
+    $auth;
+}
+
+sub soap_register_host {
+	my $auth = $s->registerHost(@_)->result();
+	$auth;	
 }
 
 sub soap_recover_service {
@@ -132,6 +297,11 @@ sub soap_recover_service {
 sub soap_get_task {
 	my $auth = $s->getTask(@_)->result();
 	$auth;
+}
+
+sub soap_return_task_result {
+	my $auth = $s->setTaskResult(@_)->result();
+	$auth;	
 }
 
 sub get_from_URL {
