@@ -1,6 +1,6 @@
-%define version 1.3
+%define version 1.4
 %define name mdkonline
-%define release 7mdk
+%define release 0.1mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -114,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Fri Dec  9 2005 Daouda LO <daouda@mandriva.com> 1.4-0.1mdk
+- display updates to install even if server is out of sync
+- fully SOAP enabled 
+
 * Wed Nov 16 2005 Daouda LO <daouda@mandriva.com> 1.3-7mdk
 - update TODO
 - Change fuzzy menu title
