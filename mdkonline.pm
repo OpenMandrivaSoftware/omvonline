@@ -241,6 +241,19 @@ sub run_and_return_task {
 	$ret;
 };
 
+sub upload_host_data {
+	print "Saving local sw config...\n";
+	my $swdata     = `rpm -qa --queryformat '%{HDRID} %{N} %{E} %{V} %{R} %{ARCH} %{OS} %{DISTRIBUTION} %{VENDOR} %{SIZE} %{BUILDTIME} %{INSTALLTIME}\n'`;
+	my $etcrelease = `cat /etc/mandrake-release`;
+	print "Done.\n";
+	print "Uploading data...\n";
+	print $etcrelease,"\n";
+	$data = soap_upload_host_config( $id, $key, $etcrelease, $swdata );
+	print "Done.\n\n";
+
+	print Dumper($data);
+	1
+};
 
 sub md5file {
     require Digest::MD5;
@@ -286,6 +299,11 @@ sub soap_authenticate_user {
 
 sub soap_register_host {
 	my $auth = $s->registerHost(@_)->result();
+	$auth;	
+}
+
+sub soap_upload_config {
+	my $auth = $s->setHostConfig(@_)->result();
 	$auth;	
 }
 
