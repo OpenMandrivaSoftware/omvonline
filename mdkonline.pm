@@ -243,7 +243,7 @@ sub run_and_return_task {
 
 sub upload_host_data {
 	print "Saving local sw config...\n";
-	my $swdata     = `rpm -qa --queryformat '%{HDRID} %{N} %{E} %{V} %{R} %{ARCH} %{OS} %{DISTRIBUTION} %{VENDOR} %{SIZE} %{BUILDTIME} %{INSTALLTIME}\n'`;
+	my $swdata     = `rpm -qa --queryformat '%{HDRID};%{N};%{E};%{V};%{R};%{ARCH};%{OS};%{DISTRIBUTION};%{VENDOR};%{SIZE};%{BUILDTIME};%{INSTALLTIME}\n'`;
 	my $etcrelease = `cat /etc/mandrake-release`;
 	print "Done.\n";
 	print "Uploading data...\n";
