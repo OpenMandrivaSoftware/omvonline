@@ -21,6 +21,7 @@
 ################################################################################
 
 use strict;
+use POSIX ":sys_wait_h";
 use lib qw(/usr/lib/libDrakX);
 use interactive;
 use common;
@@ -41,8 +42,8 @@ my $in = interactive->vnew('');
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
 my $online_site = "https://www.mandrivaonline.com/";
-my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global);
-my ($need_update, $raisedwindow, $isAvailable, $debug) = (0, 0, 0, 0);
+my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
+my ($need_update, $raisedwindow, $isAvailable, $debug, $conf_launched) = (0, 0, 0, 0, 0);
 
 my @proctable;
 
@@ -143,9 +144,43 @@ checkUpdates();
 cronUpdate();
 
 $icon->show_all;
+
+$SIG{USR1} = 'IGNORE';
+$SIG{USR2} = 'IGNORE';
+$SIG{CHLD} = \&harvester;
+
+Glib::Timeout->add(200, sub { harvester('CHLD', 1); 1 });
+
 Gtk2->main;
 
 ugtk2::exit(0);
+
+# Signal management 
+sub harvester {
+    my ($signame, $clean) = @_;
+    my $childpid ;
+    do {
+        $childpid = waitpid(-1, &WNOHANG);
+        WIFEXITED($?) and refresh_gui(1);
+    } while $childpid > 0;
+    return if $clean;
+}
+sub fork_exec {
+    my ($prog, $pid_table) = @_;
+    my $pid = fork();
+    if (defined $pid) {
+        !$pid and do { exec($prog) or POSIX::_exit() };
+        push @$pid_table, $pid;
+        return $pid;
+    } else {
+        refresh_gui(1);                                                                        
+    }                                                                                       
+}
+sub refresh_gui {
+    my ($sens) = @_;
+    !$conf_launched and silentCheck(); $conf_launched = 0;
+    $MW_vbox and $MW_vbox->set_sensitive($sens);
+}
 
 sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
@@ -158,7 +193,7 @@ sub showMainWindow() {
     my ($choice, $time, $update_label, $lastch);
     my $autocheck;
     gtkadd($w,
-           gtkpack_(Gtk2::VBox->new(0, 5),
+           gtkpack_($MW_vbox = Gtk2::VBox->new(0, 5),
 		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
 			      gtkpack_(Gtk2::VBox->new(0, 3),
 				       1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
@@ -208,12 +243,12 @@ sub refresh_contents {
 		   ];
     $contents;
 }
-sub configNetwork() { logIt(N("Launching drakconnect\n")); system "/usr/sbin/drakconnect &" }
+sub configNetwork() { logIt(N("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
-    system "/usr/sbin/mdkupdate", "--applet";
+    fork_exec("/usr/sbin/mdkupdate --applet");
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
@@ -358,14 +393,8 @@ sub isNetwork {
     $network;
 }
 sub configure {
-    system("/usr/sbin/mdkonline &");
-    $refreshtm = Glib::Timeout->add(20*1000, sub {
-					if (-e $conffile) { 
-					    Glib::Source->remove($refreshtm);
-					    silentCheck();
-					}
-					1;
-				    });
+    fork_exec("/usr/sbin/mdkonline");
+    $conf_launched = 1;
 }
 sub displayLogs {
     my $w = ugtk2->new(N("Logs"), center => 1);
