@@ -22,6 +22,7 @@
 
 use strict;
 use POSIX ":sys_wait_h";
+use Config;
 use lib qw(/usr/lib/libDrakX);
 use interactive;
 use common;
@@ -216,6 +217,7 @@ sub showMainWindow() {
 		   )
 	  );
     $w->show_all;
+    gtkflush()
 }
 sub setLabel {
     my ($widget, $string) = shift;
@@ -243,11 +245,12 @@ sub refresh_contents {
 		   ];
     $contents;
 }
-sub configNetwork() { logIt(N("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
+sub configNetwork() { logIt(N("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
 sub installUpdates {
     my $binfile = '/usr/bin/mdkapplet';
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
+    refresh_gui(0);
     fork_exec("/usr/sbin/mdkupdate --applet");
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec('/usr/bin/mdkapplet') }
@@ -393,6 +396,7 @@ sub isNetwork {
     $network;
 }
 sub configure {
+    refresh_gui(0);
     fork_exec("/usr/sbin/mdkonline");
     $conf_launched = 1;
 }
