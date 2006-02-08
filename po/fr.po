@@ -1,10 +1,8 @@
-# translation of fr.po to Français
 # translation of mdkonline-fr.po to Français
 # translation of mdkonline-fr.po to
-# translation of mdkonline-fr.po to francais
-# translation of Mandriva Online-fr.po to francais
 # french translation of Madrake Online.
 # Copyright (C) 2001 Mandriva S.A.
+#
 # Grégoire Colbert <gregus@linux-mandrake.com>, 2001, 2002.
 # Guy CLOTILDE <guy.clotilde@wanadoo.fr>, 2002.
 # Arnaud Hrycak <arnaud.hrycak@noos.fr>, 2003, 2004.
@@ -12,19 +10,19 @@
 # Lecureuil Nicolas <n1c0l4s.l3@wanadoo.fr>, 2004, 2005.
 # Teletchéa <steletch@free.fr>, 2005.
 # Nicolas Lécureuil <neoclust@mandriva.org>, 2005.
-#
+# Christophe Berthelé <cpjc@free.fr>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: fr\n"
+"Project-Id-Version: mdkonline-fr\n"
 "POT-Creation-Date: 2005-09-16 17:25+0200\n"
-"PO-Revision-Date: 2005-10-15 17:11+0200\n"
-"Last-Translator: Nicolas Lécureuil <neoclust@mandriva.org>\n"
+"PO-Revision-Date: 2006-02-08 15:19+0100\n"
+"Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=2; plural=(n > 1);\n"
+"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms: nplurals=2;plural=(n>1);\n"
 
 #: ../mdkapplet:64
 #, c-format
@@ -37,8 +35,8 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Problème lors de la configuration du service. Recherchez les journaux et "
-"envoyez-les à : \n"
+"Problème lors de la configuration du service. Vérifiez les journaux et "
+"envoyez-les à : \n"
 "support@mandrivaonline.com"
 
 #: ../mdkapplet:76
@@ -229,8 +227,7 @@ msgstr "État inconnu"
 #: ../mdkapplet:268
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Service en-ligne désactivé. Veuillez contacter le site Mandriva Online\n"
+msgstr "Service en-ligne désactivé. Veuillez contacter le site Mandriva Online\n"
 
 #: ../mdkapplet:269
 #, c-format
@@ -249,8 +246,8 @@ msgid ""
 "proxy settings)\n"
 msgstr ""
 "Une erreur semble être présente dans vos paramètres réseau (vérifiez votre "
-"table de routage, votre pare-feu ou les paramètres de votre serveur "
-"mandataire)\n"
+"table de routage, les paramètres de votre pare-feu ou de votre serveur "
+"mandataire (proxy))\n"
 
 #: ../mdkapplet:273
 #, c-format
@@ -324,17 +321,17 @@ msgstr "Je veux m'inscrire"
 #: ../mdkonline:68
 #, c-format
 msgid "Mr."
-msgstr "Mr."
+msgstr "M."
 
 #: ../mdkonline:68
 #, c-format
 msgid "Mrs."
-msgstr "Mme."
+msgstr "Mme"
 
 #: ../mdkonline:68
 #, c-format
 msgid "Ms."
-msgstr "Mlle."
+msgstr "Mlle"
 
 #: ../mdkonline:87
 #, c-format
@@ -344,7 +341,7 @@ msgstr "Lecture de la configuration\n"
 #: ../mdkonline:91
 #, c-format
 msgid "Sending configuration..."
-msgstr "Envoi de la configuration ..."
+msgstr "Envoi de la configuration..."
 
 #: ../mdkonline:102
 #, c-format
@@ -353,9 +350,9 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"Cet assistant vous aidera à envoyer votre configuration (liste des\n"
-"paquetages, configuration matérielle) vers une base de données centralisée,\n"
-"afin de vous maintenir informé des mises-à-jour de bugs ou de sécurité.\n"
+"Cet assistant va vous aider à envoyer votre configuration (liste des paquetages,\n"
+"configuration matérielle) vers une base de données centralisée, afin de vous\n"
+"maintenir informé des mises à jour de sécurité ou des nouvelles versions.\n"
 
 #: ../mdkonline:107
 #, c-format
@@ -365,13 +362,12 @@ msgstr "Création de compte ou authentification"
 #: ../mdkonline:112
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Entrez vos identifiant, mot de passe et nom de machine Mandriva Online :"
+msgstr "Entrez vos identifiant, mot de passe Mandriva Online et le nom de machine :"
 
 #: ../mdkonline:118 ../mdkonline:158
 #, c-format
 msgid "Email address:"
-msgstr "Adresse électonique:"
+msgstr "Adresse courriel :"
 
 #: ../mdkonline:119 ../mdkonline:159
 #, c-format
@@ -381,12 +377,12 @@ msgstr "Mot de passe :"
 #: ../mdkonline:125
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Le nom de machine doit être en 1 et 40 caractères alphanumériques"
+msgstr "Le nom de machine doit comprendre de 1 à 40 caractères alphanumériques"
 
 #: ../mdkonline:127
 #, c-format
 msgid "Connecting to Mandriva Online website..."
-msgstr "Connexion au site Mandriva Online en cours ..."
+msgstr "Connexion au site Mandriva Online en cours..."
 
 #: ../mdkonline:137
 #, c-format
@@ -438,7 +434,7 @@ msgstr "Prénom :"
 #: ../mdkonline:157
 #, c-format
 msgid "Last name:"
-msgstr "Nom de famille :"
+msgstr "Nom de famille :"
 
 #: ../mdkonline:160
 #, c-format
@@ -452,7 +448,7 @@ msgid ""
 " Please try again\n"
 msgstr ""
 "Les mots de passe ne correspondent pas.\n"
-"Veuillez essayer de nouveau\n"
+"Veuillez essayer à nouveau\n"
 
 #: ../mdkonline:167
 #, c-format
@@ -462,7 +458,7 @@ msgstr "Veuillez remplir tous les champs"
 #: ../mdkonline:167
 #, c-format
 msgid "Not a valid mail address!\n"
-msgstr "Cette adresse email n'est pas valide !\n"
+msgstr "Cette adresse courriel n'est pas valide !\n"
 
 #: ../mdkonline:173
 #, c-format
@@ -477,7 +473,7 @@ msgstr ""
 #: ../mdkonline:182
 #, c-format
 msgid "Your upload was successful!"
-msgstr "Votre configuration a été envoyée avec succès !"
+msgstr "Votre configuration a été envoyée avec succès !"
 
 #: ../mdkonline:182
 #, c-format
@@ -494,9 +490,9 @@ msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandriva Online donne la possibilité d'automatiser les mises-à-jour.\n"
+"Mandriva Online donne la possibilité d'automatiser les mises à jour.\n"
 "Un programme se lancera régulièrement sur votre machine\n"
-"pour vérifier la présence de nouvelles mises-à-jour.\n"
+"pour vérifier la présence de nouvelles mises à jour.\n"
 
 #: ../mdkonline:184 ../mdkupdate:146
 #, c-format
@@ -506,8 +502,7 @@ msgstr "Problème de connexion"
 #: ../mdkonline:184
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-"Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
+msgstr "Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
 
 #: ../mdkonline:190
 #, c-format
@@ -540,8 +535,8 @@ msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
 "firewall bad settings"
 msgstr ""
-"Ne peut se connecter au site internet mandrivaonline : mauvais identifiant/"
-"mot de passe ou mauvaise configuration routeur/pare-feu"
+"Ne peut se connecter au site internet Mandriva Online : identifiant/"
+"mot de passe incorrects ou mauvaise configuration routeur/pare-feu"
 
 #: ../mdkonline.pm:95
 #, c-format
@@ -551,12 +546,12 @@ msgstr "Erreur de sécurité"
 #: ../mdkonline.pm:95
 #, c-format
 msgid "Unsecure invocation: Method available through httpS only"
-msgstr "Appel non sécurisé: Connection possible uniquement avec HTTPS"
+msgstr "Appel non sécurisé : Connexion possible uniquement avec HTTPS"
 
 #: ../mdkonline.pm:96
 #, c-format
 msgid "Database error"
-msgstr "Erreur de base de donnée"
+msgstr "Erreur de base de données"
 
 #: ../mdkonline.pm:96
 #, c-format
@@ -564,8 +559,8 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
-"Base de données serveur inaccesible\n"
-"Veuillez réessayer plus tard s'il vous plait"
+"Base de données serveur inaccessible\n"
+"Veuillez réessayer plus tard s'il vous plaît"
 
 #: ../mdkonline.pm:97
 #, c-format
@@ -598,13 +593,13 @@ msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"L'adresse électronique que vous avez renseignée est déjà utilisée\n"
-"Veuillez en fournir une autre\n"
+"L'adresse courriel saisie est déjà utilisée\n"
+"Merci d'en fournir une autre\n"
 
 #: ../mdkonline.pm:100
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr "L'adresse électronique que vous fournissez est invalide ou interdite"
+msgstr "L'adresse courriel saisie est invalide ou interdite"
 
 #: ../mdkonline.pm:101
 #, c-format
@@ -612,8 +607,8 @@ msgid ""
 "Email address box is empty\n"
 "Please provide one"
 msgstr ""
-"Le champ d'adresse électronique est vide\n"
-"Veuillez en fournir une"
+"Le champ d'adresse courriel est vide\n"
+"Merci d'en fournir une"
 
 #: ../mdkonline.pm:102
 #, c-format
@@ -628,7 +623,7 @@ msgstr "Accès à la base de données interdite"
 #: ../mdkonline.pm:103 ../mdkonline.pm:105
 #, c-format
 msgid "Service error"
-msgstr "Erreur de service"
+msgstr "Erreur du service"
 
 #: ../mdkonline.pm:103
 #, c-format
@@ -637,7 +632,7 @@ msgid ""
 "Please Try again Later"
 msgstr ""
 "Les services Web Mandriva sont temporairement indisponibles\n"
-"Veuillez réessayer plus tard s'il vous plait"
+"Veuillez réessayer plus tard s'il vous plaît"
 
 #: ../mdkonline.pm:104
 #, c-format
@@ -651,7 +646,7 @@ msgid ""
 "Please Try again Later"
 msgstr ""
 "Les services Web mandriva sont en maintenance\n"
-"Veuillez réessayer plus tard s'il vous plait"
+"Veuillez réessayer plus tard s'il vous plaît"
 
 #: ../mdkonline.pm:106
 #, c-format
@@ -713,7 +708,7 @@ msgstr "  --mnf          - lance les scripts spécifiques à mnf. \n"
 #: ../mdkupdate:70
 #, c-format
 msgid "  --noX          - text mode version of Mandriva Update.\n"
-msgstr "  --noX          - Mode texte de Mandriva Update. \n"
+msgstr "  --noX          - mode texte de Mandriva Update. \n"
 
 #: ../mdkupdate:78
 #, c-format
@@ -740,4 +735,5 @@ msgstr "Installation des paquetages...\n"
 #: ../mdkupdate:179 ../mdkupdate:264
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Impossible de mettre a jour les paquetages du média update_source.\n"
+msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"
+
