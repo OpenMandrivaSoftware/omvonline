@@ -77,12 +77,18 @@ my %state = (
 		      menu => [],
 		      tt => [ N_("System is busy. Please wait ...") ]
 		     },
-	     error => {
+	     updates => {
 		      colour => [ 'error' ],
 		      changes => [ 'okay' ],
 		      menu => [ 'update', 'check', 'weblink' ],
 		      tt => [ N_("New updates are available for your system") ]
 		     },
+	     bundles => {
+		      colour => [ 'bundle' ],
+		      changes => [ 'okay' ],
+		      menu => [ 'update', 'check', 'weblink' ],
+		      tt => [ N_("New bundles are available for your system") ]
+		      },
 	     noconfig => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay' ],
