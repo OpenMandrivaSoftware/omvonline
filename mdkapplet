@@ -301,7 +301,7 @@ sub silentCheck {
 			   my ($name, $ver, $rel) = $cand =~ /(.*)-(.*)-(.*)$/;
 			   $comp = compareWithInstalled($name, $ver, $rel, \@t);
 			   #print "COMP =  $comp\n";
-			   if ($comp) { $isAvailable = 1; logIt(N("Checking... Updates are available\n") . "\n"); go2State('error') } else { $isAvailable = 0 }
+			   if ($comp) { $isAvailable = 1; logIt(N("Checking... Updates are available\n") . "\n"); go2State('updates') } else { $isAvailable = 0 }
 			   $comp and last;
 		       }
 		       !$comp and okState();
