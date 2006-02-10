@@ -1,4 +1,4 @@
-%define version 1.4
+%define version 2.0
 %define name mdkonline
 %define release 0.1mdk
 
@@ -27,7 +27,7 @@ The package include :
 * Wizard for users registration and configuration uploads, 
 * Update daemon which allows you to install security updates 
   automatically,
-* A KDE/Gnome compliant applet for security updates notification
+* A KDE/Gnome/IceWM compliant applet for security updates notification
   and installation. 
 
 %prep
@@ -114,6 +114,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Fri Feb 10 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+- Mandriva Online V3
+- extra package installation and update capabilities
+
 * Fri Dec  9 2005 Daouda LO <daouda@mandriva.com> 1.4-0.1mdk
 - display updates to install even if server is out of sync
 - fully SOAP enabled 
