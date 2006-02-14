@@ -61,16 +61,17 @@ chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%{name}):\ 
-needs="x11" \
-icon="mdkonline.png" \
-section="Configuration/Other" \
-title="Mandriva Online" \
-longtitle="Wizard for update service subscription" \
-command="/usr/sbin/mdkonline"
+cat > %{buildroot}%{_menudir}/%{name} <<EOF
+?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="Configuration/Other" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
+?package(%{name}): command="%{_sbindir}/mdkupdate --bundle %%F" needs="kde" kde_opt="InitialPreference=15" section=".hidden" mimetypes="application/x-mdv-exec" title="Online Bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
+?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="gnome" section=".hidden" mimetypes="application/x-mdv-exec" title="Online Bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
 EOF
 
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/mime-info
+cat << EOF > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online \ bundle.mime
+application/x-mdv-exec
+	ext: bundle
+EOF
 #install menu icon
 
 %post
@@ -114,7 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Fri Feb 10 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+* Tue Feb 14 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+- mimetype association between bundle and mdkupdate
 - Mandriva Online V3
 - extra package installation and update capabilities
 
