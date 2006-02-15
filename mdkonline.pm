@@ -201,13 +201,6 @@ sub get_distro_type {
     { name => lc($name), arch => $arch };
 }
 
-sub soap_exec_action {
-    my $func = shift;
-    my $ret;
-    $ret = eval "$s->$func" . '(@_)' . '->result()';
-    $ret;
-}
-
 sub soap_create_account {
     my $register = $s->registerUser(@_)->result();
     $register;
