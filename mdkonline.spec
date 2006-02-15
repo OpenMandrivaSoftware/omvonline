@@ -68,7 +68,7 @@ cat > %{buildroot}%{_menudir}/%{name} <<EOF
 EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/mime-info
-cat << EOF > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online \ bundle.mime
+cat << EOF > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online\ bundle.mime
 application/x-mdv-exec
 	ext: bundle
 EOF
