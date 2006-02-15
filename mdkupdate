@@ -32,8 +32,6 @@ use urpm;
 
 use Getopt::Long;
 
-use SOAP::Lite;
-
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
 require_root_capability();
@@ -167,16 +165,16 @@ if (!$bundle) {
     my $namespace    = 'http://online3.mandriva.com/o/soap/';
     my $serviceProxy = $namespace;
     my %bundle_vars = getVarsFromSh($bundle);
+    
     $o{LOGIN} or system("/usr/sbin/mdkonline");
     $o{LOGIN} or die("Configuration not uploaded to Mandriva Online");
+    
     my $s = SOAP::Lite
       ->proxy($serviceProxy)
 	->uri($namespace);
-    my $hostname = chomp_(`hostname`);
-    $data = $s->authenticateUser( $o{LOGIN}, $o{PASS} )->result();
-    $data = $s->registerHost( $o{LOGIN}, $o{PASS}, $hostname, "plop" )->result();
-    my $id  = $data->{data}->{host_id};
-    my $key = $data->{data}->{host_key};
+    $data = mdkonline::soap_authenticate_user($o{LOGIN}, $o{PASS});
+    $data = mdkonline::soap_register_host($o{LOGIN}, $o{PASS}, $o{MACHINE}, "Testing online");
+    my $id  = $data->{data}->{host_id}; my $key = $data->{data}->{host_key};
     $data = $s->query( $id, $key, 'Software::get_bundle', $bundle_vars{BUNDLE} )->result();
 }
 
