@@ -68,7 +68,7 @@ cat > %{buildroot}%{_menudir}/%{name} <<EOF
 EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/mime-info
-cat << EOF > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online\ bundle.mime
+cat > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online\ bundle.mime <<EOF
 application/x-mdv-exec
 	ext: bundle
 EOF
@@ -101,6 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
+%_datadir/mime-info/*
 %{_datadir}/%{name}/pixmaps/*.png
 %_sysconfdir/X11/xinit.d/mdkapplet
 
