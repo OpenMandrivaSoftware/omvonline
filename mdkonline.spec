@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Tue Feb 14 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+* Wed Feb 15 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
 - mimetype association between bundle and mdkupdate
 - Mandriva Online V3
 - extra package installation and update capabilities
