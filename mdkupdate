@@ -51,7 +51,7 @@ my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php';
 }
-my $VERSION = "1.3";
+my $VERSION = "2.0";
 my $YEARS = "2002-2005";
 
 #for compatibilities
@@ -88,6 +88,7 @@ my %options = (
 GetOptions(%options);
 
 -s $conffile || $bundle or die N("No %s file found. Run mdkonline wizard first", $conffile);
+
 my %o = getVarsFromSh($conffile);
 
 if (!$bundle) {
