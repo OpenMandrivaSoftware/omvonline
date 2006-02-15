@@ -63,8 +63,8 @@ chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
 ?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="Configuration/Other" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
-?package(%{name}): command="%{_sbindir}/mdkupdate --bundle %%F" needs="kde" kde_opt="InitialPreference=15" section=".hidden" mimetypes="application/x-mdv-exec" title="Online Bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
-?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="gnome" section=".hidden" mimetypes="application/x-mdv-exec" title="Online Bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
+?package(%{name}): command="%{_bindir}/mdvbundle.pl %%F" needs="kde" kde_opt="InitialPreference=15" section=".hidden" mimetypes="application/x-mdv-exec" title="Get online bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
+?package(%{name}): command="%{_bindir}/mdvbundle.pl" needs="gnome" section=".hidden" mimetypes="application/x-mdv-exec" title="Get online bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
 EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/mime-info
