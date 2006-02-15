@@ -35,6 +35,7 @@ use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::TrayIcon;
+use Gtk2::NotificationBubble;
 
 mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
 
@@ -43,7 +44,7 @@ my $in = interactive->vnew('');
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $arch = arch();
 my $online_site = "https://www.mandrivaonline.com/";
-my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
+my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox, $bubble_applet);
 my ($need_update, $raisedwindow, $isAvailable, $debug, $conf_launched) = (0, 0, 0, 0, 0);
 
 my @proctable;
