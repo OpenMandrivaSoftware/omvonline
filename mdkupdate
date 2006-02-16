@@ -82,12 +82,14 @@ my %options = (
 	       'a|applet'   => \$applet,
 	       'mnf'	    => \$mnf,
 	       'noX'	    => \$noX,
-	       'b|bundle=s' => \$bundle
+	       'b|bundle:s' => sub { $bundle = $_[1] || 'webbundle' } 
 	      );
 
 GetOptions(%options);
 
 -s $conffile || $bundle or die N("No %s file found. Run mdkonline wizard first", $conffile);
+
+$bundle eq "webbundle" and mdkonline::get_site("http://online3.mandriva.com/one/web/bundle"), exit(0);
 
 my %o = getVarsFromSh($conffile);
 
