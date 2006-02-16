@@ -21,6 +21,7 @@ my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-r
 
 #$uri = 'https://localhost/~romain/online3/htdocs/soap';
 my $uri = 'https://online.mandriva.com/soap';
+$uri = 'http://online3.mandriva.com/o/soap/';
 $service_proxy = $online_proxy  = $uri;
 
 my $useragent = set_ua('mdkonline');
