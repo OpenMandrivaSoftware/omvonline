@@ -63,19 +63,12 @@ chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
 ?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="Configuration/Other" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
-?package(%{name}): command="%{_bindir}/mdvbundle.pl %%F" needs="kde" kde_opt="InitialPreference=15" section=".hidden" mimetypes="application/x-mdv-exec" title="Get online bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
-?package(%{name}): command="%{_bindir}/mdvbundle.pl" needs="gnome" section=".hidden" mimetypes="application/x-mdv-exec" title="Get online bundle" longtitle="Mandriva Linux bundle handler" multiple_files="true"
+?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="x11" kde_opt="InitialPreference=15" section="Configuration/Other" mimetypes="application/x-mdv-exec" title="Mandriva Online Bundle" longtitle="Mandriva Linux bundle handler"
 EOF
-
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/mime-info
-cat > $RPM_BUILD_ROOT%{_datadir}/mime-info/Online\ bundle.mime <<EOF
-application/x-mdv-exec
-	ext: bundle
-EOF
-#install menu icon
 
 %post
 %{update_menus}
+[ -x %{_bindir}/update-mime-database ] && update-mime-database /usr/share/mime >/dev/null
 
 if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
@@ -83,6 +76,9 @@ fi
 
 %postun
 %{clean_menus}
+if [ $1 = 0 ]; then
+		[ -x %{_bindir}/update-mime-database ] && update-mime-database /usr/share/mime >/dev/null
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -101,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
-%_datadir/mime-info/*
+%_datadir/mime/packages/*
 %{_datadir}/%{name}/pixmaps/*.png
 %_sysconfdir/X11/xinit.d/mdkapplet
 
@@ -116,8 +112,8 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Wed Feb 15 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
-- mimetype association between bundle and mdkupdate
+* Thu Feb 16 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+- mimetype association between bundle and mdkupdate (fcrozat)
 - Mandriva Online V3
 - extra package installation and update capabilities
 
