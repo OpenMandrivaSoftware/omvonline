@@ -34,7 +34,7 @@ clean:
 
 install: all
 	$(MAKE) -C po $@
-	install -d $(PREFIX)/usr/{sbin,bin,share/{$(NAME)/pixmaps,autostart,icons/{mini,large}},lib/libDrakX/drakfirsttime}
+	install -d $(PREFIX)/usr/{sbin,bin,share/{mime/packages,$(NAME)/pixmaps,autostart,icons/{mini,large}},lib/libDrakX/drakfirsttime}
 	install -m755 $(NAME) $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
@@ -43,6 +43,7 @@ install: all
 	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png
 	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
 	install -m644 pixmaps/*.png $(PIXDIR)/pixmaps
+	install -m644 mdkonline.xml $(DATADIR)/mime/packages/mdkonline.xml
 #	install -m644 mdkapplet.desktop $(PREFIX)/usr/share/autostart/
 	install -m644 mdkonline.pm $(FBLIBDIR)
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
