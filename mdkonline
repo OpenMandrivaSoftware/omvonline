@@ -84,9 +84,11 @@ sub get_conf() {
 }
 
 sub send_conf_via_soap {
+    my ($login, $password, $boxname, $descboxname, $country) = @_;
     my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
     undef $w if $w;
+    $reg_host
 }
 
 sub send_conf {
@@ -154,7 +156,7 @@ my $wiz = wizards->new(
 				 no_back => $is_success eq 'OK' ? 1 : 0,
 				 post => sub { 
 				     if ($is_success eq 'OK') {
-					 ($sendconfres, $key) = send_conf($login, $password, $boxname);
+					 $sendconfres = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
 					 "upload";
 				     } else { "choices" }
 				 }
@@ -203,7 +205,7 @@ my $wiz = wizards->new(
 			       }
 			   },
 			   post => sub {
-			       if ($sendconfres eq 'TRUE' && $key) {
+			       if ($sendconfres eq 'TRUE') {
 				   #mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
 				   #mdkonline::write_conf($registered);
 				   #mdkonline::clean_confdir();
@@ -227,12 +229,12 @@ my $wiz = wizards->new(
 if (!$ia && $login && $password && $boxname) { 
     $is_success = mdkonline::create_authenticate_account('authenticate', $login, $password);
     if ($is_success eq 'OK') {
-	($sendconfres, $key) = send_conf($login, $password, $boxname);
-	print "RESULT = $sendconfres - $key";
-	if ($sendconfres eq 'TRUE' && $key) {
-	    mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
-	    mdkonline::write_wide_conf($login, $boxname, $country);
-	    output_p($logfile, N("Configuration uploaded successfully"));
+	$sendconfres = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
+	print "RESULT = $sendconfres";
+	if ($sendconfres eq 'TRUE') {
+	    #mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
+	    #mdkonline::write_wide_conf($login, $boxname, $country);
+	    #output_p($logfile, N("Configuration uploaded successfully"));
 	} else { output_p($logfile, N("Problem uploading configuration")) }
     } else { 
 	output_p($logfile, N("Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"));
