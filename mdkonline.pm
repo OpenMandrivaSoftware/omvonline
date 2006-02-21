@@ -18,6 +18,8 @@ use Data::Dumper;
 
 my ($uri, $service_proxy, $online_proxy);
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
+my ($product_file, $conf_file, $rootconf_file) = ('/etc/sysconfig/system', '/etc/sysconfig/mdkonline', '/root/.MdkOnline/hostconf'); 
+my $release = get_release();
 
 #$uri = 'https://localhost/~romain/online3/htdocs/soap';
 my $uri = 'https://online.mandriva.com/soap';
@@ -27,12 +29,15 @@ $service_proxy = $online_proxy  = $uri;
 my $useragent = set_ua('mdkonline');
 
 sub is_proxy () {
-    return 1 if defined $ENV{http_proxy};
+    return defined $ENV{http_proxy} ? 1 : defined $ENV{https_proxy} ? 2 : 0;
 }
+my $proxy = is_proxy;
 
-my $s = is_proxy() 
-? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) 
-: SOAP::Lite->uri($uri)->proxy($service_proxy, agent => $useragent);
+my $s = $proxy == 2
+  ? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{https_proxy} ], agent => $useragent) 
+  : $proxy == 1 
+  ? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) 
+  : SOAP::Lite->uri($uri)->proxy($service_proxy, agent => $useragent);
 
 sub get_configuration {
     my $in = shift;
@@ -111,7 +116,6 @@ sub upgrade_to_v3 {
 	    }
 	}
 	else {
-	    
 	}
     }
     else {
@@ -149,26 +153,10 @@ sub get_conf_from_dns {
     }
 }
 
-sub run_and_return_task {
-    my $task = shift;
-    my $ret;
-    if( $task->{command} ne 'none' ) {
-    }
-    $ret;
+sub get_rpmdblist {
+    my $rpmdblist = `rpm -qa --queryformat '%{HDRID};%{N};%{E};%{V};%{R};%{ARCH};%{OS};%{DISTRIBUTION};%{VENDOR};%{SIZE};%{BUILDTIME};%{INSTALLTIME}\n'`;
+    $rpmdblist
 }
-
-sub upload_host_data {
-    my ($id, $key) = @_;
-    my $data;
-    print "Saving local sw config...\n";
-    my $swdata     = `rpm -qa --queryformat '%{HDRID};%{N};%{E};%{V};%{R};%{ARCH};%{OS};%{DISTRIBUTION};%{VENDOR};%{SIZE};%{BUILDTIME};%{INSTALLTIME}\n'`;
-    print "Done.\n";
-    print "Uploading data...\n";
-    my ($r) = get_release();
-    $data = soap_upload_host_config( $id, $key, $r, $swdata );
-    print "Done.\n\n";
-    print Dumper($data);
-};
 
 sub md5file {
     require Digest::MD5;
@@ -185,8 +173,8 @@ sub md5file {
 }
 
 sub get_release() {
-    my ($release) = cat_($release_file) =~ /release\s+(\S+)/;
-    ($release)
+    my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
+    ($r)
 }
 
 sub set_ua {
@@ -196,9 +184,9 @@ sub set_ua {
 }
 
 sub get_distro_type {
-    my $release = cat_($release_file);
-    my ($arch) = $release =~ /\s+for\s+(\w+)/;
-    my ($name) = $release =~ /(corporate|mnf)/i;
+    my $r = cat_($release_file);
+    my ($arch) = $r =~ /\s+for\s+(\w+)/;
+    my ($name) = $r =~ /(corporate|mnf)/i;
     { name => lc($name), arch => $arch };
 }
 
@@ -220,6 +208,23 @@ sub soap_register_host {
 sub soap_upload_config {
     my $auth = $s->setHostConfig(@_)->result();
     $auth;	
+}
+
+sub register_upload_host {
+    my ($login, $password, $boxname, $descboxname, $country) = @_;
+    my ($registered, $uploaded);
+    my ($rc, $wc) = read_conf();
+    if (!$rc->{HOST_ID}) {
+	$registered = soap_register_host($login, $password, $boxname, $descboxname, $country);
+	$registered->{status} and write_conf($registered);
+	($rc, $wc) = read_conf();
+    }
+    my $r = cat_($release_file);
+    my %p = getVarsFromSh($product_file);
+    my $rpmdblist = get_rpmdblist();
+    $rc->{HOST_ID} and $uploaded = soap_upload_config($rc->{HOST_ID}, $rc->{HOST_KEY}, $r, $p{META_CLASS}, $rpmdblist);
+    write_conf($uploaded);
+    return 'TRUE'
 }
 
 sub get_from_URL {
@@ -259,10 +264,10 @@ sub create_authenticate_account {
                   };  
     foreach my $num ([9, 8], [21, 20]) { $hreturn->{$num->[0]} = $hreturn->{$num->[1]} };
     my $action = {
-		  #create => sub { eval { $response = soap_create_account(@info) }; },
-		  create => sub { eval { $response = soap_exec_action('registerUser', @info) }; },
-		  #authenticate => sub { eval { $response = soap_authenticate_user(@info) }; }
-		  authenticate => sub { eval { $response = soap_exec_action('authenticateUser', @info) }; }
+		  create => sub { eval { $response = soap_create_account(@info) }; },
+		  #create => sub { eval { $response = soap_exec_action('registerUser', @info) }; },
+		  authenticate => sub { eval { $response = soap_authenticate_user(@info) }; }
+		  #authenticate => sub { eval { $response = soap_exec_action('authenticateUser', @info) }; }
 		 };
     $action->{$type}->();
     $ret = check_server_response($response, $hreturn);
@@ -355,43 +360,6 @@ sub soap_return_task_result {
     $auth;	
 }
 
-sub report_config {
-    my $file = shift;  
-sub header { "            
-********************************************************************************
-* $_[0]
-********************************************************************************";
-}
-output($file, map { chomp; "$_\n" }
-  header("rpm -qa"), join('', sort `rpm -qa`),
-  header("mandrake version"), cat_($release_file));
-system("/usr/bin/bzip2 -f $file");
-open(my $F, $file . ".bz2") or die "Cannot open file : $!";
-my ($chunk, $buffer);
-while (read($F, $chunk, 60*57)) {
-    $buffer .= $chunk;
-}
-close($F);
-open(my $OUT, "> $file" . ".bz2.uue") or die "Cannot open file : $!";
-print $OUT encode_base64($buffer);
-close($OUT);
-}
-
-sub send_config {
-    my ($link, $content) = @_;
-    my ($res, $key);
-    my $ua = LWP::UserAgent->new;
-    $ua->agent($useragent);
-    $ua->env_proxy;
-    my $response = $ua->request(POST $link,
-				Content_Type => 'form-data',
-                                Content => [ %$content ]);
-    if ($response->is_success && $response->content =~ /^TRUE(.*?)([^a-zA-Z0-9].*)?$/) {
-	($res, $key) = ('TRUE', $1);
-    }
-    ($res, $key)
-}
-
 sub mv_files {
     my ($source, $dest) = @_;
     -e $source and system("mv", $source, $dest);
@@ -410,13 +378,12 @@ sub hw_upload {
 
 sub automated_upgrades {
     my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
-    my ($r) = get_release();
     output $conffile,
     qq(# automatically generated file. Please don't edit
 LOGIN=$login
 PASS=$passwd
 MACHINE=$boxname
-VER=$r
+VER=$release
 CURRENTKEY=$key 
 COUNTRY=$country
 AUTO=$auto
@@ -427,6 +394,17 @@ if [ -f $conffile ]; then /usr/sbin/mdkupdate --auto; fi
 );  
     
     chmod 0755, "/etc/cron.daily/mdkupdate";
+}
+
+sub read_conf() {
+    my %rc = getVarsFromSh($rootconf_file); my %wc = getVarsFromSh($conf_file);
+    (\%wc, \%rc)
+}
+
+sub write_conf {
+    my $response = shift;
+    #write_wide_conf($response); write_rootconf($response);
+    print Dumper($response);
 }
 
 sub write_wide_conf {
