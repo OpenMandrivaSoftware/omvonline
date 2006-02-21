@@ -31,6 +31,7 @@ my $useragent = set_ua('mdkonline');
 sub is_proxy () {
     return defined $ENV{http_proxy} ? 1 : defined $ENV{https_proxy} ? 2 : 0;
 }
+
 my $proxy = is_proxy;
 
 my $s = $proxy == 2
@@ -278,6 +279,7 @@ sub check_server_response {
     my ($response, $h) = @_;
     print Dumper($response);
     my $code = $response->{code} || '99';
+    $response->{status} and write_conf($response);
     return $response->{status} ? 'OK' : $h->{$code}->[0] . ' : ' . $h->{$code}->[1];
 }
 
@@ -396,6 +398,15 @@ if [ -f $conffile ]; then /usr/sbin/mdkupdate --auto; fi
     chmod 0755, "/etc/cron.daily/mdkupdate";
 }
 
+sub setVar {
+    my ($file, $val) = @_;
+    my %s = getVarsFromSh($file);
+    foreach my $v (@val) {
+	$s{$val} = $st;
+    }
+    setVarsInSh($file, \%s);
+}
+
 sub read_conf() {
     my %rc = getVarsFromSh($rootconf_file); my %wc = getVarsFromSh($conf_file);
     (\%wc, \%rc)
@@ -403,20 +414,25 @@ sub read_conf() {
 
 sub write_conf {
     my $response = shift;
-    #write_wide_conf($response); write_rootconf($response);
+    write_wide_conf($response);
+    #write_rootconf($response);
     print Dumper($response);
 }
 
+sub get_date() {
+    my $date = `date --iso-8601=seconds`; # output  date/time  in ISO 8601 format. Ex: 2006-02-21T17:04:19+0100
+    $date = chomp_($date);
+    $date
+}
+
 sub write_wide_conf {
-    my ($login, $boxname, $country) = @_;
-    my $wideconf = '/etc/sysconfig/mdkonline';
-    my $d = localtime();
-    $d =~ s/\s+/_/g;
+    my ($soap_response) = shift;
+    my $date = get_date();
     output_with_perm $wideconf, 0644,
-    qq(LOGIN=$login
+    qq(USER_EMAIL=$login
 MACHINE=$boxname
 COUNTRY=$country
-LASTCHECK=$d
+DATE_SET=$date
 );
 }
 
