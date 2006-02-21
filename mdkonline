@@ -37,7 +37,7 @@ BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' }
 use mdkonline;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 
-my $online_link = 'https://www.mandrivaonline.com';
+my $online_link = 'http://online3.mandriva.com/o/soap/';
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
@@ -73,12 +73,20 @@ my $locale = lang::read('', $>);
 $country = lang::c2name($locale->{country});
 my $lang = $locale->{lang} || 'en_US';
 
-sub read_conf() {
-    my $wideconf = '/etc/sysconfig/mdkonline';
-    my %t = getVarsFromSh($wideconf);
+my $descboxname;
+my ($host_id, $host_key);
+
+sub get_conf() {
+    my ($wc, $rc) = mdkonline::read_conf();
     my $host = chomp_(`hostname`);
-    $t{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
-    $login = $t{LOGIN}; $boxname = $t{MACHINE};
+    $wc->{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
+    $login = $wc->{LOGIN}; $boxname = $wc->{MACHINE}; $descboxname = $wc->{DESCMACHINE};
+}
+
+sub send_conf_via_soap {
+    my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
+    my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
+    undef $w if $w;
 }
 
 sub send_conf {
@@ -113,13 +121,15 @@ my $wiz = wizards->new(
 		account => {
 			    name => N("Enter your Mandriva Online login, password and machine name:"),
 			    pre => sub {
-				read_conf();
+				get_conf();
 			    },
 			    data => sub {
 				[
 				 { label => N("Email address:"), val => \$login },
 				 { label => N("Password:"), val => \$password, hidden => 1 },
 				 { label => N("Machine name:"), val => \$boxname },
+				 { label => N("Machine description:"), val => \$descboxname },
+				 { label => N("(Ex: My Home Office's Computer)")},
 				];
 			    },
 			    post => sub {
@@ -137,7 +147,7 @@ my $wiz = wizards->new(
 				 name => sub {
 				     if ($is_success eq 'OK') {
 					 N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.");
-				     } else {
+       				     } else {
 					 $is_success
 				     }
 				 },
@@ -194,9 +204,9 @@ my $wiz = wizards->new(
 			   },
 			   post => sub {
 			       if ($sendconfres eq 'TRUE' && $key) {
-				   mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
-				   mdkonline::write_wide_conf($login, $boxname, $country);
-				   mdkonline::clean_confdir();
+				   #mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
+				   #mdkonline::write_conf($registered);
+				   #mdkonline::clean_confdir();
 				   "end";
 			       } else {
 				   "authenticate";
