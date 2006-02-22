@@ -26,6 +26,7 @@ my $uri = 'https://online.mandriva.com/soap';
 $uri = 'http://online3.mandriva.com/o/soap/';
 $service_proxy = $online_proxy  = $uri;
 
+my $VERSION = 3;
 my $useragent = set_ua('mdkonline');
 
 sub is_proxy () {
@@ -40,6 +41,7 @@ my $s = $proxy == 2
   ? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) 
   : SOAP::Lite->uri($uri)->proxy($service_proxy, agent => $useragent);
 
+# Romain: you need to finish those dns functions or drop them
 sub get_configuration {
     my $in = shift;
     my $config_file = '/etc/sysconfig/mdkonline';
@@ -214,18 +216,19 @@ sub soap_upload_config {
 sub register_upload_host {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
     my ($registered, $uploaded);
-    my ($rc, $wc) = read_conf();
-    if (!$rc->{HOST_ID}) {
+    my $wc = read_conf();
+    if (!$wc->{HOST_ID}) {
 	$registered = soap_register_host($login, $password, $boxname, $descboxname, $country);
 	$registered->{status} and write_conf($registered);
-	($rc, $wc) = read_conf();
+	$wc = read_conf();
     }
+    
     my $r = cat_($release_file);
     my %p = getVarsFromSh($product_file);
     my $rpmdblist = get_rpmdblist();
-    $rc->{HOST_ID} and $uploaded = soap_upload_config($rc->{HOST_ID}, $rc->{HOST_KEY}, $r, $p{META_CLASS}, $rpmdblist);
-    write_conf($uploaded);
-    return 'TRUE'
+    $wc->{HOST_ID} and $uploaded = soap_upload_config($wc->{HOST_ID}, $wc->{HOST_KEY}, $r, $p{META_CLASS}, $rpmdblist);
+    $uploaded->{status} and write_conf($uploaded);
+    return $uploaded->{status} ? 'TRUE' : '';
 }
 
 sub get_from_URL {
@@ -379,32 +382,11 @@ sub hw_upload {
 }
 
 sub automated_upgrades {
-    my ($conffile, $login, $passwd, $boxname, $key, $country, $auto) = @_;
-    output $conffile,
-    qq(# automatically generated file. Please don't edit
-LOGIN=$login
-PASS=$passwd
-MACHINE=$boxname
-VER=$release
-CURRENTKEY=$key 
-COUNTRY=$country
-AUTO=$auto
-);  
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
-if [ -f $conffile ]; then /usr/sbin/mdkupdate --auto; fi
+if [ -f $conf_file ]; then /usr/sbin/mdkupdate --auto; fi
 );  
-    
     chmod 0755, "/etc/cron.daily/mdkupdate";
-}
-
-sub setVar {
-    my ($file, $val) = @_;
-    my %s = getVarsFromSh($file);
-    foreach my $v (@val) {
-	$s{$val} = $st;
-    }
-    setVarsInSh($file, \%s);
 }
 
 sub read_conf() {
@@ -427,13 +409,10 @@ sub get_date() {
 
 sub write_wide_conf {
     my ($soap_response) = shift;
-    my $date = get_date();
-    output_with_perm $wideconf, 0644,
-    qq(USER_EMAIL=$login
-MACHINE=$boxname
-COUNTRY=$country
-DATE_SET=$date
-);
+    my $date = get_date(); my $conf_hash;
+    $conf_hash->{uc($_)} = $soap_response->data->{$_} foreach (keys %{$soap_response->data});
+    $conf_hash->{DATE_SET} = $date;
+    setVarsInSh($conf_file, $conf_hash, qw(USER_EMAIL USER_ID HOST_NAME HOST_ID HOST_KEY HOST_DESC HOST_MOBILE VERSION DATE_SET));
 }
 
 sub is_running {
