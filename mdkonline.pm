@@ -48,6 +48,7 @@ sub upgrade2v3 {
     if (-e $rootconf_file) {
 	my %oc = getVarsFromSh($rootconf_file);
 	my $res = soap_recover_service($oc{LOGIN},'{md5}'. $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
+	print Dumper($res);
 	$res = check_server_response()
     }
     $res
@@ -309,8 +310,9 @@ sub write_wide_conf {
     my ($soap_response) = shift;
     #    print Dumper($soap_response);
     my $date = get_date(); my $conf_hash;
+    %{$conf_hash} = getVarsFromSh($conf_file);
     $conf_hash->{uc($_)} = $soap_response->{data}->{$_} foreach (keys %{$soap_response->{data}});
-    print Dumper $conf_hash;
+    #print Dumper $conf_hash;
     $conf_hash->{DATE_SET} = $date;
     foreach my $alias (['email','user_email'], ['customer_id', 'user_id']) {
 	exists $conf_hash->{uc($alias->[0])} and $conf_hash->{uc($alias->[1])} = $conf_hash->{uc($alias->[0])};
