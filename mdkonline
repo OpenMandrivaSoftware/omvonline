@@ -198,8 +198,8 @@ my $wiz = wizards->new(
 			       }
 			   },
 			   data => sub {
-			       if ($sendconfres eq 'TRUE' && $key) {
-				   [ 
+			       if ($sendconfres eq 'TRUE') {
+				   [
 				    { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
 				   ];
 			       }
