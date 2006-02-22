@@ -96,7 +96,7 @@ my $wiz = wizards->new(
    name => N("Mandriva Online"),
       pages => {
 		welcome => {
-			    name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
+			    name => N("This assistant will help you to upload your confguration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
 			    no_back => 1,
 			    next => 'choices'
 			   },
@@ -179,7 +179,7 @@ my $wiz = wizards->new(
 			       if ($sendconfres eq 'OK') {
 				   "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 			       } else {
-				   N("Connection problem") . N("Problem occurs when uploading files, please try again");
+				   N("Connection problem") . "\n" . N("Problem occurs when uploading files, please try again");
 			       }
 			   },
 			   data => sub {
