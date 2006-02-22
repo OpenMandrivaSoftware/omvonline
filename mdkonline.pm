@@ -118,7 +118,7 @@ sub register_upload_host {
 	$res = upgrade2v3();
     } elsif (!$wc->{HOST_ID} && !-e $rootconf_file) {
 	$registered = soap_register_host($login, $password, $boxname, $descboxname, $country);
-	#print Dumper($registered);
+	print Dumper($registered);
 	$res = check_server_response($registered);
     }
     return $res if (defined $res && $res ne 'OK');
@@ -175,14 +175,14 @@ sub check_server_response {
           13  => [ N("Service error"), N("Mandriva web services are currently unavailable\nPlease Try again Later") ],    
           17  => [ N("Password error"), N("Password mismatch") ],
 	  20  => [ N("Service error"), N("Mandriva web services are under maintenance\nPlease Try again Later") ],        
-          22  => [ N("User Forbidden"), N("User account forbidden by Mandriva web services") ],
+	  22  => [ N("User Forbidden"), N("User account forbidden by Mandriva web services") ],
 	  99  => [ N("Connection error"), N("Mandriva web services not reachable") ]
 	};
     foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} };
     #    print Dumper($response);
     my $code = $response->{code} || '99';
     $response->{status} and write_conf($response);
-    return $response->{status} ? 'OK' : $hash_ret->{$code}->[0] . ' : ' . $hash_ret->{$code}->[1];
+    return $response->{status} ? 'OK' : $hash_ret->{$code}->[0] . ' : ' . $hash_ret->{$code}->[1] . '\n\n' . $response->{message};
 }
 
 sub check_valid_email {
