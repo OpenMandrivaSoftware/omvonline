@@ -77,10 +77,10 @@ my $descboxname;
 my ($host_id, $host_key);
 
 sub get_conf() {
-    my ($wc, $rc) = mdkonline::read_conf();
+    my $wc = mdkonline::read_conf();
     my $host = chomp_(`hostname`);
-    $wc->{MACHINE} ||= $1 if $host =~ /(\w+)(.*)/;
-    $login = $wc->{LOGIN}; $boxname = $wc->{MACHINE}; $descboxname = $wc->{DESCMACHINE};
+    $wc->{HOST_NAME} ||= $1 if $host =~ /(\w+)(.*)/;
+    $login = $wc->{USER_EMAIL}; $boxname = $wc->{HOST_NAME}; $descboxname = $wc->{HOST_DESC};
 }
 
 sub send_conf_via_soap {
@@ -89,21 +89,6 @@ sub send_conf_via_soap {
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
     undef $w if $w;
     $reg_host
-}
-
-sub send_conf {
-    my ($log, $pass, $box) = @_;
-    my $uplink = $online_link . '/wizard.php';
-    my $pp = md5_hex($pass);
-    my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
-    mdkonline::report_config("$confdir/$log.$pp.$box.online.log");
-    my $tag = { submit => "upload_wizard", wizard => ["$confdir/$log.$pp.$box.online.log.bz2.uue"] };
-    undef $w if $w;
-    my $ww = $in->wait_message(N("Please wait"), N("Sending configuration...")) if $ia;
-    ($sendconfres, $key) = mdkonline::send_config($uplink, $tag);
-    mdkonline::hw_upload($log, $pass, $box);
-    undef $ww if $ww;
-    ($sendconfres, $key);
 }
 
 my $wiz = wizards->new(
@@ -191,23 +176,22 @@ my $wiz = wizards->new(
 				 },
 		upload => {
 			   name => sub {
-			       if ($sendconfres eq 'TRUE') {
+			       if ($sendconfres eq 'OK') {
 				   "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 			       } else {
 				   N("Connection problem") . N("Problem occurs when uploading files, please try again");
 			       }
 			   },
 			   data => sub {
-			       if ($sendconfres eq 'TRUE') {
+			       if ($sendconfres eq 'OK') {
 				   [
 				    { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
 				   ];
 			       }
 			   },
 			   post => sub {
-			       if ($sendconfres eq 'TRUE') {
-				   #mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
-				   #mdkonline::write_conf($registered);
+			       if ($sendconfres eq 'OK') {
+				   mdkonline::automated_upgrades();
 				   #mdkonline::clean_confdir();
 				   "end";
 			       } else {
@@ -230,11 +214,9 @@ if (!$ia && $login && $password && $boxname) {
     $is_success = mdkonline::create_authenticate_account('authenticate', $login, $password);
     if ($is_success eq 'OK') {
 	$sendconfres = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
-	print "RESULT = $sendconfres";
-	if ($sendconfres eq 'TRUE') {
-	    #mdkonline::automated_upgrades($conffile, $login, md5_hex($password), $boxname, $key, $country, 'TRUE');
-	    #mdkonline::write_wide_conf($login, $boxname, $country);
-	    #output_p($logfile, N("Configuration uploaded successfully"));
+	if ($sendconfres eq 'OK') {
+	    mdkonline::automated_upgrades();
+	    output_p($logfile, N("Configuration uploaded successfully"));
 	} else { output_p($logfile, N("Problem uploading configuration")) }
     } else { 
 	output_p($logfile, N("Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"));
