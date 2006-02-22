@@ -289,8 +289,8 @@ if [ -f $conf_file ]; then /usr/sbin/mdkupdate --auto; fi
 }
 
 sub read_conf() {
-    my %rc = getVarsFromSh($rootconf_file); my %wc = getVarsFromSh($conf_file);
-    (\%wc, \%rc)
+    my %wc = getVarsFromSh($conf_file);
+    \%wc
 }
 
 sub write_conf {
@@ -310,7 +310,11 @@ sub write_wide_conf {
     #    print Dumper($soap_response);
     my $date = get_date(); my $conf_hash;
     $conf_hash->{uc($_)} = $soap_response->{data}->{$_} foreach (keys %{$soap_response->{data}});
+    print Dumper $conf_hash;
     $conf_hash->{DATE_SET} = $date;
+    foreach my $alias (['email','user_email'], ['customer_id', 'user_id']) {
+	exists $conf_hash->{uc($alias->[0])} and $conf_hash->{uc($alias->[1])} = $conf_hash->{uc($alias->[0])};
+    }
     setVarsInSh($conf_file, $conf_hash, qw(USER_EMAIL USER_ID HOST_NAME HOST_ID HOST_KEY HOST_DESC HOST_MOBILE VERSION DATE_SET));
 }
 
