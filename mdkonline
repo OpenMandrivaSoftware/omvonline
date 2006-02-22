@@ -96,7 +96,7 @@ my $wiz = wizards->new(
    name => N("Mandriva Online"),
       pages => {
 		welcome => {
-			    name => N("This assistant will help you to upload your confguration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
+			    name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
 			    no_back => 1,
 			    next => 'choices'
 			   },
