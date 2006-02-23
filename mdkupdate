@@ -27,10 +27,12 @@ use common;
 use interactive;
 
 use mdkonline;
-use Data::Dumper;
 use urpm;
 
 use Getopt::Long;
+
+# for debug 
+use Data::Dumper;
 
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
@@ -130,8 +132,6 @@ if (!$bundle) {
     }
 } else {
     my $bundle_info;
-    my $namespace    = 'http://online3.mandriva.com/o/soap/';
-    my $serviceProxy = $namespace;
     my %bundle_vars = getVarsFromSh($bundle);
     
     $wc->{USER_EMAIL} or system("/usr/sbin/mdkonline");
