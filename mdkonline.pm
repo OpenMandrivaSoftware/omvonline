@@ -92,25 +92,30 @@ sub get_distro_type {
 }
 
 sub soap_create_account {
-    my $register = $s->registerUser(@_)->result();
-    $register;
+    my $data = $s->registerUser(@_)->result();
+    $data;
 }
 
 sub soap_authenticate_user {
-    my $auth = $s->authenticateUser(@_)->result(); 
-    $auth;
+    my $data = $s->authenticateUser(@_)->result(); 
+    $data;
 }
 
 sub soap_register_host {
-    my $auth = $s->registerHost(@_)->result();
-    $auth;	
+    my $data = $s->registerHost(@_)->result();
+    $data;	
 }
 
 sub soap_upload_config {
-    my $auth = $s->setHostConfig(@_)->result();
-    $auth;	
+    my $data = $s->setHostConfig(@_)->result();
+    $data;
 }
 
+sub soap_query_bundle {
+    my ($wc, $bundle_name) = @_;
+    my $data = $s->query($wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_name)->result();
+    $data;
+}
 sub register_upload_host {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
     my ($registered, $res);
@@ -187,7 +192,7 @@ sub check_server_response {
 	  20  => [ N("Service error"), N("Mandriva web services are under maintenance\nPlease Try again Later") ],        
 	  22  => [ N("User Forbidden"), N("User account forbidden by Mandriva web services") ],
 	  99  => [ N("Connection error"), N("Mandriva web services not reachable") ]
-	};
+	  };
     foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} };
     #    print Dumper($response);
     my $code = $response->{code} || '99';
