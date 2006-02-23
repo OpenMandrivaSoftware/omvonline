@@ -112,10 +112,11 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Thu Feb 16 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+* Thu Feb 23 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
 - mimetype association between bundle and mdkupdate (fcrozat)
 - Mandriva Online V3
 - extra package installation and update capabilities
+- clean up
 
 * Fri Dec  9 2005 Daouda LO <daouda@mandriva.com> 1.4-0.1mdk
 - display updates to install even if server is out of sync
