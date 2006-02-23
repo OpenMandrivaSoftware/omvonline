@@ -95,9 +95,9 @@ my $wc = mdkonline::read_conf();
 if (!$bundle) {
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
-	$getupdates = mdkonline::get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
+	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
+	print Dumper($getupdates);
 	if ($getupdates->{message}) {
-	    print Dumper($getupdates);
 	    exit(0);
 	    my $rpms_scheduled;
 	    -f $currentrpm or rpm_qa($currentrpm);
@@ -109,7 +109,7 @@ if (!$bundle) {
 	    } elsif ($noX) {
 		my $in = interactive->vnew;
 		my $pkgs = ask_pkgs($in);
-		install_pkgs($in, $pkgs) if $pkgs;
+		install_pkgs($in, $pkgs, 'update_source') if $pkgs;
 		$in->exit(0);
 	    } elsif ($auto) {
 		auto_install_rpms($rpms_scheduled);
@@ -138,7 +138,13 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
-    print Dumper($bundle_info)
+    print Dumper($bundle_info);
+    if ($bundle_info->{status}) {
+	my $int = interactive->vnew;
+	my ($media, $mirror) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror});
+	add_media($media, $mirror, 'hdlist.cz');
+	install_pkgs($int, $bundle_info->{data}->{bundle}, $media);
+    }
 }
 
 sub ask_pkgs {
@@ -166,10 +172,10 @@ sub ask_pkgs {
 }
 
 sub install_pkgs {
-    my ($in, $choosed) = @_;
+    my ($in, $choosed, $media_name) = @_;
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
     eval {
-	system "/usr/sbin/urpmi", "--auto", "--media", "update_source", @$choosed;
+	system "/usr/sbin/urpmi", "--auto", "--media", $media_name, @$choosed;
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     undef $w;
@@ -223,39 +229,27 @@ sub auto_install_rpms {
     $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 }
 
-sub update_conf {
-    my ($oldkey, $newkey) = @_;
-    my %l = getVarsFromSh $conffile;
-    setVarsInSh($conffile, {
-		OLDKEY => $oldkey,
-		CURRENTKEY => $newkey,
-		VER => $l{VER},
-       	        MACHINE => $l{MACHINE},
-		PASS => $l{PASS},
-		LOGIN => $l{LOGIN},
-		AUTO => $l{AUTO}
-	      });
+sub add_media {
+    my ($media_name, $mirror, $hdlist) = @_;
+    eval { 
+	system "/usr/sbin/urpmi.removemedia", $media_name;
+	system "/usr/sbin/urpmi.addmedia", $media_name, $mirror, "with", $hdlist; 
+    };
+    $@ and die "Problem adding bundle media with urpmi";
 }
 
-sub add_media {
+sub prepare_media {
     my $mirror = shift;
     my ($r, $da, $is_x8664, $dist_name);
     ($r) = mdkonline::get_release();
     # retrieve dist and arch from /etc/mandrakelinux file
     $da = mdkonline::get_distro_type();
-    my $media_varfile = "/var/lib/urpmi/list.mdkupdate";
     my ($path2new_arch, $path2new_synthesis) = $r <= 10.0 ? ('/RPMS/', '../base/synthesis.hdlist.cz') : ('/main_updates/', 'media_info/synthesis.hdlist.cz');
     #sometimes server returns the full link http:// or ftp://
     ($is_x8664) = $da->{arch} =~ /(x86_64)/;
     $dist_name = $da->{name};
     my $fullpath2mir = if_($mirror !~ m!^(?:http|ftp)://! , "ftp://") . $mirror . if_($is_x8664, "/$is_x8664") . if_($dist_name, "/$dist_name") . "/$r" . $path2new_arch;
-    eval {
-	#Remove historical mdkupdate source 
-	-f $media_varfile and system "/usr/sbin/urpmi.removemedia", "mdkupdate";
-	system "/usr/sbin/urpmi.removemedia", "update_source";
-	system "/usr/sbin/urpmi.addmedia", "--update", "update_source", $fullpath2mir, "with", $path2new_synthesis;
-    };
-    $@ and die "Problem adding Update Media with urpmi";
+    add_media('update_source', $fullpath2mir, $path2new_synthesis);
 }
 
 sub update_pkgs {
