@@ -140,7 +140,6 @@ if (!$bundle) {
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
     print Dumper($bundle_info);
     if ($bundle_info->{status}) {
-	my $int = interactive->vnew;
 	my ($media, $mirror) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror});
 	add_media($media, $mirror, 'hdlist.cz');
 	install_pkgs($int, $bundle_info->{data}->{bundle}, $media);
