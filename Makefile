@@ -6,7 +6,6 @@ TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
 NAME = mdkonline
 MDKUPDATE = mdkupdate
 MDKAPPLET = mdkapplet
-MDKBUNDLE = mdvbundle.pl
 SUBDIRS = po
 
 PREFIX = /
@@ -38,7 +37,6 @@ install: all
 	install -m755 $(NAME) $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
-	install -m755 $(MDKBUNDLE) $(BINDIR)
 	install -m644 icons/$(NAME)16.png $(ICONSDIR)/mini/$(NAME).png
 	install -m644 icons/$(NAME)32.png $(ICONSDIR)/$(NAME).png
 	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
