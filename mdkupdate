@@ -93,77 +93,41 @@ GetOptions(%options);
 $bundle eq "webbundle" and mdkonline::get_site("http://online3.mandriva.com/one/web/bundle"), exit(0);
 
 my $wc = mdkonline::read_conf();
+-e $logfile and system "/bin/rm", $logfile;
 
 if (!$bundle) {
-    if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
-	my $u;
-	my $MandrakeUpdateURL = $url->{online3_RemoteAction} . '?action=ScheduledRPM' . '&log=' . $o{LOGIN} . '&pass=' . $o{PASS} . '&host=' . $o{MACHINE} . '&key=' . $o{CURRENTKEY};
-	my $resp = mdkonline::get_from_URL($MandrakeUpdateURL, 'MdkUpdateAgent');
-	my $contents = $resp->content;
-	# print "CONTENTS = $contents \n";
-	-e $logfile and system "/bin/rm", $logfile;
-	if ($resp->is_success) {
-	    if ($contents =~ /TRUE/) { $u = 10 } elsif ($contents =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 83 }
-	    my $action = {
-			  10 => sub {
-			      my $c2h = split_contents($contents);
-			      #printf("\nCONTENTS = $contents \n torf = %s\n OLDKEY = %s = %s \n NEWKEY = %s \n FTP = %s\n", $c2h->{torf}, $c2h->{OLDKEY}, $o{CURRENTKEY}, $c2h->{NEWKEY}, $c2h->{FTP} );
-			      if ($c2h->{torf} eq "TRUE" && $c2h->{OLDKEY} && $c2h->{NEWKEY}) { update_conf($c2h->{OLDKEY}, $c2h->{NEWKEY}) }
-			      if ($c2h->{FTP}) { 
-				  # for debugging purpose
-				  printf("FTP = %s\n", $c2h->{FTP});
-				  #$c2h->{FTP} = 'ftp://ftp.lip6.fr/pub/linux/distributions/mandrake/updates';
-				  add_media($c2h->{FTP});
-			      }
-			      $scheduled = join(',', @{$c2h->{sched}});
-			      $noscheduled = join(',', @{$c2h->{nosched}}); $noscheduled =~ s/\.rpm//g;
-			      #printf "SCHEDULED = $scheduled\nNOSCHEDULED = $noscheduled\n";
-			      -f $currentrpm or rpm_qa($currentrpm);
-			      my ($release) = mdkonline::get_release();
-			      if ($applet) {
-				  my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
-				  my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
-				  system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source";
-			      } elsif ($noX) {
-				  my $in = interactive->vnew;
-				  my $pkgs = ask_pkgs($in);
-				  install_pkgs($in, $pkgs) if $pkgs;
-				  $in->exit(0);
-			      } elsif ($auto) {
-				  $o{AUTO} eq 'TRUE' and auto_install_rpms($c2h->{sched});
-			      }
-			      rpm_qa($afterrpm);
-			      my %new = getVarsFromSh($conffile);
-			      my $need_upload = get_rpm_diff();
-			      if ($need_upload || $auto || $mnf) {
-				  #- send configuration and get back key to use...
-				  my $r;
-				  ($r, $new{CURRENTKEY}) = send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
-				  $new{FTP} = $mnf ? $c2h->{FTP} : '';
-				  if ($r eq 'TRUE') { delete $new{OLDKEY}; setVarsInSh($conffile, \%new) }
-			      }
-			      clean_dir();
-			  },
-			  80 => sub { 
-			      output_p($logfile, "[mdkupdate] Error 80: Client password does not match in database");
-			  },
-			  81 => sub {
-			      output_p($logfile, "[mdkupdate] Error 81: Bad Authentification key. Please rerun mdkonline wizard");
-			  },
-			  82 => sub {
-			      output_p($logfile, "[mdkupdate] Error 82: No active Online service found for this host.");
-			  },
-			  83 => sub {
-			      output_p($logfile, "[mdkupdate] Error 83: Unknown problem, better relaunch mdkonline wizard or check connexion");
-			  }
-			 };
-	    $action->{$u}->();
+    if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
+	my $getupdates;
+	$getupdates = mdkonline::get_update_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
+	if ($getupdates->{message}) {
+	    print Dumper($getupdates);
+	    my $rpms_scheduled;
+	    -f $currentrpm or rpm_qa($currentrpm);
+	    my ($release) = mdkonline::get_release();
+	    if ($applet) {
+		my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
+		my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
+		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source";
+	    } elsif ($noX) {
+		my $in = interactive->vnew;
+		my $pkgs = ask_pkgs($in);
+		install_pkgs($in, $pkgs) if $pkgs;
+		$in->exit(0);
+	    } elsif ($auto) {
+		auto_install_rpms($rpms_scheduled);
+	    }
+	    rpm_qa($afterrpm);
+	    my $wc = mdkonline::read_conf();
+	    my $need_upload = get_rpm_diff();
+	    if ($need_upload || $auto || $mnf) {
+		#- send configuration and get back key to use...
+		my $r;
+		= send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
+		$new{FTP} = $mnf ? $c2h->{FTP} : '';
+	    }
+	    clean_dir();
 	} else {
-	    output_p($logfile, N("Connection problem") . "\n" . N("Mandriva Update could not contact the site, we will try again."));
-	}
-    } else {
-	my $ret = -1; 
-    }
+	} 	
 } else {
     my $data;
     my $namespace    = 'http://online3.mandriva.com/o/soap/';
