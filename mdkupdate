@@ -86,8 +86,6 @@ my %options = (
 
 GetOptions(%options);
 
--s $conffile || $bundle or die N("No %s file found. Run mdkonline wizard first", $conffile);
-
 $bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $result;
@@ -97,7 +95,7 @@ my $wc = mdkonline::read_conf();
 if (!$bundle) {
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
-	$getupdates = mdkonline::get_update_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
+	$getupdates = mdkonline::get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
 	if ($getupdates->{message}) {
 	    print Dumper($getupdates);
 	    exit(0);
