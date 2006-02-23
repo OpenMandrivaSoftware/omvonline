@@ -38,19 +38,15 @@ require_root_capability();
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
+
 my $difflog = '/var/tmp/diff.log';
+my $logfile = '/var/tmp/mdkupdate.log';
+
 
 my $currentrpm = "$confdir/rpm_qa_installed_current";
 my $afterrpm =  "$confdir/rpm_qa_installed_after";
 
-my $logfile = '/var/tmp/mdkupdate.log';
-
-my $onlineUrl = "https://www.mandrivaonline.com/";
-
-my $url;
-foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
-    $url->{$_} = $onlineUrl . $_ . '.php';
-}
+my $startpage = 'http://start.mandriva.com/bundle/';
 
 my $VERSION = "3";
 my $YEARS = "2002-2005";
@@ -90,7 +86,7 @@ GetOptions(%options);
 
 -s $conffile || $bundle or die N("No %s file found. Run mdkonline wizard first", $conffile);
 
-$bundle eq "webbundle" and mdkonline::get_site("http://online3.mandriva.com/one/web/bundle"), exit(0);
+$bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $result;
 my $wc = mdkonline::read_conf();
@@ -131,7 +127,7 @@ if (!$bundle) {
 	}
     } else { # no HOST_ID 
 	
-    } 	
+    }
 } else {
     my $bundle_info;
     my $namespace    = 'http://online3.mandriva.com/o/soap/';
@@ -272,14 +268,6 @@ sub update_pkgs {
     };
     $@ and output_p($logfile, "[mdkupdate] Error 99: $@"), return 0;
     return 1;
-}
-
-sub send_conf_update {
-    my ($login, $password, $boxname) = @_;
-    mdkonline::report_config("$confdir/$login.$password.$boxname.online.log");
-    my $tag = { submit => 'upload_wizard', wizard => [ "$confdir/$login.$password.$boxname.online.log.bz2.uue" ] };
-    my ($res, $key) = mdkonline::send_config($url->{wizard}, $tag);
-    ($res, $key);
 }
 
 sub get_rpm_diff {
