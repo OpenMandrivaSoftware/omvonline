@@ -260,18 +260,23 @@ sub rpm_ver_cmp {
 }
 
 sub soap_recover_service {
-    my $auth = $s->recoverHostFromV2(@_)->result();
-    $auth;
+    my $data = $s->recoverHostFromV2(@_)->result();
+    $data;
 }
 
 sub soap_get_task {
-    my $auth = $s->getTask(@_)->result();
-    $auth;
+    my $data = $s->getTask(@_)->result();
+    $data;
 }
 
 sub soap_return_task_result {
-    my $auth = $s->setTaskResult(@_)->result();
-    $auth;	
+    my $data = $s->setTaskResult(@_)->result();
+    $data;	
+}
+
+sub soap_get_updates_for_host {
+    my $data = $s->getUpdatesForHost(@_)->result();
+    $data
 }
 
 sub mv_files {
