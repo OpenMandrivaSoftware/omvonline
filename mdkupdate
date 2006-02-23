@@ -92,6 +92,7 @@ GetOptions(%options);
 
 $bundle eq "webbundle" and mdkonline::get_site("http://online3.mandriva.com/one/web/bundle"), exit(0);
 
+my $result;
 my $wc = mdkonline::read_conf();
 -e $logfile and system "/bin/rm", $logfile;
 
@@ -101,6 +102,7 @@ if (!$bundle) {
 	$getupdates = mdkonline::get_update_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
 	if ($getupdates->{message}) {
 	    print Dumper($getupdates);
+	    exit(0);
 	    my $rpms_scheduled;
 	    -f $currentrpm or rpm_qa($currentrpm);
 	    my ($release) = mdkonline::get_release();
@@ -121,15 +123,17 @@ if (!$bundle) {
 	    my $need_upload = get_rpm_diff();
 	    if ($need_upload || $auto || $mnf) {
 		#- send configuration and get back key to use...
-		my $r;
-		= send_conf_update($new{LOGIN}, $new{PASS}, $new{MACHINE});
-		$new{FTP} = $mnf ? $c2h->{FTP} : '';
+		$result = mdkonline::prepare_upload_conf($wc);
 	    }
 	    clean_dir();
-	} else {
-	} 	
+	} else { # code return a problem to get updates
+	    
+	}
+    } else { # no HOST_ID 
+	
+    } 	
 } else {
-    my $data;
+    my $bundle_info;
     my $namespace    = 'http://online3.mandriva.com/o/soap/';
     my $serviceProxy = $namespace;
     my %bundle_vars = getVarsFromSh($bundle);
@@ -138,8 +142,8 @@ if (!$bundle) {
     $wc = mdkonline::read_conf();
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
-    my $result = mdkonline::prepare_upload_conf($wc);
-    $result eq 'OK' and $bundle_info = $s->query( $wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_vars{BUNDLE} )->result();
+    my $res = mdkonline::prepare_upload_conf($wc);
+    $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
     print Dumper($bundle_info)
 }
 
