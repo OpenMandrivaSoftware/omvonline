@@ -179,7 +179,7 @@ sub create_authenticate_account {
 sub check_server_response {
     my ($response) = shift;
     my $hash_ret = {
-	   1  => [ N("Security error"), N("Generic error (machine already registered)") ],                  
+	   1  => [ N_("Security error"), N("Generic error (machine already registered)") ],                  
            2  => [ N("Database error"), N("Server Database failed\nPlease Try again Later") ],
 	   3  => [ N("Registration error"), N("Some parameters are missing") ],
            5  => [ N("Password error"), N("Wrong password") ],
