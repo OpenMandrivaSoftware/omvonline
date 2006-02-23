@@ -88,6 +88,10 @@ GetOptions(%options);
 
 $bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
+my $in;
+
+$bundle || $noX and $in = interactive->vnew;
+
 my $result;
 my $wc = mdkonline::read_conf();
 -e $logfile and system "/bin/rm", $logfile;
@@ -107,7 +111,6 @@ if (!$bundle) {
 		my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
 		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source";
 	    } elsif ($noX) {
-		my $in = interactive->vnew;
 		my $pkgs = ask_pkgs($in);
 		install_pkgs($in, $pkgs, 'update_source') if $pkgs;
 		$in->exit(0);
@@ -140,9 +143,12 @@ if (!$bundle) {
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
     print Dumper($bundle_info);
     if ($bundle_info->{status}) {
-	my ($media, $mirror) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror});
+	my @bundles;
+	my ($media, $mirror, $bundle) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror}, $bundle_info->{data}->{bundle});
 	add_media($media, $mirror, 'hdlist.cz');
-	install_pkgs($int, $bundle_info->{data}->{bundle}, $media);
+	$bundle =~ s/\.rpm$//;
+	push(@bundles, $bundle);
+	install_pkgs($in, \@bundles, $media);
     }
 }
 
@@ -206,18 +212,6 @@ sub my_fullname {
     return '?-?-?' unless ref $_[0];
     my ($name, $version, $release) = $_[0]->fullname;
     "$name-$version-$release";
-}
-
-sub split_contents {
-    my $cont = shift;
-    my ($elem, $s);
-    $s = [ split /\n/, $cont ];
-    $elem->{torf} = $s->[0];
-    if ($elem->{torf} eq 'TRUE') {
-	($elem->{torf}, $elem->{NEWKEY}, $elem->{OLDKEY}, $elem->{FTP}) = splice(@$s, 0, 4);
-	($elem->{sched}, $elem->{nosched}) = partition { /(i586|ppc|ia64|noarch|x86_64|amd64|ppc64)$/ } @$s;
-    }
-    $elem;
 }
 
 sub auto_install_rpms {
