@@ -113,7 +113,7 @@ sub soap_upload_config {
 
 sub register_upload_host {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
-    my ($registered, $uploaded, $res);
+    my ($registered, $res);
     my $wc = read_conf();
     if (!$wc->{HOST_ID} && -e $rootconf_file) {
 	$res = upgrade2v3();
@@ -125,7 +125,16 @@ sub register_upload_host {
     return $res if (defined $res && $res ne 'OK');
     #Reread configuration
     $wc = read_conf() if $res eq 'OK';
-    my $r = cat_($release_file); my %p = getVarsFromSh($product_file); my $rpmdblist = get_rpmdblist();
+    $res = prepare_upload_con($wc);
+    $res
+}
+
+sub prepare_upload_conf {
+    my ($wc) = shift;
+    my ($uploaded, $res);
+    my $r = cat_($release_file); 
+    my %p = getVarsFromSh($product_file); 
+    my $rpmdblist = get_rpmdblist();
     $wc->{HOST_ID} and $uploaded = soap_upload_config($wc->{HOST_ID}, $wc->{HOST_KEY}, $r, $p{META_CLASS}, $rpmdblist);
     $res = check_server_response($uploaded);
     return $res
