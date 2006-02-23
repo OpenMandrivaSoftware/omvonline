@@ -4,7 +4,7 @@
 #                                                                              #
 # Copyright (C) 2002-2004 Mandriva                                             #
 #                                                                              #
-# Daouda Lo <daouda at mandriva dot com>                                              #
+# Daouda Lo <daouda at mandriva dot com>                                       #
 #                                                                              #
 # This program is free software; you can redistribute it and/or modify         #
 # it under the terms of the GNU General Public License Version 2 as            #
@@ -51,10 +51,11 @@ my $url;
 foreach (qw(online_dif online_update online3_RemoteAction wizard)) {
     $url->{$_} = $onlineUrl . $_ . '.php';
 }
-my $VERSION = "2.0";
+
+my $VERSION = "3";
 my $YEARS = "2002-2005";
 
-#for compatibilities
+#for compatibilities with former versions
 mkdir_p($confdir) if !-d $confdir;
 -e '/root/.mdkupdate' and system "/bin/mv", "/root/.mdkupdate", $conffile;
 
@@ -91,7 +92,7 @@ GetOptions(%options);
 
 $bundle eq "webbundle" and mdkonline::get_site("http://online3.mandriva.com/one/web/bundle"), exit(0);
 
-my %o = getVarsFromSh($conffile);
+my $wc = mdkonline::read_conf();
 
 if (!$bundle) {
     if ($o{LOGIN} && $o{PASS} && $o{LOGIN} !~ /\s+/ && $o{PASS} !~ /\s+/) {
@@ -169,16 +170,13 @@ if (!$bundle) {
     my $serviceProxy = $namespace;
     my %bundle_vars = getVarsFromSh($bundle);
     
-    $o{LOGIN} or system("/usr/sbin/mdkonline");
-    $o{LOGIN} or die("Configuration not uploaded to Mandriva Online");
+    $wc->{USER_EMAIL} or system("/usr/sbin/mdkonline");
+    $wc = mdkonline::read_conf();
+    $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
-    my $s = SOAP::Lite
-      ->proxy($serviceProxy)
-	->uri($namespace);
-    $data = mdkonline::soap_authenticate_user($o{LOGIN}, $o{PASS});
-    $data = mdkonline::soap_register_host($o{LOGIN}, $o{PASS}, $o{MACHINE}, "Testing online");
-    my $id  = $data->{data}->{host_id}; my $key = $data->{data}->{host_key};
-    $data = $s->query( $id, $key, 'Software::get_bundle', $bundle_vars{BUNDLE} )->result();
+    my $result = mdkonline::prepare_upload_conf($wc);
+    $result eq 'OK' and $bundle_info = $s->query( $wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_vars{BUNDLE} )->result();
+    print Dumper($bundle_info)
 }
 
 sub ask_pkgs {
@@ -204,6 +202,7 @@ sub ask_pkgs {
 			      }) or return keys %$pkgs; #- no change on cancel.
     [ grep { $pkgs->{$_}{selected} } keys %$pkgs ];
 }
+
 sub install_pkgs {
     my ($in, $choosed) = @_;
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
@@ -213,6 +212,7 @@ sub install_pkgs {
     };
     undef $w;
 }
+
 sub get_updatable_pkgs() {
     my $urpm = new urpm;
     $urpm->read_config;
@@ -234,11 +234,13 @@ sub get_updatable_pkgs() {
     }
     \%installable_pkgs;
 }
+
 sub my_fullname {
     return '?-?-?' unless ref $_[0];
     my ($name, $version, $release) = $_[0]->fullname;
     "$name-$version-$release";
 }
+
 sub split_contents {
     my $cont = shift;
     my ($elem, $s);
@@ -250,6 +252,7 @@ sub split_contents {
     }
     $elem;
 }
+
 sub auto_install_rpms {
     my ($pkgs) = shift;
     my @pkg;
@@ -257,6 +260,7 @@ sub auto_install_rpms {
     my $ret = update_pkgs(@pkg);
     $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 }
+
 sub update_conf {
     my ($oldkey, $newkey) = @_;
     my %l = getVarsFromSh $conffile;
@@ -270,6 +274,7 @@ sub update_conf {
 		AUTO => $l{AUTO}
 	      });
 }
+
 sub add_media {
     my $mirror = shift;
     my ($r, $da, $is_x8664, $dist_name);
@@ -290,6 +295,7 @@ sub add_media {
     };
     $@ and die "Problem adding Update Media with urpmi";
 }
+
 sub update_pkgs {
     @_ or return;
     eval {
@@ -299,6 +305,7 @@ sub update_pkgs {
     $@ and output_p($logfile, "[mdkupdate] Error 99: $@"), return 0;
     return 1;
 }
+
 sub send_conf_update {
     my ($login, $password, $boxname) = @_;
     mdkonline::report_config("$confdir/$login.$password.$boxname.online.log");
@@ -306,19 +313,23 @@ sub send_conf_update {
     my ($res, $key) = mdkonline::send_config($url->{wizard}, $tag);
     ($res, $key);
 }
+
 sub get_rpm_diff {
     my $isdif = `sdiff -s $afterrpm $currentrpm`;
     $isdif and output_p($difflog, $isdif), return 1;
     return 0;
 }
+
 sub new_rpm_base {
     -f $afterrpm and system('/bin/mv', $afterrpm, $currentrpm);
 }
+
 sub clean_dir() {
     new_rpm_base();
     mdkonline::clean_confdir();
     output_p($logfile, 'OK');
 }
+
 sub rpm_qa {
     my ($file) = @_;
     output($file, chomp_(join('', sort(`rpm -qa`))));
