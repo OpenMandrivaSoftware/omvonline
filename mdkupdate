@@ -145,7 +145,7 @@ if (!$bundle) {
     if ($bundle_info->{status}) {
 	my @bundles;
 	my ($media, $mirror, $bundle) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror}, $bundle_info->{data}->{bundle});
-	add_media($media, $mirror, 'hdlist.cz');
+	add_media($media, $mirror, 'hdlist.cz', '');
 	$bundle =~ s/\.rpm$//;
 	push(@bundles, $bundle);
 	install_pkgs($in, \@bundles, $media);
@@ -223,10 +223,10 @@ sub auto_install_rpms {
 }
 
 sub add_media {
-    my ($media_name, $mirror, $hdlist) = @_;
+    my ($media_name, $mirror, $hdlist, $option) = @_;
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
-	system "/usr/sbin/urpmi.addmedia", $media_name, $mirror, "with", $hdlist; 
+	system "/usr/sbin/urpmi.addmedia", $option, $media_name, $mirror, "with", $hdlist; 
     };
     $@ and die "Problem adding bundle media with urpmi";
 }
@@ -242,7 +242,7 @@ sub prepare_media {
     ($is_x8664) = $da->{arch} =~ /(x86_64)/;
     $dist_name = $da->{name};
     my $fullpath2mir = if_($mirror !~ m!^(?:http|ftp)://! , "ftp://") . $mirror . if_($is_x8664, "/$is_x8664") . if_($dist_name, "/$dist_name") . "/$r" . $path2new_arch;
-    add_media('update_source', $fullpath2mir, $path2new_synthesis);
+    add_media('update_source', $fullpath2mir, $path2new_synthesis, '--update');
 }
 
 sub update_pkgs {
