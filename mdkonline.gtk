@@ -75,15 +75,15 @@ $o->{actions} = {
 		     $p = $o->{nb}->get_current_page;
 		     $stage{$p}->();
 		     $p <= 0 and $o->{Prev}->set_sensitive(1);
-		     $p == 4 and main_quit()
+		     $p == 4 and main_quit();
 		 },
 		 SkipWiz => sub {
-		     main_quit()
+		     main_quit();
 		 },
 		 Prev => sub {
 		     $p = $o->{nb}->get_current_page;
 		     $o->{nb}->prev_page;
-		     $p <= 1 and init(0)
+		     $p <= 1 and init(0);
 		 }
 		};
 foreach my $l ([ 'Next', N("Next"), 1 ], [ 'SkipWiz', N("Cancel") ], [ 'Prev', N("Previous"), 1 ]) {
@@ -175,16 +175,16 @@ sub subs_online() {
 	my $url = $explink . '?desuserid=' . $login . '&despwd=' . $despwd . '&user_email=' . $cmail;
 	#print "LOGIN = $login\nPASSWD = $despwd\nMAIL= $cmail\nURL=$url\n";
 	my $ret = mdkonline::subscribe_online($url);
-	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}{window}, N("Error"), $ret) };
+	if ($ret eq 'OK') { $o->{nb}->next_page } else { raiseError($o->{mw}{window}, N("Error"), $ret) }
     }
 }
 sub check_errors {
     my ($login, $despwd, $despwdcfm, $cmail) = @_;
     $login or raiseError($o->{mw}{window}, N("Error"), N("Please provide a login"));
     if (!$::error && $despwd ne $despwdcfm) {
-	raiseError($o->{mw}{window}, N("Error"), N("The passwords do not match\n Please try again\n"))
+	raiseError($o->{mw}{window}, N("Error"), N("The passwords do not match\n Please try again\n"));
     } elsif (!$::error && check_valid_email($cmail) != 1) {
-	raiseError($o->{mw}{window}, N("Error"), N("Not a valid mail address!\n"))
+	raiseError($o->{mw}{window}, N("Error"), N("Not a valid mail address!\n"));
     }
 }
 sub set_entry_with_conf() {
@@ -208,7 +208,7 @@ sub send_conf_online() {
     remove_wait_msg($ww);
     if ($res eq 'TRUE' && $key) {
 	$o->{currentkey} = $key;
-	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide
+	$o->{nb}->next_page; $o->{Next}->set_label(N("Finish")); $o->{Prev}->hide;
     } else {
 	raiseError($o->{mw}{window}, N("Connection problem"), N("Problem occurs when uploading files, please try again"));
     }
@@ -231,14 +231,14 @@ sub first_settings() {
 }
 sub final() {
     $o->{Prev}->hide; $o->{SkipWiz}->hide;
-    $o->{Next}->set_label(N("Finish"))
+    $o->{Next}->set_label(N("Finish"));
 }
 sub get_names() {
     my ($login, $passwd, $machine);
     $login = $o->{login}->get_text;
     $passwd = md5_hex($o->{passwd}->get_text);
     $machine = $o->{machine}->get_text;
-    ($login, $passwd, $machine)
+    ($login, $passwd, $machine);
 }
 sub main_quit() {
     # remove local files
@@ -253,7 +253,7 @@ sub main_quit() {
 }
 sub is_alphanum {
     my ($x) = @_;
-    my $_is_num = sub { $x =~ /^[[:alnum:]]+$/ ? 1 : 0 }
+    my $_is_num = sub { $x =~ /^[[:alnum:]]+$/ ? 1 : 0 };
 }
 sub check_passwd() {
     my $link = 'http://www.mandrivaexpert.com/firsttimewizard/validusercheck.php';
