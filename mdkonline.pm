@@ -47,7 +47,7 @@ sub upgrade2v3 {
     my $res;
     if (-e $rootconf_file) {
 	my %oc = getVarsFromSh($rootconf_file);
-	my $res = soap_recover_service($oc{LOGIN}, '{md5}'. $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
+	my $res = soap_recover_service($oc{LOGIN}, '{md5}' . $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
 	print Dumper($res);
 	$res = check_server_response();
     }
@@ -56,7 +56,7 @@ sub upgrade2v3 {
 
 sub get_rpmdblist {
     my $rpmdblist = `rpm -qa --queryformat '%{HDRID};%{N};%{E};%{V};%{R};%{ARCH};%{OS};%{DISTRIBUTION};%{VENDOR};%{SIZE};%{BUILDTIME};%{INSTALLTIME}\n'`;
-    $rpmdblist
+    $rpmdblist;
 }
 
 sub md5file {
@@ -127,7 +127,7 @@ sub register_upload_host {
 	print Dumper($registered);
 	$res = check_server_response($registered);
     }
-    return $res if (defined $res && $res ne 'OK');
+    return $res if defined $res && $res ne 'OK';
     #Reread configuration
     $wc = read_conf() if $res eq 'OK';
     $res = prepare_upload_con($wc);
@@ -142,7 +142,7 @@ sub prepare_upload_conf {
     my $rpmdblist = get_rpmdblist();
     $wc->{HOST_ID} and $uploaded = soap_upload_config($wc->{HOST_ID}, $wc->{HOST_KEY}, $r, $p{META_CLASS}, $rpmdblist);
     $res = check_server_response($uploaded);
-    return $res
+    return $res;
 }
 
 sub get_from_URL {
@@ -152,7 +152,7 @@ sub get_from_URL {
     $ua->env_proxy;
     my $request = HTTP::Request->new(GET => $link);
     my $response = $ua->request($request);
-    $response
+    $response;
 }
 
 sub get_site {
@@ -166,10 +166,8 @@ sub create_authenticate_account {
     my @info = @_;
     my ($response, $ret);
     my $action = {
-		  create => sub { eval { $response = soap_create_account(@info) }; },
-		  #create => sub { eval { $response = soap_exec_action('registerUser', @info) }; },
-		  authenticate => sub { eval { $response = soap_authenticate_user(@info) }; }
-		  #authenticate => sub { eval { $response = soap_exec_action('authenticateUser', @info) }; }
+		  create => sub { eval { $response = soap_create_account(@info) } },
+		  authenticate => sub { eval { $response = soap_authenticate_user(@info) } }
 		 };
     $action->{$type}->();
     $ret = check_server_response($response);
@@ -203,14 +201,14 @@ sub check_server_response {
 sub check_valid_email {
     my $email = shift;
     my $st = $email =~ /^[a-z][a-z0-9_\-]+(\.[a-z][a-z0-9_]+)?@([a-z][a-z0-9_\-]+\.){1,3}(\w{2,4})(\.[a-z]{2})?$/ix ? 1 : 0;
-    return $st
+    return $st;
 }
 
 sub check_valid_boxname {
     my $boxname = shift;
     return 0 if length($boxname) >= 40;
     my $bt = $boxname =~ /^[a-zA-Z][a-zA-Z0-9_]+$/i ? 1 : 0;
-    $bt
+    $bt;
 }
 
 sub rpm_ver_parse {
@@ -310,19 +308,18 @@ if [ -f $conf_file ]; then /usr/sbin/mdkupdate --auto; fi
 
 sub read_conf() {
     my %wc = getVarsFromSh($conf_file);
-    \%wc
+    \%wc;
 }
 
 sub write_conf {
     my $response = shift;
     write_wide_conf($response);
-    #write_rootconf($response);
 }
 
 sub get_date() {
     my $date = `date --iso-8601=seconds`; # output  date/time  in ISO 8601 format. Ex: 2006-02-21T17:04:19+0100
     $date = chomp_($date);
-    $date
+    $date;
 }
 
 sub write_wide_conf {
