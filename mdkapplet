@@ -42,12 +42,10 @@ mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
 my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
-my $arch = arch();
 my $online_site = "https://www.mandrivaonline.com/";
-my ($menu, $timeout, $refreshtm, $networktm, $eventbox, $img, $av_pkgs, $update_label, $lastch, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox, $bubble_applet);
-my ($need_update, $raisedwindow, $isAvailable, $debug, $conf_launched) = (0, 0, 0, 0, 0);
+my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
+my ($raisedwindow, $debug, $conf_launched) = (0, 0, 0, 0);
 
-my @proctable;
 
 my $conffile = '/etc/sysconfig/mdkonline';
 my $localdir = "$ENV{HOME}/.MdkOnline";
@@ -165,8 +163,8 @@ ugtk2::exit(0);
 
 # Signal management 
 sub harvester {
-    my ($signame, $clean) = @_;
-    my $childpid ;
+    my ($_signame, $clean) = @_;
+    my $childpid;
     do {
         $childpid = waitpid(-1, &WNOHANG);
         WIFEXITED($?) and refresh_gui(1);
@@ -174,11 +172,11 @@ sub harvester {
     return if $clean;
 }
 sub fork_exec {
-    my ($prog, $pid_table) = @_;
+    my ($prog, $o_pid_table) = @_;
     my $pid = fork();
     if (defined $pid) {
         !$pid and do { exec($prog) or POSIX::_exit() };
-        push @$pid_table, $pid;
+        push @$o_pid_table, $pid if $o_pid_table;
         return $pid;
     } else {
         refresh_gui(1);                                                                        
@@ -198,8 +196,6 @@ sub showMainWindow() {
     $w->set_position('center');
     $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
     $textvw = Gtk2::TextView->new;
-    my ($choice, $time, $update_label, $lastch);
-    my $autocheck;
     gtkadd($w,
            gtkpack_($MW_vbox = Gtk2::VBox->new(0, 5),
 		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
@@ -224,7 +220,7 @@ sub showMainWindow() {
 		   )
 	  );
     $w->show_all;
-    gtkflush()
+    gtkflush();
 }
 sub setLabel {
     my ($widget, $string) = shift;
@@ -253,7 +249,7 @@ sub refresh_contents {
     $contents;
 }
 sub configNetwork() { logIt(N("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
-sub installUpdates {
+sub installUpdates() {
     my $binfile = '/usr/bin/mdkapplet';
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
@@ -267,12 +263,12 @@ sub installUpdates {
     my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
-sub silentCheck {
+sub silentCheck() {
     my $link = $online_site . "online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
     my ($u, $ct);
     logIt(N("Computing new updates...\n"));
-    my $link = $link . '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
+    $link .= '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     logIt(N("Connecting to") . " $link ...\n");
     gtkflush(); go2State('busy'); gtkflush();
     my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
@@ -317,7 +313,7 @@ sub silentCheck {
 		  };
     eval { $retcode->{$u}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
 }
-sub okState { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('okay') }
+sub okState() { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('okay') }
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
@@ -334,7 +330,7 @@ sub compareWithInstalled {
     }
     $isUpdate;
 }
-sub cronUpdate {
+sub cronUpdate() {
     Glib::Timeout->add(10*1000, sub {
 	checkConfig();
 	1;
@@ -344,23 +340,22 @@ sub cronUpdate {
 				      1;
 				  });
 }
-sub lastCheck {
+sub lastCheck() {
     my %h = getVarsFromSh($localfile);
-    my ($t, $l);
-    $t = $h{LASTCHECK};
+    my $t = $h{LASTCHECK};
     $t =~ s/_/  /g;
     $t || N("No check");
 }
-sub getTime {
+sub getTime() {
     my $d = localtime();
     $d =~ s/\s+/_/g;
     $d;
 }
-sub setLastTime {
+sub setLastTime() {
     my $date = getTime();
     setVar($localfile, 'LASTCHECK', $date);
 }
-sub checkConfig {
+sub checkConfig() {
     if (!-e $conffile) {
 	logIt(N("Checking config file: Not present\n"));
 	go2State('noconfig');
@@ -371,7 +366,7 @@ sub checkConfig {
 	silentCheck(); #- state has changed, update
     }
 }
-sub checkUpdates {
+sub checkUpdates() {
     member($state_global, qw(disconnected noconfig)) or silentCheck();
 }
 sub go2State {
@@ -381,7 +376,7 @@ sub go2State {
     $state_global = $state;
     defined $textvw and refresh_status($state);
 }
-sub isNetwork {
+sub isNetwork() {
     my $network;
     if ($release <= 10.0) {
 	$network = gethostbyname("mandrivaonline.com") ? 1 : 0;
@@ -402,12 +397,12 @@ sub isNetwork {
     }
     $network;
 }
-sub configure {
+sub configure() {
     refresh_gui(0);
     fork_exec("/usr/sbin/mdkonline");
     $conf_launched = 1;
 }
-sub displayLogs {
+sub displayLogs() {
     my $w = ugtk2->new(N("Logs"), center => 1);
     gtkset_size_request($w->{window}, 500, 400);
     $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog });
@@ -418,13 +413,13 @@ sub displayLogs {
 		    1, create_scrolled_window(gtktext_insert($textview, $mLog)),
 		    0, Gtk2::HSeparator->new,
 		    0,  gtkpack_(Gtk2::HBox->new(0, 5),
-				 0, gtksignal_connect(my $close = Gtk2::Button->new(N("Close")), 
+				 0, gtksignal_connect(Gtk2::Button->new(N("Close")), 
 						      clicked => sub { 
 							  $w->destroy;
 							  undef $wlog;
 						      }),
 				 1, Gtk2::Label->new(""),
-				 0, gtksignal_connect(my $clear = Gtk2::Button->new(N("Clear")),
+				 0, gtksignal_connect(Gtk2::Button->new(N("Clear")),
 						      clicked => sub {
 							  $mLog = '';
 							  $buffer->set_text($mLog);
@@ -447,7 +442,6 @@ sub setState {
     gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(common::sprintf_fixutf8(translate($state{$state_type}{tt}[0]))));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
-	my $l = $actions{$_}{name};
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
@@ -459,7 +453,7 @@ sub setState {
 }
 sub logIt {
     my $log = shift;
-    my ($Second, $Minute, $Hour, $Day, $Month, $Year, $WeekDay, $DayOfYear, $IsDST) = localtime();
+    my ($Second, $Minute, $Hour, undef, undef, undef, undef, undef, undef) = localtime();
     $mLog .= $Hour . ':' . $Minute . ':' . $Second . '  ' . $log;
     if (defined $wlog) { $buffer->insert_at_cursor($log) }
 }

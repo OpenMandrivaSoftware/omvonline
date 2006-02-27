@@ -1,3 +1,360 @@
+2006-02-27 15:53  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - more perl_checker
+
+2006-02-27 15:49  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - perl_checko
+
+2006-02-27 15:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (check_valid_email) make it work
+
+2006-02-27 15:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: blacklist a few more modules
+
+2006-02-24 18:26  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - add option for --update
+
+2006-02-23 21:08  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - install bundle with same code than --auto option
+
+2006-02-23 21:07  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - handle bundle
+
+2006-02-23 20:54  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - checking the correct way to do things
+
+2006-02-23 20:34  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - create media and install bundle
+
+2006-02-23 18:19  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - fix func name
+
+2006-02-23 17:27  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - remove unneeded vars
+
+2006-02-23 16:35  Daouda Lo <daouda at mandriva.com>
+
+	* Makefile: - remove mdvbundle refs
+
+2006-02-23 16:34  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - put all soap call in mdkonline.pm
+
+2006-02-23 15:48  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - connect to start page
+
+2006-02-23 15:39  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - get_updates_for host
+
+2006-02-23 13:13  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - new soap API
+
+2006-02-23 11:24  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - add getUpdateHost func
+
+2006-02-23 11:06  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - make code more modular : separate prepare_upload
+	  to use it in cron   daemon exec
+
+2006-02-23 11:03  Daouda Lo <daouda at mandriva.com>
+
+	* mdvbundle.pl: remove unneeded file
+
+2006-02-23 11:03  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - check bundle info
+
+2006-02-23 10:55  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - clean up
+
+2006-02-22 20:15  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - fix typo
+
+2006-02-22 19:51  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - keep unchanged values unchanged
+
+2006-02-22 19:51  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - load config before writing change. Keep unchanged
+	  values unchanged
+
+2006-02-22 19:19  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - add better error message
+
+2006-02-22 19:06  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - fix readconf API - added alias to make mdkonline
+	  more consistent
+
+2006-02-22 18:50  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - handle upgrade v2 to v3 case
+
+2006-02-22 18:50  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - clean up
+
+2006-02-22 14:43  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - sync
+
+2006-02-22 14:28  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - write conf
+
+2006-02-21 18:50  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - save settings
+
+2006-02-21 18:49  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - save settings (to be finished)
+
+2006-02-21 13:35  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - write global conf
+
+2006-02-21 13:34  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - no needed key anymore
+
+2006-02-21 13:16  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - switch to new system
+
+2006-02-19 11:59  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/el.po: updated po file
+
+2006-02-16 17:51  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - sync
+
+2006-02-16 17:50  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - if bundle is given without arg, connect to mdkonline
+	  bundle webpage.
+
+2006-02-16 16:05  Daouda Lo <daouda at mandriva.com>
+
+	* Makefile: - fcrozat fixes for mime-type association
+
+2006-02-16 16:04  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - big fcrozat help
+
+2006-02-16 15:54  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.xml: - mime meta-info for mdkonlien
+
+2006-02-15 19:07  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - add fake bin for mime type
+
+2006-02-15 19:06  Daouda Lo <daouda at mandriva.com>
+
+	* Makefile: - add bundle
+
+2006-02-15 19:04  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - sync
+
+2006-02-15 19:03  Daouda Lo <daouda at mandriva.com>
+
+	* mdvbundle.pl: - fix typo
+
+2006-02-15 17:53  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - sync
+
+2006-02-15 17:52  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - add mime to filelist
+
+2006-02-15 17:37  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - fix typo on mime filename
+
+2006-02-15 17:09  Daouda Lo <daouda at mandriva.com>
+
+	* mdkapplet: - sync
+
+2006-02-15 17:09  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - change date
+
+2006-02-15 17:08  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - sync with new arch
+
+2006-02-15 17:07  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - use real machine name
+
+2006-02-15 16:33  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - added code to handle bundle
+
+2006-02-15 16:32  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline: - fixed wizard mode
+
+2006-02-15 06:53  Shiva Huang <blueshiva at giga.net.tw>
+
+	* po/zh_TW.po: updated po file
+
+2006-02-14 16:28  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - mimetype association between bundle and
+	  mdkupdate
+
+2006-02-10 18:09  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - Mandriva Online V3 - extra package installation
+	  and update capabilities
+
+2006-02-09 12:15  Daouda Lo <daouda at mandriva.com>
+
+	* mdkapplet: - change error to updates
+
+2006-02-09 11:50  Daouda Lo <daouda at mandriva.com>
+
+	* mdkapplet: - add bundle support
+
+2006-02-08 18:28  Daouda Lo <daouda at mandriva.com>
+
+	* pixmaps/bundle.png: new icon
+
+2006-02-08 15:25  berthy
+
+	* po/fr.po: Update french translation
+
+2006-01-07 08:33  mmodem
+
+	* po/pt.po: [no log message]
+
+2006-01-04 18:01  mmodem
+
+	* po/pt.po: [no log message]
+
+2005-12-27 15:01  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - don't need to check multiple instance of mdkupdate
+	  (the database is   locked anyway by the first to get in)
+
+2005-12-27 13:09  Daouda Lo <daouda at mandriva.com>
+
+	* mdkapplet: - grey Main Window before calling fork/exec
+
+2005-12-25 23:17  Daouda Lo <daouda at mandriva.com>
+
+	* mdkapplet: - Fixed ugly freeze state when launching configure and
+	  update process   through applet
+
+2005-12-23 11:58  Сергій Рибалченко (Sergey Ribalchenko) <fisher at obu.ck.ua>
+
+	* po/uk.po: uk tr-tion update
+
+2005-12-16 16:51  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* mdkonline.pm: Uploaded packages list is now formatted like a csv
+	  file (;-separated)
+
+2005-12-14 14:43  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/gl.po: updated po file
+
+2005-12-10 00:39  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/br.po: update
+
+2005-12-09 12:14  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* mdkonline.pm: [no log message]
+
+2005-12-09 11:14  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - display updates to install even if server is
+	  out of sync - fully SOAP enabled
+
+2005-12-08 16:41  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* Discover.pm, mdkonline.pm, mdvonline_agent.pl: [no log message]
+
+2005-12-06 20:11  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* mdkonline.pm: Added upgrade_to_v3(), soap_recover_service().
+	  Updated soap_create_account().
+
+2005-12-06 20:10  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* mdvonline_agent.pl: Online agent draft for service recovery (v2
+	  to v3) and dns discovery.
+
+2005-12-06 20:09  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* Discover.pm: DNS service discovery module for a Mandriva Online
+	  client.
+
+2005-12-02 13:22  Daouda Lo <daouda at mandriva.com>
+
+	* mdkupdate: - display update even if server is out of sync
+
+2005-12-02 13:19  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.pm: - make code more robust and more maintainable
+
+2005-11-26 08:32  Sharuzzaman Ahmat Raslan <sharuzzaman at myrealbox.com>
+
+	* po/ms.po: Updated Malay translation
+
+2005-11-23 18:18  Romain d'Alverny <rdalverny at mandriva.com>
+
+	* TODO: [no log message]
+
+2005-11-16 13:34  Daouda Lo <daouda at mandriva.com>
+
+	* TODO: - clean up - update
+
+2005-11-16 13:25  Daouda Lo <daouda at mandriva.com>
+
+	* mdkonline.spec: - update TODO - Change fuzzy menu title
+
+2005-11-14 12:04  Sharuzzaman Ahmat Raslan <sharuzzaman at myrealbox.com>
+
+	* po/ms.po: Updated Malay translation
+
+2005-10-29 05:30  Sharuzzaman Ahmat Raslan <sharuzzaman at myrealbox.com>
+
+	* po/ms.po: Updated Malay translation
+
+2005-10-28 15:58  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/bg.po: updated po file
+
+2005-10-27 19:08  Daouda Lo <daouda at mandriva.com>
+
+	* ChangeLog: Generated by cvs2cl the 27_oct
+
 2005-10-24 02:46  Willy Sudiarto Raharjo <willysr at gmail.com>
 
 	* po/id.po: Updated Contact Info

@@ -38,8 +38,7 @@ use Log::Agent; # use settings from main file
 my $VERSION = '0.01';
 
 #
-sub new
-{
+sub new {
 	my $self = {};
 	bless $self, "Discover";
 	logsay "DNS Service Discovery module $VERSION";
@@ -47,15 +46,14 @@ sub new
 }
 
 #
-sub init
-{
+sub init {
 	my $this = shift;
 	$this->{domainname} = '';
 	$this->{zone}       = '';
 	$this->{service}    = '';
 	$this->{nameserver} = '';
 	$this->{instance}   = '';
-};
+}
 
 #
 sub commify_series {
@@ -63,7 +61,7 @@ sub commify_series {
     (@_ == 1) ? $_[0] :
     (@_ == 2) ? join(" and ", @_) :
                 join(", ", @_[0 .. ($#_-1)], "and $_[-1]");
-};
+}
 
 #
 sub search {
@@ -73,13 +71,12 @@ sub search {
 
 	my $resolv      = Config::Auto::parse('/etc/resolv.conf');
 	my $servicetype = '_mdvonline._http._tcp.bonjour.';
-	my @domains     = ();
-	my @services    = ();
+	my (@domains, @services);
 	
 	! defined $resolv and logerr "No config found from /etc/resolv.conf.", return 0;
 	
 	defined $resolv->{domain} and @domains = $resolv->{domain};
-	defined $resolv->{search} and push( @domains, @{$resolv->{search}} );
+	defined $resolv->{search} and push @domains, @{$resolv->{search}};
 	
 	@domains = uniq(@domains);
 	for my $domain ( @domains ) {
@@ -196,12 +193,12 @@ sub parse_txt_config {
 	my ($this, @config) = @_;
 	my $retconfig;
 	
-	foreach my $line ( @config ) {
+	foreach my $line (@config) {
 		# TODO match these with a regexp
 		my @line  = split('=', $line);
 		my $key   = shift(@line);
 		my $value = join('=', @line);
-		switch( $key ) {
+		switch ($key) {
 			case 'txtvers' { $retconfig->{txtvers} = $value; }
 			case 'conf' {
 				my @co = split(',', $value);

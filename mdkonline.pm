@@ -16,26 +16,24 @@ use SOAP::Lite;
 #For debugging
 use Data::Dumper;
 
-my ($uri, $service_proxy, $online_proxy);
+my ($service_proxy);
 
 my $testing = 1;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 my ($product_file, $conf_file, $rootconf_file) = ('/etc/sysconfig/system', '/etc/sysconfig/mdkonline', '/root/.MdkOnline/hostconf'); 
-my $release = get_release();
 
 my $uri = !$testing ? 'https://online.mandriva.com/soap' : 'http://online3.mandriva.com/o/soap/';
 
 $service_proxy = $online_proxy  = $uri;
 
-my $VERSION = 3;
 my $useragent = set_ua('mdkonline');
 
 sub is_proxy () {
     return defined $ENV{http_proxy} ? 1 : defined $ENV{https_proxy} ? 2 : 0;
 }
 
-my $proxy = is_proxy;
+my $proxy = is_proxy();
 
 my $s = $proxy == 2
   ? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{https_proxy} ], agent => $useragent) 
@@ -43,7 +41,7 @@ my $s = $proxy == 2
   ? SOAP::Lite->uri($uri)->proxy($service_proxy, proxy => [ 'http' => $ENV{http_proxy} ], agent => $useragent) 
   : SOAP::Lite->uri($uri)->proxy($service_proxy, agent => $useragent);
 
-sub upgrade2v3 {
+sub upgrade2v3() {
     my $res;
     if (-e $rootconf_file) {
 	my %oc = getVarsFromSh($rootconf_file);
@@ -54,7 +52,7 @@ sub upgrade2v3 {
     $res;
 }
 
-sub get_rpmdblist {
+sub get_rpmdblist() {
     my $rpmdblist = `rpm -qa --queryformat '%{HDRID};%{N};%{E};%{V};%{R};%{ARCH};%{OS};%{DISTRIBUTION};%{VENDOR};%{SIZE};%{BUILDTIME};%{INSTALLTIME}\n'`;
     $rpmdblist;
 }
@@ -84,11 +82,11 @@ sub set_ua {
     $qualified_name;
 }
 
-sub get_distro_type {
+sub get_distro_type() {
     my $r = cat_($release_file);
     my ($archi) = $r =~ /\s+for\s+(\w+)/;
     my ($name) = $r =~ /(corporate|mnf)/i;
-    { name => lc($name), arch => $archi };
+    { name => lc($name), 'arch' => $arch1 };
 }
 
 sub soap_create_account {
@@ -191,11 +189,11 @@ sub check_server_response {
 	  22  => [ N("User Forbidden"), N("User account forbidden by Mandriva web services") ],
 	  99  => [ N("Connection error"), N("Mandriva web services not reachable") ]
 	  };
-    foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} };
+    foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} }
     #    print Dumper($response);
     my $code = $response->{code} || '99';
     $response->{status} and write_conf($response);
-    return $response->{status} ? 'OK' : $hash_ret->{$code}->[0] . ' : ' . $hash_ret->{$code}->[1] . '\n\n' . $response->{message};
+    return $response->{status} ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . '\n\n' . $response->{message};
 }
 
 sub check_valid_email {
@@ -263,23 +261,23 @@ sub rpm_ver_cmp {
 }
 
 sub soap_recover_service {
-    my $data = $s->recoverHostFromV2(@_)->result();
+    my $data = $s->recoverHostFromV2(@_)->result;
     $data;
 }
 
 sub soap_get_task {
-    my $data = $s->getTask(@_)->result();
+    my $data = $s->getTask(@_)->result;
     $data;
 }
 
 sub soap_return_task_result {
-    my $data = $s->setTaskResult(@_)->result();
+    my $data = $s->setTaskResult(@_)->result;
     $data;	
 }
 
 sub soap_get_updates_for_host {
-    my $data = $s->getUpdatesForHost(@_)->result();
-    $data
+    my $data = $s->getUpdatesForHost(@_)->result;
+    $data;
 }
 
 sub mv_files {
@@ -287,7 +285,7 @@ sub mv_files {
     -e $source and system("mv", $source, $dest);
 }
 
-sub clean_confdir {
+sub clean_confdir() {
     my $confdir = '/root/.MdkOnline';
     system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
 }
@@ -298,7 +296,7 @@ sub hw_upload {
     -x $hw_exec && !-s '/etc/sysconfig/mdkonline' and system("HWDB_PASSWD=$passwd $hw_exec $login $hostname &");
 }
 
-sub automated_upgrades {
+sub automated_upgrades() {
     output_p "/etc/cron.daily/mdkupdate",
     qq(#!/bin/bash
 if [ -f $conf_file ]; then /usr/sbin/mdkupdate --auto; fi
@@ -326,11 +324,11 @@ sub write_wide_conf {
     my ($soap_response) = shift;
     #    print Dumper($soap_response);
     my $date = get_date(); my $conf_hash;
-    %{$conf_hash} = getVarsFromSh($conf_file);
-    $conf_hash->{uc($_)} = $soap_response->{data}->{$_} foreach (keys %{$soap_response->{data}});
+    %$conf_hash = getVarsFromSh($conf_file);
+    $conf_hash->{uc($_)} = $soap_response->{data}{$_} foreach keys %{$soap_response->{data}};
     #print Dumper $conf_hash;
     $conf_hash->{DATE_SET} = $date;
-    foreach my $alias (['email','user_email'], ['customer_id', 'user_id']) {
+    foreach my $alias (['email', 'user_email'], ['customer_id', 'user_id']) {
 	exists $conf_hash->{uc($alias->[0])} and $conf_hash->{uc($alias->[1])} = $conf_hash->{uc($alias->[0])};
     }
     setVarsInSh($conf_file, $conf_hash, qw(USER_EMAIL USER_ID HOST_NAME HOST_ID HOST_KEY HOST_DESC HOST_MOBILE VERSION DATE_SET));
@@ -339,26 +337,26 @@ sub write_wide_conf {
 sub is_running {
     my ($name) = @_;
     any {
-        my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
+        my ($_ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
         $pid != $$ && $n eq $name;
     } `ps -o '%P %p %c' -u $ENV{USER}`;
 }
 
 # Romain: you need to finish those dns functions or drop them
 sub get_configuration {
-    my $in = shift;
+    my $_in = shift;
     my $config_file = '/etc/sysconfig/mdkonline';
     my %conf;my $ret;
     # check local config file	
-    if( ! ( -e $config_file ) || ! ( -s $config_file ) ) {
+    if (! (-e $config_file) || ! (-s $config_file)) {
 	%conf = get_conf_from_dns();
-	print "from dns:\n",Dumper(%conf),"\n";
+	print "from dns:\n", Dumper(%conf), "\n";
     } else {
 	%conf = getVarsFromSh($config_file);
-	if( defined $conf{MACHINE} && ! defined $conf{VERSION} ) {
+	if (defined $conf{MACHINE} && !defined $conf{VERSION}) {
 	    $ret = upgrade_to_v3();
 	    print "\n", $ret, "\n";
-	    if( $ret eq 1 ) {
+	    if ($ret == 1) {
 		# reload config
 		%conf = getVarsFromSh($config_file);
 	    }
@@ -370,15 +368,15 @@ sub get_configuration {
     }
     
     # now, a valid working config file is loaded
-    if( defined $conf{MOBILE} && $conf{MOBILE} eq 'TRUE' ) {
+    if (defined $conf{MOBILE} && $conf{MOBILE} eq 'TRUE') {
 	# client is mobile: we check for any dns-declared local option
 	# (like, a local update mirror)
 	# TODO set precedence rules. user may not want/have the right to
 	# follow local network rules (security of the update process).
 	# depends on host config, and on server commands.
 	my $sd   = new Discovery;
-	my $info = $sd->search();
-	if( $info ) {
+	my $info = $sd->search;
+	if ($info) {
 	    # TODO
 	}
 	else {} # nothing to do
@@ -389,28 +387,28 @@ sub get_configuration {
 sub register_from_dns {
     my $dnsconf = shift;
     my ($hostinfo, $country );
-    my $user = $dnsconf->{user}->{name};
-    my $pass = $dnsconf->{user}->{pass};
+    my $user = $dnsconf->{user}{name};
+    my $pass = $dnsconf->{user}{pass};
     my $hostname = chomp_(`hostname`);
     # TODO change SOAP proxy to the one indicated at $dnsconf->{service} before
     # TODO wrap all soap calls into an object so we can update the proxy on the fly?
-    my $res = mdkonline::soap_register_host( $user, $pass, $hostname, $hostinfo, $country );
+    my $res = mdkonline::soap_register_host($user, $pass, $hostname, $hostinfo, $country);
     if ($res->{code}) {
-	$res->{data}->{service} = $dnsconf->{service};
-	return mdkonline::save_config( $res->{data} );
+	$res->{data}{service} = $dnsconf->{service};
+	return mdkonline::save_config($res->{data});
     }
 }
 
-sub get_conf_from_dns {
+sub get_conf_from_dns() {
     my $sd   = new Discover;
-    my $info = $sd->search();
+    my $info = $sd->search;
     my $ret;
-    if( $info ) {
-	if( defined $info->{user}->{name} && defined $info->{user}->{pass} && $info->{user}->{name} ne '' && $info->{user}->{pass} ne '' ) {
+    if ($info) {
+	if (defined $info->{user}{name} && defined $info->{user}{pass} && $info->{user}{name} ne '' && $info->{user}{pass} ne '') {
 	    print Dumper($info);
 	    # TODO check service certificate
-	    $ret = mdkonline::register_from_dns( $info );
-	    if( $ret ) {
+	    $ret = mdkonline::register_from_dns($info);
+	    if ($ret) {
 		return $ret;
 	    }
 	}

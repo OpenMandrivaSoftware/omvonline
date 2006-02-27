@@ -37,13 +37,13 @@ BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' }
 use mdkonline;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 
-my $online_link = 'http://online3.mandriva.com/o/soap/';
+#my $online_link = 'http://online3.mandriva.com/o/soap/';
 
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 my $logfile = '/var/tmp/mdkonline.log';
 
-my ($wiz, $greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $key, $r, $createaccount, $sendconfres, $country, $ia, $gr, $alias);
+my ($greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $is_success, $createaccount, $sendconfres, $country, $ia, $gr, $alias);
 
 my @info;
 
@@ -74,7 +74,6 @@ $country = lang::c2name($locale->{country});
 my $lang = $locale->{lang} || 'en_US';
 
 my $descboxname;
-my ($host_id, $host_key);
 
 sub get_conf() {
     my $wc = mdkonline::read_conf();
@@ -88,7 +87,7 @@ sub send_conf_via_soap {
     my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
     undef $w if $w;
-    $reg_host
+    $reg_host;
 }
 
 my $wiz = wizards->new(
@@ -116,16 +115,16 @@ my $wiz = wizards->new(
 				 { label => N("Password:"), val => \$password, hidden => 1 },
 				 { label => N("Machine name:"), val => \$boxname },
 				 { label => N("Machine description:"), val => \$descboxname },
-				 { label => N("(Ex: My Home Office's Computer)")},
+				 { label => N("(Ex: My Home Office's Computer)") },
 				];
 			    },
 			    post => sub {
 				if (!mdkonline::check_valid_boxname($boxname)) {
 				    $is_success = N("Machine name must be 1 to 40 alphanumerical characters");
 				} else {
-				    my $_wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
+				    my $wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
 				    @info = ($login, $password);
-				    $is_success = mdkonline::create_authenticate_account('authenticate', @info); undef($_wait);
+				    $is_success = mdkonline::create_authenticate_account('authenticate', @info); undef $wait;
 				}
 				"authenticate";
 			    },
@@ -135,7 +134,7 @@ my $wiz = wizards->new(
 				     if ($is_success eq 'OK') {
 					 N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.");
        				     } else {
-					 $is_success
+					 $is_success;
 				     }
 				 },
 				 no_back => $is_success eq 'OK' ? 1 : 0,
@@ -150,7 +149,7 @@ my $wiz = wizards->new(
 			      name => N("Create a Mandriva Online Account"),
 			      data => sub {
 				  [
-				   { label => N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo'},
+				   { label => N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo' },
 				   { label => N("First name:"), val => \$firstname },
 				   { label => N("Last name:"), val => \$lastname },
 				   { label => N("Email address:"), val => \$account },

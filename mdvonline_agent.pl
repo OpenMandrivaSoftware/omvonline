@@ -38,13 +38,13 @@ use Discover;
 use Log::Agent;
 require Log::Agent::Driver::File;  # logging made to file
 logconfig(
-	-driver => Log::Agent::Driver::File->make(
-        -prefix  => $0,
-        -showpid => 1,
-        -file    => 'mdvonline.log',
+    '-driver' => Log::Agent::Driver::File->make(
+        '-prefix'  => $0,
+        '-showpid' => 1,
+        '-file'    => 'mdvonline.log',
     ),
     #-caller => [ -display => '($sub/$line)', -postfix => 1 ],
-    -priority => [ -display => '[$priority]' ],
+    '-priority' => [ '-display' => '[$priority]' ],
 );
 
 logsay "==================";
@@ -58,21 +58,21 @@ print Dumper(%conf);
 
 logsay "checking for tasks";
 print Dumper(%conf);
-my $answer = mdkonline::soap_get_task( $conf{HOST_ID}, $conf{HOST_KEY} );
+my $answer = mdkonline::soap_get_task($conf{HOST_ID}, $conf{HOST_KEY});
 
 print Dumper($answer);
 
-if( $answer->{code} eq 0 ) {
-	if( $answer->{data}->{command} eq 'none' ) {
+if ($answer->{code} == 0) {
+	if ($answer->{data}{command} eq 'none') {
 		logsay "nothing to do";
 	}
 	else {
 		logsay "got something";
-		my $res = mdkonline::run_and_return_task( $answer->{data} );
+		mdkonline::run_and_return_task($answer->{data});
 	}
 	exit 1;
 }
 else {
-	logwarn "something went wrong " . $answer->{message} . " (".$answer->{code}.")";
+	logwarn "something went wrong " . $answer->{message} . " (" . $answer->{code} . ")";
 	exit 0;
 }
