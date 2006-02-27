@@ -86,7 +86,7 @@ sub get_distro_type() {
     my $r = cat_($release_file);
     my ($archi) = $r =~ /\s+for\s+(\w+)/;
     my ($name) = $r =~ /(corporate|mnf)/i;
-    { name => lc($name), 'arch' => $arch1 };
+    { name => lc($name), 'arch' => $archi };
 }
 
 sub soap_create_account {
