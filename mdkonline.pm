@@ -47,11 +47,11 @@ sub upgrade2v3 {
     my $res;
     if (-e $rootconf_file) {
 	my %oc = getVarsFromSh($rootconf_file);
-	my $res = soap_recover_service($oc{LOGIN},'{md5}'. $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
+	my $res = soap_recover_service($oc{LOGIN}, '{md5}'. $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
 	print Dumper($res);
-	$res = check_server_response()
+	$res = check_server_response();
     }
-    $res
+    $res;
 }
 
 sub get_rpmdblist {
@@ -75,45 +75,45 @@ sub md5file {
 
 sub get_release() {
     my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
-    ($r)
+    ($r);
 }
 
 sub set_ua {
     my $package_name = shift;
     my $qualified_name = chomp_(`rpm -q $package_name`);
-    $qualified_name
+    $qualified_name;
 }
 
 sub get_distro_type {
     my $r = cat_($release_file);
-    my ($arch) = $r =~ /\s+for\s+(\w+)/;
+    my ($archi) = $r =~ /\s+for\s+(\w+)/;
     my ($name) = $r =~ /(corporate|mnf)/i;
-    { name => lc($name), arch => $arch };
+    { name => lc($name), arch => $archi };
 }
 
 sub soap_create_account {
-    my $data = $s->registerUser(@_)->result();
+    my $data = $s->registerUser(@_)->result;
     $data;
 }
 
 sub soap_authenticate_user {
-    my $data = $s->authenticateUser(@_)->result(); 
+    my $data = $s->authenticateUser(@_)->result; 
     $data;
 }
 
 sub soap_register_host {
-    my $data = $s->registerHost(@_)->result();
+    my $data = $s->registerHost(@_)->result;
     $data;	
 }
 
 sub soap_upload_config {
-    my $data = $s->setHostConfig(@_)->result();
+    my $data = $s->setHostConfig(@_)->result;
     $data;
 }
 
 sub soap_query_bundle {
     my ($wc, $bundle_name) = @_;
-    my $data = $s->query($wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_name)->result();
+    my $data = $s->query($wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_name)->result;
     $data;
 }
 sub register_upload_host {
@@ -131,7 +131,7 @@ sub register_upload_host {
     #Reread configuration
     $wc = read_conf() if $res eq 'OK';
     $res = prepare_upload_con($wc);
-    $res
+    $res;
 }
 
 sub prepare_upload_conf {
