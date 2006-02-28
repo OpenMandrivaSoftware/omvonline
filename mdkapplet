@@ -43,8 +43,8 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "https://www.mandrivaonline.com/";
-my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
-my ($raisedwindow, $debug, $conf_launched) = (0, 0, 0, 0);
+my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox, $isAvailable);
+my ($raisedwindow, $debug, $conf_launched) = (0, 0, 0);
 
 
 my $conffile = '/etc/sysconfig/mdkonline';
