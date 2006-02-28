@@ -25,7 +25,7 @@ my ($product_file, $conf_file, $rootconf_file) = ('/etc/sysconfig/system', '/etc
 
 my $uri = !$testing ? 'https://online.mandriva.com/soap' : 'http://online3.mandriva.com/o/soap/';
 
-$service_proxy = $online_proxy  = $uri;
+my $online_proxy = $service_proxy = $uri;
 
 my $useragent = set_ua('mdkonline');
 
