@@ -23,7 +23,7 @@ my $testing = 1;
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 my ($product_file, $conf_file, $rootconf_file) = ('/etc/sysconfig/system', '/etc/sysconfig/mdkonline', '/root/.MdkOnline/hostconf'); 
 
-my $uri = !$testing ? 'https://online.mandriva.com/soap' : 'http://192.168.100.47/~romain/online3b/soap';
+my $uri = !$testing ? 'https://online.mandriva.com/soap' : 'https://192.168.100.47/~romain/online3b/soap';
 
 my $online_proxy = $service_proxy = $uri;
 
