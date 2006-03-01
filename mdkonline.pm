@@ -193,7 +193,7 @@ sub check_server_response {
     #    print Dumper($response);
     my $code = $response->{code} || '99';
     $response->{status} and write_conf($response);
-    return $response->{status} ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . '\n\n' . $response->{message};
+    return $response->{status} ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . "\n\n" . $response->{message};
 }
 
 sub check_valid_email {
