@@ -226,7 +226,7 @@ sub add_media {
     my ($media_name, $mirror, $hdlist, $option) = @_;
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
-	system "/usr/sbin/urpmi.addmedia", $option, $media_name, $mirror, "with", $hdlist; 
+	system "/usr/sbin/gurpmi.addmedia", $option, $media_name, $mirror, "with", $hdlist;
     };
     $@ and die "Problem adding bundle media with urpmi";
 }
