@@ -128,7 +128,7 @@ sub register_upload_host {
     return $res if defined $res && $res ne 'OK';
     #Reread configuration
     $wc = read_conf() if $res eq 'OK';
-    $res = prepare_upload_con($wc);
+    $res = prepare_upload_conf($wc);
     $res;
 }
 
