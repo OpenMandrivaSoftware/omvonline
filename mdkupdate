@@ -144,7 +144,7 @@ if (!$bundle) {
     print Dumper($bundle_info);
     if ($bundle_info->{status}) {
 	my @bundles;
-	my ($media, $mirrors, $bundle) = ($bundle_info->{data}{media_name}, $bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
+	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
 	add_media(split(';', $_, 2), 'hdlist.cz', '') foreach @$mirrors;
 	$bundle =~ s/\.rpm$//;
 	push(@bundles, $bundle);
