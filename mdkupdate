@@ -113,7 +113,7 @@ if (!$bundle) {
 		my $pkgs = ask_pkgs($in);
 		install_pkgs($in, $pkgs, 'update_source') if $pkgs;
 		$in->exit(0);
-	    } elsif ($auto) {
+	    } elsif ($auto) { # FIXME
 		auto_install_rpms($rpms_scheduled);
 	    }
 	    rpm_qa($afterrpm);
