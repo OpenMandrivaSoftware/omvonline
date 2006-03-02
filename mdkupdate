@@ -100,7 +100,7 @@ if (!$bundle) {
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
 	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
-	print Dumper($getupdates);
+	print Data::Dumper->Dump([ $getupdates ], [ qw(getupdates) ]);
 	if ($getupdates->{message}) {
 	    exit(0);
 	    my $rpms_scheduled;
@@ -141,7 +141,7 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
-    print Dumper($bundle_info);
+    print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
     if ($bundle_info->{status}) {
 	my @bundles;
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
