@@ -1,6 +1,32 @@
+2006-03-02 20:35  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (add_media) fix running urpmi.addmedia when there's no
+	  options
+
+2006-03-02 20:34  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: fix parsing new SOAP structure
+
+2006-03-02 20:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: the mirror field of bundles is now dead
+
+2006-03-02 20:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: typo fix
+
+2006-03-02 20:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: the new structure use an array of mirrors and not
+	  anymore a hash
+
 2006-03-02 19:56  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.pm: switch to new server URL
+
+2006-03-02 19:56  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (soap_upload_config) fortify
 
 2006-03-02 19:56  Thierry Vignaud <tvignaud at mandriva.com>
 
