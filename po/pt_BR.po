@@ -44,9 +44,9 @@ msgid "New updates are available for your system"
 msgstr "Novas atualizações estão disponíveis para o seu sistema"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Novas atualizações estão disponíveis para o seu sistema"
+msgstr "Novos kits (bundles) estão disponíveis para o seu sistema"
 
 #: ../mdkapplet:95
 #, c-format
@@ -367,14 +367,14 @@ msgid "Password:"
 msgstr "Senha:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Nome da máquina:"
+msgstr "Descrição da máquina:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Ex: Meu Computador de Casa)"
 
 #: ../mdkonline:123
 #, c-format
@@ -547,7 +547,7 @@ msgstr "Erro de segurança"
 #: ../mdkonline.pm:178
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Erro genérico (máquina já registrada)"
 
 #: ../mdkonline.pm:179
 #, c-format
@@ -687,29 +687,29 @@ msgstr ""
 "uso:\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help         - exibe esta mensagem de ajuda.\n"
+msgstr "  --help\t\t- exibe esta mensagem de ajuda.\n"
 
 #: ../mdkupdate:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto         - lança Mandriva Update automaticamente.\n"
+msgstr "  --auto\t\t- Lança Mandriva Update automaticamente.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet       - lança Mandriva Update.\n"
+msgstr "  --applet\t\t- lança Mandriva Update.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf          - roda scripts específicos mnf.\n"
+msgstr "  --mnf\t\t\t- roda scripts específicos mnf.\n"
 
 #: ../mdkupdate:71
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX          - versão modo texto do Mandriva Update.\n"
+msgstr "  --noX\t\t\t- versão modo texto do Mandriva Update.\n"
 
 #: ../mdkupdate:72
 #, c-format
@@ -717,6 +717,7 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle file.bundle\t- instala pacotes a partir do arquivo de meta-informações .bundle.\n"
 
 #: ../mdkupdate:157
 #, c-format
