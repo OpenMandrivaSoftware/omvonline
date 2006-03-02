@@ -80,7 +80,8 @@ my %options = (
 	       'a|applet'   => \$applet,
 	       'mnf'	    => \$mnf,
 	       'noX'	    => \$noX,
-	       'b|bundle:s' => sub { $bundle = $_[1] || 'webbundle' } 
+	       'b|bundle:s' => sub { $bundle = $_[1] || 'webbundle' } ,
+	       'h|help'    => \&usage,
 	      );
 
 GetOptions(%options);
