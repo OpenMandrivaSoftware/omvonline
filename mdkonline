@@ -90,7 +90,7 @@ sub send_conf_via_soap {
     $reg_host;
 }
 
-my $wiz = wizards->new(
+my $wiz = 
   {
    name => N("Mandriva Online"),
       pages => {
@@ -207,7 +207,7 @@ my $wiz = wizards->new(
 			next => 0,
 		       }
 	       }
-  });
+  };
 
 if (!$ia && $login && $password && $boxname) { 
     $is_success = mdkonline::create_authenticate_account('authenticate', $login, $password);
@@ -221,5 +221,5 @@ if (!$ia && $login && $password && $boxname) {
 	output_p($logfile, N("Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"));
     }
 } else {
-    $wiz->safe_process($in);
+    mdkonline::get_release <= 2006.0 ? wizards->new->safe_process($wiz, $in) : wizards->new($wiz)->safe_process($in);
 }
