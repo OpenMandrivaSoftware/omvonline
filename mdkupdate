@@ -145,10 +145,13 @@ if (!$bundle) {
     if ($bundle_info->{status}) {
 	my @bundles;
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
-	add_media(split(';', $_, 2), 'hdlist.cz', '') foreach @$mirrors;
+	my %mirrors = map {split(';', $_, 2) } @$mirrors;
+	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/\.rpm$//;
+	my $bundle_mirror = $bundle;
+	$bundle_mirror =~ s/-[0-9.]mdk$//;
 	push(@bundles, $bundle);
-	install_pkgs($in, \@bundles, $media, { is_bundle => 1 });
+	install_pkgs($in, \@bundles, $mirrors{$bundle_mirror}, { is_bundle => 1 });
     }
 }
 
