@@ -148,7 +148,7 @@ if (!$bundle) {
 	add_media($media, $_, 'hdlist.cz', '') foreach keys %$mirrors;
 	$bundle =~ s/\.rpm$//;
 	push(@bundles, $bundle);
-	install_pkgs($in, \@bundles, $media);
+	install_pkgs($in, \@bundles, $media, { is_bundle => 1 });
     }
 }
 
@@ -177,10 +177,12 @@ sub ask_pkgs {
 }
 
 sub install_pkgs {
-    my ($in, $choosed, $media_name) = @_;
+    my ($in, $choosed, $media_name, $o_options) = @_;
+    $o_options ||= {};
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
     eval {
 	system "/usr/sbin/urpmi", "--auto", "--media", $media_name, @$choosed;
+	system "/usr/sbin/urpmi", "--auto-select", "--media", $media_name if $o_options->{is_bundle};
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     undef $w;
