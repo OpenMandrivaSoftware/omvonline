@@ -144,8 +144,8 @@ if (!$bundle) {
     print Dumper($bundle_info);
     if ($bundle_info->{status}) {
 	my @bundles;
-	my ($media, $mirror, $bundle) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirror}, $bundle_info->{data}->{bundle});
-	add_media($media, $mirror, 'hdlist.cz', '');
+	my ($media, $mirrors, $bundle) = ($bundle_info->{data}->{media_name}, $bundle_info->{data}->{mirrors}, $bundle_info->{data}->{bundle});
+	add_media($media, $_, 'hdlist.cz', '') foreach keys %$mirrors;
 	$bundle =~ s/\.rpm$//;
 	push(@bundles, $bundle);
 	install_pkgs($in, \@bundles, $media);
