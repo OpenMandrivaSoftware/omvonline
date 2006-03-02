@@ -105,8 +105,8 @@ sub soap_register_host {
 }
 
 sub soap_upload_config {
-    my $data = $s->setHostConfig(@_)->result;
-    $data;
+    my $data = $s->setHostConfig(@_);
+    $data ? $data->result : undef;
 }
 
 sub soap_query_bundle {
