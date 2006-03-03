@@ -156,6 +156,8 @@ You need to update to a newer version. You can get a new one from http://start.m
 	$bundle =~ s/\.rpm$//;
 	push @bundles, $bundle;
 	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors), { is_bundle => 1 });
+    } else {
+        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
 }
 
