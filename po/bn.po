@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 14:07+0100\n"
+"POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2005-02-03 20:01+0600\n"
 "Last-Translator: Jamil Ahmed <jamil@bengalinux.org>\n"
 "Language-Team: Bangla <mdk-translation@bengalinux.org>\n"
@@ -84,7 +84,7 @@ msgid "Check Updates"
 msgstr "আপডেট পরীক্ষা করো"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Please wait"
 msgstr "অনুগ্রহ করে অপেক্ষা করুন"
@@ -706,17 +706,41 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:157
+#: ../mdkupdate:144
+#, c-format
+msgid "Warning"
+msgstr ""
+
+#: ../mdkupdate:144
+#, c-format
+msgid ""
+"The version of the Mandriva Online client is too old.\n"
+"\n"
+"You need to update to a newer version. You can get a new one from http://"
+"start.mandriva.com"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "Error"
+msgstr "ত্রুটি"
+
+#: ../mdkupdate:160
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkupdate:167
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
 
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "প্যাকেজসমূহ ইনস্টল করা হচ্ছে...\n"
 
-#: ../mdkupdate:185 ../mdkupdate:253
+#: ../mdkupdate:195 ../mdkupdate:263
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source মাধ্যম থেকে প্যাকেজ আপডেট করা যায় নি।\n"
@@ -820,9 +844,6 @@ msgstr "update_source মাধ্যম থেকে প্যাকেজ আ�
 
 #~ msgid "Country:"
 #~ msgstr "দেশ:"
-
-#~ msgid "Error"
-#~ msgstr "ত্রুটি"
 
 #~ msgid "Quitting Wizard\n"
 #~ msgstr "উইজার্ড থেকে প্রস্থান করা হচ্ছে\n"

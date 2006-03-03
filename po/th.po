@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 14:07+0100\n"
+"POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2003-02-28 05:55+0900\n"
 "Last-Translator: Pramote Khuwijitjaru <kmote@hotmail.com>\n"
 "Language-Team: Thai <en@li.org>\n"
@@ -79,7 +79,7 @@ msgid "Check Updates"
 msgstr ""
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Please wait"
 msgstr "โปรดรอสักครู่"
@@ -668,17 +668,41 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:157
+#: ../mdkupdate:144
+#, c-format
+msgid "Warning"
+msgstr ""
+
+#: ../mdkupdate:144
+#, c-format
+msgid ""
+"The version of the Mandriva Online client is too old.\n"
+"\n"
+"You need to update to a newer version. You can get a new one from http://"
+"start.mandriva.com"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "Error"
+msgstr "ข้อผิดพลาด"
+
+#: ../mdkupdate:160
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkupdate:167
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
 
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, fuzzy, c-format
 msgid "Installing packages ...\n"
 msgstr "กำลังติดตั้งแพ็คเก็จ %s\n"
 
-#: ../mdkupdate:185 ../mdkupdate:253
+#: ../mdkupdate:195 ../mdkupdate:263
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "ไม่สามารถอัพเดทแพ็จเกจจากมีเดียของ update_source \n"
@@ -709,9 +733,6 @@ msgstr "ไม่สามารถอัพเดทแพ็จเกจจา
 
 #~ msgid "Finish"
 #~ msgstr "เสร็จแล้ว"
-
-#~ msgid "Error"
-#~ msgstr "ข้อผิดพลาด"
 
 #~ msgid "  --security     - use only security media.\n"
 #~ msgstr "  --security     - ใช้มีเดียที่มีความปลอดภัยเท่านั้น\n"

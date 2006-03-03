@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2006-03-02 14:07+0100\n"
+"POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2006-03-02 14:12+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
@@ -92,7 +92,7 @@ msgid "Check Updates"
 msgstr "Vérifier la disponibilité de mises à jour"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
@@ -730,19 +730,45 @@ msgstr "  --noXt\t\t- mode texte de Mandriva Update. \n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t- lit et installe un paquet depuis un fichier metainfo .bundle.\n"
+msgstr ""
+"  --bundle file.bundle\t- lit et installe un paquet depuis un fichier "
+"metainfo .bundle.\n"
 
-#: ../mdkupdate:157
+#: ../mdkupdate:144
+#, c-format
+msgid "Warning"
+msgstr ""
+
+#: ../mdkupdate:144
+#, c-format
+msgid ""
+"The version of the Mandriva Online client is too old.\n"
+"\n"
+"You need to update to a newer version. You can get a new one from http://"
+"start.mandriva.com"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "Error"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkupdate:167
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Choisissez les paquetages à installer et cliquez sur Ok"
 
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Installation des paquetages...\n"
 
-#: ../mdkupdate:185 ../mdkupdate:253
+#: ../mdkupdate:195 ../mdkupdate:263
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 14:07+0100\n"
+"POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2005-09-21 23:01+0200\n"
 "Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
@@ -91,7 +91,7 @@ msgid "Check Updates"
 msgstr "Sjekk etter oppdateringer"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Please wait"
 msgstr "Vennligst vent"
@@ -724,17 +724,41 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:157
+#: ../mdkupdate:144
+#, c-format
+msgid "Warning"
+msgstr ""
+
+#: ../mdkupdate:144
+#, c-format
+msgid ""
+"The version of the Mandriva Online client is too old.\n"
+"\n"
+"You need to update to a newer version. You can get a new one from http://"
+"start.mandriva.com"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "Error"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkupdate:167
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Velg hvilke pakker som skal bli installert og trykk Ok"
 
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Installerer pakke...\n"
 
-#: ../mdkupdate:185 ../mdkupdate:253
+#: ../mdkupdate:195 ../mdkupdate:263
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunne ikke oppdatere pakker fra update_source-medium.\n"

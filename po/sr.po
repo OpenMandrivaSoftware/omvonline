@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-02 14:07+0100\n"
+"POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2003-02-15 09:31+0100\n"
 "Last-Translator: Toma Jankovic <tomaja@net.yu>\n"
 "Language-Team: Serbian <i18n@mandrake.co.yu>\n"
@@ -89,7 +89,7 @@ msgid "Check Updates"
 msgstr "Ажурирање"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Please wait"
 msgstr "Само моменат..."
@@ -683,17 +683,41 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:157
+#: ../mdkupdate:144
+#, c-format
+msgid "Warning"
+msgstr ""
+
+#: ../mdkupdate:144
+#, c-format
+msgid ""
+"The version of the Mandriva Online client is too old.\n"
+"\n"
+"You need to update to a newer version. You can get a new one from http://"
+"start.mandriva.com"
+msgstr ""
+
+#: ../mdkupdate:160
+#, c-format
+msgid "Error"
+msgstr "Грешка"
+
+#: ../mdkupdate:160
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkupdate:167
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
 
-#: ../mdkupdate:181
+#: ../mdkupdate:191
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Инсталирам пакете...\n"
 
-#: ../mdkupdate:185 ../mdkupdate:253
+#: ../mdkupdate:195 ../mdkupdate:263
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не могу да ажурирам пакете са update_source медија.\n"
@@ -764,9 +788,6 @@ msgstr "Не могу да ажурирам пакете са update_source ме
 
 #~ msgid "Country:"
 #~ msgstr "Земља:"
-
-#~ msgid "Error"
-#~ msgstr "Грешка"
 
 #~ msgid "Quitting Wizard\n"
 #~ msgstr "Изађи из Чаробњака\n"
