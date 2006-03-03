@@ -141,7 +141,6 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     if (my $version = $bundle_vars{CLIENT_VERSION} >= $VERSION) {
-        print "TOTO\n";
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
 
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
