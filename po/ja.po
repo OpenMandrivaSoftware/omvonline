@@ -3,13 +3,13 @@
 # Copyright (C) 2002,2003 Free Software Foundation, Inc.
 # Budi Rachmanto <rac@linux-mandrake.com>, 2002 - 2003.
 # utuhiro, 2003
-# BANDO Yukiko, 2004
+# BANDO Yukiko, 2004 - 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-02 14:07+0100\n"
-"PO-Revision-Date: 2005-09-18 21:00+0900\n"
+"PO-Revision-Date: 2006-03-03 17:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -42,9 +42,9 @@ msgid "New updates are available for your system"
 msgstr "新しい更新があります"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "新しい更新があります"
+msgstr "新しいバンドルが利用可能です"
 
 #: ../mdkapplet:95
 #, c-format
@@ -362,14 +362,14 @@ msgid "Password:"
 msgstr "パスワード:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "マシン名:"
+msgstr "マシンの説明:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(例: ホームオフィスのコンピュータ)"
 
 #: ../mdkonline:123
 #, c-format
@@ -543,7 +543,7 @@ msgstr "セキュリティエラー"
 #: ../mdkonline.pm:178
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "一般的なエラー (マシンが既に登録済み)"
 
 #: ../mdkonline.pm:179
 #, c-format
@@ -682,29 +682,29 @@ msgstr ""
 "使用方法 :\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help         - このヘルプメッセージを出力する。\n"
+msgstr "  --help\t\t- このヘルプメッセージを表示する。\n"
 
 #: ../mdkupdate:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto         - Mandriva Updateを自動的に起動する。\n"
+msgstr "  --auto\t\t- Mandriva Updateを自動的に起動する。\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet       - Mandriva Updateを起動する\n"
+msgstr "  --applet\t\t- Mandriva Updateを起動する。\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf          - MNF固有のスクリプトを起動する。\n"
+msgstr "  --mnf\t\t\t- MNF固有のスクリプトを起動する。\n"
 
 #: ../mdkupdate:71
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX          - テキストモードのMandriva Update\n"
+msgstr "  --noX\t\t\t- テキストモードのMandriva Update\n"
 
 #: ../mdkupdate:72
 #, c-format
@@ -712,6 +712,8 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージを"
+"インストールする。\n"
 
 #: ../mdkupdate:157
 #, c-format
@@ -727,264 +729,3 @@ msgstr "パッケージをインストール中..\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_sourceメディアからパッケージを更新できません。\n"
-
-#~ msgid "Sending configuration..."
-#~ msgstr "設定を送信中..."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "%s ファイルがありません。まずmdkonlineウィザードを実行してください。"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "Mandriva Updateはこのサイトに接続できませんでした。再試行します。"
-
-#~ msgid "Login:"
-#~ msgstr "ログイン:"
-
-#~ msgid "or"
-#~ msgstr "または"
-
-#~ msgid "wrong password:"
-#~ msgstr "パスワード誤り:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "ログイン名またはパスワードが間違っています。\n"
-#~ "もう一度やり直すか、まだアカウントをお持ちでなければ Mandriva Online で作"
-#~ "成して下さい。\n"
-#~ "アカウントを作成するには最初のステップに戻り Mandriva Online に接続して下"
-#~ "さい。\n"
-#~ "注意：マシン名も必要です。\n"
-#~ " (アルファベットのみ可)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "メールアドレス:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "ログイン名を入力してください"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "ログイン名とパスワードは11文字以内にしてください\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "特殊な文字は使用できません\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "メールアドレスが無効です\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "アカウントが既に存在します\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "サーバ接続中にエラーが発生\n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr "サーバ接続中に問題が発生しました。サポートチームに連絡してください"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "mdkupdateメディアからパッケージを更新できません。\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "差分ファイルを送信できませんでした。support [at] mandrivaonline [dot] net "
-#~ "にメールしてください。"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "お待ちください"
-
-#~ msgid "Next"
-#~ msgstr "次へ"
-
-#~ msgid "Cancel"
-#~ msgstr "キャンセル"
-
-#~ msgid "Previous"
-#~ msgstr "戻る"
-
-#~ msgid "Welcome to Mandriva Online"
-#~ msgstr "Mandriva Online へようこそ"
-
-#~ msgid "I don't have a Mandriva Online account and I want to subscribe"
-#~ msgstr "Mandriva Online にアカウントを持っていないので作成します"
-
-#~ msgid "Mandriva Linux Privacy Policy"
-#~ msgstr "Mandriva Linux プライバシー方針"
-
-#~ msgid "Authentification"
-#~ msgstr "認証"
-
-#~ msgid "Send Configuration"
-#~ msgstr "設定を送信"
-
-#~ msgid "Finish"
-#~ msgstr "終る"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "自動アップグレード"
-
-#~ msgid "Country:"
-#~ msgstr "国名:"
-
-#~ msgid "Error"
-#~ msgstr "エラー"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Wizard を終了\n"
-
-#~ msgid ""
-#~ "Mandriva Online could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "Mandriva Online に接続できませんでした。しばらくたってからやり直して下さ"
-#~ "い。"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - キー更新\n"
-
-#~ msgid "Skip Wizard"
-#~ msgstr "ウィザードを省略"
-
-#~ msgid "I don't have a Mandriva Online account and I want to "
-#~ msgstr "Mandriva Online にアカウントを持っていないので... "
-
-#~ msgid "Subscribe"
-#~ msgstr "入会する"
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com.\n"
-#~ "Finally, an email alias with your username@mandrivaonline.com will be "
-#~ "provided to you."
-#~ msgstr ""
-#~ "Mandriva Onlineサービスをご利用頂くために、今から\n"
-#~ "あなたのシステムの設定情報を送信します。\n"
-#~ "\n"
-#~ "このWizardは次の情報を Mandriva に送ります:\n"
-#~ "1) インストールされているパッケージのリスト\n"
-#~ "2) ハードウェアの設定\n"
-#~ "\n"
-#~ "これらの情報を送信されたくない、またはこのサービスを利用されない場合は"
-#~ "「キャンセル」を\n"
-#~ "押して下さい。「次へ」を選択されると、送信された情報をもとにセキュリティ"
-#~ "アップデート\n"
-#~ "と通常の更新情報をお客様ごとにメールでお知らせします。\n"
-#~ "また、このサービスをご利用頂くと www.mandrivaexpert.com の有料サポートにも"
-#~ "割引が\n"
-#~ "適用されます。\n"
-#~ "手続完了後、あなたの username@mandrivaonline.com をメールでお送りします。"
-
-#, fuzzy
-#~ msgid "Checking ..."
-#~ msgstr "接続トラブル"
-
-#, fuzzy
-#~ msgid "Launching Mandriva Update\n"
-#~ msgstr "  --applet       - 全ての情報を更新。\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "はい、自動アップデートしたい"
-
-#, fuzzy
-#~ msgid "Mandriva Linux Online Team"
-#~ msgstr "Mandriva Online へようこそ"
-
-#~ msgid "  --security     - use only security media.\n"
-#~ msgstr "  --security     - セキュリティメディアのみを使う。\n"
-
-#~ msgid "  -v             - verbose mode.\n"
-#~ msgstr "  -v             - 詳細モード。\n"
-
-#~ msgid ""
-#~ "You need to have an account on Mandriva Online, or update your "
-#~ "subscription."
-#~ msgstr "Mandriva Onlineでアカウントを取得するかアップデートしてください。"
-
-#~ msgid "Your login or password may be wrong"
-#~ msgstr "ログインまたはパスワードが間違っています"
-
-#~ msgid "Unable to create mdkupdate medium.\n"
-#~ msgstr "mdkupdateメディアを作成できません。\n"
-
-#~ msgid "Africa"
-#~ msgstr "アフリカ"
-
-#~ msgid "Asia"
-#~ msgstr "アジア"
-
-#~ msgid "Australia"
-#~ msgstr "オーストラリア"
-
-#~ msgid "Europe"
-#~ msgstr "ヨーロッパ"
-
-#~ msgid "North America"
-#~ msgstr "北米"
-
-#~ msgid "South America"
-#~ msgstr "南米"
-
-#~ msgid "Back"
-#~ msgstr "戻る"
-
-#~ msgid "Warning: No browser specified"
-#~ msgstr "警告：閲覧ソフトが指定されていない"
-
-#~ msgid "Sending your Configuration"
-#~ msgstr "設定情報送信中"
-
-#~ msgid "Error while sending informations"
-#~ msgstr "情報送信エラー"
-
-#~ msgid ""
-#~ "There was an error while sending your personal informations.\n"
-#~ "\n"
-#~ "Press Next to try and send your configuration again."
-#~ msgstr ""
-#~ "個人情報送信中にエラーが発生しました。\n"
-#~ "\n"
-#~ "「次へ」を押すと再試行します。"
-
-#~ msgid "Finished"
-#~ msgstr "終了"
-
-#~ msgid "Choose your geographical location"
-#~ msgstr "地理的住所を選んで下さい"
-
-#~ msgid "OK"
-#~ msgstr "OK"
-
-#~ msgid ""
-#~ "Do you really want to abort Mandriva Online?\n"
-#~ "To return to the Wizard press 'Cancel',\n"
-#~ "to really quit it press 'Quit'."
-#~ msgstr ""
-#~ "Mandriva Online を中断しますか。\n"
-#~ "Wizard へ戻るには「キャンセル」を、\n"
-#~ "完全にやめるには「出る」を押して下さい。"
-
-#~ msgid "Really abort? - Mandriva Online"
-#~ msgstr "本当に中止しますか - Mandriva Online"
