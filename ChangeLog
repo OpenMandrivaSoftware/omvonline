@@ -1,3 +1,68 @@
+2006-03-04 00:04  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: - use --media in order to list medias to use - use
+	  --searchmedia in order to specify the media to look for bundles -
+	  use gurpmi in order to install bundles - split the bundle case
+	  from the normal one
+
+2006-03-03 23:42  Wanderlei Antonio Cavassin <cavassin at mandriva.com>
+
+	* po/pt_BR.po: General review.
+
+2006-03-03 23:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: help gurpmi: give it a non versionated package name
+
+2006-03-03 23:15  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: add versionated requires on urpmi and rpmdrake in
+	  order to have nice bundle installation
+
+2006-03-03 23:14  Wanderlei Antonio Cavassin <cavassin at mandriva.com>
+
+	* po/pt_BR.po: pt_BR 100% translated again ;)
+
+2006-03-03 23:13  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (add_media) use gurpmi.addmedia instead of
+	  urpmi.addmedia in order to get a graphical progress bar
+
+2006-03-03 23:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2006-03-03 21:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: hy.po, ur.po: merge in translations from mountloop
+
+2006-03-03 21:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: ka.po, ku.po: merge in translations from mcc
+
+2006-03-03 21:30  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, id.po, is.po, it.po, ja.po, ko.po, ky.po, lt.po, ltg.po,
+	  lv.po, mk.po, mn.po, ms.po, mt.po, nb.po, nl.po, nn.po, pa_IN.po,
+	  pl.po, pt.po, pt_BR.po, ro.po, ru.po, sc.po, sk.po, sl.po, sq.po,
+	  sr.po, sr@Latn.po, sv.po, ta.po, tg.po, th.po, tl.po, tr.po,
+	  uk.po, uz.po, uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: merge
+	  in translations from DrakX
+
+2006-03-03 21:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: sync with code
+
 2006-03-03 21:27  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.spec: 2.0-1mdk
