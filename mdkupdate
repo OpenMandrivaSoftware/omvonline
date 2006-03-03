@@ -154,8 +154,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	my %mirrors = map {split(';', $_, 2) } @$mirrors;
 	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/\.rpm$//;
-	my $bundle_mirror = $bundle;
-	$bundle_mirror =~ s/-[0-9.]mdk$//;
+	my $bundle_mirror = find { $_ =~ /^bundle/ } keys %mirrors;
 	push(@bundles, $bundle);
 	install_pkgs($in, \@bundles, $mirrors{$bundle_mirror}, { is_bundle => 1 });
     }
