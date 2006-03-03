@@ -67,6 +67,7 @@ cat > %{buildroot}%{_menudir}/%{name} <<EOF
 EOF
 
 %post
+/usr/bin/update-mime-database /usr/share/mime >/dev/null
 %{update_menus}
 [ -x %{_bindir}/update-mime-database ] && update-mime-database /usr/share/mime >/dev/null
 
