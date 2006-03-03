@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release 0.1mdk
+%define release 1mdk
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -113,11 +113,13 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
-* Thu Feb 23 2006 Daouda LO <daouda@mandriva.com> 2.0-0.1mdk
+* Thu Mar  2 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-1mdk
 - mimetype association between bundle and mdkupdate (fcrozat)
-- Mandriva Online V3
-- extra package installation and update capabilities
-- clean up
+- Mandriva Online V3 (daouda & me)
+- extra package installation and update capabilities (daouda, me)
+- clean up (daouda, me)
+- wizards works on both cooker and MDV2006
+- misc bug fixes
 
 * Fri Dec  9 2005 Daouda LO <daouda@mandriva.com> 1.4-0.1mdk
 - display updates to install even if server is out of sync
