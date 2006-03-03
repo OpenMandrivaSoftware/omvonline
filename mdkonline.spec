@@ -11,6 +11,10 @@ URL:		http://www.mandrivaonline.com
 License:	GPL
 Group:		System/Configuration/Other
 Requires:  	drakxtools-newt, perl-Gtk2-TrayIcon >= 0.03-3mdk, perl-Crypt-SSLeay >= 0.51-2mdk
+# for gurpmi.addmedia:
+Requires: rpmdrake > 2.20-3.1.20060mdk
+# for good gurpmi:
+Requires: urpmi > 4.7.15-1.1.20060mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
 Requires:	hwdb-clients >= 0.15.1-1mdk
