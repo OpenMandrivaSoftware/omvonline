@@ -140,7 +140,7 @@ if (!$bundle) {
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
     my $res = mdkonline::prepare_upload_conf($wc);
-    if (my $version = $bundle_vars{CLIENT_VERSION} >= $VERSION) {
+    if ($bundle_vars{CLIENT_VERSION} >= $VERSION) {
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
 
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
@@ -151,12 +151,11 @@ You need to update to a newer version. You can get a new one from http://start.m
     if ($bundle_info->{status}) {
 	my @bundles;
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
-	my %mirrors = map {split(';', $_, 2) } @$mirrors;
+	my %mirrors = map { split(';', $_, 2) } @$mirrors;
 	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/\.rpm$//;
-	my $bundle_mirror = find { $_ =~ /^bundle/ } keys %mirrors;
-	push(@bundles, $bundle);
-	install_pkgs($in, \@bundles, $bundle_mirror, { is_bundle => 1 });
+	push @bundles, $bundle;
+	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors), { is_bundle => 1 });
     }
 }
 
