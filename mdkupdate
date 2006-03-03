@@ -140,6 +140,13 @@ if (!$bundle) {
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
     my $res = mdkonline::prepare_upload_conf($wc);
+    if (my $version = $bundle_vars{CLIENT_VERSION} >= $VERSION) {
+        print "TOTO\n";
+        $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
+
+You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
+        $in->exit(1);
+    }
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
     print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
     if ($bundle_info->{status}) {
