@@ -155,7 +155,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/\.rpm$//;
 	push @bundles, $bundle;
-	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors), { is_bundle => 1 });
+	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors), { is_bundle => 1, auto_select => ($wc->{POST} =~ /AUTO_SELECT/) });
     } else {
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
@@ -191,7 +191,7 @@ sub install_pkgs {
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
     eval {
 	system "/usr/sbin/urpmi", "--auto", "--media", $media_name, @$choosed;
-	system "/usr/sbin/urpmi", "--auto-select", "--media", $media_name if $o_options->{is_bundle};
+	system "/usr/sbin/urpmi", if_($o_options->{auto_select}, "--auto-select"), "--media", $media_name if $o_options->{is_bundle};
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     undef $w;
