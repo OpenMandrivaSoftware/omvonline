@@ -1,14 +1,14 @@
 # translation of mdkonline.po to Estonian
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Riho Kurg <rx@linux.ee>, 2002
-# Marek Laane <bald@starman.ee>, 2003-2005
+# Marek Laane <bald@starman.ee>, 2003-2006
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-03 21:28+0100\n"
-"PO-Revision-Date: 2005-09-17 12:14+0200\n"
+"PO-Revision-Date: 2006-03-05 13:30+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -41,9 +41,9 @@ msgid "New updates are available for your system"
 msgstr "Teie süsteemile on uuendusi"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Teie süsteemile on uuendusi"
+msgstr "Teie süsteemile on uusi tarkvarakomplekte"
 
 #: ../mdkapplet:95
 #, c-format
@@ -362,14 +362,14 @@ msgid "Password:"
 msgstr "Parool:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Masina nimi:"
+msgstr "Masina kirjeldus:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Näide: Minu koduarvuti)"
 
 #: ../mdkonline:123
 #, c-format
@@ -542,7 +542,7 @@ msgstr "Turvalisusviga"
 #: ../mdkonline.pm:178
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Üldine viga (masin on juba registreeritud)"
 
 #: ../mdkonline.pm:179
 #, c-format
@@ -682,29 +682,29 @@ msgstr ""
 "kasutamine:\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help         - näitab seda abiteadet.\n"
+msgstr "  --help\t\t- näitab seda abiteadet.\n"
 
 #: ../mdkupdate:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto         - Mandriva Update käivitatakse automaatselt.\n"
+msgstr "  --auto\t\t- Mandriva Update käivitatakse automaatselt.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet       - käivitatakse Mandriva Update.\n"
+msgstr "  --applet\t\t- käivitatakse Mandriva Update.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf          - käivitatakse MNF-spetsiifilised skriptid.\n"
+msgstr "  --mnf\t\t\t- käivitatakse MNF-spetsiifilised skriptid.\n"
 
 #: ../mdkupdate:71
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX          - Mandriva Update'i tekstiversioon.\n"
+msgstr "  --noX\t\t\t- Mandriva Update'i tekstiversioon.\n"
 
 #: ../mdkupdate:72
 #, c-format
@@ -712,6 +712,8 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle fail.bundle\t- parsitakse ja paigaldatakse pakett metainfofailist "
+".bundle.\n"
 
 #: ../mdkupdate:144
 #, c-format
@@ -726,6 +728,10 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Mandriva Online'i klient on liiga vana versiooniga.\n"
+"\n"
+"Teil tuleb uuendada see värskema versioonini. Selle leiab aadressilt http://"
+"start.mandriva.com"
 
 #: ../mdkupdate:160
 #, c-format
