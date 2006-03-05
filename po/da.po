@@ -1,25 +1,27 @@
+# translation of da.po to
 # translation of da.po to Danish
 # Danish translation of Madrake Online.
 # Copyright (C) 2001 Mandriva S.A.
 # Keld Simonsen <keld@dkuug.dk>, 2001-2003, 2004, 2005.
+# Keld Simonsen <keld@rap.dk>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-03 21:28+0100\n"
-"PO-Revision-Date: 2005-09-17 01:17+0200\n"
-"Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
-"Language-Team: Danish <dansk@klid.dk>\n"
+"PO-Revision-Date: 2006-03-05 18:58+0100\n"
+"Last-Translator: Keld Simonsen <keld@rap.dk>\n"
+"Language-Team:  <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.0.2\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../mdkapplet:65
 #, c-format
 msgid "Your system is up-to-date"
-msgstr "Systemet er opdateret."
+msgstr "Dit system er opdateret"
 
 #: ../mdkapplet:71
 #, c-format
@@ -41,9 +43,9 @@ msgid "New updates are available for your system"
 msgstr "Nye opdateringer er tilgængelige for dit system"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Nye opdateringer er tilgængelige for dit system"
+msgstr "Nye samlinger er tilgængelige for dit system"
 
 #: ../mdkapplet:95
 #, c-format
@@ -63,8 +65,7 @@ msgstr "Tjeneste er ikke aktiveret. Klik på \"Websted på nettet\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
+msgstr "Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -180,8 +181,7 @@ msgstr "Start Mandriva Linux Opdatering op - applet\n"
 #: ../mdkapplet:259
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
+msgstr "Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
 
 #: ../mdkapplet:270
 #, c-format
@@ -247,8 +247,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Problem indtraf ved forbindelse til serveren, kontakt venligst kundetjenesten"
+msgstr "Problem indtraf ved forbindelse til serveren, kontakt venligst kundetjenesten"
 
 #: ../mdkapplet:316
 #, c-format
@@ -363,14 +362,14 @@ msgid "Password:"
 msgstr "Adgangskode:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Maskinnavn:"
+msgstr "Maskinbeskrivelse:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Fx: Mit hjemmekontors maskine)"
 
 #: ../mdkonline:123
 #, c-format
@@ -538,7 +537,7 @@ msgstr "Sikkerhedsfejl"
 #: ../mdkonline.pm:178
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Generel fejl (maskine allerede registreret)"
 
 #: ../mdkonline.pm:179
 #, c-format
@@ -677,36 +676,36 @@ msgstr ""
 "brug:\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help         - print denne hjælpebesked.\n"
+msgstr "  --help\t\t- udskriv denne hjælpebesked.\n"
 
 #: ../mdkupdate:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto         - Mandriva Update startes automatisk.\n"
+msgstr "  --auto\t\t- Mandriva Update startes automatisk.\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet       - start MandrivaOpdatér op.\n"
+msgstr "  --applet\t\t- start Mandriva Update.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf          - start mnf-specifikke skripter.\n"
+msgstr "  --mnf\t\t\t - start mnf-specifikke skripter.\n"
 
 #: ../mdkupdate:71
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX          - teksttilstandsversion af Mandriva Update.\n"
+msgstr "  --noX\t\t\t- teksttilstandsversion af Mandriva Update.\n"
 
 #: ../mdkupdate:72
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle fil.bundle\t- fortolk og installér pakke fra .bundle metainfo-fil.\n"
 
 #: ../mdkupdate:144
 #, c-format
@@ -721,6 +720,10 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Versionen af Mandriva Online klienten er for gammel.\n"
+"\n"
+"Du skal opdatere til en nyere version. Du kan få en ny fra http://"
+"start.mandriva.com"
 
 #: ../mdkupdate:160
 #, c-format
@@ -747,415 +750,3 @@ msgstr "Installerer pakker...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 
-#~ msgid "Sending configuration..."
-#~ msgstr "Sender konfiguration..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Usikkert kald: Metoden er kun tilgængelig via httpS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Ingen %s-fil fundet. Kør mdkonline-hjælperen først"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "Mandriva Update kunne ikke kontakte stedet, vi vil prøve igen."
-
-#~ msgid "Login:"
-#~ msgstr "Brugernavn:"
-
-#~ msgid "or"
-#~ msgstr "eller"
-
-#~ msgid "wrong password:"
-#~ msgstr "forkert adgangskode:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Dit brugernavn eller adgangskode var forkert.\n"
-#~ "Enten skal du indtaste det igen, eller også skal du oprette en konto hos "
-#~ "Mandriva Online.\n"
-#~ " I sidste tilfælde skal du gå tilbage til det første trin for forbindelse "
-#~ "til Mandriva Online.\n"
-#~ "Vær opmærksom på at du også skal angive et maskinnavn \n"
-#~ "(Kun bogstaver er tilladt)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Mail-kontakt:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Angiv venligst et logind"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Logind og adgangskode bør være mindre end 12 tegn lange\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Specialtegn er ikke tilladt\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Email ikke gyldig\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Konto eksisterer allerede\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problem ved opkobling til server \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Problem indtraf ved forbindelse til serveren, kontakt venligst "
-#~ "kundetjenesten"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Kan ikke opdatere pakker fra mdkupdate-medium.\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "Mandriva Update kunne ikke lægge diff-filerne op. Send et brev til "
-#~ "support@mandrivaonline.com"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Vent venligst"
-
-#~ msgid "Next"
-#~ msgstr "Næste"
-
-#~ msgid "Cancel"
-#~ msgstr "Annullér"
-
-#~ msgid "Previous"
-#~ msgstr "Forrige"
-
-#~ msgid "Welcome to Mandriva Online"
-#~ msgstr "Velkommen til Mandriva Online"
-
-#~ msgid "I don't have a Mandriva Online account and I want to subscribe"
-#~ msgstr "Jeg har ikke en Mandriva Online-konto, og jeg vil gerne meldes til"
-
-#~ msgid "Mandriva Linux Privacy Policy"
-#~ msgstr "Mandriva Linux privatbeskyttelsespolitik"
-
-#~ msgid "Authentification"
-#~ msgstr "Autentifikation"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Send konfiguration"
-
-#~ msgid "Finish"
-#~ msgstr "Afslut"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "automatiserede upgraderinger"
-
-#~ msgid "Country:"
-#~ msgstr "Land:"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Afslutter guiden\n"
-
-#~ msgid ""
-#~ "Mandriva Online could not be contacted, please try again at a later time"
-#~ msgstr "Mandriva Online kunne ikke kontaktes, prøv igen senere"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - Opdatér nøgler\n"
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Overspring hjælperen"
-
-#~ msgid "Subscribe"
-#~ msgstr "abonnere"
-
-#~ msgid "Config problems. Launch \"configure\" again"
-#~ msgstr "Konfigurationsproblemer. Start \"konfigurér\" igen"
-
-#~ msgid "%s packages available for update"
-#~ msgstr "%s pakker tilgængelige for opdatering"
-
-#~ msgid "Service deactivated. Waiting for payment..."
-#~ msgstr "Tjenesten deaktiveret. Venter på betaling..."
-
-#~ msgid "Launch Mandriva Linux Update"
-#~ msgstr "Start Mandriva Linux Opdatering op"
-
-#~ msgid "Available"
-#~ msgstr "Tilgængelige"
-
-#~ msgid "Checking ..."
-#~ msgstr "Tjekker ..."
-
-#~ msgid "Not Available"
-#~ msgstr "Ikke tilgængelige"
-
-#~ msgid "Attempting to connect to mandrivaonline.com\n"
-#~ msgstr "Forsøger at koble op til mandrivaonline.com\n"
-
-#~ msgid "Creation"
-#~ msgstr "Oprettelse"
-
-#~ msgid "Special characters"
-#~ msgstr "Specialtegn"
-
-#~ msgid "Empty fields"
-#~ msgstr "Tomme felter"
-
-#~ msgid "Email"
-#~ msgstr "Email"
-
-#~ msgid "Change account"
-#~ msgstr "Ændr konto"
-
-#~ msgid "Server Problem"
-#~ msgstr "Serverproblem"
-
-#~ msgid "Launching Mandriva Update\n"
-#~ msgstr "Start Mandriva Linux Opdatering op\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "Ja, jeg ønsker automatiserede opdateringer"
-
-#~ msgid "Register Now!"
-#~ msgstr "Registrér nu!"
-
-#~ msgid "About Online Applet"
-#~ msgstr "Om netværks-panelprogrammet"
-
-#~ msgid "Mandriva Linux Online Team"
-#~ msgstr "Mandriva Online-holdet"
-
-#~ msgid "Mandriva Linux Update Notification Applet"
-#~ msgstr "Mandriva Linux opdatering adviserings-panelprogram"
-
-#~ msgid "Team:"
-#~ msgstr "Holdet:"
-
-#~ msgid "This Software is under GPL"
-#~ msgstr "Dette programmel er frigivet under GPL-licensen"
-
-#~ msgid "Version:"
-#~ msgstr "Version:"
-
-#~ msgid "Start Mandriva Update"
-#~ msgstr "Start Mandriva Update"
-
-#~ msgid "  --security     - use only security media.\n"
-#~ msgstr "  --security     - brug kun sikkerhedsmeddia.\n"
-
-#~ msgid "  -v             - verbose mode.\n"
-#~ msgstr "  -v             - mange beskeder.\n"
-
-#~ msgid ""
-#~ "You need to have an account on Mandriva Online, or update your "
-#~ "subscription."
-#~ msgstr ""
-#~ "Du har brug for en konto hos Mandriva Online, eller opdatere dit "
-#~ "abonnement."
-
-#~ msgid "Your login or password may be wrong"
-#~ msgstr "Dit brugernavn eller din adgangskode kan være forkert"
-
-#~ msgid "Unable to create mdkupdate medium.\n"
-#~ msgstr "Kan ikke oprette mdkupdate-medium.\n"
-
-#~ msgid "Africa"
-#~ msgstr "Afrika"
-
-#~ msgid "Asia"
-#~ msgstr "Asien"
-
-#~ msgid "Australia"
-#~ msgstr "Australien"
-
-#~ msgid "Europe"
-#~ msgstr "Europa"
-
-#~ msgid "North America"
-#~ msgstr "Nordamerika"
-
-#~ msgid "South America"
-#~ msgstr "Sydamerika"
-
-#~ msgid "Back"
-#~ msgstr "Tilbage"
-
-#~ msgid "Empty Mirror"
-#~ msgstr "Tomt spejl"
-
-#~ msgid "Empty Mirror. Please choose a place."
-#~ msgstr "Tomt spejl. Vælg venligst et sted."
-
-#~ msgid "Warning: No browser specified"
-#~ msgstr "Advarsel: Ingen netlæser angivet"
-
-#~ msgid "Sending your Configuration"
-#~ msgstr "Sender din konfiguration"
-
-#~ msgid "Error while sending informations"
-#~ msgstr "Fejl ved sending af oplysninger"
-
-#~ msgid ""
-#~ "There was an error while sending your personal informations.\n"
-#~ "\n"
-#~ "Press Next to try and send your configuration again."
-#~ msgstr ""
-#~ "Der var en fejl ved sendingen af dine personlige oplysninger\n"
-#~ "\n"
-#~ "Tryk Næste for at prøve at sende din konfiguration igen."
-
-#~ msgid "Finished"
-#~ msgstr "Afsluttet"
-
-#~ msgid "Choose your geographical location"
-#~ msgstr "Vælg din geografiske placering"
-
-#~ msgid "OK"
-#~ msgstr "O.k."
-
-#~ msgid ""
-#~ "Do you really want to abort Mandriva Online?\n"
-#~ "To return to the Wizard press 'Cancel',\n"
-#~ "to really quit it press 'Quit'."
-#~ msgstr ""
-#~ "Vil du virkelig afbryde Mandriva Online?\n"
-#~ "Tryk 'Annullér' for at vende tilbage til guiden.\n"
-#~ "Tryk 'Afslut' for at endeligt afslutte."
-
-#~ msgid "Really abort? - Mandriva Online"
-#~ msgstr "Virkelig afslut? - Mandriva Online"
-
-#~ msgid ""
-#~ " You are just starting our Free Mandriva Linux Download Edition for the "
-#~ "first time. \n"
-#~ "\n"
-#~ "There are now over three million Mandriva Linux users all over the "
-#~ "world!\n"
-#~ "\n"
-#~ "Please take a few seconds to fill a short questionnaire. The data from "
-#~ "this \n"
-#~ "questionnaire will be used only for aggregate market studies.\n"
-#~ "The text below is the privacy policy of Mandriva about your personal data."
-#~ msgstr ""
-#~ " Du er ved at starte vores Gratis Mandriva Linux Nedhentnings Version for "
-#~ "første gang. \n"
-#~ "\n"
-#~ "Der er nu over tre millioner Mandriva Linux brugere over hele verden!\n"
-#~ "\n"
-#~ "Brug venligst et øjeblik til at svare på et kort spørgeskema. Data fra "
-#~ "dette \n"
-#~ "spørgeskema vil kun blive brugt til overordnende markedsundersøgelser.\n"
-#~ "Nedenstående tekst er Mandrivas fortrolighedspolitik omkring dine "
-#~ "personlige oplysninger."
-
-#~ msgid ""
-#~ "What personal data do we collect ?         \n"
-#~ "                               \n"
-#~ "Various information is collected in different areas of the website;\n"
-#~ "what follows is an overview of the data we keep:\n"
-#~ "\n"
-#~ "Firstly, we record your email address, name and postal address.\n"
-#~ "Secondly we give you a unique customer ID. This ID will be used to \n"
-#~ "add additional information related to your Mandriva Linux account such "
-#~ "as:\n"
-#~ "    - Your subscription to mailling lists.\n"
-#~ "    - When registering a purchased product, we ask for personal\n"
-#~ "information as well as system/hardware details so that we may deliver\n"
-#~ "the best support services customized to your needs.\n"
-#~ "    - On our donation page and on our online store (MandrivaStore), we\n"
-#~ "record data for billing purpose (we do not store any credit card data).\n"
-#~ "    \n"
-#~ "What do we do with this information?\n"
-#~ "\n"
-#~ "We never share personal information with other persons or companies -\n"
-#~ "we use this data strictly for the following purposes:\n"
-#~ "    - If you have subscribed to a mailing list, we keep this email\n"
-#~ "address in our database to provide you with customized information\n"
-#~ "and/or to enable you to participate in discussions in various mailing\n"
-#~ "lists. If you send a message to such a list, other people will see\n"
-#~ "your email address but no external parties have access to our database\n"
-#~ "of subscribers. At any time you may unsubscribe to any list by using\n"
-#~ "the appropriate form.\n"
-#~ "    - If you provide information when registering a purchased product\n"
-#~ "to receive support, we keep this information private unless the\n"
-#~ "information is required by one of our partners to deliver the support\n"
-#~ "you require.\n"
-#~ "    - If you use MandrivaStore, we also use your Customer ID to track\n"
-#~ "your order and deliver your products.\n"
-#~ "    - If you provide us with marketing information, we keep it for \n"
-#~ "internal use only in order to improve our products so that they can \n"
-#~ "better fit your needs whether you have purchased a product or not.), How "
-#~ "to change / correct your personal data?\n"
-#~ "\n"
-#~ "French law gives individuals the right to access, correct, modify or \n"
-#~ "remove their own personal data that we have on record. We offer this \n"
-#~ "as a worldwide privilege. You may execute this right at any time by \n"
-#~ "logging to your account with your customer ID and editing your\n"
-#~ "personnal data. You can log on to this page: http://www.mandrivaonline.com"
-#~ msgstr ""
-#~ "Hvilke personlige data indsamler vi?         \n"
-#~ "                               \n"
-#~ "Forskellig information indsamles i forskellige områder på webstedet;\n"
-#~ "hvad der følger er en oversigt over de data vi opbevarer:\n"
-#~ "\n"
-#~ "For det første noterer vi din epost-adresse, dit navn og din "
-#~ "postadresse.\n"
-#~ "For det andet giver vi dig en unik kundeidentitet. Denne ID vil blive "
-#~ "brugt til \n"
-#~ "at tilføje yderligere information relateret til din Mandriva Linux-konto, "
-#~ "såsom:\n"
-#~ "    - Dit abonnement på postlister.\n"
-#~ "    - Ved registrering af et købt produkt spørger vi om personlige\n"
-#~ "oplysninger samtidigt med system- og udstyrsdetaljer så vi kan give\n"
-#~ "den bedste understøttelsesservice tilpasset dine behov.\n"
-#~ "    - På vores bidragsside og på vores netbutik (MandrivaStore) gemmer\n"
-#~ "vi data omkring betaling (vi gemmer ikke nogen kreditkortsdata).\n"
-#~ "    \n"
-#~ "Hvad gør vi med denne information?\n"
-#~ "\n"
-#~ "Vi deler aldrig personlig information med andre personer eller firmaer -\n"
-#~ "vi bruger udelukkende disse data til de følgende formål:\n"
-#~ "    - Hvis du har abonneret på en postliste, opbevarer vi denne "
-#~ "epostadresse\n"
-#~ "i vores database for at give dig tilpasset information\n"
-#~ "og for at give dig mulighed for at deltage i diskussioner på forskellige "
-#~ "postlister.\n"
-#~ "Hvis du sender en besked til en sådan liste, vil andre folk se din\n"
-#~ "epostadresse, men ingen udenforstående parter vil have adgang til vores "
-#~ "database\n"
-#~ "med abonnenter. Til enhver tid kan du afmelde dig fra enhver liste ved at "
-#~ "bruge\n"
-#~ "den tilsvarende formular.\n"
-#~ "    - Hvis du giver oplysninger ved registrering af et købt produkt\n"
-#~ "for at få support, holder vi denne information fortroligt med mindre \n"
-#~ "oplysningerne er krævet af en af vores partnere for at levere den\n"
-#~ "support du har brug for.\n"
-#~ "    - Hvis du bruger MandrivaStore, bruger vi også din kunde-ID til at "
-#~ "holde styr\n"
-#~ "på din ordre og levere dine varer.\n"
-#~ "    - Hvis du giver os marketingsoplysninger, opbevarer vi disse kun "
-#~ "til \n"
-#~ "intern brug for at kunne forbedre vores produkter så vi bedre kan \n"
-#~ "opfylde dine behov (enten du har købt et produkt eller ej).\n"
-#~ "\n"
-#~ "Hvordan kan du rette eller ændre dine personlige data?\n"
-#~ "\n"
-#~ "Fransk lov giver personer ret til at få adgang til, rette, ændre eller \n"
-#~ "fjerne deres egne personlige data som vi har liggende. Vi tilbyder "
-#~ "dette \n"
-#~ "også på verdensplan. Du kan benytte denne rettighed til enhver tid ved "
-#~ "at \n"
-#~ "logge på din konto med din kunde-id og redigere dine\n"
-#~ "personlige data. Du kan logge på via denne side: http://www."
-#~ "mandrivaonline.com"
-
-#~ msgid "Sans Italic 17"
-#~ msgstr "Sans Italic 17"
