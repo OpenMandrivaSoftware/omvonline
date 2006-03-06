@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-03 21:28+0100\n"
-"PO-Revision-Date: 2005-02-01 20:26-0000\n"
+"PO-Revision-Date: 2006-03-02 21:50-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
-"Language-Team: Cymraeg/Welsh <rhoslyn.prys@meddal.org.uk>\n"
+"Language-Team: Cymraeg/Welsh <post@meddal.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -315,17 +315,17 @@ msgstr "Rwyf eisiau tanysgrifio"
 #: ../mdkonline:69
 #, c-format
 msgid "Mr."
-msgstr ""
+msgstr "Mr."
 
 #: ../mdkonline:69
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Mrs."
 
 #: ../mdkonline:69
 #, c-format
 msgid "Ms."
-msgstr ""
+msgstr "Ms."
 
 #: ../mdkonline:87
 #, c-format
@@ -355,9 +355,9 @@ msgstr ""
 "Rhowch eich mewngofnod Mandriva Online, eich cyfrinair ac enw'r peiriant :"
 
 #: ../mdkonline:114 ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Cyfeiriad IP :"
+msgstr "Cyfeiriad e-bost:"
 
 #: ../mdkonline:115 ../mdkonline:156
 #, c-format
@@ -375,9 +375,9 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
 #: ../mdkonline:123
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Dylai enw'r pwyntiau gosod gynnwys llythrennau a  rhifau'n unig"
+msgstr "Rhaid i enw'r peiriant fod 1 i 40 nod rhifol"
 
 #: ../mdkonline:125
 #, c-format
@@ -423,9 +423,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Creu cyfrif Mandriva Online "
 
 #: ../mdkonline:152
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Gwyrdd"
+msgstr "Cyfarchiad:"
 
 #: ../mdkonline:153
 #, c-format
@@ -433,9 +433,9 @@ msgid "First name:"
 msgstr "Enw cyntaf:"
 
 #: ../mdkonline:154
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Enw gwesteiwr :"
+msgstr "Enw olaf :"
 
 #: ../mdkonline:157
 #, c-format
@@ -452,9 +452,9 @@ msgstr ""
 "Ceisiwch eto\n"
 
 #: ../mdkonline:164
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Llanwch y meysydd\n"
+msgstr "Llanwch pob maes"
 
 #: ../mdkonline:164
 #, c-format
@@ -538,9 +538,9 @@ msgstr ""
 "neu osodiadau llwybrydd/mur cadarn anghywir."
 
 #: ../mdkonline.pm:178
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Rhybuddion Diogelwch:"
+msgstr "Gwall diogelwch"
 
 #: ../mdkonline.pm:178
 #, c-format
@@ -548,9 +548,9 @@ msgid "Generic error (machine already registered)"
 msgstr ""
 
 #: ../mdkonline.pm:179
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Gwall Cronfa Ddata"
+msgstr "Gwall cronfa ddata"
 
 #: ../mdkonline.pm:179
 #, c-format
@@ -558,21 +558,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Methodd cronfa ddata'r gweinydd\n"
+"Ceisiwch eto'n hwyrach"
 
 #: ../mdkonline.pm:180
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Math o Gofrestri"
+msgstr "Gwall cofrestru"
 
 #: ../mdkonline.pm:180
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Mae enw'r argraffydd pell ar goll!"
+msgstr "Mae rhai paramedrau ar goll"
 
 #: ../mdkonline.pm:181 ../mdkonline.pm:187
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Cyfrinair ar gyfer %s"
+msgstr "Gwall cyfrinair"
 
 #: ../mdkonline.pm:181
 #, c-format
@@ -580,44 +582,47 @@ msgid "Wrong password"
 msgstr "Y cyfrinair anghywir"
 
 #: ../mdkonline.pm:182 ../mdkonline.pm:183 ../mdkonline.pm:184
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "gwall anhysbys"
+msgstr "Gwall mewngofnodi"
 
 #: ../mdkonline.pm:182
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"Mae'r cyfeiriadur cyrchfan eisoes yn cael ei ddefnyddio, dewiswch un arall."
+"Mae'r e-bost rydych wedi ei ddarparu'n cael ei ddefnyddio eisoes\n"
+"Dewiswch un arall\n"
 
 #: ../mdkonline.pm:183
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Mae'r e-bost a ddarparwyd yn annilys neu waharddedig"
 
 #: ../mdkonline.pm:184
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Mae'r maes enw'n wag cynigwch enw"
+msgstr ""
+"Mae'r blwch cyfeiriad gwe yn wag\n"
+"Darparwch un"
 
 #: ../mdkonline.pm:185
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP cyfyngedig"
+msgstr "Gwall Cyfyngu"
 
 #: ../mdkonline.pm:185
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Gweinydd Cronfa Ddata"
+msgstr "Mynediad cronfa ddata gwaharddedig"
 
 #: ../mdkonline.pm:186 ../mdkonline.pm:188
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Gwall ysgrifennu\n"
+msgstr "Gwall gwasanaeth"
 
 #: ../mdkonline.pm:186
 #, c-format
@@ -625,9 +630,11 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Nid yw gwasanaethau Mandrivaar gael ar hyn o bryd\n"
+"Ceisiwch eto'n hwyrach"
 
 #: ../mdkonline.pm:187
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
 msgstr "Anghydweddiad cyfrinair"
 
@@ -637,26 +644,28 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
+"Mae gwasanaethau gwe Mandriva yn cael eu trwsio\n"
+"Ceisiwch eto"
 
 #: ../mdkonline.pm:189
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Mewngofnod defnyddiwr:"
+msgstr "Gwahardd Defnyddiwr"
 
 #: ../mdkonline.pm:189
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
+msgstr "Cyfrif defnyddiwr wedi ei wahardd gan wasanaethau gwe Mandriva"
 
 #: ../mdkonline.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Enw'r cysylltiad"
+msgstr "Gwall cysylltiad"
 
 #: ../mdkonline.pm:190
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Methu cyrraedd gwasanaethau gwe Mandriva"
 
 #: ../mdkupdate:62
 #, c-format
@@ -676,29 +685,29 @@ msgstr ""
 "defnydd:\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help         - argraffu'r neges cymorth hon.\n"
+msgstr "  --help\t\t- argraffu'r neges cymorth hon.\n"
 
 #: ../mdkupdate:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto         - cychwyn Mandriva Update yn awtomatig\n"
+msgstr "  --auto\t\t- cychwyn Mandriva Update yn awtomatig\n"
 
 #: ../mdkupdate:69
-#, fuzzy, c-format
+#, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet       - cychwyn Mandriva Update.\n"
+msgstr "  --applet\t\t- cychwyn Mandriva Update.\n"
 
 #: ../mdkupdate:70
-#, fuzzy, c-format
+#, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf          - cychwyn sgriptiau mnf penodol.\n"
+msgstr "  --mnf\t\t\t- cychwyn sgriptiau mnf penodol.\n"
 
 #: ../mdkupdate:71
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX          - fersiwn modd testun o Mandriva Update\n"
+msgstr "  --noX\t\t\t- fersiwn modd testun o Mandriva Update\n"
 
 #: ../mdkupdate:72
 #, c-format
@@ -748,6 +757,24 @@ msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Anfon ffurfweddiad..."
+
+#~ msgid "Unsecure invocation: Method available through httpS only"
+#~ msgstr "Galwad aniogel: Dull ar gael drwy https yn unig"
+
+#~ msgid "  --help         - print this help message.\n"
+#~ msgstr "  --help         - argraffu'r neges cymorth hon.\n"
+
+#~ msgid "  --auto         - Mandriva Update launched automatically.\n"
+#~ msgstr "  --auto         - cychwyn Mandriva Update yn awtomatig\n"
+
+#~ msgid "  --applet       - launch Mandriva Update.\n"
+#~ msgstr "  --applet       - cychwyn Mandriva Update.\n"
+
+#~ msgid "  --mnf          - launch mnf specific scripts.\n"
+#~ msgstr "  --mnf          - cychwyn sgriptiau mnf penodol.\n"
+
+#~ msgid "  --noX          - text mode version of Mandriva Update.\n"
+#~ msgstr "  --noX          - fersiwn modd testun o Mandriva Update\n"
 
 #~ msgid "No %s file found. Run mdkonline wizard first"
 #~ msgstr "Heb ganfod unrhyw ffeiliau %s. Rhedwch ddewin mdkonline yn gyntaf"
