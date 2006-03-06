@@ -178,7 +178,8 @@ my $wiz =
 			       if ($sendconfres eq 'OK') {
 				   "\n\n" . N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n");
 			       } else {
-				   N("Connection problem") . "\n" . N("Problem occurs when uploading files, please try again");
+				   N("Connection problem") . "\n" . N("Problem occurs when uploading files, please try again")
+                         . "\n\n" . $sendconfres;
 			       }
 			   },
 			   data => sub {
