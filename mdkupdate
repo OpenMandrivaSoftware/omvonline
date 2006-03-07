@@ -153,7 +153,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
 	my %mirrors = map { split(';', $_, 2) } @$mirrors;
-	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
+	add_media($_, $mirrors{$_}, 'media_info/synthesis.hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/-[^-]*-[^-]*\.[^.]*\.rpm$//;
 	push @bundles, $bundle;
 	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors),
