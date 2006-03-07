@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-03 21:28+0100\n"
+"POT-Creation-Date: 2006-03-07 12:20+0100\n"
 "PO-Revision-Date: 2006-03-07 09:31+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team:  <is@li.org>\n"
@@ -82,7 +82,7 @@ msgid "Check Updates"
 msgstr "Athuga með uppfærslur"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:153 ../mdkupdate:198
+#: ../mdkupdate:157 ../mdkupdate:202
 #, c-format
 msgid "Please wait"
 msgstr "Augnablik..."
@@ -713,14 +713,22 @@ msgstr "  --noX\t\t\t- textahams útgáfa af Mandriva Uppfærslum.\n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
+msgstr ""
+"  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
 
-#: ../mdkupdate:144
+#: ../mdkupdate:136 ../mdkupdate:148
 #, c-format
 msgid "Warning"
 msgstr "Aðvörun"
 
-#: ../mdkupdate:144
+#: ../mdkupdate:136
+#, c-format
+msgid ""
+"You first need to install the system on your harddrive with the 'Live "
+"Install' wizard."
+msgstr ""
+
+#: ../mdkupdate:148
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -733,33 +741,32 @@ msgstr ""
 "Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á http://"
 "start.mandriva.com"
 
-#: ../mdkupdate:153
+#: ../mdkupdate:157
 #, c-format
 msgid "Preparing..."
 msgstr "Undirbý..."
 
-#: ../mdkupdate:166
+#: ../mdkupdate:170
 #, c-format
 msgid "Error"
 msgstr "Villa"
 
-#: ../mdkupdate:166
+#: ../mdkupdate:170
 #, c-format
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../mdkupdate:174
+#: ../mdkupdate:178
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Veldu hvaða pakka á að setja inn og smelltu á \"Í lagi\""
 
-#: ../mdkupdate:198
+#: ../mdkupdate:202
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Set inn pakka...\n"
 
-#: ../mdkupdate:207 ../mdkupdate:275
+#: ../mdkupdate:211 ../mdkupdate:279
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
-
