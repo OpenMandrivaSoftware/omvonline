@@ -146,6 +146,10 @@ if (!$bundle) {
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
         $in->exit(1);
     }
+    if (-d '/live/media/loopbacks') {
+        $in->ask_warn(N("Warning"), N("You first need to install the system on your harddrive with the 'Live Install' wizard."));
+        $in->exit(1);
+    }
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
     print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
     if ($bundle_info->{status}) {
