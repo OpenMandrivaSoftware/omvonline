@@ -132,6 +132,10 @@ if (!$bundle) {
 	
     }
 } else {
+    if (-d '/live/media/loopbacks') {
+        $in->ask_warn(N("Warning"), N("You first need to install the system on your harddrive with the 'Live Install' wizard."));
+        $in->exit(1);
+    }
     my $bundle_info;
     my %bundle_vars = getVarsFromSh($bundle);
     
@@ -144,10 +148,6 @@ if (!$bundle) {
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
 
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
-        $in->exit(1);
-    }
-    if (-d '/live/media/loopbacks') {
-        $in->ask_warn(N("Warning"), N("You first need to install the system on your harddrive with the 'Live Install' wizard."));
         $in->exit(1);
     }
     $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
