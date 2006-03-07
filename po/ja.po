@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-07 12:16+0100\n"
+"POT-Creation-Date: 2006-03-07 12:24+0100\n"
 "PO-Revision-Date: 2005-09-18 21:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -83,7 +83,7 @@ msgid "Check Updates"
 msgstr "更新をチェック"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:157 ../mdkupdate:202
+#: ../mdkupdate:159 ../mdkupdate:204
 #, c-format
 msgid "Please wait"
 msgstr "お待ちください"
@@ -715,12 +715,20 @@ msgstr ""
 "  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージをイ"
 "ンストールする。\n"
 
-#: ../mdkupdate:144 ../mdkupdate:150
+#: ../mdkupdate:136 ../mdkupdate:150
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkupdate:144
+#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
+#: ../mdkupdate:138
+#, c-format
+msgid ""
+"You first need to install the system on your harddrive with the 'Live "
+"Install' wizard."
+msgstr ""
+
+#: ../mdkupdate:150
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -729,39 +737,32 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:150
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-
-#: ../mdkupdate:157
+#: ../mdkupdate:159
 #, c-format
 msgid "Preparing..."
 msgstr "準備中.."
 
-#: ../mdkupdate:170
+#: ../mdkupdate:172
 #, c-format
 msgid "Error"
 msgstr "エラー"
 
-#: ../mdkupdate:170
+#: ../mdkupdate:172
 #, c-format
 msgid "An error occurred"
 msgstr "エラーが発生しました"
 
-#: ../mdkupdate:178
+#: ../mdkupdate:180
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "インストールするパッケージを選択して[OK]を押してください。"
 
-#: ../mdkupdate:202
+#: ../mdkupdate:204
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "パッケージをインストール中..\n"
 
-#: ../mdkupdate:211 ../mdkupdate:279
+#: ../mdkupdate:213 ../mdkupdate:281
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_sourceメディアからパッケージを更新できません。\n"
