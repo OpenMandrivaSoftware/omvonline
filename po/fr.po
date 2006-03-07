@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2006-03-03 21:28+0100\n"
+"POT-Creation-Date: 2006-03-07 12:11+0100\n"
 "PO-Revision-Date: 2006-03-03 23:10+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
@@ -92,7 +92,7 @@ msgid "Check Updates"
 msgstr "Vérifier la disponibilité de mises à jour"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:191
+#: ../mdkupdate:153 ../mdkupdate:198
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
@@ -519,32 +519,32 @@ msgid "Problem occurs when uploading files, please try again"
 msgstr ""
 "Une erreur est survenue lors de l'envoi des fichiers, veuillez rééssayer"
 
-#: ../mdkonline:187
+#: ../mdkonline:188
 #, c-format
 msgid "Country"
 msgstr "Pays"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Congratulations"
 msgstr "Félicitations"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "Votre compte Mandriva Online est correctement configuré\n"
 
-#: ../mdkonline:218
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Votre configuration a été envoyée avec succès"
 
-#: ../mdkonline:219
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Problème lors de l'envoi de votre configuration"
 
-#: ../mdkonline:221
+#: ../mdkonline:222
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -553,22 +553,22 @@ msgstr ""
 "Ne peut se connecter au site internet Mandriva Online : identifiant/mot de "
 "passe incorrects ou mauvaise configuration routeur/pare-feu"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Security error"
 msgstr "Erreur de sécurité"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr "Erreur générique (machine déja enregistrée)"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Database error"
 msgstr "Erreur de base de données"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -577,32 +577,32 @@ msgstr ""
 "Base de données serveur inaccessible\n"
 "Veuillez réessayer plus tard s'il vous plaît"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Registration error"
 msgstr "Erreur d'enregistrement"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Des paramètres sont manquants"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:187
+#: ../mdkonline.pm:182 ../mdkonline.pm:188
 #, c-format
 msgid "Password error"
 msgstr "Erreur de mot de passe"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Wrong password"
 msgstr "Mot de passe incorrect"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:183 ../mdkonline.pm:184
+#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
 #, c-format
 msgid "Login error"
 msgstr "Erreur de nom d'utilisateur"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:183
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -611,12 +611,12 @@ msgstr ""
 "L'adresse courriel saisie est déjà utilisée\n"
 "Merci d'en fournir une autre\n"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:184
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "L'adresse courriel saisie est invalide ou interdite"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -625,22 +625,22 @@ msgstr ""
 "Le champ d'adresse courriel est vide\n"
 "Merci d'en fournir une"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Restriction Error"
 msgstr "Erreur de restriction"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Database access forbidden"
 msgstr "Accès à la base de données interdite"
 
-#: ../mdkonline.pm:186 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:189
 #, c-format
 msgid "Service error"
 msgstr "Erreur du service"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:187
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -649,12 +649,12 @@ msgstr ""
 "Les services Web Mandriva sont temporairement indisponibles\n"
 "Veuillez réessayer plus tard s'il vous plaît"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:188
 #, c-format
 msgid "Password mismatch"
 msgstr "Mots de passe différents"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:189
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -663,22 +663,22 @@ msgstr ""
 "Les services Web mandriva sont en maintenance\n"
 "Veuillez réessayer plus tard s'il vous plaît"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User Forbidden"
 msgstr "Nom d'utilisateur interdit"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Compte utilisateur interdit par les services Web Mandriva"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Connection error"
 msgstr "Erreur de connexion"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Les services Web Mandriva ne sont pas accessibles"
@@ -752,27 +752,32 @@ msgstr ""
 "Vous devez installer une nouvelle version. Vous pouvez en télécharger une "
 "depuis http://start.mandriva.com"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:153
+#, c-format
+msgid "Preparing..."
+msgstr ""
+
+#: ../mdkupdate:166
 #, c-format
 msgid "Error"
 msgstr "Erreur"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:166
 #, c-format
 msgid "An error occurred"
 msgstr "Une erreur est survenue"
 
-#: ../mdkupdate:167
+#: ../mdkupdate:174
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Choisissez les paquetages à installer et cliquez sur Ok"
 
-#: ../mdkupdate:191
+#: ../mdkupdate:198
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Installation des paquetages...\n"
 
-#: ../mdkupdate:195 ../mdkupdate:263
+#: ../mdkupdate:207 ../mdkupdate:275
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"

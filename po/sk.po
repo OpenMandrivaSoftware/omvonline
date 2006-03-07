@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-03 21:28+0100\n"
+"POT-Creation-Date: 2006-03-07 12:11+0100\n"
 "PO-Revision-Date: 2005-09-21 14:06+0100\n"
 "Last-Translator: Tibor Pittich <Tibor.Pittich@mandriva.org>\n"
 "Language-Team: Slovak <i18n@mandrake.sk>\n"
@@ -82,7 +82,7 @@ msgid "Check Updates"
 msgstr "Skontrolovať aktualizácie"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:191
+#: ../mdkupdate:153 ../mdkupdate:198
 #, c-format
 msgid "Please wait"
 msgstr "Prosím čakajte"
@@ -500,32 +500,32 @@ msgstr "Problém s pripojením"
 msgid "Problem occurs when uploading files, please try again"
 msgstr "Pri odosielaní súborov nastal problém, prosím skúste ešte raz"
 
-#: ../mdkonline:187
+#: ../mdkonline:188
 #, c-format
 msgid "Country"
 msgstr "Krajina"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulujeme"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "Váš Mandriva Online účet bol úspešne vytvorený\n"
 
-#: ../mdkonline:218
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Zaslanie nastavení bolo úspešné"
 
-#: ../mdkonline:219
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Nastal problém so zasielaním nastavenia"
 
-#: ../mdkonline:221
+#: ../mdkonline:222
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -534,22 +534,22 @@ msgstr ""
 "Nebolo možné pripojiť sa na stránku mandrivaonline: nesprávne meno/heslo "
 "alebo nastavenie firewallu"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Security error"
 msgstr "Bezpečnostná chyba"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr ""
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Database error"
 msgstr "Chyba databázy"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -558,32 +558,32 @@ msgstr ""
 "Databáza na servery ohlásila chybu\n"
 "Skúste neskôr"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Registration error"
 msgstr "Chyba pri registrácii"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Niektoré údaje chýbajú"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:187
+#: ../mdkonline.pm:182 ../mdkonline.pm:188
 #, c-format
 msgid "Password error"
 msgstr "Chyba v hesle"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Wrong password"
 msgstr "Nesprávne heslo"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:183 ../mdkonline.pm:184
+#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
 #, c-format
 msgid "Login error"
 msgstr "Chyba pri prihlásení"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:183
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -592,12 +592,12 @@ msgstr ""
 "Emailová adresa ktorú ste zadali sa už používa\n"
 "Zadajte prosím inú\n"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:184
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "Email adresa ktorú ste zadali je neplatná alebo nepovolená"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -606,22 +606,22 @@ msgstr ""
 "Emailová adresa nebola zadaná\n"
 "Je potrebné aby ste ju zadali"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Restriction Error"
 msgstr "Chyba v obmedzení"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Database access forbidden"
 msgstr "Prístup k databáze zakázaný"
 
-#: ../mdkonline.pm:186 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:189
 #, c-format
 msgid "Service error"
 msgstr "Chyba služby"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:187
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -630,12 +630,12 @@ msgstr ""
 "Web služby Mandriva sú momentálne nedostupné\n"
 "Skúste neskôr, prosím"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:188
 #, c-format
 msgid "Password mismatch"
 msgstr "Heslo nesúhlasí"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:189
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -644,22 +644,22 @@ msgstr ""
 "Web služby Mandriva sú momentálne pozastavené z dôvodu údržby\n"
 "Skúste neskôr, prosím"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User Forbidden"
 msgstr "Používateľ zakázaný"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Používateľský účet je zakázaný pre Mandriva web služby"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Connection error"
 msgstr "Chyba spojenia"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Web služby Mandriva nie sú dostupné"
@@ -726,27 +726,32 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:153
+#, c-format
+msgid "Preparing..."
+msgstr ""
+
+#: ../mdkupdate:166
 #, c-format
 msgid "Error"
 msgstr "Chyba"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:166
 #, c-format
 msgid "An error occurred"
 msgstr "Vyskytla sa chyba"
 
-#: ../mdkupdate:167
+#: ../mdkupdate:174
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Vyberte balíky ktoré chcete inštalovať a kliknite na Ok"
 
-#: ../mdkupdate:191
+#: ../mdkupdate:198
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Inštalujú sa balíky...\n"
 
-#: ../mdkupdate:195 ../mdkupdate:263
+#: ../mdkupdate:207 ../mdkupdate:275
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie je možné aktualizovať balíky z média update_source.\n"

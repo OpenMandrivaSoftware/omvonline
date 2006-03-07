@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv - Mandriva 2006 Release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-03 21:28+0100\n"
+"POT-Creation-Date: 2006-03-07 12:11+0100\n"
 "PO-Revision-Date: 2005-09-17 00:15+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -88,7 +88,7 @@ msgid "Check Updates"
 msgstr "Kontrollera om det finns uppdateringar"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:191
+#: ../mdkupdate:153 ../mdkupdate:198
 #, c-format
 msgid "Please wait"
 msgstr "Vänta"
@@ -507,32 +507,32 @@ msgstr "Anslutningsproblem"
 msgid "Problem occurs when uploading files, please try again"
 msgstr "Ett fel inträffade när filerna laddades upp, var vänlig försök igen"
 
-#: ../mdkonline:187
+#: ../mdkonline:188
 #, c-format
 msgid "Country"
 msgstr "Land"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulerar"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "Konfigureringen av ditt Mandriva Online-konto lyckades\n"
 
-#: ../mdkonline:218
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Uppladdning av konfigurationen klar"
 
-#: ../mdkonline:219
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Problem uppstod vid konfigurationens uppladdning"
 
-#: ../mdkonline:221
+#: ../mdkonline:222
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -541,22 +541,22 @@ msgstr ""
 "Kan ej ansluta till Mandriva Onlines webbsajt: Fel användarnamn/lösenord, "
 "eller felaktiga inställningar för router/brandvägg."
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Security error"
 msgstr "Säkerhetsfel"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr ""
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Database error"
 msgstr "Databasfel"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -565,32 +565,32 @@ msgstr ""
 "Server Databas problem\n"
 "Försök igen senare"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Registration error"
 msgstr "Registreringsfel"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Några parametrar saknas"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:187
+#: ../mdkonline.pm:182 ../mdkonline.pm:188
 #, c-format
 msgid "Password error"
 msgstr "Lösenordsfel"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Wrong password"
 msgstr "Felaktigt lösenord"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:183 ../mdkonline.pm:184
+#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
 #, c-format
 msgid "Login error"
 msgstr "Inloggningsfel"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:183
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -599,12 +599,12 @@ msgstr ""
 "E-posten du gav används redan.\n"
 "Var vänlig välj en annan.\n"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:184
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "E-posten du angav är felaktig eller förbjuden."
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -613,22 +613,22 @@ msgstr ""
 "E-postfältet är tomt.\n"
 "Vänligen ange en adress."
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Restriction Error"
 msgstr "Restriktionsfel"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Database access forbidden"
 msgstr "Databas användning förbjuden."
 
-#: ../mdkonline.pm:186 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:189
 #, c-format
 msgid "Service error"
 msgstr "Servicefel"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:187
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -637,12 +637,12 @@ msgstr ""
 "Mandriva webtjänster är onåbara för tillfället.\n"
 "Vänligen försök senare igen."
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:188
 #, c-format
 msgid "Password mismatch"
 msgstr "Lösenorden stämmer ej överens."
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:189
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -651,22 +651,22 @@ msgstr ""
 "Mandriva webtjänster är under service.\n"
 "Vänligen försök på nytt senare."
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User Forbidden"
 msgstr "Användare förbjuden."
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Användarkonto förbjudet av Mandriva webtjänster"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Connection error"
 msgstr "Anslutningsfel"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Mandriva webtjänster är inte nåbara"
@@ -733,27 +733,32 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:153
+#, c-format
+msgid "Preparing..."
+msgstr ""
+
+#: ../mdkupdate:166
 #, c-format
 msgid "Error"
 msgstr "Fel"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:166
 #, c-format
 msgid "An error occurred"
 msgstr "Ett fel inträffade"
 
-#: ../mdkupdate:167
+#: ../mdkupdate:174
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Välj de paket som ska installeras och tryck Ok"
 
-#: ../mdkupdate:191
+#: ../mdkupdate:198
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Installerar paket...\n"
 
-#: ../mdkupdate:195 ../mdkupdate:263
+#: ../mdkupdate:207 ../mdkupdate:275
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunde ej uppdatera paket från update_source källan.\n"

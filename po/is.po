@@ -8,8 +8,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< is.po
+"POT-Creation-Date: 2006-03-07 12:11+0100\n"
+"PO-Revision-Date: 2005-09-20 22:53+0000\n"
+=======
 "POT-Creation-Date: 2006-03-03 21:28+0100\n"
 "PO-Revision-Date: 2006-03-07 09:31+0000\n"
+>>>>>>> 1.74
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team:  <is@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +87,7 @@ msgid "Check Updates"
 msgstr "Athuga með uppfærslur"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:191
+#: ../mdkupdate:153 ../mdkupdate:198
 #, c-format
 msgid "Please wait"
 msgstr "Augnablik..."
@@ -503,32 +508,32 @@ msgstr "Tenging mistókst"
 msgid "Problem occurs when uploading files, please try again"
 msgstr "Vandamál kom upp þegar skrár voru sóttar, vinsamlega reyndu aftur"
 
-#: ../mdkonline:187
+#: ../mdkonline:188
 #, c-format
 msgid "Country"
 msgstr "Land"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Congratulations"
 msgstr "Til hamingju"
 
-#: ../mdkonline:203
+#: ../mdkonline:204
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr "Mandriva Online reikningur þinn hefur verið settur upp\n"
 
-#: ../mdkonline:218
+#: ../mdkonline:219
 #, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Tókst að senda stillingar"
 
-#: ../mdkonline:219
+#: ../mdkonline:220
 #, c-format
 msgid "Problem uploading configuration"
 msgstr "Vandamál að sækja stillingar"
 
-#: ../mdkonline:221
+#: ../mdkonline:222
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -537,22 +542,22 @@ msgstr ""
 "Get ekki tengst Mandriva Online vefsíðunni: rangur notandi/lykilorð eða "
 "vandamál með beinir/eldvegg"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Security error"
 msgstr "Öryggisvilla"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr "Almenn villa (Vél þegar skráð)"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Database error"
 msgstr "Gagnagrunns-villa"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -561,32 +566,32 @@ msgstr ""
 "Villa í gagnagrunn miðlara\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Registration error"
 msgstr "Skráningarvilla"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Sum viðföng vantar"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:187
+#: ../mdkonline.pm:182 ../mdkonline.pm:188
 #, c-format
 msgid "Password error"
 msgstr "Lykilorðsvilla"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Wrong password"
 msgstr "Rangt lykilorð"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:183 ../mdkonline.pm:184
+#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
 #, c-format
 msgid "Login error"
 msgstr "Skráningarvilla"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:183
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -595,12 +600,12 @@ msgstr ""
 "Netfangið sem þú gafst upp er þegar í notkun\n"
 "Vinsamlega gefið upp annað netfang\n"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:184
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "Netfangið sem þú gafst upp er ógilt eða ólöglegt"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -609,22 +614,22 @@ msgstr ""
 "Netfang-svæði er autt\n"
 "Vinsamlega gefðu upp netfang"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Restriction Error"
 msgstr "Takmörkunarvilla"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Database access forbidden"
 msgstr "Gagnagrunnsaðgangur bannaður"
 
-#: ../mdkonline.pm:186 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:189
 #, c-format
 msgid "Service error"
 msgstr "Þjónustuvilla"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:187
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -633,12 +638,12 @@ msgstr ""
 "Mandriva vefþjónusta er ekki tiltæk\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:188
 #, c-format
 msgid "Password mismatch"
 msgstr "Lykilorð eru ekki eins"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:189
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -647,22 +652,22 @@ msgstr ""
 "Mandriva vefþjónustur eru lokaðar vegna viðhalds\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User Forbidden"
 msgstr "Notanda ekki leyfður aðgangur"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:190
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Notanda aðgangur ekki leyfður af Mandriva vefþjónustu"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Connection error"
 msgstr "Connection error"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Næ ekki sambandi við Mandriva vefþjónustu"
@@ -733,27 +738,32 @@ msgstr ""
 "Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á http://"
 "start.mandriva.com"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:153
+#, c-format
+msgid "Preparing..."
+msgstr ""
+
+#: ../mdkupdate:166
 #, c-format
 msgid "Error"
 msgstr "Villa"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:166
 #, c-format
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../mdkupdate:167
+#: ../mdkupdate:174
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Veldu hvaða pakka á að setja inn og smelltu á \"Í lagi\""
 
-#: ../mdkupdate:191
+#: ../mdkupdate:198
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Set inn pakka...\n"
 
-#: ../mdkupdate:195 ../mdkupdate:263
+#: ../mdkupdate:207 ../mdkupdate:275
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
