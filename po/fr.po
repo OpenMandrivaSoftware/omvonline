@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2006-03-07 12:11+0100\n"
+"POT-Creation-Date: 2006-03-07 12:16+0100\n"
 "PO-Revision-Date: 2006-03-03 23:10+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
@@ -92,7 +92,7 @@ msgid "Check Updates"
 msgstr "Vérifier la disponibilité de mises à jour"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:153 ../mdkupdate:198
+#: ../mdkupdate:157 ../mdkupdate:202
 #, c-format
 msgid "Please wait"
 msgstr "Veuillez patienter"
@@ -734,7 +734,7 @@ msgstr ""
 "  --bundle file.bundle\t- lit et installe un paquet depuis un fichier "
 "metainfo .bundle.\n"
 
-#: ../mdkupdate:144
+#: ../mdkupdate:144 ../mdkupdate:150
 #, c-format
 msgid "Warning"
 msgstr "Attention"
@@ -752,32 +752,39 @@ msgstr ""
 "Vous devez installer une nouvelle version. Vous pouvez en télécharger une "
 "depuis http://start.mandriva.com"
 
-#: ../mdkupdate:153
+#: ../mdkupdate:150
+#, c-format
+msgid ""
+"You first need to install the system on your harddrive with the 'Live "
+"Install' wizard."
+msgstr ""
+
+#: ../mdkupdate:157
 #, c-format
 msgid "Preparing..."
 msgstr "Préparation ..."
 
-#: ../mdkupdate:166
+#: ../mdkupdate:170
 #, c-format
 msgid "Error"
 msgstr "Erreur"
 
-#: ../mdkupdate:166
+#: ../mdkupdate:170
 #, c-format
 msgid "An error occurred"
 msgstr "Une erreur est survenue"
 
-#: ../mdkupdate:174
+#: ../mdkupdate:178
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Choisissez les paquetages à installer et cliquez sur Ok"
 
-#: ../mdkupdate:198
+#: ../mdkupdate:202
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Installation des paquetages...\n"
 
-#: ../mdkupdate:207 ../mdkupdate:275
+#: ../mdkupdate:211 ../mdkupdate:279
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"
