@@ -150,6 +150,7 @@ You need to update to a newer version. You can get a new one from http://start.m
     print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
     if ($bundle_info->{status}) {
 	my @bundles;
+	my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
 	my %mirrors = map { split(';', $_, 2) } @$mirrors;
 	add_media($_, $mirrors{$_}, 'media_info/hdlist.cz', '') foreach keys %mirrors;
@@ -161,8 +162,10 @@ You need to update to a newer version. You can get a new one from http://start.m
                     medias => [ keys %mirrors ],
                 });
     } else {
+        undef $w;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
+    undef $w;
 }
 
 sub ask_pkgs {
@@ -246,7 +249,7 @@ sub add_media {
     my ($media_name, $mirror, $hdlist, $option) = @_;
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
-	system "/usr/sbin/gurpmi.addmedia", '--silent-success', if_($option, $option), $media_name, $mirror, "with", $hdlist;
+	system "/usr/sbin/urpmi.addmedia", if_($option, $option), $media_name, $mirror, "with", $hdlist;
     };
     $@ and die "Problem adding bundle media with urpmi";
 }
