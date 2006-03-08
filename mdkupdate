@@ -159,7 +159,21 @@ You need to update to a newer version. You can get a new one from http://start.m
 	my @bundles;
 	my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
-	my %mirrors = map { split(';', $_, 2) } @$mirrors;
+     foreach my $mirror (@$mirrors) {
+         next if $mirror->{mode} eq 'anon'; # nothing to do
+         if ($mirror->{mode} eq 'auth') {
+             # add "user:pass@" substring if needed:
+             # user password & login provided by server on those provided with the bundle:
+             $bundle_vars{PASS} = "dfgdfg"; # FIXME
+             $bundle_vars{USER} = $mirror->{user} if $mirror->{user};
+             $bundle_vars{PASS} = $mirror->{pass} if $mirror->{pass};
+             $mirror->{url} =~ s!^([^:]*)://!\1://${bundle_vars{USER}}:${bundle_vars{PASS}}@!;
+         } else { # unknown method, aborting
+             $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
+             $in->exit(1);
+         } 
+     }
+	my %mirrors = map { $_->{name} => join('@', grep { $_ } $_->{auth}, $_->{url}) } @$mirrors;
 	add_media($_, $mirrors{$_}, 'media_info/synthesis.hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/-[^-]*-[^-]*\.[^.]*\.rpm$//;
 	push @bundles, $bundle;
