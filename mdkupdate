@@ -140,6 +140,7 @@ if (!$bundle) {
     }
     my $bundle_info;
     my %bundle_vars = getVarsFromSh($bundle);
+    rm_rf($bundle);
     
     $wc->{USER_EMAIL} or system("/usr/sbin/mdkonline");
     $wc = mdkonline::read_conf();
