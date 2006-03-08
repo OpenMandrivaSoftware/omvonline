@@ -168,10 +168,8 @@ You need to update to a newer version. You can get a new one from http://start.m
                     medias => [ keys %mirrors ],
                 });
     } else {
-        undef $w;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
-    undef $w;
 }
 
 sub ask_pkgs {
