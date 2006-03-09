@@ -88,6 +88,9 @@ my %options = (
 
 GetOptions(%options);
 
+# workaround an issue with browsers that sometimes drop the --bundle option:
+$bundle = shift @ARGV if $ARGV[0] =~ /\.bundle$/;
+
 $bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $in;
