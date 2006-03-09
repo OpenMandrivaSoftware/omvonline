@@ -25,6 +25,7 @@ use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
 use interactive;
+use URI::Escape;
 
 use mdkonline;
 use urpm;
@@ -48,7 +49,7 @@ my $logfile = '/var/tmp/mdkupdate.log';
 my $currentrpm = "$confdir/rpm_qa_installed_current";
 my $afterrpm =  "$confdir/rpm_qa_installed_after";
 
-my $startpage = 'http://start.mandriva.com/bundle/';
+my $startpage = 'http://start.mandriva.com/';
 
 my $VERSION = "3";
 my $YEARS = "2002-2006";
@@ -167,7 +168,9 @@ You need to update to a newer version. You can get a new one from http://start.m
              $bundle_vars{PASS} = "dfgdfg"; # FIXME
              $bundle_vars{USER} = $mirror->{user} if $mirror->{user};
              $bundle_vars{PASS} = $mirror->{pass} if $mirror->{pass};
-             $mirror->{url} =~ s!^([^:]*)://!\1://${bundle_vars{USER}}:${bundle_vars{PASS}}@!;
+	     my $encoded_login = uri_escape($bundle_vars{USER});
+	     my $encoded_pass = uri_escape($bundle_vars{PASS});
+             $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
          } else { # unknown method, aborting
              $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
              $in->exit(1);
@@ -268,8 +271,8 @@ sub add_media {
     my ($media_name, $mirror, $hdlist, $option) = @_;
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
-	# use wget because curl doesn't handle nicely passwords (at least the way it's called from urpmi);
-	system "/usr/sbin/urpmi.addmedia", if_($option, $option), '--wget', $media_name, $mirror, "with", $hdlist;
+	# use curl because wget sometime fail on https url
+	system "/usr/sbin/urpmi.addmedia", if_($option, $option), '--curl', $media_name, $mirror, "with", $hdlist;
     };
     $@ and die "Problem adding bundle media with urpmi";
 }
