@@ -147,7 +147,7 @@ if (!$bundle) {
     my %bundle_vars = getVarsFromSh($bundle);
     rm_rf($bundle);
     
-    $wc->{USER_EMAIL} or system("/usr/sbin/mdkonline");
+    $wc->{USER_EMAIL} && $wc->{HOST_ID} && $wc->{HOST_KEY}  or system("/usr/sbin/mdkonline");
     $wc = mdkonline::read_conf();
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
