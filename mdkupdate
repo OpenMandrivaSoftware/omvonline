@@ -169,7 +169,6 @@ You need to update to a newer version. You can get a new one from http://start.m
          if ($mirror->{mode} eq 'auth') {
              # add "user:pass@" substring if needed:
              # user password & login provided by server on those provided with the bundle:
-             $bundle_vars{PASS} = "dfgdfg"; # FIXME
              $bundle_vars{USER} = $mirror->{user} if $mirror->{user};
              $bundle_vars{PASS} = $mirror->{pass} if $mirror->{pass};
 	     my $encoded_login = uri_escape($bundle_vars{USER});
