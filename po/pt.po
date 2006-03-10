@@ -15,13 +15,13 @@ msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-07 12:24+0100\n"
-"PO-Revision-Date: 2006-01-07 07:31+0000\n"
+"PO-Revision-Date: 2006-03-10 03:53+0000\n"
 "Last-Translator: Zé <mmodem00@gmail.com>\n"
 "Language-Team: Português <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: KBabel 1.11.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../mdkapplet:65
@@ -49,15 +49,14 @@ msgid "New updates are available for your system"
 msgstr "Novas actualizações disponíveis para o seu sistema"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Novas actualizações disponíveis para o seu sistema"
+msgstr "Novos pacotes disponíveis para o seu sistema"
 
 #: ../mdkapplet:95
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"O serviço não está configurado. Por favor clique em \"Configurar serviço\""
+msgstr "O serviço não está configurado. Por favor clique em \"Configurar serviço\""
 
 #: ../mdkapplet:101
 #, c-format
@@ -188,8 +187,7 @@ msgstr "A iniciar mdkupdate --applet\n"
 #: ../mdkapplet:259
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"O Mandriva Online parece ter sido reinstalado, a recarregar a applet..."
+msgstr "O Mandriva Online parece ter sido reinstalado, a recarregar a applet..."
 
 #: ../mdkapplet:270
 #, c-format
@@ -371,20 +369,19 @@ msgid "Password:"
 msgstr "Senha:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Nome da máquina: "
+msgstr "Descrição da máquina:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Ex: O Computador do Meu Escritório de Casa)"
 
 #: ../mdkonline:123
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"O nome de máquina deve apenas conter entre 1 e 40 caracteres alfanuméricos"
+msgstr "O nome de máquina deve apenas conter entre 1 e 40 caracteres alfanuméricos"
 
 #: ../mdkonline:125
 #, c-format
@@ -553,7 +550,7 @@ msgstr "Erro de Segurança"
 #: ../mdkonline.pm:179
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Erro genérico (máquina já registada)"
 
 #: ../mdkonline.pm:180
 #, c-format
@@ -721,7 +718,7 @@ msgstr "  --noX\t\t\t- versão em modo texto do Mandriva Update.\n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle file.bundle\t- analisa e instala o pacote do ficheiro metainfo .bundle\n"
 
 #: ../mdkupdate:136 ../mdkupdate:150
 #, c-format
@@ -735,6 +732,8 @@ msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
+"Primeiro precisa instalar o sistema no seu disco rígido com o assistente "
+"'Live Install'."
 
 #: ../mdkupdate:150
 #, c-format
@@ -744,6 +743,9 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"A versão do cliente Mandriva Online é demasiado antiga.\n"
+"\n"
+"Precisa actualizar para uma nova versão, Pode obter uma de http://start.mandriva.com"
 
 #: ../mdkupdate:159
 #, c-format
@@ -773,19 +775,5 @@ msgstr "A instalar pacotes...\n"
 #: ../mdkupdate:213 ../mdkupdate:281
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr ""
-"Não foi possível actualizar os pacotes a partir da média update_source.\n"
+msgstr "Não foi possível actualizar os pacotes a partir da média update_source.\n"
 
-#~ msgid "Sending configuration..."
-#~ msgstr "A enviar a configuração..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Apelo inseguro: o método só está disponível por httpS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "Nenhum ficheiro %s encontrado. Primeiro execute o assistente mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "O Mandriva Update não conseguiu contactar o sítio, irá tentar novamente."
