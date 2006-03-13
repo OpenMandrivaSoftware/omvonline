@@ -225,7 +225,7 @@ sub install_pkgs {
         if (!$o_options->{is_bundle}) {
             system "/usr/sbin/urpmi", "--auto", "--media", $media_name, @$choosed;
         } else {
-            system "/usr/bin/gurpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
+            system "/usr/bin/urpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
               if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
                 "--searchmedia", $media_name, @$choosed;
         }
