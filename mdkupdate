@@ -155,6 +155,7 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     if ($bundle_vars{CLIENT_VERSION} > $CLIENT_VERSION) {
+        log::l("the client is too old in order to install the bundle $bundle_vars{BUNDLE}")
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
 
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
@@ -225,8 +226,10 @@ sub install_pkgs {
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
     eval {
         if (!$o_options->{is_bundle}) {
+            log::l("applying the updates")
             system "/usr/sbin/gurpmi", "--auto", "--media", $media_name, @$choosed;
         } else {
+            log::l("installing the bundle")
             system "/usr/bin/urpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
               if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
                 "--searchmedia", $media_name, @$choosed;
@@ -274,6 +277,7 @@ sub auto_install_rpms {
 
 sub add_media {
     my ($media_name, $mirror, $hdlist, $option) = @_;
+    log::l("removing/adding the media $media_name")
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
 	# use curl because wget sometime fail on https url
