@@ -230,7 +230,7 @@ sub install_pkgs {
             system "/usr/sbin/gurpmi", "--auto", "--media", $media_name, @$choosed;
         } else {
             log::l("installing the bundle")
-            system "/usr/bin/urpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
+            system "/usr/bin/gurpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
               if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
                 "--searchmedia", $media_name, @$choosed;
         }
