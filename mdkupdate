@@ -71,17 +71,19 @@ usage:
 ") . N("  --applet		- launch Mandriva Update.
 ") . N("  --mnf			- launch mnf specific scripts.
 ") . N("  --noX			- text mode version of Mandriva Update.
+") . N("  --debug			- log what is done
 ") . N("  --bundle file.bundle	- parse and install package from .bundle metainfo file.
 ");
     exit(0);
 }
 
-my ($auto, $applet, $mnf, $noX, $bundle);
+my ($auto, $applet, $mnf, $noX, $bundle, $debug);
 my %options = (
 	       'auto'	    => \$auto,
 	       'a|applet'   => \$applet,
 	       'mnf'	    => \$mnf,
 	       'noX'	    => \$noX,
+            'd|debug'   => \$debug,
 	       'b|bundle:s' => sub { $bundle = $_[1] || 'webbundle' } ,
 	       'h|help'    => \&usage,
 	      );
