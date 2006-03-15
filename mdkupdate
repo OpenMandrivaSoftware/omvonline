@@ -179,6 +179,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	     my $encoded_pass = uri_escape($bundle_vars{PASS});
              $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
          } else { # unknown method, aborting
+             log::l("we got a bad bundle");
              $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
              $in->exit(1);
          } 
