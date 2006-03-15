@@ -45,6 +45,12 @@ install: all
 #	install -m644 mdkapplet.desktop $(PREFIX)/usr/share/autostart/
 	install -m644 mdkonline.pm $(FBLIBDIR)
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
+# menu entry:
+	mkdir -p $(DATADIR)/applications/
+	install -m644 mdkonline.desktop $(DATADIR)/applications/
+# mime
+	mkdir -p $(DATADIR)/mimelnk/applications/
+	install -m644 x-mdv-exec.desktop $(DATADIR)/mimelnk/applications/
 
 # rules to build a test rpm
 

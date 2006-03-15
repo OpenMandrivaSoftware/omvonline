@@ -105,6 +105,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
 %_datadir/mime/packages/*
+%_datadir/applications/
+%_datadir/mimelnk/applications/
 %{_datadir}/%{name}/pixmaps/*.png
 %_sysconfdir/X11/xinit.d/mdkapplet
 
