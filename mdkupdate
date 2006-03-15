@@ -139,7 +139,7 @@ if (!$bundle) {
 	
     }
 } else {
-    log::l("managind the $bundle bundle");
+    log::l("managing the $bundle bundle");
     if (-d '/live/media/loopbacks') {
         $in->ask_warn(N("Warning"),
                       #-PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
