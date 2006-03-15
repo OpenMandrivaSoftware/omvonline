@@ -1,3 +1,14 @@
+2006-03-15 19:42  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: one more log message; fix log::l() calls
+
+2006-03-15 19:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, mdkonline.desktop, mdkonline.spec, x-mdv-exec.desktop:
+	  add a .desktop menu entry and a .desktop mime file (KDE3 does not
+	  uses the XDG mime trees and still relies on its own mime
+	  placement) (helio)
+
 2006-03-14 18:10  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.pm, mdkupdate: fix log::l() calls
