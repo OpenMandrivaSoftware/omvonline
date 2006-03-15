@@ -1,3 +1,69 @@
+2006-03-14 18:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm, mdkupdate: fix log::l() calls
+
+2006-03-14 13:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: log some actions
+
+2006-03-14 13:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (install_pkgs) really use gurpmi for bundle
+
+2006-03-14 13:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: add some logs
+
+2006-03-14 13:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: explain why we use standalone
+
+2006-03-14 13:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: add --debug option
+
+2006-03-14 13:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: blacklist one more module
+
+2006-03-14 13:07  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (install_pkgs) use gurpmi again for bundles since
+	  gurpmi has been fixed
+
+2006-03-13 18:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/ga.po: update
+
+2006-03-13 13:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (install_pkgs) use urpmi instead of gurpmi because we
+	  sometimes got an X error
+
+2006-03-12 17:30  Shiva Huang <blueshiva at giga.net.tw>
+
+	* po/zh_TW.po: updated po file
+
+2006-03-11 04:41  Willy Sudiarto Raharjo <willysr at gmail.com>
+
+	* po/id.po: Updated
+
+2006-03-10 18:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: check harder to see if we need to configure mdkonline
+
+2006-03-10 18:40  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/cy.po: updated po file
+
+2006-03-10 16:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: remove debug statement :-(
+
+2006-03-10 04:54  mmodem
+
+	* po/pt.po: [no log message]
+
 2006-03-09 17:45  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkupdate: workaround an issue with browsers that sometimes drop
