@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-07 12:24+0100\n"
+"POT-Creation-Date: 2006-03-16 11:12+0100\n"
 "PO-Revision-Date: 2005-10-22 11:26+0200\n"
 "Last-Translator: Tomasz Bednarski <tomasz.bednarski@mandriva.pl>\n"
 "Language-Team: polish <pl@li.org>\n"
@@ -86,7 +86,7 @@ msgid "Check Updates"
 msgstr "Sprawdź aktualizacje"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:159 ../mdkupdate:204
+#: ../mdkupdate:169 ../mdkupdate:229
 #, c-format
 msgid "Please wait"
 msgstr "Proszę czekać"
@@ -540,22 +540,22 @@ msgstr ""
 "Połączenie z witryną Mandriva Online jest niemożliwe: nieprawidłowe login/"
 "hasło lub niewłaściwe ustawienia rutera/zapory sieciowej"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Security error"
 msgstr "Błąd bezpieczeństwa"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr ""
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid "Database error"
 msgstr "Błąd bazy danych"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -564,32 +564,32 @@ msgstr ""
 "Serwer bazy danych nie odpowiedział\n"
 "Spróbuj ponownie później"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Registration error"
 msgstr "Błąd rejestracji"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Brakuje niektórych parametrów"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:193
 #, c-format
 msgid "Password error"
 msgstr "Błąd hasła"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:187
 #, c-format
 msgid "Wrong password"
 msgstr "Niepoprawne hasło"
 
-#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
+#: ../mdkonline.pm:188 ../mdkonline.pm:189 ../mdkonline.pm:190
 #, c-format
 msgid "Login error"
 msgstr "Błąd loginu"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:188
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -598,12 +598,12 @@ msgstr ""
 "Podany e-mail jest już wykorzystywany\n"
 "Podaj inny adres\n"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:189
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "Podany e-mail jest nieprawidłowy lub zabroniony"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:190
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -612,22 +612,22 @@ msgstr ""
 "Pole adresu e-mail jest puste\n"
 "Podaj adres"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Restriction Error"
 msgstr "Błąd ograniczeń"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Database access forbidden"
 msgstr "Brak dostępu do bazy danych"
 
-#: ../mdkonline.pm:187 ../mdkonline.pm:189
+#: ../mdkonline.pm:192 ../mdkonline.pm:194
 #, c-format
 msgid "Service error"
 msgstr "Błąd usługi"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:192
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -636,12 +636,12 @@ msgstr ""
 "Usługi sieciowe Mandrivy są w tej chwili niedostępne\n"
 "Spróbuj ponownie później"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:193
 #, c-format
 msgid "Password mismatch"
 msgstr "Hasła różnią się"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:194
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -650,27 +650,27 @@ msgstr ""
 "Trwa konserwacja serwerów usług sieciowych Mandrivy\n"
 "Spróbuj ponownie później"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User Forbidden"
 msgstr "Dostęp użytkownika zabroniony"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Konto użytkownika zostało odrzucone przez usługi sieciowe Mandrivy"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Connection error"
 msgstr "Błąd połączenia"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Usługi sieciowe Mandrivy są niedostępne"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:64
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -687,52 +687,57 @@ msgstr ""
 "\n"
 "użycie:\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:69
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- wyświetla ten komunikat pomocy.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:70
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- automatyczne uruchamiane Mandriva Update .\n"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:71
 #, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
 msgstr "  --applet\t\t- uruchamia Mandriva Update.\n"
 
-#: ../mdkupdate:70
+#: ../mdkupdate:72
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- uruchom skrypty dla mnf.\n"
 
-#: ../mdkupdate:71
+#: ../mdkupdate:73
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- Mandriva Update pracujący w trybie tekstowym.\n"
 
-#: ../mdkupdate:72
+#: ../mdkupdate:74
+#, c-format
+msgid "  --debug\t\t\t- log what is done\n"
+msgstr ""
+
+#: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:136 ../mdkupdate:150
+#: ../mdkupdate:144 ../mdkupdate:160
 #, c-format
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:138
+#: ../mdkupdate:146
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:150
+#: ../mdkupdate:160
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -741,32 +746,37 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:159
+#: ../mdkupdate:169
 #, c-format
 msgid "Preparing..."
 msgstr "Przygotowywanie..."
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183 ../mdkupdate:198
 #, c-format
 msgid "Error"
 msgstr "Błąd"
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:198
 #, c-format
 msgid "An error occurred"
 msgstr "Wystąpił błąd"
 
-#: ../mdkupdate:180
+#: ../mdkupdate:205
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Wybierz pakiety do instalacji i naciśnij Ok"
 
-#: ../mdkupdate:204
+#: ../mdkupdate:229
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Instalowanie pakietów...\n"
 
-#: ../mdkupdate:213 ../mdkupdate:281
+#: ../mdkupdate:240 ../mdkupdate:310
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"

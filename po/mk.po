@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-07 12:24+0100\n"
+"POT-Creation-Date: 2006-03-16 11:12+0100\n"
 "PO-Revision-Date: 2005-09-29 01:36+0000\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -85,7 +85,7 @@ msgid "Check Updates"
 msgstr "Провери за ажурирање"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:159 ../mdkupdate:204
+#: ../mdkupdate:169 ../mdkupdate:229
 #, c-format
 msgid "Please wait"
 msgstr "Ве молиме, почекајте"
@@ -542,22 +542,22 @@ msgstr ""
 "Не можам да се поврзам на веб сајтот на mandrivaonline: погрешна најава/"
 "лозинка или лоши подесувања на рутерот/огнениот ѕид"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Security error"
 msgstr "Безбедносна грешка"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr ""
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid "Database error"
 msgstr "Грешка на базата на податоци"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -566,32 +566,32 @@ msgstr ""
 "Серверот за бази на податоци е недостапен\n"
 "Ве молиме обидете се подоцна"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Registration error"
 msgstr "Грешка при регистрација"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Некои параметри недостигаат"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:193
 #, c-format
 msgid "Password error"
 msgstr "Грешка во лозинката"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:187
 #, c-format
 msgid "Wrong password"
 msgstr "Погрешна лозинка"
 
-#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
+#: ../mdkonline.pm:188 ../mdkonline.pm:189 ../mdkonline.pm:190
 #, c-format
 msgid "Login error"
 msgstr "Грешка при најавување"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:188
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -600,12 +600,12 @@ msgstr ""
 "Е-поштата која ја внесовте е веќе во употреба\n"
 "Ве молиме внесете друга\n"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:189
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "Е-поштата која ја внесовте е невалидна или забранета"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:190
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -614,22 +614,22 @@ msgstr ""
 "Сандачето на е-поштата е празно\n"
 "Ве молиме внесете едно"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Restriction Error"
 msgstr "Грешка при огранучување"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Database access forbidden"
 msgstr "Пристапот кон базата на податоци е забранет"
 
-#: ../mdkonline.pm:187 ../mdkonline.pm:189
+#: ../mdkonline.pm:192 ../mdkonline.pm:194
 #, c-format
 msgid "Service error"
 msgstr "Грешка во сервисот"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:192
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -638,12 +638,12 @@ msgstr ""
 "Веб сервисите на Mandriva тековно се недостапни\n"
 "Ве молиме обидете се подоцна"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:193
 #, c-format
 msgid "Password mismatch"
 msgstr "Лозинките не се совпаѓаат"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:194
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -652,27 +652,27 @@ msgstr ""
 "Веб сервисите на Mandriva се сервисираат\n"
 "Ве молиме обидете се подоцна"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User Forbidden"
 msgstr "Корисникот е забранет"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Корисничката сметка е забранета од веб сервисите на Mandriva"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Connection error"
 msgstr "Грешка при поврзување"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Веб сервисите на Mandriva се недостапни"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:64
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -688,52 +688,57 @@ msgstr ""
 "\n"
 "употреба:\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:69
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- ја печати оваа помошна порака.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:70
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Автоматско вклучување на Mandriva Update.\n"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:71
 #, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
 msgstr "  --applet\t\t- Вклучување на Mandriva Update.\n"
 
-#: ../mdkupdate:70
+#: ../mdkupdate:72
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- вклучува одредени mnf скрипти.\n"
 
-#: ../mdkupdate:71
+#: ../mdkupdate:73
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- верзија на Mandriva Update во текстуален режим.\n"
 
-#: ../mdkupdate:72
+#: ../mdkupdate:74
+#, c-format
+msgid "  --debug\t\t\t- log what is done\n"
+msgstr ""
+
+#: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:136 ../mdkupdate:150
+#: ../mdkupdate:144 ../mdkupdate:160
 #, c-format
 msgid "Warning"
 msgstr "Внимание"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:138
+#: ../mdkupdate:146
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:150
+#: ../mdkupdate:160
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -742,32 +747,37 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:159
+#: ../mdkupdate:169
 #, c-format
 msgid "Preparing..."
 msgstr "Се подготвувам..."
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183 ../mdkupdate:198
 #, c-format
 msgid "Error"
 msgstr "Грешка"
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:198
 #, c-format
 msgid "An error occurred"
 msgstr "Се случи грешка"
 
-#: ../mdkupdate:180
+#: ../mdkupdate:205
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Изберете кои пакети да се инсталираат и притиснете Во ред"
 
-#: ../mdkupdate:204
+#: ../mdkupdate:229
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Инсталирање на пакетите...\n"
 
-#: ../mdkupdate:213 ../mdkupdate:281
+#: ../mdkupdate:240 ../mdkupdate:310
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не можам да ги ажурирам пакетите од медиумот update_source.\n"

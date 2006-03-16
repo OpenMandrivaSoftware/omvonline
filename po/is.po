@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-07 12:24+0100\n"
+"POT-Creation-Date: 2006-03-16 11:12+0100\n"
 "PO-Revision-Date: 2006-03-07 14:48+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team:  <is@li.org>\n"
@@ -82,7 +82,7 @@ msgid "Check Updates"
 msgstr "Athuga með uppfærslur"
 
 #: ../mdkapplet:121 ../mdkapplet:206 ../mdkonline:87 ../mdkonline:125
-#: ../mdkupdate:159 ../mdkupdate:204
+#: ../mdkupdate:169 ../mdkupdate:229
 #, c-format
 msgid "Please wait"
 msgstr "Augnablik..."
@@ -537,22 +537,22 @@ msgstr ""
 "Get ekki tengst Mandriva Online vefsíðunni: rangur notandi/lykilorð eða "
 "vandamál með beinir/eldvegg"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Security error"
 msgstr "Öryggisvilla"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
 msgstr "Almenn villa (Vél þegar skráð)"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid "Database error"
 msgstr "Gagnagrunns-villa"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:185
 #, c-format
 msgid ""
 "Server Database failed\n"
@@ -561,32 +561,32 @@ msgstr ""
 "Villa í gagnagrunn miðlara\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Registration error"
 msgstr "Skráningarvilla"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:186
 #, c-format
 msgid "Some parameters are missing"
 msgstr "Sum viðföng vantar"
 
-#: ../mdkonline.pm:182 ../mdkonline.pm:188
+#: ../mdkonline.pm:187 ../mdkonline.pm:193
 #, c-format
 msgid "Password error"
 msgstr "Lykilorðsvilla"
 
-#: ../mdkonline.pm:182
+#: ../mdkonline.pm:187
 #, c-format
 msgid "Wrong password"
 msgstr "Rangt lykilorð"
 
-#: ../mdkonline.pm:183 ../mdkonline.pm:184 ../mdkonline.pm:185
+#: ../mdkonline.pm:188 ../mdkonline.pm:189 ../mdkonline.pm:190
 #, c-format
 msgid "Login error"
 msgstr "Skráningarvilla"
 
-#: ../mdkonline.pm:183
+#: ../mdkonline.pm:188
 #, c-format
 msgid ""
 "The email you provided is already in use\n"
@@ -595,12 +595,12 @@ msgstr ""
 "Netfangið sem þú gafst upp er þegar í notkun\n"
 "Vinsamlega gefið upp annað netfang\n"
 
-#: ../mdkonline.pm:184
+#: ../mdkonline.pm:189
 #, c-format
 msgid "The email you provided is invalid or forbidden"
 msgstr "Netfangið sem þú gafst upp er ógilt eða ólöglegt"
 
-#: ../mdkonline.pm:185
+#: ../mdkonline.pm:190
 #, c-format
 msgid ""
 "Email address box is empty\n"
@@ -609,22 +609,22 @@ msgstr ""
 "Netfang-svæði er autt\n"
 "Vinsamlega gefðu upp netfang"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Restriction Error"
 msgstr "Takmörkunarvilla"
 
-#: ../mdkonline.pm:186
+#: ../mdkonline.pm:191
 #, c-format
 msgid "Database access forbidden"
 msgstr "Gagnagrunnsaðgangur bannaður"
 
-#: ../mdkonline.pm:187 ../mdkonline.pm:189
+#: ../mdkonline.pm:192 ../mdkonline.pm:194
 #, c-format
 msgid "Service error"
 msgstr "Þjónustuvilla"
 
-#: ../mdkonline.pm:187
+#: ../mdkonline.pm:192
 #, c-format
 msgid ""
 "Mandriva web services are currently unavailable\n"
@@ -633,12 +633,12 @@ msgstr ""
 "Mandriva vefþjónusta er ekki tiltæk\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:188
+#: ../mdkonline.pm:193
 #, c-format
 msgid "Password mismatch"
 msgstr "Lykilorð eru ekki eins"
 
-#: ../mdkonline.pm:189
+#: ../mdkonline.pm:194
 #, c-format
 msgid ""
 "Mandriva web services are under maintenance\n"
@@ -647,27 +647,27 @@ msgstr ""
 "Mandriva vefþjónustur eru lokaðar vegna viðhalds\n"
 "Vinsamlega reynið aftur síðar"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User Forbidden"
 msgstr "Notanda ekki leyfður aðgangur"
 
-#: ../mdkonline.pm:190
+#: ../mdkonline.pm:195
 #, c-format
 msgid "User account forbidden by Mandriva web services"
 msgstr "Notanda aðgangur ekki leyfður af Mandriva vefþjónustu"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Connection error"
 msgstr "Connection error"
 
-#: ../mdkonline.pm:191
+#: ../mdkonline.pm:196
 #, c-format
 msgid "Mandriva web services not reachable"
 msgstr "Næ ekki sambandi við Mandriva vefþjónustu"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:64
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -683,52 +683,60 @@ msgstr ""
 "\n"
 "notkun:\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:69
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- prenta þessa hjálp.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:70
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Uppfærslur keyrt sjálvirkt.\n"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:71
 #, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
 msgstr "  --applet\t\t- ræsa Mandriva Uppfærslur.\n"
 
-#: ../mdkupdate:70
+#: ../mdkupdate:72
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- ræsa mnf sértækar skriftur.\n"
 
-#: ../mdkupdate:71
+#: ../mdkupdate:73
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- textahams útgáfa af Mandriva Uppfærslum.\n"
 
-#: ../mdkupdate:72
+#: ../mdkupdate:74
+#, c-format
+msgid "  --debug\t\t\t- log what is done\n"
+msgstr ""
+
+#: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
+msgstr ""
+"  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
 
-#: ../mdkupdate:136 ../mdkupdate:150
+#: ../mdkupdate:144 ../mdkupdate:160
 #, c-format
 msgid "Warning"
 msgstr "Aðvörun"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:138
+#: ../mdkupdate:146
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr "Þú verður fyrst að setja kerfið inn á diskinn þinn með \"Live Install\" ráðgjafanum."
+msgstr ""
+"Þú verður fyrst að setja kerfið inn á diskinn þinn með \"Live Install\" "
+"ráðgjafanum."
 
-#: ../mdkupdate:150
+#: ../mdkupdate:160
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -741,33 +749,37 @@ msgstr ""
 "Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á http://"
 "start.mandriva.com"
 
-#: ../mdkupdate:159
+#: ../mdkupdate:169
 #, c-format
 msgid "Preparing..."
 msgstr "Undirbý..."
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183 ../mdkupdate:198
 #, c-format
 msgid "Error"
 msgstr "Villa"
 
-#: ../mdkupdate:172
+#: ../mdkupdate:183
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:198
 #, c-format
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../mdkupdate:180
+#: ../mdkupdate:205
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Veldu hvaða pakka á að setja inn og smelltu á \"Í lagi\""
 
-#: ../mdkupdate:204
+#: ../mdkupdate:229
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Set inn pakka...\n"
 
-#: ../mdkupdate:213 ../mdkupdate:281
+#: ../mdkupdate:240 ../mdkupdate:310
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
-
