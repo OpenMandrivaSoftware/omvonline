@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release 1mdk
+%define release %mkrel 3
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -121,6 +121,11 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Thu Mar 16 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-3mdk
+- log what is done
+- add MIME support for KDE3 (it does not support the XDG mime trees
+  and still relies on its own mime placement) (helio)
+
 * Thu Mar  2 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-1mdk
 - mimetype association between bundle and mdkupdate (fcrozat)
 - Mandriva Online V3 (daouda & me)
