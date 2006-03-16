@@ -16,7 +16,7 @@ Requires: wget
 # for gurpmi.addmedia:
 Requires: rpmdrake > 2.20-3.1.20060mdk
 # for good gurpmi:
-Requires: urpmi > 4.7.15-1.1.20060mdk
+Requires: urpmi > 4.7.15-1.2.20060mdk
 Provides:   %{name}-backend
 Obsoletes:  %{name}-backend
 Requires:	hwdb-clients >= 0.15.1-1mdk
