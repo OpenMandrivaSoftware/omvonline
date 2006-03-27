@@ -1,21 +1,22 @@
 # Translation of mdkonline.po to Russian
 # Copyright (C) 2002, 2004, 2005 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandriva.
-# Pavel Maryanov <acid_jack@ukr.net>, 2002, 2004, 2005.
-# Alice Lafox <alice@lafox.net>, 2004, 2005.
 #
+# Pavel Maryanov <acid_jack@ukr.net>, 2002, 2004, 2005, 2006.
+# Alice Lafox <alice@lafox.net>, 2004, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-16 11:12+0100\n"
-"PO-Revision-Date: 2005-09-26 16:21+0300\n"
+"PO-Revision-Date: 2006-03-27 13:57+0300\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
-"Language-Team: Russian <doc@lafox.net>\n"
+"Language-Team: Russian <docteam@lafox.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -42,9 +43,9 @@ msgid "New updates are available for your system"
 msgstr "Для вашей системы доступны обновления"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Для вашей системы доступны обновления"
+msgstr "Для вашей системы доступны новые bundles"
 
 #: ../mdkapplet:95
 #, c-format
@@ -363,20 +364,19 @@ msgid "Password:"
 msgstr "Пароль:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Имя машины:"
+msgstr "Описание машины:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(напр: мой домашний компьютер)"
 
 #: ../mdkonline:123
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
+msgstr "Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
 
 #: ../mdkonline:125
 #, c-format
@@ -546,7 +546,7 @@ msgstr "Ошибка безопасности"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Общая ошибка (машина уже зарегистрирована)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -593,7 +593,7 @@ msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"Указанны вами e-mail уже используется\n"
+"Указанный вами e-mail уже используется\n"
 "Пожалуйста, выберите другой\n"
 
 #: ../mdkonline.pm:189
@@ -688,39 +688,39 @@ msgstr ""
 #: ../mdkupdate:69
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- вывод этого справочного сообщения.\n"
+msgstr "  --help\t\t- вывод этого справочного сообщения\n"
 
 #: ../mdkupdate:70
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto\t\t- автоматический запуск Mandriva Update.\n"
+msgstr "  --auto\t\t- автоматический запуск Mandriva Update\n"
 
 #: ../mdkupdate:71
 #, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet\t\t- запуск Mandriva Update.\n"
+msgstr "  --applet\t\t- запуск Mandriva Update\n"
 
 #: ../mdkupdate:72
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf\t\t\t- запуск скриптов mnf.\n"
+msgstr "  --mnf\t\t\t- запуск скриптов mnf\n"
 
 #: ../mdkupdate:73
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX\t\t\t- текстовая версия Mandriva Update.\n"
+msgstr "  --noX\t\t\t- текстовая версия Mandriva Update\n"
 
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- журналирование выполняемых действий\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle file.bundle\t- разбор и установка пакета из файла .bundle с метаинформацией.\n"
 
 #: ../mdkupdate:144 ../mdkupdate:160
 #, c-format
@@ -733,7 +733,7 @@ msgstr "Внимание"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Вы сначала должны установить систему на свой жёсткий диск с помощью мастера 'Live Install'."
 
 #: ../mdkupdate:160
 #, c-format
@@ -743,6 +743,9 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Слишком старая версия клиента Mandriva Online.\n"
+"\n"
+"Вам нужно обновить клиента до более свежей версии. Вы можете загрузить его с сайта http://start.mandriva.com"
 
 #: ../mdkupdate:169
 #, c-format
@@ -757,7 +760,7 @@ msgstr "Ошибка"
 #: ../mdkupdate:183
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Этот bundle имеет неверный формат. Установка прервана."
 
 #: ../mdkupdate:198
 #, c-format
@@ -790,3 +793,4 @@ msgstr "Невозможно обновить пакеты из источник
 
 #~ msgid "Mandriva Update could not contact the site, we will try again."
 #~ msgstr "Невозможно связаться с сайтом Mandriva Online, попробуем еще раз."
+
