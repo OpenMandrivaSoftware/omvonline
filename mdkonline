@@ -43,7 +43,7 @@ my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 my $logfile = '/var/tmp/mdkonline.log';
 
-my ($greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $country, $ia, $gr, $alias);
+my ($greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $country, $ia, $alias);
 
 my @info;
 
@@ -162,7 +162,6 @@ my $wiz =
 				  ];
 			      },
 			      complete => sub {
-				  $gr = find_index { /$gr/ } @greets;
 				  $alias = $firstname . $lastname;
 				  @info = ($account, $npassword, $firstname, $lastname, $lang, $greeting, $alias, 'home');
                       if ($npassword ne $cfmpassword) {
@@ -225,5 +224,5 @@ if (!$ia && $login && $password && $boxname) {
 	output_p($logfile, N("Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"));
     }
 } else {
-    !$::testing && mdkonline::get_release <= 2006.0 ? wizards->new->safe_process($wiz, $in) : wizards->new($wiz)->safe_process($in);
+    !$::testing && mdkonline::get_release <= 2005.0 ? wizards->new->safe_process($wiz, $in) : wizards->new($wiz)->safe_process($in);
 }
