@@ -200,6 +200,7 @@ sub check_server_response {
     my $code = $response->{code} || '99';
     my $answer = $response->{code} eq 0 ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . "\n\n" . $response->{message};
     $answer eq 'OK' and write_conf($response);
+    log::explanations(qq(the server returned "$answer"));
     return $answer;
     
 }
