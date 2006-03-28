@@ -97,7 +97,10 @@ my $wiz =
 		welcome => {
 			    name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
 			    no_back => 1,
-			    next => 'choices'
+                   post => sub {
+                       $::main_window = $::WizardWindow; # center subdialogs on main window
+                       'choices';
+                   }
 			   },
 		choices => {
 			    name => N("Account creation or authentication"),
