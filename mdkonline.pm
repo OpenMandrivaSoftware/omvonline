@@ -198,8 +198,10 @@ sub check_server_response {
     foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} }
     #    print Dumper($response);
     my $code = $response->{code} || '99';
-    $response->{status} and write_conf($response);
-    return $response->{status} ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . "\n\n" . $response->{message};
+    my $answer = $response->{code} eq 0 ? 'OK' : $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . "\n\n" . $response->{message};
+    $answer eq 'OK' and write_conf($response);
+    return $answer;
+    
 }
 
 sub check_valid_email {
