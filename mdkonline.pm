@@ -92,31 +92,31 @@ sub get_distro_type() {
 
 sub soap_create_account {
     my $data = $s->registerUser(@_)->result;
-    log::l("creating account $_[0]");
+    log::explanations("creating account $_[0]");
     $data;
 }
 
 sub soap_authenticate_user {
     my $data = $s->authenticateUser(@_)->result; 
-    log::l("authenticating account $_[0]");
+    log::explanations("authenticating account $_[0]");
     $data;
 }
 
 sub soap_register_host {
     my $data = $s->registerHost(@_)->result;
-    log::l("registering host $_[3] named $_[4] in country $_[5]");
+    log::explanation("registering host $_[3] named $_[4] in country $_[5]");
     $data;	
 }
 
 sub soap_upload_config {
     my $data = $s->setHostConfig(@_);
-    log::l("uploading config");
+    log::explanations("uploading config");
     $data ? $data->result : undef;
 }
 
 sub soap_query_bundle {
     my ($wc, $bundle_name) = @_;
-    log::l("querying the bundle $bundle_name");
+    log::explanations("querying the bundle $bundle_name");
     my $data = $s->query($wc->{HOST_ID}, $wc->{HOST_KEY}, 'Software::get_bundle', $bundle_name)->result;
     $data;
 }

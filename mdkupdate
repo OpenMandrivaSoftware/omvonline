@@ -139,7 +139,7 @@ if (!$bundle) {
 	
     }
 } else {
-    log::l("managing the $bundle bundle");
+    log::explanations("managing the $bundle bundle");
     if (-d '/live/media/loopbacks') {
         $in->ask_warn(N("Warning"),
                       #-PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
@@ -156,7 +156,7 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     if ($bundle_vars{CLIENT_VERSION} > $CLIENT_VERSION) {
-        log::l("the client is too old in order to install the bundle $bundle_vars{BUNDLE}");
+        log::explanations("the client is too old in order to install the bundle $bundle_vars{BUNDLE}");
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
 
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
@@ -179,7 +179,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	     my $encoded_pass = uri_escape($bundle_vars{PASS});
              $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
          } else { # unknown method, aborting
-             log::l("we got a bad bundle");
+             log::explanations("we got a bad bundle");
              $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
              $in->exit(1);
          } 
@@ -194,7 +194,7 @@ You need to update to a newer version. You can get a new one from http://start.m
                     medias => [ keys %mirrors ],
                 });
     } else {
-        log::l("we did not got back a bundle: $bundle_info->{message}");
+        log::explanations("we did not got back a bundle: $bundle_info->{message}");
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
 }
@@ -229,10 +229,10 @@ sub install_pkgs {
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
     eval {
         if (!$o_options->{is_bundle}) {
-            log::l("applying the updates");
+            log::explanations("applying the updates");
             system "/usr/sbin/gurpmi", "--auto", "--media", $media_name, @$choosed;
         } else {
-            log::l("installing the bundle");
+            log::explanations("installing the bundle");
             system "/usr/bin/gurpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
               if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
                 "--searchmedia", $media_name, @$choosed;
@@ -280,7 +280,7 @@ sub auto_install_rpms {
 
 sub add_media {
     my ($media_name, $mirror, $hdlist, $option) = @_;
-    log::l("removing/adding the media $media_name");
+    log::explanations("removing/adding the media $media_name");
     eval { 
 	system "/usr/sbin/urpmi.removemedia", $media_name;
 	# use curl because wget sometime fail on https url
