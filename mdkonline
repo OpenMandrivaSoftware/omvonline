@@ -43,7 +43,7 @@ my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 my $logfile = '/var/tmp/mdkonline.log';
 
-my ($greeting, $firstname, $lastname, $login, $account, $password, $npassword, $boxname, $cfmpassword, $email, $country, $ia, $alias);
+my ($greeting, $firstname, $lastname, $login, $password, $npassword, $boxname, $cfmpassword, $email, $country, $ia, $alias);
 
 my @info;
 
@@ -156,24 +156,24 @@ my $wiz =
 				   { label => N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo' },
 				   { label => N("First name:"), val => \$firstname },
 				   { label => N("Last name:"), val => \$lastname },
-				   { label => N("Email address:"), val => \$account },
+				   { label => N("Email address:"), val => \$email },
 				   { label => N("Password:"), val => \$npassword, hidden => 1 },
 				   { label => N("Confirm Password:"), val => \$cfmpassword, hidden => 1 },
 				  ];
 			      },
 			      complete => sub {
 				  $alias = $firstname . $lastname;
-				  @info = ($account, $npassword, $firstname, $lastname, $lang, $greeting, $alias, 'home');
+				  @info = ($email, $npassword, $firstname, $lastname, $lang, $greeting, $alias, 'home');
                       if ($npassword ne $cfmpassword) {
                           $in->ask_warn(N("Error"), N("The passwords do not match\n Please try again\n"));
                           return 1;
                       }
-                      if (!$account || !$firstname || !$lastname) {
+                      if (!$email || !$firstname || !$lastname) {
                           $in->ask_warn(N("Error"), N("Please fill in each field"));
                           return 1;
                       }
                       if (mdkonline::check_valid_email($email) == 0) {
-                          $in->ask_warn(N("Error"), N("Not a valid mail address!\n"));
+                          $in->ask_warn(N("Error"), N("Not a valid mail address!\n") . "\n\n"  . $email);
                           return 1;
                       }
                       if (mdkonline::create_authenticate_account('create', @info) ne 'OK') {
