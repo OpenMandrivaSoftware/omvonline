@@ -176,8 +176,9 @@ my $wiz =
                           $in->ask_warn(N("Error"), N("Not a valid mail address!\n") . "\n\n"  . $email);
                           return 1;
                       }
-                      if (mdkonline::create_authenticate_account('create', @info) ne 'OK') {
-                          $in->ask_warn(N("Error"), N("Creating account failed!"));
+                      my $err = mdkonline::create_authenticate_account('create', @info);
+                      if ($err ne 'OK') {
+                          $in->ask_warn(N("Error"), N("Creating account failed!") . "\n\n" . $err);
                           return 1;
                       }
 
