@@ -110,7 +110,7 @@ sub soap_register_host {
 
 sub soap_upload_config {
     my $data = $s->setHostConfig(@_);
-    log::explanations("uploading config");
+    log::explanations("uploading config for host $_[3] named $_[4] in country $_[5]");
     $data ? $data->result : undef;
 }
 
