@@ -48,7 +48,7 @@ sub upgrade2v3() {
 	my %oc = getVarsFromSh($rootconf_file);
 	my $res = soap_recover_service($oc{LOGIN}, '{md5}' . $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
 	print Dumper($res);
-	$res = check_server_response();
+	$res = check_server_response($res);
     }
     $res;
 }
