@@ -461,6 +461,7 @@ sub logIt {
     my ($Second, $Minute, $Hour, undef, undef, undef, undef, undef, undef) = localtime();
     $mLog .= $Hour . ':' . $Minute . ':' . $Second . '  ' . $log;
     if (defined $wlog) { $buffer->insert_at_cursor($log) }
+    log::explanations($log);
 }
 sub setVar {
     my ($file, $var, $st) = @_;
