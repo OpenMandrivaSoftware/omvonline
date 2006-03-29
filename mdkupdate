@@ -146,6 +146,7 @@ if (!$bundle) {
                       N("You first need to install the system on your harddrive with the 'Live Install' wizard."));
         $in->exit(1);
     }
+    my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
     my $bundle_info;
     my %bundle_vars = getVarsFromSh($bundle);
     rm_rf($bundle);
@@ -166,7 +167,7 @@ You need to update to a newer version. You can get a new one from http://start.m
     print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
     if ($bundle_info->{status}) {
 	my @bundles;
-	my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
+	$w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
      foreach my $mirror (@$mirrors) {
          next if $mirror->{mode} eq 'anon'; # nothing to do
@@ -179,6 +180,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	     my $encoded_pass = uri_escape($bundle_vars{PASS});
              $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
          } else { # unknown method, aborting
+             undef $w;
              log::explanations("we got a bad bundle");
              $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
              $in->exit(1);
@@ -194,6 +196,7 @@ You need to update to a newer version. You can get a new one from http://start.m
                     medias => [ keys %mirrors ],
                 });
     } else {
+        undef $w;
         log::explanations("we did not got back a bundle: $bundle_info->{message}");
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
