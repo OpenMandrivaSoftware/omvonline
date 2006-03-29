@@ -38,7 +38,8 @@ use mdkonline;
 use Gtk2::TrayIcon;
 use Gtk2::NotificationBubble;
 
-mdkonline::is_running('mdkapplet') and die "mdkapplet already running\n";
+my $pid = mdkonline::is_running('mdkapplet');
+$pid and die "mdkapplet already running ($pid)\n";
 
 my $in = interactive->vnew('');
 
