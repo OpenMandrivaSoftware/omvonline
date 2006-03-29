@@ -56,7 +56,7 @@ my $localfile = "$localdir/mdkonline";
 my $release = mdkonline::get_release();
 
 sub my_sprintf_fixutf8 {
-    mdkonline::get_release < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
+    mdkonline::get_release() < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
 }
 
 #compatibility
