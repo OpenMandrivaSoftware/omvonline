@@ -277,38 +277,23 @@ sub silentCheck() {
     $link .= '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     logIt(N("Connecting to") . " $link ...\n");
     gtkflush(); go2State('busy'); gtkflush();
-    my $response = mdkonline::get_from_URL($link, 'MdkAppletAgent/0.1');
-    if ($response->is_error) { 
-	my $status_err = $response->status_line;
-	go2State('critical'); 
-	logIt("Unable to contact Mandriva Online server: $status_err") and return; 
-    }
-    $ct = $response->content;
-    if ($debug) {
-	print "\nCONTENTS = $ct\n" if $debug;
-	logIt(N("Response from Mandriva Online server\n") . $ct);
-    }
-    if ($ct =~ /rpm/) { $u = 11 } elsif ($ct =~ m/(\d+)/) { $u = sprintf("%d", $1) } else { $u = 10 }
+    my $response = mdkonline::soap_get_updates_for_host($h{HOST_ID}, $h{HOST_KEY});
+    my $status_err = mdkonline::check_server_response($response);
+    if ($status_err eq 'OK') {
+        $ct = $response->{data}->{updates};
+        # are there any updates ?
+        if (@{$ct}) {
+            logIt(N("Checking... Updates are available\n") . "\n");
+            go2State('updates');
+        } else {     # no update
+            okState();
+        }
+    } else {
     #   99 - log or host or action or pass empty, wrong action
     #   98 - wrong pass
     #   97 - host not active
     logIt("Returned value after association (silentCheck)= $u\n") if $debug;
     my $retcode = {
-		   10 => sub { okState() },
-		   11 => sub {
-		       my @contents = sort(split /\n/, $ct);
-		       my @t = split /\n/, `rpm -qa`;
-		       my $comp = 0;
-		       foreach my $cand (@contents) {
-			   $cand =~ s/\.(i586|ppc|ia64|noarch|x86_64|amd64|ppc64).rpm//;
-			   my ($name, $ver, $rel) = $cand =~ /(.*)-(.*)-(.*)$/;
-			   $comp = compareWithInstalled($name, $ver, $rel, \@t);
-			   #print "COMP =  $comp\n";
-			   if ($comp) { $isAvailable = 1; logIt(N("Checking... Updates are available\n") . "\n"); go2State('updates') } else { $isAvailable = 0 }
-			   $comp and last;
-		       }
-		       !$comp and okState();
-		   },
 		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported') },
 		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported') },
 		   96 => sub { logIt(N("Unknown state")); go2State('critical') },
@@ -317,7 +302,13 @@ sub silentCheck() {
 		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical') },
                    500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
-    eval { $retcode->{$u}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
+    eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
+    }
+    if ($debug) {
+	print "\nCONTENTS = $ct\n" if $debug;
+     require Data::Dumper;
+	logIt(N("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
+    }
 }
 sub okState() { $isAvailable = 0; logIt(N("System is up-to-date\n")); go2State('okay') }
 sub compareWithInstalled {
