@@ -345,10 +345,15 @@ sub write_wide_conf {
 
 sub is_running {
     my ($name) = @_;
-    any {
+    my $found;
+    foreach (`ps -o '%P %p %c' -u $ENV{USER}`) {
         my ($_ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
-        $pid != $$ && $n eq $name;
-    } `ps -o '%P %p %c' -u $ENV{USER}`;
+        if ($pid != $$ && $n eq $name) {
+            $found = $pid;
+            last;
+        }
+    }
+    $found;
 }
 
 # Romain: you need to finish those dns functions or drop them
