@@ -170,27 +170,9 @@ You need to update to a newer version. You can get a new one from http://start.m
 	my @bundles;
 	$w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
-     foreach my $mirror (@$mirrors) {
-         next if $mirror->{mode} eq 'anon'; # nothing to do
-         if ($mirror->{mode} eq 'auth') {
-             # add "user:pass@" substring if needed:
-             # user password & login provided by server on those provided with the bundle:
-             $bundle_vars{USER} = $mirror->{user} if $mirror->{user};
-             $bundle_vars{PASS} = $mirror->{pass} if $mirror->{pass};
-	     my $encoded_login = uri_escape($bundle_vars{USER});
-	     my $encoded_pass = uri_escape($bundle_vars{PASS});
-             $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
-         } else { # unknown method, aborting
-             undef $w;
-             log::explanations("we got a bad bundle");
-             $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
-             $in->exit(1);
-         } 
-     }
-	my %mirrors = map { $_->{name} => join('@', grep { $_ } $_->{auth}, $_->{url}) } @$mirrors;
-	add_media($_, $mirrors{$_}, 'media_info/synthesis.hdlist.cz', '') foreach keys %mirrors;
 	$bundle =~ s/-[^-]*-[^-]*\.[^.]*\.rpm$//;
 	push @bundles, $bundle;
+     my %mirrors = add_mirrors($in, $w, $mirrors, \%bundle_vars);
 	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors),
                   { is_bundle => 1,
                     auto_select => ($wc->{POST} =~ /AUTO_SELECT/ ? 1 : 0),
@@ -201,6 +183,30 @@ You need to update to a newer version. You can get a new one from http://start.m
         log::explanations("we did not got back a bundle: $bundle_info->{message}");
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
     }
+}
+
+sub add_mirrors {
+    my ($in, $w, $mirrors, $bundle_vars, $option) = @_;
+    foreach my $mirror (@$mirrors) {
+        next if $mirror->{mode} eq 'anon'; # nothing to do
+        if ($mirror->{mode} eq 'auth') {
+            # add "user:pass@" substring if needed:
+            # user password & login provided by server on those provided with the bundle:
+            $bundle_vars->{USER} = $mirror->{user} if $mirror->{user};
+            $bundle_vars->{PASS} = $mirror->{pass} if $mirror->{pass};
+            my $encoded_login = uri_escape($bundle_vars->{USER});
+            my $encoded_pass = uri_escape($bundle_vars->{PASS});
+            $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
+        } else { # unknown method, aborting
+             undef $w;
+             log::explanations("we got a bad bundle");
+             $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
+             $in->exit(1);
+         } 
+    }
+    my %mirrors = map { $_->{name} => join('@', grep { $_ } $_->{auth}, $_->{url}) } @$mirrors;
+    add_media($_, $mirrors{$_}, 'media_info/synthesis.hdlist.cz', $option) foreach keys %mirrors;
+    %mirrors;
 }
 
 sub ask_pkgs {
