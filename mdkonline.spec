@@ -68,7 +68,7 @@ chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="Configuration/Other" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
+?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="System" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
 ?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="x11" kde_opt="InitialPreference=15" section="Configuration/Other" mimetypes="application/x-mdv-exec" title="Mandriva Online Bundle" longtitle="Mandriva Linux bundle handler"
 EOF
 
