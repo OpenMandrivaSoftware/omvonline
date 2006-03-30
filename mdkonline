@@ -225,5 +225,5 @@ if (!$ia && $login && $password && $boxname) {
 	output_p($logfile, N("Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"));
     }
 } else {
-    !$::testing && mdkonline::get_release <= 2005.0 ? wizards->new->safe_process($wiz, $in) : wizards->new($wiz)->safe_process($in);
+    !$::testing && mdkonline::get_release <= 2006.0 ? wizards->new->safe_process($wiz, $in) : wizards->new($wiz)->safe_process($in);
 }
