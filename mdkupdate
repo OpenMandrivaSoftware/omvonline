@@ -231,13 +231,14 @@ sub install_pkgs {
     my ($in, $choosed, $media_name, $o_options) = @_;
     $o_options ||= {};
     my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
+    my $program = $o_options->{no_X} ? '/usr/sbin/urpmi' : '/usr/bin/gurpmi';
     eval {
         if (!$o_options->{is_bundle}) {
             log::explanations("applying the updates");
-            system "/usr/sbin/gurpmi", "--auto", "--media", $media_name, @$choosed;
+            system $program, "--auto", "--media", $media_name, @$choosed;
         } else {
             log::explanations("installing the bundle");
-            system "/usr/bin/gurpmi", '--auto', if_($o_options->{auto_select}, "--auto-select"),
+            system $program, '--auto', if_($o_options->{auto_select}, "--auto-select"),
               if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
                 "--searchmedia", $media_name, @$choosed;
         }
