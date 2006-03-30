@@ -237,7 +237,7 @@ sub setLabel {
 }
 sub refresh_status {
     my $status = shift;
-    gtktext_insert($textvw, refresh_contents($status), wrap_mode => 'none');
+    gtktext_insert($textvw, refresh_contents($status));
 }
 sub refresh_contents {
     my $status = shift;
