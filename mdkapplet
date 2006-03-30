@@ -196,6 +196,7 @@ sub refresh_gui {
 
 sub showMainWindow() {
     my $w = Gtk2::Window->new('toplevel');
+    $::main_window = $w;
     $w->set_title(N("Mandriva Linux Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
     gtkset_size_request($w, 400, 300);
@@ -276,7 +277,10 @@ sub silentCheck() {
     logIt(N("Computing new updates...\n"));
     $link .= '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
     logIt(N("Connecting to") . " $link ...\n");
+    my $w = $::main_window ? $::main_window->window : undef;
+    gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
+    gtkset_mousecursor_normal($w);
     my $response = mdkonline::soap_get_updates_for_host($h{HOST_ID}, $h{HOST_KEY});
     my $status_err = mdkonline::check_server_response($response);
     if ($status_err eq 'OK') {
