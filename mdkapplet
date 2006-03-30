@@ -216,7 +216,7 @@ sub showMainWindow() {
 			     ),
 		    1, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
 			    gtkpack_(Gtk2::VBox->new(0, 3),
-				 1, create_scrolled_window(gtktext_insert($textvw, refresh_contents($state_global), wrap_mode => 'none')))),
+				 1, create_scrolled_window(gtktext_insert($textvw, refresh_contents($state_global))))),
 		    0, gtkpack(Gtk2::HSeparator->new),
 		    0, gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
 						     if (defined $wlog) { $wlog->destroy; undef $wlog }
