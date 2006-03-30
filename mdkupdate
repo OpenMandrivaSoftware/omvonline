@@ -108,22 +108,29 @@ if (!$bundle) {
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
 	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
+
+     my $ret = mdkonline::check_server_response($getupdates);
 	print Data::Dumper->Dump([ $getupdates ], [ qw(getupdates) ]);
-	if ($getupdates->{message}) {
-	    exit(0);
-	    my $rpms_scheduled;
-	    -f $currentrpm or rpm_qa($currentrpm);
+     if ($ret eq 'OK') {
+         # doble check mdkapplet:
+         if (my $updates = $getupdates->{data}{updates}) { # there're updates
+
+             my %mirrors = add_mirrors($in, undef, $getupdates->{data}{mirrors}, {}, '--update');
+             my $mirror = find { $_ } keys %mirrors; # pick a random mirror
+             my $pkgs = [ map { $_->{filename} } @$updates ];
+             print Data::Dumper->Dump([ $updates, $pkgs], [ qw(updates pkgs) ]);
+
 	    my ($release) = mdkonline::get_release();
 	    if ($applet) {
 		my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
 		my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
-		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=update_source";
-	    } elsif ($noX) {
-		my $pkgs = ask_pkgs($in);
-		install_pkgs($in, $pkgs, 'update_source') if $pkgs;
-		$in->exit(0);
+		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=$mirror"; 
 	    } elsif ($auto) { # FIXME
-		auto_install_rpms($rpms_scheduled);
+		auto_install_rpms();
+	    } else {
+		my $pkgs = ask_pkgs($in);
+		install_pkgs($in, $pkgs, $mirror, { no_X => $noX });
+		$in->exit(0);
 	    }
 	    rpm_qa($afterrpm);
 	    my $wc = mdkonline::read_conf();
@@ -133,9 +140,11 @@ if (!$bundle) {
 		$result = mdkonline::prepare_upload_conf($wc);
 	    }
 	    clean_dir();
-	} else { # code return a problem to get updates
-	    
-	}
+         }
+     } else {
+         log::explanations("geting updates failed: $ret");
+         $in->ask_warn(N("Error"), N("Cannot get list of updates: %s", $ret)) if $applet;
+     }
     } else { # no HOST_ID 
 	
     }
