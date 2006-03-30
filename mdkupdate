@@ -98,7 +98,7 @@ $bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $in;
 
-$bundle || $noX and $in = interactive->vnew;
+$applet || $bundle || $noX and $in = interactive->vnew;
 
 my $result;
 my $wc = mdkonline::read_conf();
