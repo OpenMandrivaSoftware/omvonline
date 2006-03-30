@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -121,6 +121,23 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Wed Mar 29 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-4mdk
+- log what's done in /var/log/explanations
+- mdkapplet:
+  o switch to new SOAP interface
+  o use new server to check for updates
+- mdkonline:
+  o center subdialogs on main window
+  o display error messages in various places
+  o fix account creation wizard
+  o fix running wizards on cooker
+  o fix some GUI oddities
+- mdkupdate:
+  o display error messages in various places
+  o display the "preparing" popup earlier so that the user had some
+    feedback once he has clicked on al bundle on the web page
+  o use new server API for getting updates
+
 * Thu Mar 16 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-3mdk
 - log what is done
 - add MIME support for KDE3 (it does not support the XDG mime trees
