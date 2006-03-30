@@ -104,7 +104,7 @@ sub soap_authenticate_user {
 
 sub soap_register_host {
     my $data = $s->registerHost(@_)->result;
-    log::explanation("registering host $_[3] named $_[4] in country $_[5]");
+    log::explanations("registering host $_[3] named $_[4] in country $_[5]");
     $data;	
 }
 
