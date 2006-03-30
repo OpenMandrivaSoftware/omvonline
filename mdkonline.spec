@@ -129,6 +129,7 @@ rm -rf $RPM_BUILD_ROOT
     server
   o wrap text
 - fix running wizard on mdv2006
+- fix crash while registering the host
 
 * Wed Mar 29 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-4mdk
 - log what's done in /var/log/explanations
