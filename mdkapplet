@@ -59,6 +59,9 @@ sub my_sprintf_fixutf8 {
     mdkonline::get_release() < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
 }
 
+
+my $insensitive_while_running_a_child;
+
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
@@ -191,7 +194,11 @@ sub fork_exec {
 sub refresh_gui {
     my ($sens) = @_;
     !$conf_launched and silentCheck(); $conf_launched = 0;
+    my $w = $::main_window->window;
+    $insensitive_while_running_a_child = !$sens;
+    $sens ? gtkset_mousecursor_normal($w) : gtkset_mousecursor_wait($w);
     $MW_vbox and $MW_vbox->set_sensitive($sens);
+    gtkflush();
 }
 
 sub showMainWindow() {
@@ -281,7 +288,7 @@ sub silentCheck() {
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
-    gtkset_mousecursor_normal($w);
+    gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
     my $response = mdkonline::soap_get_updates_for_host($h{HOST_ID}, $h{HOST_KEY});
     my $status_err = mdkonline::check_server_response($response);
     if ($status_err eq 'OK') {
