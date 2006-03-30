@@ -203,6 +203,7 @@ sub showMainWindow() {
     $w->set_position('center');
     $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
     $textvw = Gtk2::TextView->new;
+    $textvw->set_wrap_mode('word');
     gtkadd($w,
            gtkpack_($MW_vbox = Gtk2::VBox->new(0, 5),
 		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
