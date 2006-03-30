@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-08-21 14:31+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma)\n"
 "Language-Team: Hindi, India\n"
@@ -31,12 +31,12 @@ msgstr ""
 "सेवा संरचना समस्या । कॄपया लॉग की जाँच करें और निम्न पते पर एक विपत्र संदेश भेजें "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "तंत्र व्यस्त है । प्रतीक्षा करें ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "आपके तंत्र हेतु नये अपडेट उपलब्ध है"
@@ -195,12 +195,7 @@ msgstr "नये अपडेटो की गणना की जा रही
 msgid "Connecting to"
 msgstr "से सम्बन्ध स्थापित हो रहा है"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "मैनड्रिवऑनलाइन सर्वर से प्रतिउत्तर\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "जाँच की जा रही है... अपडेट्स उपलब्ध है\n"
@@ -251,7 +246,12 @@ msgid ""
 "team"
 msgstr "सर्वर से संबंध स्थापित करते समय समस्या हुई, कृपया सहायता दल से सम्पर्क करें"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "मैनड्रिवऑनलाइन सर्वर से प्रतिउत्तर\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "तंत्र आज-तक अपडेट है\n"
@@ -372,7 +372,14 @@ msgstr "मशीन नाम:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "त्रुटि"
+
+#: ../mdkonline:126
 #, fuzzy, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "आरोह बिन्दुओं के नाम में सिर्फ़ शब्द व संख्या होना चाहिए"
@@ -415,7 +422,17 @@ msgstr ""
 "और भी, www.mandrivaexpert.com से आप छूट-सहित पेड सहायता सेवाओं से \n"
 "लाभान्वित हो सकते है ।"
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "सम्बन्ध स्थापन समस्या"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "संचिकाओं को अपलोड करते समय समस्या हुई, कॄपया पुनः प्रयास करें"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "एक मैनड्रिवऑनलाइन खाता खोलें"
@@ -459,7 +476,12 @@ msgstr "कृपया सभी प्रविष्टियों को �
 msgid "Not a valid mail address!\n"
 msgstr "एक वैध विपत्र पता नहीं!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -492,17 +514,7 @@ msgstr ""
 "करता है।\n"
 "आपके तंत्र में एक कार्यक्रम लगातार नये अपडेटो की प्रतीक्षा में चलता रहेगा\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "सम्बन्ध स्थापन समस्या"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "संचिकाओं को अपलोड करते समय समस्या हुई, कॄपया पुनः प्रयास करें"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "देश"
@@ -710,7 +722,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "चेतावनी"
@@ -723,7 +740,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "तैयारी की जा रही है..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -732,27 +754,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "तैयारी की जा रही है..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "त्रुटि"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "एक त्रुटि हो गयी है"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "चयन करें कि किन पैकेजों को संसाधित किया जाना चाहिए और ठीक को दबायें"
@@ -766,6 +778,9 @@ msgstr "पैकेजों का संसाधन किया जा र�
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "एमडीकेअपडेट माध्यम से पैकेजों को अपडेट करने में असमर्थ ।\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "तंत्र व्यस्त है । प्रतीक्षा करें ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "संरचना के बारे में सूचित किया जा रहा है..."

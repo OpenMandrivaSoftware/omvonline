@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2006-03-18 11:45+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -34,12 +34,12 @@ msgid ""
 msgstr ""
 "服務設定發生問題，請檢查錯誤紀錄並寄封電子郵件至 support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "系統忙碌中，請稍候..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "有適用於您系統的更新"
@@ -195,12 +195,7 @@ msgstr "計算新的更新...\n"
 msgid "Connecting to"
 msgstr "連線到"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "來自 Mandriva Online 伺服器的回應\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "檢查中...有可用的更新\n"
@@ -249,7 +244,12 @@ msgid ""
 "team"
 msgstr "連結到伺服器發生錯誤，請聯繫支援團隊"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "來自 Mandriva Online 伺服器的回應\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "系統已經在最新狀態了\n"
@@ -369,7 +369,14 @@ msgstr "電腦描述："
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(例如：我家的電腦)"
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "錯誤"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "主機名稱必須由 1 到 40 個英文字母或數字的字元所組成"
@@ -412,7 +419,17 @@ msgstr ""
 "此外，您可以在 http://www.mandrivaexpert.com 使用付費的機制獲得\n"
 "更多服務與支援。"
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "連線問題"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "上傳檔案時發生問題，請再試一次"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "註冊 Mandriva Online 帳號"
@@ -456,7 +473,12 @@ msgstr "請填寫全部的欄位"
 msgid "Not a valid mail address!\n"
 msgstr "不是一個有效的郵件地址！\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -488,17 +510,7 @@ msgstr ""
 "Mandriva Online 提供讓您能夠自動進行更新動作。\n"
 "系統將會定期的執行更新程式檢查最新的更新資訊\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "連線問題"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "上傳檔案時發生問題，請再試一次"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "國家"
@@ -713,7 +725,12 @@ msgid ""
 "file.\n"
 msgstr "  --bundle file.bundle\t- 分析並安裝 .bundle 資訊檔中的套件。\n"
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "警告"
@@ -726,7 +743,12 @@ msgid ""
 "Install' wizard."
 msgstr "首先您必須用「Live Install」精靈將系統安裝到您的硬碟。"
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "準備中..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -738,27 +760,17 @@ msgstr ""
 "\n"
 "您需要升級到一個較新的版本。您可以從 http://start.mandriva.com 取得新版。"
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "準備中..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "錯誤"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "這個加值軟體沒有經過良好的格式化，略過。"
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "發生一個錯誤"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr "這個加值軟體沒有經過良好的格式化，略過。"
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "請選取要安裝的套件並按下確定"
@@ -772,6 +784,9 @@ msgstr "正在安裝套件...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "無法由 update_source 媒體更新套件。\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "系統忙碌中，請稍候..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "正在送出組態設定..."

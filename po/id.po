@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2006-03-21 18:34+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
@@ -34,12 +34,12 @@ msgstr ""
 "Masalah konfigurasi layanan. Harap perika file log dan kirimkan mail ke "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Sistem sedang sibuk. Harap tunggu ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Update baru tersedia untuk sistem Anda"
@@ -197,12 +197,7 @@ msgstr "Menghitung update baru...\n"
 msgid "Connecting to"
 msgstr "Menghubungkan ke"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Jawaban dari server Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Memeriksa... Update tersedia\n"
@@ -255,7 +250,12 @@ msgstr ""
 "Masalah muncul ketika melakukan koneksi ke server, silakan menghubungi tim "
 "pendukung."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Jawaban dari server Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem up-to-date\n"
@@ -376,7 +376,14 @@ msgstr "Deskripsi mesin:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(Contoh: Komputer Kantor Saya)"
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Kesalahan"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Nama komputer harus berupa karakter alphanumerik sebanyak 1 - 40"
@@ -416,7 +423,17 @@ msgstr ""
 "memberi tahu Anda tentang update keamanan dan upgrade bermanfaat via email.\n"
 "Tambah lagi, Anda akan mendapat diskon servis di www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Masalah koneksi"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "Masalah terjadi ketika mengupload file, harap mencoba lagi"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Buat Account Mandriva Online"
@@ -460,7 +477,12 @@ msgstr "Harap mengisi semua field"
 msgid "Not a valid mail address!\n"
 msgstr "Alamat mail tak valid!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -492,17 +514,7 @@ msgstr ""
 "Mandriva Online memberi Anda kemampuan update otomatis.\n"
 "Sebuah program akan secara periodik menunggu update baru\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Masalah koneksi"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Masalah terjadi ketika mengupload file, harap mencoba lagi"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Negara:"
@@ -722,7 +734,12 @@ msgstr ""
 "  --bundel file.bundle\t- parsing dan install paket dari file .bundle "
 "metainfo.\n"
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Peringatan"
@@ -737,7 +754,12 @@ msgstr ""
 "Anda pertama-tama perlu menginstall sistem pada harddisk dengan wizard 'Live "
 "Install'."
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Persiapan..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -750,27 +772,17 @@ msgstr ""
 "Anda perlu mengupdatenya ke versi yang baru. Anda bisa mendapatkannya dari "
 "http://start.mandriva.com"
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Persiapan..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Kesalahan"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Paket ini tidak terformat dengan baik. Membatalkan."
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Terjadi kesalahan"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr "Paket ini tidak terformat dengan baik. Membatalkan."
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Pilih paket yang akan diinstall dan tekan Ok"
@@ -784,6 +796,9 @@ msgstr "Menginstall paket...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal meng-update paket dari media update_source.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Sistem sedang sibuk. Harap tunggu ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Mengirimkan konfigurasi..."

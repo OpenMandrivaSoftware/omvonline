@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-09-29 01:36+0000\n"
 "Last-Translator: Зоран Димовски <decata@mt.net.mk>\n"
 "Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
@@ -31,12 +31,12 @@ msgstr ""
 "Проблем при конфигурирање на сервисот. Ве молиме проверете ги логовите и "
 "испратете пошта на  support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Системот е зафатен. Ве молиме почекајте ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Достапни се нови ажурирања за вашиот систем"
@@ -197,12 +197,7 @@ msgstr "Ги пресметувам новите ажурирања...\n"
 msgid "Connecting to"
 msgstr "Се поврзувам со"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Одговор од серверот на Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Проверувам... Пакетите за ажурирање се достапни\n"
@@ -256,7 +251,12 @@ msgstr ""
 "Се појави проблем при поврзување со серверот. Ве молиме контактирајте со "
 "тимот за поддршка"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Одговор од серверот на Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Системот е ажуриран\n"
@@ -377,7 +377,14 @@ msgstr "Име на машината:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Грешка"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Името на машината море да има од 1-40 алфанумерички карактери"
@@ -421,7 +428,17 @@ msgstr ""
 "Дури и придобивате од сервисите за подршка со намалена наплата на\n"
 "www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Проблем со конекцијата"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "Проблем при испраќање на датотеките, ве молиме обидете се повторно"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Создади Mandriva Online сметка"
@@ -465,7 +482,12 @@ msgstr "Ве молиме пополнете ги сите полиња"
 msgid "Not a valid mail address!\n"
 msgstr "Невалидна email адреса!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -498,17 +520,7 @@ msgstr ""
 "Mandriva Online ви ја нуди способноста за автоматско ажурирање.\n"
 "Програма ќе работи регуларно на вашиот систем чекајќи за нови ажирирања\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Проблем со конекцијата"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Проблем при испраќање на датотеките, ве молиме обидете се повторно"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Држава"
@@ -725,7 +737,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Внимание"
@@ -738,7 +755,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Се подготвувам..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -747,27 +769,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Се подготвувам..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Грешка"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Се случи грешка"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Изберете кои пакети да се инсталираат и притиснете Во ред"
@@ -781,6 +793,9 @@ msgstr "Инсталирање на пакетите...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не можам да ги ажурирам пакетите од медиумот update_source.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Системот е зафатен. Ве молиме почекајте ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Испраќам конфигурација..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2004-12-08 14:53+0200\n"
 "Last-Translator: Ömer Fadıl USTA <omer_fad@hotmail.com>\n"
 "Language-Team: Turkish <ceviri@bilisimlab.com>\n"
@@ -32,12 +32,12 @@ msgstr ""
 "Herhangi bir sorun için support@manrakeonline.net adresine posta "
 "gönderebilirsiniz\n"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Sistem meşgül. Lütfen bekleyin ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Sisteminiz için yeni güncellemeler mevcut"
@@ -193,12 +193,7 @@ msgstr "Güncellemeleri Kontrol Et"
 msgid "Connecting to"
 msgstr "Bağlantı problemi"
 
-#: ../mdkapplet:283
-#, fuzzy, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Online'na Hoşgeldiniz"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
@@ -247,7 +242,12 @@ msgid ""
 "team"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, fuzzy, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Mandriva Online'na Hoşgeldiniz"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr ""
@@ -369,7 +369,14 @@ msgstr "Makine adı:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Hata"
+
+#: ../mdkonline:126
 #, fuzzy, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Bağlantı noktaları sadece alfabetik harfler içerebilir."
@@ -409,7 +416,17 @@ msgstr ""
 "Sistem bilginiz kesinlikle bir 3. şahısa iletilmeyecektir.\n"
 "Tüm bu bilgiler Mandriva Linux Gizlilik Poliçesi ile korunacaktır."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Bağlantı problemi"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr ""
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Linux Online Hesabı Oluştur"
@@ -453,7 +470,12 @@ msgstr "Lütfen tüm alanları doldurun\n"
 msgid "Not a valid mail address!\n"
 msgstr "Geçerli bir EPosta adresi değil\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -486,17 +508,7 @@ msgstr ""
 "Sistemizde belirli aralıklarla çalışacak ve\n"
 "güncellemeleri takip edecek olan bir programdır\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Bağlantı problemi"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Ülke"
@@ -704,7 +716,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Uyarı"
@@ -717,7 +734,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Hazırlanıyor..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -726,27 +748,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Hazırlanıyor..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Hata"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
@@ -760,6 +772,9 @@ msgstr "Paketler kuruluyor...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source medyasından paketler güncellenemiyor.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Sistem meşgül. Lütfen bekleyin ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Yapılandırma gönderiliyor..."

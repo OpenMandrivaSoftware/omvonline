@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2006-03-18 10:48+0200\n"
 "Last-Translator: Theophanis Mastakas <mastakas@otenet.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -33,12 +33,12 @@ msgstr ""
 "Πρόβλημα υπηρεσίας ρυθμίσεων. Παρακαλώ ελέγξτε τα ημερολόγια και στείλτε "
 "μήνυμα στο support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Το σύστημα είναι απασχολημένο.Παρακαλώ περιμένετε ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Υπάρχουν νέες αναβαθμίσεις για το σύστημα σας"
@@ -199,12 +199,7 @@ msgstr "Επεξεργασία νέων αναβαθμίσεων...\n"
 msgid "Connecting to"
 msgstr "Σύνδεση με"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Απάντηση απο τόν διακομιστή της Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Έλεγχος...Υπάρχουν αναβαθμίσεις\n"
@@ -259,7 +254,12 @@ msgstr ""
 "Υπήρξε πρόβλημα κατά τη σύνδεση σας με τον διακομιστή,παρακαλώ επικοινωνήστε "
 "με την ομάδα υποστήριξης"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Απάντηση απο τόν διακομιστή της Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Το σύστημα είναι ενημερωμένο\n"
@@ -382,7 +382,14 @@ msgstr "Περιγραφή μηχανήματος:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(Εχ:"
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Σφάλμα"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr ""
@@ -426,7 +433,18 @@ msgstr ""
 "Θα μπορείτε να επωφεληθείτε από έκπτωση στην υπηρεσία με πληρωμή στο \n"
 "www.mandrivaexpert.com"
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Πρόβλημα σύνδεσης"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr ""
+"Παρουσιάστηκε πρόβλημα κατά την αποστολή των αρχείων,παρακαλώ δοκιμάστε ξανά"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Δημιουργήστε ένα λογαριασμό Mandriva Online"
@@ -470,7 +488,12 @@ msgstr "Παρακαλώ συμπληρώστε τα παρακάτω πεδία
 msgid "Not a valid mail address!\n"
 msgstr "Μη έγκυρη διεύθυνση ταχυδρομείου!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -504,18 +527,7 @@ msgstr ""
 "Ένα πρόγραμμα θα εκτελείται τακτικά στο σύστημά σας αναμένοντας νέες "
 "αναβαθμίσεις\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Πρόβλημα σύνδεσης"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-"Παρουσιάστηκε πρόβλημα κατά την αποστολή των αρχείων,παρακαλώ δοκιμάστε ξανά"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Χώρα"
@@ -737,7 +749,12 @@ msgstr ""
 "  --bundle file.bundle\t- ανάλυση και εγκατάσταση πακέτου από αρχείο δέσμης "
 "metainfo.\n"
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Προσοχή"
@@ -752,7 +769,12 @@ msgstr ""
 "Αρχικά πρέπει να εγκαταστήσετε το σύστημα στο σκληρό σας δίσκο με τον "
 "αυτόματο οδηγό 'Live install'."
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Προετοιμασία..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -765,27 +787,17 @@ msgstr ""
 "Πρέπει να γίνει αναβάθμιση σε νεότερη έκδοση.Μπορείτε να πάρετε μια νέα από "
 "το http:// star.mandriva.com"
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Προετοιμασία..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Σφάλμα"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Αυτή η δεσμίδα δεν είναι καλά μορφοποιημένη.Διακόπτω."
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Προκλήθηκε σφάλμα"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr "Αυτή η δεσμίδα δεν είναι καλά μορφοποιημένη.Διακόπτω."
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Διαλέξτε ποία πακέτα θα εγκατασταθούν και πιέστε ΟΚ"
@@ -799,3 +811,6 @@ msgstr "Εγκατάσταση πακέτων...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Αδύνατη η αναβάθμιση των πακέτων από το μέσο update_source.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Το σύστημα είναι απασχολημένο.Παρακαλώ περιμένετε ..."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-09-25 16:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: EUSKARA <itzulpena@euskalgnu.org>\n"
@@ -35,12 +35,12 @@ msgstr ""
 "Zerbitzuaren konfigurazio arazoa. Mesedez aztertu erregistroak eta bidali "
 "posta support@mandrivaonline.com helbidera"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Sistema okupatuta dago. Itxaron..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
@@ -198,12 +198,7 @@ msgstr "Eguneraketa berriak kalkulatzen...\n"
 msgid "Connecting to"
 msgstr "Hona konektatzen"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Online zerbitzaritik erantzuna\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Egiaztaketa... Dauden eguneraketak\n"
@@ -256,7 +251,12 @@ msgstr ""
 "Arazo bat gertatu da zerbitzariarekin konektatzerakoan, mesedez jarri "
 "euskarri taldearekin harremanetan"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Mandriva Online zerbitzaritik erantzuna\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistema eguneratzera doa\n"
@@ -379,7 +379,14 @@ msgstr "Makina-izena:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Errorea"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Makina izena 1 eta 40 alfazenbakizko karaktere artean izan behar ditu"
@@ -421,7 +428,17 @@ msgstr ""
 "bidaltzeko baimena emango diguzu. Horretaz gainera, \n"
 "www.mandrivaexpert.com guneko zerbitzuetan deskontua izango duzu."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Konexio-arazoa"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "Arazoa fitxategiak igotzerakoan gertatzen da, saiatu berriro mesedez"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Sortu Mandriva Online kontua"
@@ -465,7 +482,12 @@ msgstr "Mesedez bete eremu bakoitza"
 msgid "Not a valid mail address!\n"
 msgstr "Helbide elektronikoa baliogabea da!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -497,17 +519,7 @@ msgstr ""
 "Mandriva Online-k eguneratzeak automatizatzeko aukera eskaintzen dizu.\n"
 "Aldika programa bat exekutatuko da zure sisteman eguneratzeak bilatzeko.\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Konexio-arazoa"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Arazoa fitxategiak igotzerakoan gertatzen da, saiatu berriro mesedez"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Estatua"
@@ -725,7 +737,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Kontuz"
@@ -738,7 +755,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Prestatzen..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -747,27 +769,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Prestatzen..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Errorea"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Errore bat izan da"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Hautatu zein pakete instalatu behar diren eta Ados sakatu"
@@ -781,6 +793,9 @@ msgstr "Paketeak instalatzen...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Sistema okupatuta dago. Itxaron..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Konfigurazioa bidaltzen..."

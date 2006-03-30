@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-02-05 04:12-0500\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian <en@li.org>\n"
@@ -33,12 +33,12 @@ msgstr ""
 "اشکال تنظیم سرویس. لطفا ثبت‌ها را کنترل کرده و پستی را به "
 "support@mandrivaonline.com ارسال کنید"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "سیستم اشغال است. صبر کنید..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "بروزسازی‌هایی برای سیستم‌تان در دسترس است"
@@ -196,12 +196,7 @@ msgstr "در حال محاسبه کردن بروزسازی‌های جدید...\
 msgid "Connecting to"
 msgstr "در حال اتصال به"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "پاسخ از کارگزار Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "در حال بررسی... بروزسازی‌هایی در دسترس هستند\n"
@@ -254,7 +249,12 @@ msgid ""
 msgstr ""
 "اشکالی هنگام اتصال به کارگزار رخ داد، لطفا با گروه پشتیبانی تماس بگیرید"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "پاسخ از کارگزار Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "سیستم به روز است\n"
@@ -375,7 +375,14 @@ msgstr "نام ماشین:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "خطا"
+
+#: ../mdkonline:126
 #, fuzzy, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "نقاط سوارسازی فقط باید حاوی نویسه‌های الفبا باشند"
@@ -417,7 +424,17 @@ msgstr ""
 "بعلاوه، شما از تخفیف پرداخت خدمات پشتیبانی بر\n"
 "www.mandrivaexpert.com بهره میگیرید."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "مشکل اتصال"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "اشکالی هنگام باردهی پرونده‌ها رخ داد، لطفا دوباره تلاش کنید"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "ایجاد حساب Mandriva Online"
@@ -461,7 +478,12 @@ msgstr "لطفاً همه‌ی محوطه‌ها را پر کنید\n"
 msgid "Not a valid mail address!\n"
 msgstr "نشانی پست معتبری نیست!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -494,17 +516,7 @@ msgstr ""
 "برنامه‌ای در سیستم‌تان بطور متناوب اجرا شده و منتظر بروزسازی‌های جدید خواهد "
 "بود\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "مشکل اتصال"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "اشکالی هنگام باردهی پرونده‌ها رخ داد، لطفا دوباره تلاش کنید"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "کانتری"
@@ -711,7 +723,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "هشدار"
@@ -724,7 +741,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "در حال آماده کردن..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -733,27 +755,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "در حال آماده کردن..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "خطا"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "خطائی رخ داد"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
@@ -767,6 +779,9 @@ msgstr "نصب بسته‌ها...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "قادر نبودن به بروزسازی بسته‌ها از رسانه‌ی update_source.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "سیستم اشغال است. صبر کنید..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "فرستادن پیکربندی..."

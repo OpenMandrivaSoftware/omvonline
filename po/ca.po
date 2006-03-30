@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-09-20 00:10+0200\n"
 "Last-Translator: Albert Astals Cid <astals11@terra.es>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,12 +32,12 @@ msgstr ""
 "Problema de configuració del servei. Comproveu els logs i envieu un correu a "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "El sistema està ocupat. Espereu ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Hi ha actualitzacions disponibles pel vostre sistema"
@@ -193,12 +193,7 @@ msgstr "S'estan computant les noves actualitzacions...\n"
 msgid "Connecting to"
 msgstr "S'està connectant a"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Resposta del servidor de Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "S'està comprovant ...Hi ha actualitzacions disponibles\n"
@@ -247,7 +242,12 @@ msgid ""
 "team"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Resposta del servidor de Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "El sistema està actualitzat\n"
@@ -372,7 +372,14 @@ msgstr "Nom de màquina:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Error"
+
+#: ../mdkonline:126
 #, fuzzy, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Els punts de muntatge només poden contenir caràcters alfanumèrics"
@@ -415,7 +422,17 @@ msgstr ""
 "A més, gaudireu de descomptes en els serveis de suport de pagament de\n"
 "www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Problema de connexió"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr ""
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Crea un compte a Mandriva Online"
@@ -459,7 +476,12 @@ msgstr "Si us plau ompliu tots els camps\n"
 msgid "Not a valid mail address!\n"
 msgstr "No és una adreça de correu vàlida!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, fuzzy, c-format
+msgid "Creating account failed!"
+msgstr "Canvia compte"
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -491,17 +513,7 @@ msgstr ""
 "S'executarà regularment un programa per comprovar si hi ha noves "
 "actualitzacions\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Problema de connexió"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "País"
@@ -707,7 +719,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Advertència"
@@ -720,7 +737,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "S'està preparant..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -729,27 +751,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "S'està preparant..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Error"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "S'ha produït un error"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
@@ -763,6 +775,9 @@ msgstr "S'estan instal·lant els paquets...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "No es poden actualitzar els paquets des del suport update_source.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "El sistema està ocupat. Espereu ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "S'està enviant la configuració..."
@@ -912,9 +927,6 @@ msgstr "No es poden actualitzar els paquets des del suport update_source.\n"
 
 #~ msgid "Email"
 #~ msgstr "Correu"
-
-#~ msgid "Change account"
-#~ msgstr "Canvia compte"
 
 #~ msgid "Server Problem"
 #~ msgstr "Problema del servidor"

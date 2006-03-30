@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv - Mandriva 2006 Release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-09-17 00:15+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -36,12 +36,12 @@ msgstr ""
 "Problem med tjänstens konfiguration. Var vänlig kontrollera loggar och "
 "skicka e-post till support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Systemet är upptaget. Var god vänta ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Nya uppdateringar finns tillgängliga för ditt system"
@@ -198,12 +198,7 @@ msgstr "Beräknar nya uppdateringar...\n"
 msgid "Connecting to"
 msgstr "Ansluter till"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Svar från Mandriva Online server\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Kontrollerar... Uppdateringar finns tillgängliga\n"
@@ -254,7 +249,12 @@ msgid ""
 "team"
 msgstr "Ett problem uppstod när servern skulle kontaktas, kontakta supporten."
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Svar från Mandriva Online server\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systemet är uppdaterat\n"
@@ -376,7 +376,14 @@ msgstr "Datornamn:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Fel"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "Maskinens namn måste vara mellan 1 och 40 alfanumeriska tecken"
@@ -420,7 +427,17 @@ msgstr ""
 "Du kan även dra nytta av de rabbatterade supporttjänsterna på \n"
 "www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Anslutningsproblem"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "Ett fel inträffade när filerna laddades upp, var vänlig försök igen"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Skapa ett Mandriva Online konto"
@@ -464,7 +481,12 @@ msgstr "Var vänlig  och fyll i alla fält"
 msgid "Not a valid mail address!\n"
 msgstr "Inte en giltig e-postadress.\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -497,17 +519,7 @@ msgstr ""
 "Ett program kommer regelbundet att köras på systemet och vänta på nya "
 "uppdateringar.\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Anslutningsproblem"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Ett fel inträffade när filerna laddades upp, var vänlig försök igen"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Land"
@@ -724,7 +736,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Varning"
@@ -737,7 +754,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Förbereder..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -746,27 +768,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Förbereder..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Fel"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Ett fel inträffade"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Välj de paket som ska installeras och tryck Ok"
@@ -780,6 +792,9 @@ msgstr "Installerar paket...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunde ej uppdatera paket från update_source källan.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Systemet är upptaget. Var god vänta ..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "Skickar konfiguration..."

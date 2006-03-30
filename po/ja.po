@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2006-03-17 23:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -31,12 +31,12 @@ msgstr ""
 "サービスの設定に問題があります。ログを調べて support@mandrivaonline.com に"
 "メールしてください。"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "システムがビジー状態です。お待ち下さい..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "新しい更新があります"
@@ -193,12 +193,7 @@ msgstr "新しい更新を計算中...\n"
 msgid "Connecting to"
 msgstr "接続しています"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Onlineサーバからの応答\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "チェック中... 新しい更新があります\n"
@@ -250,7 +245,12 @@ msgid ""
 "team"
 msgstr "サーバ接続中に問題が発生しました。サポートチームに連絡してください"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Mandriva Onlineサーバからの応答\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "新しい更新はありません\n"
@@ -371,7 +371,14 @@ msgstr "マシンの説明:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(例: ホームオフィスのコンピュータ)"
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "エラー"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "マシン名はアルファベットと数字(1から40まで)で指定してください"
@@ -415,7 +422,17 @@ msgstr ""
 "引が\n"
 "適用されます。"
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "接続トラブル"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "ファイル送信中に問題が発生しました。やり直して下さい。"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Mandriva Online のアカウント作成"
@@ -459,7 +476,12 @@ msgstr "すべての項目を埋めてください"
 msgid "Not a valid mail address!\n"
 msgstr "メールアドレスが無効です\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -491,17 +513,7 @@ msgstr ""
 "Mandriva Online をご利用頂くとシステムの更新を自動化できます。\n"
 "チェックプログラムが新しい更新情報を定期的に調べに行きます。\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "接続トラブル"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "ファイル送信中に問題が発生しました。やり直して下さい。"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "国名"
@@ -720,7 +732,12 @@ msgstr ""
 "  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージをイ"
 "ンストールする。\n"
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "警告"
@@ -733,7 +750,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "準備中.."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -746,27 +768,17 @@ msgstr ""
 "アップグレードが必要です。http://start.mandriva.com から新しいバージョンを取"
 "得できます。"
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "準備中.."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "エラー"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "このバンドルは正しくフォーマットされていません。中止します。"
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "エラーが発生しました"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr "このバンドルは正しくフォーマットされていません。中止します。"
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "インストールするパッケージを選択して[OK]を押してください。"
@@ -780,3 +792,6 @@ msgstr "パッケージをインストール中..\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_sourceメディアからパッケージを更新できません。\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "システムがビジー状態です。お待ち下さい..."

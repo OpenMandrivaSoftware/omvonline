@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2002-08-23 20:02-0400\n"
 "Last-Translator: prabu <prabu_anand2000@yahoo.com>\n"
 "Language-Team: Tamil\n"
@@ -27,12 +27,12 @@ msgid ""
 "support@mandrivaonline.com"
 msgstr "பிழைகளை ஆங்கிலத்தில் ெதரிவிக்க support@mandrivaonline.com\n"
 
-#: ../mdkapplet:77
+#: ../mdkapplet:83
 #, c-format
-msgid "System is busy. Please wait ..."
+msgid "Please wait, finding available packages..."
 msgstr ""
 
-#: ../mdkapplet:83
+#: ../mdkapplet:89
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr "வலையமைப்பு அட்ைட எதுவும் காணப்படவில்ைல"
@@ -188,12 +188,7 @@ msgstr "தொடர்பில் பிழை நேர்ந்துள்�
 msgid "Connecting to"
 msgstr "தொடர்பில் பிழை நேர்ந்துள்ளது"
 
-#: ../mdkapplet:283
-#, fuzzy, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "மாண்டிரேக் இணையத்தளத்திற்கு வருக"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
@@ -242,7 +237,12 @@ msgid ""
 "team"
 msgstr ""
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, fuzzy, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "மாண்டிரேக் இணையத்தளத்திற்கு வருக"
+
+#: ../mdkapplet:313
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "இயக்க முறைமை"
@@ -365,7 +365,14 @@ msgstr "கணிணியின் பெயர்"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "பிழை"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr ""
@@ -405,7 +412,17 @@ msgstr ""
 "பாதுகாப்பு, புதிய நிரல் பற்றி அறியலாம்.\n"
 "மேலும் நீங்கள் www.mandrivaexpert.com என்ற இணையத்தளத்திற்கு."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "தொடர்பில் பிழை நேர்ந்துள்ளது"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr ""
+
+#: ../mdkonline:153
 #, fuzzy, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "மாண்ட்ரிவ க்ளப் கணக்கு"
@@ -449,7 +466,12 @@ msgstr ""
 msgid "Not a valid mail address!\n"
 msgstr "சரியான மின்னஞ்சல் முகவரி அல்ல!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -479,17 +501,7 @@ msgstr ""
 "மாண்டிரேக் இணையம் உங்கள் கணிணியில் புதிய நிரல்களை நிறுவும்\n"
 "புதிய நிரல் பற்றி அறிய உங்கள் கணிணியில் நிரல் ஓடிக்கொண்டிருக்கும்\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "தொடர்பில் பிழை நேர்ந்துள்ளது"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "நாடு"
@@ -696,7 +708,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "எச்சரிக்ைக"
@@ -709,7 +726,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr ""
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -718,27 +740,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr ""
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "பிழை"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "பிழை நேர்ந்துள்ளது மன்னிக்கவும்"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""

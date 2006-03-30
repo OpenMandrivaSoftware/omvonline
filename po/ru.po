@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2006-03-27 13:57+0300\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
 "Language-Team: Russian <docteam@lafox.net>\n"
@@ -32,12 +32,12 @@ msgstr ""
 "Проблема настройки службы. Пожалуйста, проверьте логи и вышлите письмо на "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "Система занята. Ждите ..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Для вашей системы доступны обновления"
@@ -193,12 +193,7 @@ msgstr "Вычисляются новые обновления...\n"
 msgid "Connecting to"
 msgstr "Выполняется подключение к"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Ответ сервера Mandriva Online\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Выполняется проверка... Обновления доступны\n"
@@ -251,7 +246,12 @@ msgstr ""
 "Возникла проблема при обращении к серверу, пожалуйста свяжитесь с командой "
 "поддержки"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "Ответ сервера Mandriva Online\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Системе не требуются обновления\n"
@@ -373,10 +373,18 @@ msgstr "Описание машины:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(напр: мой домашний компьютер)"
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../mdkonline:126
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
+msgstr ""
+"Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
 
 #: ../mdkonline:125
 #, c-format
@@ -416,7 +424,17 @@ msgstr ""
 "Кроме того, вы получаете скидку на оплачиваемую поддержку на\n"
 "www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "Проблема подключения"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "При загрузке файлов возникла проблема, попробуйте снова"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Создать учетную запись Mandriva Online"
@@ -460,7 +478,12 @@ msgstr "Пожалуйста, заполните все поля"
 msgid "Not a valid mail address!\n"
 msgstr "Недействительный почтовый адрес!\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -494,17 +517,7 @@ msgstr ""
 "Программа будет регулярно запускаться в вашей системе, ожидая новых "
 "обновлений\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "Проблема подключения"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "При загрузке файлов возникла проблема, попробуйте снова"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "Страна"
@@ -720,9 +733,16 @@ msgstr "  --debug\t\t\t- журналирование выполняемых д�
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t- разбор и установка пакета из файла .bundle с метаинформацией.\n"
+msgstr ""
+"  --bundle file.bundle\t- разбор и установка пакета из файла .bundle с "
+"метаинформацией.\n"
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "Внимание"
@@ -733,9 +753,16 @@ msgstr "Внимание"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr "Вы сначала должны установить систему на свой жёсткий диск с помощью мастера 'Live Install'."
+msgstr ""
+"Вы сначала должны установить систему на свой жёсткий диск с помощью мастера "
+"'Live Install'."
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "Подготовка..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -745,29 +772,20 @@ msgid ""
 msgstr ""
 "Слишком старая версия клиента Mandriva Online.\n"
 "\n"
-"Вам нужно обновить клиента до более свежей версии. Вы можете загрузить его с сайта http://start.mandriva.com"
+"Вам нужно обновить клиента до более свежей версии. Вы можете загрузить его с "
+"сайта http://start.mandriva.com"
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "Подготовка..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "Ошибка"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Этот bundle имеет неверный формат. Установка прервана."
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "Произошла ошибка"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr "Этот bundle имеет неверный формат. Установка прервана."
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr "Выберите пакеты, которые необходимо установить, и нажмите ОК"
@@ -782,6 +800,9 @@ msgstr "Устанавливаются пакеты...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Невозможно обновить пакеты из источника update_source.\n"
 
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "Система занята. Ждите ..."
+
 #~ msgid "Sending configuration..."
 #~ msgstr "Отправляется конфигурация..."
 
@@ -793,4 +814,3 @@ msgstr "Невозможно обновить пакеты из источник
 
 #~ msgid "Mandriva Update could not contact the site, we will try again."
 #~ msgstr "Невозможно связаться с сайтом Mandriva Online, попробуем еще раз."
-

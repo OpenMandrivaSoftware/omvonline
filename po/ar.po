@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-16 11:12+0100\n"
+"POT-Creation-Date: 2006-03-30 16:58+0200\n"
 "PO-Revision-Date: 2005-02-24 23:27+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -31,12 +31,12 @@ msgstr ""
 "مشكلة في تهيئة الخدمة. رجاء تحقّق من السجلّ وأرسل إلى support@mandrivaonline."
 "net"
 
-#: ../mdkapplet:77
-#, c-format
-msgid "System is busy. Please wait ..."
-msgstr "النّظام مشغول. رجاء الانتظار..."
-
 #: ../mdkapplet:83
+#, c-format
+msgid "Please wait, finding available packages..."
+msgstr ""
+
+#: ../mdkapplet:89
 #, c-format
 msgid "New updates are available for your system"
 msgstr "هناك تحديثات متوفّرة لنظامك"
@@ -193,12 +193,7 @@ msgstr "يجري حساب التّحديثات الجديدة...\n"
 msgid "Connecting to"
 msgstr "الإتّصال بـ"
 
-#: ../mdkapplet:283
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "الردّ من خادم ماندريبا أُنلاين\n"
-
-#: ../mdkapplet:301
+#: ../mdkapplet:286
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "يجري الفحص... التّحديثات متوفّرة\n"
@@ -249,7 +244,12 @@ msgid ""
 "team"
 msgstr "حدثت مشكلة أثناء الاتصال باخادم، الرجاء الاتصال بفريق الدعم"
 
-#: ../mdkapplet:316
+#: ../mdkapplet:310
+#, c-format
+msgid "Response from Mandriva Online server\n"
+msgstr "الردّ من خادم ماندريبا أُنلاين\n"
+
+#: ../mdkapplet:313
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "النّظام محدّث\n"
@@ -370,7 +370,14 @@ msgstr "إسم الماكنة:"
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:123
+#: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
+#: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
+#: ../mdkupdate:196 ../mdkupdate:215
+#, c-format
+msgid "Error"
+msgstr "خطأ"
+
+#: ../mdkonline:126
 #, fuzzy, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr "أماكن التركيب يجب أن تحتوي فقط على الحروف و/أو الآرقام"
@@ -411,7 +418,17 @@ msgstr ""
 "كذلك، تستفيد من خدمات دعم بسعر أقلّ على\n"
 "www.mandrivaexpert.com."
 
-#: ../mdkonline:149
+#: ../mdkonline:146
+#, c-format
+msgid "Connection problem"
+msgstr "مشكلة في الإتصال"
+
+#: ../mdkonline:146
+#, c-format
+msgid "Problem occurs when uploading files, please try again"
+msgstr "يحدث مشكل عند تحميل الملفّات، حاول مجدّدا من فضلك"
+
+#: ../mdkonline:153
 #, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "إنشاء حساب في ماندريبا أُنلاين"
@@ -455,7 +472,12 @@ msgstr "الرجاء تعبئة كل الحقول\n"
 msgid "Not a valid mail address!\n"
 msgstr "عنوان بريدي غير صالح !\n"
 
-#: ../mdkonline:170
+#: ../mdkonline:181
+#, c-format
+msgid "Creating account failed!"
+msgstr ""
+
+#: ../mdkonline:189
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
@@ -488,17 +510,7 @@ msgstr ""
 "\n"
 "سيعمل برنامج بانتظام على نظامك منتظرا تحديثات جديدة\n"
 
-#: ../mdkonline:181
-#, c-format
-msgid "Connection problem"
-msgstr "مشكلة في الإتصال"
-
-#: ../mdkonline:181
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "يحدث مشكل عند تحميل الملفّات، حاول مجدّدا من فضلك"
-
-#: ../mdkonline:188
+#: ../mdkonline:196
 #, c-format
 msgid "Country"
 msgstr "الدولة"
@@ -705,7 +717,12 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:144 ../mdkupdate:160
+#: ../mdkupdate:149
+#, c-format
+msgid "Cannot get list of updates: %s"
+msgstr ""
+
+#: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
 msgid "Warning"
 msgstr "تحذير"
@@ -718,7 +735,12 @@ msgid ""
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:160
+#: ../mdkupdate:162 ../mdkupdate:183
+#, c-format
+msgid "Preparing..."
+msgstr "جاري التحضير..."
+
+#: ../mdkupdate:174
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -727,27 +749,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:169
-#, c-format
-msgid "Preparing..."
-msgstr "جاري التحضير..."
-
-#: ../mdkupdate:183 ../mdkupdate:198
-#, c-format
-msgid "Error"
-msgstr "خطأ"
-
-#: ../mdkupdate:183
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:198
+#: ../mdkupdate:196
 #, c-format
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
-#: ../mdkupdate:205
+#: ../mdkupdate:215
+#, c-format
+msgid "This bundle is not well formated. Aborting."
+msgstr ""
+
+#: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
@@ -761,6 +773,9 @@ msgstr "جاري تركيب الحزم...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "لم يمكن تحديث الحزم من وسيط التحديث.\n"
+
+#~ msgid "System is busy. Please wait ..."
+#~ msgstr "النّظام مشغول. رجاء الانتظار..."
 
 #~ msgid "Sending configuration..."
 #~ msgstr "يجري بعث الإعداد..."
