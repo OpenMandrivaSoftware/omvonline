@@ -1,3 +1,272 @@
+2006-03-30 17:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: set busy cursor while running mdkupdate
+
+2006-03-30 17:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (refresh_status) do not disable wrapping
+
+2006-03-30 17:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (showMainWindow) set wrap mode on 'word'
+
+2006-03-30 17:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: one more change in 2.0-5mdk
+
+2006-03-30 17:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (soap_register_host) fix crash while registering
+	  the host
+
+2006-03-30 17:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-5mdk
+
+2006-03-30 17:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: show the "Mandriva Online" entry earlier in the
+	  menu (directly in the "server/" root menu branch)
+
+2006-03-30 17:15  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: br.po, fr.po: update
+
+2006-03-30 17:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, id.po, is.po, it.po, ja.po, ko.po, ky.po, lt.po, ltg.po,
+	  lv.po, mk.po, ms.po, mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po,
+	  pt.po, pt_BR.po, ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po,
+	  sr@Latn.po, sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po,
+	  uz.po, uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: translate a
+	  string from rpmdrake
+
+2006-03-30 17:07  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (silentCheck) set busy cursor while querying the
+	  server
+
+2006-03-30 17:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: sync messages with
+	  code
+
+2006-03-30 17:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: when checking the server, display a more accurate and
+	  more understandable message (taken from rpmdrake)
+
+2006-03-30 16:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: wrap text
+
+2006-03-30 16:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: fix wizard oon 2006
+
+2006-03-30 04:30  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-4mdk
+
+2006-03-30 04:13  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: fix updates support: make it use the new SOAP
+	  interface and implement updating the system
+
+2006-03-30 04:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (add_mirrors) create it out of the bundle path in
+	  order to factorize code with incomind updates support
+
+2006-03-30 04:08  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (install_pkgs) add a no_X option so that we can force
+	  urpmi instead of urpmi when given the --noX option
+
+2006-03-30 04:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: the applet mode will need an interactive object too
+
+2006-03-30 04:05  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: the auto mode needs access some icons thus tell him
+	  where to find them
+
+2006-03-30 00:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: perl_checker cleanups
+
+2006-03-30 00:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (my_sprintf_fixutf8) help perl_checker parse this file
+
+2006-03-30 00:14  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (installUpdates) use the new API to check for updates
+
+2006-03-30 00:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: display the pid of the already running applet
+
+2006-03-30 00:05  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (is_running) return the actual pid of the found
+	  program
+
+2006-03-29 23:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (upgrade2v3) give it a hope to work
+
+2006-03-29 19:30  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: display the "preparing" popup earlier so that the user
+	  had some feedback once he has clicked on the bundle on the web
+	  page
+
+2006-03-29 16:56  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (logIt) log everything into explanations
+
+2006-03-29 16:56  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: enable explanations
+
+2006-03-28 20:42  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: actually display the error if account creation failed
+
+2006-03-28 20:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: fix creating account (wizard was broken since
+	  15/9/2005)
+
+2006-03-28 20:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (check_server_response) log all server answers
+
+2006-03-28 20:14  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: remove unused $gr variable whose sole purpose was to
+	  crash the wizard when steping back on account creation step
+
+2006-03-28 20:12  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: switch to proper step history management & error
+	  managment (aka bump popups/error dialogs rather than garbaging
+	  steps stack)
+
+2006-03-28 20:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (soap_upload_config) better logs
+
+2006-03-28 20:08  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (check_server_response) rely on {code} rather than
+	  on deprecated {status}
+
+2006-03-28 19:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: center subdialogs on main window
+
+2006-03-28 19:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (soap_upload_config) log more stuff
+
+2006-03-28 18:58  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm, mdkupdate: s/log::l/log::explanations/
+
+2006-03-28 18:57  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline: default to cooker's wizard method if given --testing
+
+2006-03-25 00:23  Pjetur G. Hjaltason <pjetur at pjetur.net>
+
+	* po/is.po: 2 New lines
+
+2006-03-22 12:01  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/cy.po: updated po file
+
+2006-03-21 12:33  Willy Sudiarto Raharjo <willysr at gmail.com>
+
+	* po/id.po: Updated
+
+2006-03-20 11:14  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/el.po: updated po file
+
+2006-03-18 04:46  Shiva Huang <blueshiva at giga.net.tw>
+
+	* po/zh_TW.po: updated po file
+
+2006-03-17 19:46  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: common::sprintf_fixutf8 is not needed with recent perl
+	  (#21589)
+
+2006-03-17 17:44  Wanderlei Antonio Cavassin <cavassin at mandriva.com>
+
+	* po/pt_BR.po: Fixes pt_BR.
+
+2006-03-17 17:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/ja.po: update (Yukiko Bando)
+
+2006-03-17 10:43  Marek Laane <bald at starman.ee>
+
+	* po/et.po:
+	  Updated Estonian translation.
+
+2006-03-16 13:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: complete translation
+
+2006-03-16 13:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: require at least 4.7.15-1.2.20060mdk (for bug
+	  fixes)
+
+2006-03-16 13:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-3mdk (2mdk was an updated/fixed 1mdk for
+	  Mandriva One)
+
+2006-03-16 11:22  Pablo Saratxaga <pablo at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: updated pot file
+
+2006-03-15 19:48  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: log no bundle received
+
+2006-03-15 19:45  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: typo fix in logs
+
+2006-03-15 19:44  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: log bad bundles
+
 2006-03-15 19:42  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkupdate: one more log message; fix log::l() calls
