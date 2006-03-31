@@ -20,6 +20,10 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
 ################################################################################
 
+# workaround standalone.pm eating "--auto" from @ARGV:
+my @REAL_ARGV;
+BEGIN { @REAL_ARGV = @ARGV };
+
 use strict;
 use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
@@ -89,6 +93,7 @@ my %options = (
 	       'h|help'    => \&usage,
 	      );
 
+@ARGV = @REAL_ARGV;
 GetOptions(%options);
 
 # workaround an issue with browsers that sometimes drop the --bundle option:
