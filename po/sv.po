@@ -1,26 +1,26 @@
 # mdkonline-sv - Swedish Translation
 #
-# Copyright (C) 2001,2002,2003, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
 # Mattias Newzella <newzella@linux.nu>, 2001, 2002,2003.
 # Cecilia Johnsson <datb@swipnet.se>, 2002.
 # Henrik Borg <datb@swipnet.se>, 2002.
 # Mattias Dahlberg <voz@home.se>, 2002.
 # Kenneth Krekula <kenneth.krekula@kiruna.se>, 2004, 2005.
 # Lars Westergren <lars.westergren@home.se>, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2005.
-#
+# Thomas Backlund <tmb@mandriva.org>, 2005, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-sv - Mandriva 2006 Release\n"
+"Project-Id-Version: mdkonline-sv - Mandriva 2007 Release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-03-30 16:58+0200\n"
-"PO-Revision-Date: 2005-09-17 00:15+0300\n"
+"PO-Revision-Date: 2006-04-01 19:20+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.1\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -47,9 +47,9 @@ msgid "New updates are available for your system"
 msgstr "Nya uppdateringar finns tillgängliga för ditt system"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Nya uppdateringar finns tillgängliga för ditt system"
+msgstr "Nya samlingar finns tillgängliga för ditt system"
 
 #: ../mdkapplet:95
 #, c-format
@@ -69,8 +69,7 @@ msgstr "Tjänsten är ej aktiverad. Klicka på \"Online webbsajt\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Denna version stöds inte (för gammal version, eller utvecklingsversion)"
+msgstr "Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -367,14 +366,14 @@ msgid "Password:"
 msgstr "Lösenord:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Datornamn:"
+msgstr "Datorbeskrivning:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Ex: Min Hemkontor-dator)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -484,7 +483,7 @@ msgstr "Inte en giltig e-postadress.\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Skapande av konto misslyckades!"
 
 #: ../mdkonline:189
 #, c-format
@@ -561,7 +560,7 @@ msgstr "Säkerhetsfel"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Generellt fel (maskinen är redan registrerad)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -727,19 +726,19 @@ msgstr "  --noX\t\t\t- textversion av Mandriva Update.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- logga vad som görs\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundles file.bundle\t- verifiera och installera paket från .bundle metainfo fil\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Kan inte hämta lista på uppdateringar: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -752,7 +751,7 @@ msgstr "Varning"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Du måste först installera systemet på din hårddisk med Live Installations Guiden."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -767,6 +766,9 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Versionen på Mandriva Online klienten är för gammal.\n"
+"\n"
+"Du måste uppdatera till en nyare version. Du kan hämta en ny från http://start.mandriva.com"
 
 #: ../mdkupdate:196
 #, c-format
@@ -776,7 +778,7 @@ msgstr "Ett fel inträffade"
 #: ../mdkupdate:215
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Debba samling är inte korrekt formaterad. Avbryter."
 
 #: ../mdkupdate:227
 #, c-format
@@ -854,3 +856,4 @@ msgstr "Kunde ej uppdatera paket från update_source källan.\n"
 
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "Problem med att kontakta servern \n"
+
