@@ -194,7 +194,7 @@ sub fork_exec {
 sub refresh_gui {
     my ($sens) = @_;
     !$conf_launched and silentCheck(); $conf_launched = 0;
-    my $w = $::main_window->window;
+    my $w = $::main_window->window if $::main_window;
     $insensitive_while_running_a_child = !$sens;
     $sens ? gtkset_mousecursor_normal($w) : gtkset_mousecursor_wait($w);
     $MW_vbox and $MW_vbox->set_sensitive($sens);
