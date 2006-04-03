@@ -1,3 +1,18 @@
+2006-04-03 17:48  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-6mdk
+
+2006-04-03 17:43  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: make legacy updates work (and inline
+	  auto_install_rpms() btw)
+
+2006-04-03 17:42  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (update_pkgs) with new scheme, we got a list of .rpm
+	  names. process this list as needed for urpmi (aka keep only
+	  package names)
+
 2006-04-03 16:05  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkapplet: (refresh_gui) prevent crashing
