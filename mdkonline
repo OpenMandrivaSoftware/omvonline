@@ -84,10 +84,8 @@ sub get_conf() {
 
 sub send_conf_via_soap {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
-    my $w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
+    my $_w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
-    undef $w if $w;
-    $reg_host;
 }
 
 my $wiz = 
