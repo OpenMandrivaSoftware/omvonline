@@ -258,7 +258,7 @@ sub refresh_contents {
     my $last = lastCheck();
     my $contents = [ [ N("Network Connection: "), $color->{second} ], [ isNetwork() ? N("Up") . "\n" : N("Down") . "\n", isNetwork() ? $color->{third} : $color->{first} ],
 		     [ N("Last check: "), $color->{second} ], [ "$last\n", $fixed_tag ],
-		     [ N("Machine name:"), $color->{second} ], [ $h{MACHINE} . "\n", $fixed_tag ],
+		     [ N("Machine name:"), $color->{second} ], [ $h{HOST_NAME} . "\n", $fixed_tag ],
 		     [ N("Updates: "), $color->{second} ], [ my_sprintf_fixutf8($state{$status}{tt}[0]), $status eq 'okay' ? $color->{third} : $color->{first} ],
 		   ];
     $contents;
@@ -283,7 +283,7 @@ sub silentCheck() {
     my %h = getVarsFromSh($conffile); 
     my ($u, $ct);
     logIt(N("Computing new updates...\n"));
-    $link .= '&log=' . $h{LOGIN} . '&host=' . $h{MACHINE};
+    $link .= '&log=' . $h{LOGIN} . '&host=' . $h{HOST_NAME};
     logIt(N("Connecting to") . " $link ...\n");
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
