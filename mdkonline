@@ -23,6 +23,7 @@
 
 use strict;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
+BEGIN { $::no_global_argv_parsing = 1 };
 use standalone; # for explanations
 
 use interactive;
