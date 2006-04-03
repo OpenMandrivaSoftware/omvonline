@@ -49,7 +49,27 @@ my @info;
 
 $ia = 1;
 
-GetOptions('interactive!' => \$ia, 'login=s' => \$login, 'pass=s' => \$password, 'box=s' => \$boxname, 'country:s' => \$country);
+
+sub usage() {
+    print STDERR N("mdonline version %s
+Copyright (C) %s Mandriva.
+This is free software and may be redistributed under the terms of the GNU GPL.
+
+usage:
+", 1, 2006) . N("  --help		- print this help message.
+") . N("  --box=			- hostname.
+") . N("  --country			- name of country of the user. 
+") . N("  --interactive		- use the interactive mode.
+") . N("  --nointeractive	- use the non-interactive mode.
+") . N("  --login=		     - login name of the user.
+") . N("  --pass=			- password  of the user.
+");
+    exit(0);
+}
+
+GetOptions('interactive!' => \$ia, 'login=s' => \$login, 'pass=s' => \$password, 'box=s' => \$boxname, 'country:s' => \$country,
+           'help'  => \&usage,
+       );
 
 my $in = interactive->vnew('su') if $ia;
 
