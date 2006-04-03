@@ -165,7 +165,24 @@ if (!$bundle) {
     my %bundle_vars = getVarsFromSh($bundle);
     rm_rf($bundle);
     
-    $wc->{USER_EMAIL} && $wc->{HOST_ID} && $wc->{HOST_KEY}  or system("/usr/sbin/mdkonline");
+    my %mapping = (
+        USER => 'USER_EMAIL',
+        #SESSION_ID => 'HOST_KEY',
+    );
+    while (my ($bundle_varname, $onlinesrv_varname) = each %mapping) {
+        $wc->{$onlinesrv_varname} = $bundle_vars{$bundle_varname};
+    }
+    if (!($wc->{HOST_ID} && $wc->{HOST_KEY})) {
+        use lang;
+        my $reg_host = mdkonline::soap_register_host($bundle_vars{USER}, $bundle_vars{PASS}, cat_('/proc/sys/kernel/hostname'), ' ', lang::read()->{country});
+        my $res = mdkonline::check_server_response($reg_host);
+        if ($res ne 'OK') {
+            $in->ask_warn(N("Error"), N("Failed to authenticate to the bundle server:\n\n%s", $reg_host->{message}));
+            exit(3);
+        }
+        mdkonline::write_wide_conf($reg_host);
+    }
+
     $wc = mdkonline::read_conf();
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
