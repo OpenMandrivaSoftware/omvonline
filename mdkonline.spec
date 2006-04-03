@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -121,6 +121,13 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Mon Apr  3 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-6mdk
+- mdkonline: add a usage message
+- mdkupdate: make legacy updates work
+- applet:
+  o set busy cursor while running mdkupdate
+  o wrap status message
+
 * Thu Mar 30 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-5mdk
 - show the "Mandriva Online" entry earlier in the "server/" root menu
   branch)
