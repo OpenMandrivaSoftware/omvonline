@@ -21,8 +21,7 @@
 ################################################################################
 
 # workaround standalone.pm eating "--auto" from @ARGV:
-my @REAL_ARGV;
-BEGIN { @REAL_ARGV = @ARGV };
+BEGIN { $::no_global_argv_parsing = 1 };
 
 use strict;
 use POSIX;
@@ -93,7 +92,6 @@ my %options = (
 	       'h|help'    => \&usage,
 	      );
 
-@ARGV = @REAL_ARGV;
 GetOptions(%options);
 
 # workaround an issue with browsers that sometimes drop the --bundle option:
