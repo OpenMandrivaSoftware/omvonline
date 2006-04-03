@@ -129,10 +129,11 @@ if (!$bundle) {
 		my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
 		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=$mirror"; 
 	    } elsif ($auto) { # FIXME
-		auto_install_rpms();
+             my $ret = update_pkgs(@$pkgs);
+             $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 	    } else {
-		my $pkgs = ask_pkgs($in);
-		install_pkgs($in, $pkgs, $mirror, { no_X => $noX });
+		$pkgs = ask_pkgs($in) if !$auto;
+		install_pkgs($in, $pkgs, $mirror, { no_X => $noX || $auto });
 		$in->exit(0);
 	    }
 	    rpm_qa($afterrpm);
@@ -291,14 +292,6 @@ sub my_fullname {
     return '?-?-?' unless ref $_[0];
     my ($name, $version, $release) = $_[0]->fullname;
     "$name-$version-$release";
-}
-
-sub auto_install_rpms {
-    my ($pkgs) = shift;
-    my @pkg;
-    push(@pkg, $_ . '.rpm') foreach @$pkgs;
-    my $ret = update_pkgs(@pkg);
-    $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 }
 
 sub add_media {
