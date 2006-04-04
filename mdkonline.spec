@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -121,6 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Tue Apr  4 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-8mdk
+- mkdupdate: fix auto registering host when installing a bundle
+
 * Mon Apr  3 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-7mdk
 - applet: fix displaying hostname
 - mdkupdate: autoregister the host instead of running the mdkonline
