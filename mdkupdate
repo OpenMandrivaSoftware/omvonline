@@ -180,6 +180,8 @@ if (!$bundle) {
             $in->ask_warn(N("Error"), N("Failed to authenticate to the bundle server:\n\n%s", $reg_host->{message}));
             exit(3);
         }
+        # we've no previous config so add missing fields to server's answer:
+        $reg_host->{data}{user_email} ||= $bundle_vars{USER};
         mdkonline::write_wide_conf($reg_host);
     }
 
