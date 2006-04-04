@@ -1,3 +1,21 @@
+2006-04-04 15:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-8mdk
+
+2006-04-04 15:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: better way to fix autoregistering the host: write a
+	  config file so that write_wide_conf() do not miss some fields
+
+2006-04-04 15:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: we've no previous config so add missing fields to
+	  server's answer
+
+2006-04-04 14:51  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: remove traillinge EOL from hostname
+
 2006-04-03 19:30  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.spec: 2.0-7mdk
