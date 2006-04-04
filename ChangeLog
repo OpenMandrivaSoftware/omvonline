@@ -1,3 +1,21 @@
+2006-04-04 18:02  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-9mdk
+
+2006-04-04 18:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.pm: (check_server_response) fix crash when applet is
+	  run as root
+
+2006-04-04 17:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (refresh_gui) perl_checker cleanup
+
+2006-04-04 16:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: blacklist Gtk2::Pango (too much noise in
+	  perl_checker output which is wrongly reported against mdkapplet)
+
 2006-04-04 15:17  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.spec: 2.0-8mdk
