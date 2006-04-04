@@ -174,14 +174,18 @@ if (!$bundle) {
     }
     if (!($wc->{HOST_ID} && $wc->{HOST_KEY})) {
         use lang;
-        my $reg_host = mdkonline::soap_register_host($bundle_vars{USER}, $bundle_vars{PASS}, chomp_(cat_('/proc/sys/kernel/hostname')), ' ', lang::read()->{country});
+        my $hostname = chomp_(cat_('/proc/sys/kernel/hostname'));
+        my $reg_host = mdkonline::soap_register_host($bundle_vars{USER}, $bundle_vars{PASS}, $hostname, ' ', lang::read()->{country});
         my $res = mdkonline::check_server_response($reg_host);
         if ($res ne 'OK') {
             $in->ask_warn(N("Error"), N("Failed to authenticate to the bundle server:\n\n%s", $reg_host->{message}));
             exit(3);
         }
-        # we've no previous config so add missing fields to server's answer:
-        $reg_host->{data}{user_email} ||= $bundle_vars{USER};
+        # we've no previous config so write one so that write_wide_conf() do not miss some fields:
+        setVarsInSh('/etc/sysconfig/mdkonline', {
+            USER_EMAIL => $bundle_vars{USER},
+            HOST_NAME => $hostname,
+        });
         mdkonline::write_wide_conf($reg_host);
     }
 
