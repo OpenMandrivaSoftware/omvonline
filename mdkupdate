@@ -93,7 +93,6 @@ my %options = (
 	      );
 
 GetOptions(%options);
-
 # workaround an issue with browsers that sometimes drop the --bundle option:
 $bundle = shift @ARGV if $ARGV[0] =~ /\.bundle$/;
 
@@ -211,7 +210,7 @@ You need to update to a newer version. You can get a new one from http://start.m
      my %mirrors = add_mirrors($in, $w, $mirrors, \%bundle_vars);
 	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors),
                   { is_bundle => 1,
-                    auto_select => ($wc->{POST} =~ /AUTO_SELECT/ ? 1 : 0),
+                    auto_select => ($bundle_vars{POST} =~ /AUTO_SELECT/ ? 1 : 0),
                     medias => [ keys %mirrors ],
                 });
     } else {

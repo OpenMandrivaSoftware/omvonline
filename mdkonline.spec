@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 9
+%define release %mkrel 10
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -121,6 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Wed Apr 05 2006 Warly <warly@mandrakesoft.com> 2.0-10mdk
+- Correctly keep the POST line from the bundle file (for auto-select preset)
+
 * Tue Apr  4 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-9mdk
 - mdkapplet: fix crash when run as non root
 
@@ -170,6 +173,9 @@ rm -rf $RPM_BUILD_ROOT
 - log what is done
 - add MIME support for KDE3 (it does not support the XDG mime trees
   and still relies on its own mime placement) (helio)
+
+* Thu Mar 09 2006 Warly <warly@mandrakesoft.com> 2.0-2mdk
+- Change Soap format (Thierry Vignaud)
 
 * Thu Mar  2 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-1mdk
 - mimetype association between bundle and mdkupdate (fcrozat)
