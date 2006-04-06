@@ -165,7 +165,13 @@ $icon->show_all;
 $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
-$SIG{HUP} = \&restart_applet;
+
+# POSIX unmasks the sigprocmask properly
+my $sigset = POSIX::SigSet->new;
+my $action = POSIX::SigAction->new('restart_applet',
+                                   $sigset,
+                                   &POSIX::SA_NODEFER);
+POSIX::sigaction(&POSIX::SIGHUP, $action);
 
 Glib::Timeout->add(200, sub { harvester('CHLD', 1); 1 });
 
