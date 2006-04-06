@@ -184,11 +184,10 @@ sub harvester {
     return if $clean;
 }
 sub fork_exec {
-    my ($prog, $o_pid_table) = @_;
+    my ($prog) = @_;
     my $pid = fork();
     if (defined $pid) {
         !$pid and do { exec($prog) or POSIX::_exit() };
-        push @$o_pid_table, $pid if $o_pid_table;
         return $pid;
     } else {
         refresh_gui(1);                                                                        
