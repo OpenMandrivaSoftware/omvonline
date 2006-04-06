@@ -80,6 +80,7 @@ EOF
 if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
 fi
+killall -HUP mdkapplet || :
 
 %postun
 %{clean_menus}
