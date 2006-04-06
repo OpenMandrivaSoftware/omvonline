@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
 "POT-Creation-Date: 2006-04-06 20:18+0200\n"
-"PO-Revision-Date: 2006-03-30 17:11+0200\n"
+"PO-Revision-Date: 2006-04-06 20:26+0200\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -315,7 +315,7 @@ msgid "Quit"
 msgstr "Quitter"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -324,10 +324,9 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate version %s\n"
+"mdkonline version %s\n"
 "Copyright © %s Mandriva.\n"
-"Ceci est un logiciel libre qui peut être redistribué selon les termes de la "
-"Licence Publique Générale GNU.\n"
+"Ceci est un logiciel libre qui peut être redistribué selon les termes de la Licence Publique Générale GNU.\n"
 "\n"
 "utilisation :\n"
 
@@ -339,32 +338,32 @@ msgstr "  --help\t\t- affiche ce message d'aide.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- nom d'hôte.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- nom du pays de l'utilisateur.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- mode interactif.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- mode non interactif.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - login de l'utilisateur.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- mot de passe de l'utilisateur.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -835,6 +834,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Impossible de s'authentifier auprès du serveur de bundles :\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
