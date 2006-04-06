@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2006-04-02 22:59+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -28,8 +28,8 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Vandræði með þjónustustillingar, Vinsamlega athugið annála og sendið póst til "
-"support@mandrivaonline.com"
+"Vandræði með þjónustustillingar, Vinsamlega athugið annála og sendið póst "
+"til support@mandrivaonline.com"
 
 #: ../mdkapplet:83
 #, c-format
@@ -285,7 +285,12 @@ msgstr "Hreinsa"
 msgid "About..."
 msgstr "Um..."
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr "Ræsa alltaf þegar kveikt á vél"
@@ -295,17 +300,68 @@ msgstr "Ræsa alltaf þegar kveikt á vél"
 msgid "Quit"
 msgstr "Hætta"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"mdkupdate útgáfa %s\n"
+"Höfundaréttur © %s Mandriva.\n"
+"þetta er frjáls hugbúnaður og má dreifa samkvæmt skilmálum GNU GPL.\n"
+"\n"
+"notkun:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- prenta þessa hjálp.\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr "Ég er nú þegar áskrifandi"
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr "Ég vil gerast áskrifandi"
@@ -383,8 +439,8 @@ msgstr "Villa"
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr ""
-"Vélarnafn verður að vera 1 til 40 stafir og má aðeins innihalda "
-"bókstafi og tölur"
+"Vélarnafn verður að vera 1 til 40 stafir og má aðeins innihalda bókstafi og "
+"tölur"
 
 #: ../mdkonline:125
 #, c-format
@@ -489,7 +545,8 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Það tókst að búa til Mandriva Online auðkenni.\n"
-"Vinsamlega smelltu á \"Næst\" til að auðkenna þig og senda inn stillingar þinar\n"
+"Vinsamlega smelltu á \"Næst\" til að auðkenna þig og senda inn stillingar "
+"þinar\n"
 
 #: ../mdkonline:179
 #, c-format
@@ -695,12 +752,7 @@ msgstr ""
 "\n"
 "notkun:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- prenta þessa hjálp.\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Uppfærslur keyrt sjálvirkt.\n"
@@ -730,7 +782,8 @@ msgstr "  --debug\t\t\t- skrá niður allt sem gert er\n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
+msgstr ""
+"  --bundle file.bundle\t- vinna úr og setja inn pakka úr uppfærslusafni.\n"
 
 #: ../mdkupdate:149
 #, c-format
@@ -757,7 +810,15 @@ msgstr ""
 msgid "Preparing..."
 msgstr "Undirbý..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -767,8 +828,8 @@ msgid ""
 msgstr ""
 "Útgáfan af Mandriva Online biðlaranum er of gömul.\n"
 "\n"
-"Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á "
-"http://start.mandriva.com"
+"Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á http://"
+"start.mandriva.com"
 
 #: ../mdkupdate:196
 #, c-format
@@ -794,4 +855,3 @@ msgstr "Set inn pakka...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
-

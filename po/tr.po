@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2004-12-08 14:53+0200\n"
 "Last-Translator: Ömer Fadıl USTA <omer_fad@hotmail.com>\n"
 "Language-Team: Turkish <ceviri@bilisimlab.com>\n"
@@ -282,7 +282,12 @@ msgstr "Temizle"
 msgid "About..."
 msgstr "Hakkında..."
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
@@ -292,17 +297,69 @@ msgstr ""
 msgid "Quit"
 msgstr "Çıkış"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"mdkupdate sürüm %s\n"
+"Copyright (C) %s Mandriva.\n"
+"Bu bir serbest yazılımdır ve GNU GPL lisansı altında tekrar "
+"dağıtılabilinir.\n"
+"\n"
+"kullanımı:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- bu yardım mesajını görüntüler.\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr ""
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr ""
@@ -679,12 +736,7 @@ msgstr ""
 "\n"
 "kullanımı:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- bu yardım mesajını görüntüler.\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, fuzzy, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr " --update\t\t- Mandriva Update'yi çalıştır.\n"
@@ -739,7 +791,15 @@ msgstr ""
 msgid "Preparing..."
 msgstr "Hazırlanıyor..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"

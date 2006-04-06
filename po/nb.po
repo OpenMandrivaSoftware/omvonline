@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2005-09-21 23:01+0200\n"
 "Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
@@ -294,7 +294,12 @@ msgstr "Nullstill"
 msgid "About..."
 msgstr "Om..."
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr "Kjør alltid under oppstart"
@@ -304,17 +309,69 @@ msgstr "Kjør alltid under oppstart"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"mdkupdate versjon %s\n"
+"Copyright (C) %s Mandriva.\n"
+"Dette er fri programvare og kan videredistribueres under bestemmelsene til "
+"GNU GPL.\n"
+"\n"
+"bruk:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- skriv denne hjelpebeskjeden.\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr "Jeg har allerede en konto"
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr "Jeg vil abonnere"
@@ -704,12 +761,7 @@ msgstr ""
 "\n"
 "bruk:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- skriv denne hjelpebeskjeden.\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update kjørt automatisk.\n"
@@ -764,7 +816,15 @@ msgstr ""
 msgid "Preparing..."
 msgstr "Forbereder..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"

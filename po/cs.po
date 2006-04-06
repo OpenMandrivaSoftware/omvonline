@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2005-09-19 00:39+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -288,7 +288,12 @@ msgstr "Vyčistit"
 msgid "About..."
 msgstr "O aplikaci..."
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spustit při startu"
@@ -298,17 +303,69 @@ msgstr "Vždy spustit při startu"
 msgid "Quit"
 msgstr "Konec"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"MDKUpdate verze %s\n"
+"Copyright ©%s Mandriva.\n"
+"Toto je volně šiřitelný software a může být šířen v souladu s licencí GNU "
+"GPL.\n"
+"\n"
+"Použití:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- vytiskne tuto nápovědu.\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr "Už mám účet"
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr "Chci se zaregistrovat"
@@ -697,12 +754,7 @@ msgstr ""
 "\n"
 "Použití:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- vytiskne tuto nápovědu.\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- automatické spuštění Mandriva Update.\n"
@@ -757,7 +809,15 @@ msgstr ""
 msgid "Preparing..."
 msgstr "Připravuji..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"

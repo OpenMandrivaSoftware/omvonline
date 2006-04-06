@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2005-08-21 14:31+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma)\n"
 "Language-Team: Hindi, India\n"
@@ -286,7 +286,12 @@ msgstr "साफ़ करना "
 msgid "About..."
 msgstr "के बारे में ।"
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr "शुरूवात में सदैव आरम्भ करें"
@@ -296,17 +301,69 @@ msgstr "शुरूवात में सदैव आरम्भ करे�
 msgid "Quit"
 msgstr "निकास"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"एमडीकेअपडेट संस्मरण  %s\n"
+"। सर्वाधिकार (C) %s मैनडैकसाफ़्ट ।\n"
+"यह एक मुक्त साफ़्टवेयर है और इसे जी०एन०यू० जी०पी०एल० की शर्तों के अन्तर्गत बाँटा जा सकता "
+"है।\n"
+"\n"
+"प्रयोग:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- यह सहायता संदेश छापें ।\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "मैनड्रिवऑनलाइन"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr "मेरे पास पहिले से एक खाता है"
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr "मै एक खाता खोलना चाहता हूँ"
@@ -685,12 +742,7 @@ msgstr ""
 "\n"
 "प्रयोग:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- यह सहायता संदेश छापें ।\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- एमडीकेअपडेट का स्वचालित रूप से शुरू होना ।\n"
@@ -745,7 +797,15 @@ msgstr ""
 msgid "Preparing..."
 msgstr "तैयारी की जा रही है..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"

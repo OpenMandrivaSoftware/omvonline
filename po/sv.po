@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv - Mandriva 2007 Release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-30 16:58+0200\n"
+"POT-Creation-Date: 2006-04-06 20:18+0200\n"
 "PO-Revision-Date: 2006-04-01 19:20+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -69,7 +69,8 @@ msgstr "Tjänsten är ej aktiverad. Klicka på \"Online webbsajt\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Denna version stöds inte (för gammal version, eller utvecklingsversion)"
+msgstr ""
+"Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -288,7 +289,12 @@ msgstr "Töm"
 msgid "About..."
 msgstr "Om.."
 
-#: ../mdkapplet:449
+#: ../mdkapplet:478
+#, c-format
+msgid "Copyright (C) 2001-2006 by Mandriva"
+msgstr ""
+
+#: ../mdkapplet:482
 #, c-format
 msgid "Always launch on startup"
 msgstr "Kör alltid vid uppstart"
@@ -298,17 +304,68 @@ msgstr "Kör alltid vid uppstart"
 msgid "Quit"
 msgstr "Avsluta"
 
-#: ../mdkonline:60 ../mdkonline:95
+#: ../mdkonline:55
+#, fuzzy, c-format
+msgid ""
+"mdonline version %s\n"
+"Copyright (C) %s Mandriva.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
+"\n"
+"usage:\n"
+msgstr ""
+"Mandriva Update version %s\n"
+"Copyright © %s Mandriva.\n"
+"Det här är fri programvara och får distribueras enligt villkoren i GNU GPL.\n"
+"\n"
+"användning:\n"
+
+#: ../mdkonline:60 ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- visa det här hjälpmeddelandet.\n"
+
+#: ../mdkonline:61
+#, c-format
+msgid "  --box=\t\t\t- hostname.\n"
+msgstr ""
+
+#: ../mdkonline:62
+#, c-format
+msgid "  --country\t\t\t- name of country of the user. \n"
+msgstr ""
+
+#: ../mdkonline:63
+#, c-format
+msgid "  --interactive\t\t- use the interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:64
+#, c-format
+msgid "  --nointeractive\t- use the non-interactive mode.\n"
+msgstr ""
+
+#: ../mdkonline:65
+#, c-format
+msgid "  --login=\t\t     - login name of the user.\n"
+msgstr ""
+
+#: ../mdkonline:66
+#, c-format
+msgid "  --pass=\t\t\t- password  of the user.\n"
+msgstr ""
+
+#: ../mdkonline:81 ../mdkonline:114
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:63
+#: ../mdkonline:84
 #, c-format
 msgid "I already have an account"
 msgstr "Jag har redan ett konto"
 
-#: ../mdkonline:64
+#: ../mdkonline:85
 #, c-format
 msgid "I want to subscribe"
 msgstr "Jag vill prenumerera"
@@ -698,12 +755,7 @@ msgstr ""
 "\n"
 "användning:\n"
 
-#: ../mdkupdate:69
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- visa det här hjälpmeddelandet.\n"
-
-#: ../mdkupdate:70
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update startas automatiskt.\n"
@@ -733,7 +785,9 @@ msgstr "  --debug\t\t\t- logga vad som görs\n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundles file.bundle\t- verifiera och installera paket från .bundle metainfo fil\n"
+msgstr ""
+"  --bundles file.bundle\t- verifiera och installera paket från .bundle "
+"metainfo fil\n"
 
 #: ../mdkupdate:149
 #, c-format
@@ -751,14 +805,24 @@ msgstr "Varning"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr "Du måste först installera systemet på din hårddisk med Live Installations Guiden."
+msgstr ""
+"Du måste först installera systemet på din hårddisk med Live Installations "
+"Guiden."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
 msgid "Preparing..."
 msgstr "Förbereder..."
 
-#: ../mdkupdate:174
+#: ../mdkupdate:180
+#, c-format
+msgid ""
+"Failed to authenticate to the bundle server:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -768,7 +832,8 @@ msgid ""
 msgstr ""
 "Versionen på Mandriva Online klienten är för gammal.\n"
 "\n"
-"Du måste uppdatera till en nyare version. Du kan hämta en ny från http://start.mandriva.com"
+"Du måste uppdatera till en nyare version. Du kan hämta en ny från http://"
+"start.mandriva.com"
 
 #: ../mdkupdate:196
 #, c-format
@@ -856,4 +921,3 @@ msgstr "Kunde ej uppdatera paket från update_source källan.\n"
 
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "Problem med att kontakta servern \n"
-
