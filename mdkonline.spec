@@ -40,6 +40,7 @@ The package include :
 %setup -q
 
 %build
+perl -pi -e 's!my \$ver = 1;!my \$ver = '"'%version-%release'"';!' mdkapplet
 
 %install
 rm -rf $RPM_BUILD_ROOT
