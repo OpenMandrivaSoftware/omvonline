@@ -38,8 +38,10 @@ use mdkonline;
 use Gtk2::TrayIcon;
 use Gtk2::NotificationBubble;
 
-my $pid = mdkonline::is_running('mdkapplet');
-$pid and die "mdkapplet already running ($pid)\n";
+if (!find { $_ eq '--auto-update' } @ARGV) {
+    my $pid = mdkonline::is_running('mdkapplet');
+    $pid and die "mdkapplet already running ($pid)\n";
+}
 
 my $in = interactive->vnew('');
 
@@ -268,7 +270,7 @@ sub configNetwork() { logIt(N("Launching drakconnect\n")); refresh_gui(0); fork_
 
 sub restart_applet {
     logIt(N("Mandriva Online seems to be reinstalled, reloading applet ...."));
-    exec($0);
+    exec($0, '--auto-update');
 }
 
 sub installUpdates() {
