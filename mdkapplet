@@ -264,6 +264,12 @@ sub refresh_contents {
     $contents;
 }
 sub configNetwork() { logIt(N("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
+
+sub restart_applet {
+    logIt(N("Mandriva Online seems to be reinstalled, reloading applet ...."));
+    exec($0);
+}
+
 sub installUpdates() {
     my $binfile = $0;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
@@ -271,7 +277,7 @@ sub installUpdates() {
     refresh_gui(0);
     fork_exec("/usr/sbin/mdkupdate --applet");
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
-    if ($newmd5 ne $oldmd5) { logIt(N("Mandriva Online seems to be reinstalled, reloading applet ....")); exec($binfile) }
+    restart_applet if $newmd5 ne $oldmd5;
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush();
     #undef $w;
