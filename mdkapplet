@@ -163,6 +163,7 @@ $icon->show_all;
 $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
+$SIG{HUP} = \&restart_applet;
 
 Glib::Timeout->add(200, sub { harvester('CHLD', 1); 1 });
 
