@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-03-21 18:34+0700\n"
+"PO-Revision-Date: 2006-04-07 07:40+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -291,9 +291,9 @@ msgid "About..."
 msgstr "Keterangan..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
@@ -303,7 +303,7 @@ msgstr "Hak cipta (C) %s oleh Mandriva"
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online memberikan akses ke layanan web Mandriva."
 
 #: ../mdkapplet:506
 #, c-format
@@ -316,7 +316,7 @@ msgid "Quit"
 msgstr "Keluar"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -325,7 +325,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate versi %s\n"
+"mdkonline versi %s\n"
 "Hak cipta (C) %s Mandriva.\n"
 "Ini adalah software bebas dan boleh didistribusikan ulang di bawah syarat "
 "GPL GNU.\n"
@@ -340,32 +340,32 @@ msgstr "  --help\t\t- cetak pesan bantuan ini.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- namahost.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- nama negara pengguna. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- gunakan mode interaktif.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- gundakan mode non-interaktif.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - nama login pengguna.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- katasandi pengguna.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -547,7 +547,7 @@ msgstr "Alamat mail tak valid!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Pembuatan account gagal!"
 
 #: ../mdkonline:189
 #, c-format
@@ -799,7 +799,7 @@ msgstr ""
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Tidak bisa mendapatkan daftar update: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -828,6 +828,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Gagal melakukan authentikasi pada server:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
