@@ -232,7 +232,7 @@ rm -rf $RPM_BUILD_ROOT
 - launch MandrivaUpdate instead of MandrakeUpdate for distro 
   newer than LE2005 (name change policy) #19211
 
-* Tue Oct  4 2005 Daouda LO <daouda@mandrakesoft.com> 1.3-2mdk
+* Wed Oct 05 2005 Daouda LO <daouda@mandriva.com> 1.3-2mdk
 - Major update for new SOAP based architecture (only account creation and 
   authentication 
 - po updates
