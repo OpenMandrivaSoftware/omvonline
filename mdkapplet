@@ -157,7 +157,7 @@ $eventbox->signal_connect(button_press_event => sub {
 				  if ($_[1]->button == 1) {
 				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
 				  }
-			      } elsif ($_[1]->button == 0) {
+			      } elsif ($_[1]->button == 1) {
                          $applet_window->hide;
                          $applet_window->show;
                      }
