@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 10
+%define release %mkrel 11
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -133,6 +133,13 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Thu Apr  6 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-11mdk
+- applet:
+  o "about..." now popups an about dialog
+  o raise the window when it's already displayed and the user clicks
+    again on the systray icon (#21906)
+  o restart it on update
+
 * Wed Apr 05 2006 Warly <warly@mandrakesoft.com> 2.0-10mdk
 - Correctly keep the POST line from the bundle file (for auto-select preset)
 
