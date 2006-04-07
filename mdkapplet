@@ -58,6 +58,7 @@ ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "https://www.mandrivaonline.com/";
 my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
 my ($raisedwindow, $debug, $conf_launched) = (0, 0, 0);
+my $applet_window;
 
 
 my $conffile = '/etc/sysconfig/mdkonline';
@@ -156,7 +157,10 @@ $eventbox->signal_connect(button_press_event => sub {
 				  if ($_[1]->button == 1) {
 				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
 				  }
-			      }
+			      } else {
+                         $applet_window->hide;
+                         $applet_window->show;
+                     }
 			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 my ($opt) = @ARGV;
@@ -211,7 +215,7 @@ sub refresh_gui {
 }
 
 sub showMainWindow() {
-    my $w = Gtk2::Window->new('toplevel');
+    my $w = $applet_window = Gtk2::Window->new('toplevel');
     $::main_window = $w;
     $w->set_title(N("Mandriva Linux Updates Applet"));
     $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
