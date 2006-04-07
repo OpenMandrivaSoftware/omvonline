@@ -99,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING ChangeLog
 %{_sbindir}/mdkupdate
 %{_sbindir}/mdkonline
+%{_sbindir}/migrate-mdvonline-applet.pl
 %{_sbindir}/drakonline
 %{_bindir}/*
 %{_prefix}/X11R6/bin/*
