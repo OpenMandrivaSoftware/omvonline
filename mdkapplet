@@ -27,6 +27,7 @@ use lib qw(/usr/lib/libDrakX);
 use standalone; # for explanations
 use interactive;
 use common;
+use run_program;
 
 use Gtk2::Pango;
 
@@ -473,6 +474,11 @@ sub setState {
                                         my $w = gtkset_name(Gtk2::AboutDialog->new, N("Mandriva Online %s"), $ver);
                                         $w->set_version($ver);
                                         $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2006'));
+                                        $w->set_url_hook(sub {
+                                                             my (undef, $url) = @_;
+                                                             run_program::raw({ detach => 1 }, 'www-browser', $url);
+                                                         });
+
                                         my $url = $online_site;
                                         $url =~ s/^https:/http:/;
                                         $w->set_website($url);
