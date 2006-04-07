@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-03-31 08:08+0200\n"
+"PO-Revision-Date: 2006-04-07 11:18+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -286,9 +286,9 @@ msgid "About..."
 msgstr "Info..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
@@ -298,7 +298,7 @@ msgstr "Autoriõigus (C) %s: Mandriva"
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online võimaldab kasutada Mandriva veebiteenuseid."
 
 #: ../mdkapplet:506
 #, c-format
@@ -311,7 +311,7 @@ msgid "Quit"
 msgstr "Välju"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -320,12 +320,12 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate versioon %s\n"
+"mdonline versioon %s\n"
 "Autoriõigus (C) %s Mandriva.\n"
 "See on vabavara, mida võib levitada vastavalt GNU Üldise Avaliku Litsentsi "
 "tingimustele.\n"
 "\n"
-"kasutamine:\n"
+"Kasutamine:\n"
 
 #: ../mdkonline:60 ../mdkupdate:73
 #, c-format
@@ -335,32 +335,32 @@ msgstr "  --help\t\t- näitab seda abiteadet.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- masinanimi.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- kasutaja riigi nimi. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- interaktiivse režiimi kasutamine.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- mitteinteraktiivse režiimi kasutamine.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - kasutaja kasutajatunnus.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- kasutaja parool.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -825,6 +825,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Autentimine komplekti serveris ebaõnnestus:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
