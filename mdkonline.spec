@@ -83,7 +83,9 @@ if [ -r /etc/cron.daily/mdkupdate ]; then
 fi
 
 %triggerin -- mdkonline > 2.0-10mdk
-killall -HUP mdkapplet || :
+[[ $2 ]] || exit 0
+%{_sbindir}/migrate-mdvonline-applet.pl new
+:
 
 %postun
 %{clean_menus}
