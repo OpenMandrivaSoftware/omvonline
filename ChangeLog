@@ -1,3 +1,187 @@
+2006-04-07 19:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-11mdk
+
+2006-04-07 19:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: raise the window when it's already displayed and the
+	  user clicks again on the systray icon (#21906)
+
+2006-04-07 18:52  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: use the new migrating script in order to restart
+	  old style applets
+
+2006-04-07 18:51  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: use the new migrating script in order to restart
+	  new style applets instead of firing up SIGHUP (which may
+	  definitively kill applets if upgrading a 2.0-10mdk+ package (both
+	  old and new packages' triggers would run then)
+
+2006-04-07 18:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: package the new migrating script
+
+2006-04-07 18:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* migrate-mdvonline-applet.pl: adding a migrating script (that take
+	  care of not respawning too much applets due to multiple rpm
+	  triggers) that will migrate both old and new type applets: - for
+	  old applets, we just plainly kill them and restart them all - for
+	  new ones, we just send them the SIGHUP signal and they'll take
+	  care herselves of restarting
+
+2006-04-07 18:04  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline, mdkonline.pm, mdkupdate: - bump copyright years -
+	  remove daouda's dead email - list myself
+
+2006-04-07 17:25  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) set window icon
+
+2006-04-07 17:15  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: fork a browser on Mandriva Online website when
+	  clicking on the URL
+
+2006-04-07 17:05  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: install SIGHUP handler earlier so that the applet
+	  supports a very high restart frequency (only usefull for tests)
+
+2006-04-07 16:59  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_exec) actually pass extra arguments to forked
+	  process
+
+2006-04-07 16:38  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: only restart the applet if it supports it
+
+2006-04-07 10:24  Marek Laane <bald at starman.ee>
+
+	* po/et.po:
+	  Updated Estonian translation.
+
+2006-04-07 05:36  Willy Sudiarto Raharjo <willysr at gmail.com>
+
+	* po/id.po: Updated
+
+2006-04-06 21:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: br.po, fr.po: update
+
+2006-04-06 21:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: add 2 new strings
+
+2006-04-06 21:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: add 2 new strings
+
+2006-04-06 21:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: autoset the version of the applet from the
+	  package version & release
+
+2006-04-06 21:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) when "About..." is clicked, open a dialog
+	  rather than run a browser
+
+2006-04-06 20:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: factorize years
+
+2006-04-06 20:27  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2006-04-06 20:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: br.po, cy.po, da.po, et.po, fr.po, id.po, is.po, pt.po,
+	  pt_BR.po, zh_CN.po, zh_TW.po: import a translation from DrakX
+
+2006-04-06 20:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/: af.po, ar.po, az.po, bg.po, bn.po, br.po, bs.po, ca.po,
+	  cs.po, cy.po, da.po, de.po, el.po, eo.po, es.po, et.po, eu.po,
+	  fa.po, fi.po, fr.po, fur.po, ga.po, gl.po, he.po, hi.po, hr.po,
+	  hu.po, hy.po, id.po, is.po, it.po, ja.po, ka.po, ko.po, ku.po,
+	  ky.po, lt.po, ltg.po, lv.po, mdkonline.pot, mk.po, mn.po, ms.po,
+	  mt.po, nb.po, nl.po, nn.po, pa_IN.po, pl.po, pt.po, pt_BR.po,
+	  ro.po, ru.po, sc.po, sk.po, sl.po, sq.po, sr.po, sr@Latn.po,
+	  sv.po, ta.po, tg.po, th.po, tl.po, tr.po, uk.po, ur.po, uz.po,
+	  uz@Latn.po, vi.po, wa.po, zh_CN.po, zh_TW.po: sync with code
+
+2006-04-06 19:26  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: restart the applet on update
+
+2006-04-06 19:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: perl_checker cleanups
+
+2006-04-06 19:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: Not all platforms automatically reinstall their
+	  (native) signal handlers after a signal delivery (aka the handler
+	  works only the first time the signal is sent). Let's use "POSIX"
+	  signal handlers since their behaviour is well-defined.
+
+2006-04-06 18:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_exec) the second argument is never used; let's
+	  drop it and thus simplify this function
+
+2006-04-06 18:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: add --auto-update option and uses it in
+	  restart_applet() so that we don't fail to rerun ourselves in some
+	  obscure conditions
+
+2006-04-06 18:12  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: on SIGHUP, restart the applet
+
+2006-04-06 18:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (restart_applet) factorize some code
+
+2006-04-06 16:22  Rafael Garcia-Suarez <rgarciasuarez at mandriva.com>
+
+	* mdkapplet: Do NOT hardcode paths.
+
+2006-04-05 12:40  Warly <warly at mandriva.com>
+
+	* mdkonline.spec, mdkupdate: fix POST not kept
+
 2006-04-04 18:02  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkonline.spec: 2.0-9mdk
