@@ -82,6 +82,11 @@ if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
 fi
 
+%triggerun -- mdkonline < 2.0-11mdk
+[[ $2 ]] || exit 0
+%{_sbindir}/migrate-mdvonline-applet.pl old
+:
+
 %triggerin -- mdkonline > 2.0-10mdk
 [[ $2 ]] || exit 0
 %{_sbindir}/migrate-mdvonline-applet.pl new
