@@ -81,6 +81,8 @@ EOF
 if [ -r /etc/cron.daily/mdkupdate ]; then
   perl -p -i -e 's!/usr/bin/mdkupdate!/usr/sbin/mdkupdate!' /etc/cron.daily/mdkupdate
 fi
+
+%triggerin -- mdkonline > 2.0-10mdk
 killall -HUP mdkapplet || :
 
 %postun
