@@ -22,6 +22,7 @@
 
 use lib qw(/usr/lib/libDrakX);
 use standalone; # for explanations
+use MDK::Common;
 
 my $run_file = '/var/run/mdkapplet';
 
@@ -50,10 +51,13 @@ if ($mode eq 'new') {
         my ($pid, $user, $cmd) = /^\s*(\d+)\s*(\S*)\s*(.*)$/;
         # do not match su running mdkapplet:
         next if $cmd !~ /perl.*mdkapplet/;
+        my ($DISPLAY) = grep { /^DISPLAY=/ } split('\0', cat_("/proc/$pid/environ"));
+        $DISPLAY =~ s/^DISPLAY=//;
         log::explanations(qq(killing "$cmd" (pid=$pid)));
         kill 15, $pid;
         my $pid2 = fork();
         if (defined $pid2) {
+            local $ENV{DISPLAY} = $DISPLAY;
             !$pid2 and do { exec('su', $user, '-c', 'mdkapplet --auto-update') or do { require POSIX; POSIX::_exit() } };
             log::explanations("restarting applet (pid=$pid2)");
         } else {
