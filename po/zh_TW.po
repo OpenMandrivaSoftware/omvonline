@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-03-31 20:16+0800\n"
+"PO-Revision-Date: 2006-04-10 18:31+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -285,9 +285,9 @@ msgid "About..."
 msgstr "關於..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
@@ -297,7 +297,7 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online 將引導您連結到 Mandriva 網路服務。"
 
 #: ../mdkapplet:506
 #, c-format
@@ -310,7 +310,7 @@ msgid "Quit"
 msgstr "結束"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -319,7 +319,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate 版本號 %s\n"
+"mdonline 版本號 %s\n"
 "Copyright (C) %s Mandriva.\n"
 "這是自由軟體且可於 GNU GPL 條款下被重新散佈。\n"
 "\n"
@@ -333,32 +333,32 @@ msgstr "  --help\t\t- 顯示本輔助說明。\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- 主機名稱。\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- 使用者國家名稱。\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- 使用互動模式。\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- 使用非互動模式。\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - 使用者的登入名稱。\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- 使用者密碼。\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -816,6 +816,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"加值伺服器的認證失敗：\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
