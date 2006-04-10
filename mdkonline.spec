@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 12
+%define release %mkrel 13
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -133,6 +133,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Mon Apr 10 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-13mdk
+- fix restarting old applets
+
 * Fri Apr  7 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-12mdk
 - applet:
   o do not flash the main window when opening the contextual menu of
