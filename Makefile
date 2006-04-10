@@ -57,6 +57,8 @@ install: all
 
 localrpm:  clean localdist buildrpm
 
+localsrpm:  clean localdist buildsrpm
+
 localdist: cleandist dir localcopy tar
 
 cleandist:
@@ -76,6 +78,10 @@ tar:
 
 buildrpm:
 	rpm -ta ../$(PACKAGE)-$(VERSION).tar.bz2
+	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
+
+buildsrpm:
+	rpm -ts ../$(PACKAGE)-$(VERSION).tar.bz2
 	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
 
 # rules to build a distributable rpm
