@@ -177,6 +177,7 @@ if (!$bundle) {
         my $reg_host = mdkonline::soap_register_host($bundle_vars{USER}, $bundle_vars{PASS}, $hostname, ' ', lang::read()->{country});
         my $res = mdkonline::check_server_response($reg_host);
         if ($res ne 'OK') {
+            undef $w;
             $in->ask_warn(N("Error"), N("Failed to authenticate to the bundle server:\n\n%s", $reg_host->{message}));
             exit(3);
         }
@@ -193,6 +194,7 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     if ($res ne 'OK') {
+        undef $w;
         log::explanations("we failed to be accepted by the server: $res");
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res);
     }
