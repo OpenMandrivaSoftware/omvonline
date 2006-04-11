@@ -1,3 +1,40 @@
+2006-04-11 19:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkonline.spec: 2.0-14mdk
+
+2006-04-11 18:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: (install_pkgs) ensure we only display one window while
+	  installing a bundle
+
+2006-04-11 18:40  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: remove the wait message prior to displaying an error
+	  message
+
+2006-04-11 18:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: properly check we get back the data about the bundle
+
+2006-04-11 18:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: fix displaying the error message
+
+2006-04-11 18:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkupdate: check (and explain) when we failed to register the
+	  host config for a bundle (eg because of a unsupported distro)
+
+2006-04-11 16:12  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: - bump copyright years - remove daouda's dead email -
+	  list myself
+
+2006-04-11 14:58  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkConfig) do not flood logs when config file is
+	  not there
+
 2006-04-10 18:52  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* Makefile: (localsrpm,buildsrpm) introduce these rules
