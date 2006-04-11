@@ -298,12 +298,10 @@ sub installUpdates() {
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
 sub silentCheck() {
-    my $link = $online_site . "online3_RemoteAction.php" . '?action=UpdateList';
     my %h = getVarsFromSh($conffile); 
     my ($u, $ct);
     logIt(N("Computing new updates...\n"));
-    $link .= '&log=' . $h{LOGIN} . '&host=' . $h{HOST_NAME};
-    logIt(N("Connecting to") . " $link ...\n");
+    logIt(N("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
