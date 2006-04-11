@@ -194,7 +194,7 @@ if (!$bundle) {
     
     my $res = mdkonline::prepare_upload_conf($wc);
     if ($res ne 'OK') {
-        log::explanations("we failed to be accepted by the server: $bundle_info->{message}");
+        log::explanations("we failed to be accepted by the server: $res");
         $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res);
     }
     
