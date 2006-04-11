@@ -193,6 +193,11 @@ if (!$bundle) {
     $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
     
     my $res = mdkonline::prepare_upload_conf($wc);
+    if ($res ne 'OK') {
+        log::explanations("we failed to be accepted by the server: $bundle_info->{message}");
+        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res);
+    }
+    
     if ($bundle_vars{CLIENT_VERSION} > $CLIENT_VERSION) {
         log::explanations("the client is too old in order to install the bundle $bundle_vars{BUNDLE}");
         $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
