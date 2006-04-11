@@ -161,7 +161,6 @@ if (!$bundle) {
         $in->exit(1);
     }
     my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
-    my $bundle_info;
     my %bundle_vars = getVarsFromSh($bundle);
     rm_rf($bundle);
     
@@ -205,9 +204,10 @@ if (!$bundle) {
 You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
         $in->exit(1);
     }
-    $res eq 'OK' and $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
+    my $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
+    $res = mdkonline::check_server_response($bundle_info);
     print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
-    if ($bundle_info->{status}) {
+    if ($res eq 'OK') {
 	my @bundles;
 	$w = $in->wait_message(N("Please wait"), N("Preparing..."));
 	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
