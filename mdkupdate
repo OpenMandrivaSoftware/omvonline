@@ -216,6 +216,7 @@ You need to update to a newer version. You can get a new one from http://start.m
 	$bundle =~ s/-[^-]*-[^-]*\.[^.]*\.rpm$//;
 	push @bundles, $bundle;
      my %mirrors = add_mirrors($in, $w, $mirrors, \%bundle_vars);
+     undef $w;
 	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors),
                   { is_bundle => 1,
                     auto_select => ($bundle_vars{POST} =~ /AUTO_SELECT/ ? 1 : 0),
@@ -279,7 +280,7 @@ sub ask_pkgs {
 sub install_pkgs {
     my ($in, $choosed, $media_name, $o_options) = @_;
     $o_options ||= {};
-    my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n"));
+    my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n")) if !$o_options->{is_bundle};
     my $program = $o_options->{no_X} ? '/usr/sbin/urpmi' : '/usr/bin/gurpmi';
     eval {
         if (!$o_options->{is_bundle}) {
