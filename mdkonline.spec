@@ -1,6 +1,6 @@
 %define version 2.0
 %define name mdkonline
-%define release %mkrel 14
+%define release %mkrel 15
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -133,6 +133,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Thu Apr 13 2006 Warly <warly@mandrakesoft.com> 2.0-15mdk
+- Include server error message when requiring the bundle
+
 * Tue Apr 11 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.0-14mdk
 - applet: do not flood logs when config file is not there
 - mdkupdate:
