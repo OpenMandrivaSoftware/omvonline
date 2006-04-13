@@ -225,7 +225,7 @@ You need to update to a newer version. You can get a new one from http://start.m
     } else {
         undef $w;
         log::explanations("we did not got back a bundle: $bundle_info->{message}");
-        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $bundle_info->{message});
+        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res . "\n\n" . $bundle_info->{message});
     }
 }
 
