@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-03-17 23:00+0900\n"
+"PO-Revision-Date: 2006-04-21 21:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -286,19 +286,19 @@ msgid "About..."
 msgstr "情報.."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s by Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online は Mandriva ウェブサービスへのアクセスを提供します。"
 
 #: ../mdkapplet:506
 #, c-format
@@ -311,7 +311,7 @@ msgid "Quit"
 msgstr "終了"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -320,7 +320,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate バージョン %s\n"
+"mdonline バージョン %s\n"
 "Copyright (C) %s Mandriva.\n"
 "これはフリーソフトウェアであり、GNU GPL の下で再配布することができます。\n"
 "\n"
@@ -329,37 +329,37 @@ msgstr ""
 #: ../mdkonline:60 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- このヘルプメッセージを出力する。\n"
+msgstr "  --help\t\t- このヘルプメッセージを出力\n"
 
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- ホスト名\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- ユーザが住んでいる国の名前\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- 対話式モードを使う\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- 非対話式モードを使う\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - ユーザのログイン名\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- ユーザのパスワード\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -545,7 +545,7 @@ msgstr "メールアドレスが無効です\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "アカウントの作成に失敗しました"
 
 #: ../mdkonline:189
 #, c-format
@@ -796,7 +796,7 @@ msgstr ""
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "更新リストを取得できません: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -810,6 +810,8 @@ msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
+"Live Install ウィザードを使って、先にシステムをハードドライブにインストールす"
+"る必要があります。"
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -823,6 +825,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"バンドルサーバへの認証に失敗しました:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
