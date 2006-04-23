@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-04-01 23:03+0200\n"
+"PO-Revision-Date: 2006-04-23 16:18+0200\n"
 "Last-Translator: Keld Simonsen <keld@rap.dk>\n"
 "Language-Team:  <da@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,8 +65,7 @@ msgstr "Tjeneste er ikke aktiveret. Klik på \"Websted på nettet\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
+msgstr "Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -182,8 +181,7 @@ msgstr "Start Mandriva Linux Opdatering op - applet\n"
 #: ../mdkapplet:259
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
+msgstr "Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
 
 #: ../mdkapplet:270
 #, c-format
@@ -244,8 +242,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Problem indtraf ved forbindelse til serveren, kontakt venligst kundetjenesten"
+msgstr "Problem indtraf ved forbindelse til serveren, kontakt venligst kundetjenesten"
 
 #: ../mdkapplet:310
 #, c-format
@@ -288,9 +285,9 @@ msgid "About..."
 msgstr "Om..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
@@ -300,7 +297,7 @@ msgstr "Ophavsret © %s ved Mandriva"
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online giver adgang til Mandrivas webtjenester."
 
 #: ../mdkapplet:506
 #, c-format
@@ -313,7 +310,7 @@ msgid "Quit"
 msgstr "Afslut"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -322,7 +319,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate version %s\n"
+"mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
 "Dette er frit programmel og må distribueres ifølge vilkårene i GNU GPL.\n"
 "\n"
@@ -336,32 +333,32 @@ msgstr "  --help\t\t- udskriv denne hjælpebesked.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- værtsnavn.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- navn på brugerens land. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- brug den interaktive tilstand.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- brug den ikke-interaktive tilstand.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - logindnavn for bruger.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- adgangskode for bruger.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -822,6 +819,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Kunne ikke godkendes på fællesserveren:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -860,3 +860,4 @@ msgstr "Installerer pakker...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
+
