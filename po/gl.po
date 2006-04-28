@@ -1,5 +1,5 @@
 # translation of mdkonline-gl.po to Galician
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2004, 2005.
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2004, 2005, 2006.
 #
 #
 msgid ""
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-gl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-12-05 13:23+0100\n"
+"PO-Revision-Date: 2006-04-19 13:00+0200\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
 "MIME-Version: 1.0\n"
@@ -285,19 +285,19 @@ msgid "About..."
 msgstr "Acerca de..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s de Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online da acceso ós servicios web de Mandriva."
 
 #: ../mdkapplet:506
 #, c-format
@@ -310,7 +310,7 @@ msgid "Quit"
 msgstr "Pechar"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -319,9 +319,9 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate versión %s\n"
+"mdonline versión %s\n"
 "Copyright © %s Mandriva.\n"
-"Isto é software libre e pode ser redistribuido baixo os termos da GNU GPL.\n"
+"Isto é software libre e pode redistribuirse baixo os termos da GNU GPL.\n"
 "\n"
 "uso:\n"
 
@@ -333,32 +333,32 @@ msgstr "  --help\t\t- amosa esta mensaxe de axuda.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- nome de máquina.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- nome do país do usuario. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- usar o modo interactivo.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- usar o modo non interactivo.\n"
 
 #: ../mdkonline:65
-#, c-format
+#, fuzzy, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - nome de usuario do usuario.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- contrasinal do usuario.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -428,14 +428,14 @@ msgid "Password:"
 msgstr "Contrasinal:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Nome do ordenador:"
+msgstr "Descrición da máquina:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(P.Ex: O Meu Ordenador Na Oficina)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -544,7 +544,7 @@ msgstr "Non é un enderezo de email válido!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Erro ó crea-la conta!"
 
 #: ../mdkonline:189
 #, c-format
@@ -621,7 +621,7 @@ msgstr "Erro de seguridade"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Erro xenérico (a máquina xa está rexistrada)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -739,9 +739,9 @@ msgid "Connection error"
 msgstr "Erro de conexión"
 
 #: ../mdkonline.pm:196
-#, c-format
+#, fuzzy, c-format
 msgid "Mandriva web services not reachable"
-msgstr ""
+msgstr "Os servicios web de Mandriva non están dispoñibles"
 
 #: ../mdkupdate:64
 #, c-format
@@ -782,7 +782,7 @@ msgstr "  --noX\t\t\t- versión en modo texto de Mandriva Update.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- rexistrar o que se fai\n"
 
 #: ../mdkupdate:75
 #, c-format
@@ -794,7 +794,7 @@ msgstr ""
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Non se puido obter a lista de actualizacións: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -808,6 +808,8 @@ msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
+"Primeiro ten que instalar o sistema no seu disco duro co asistente de "
+"'Instalación Live'."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -830,6 +832,10 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"A versión do cliente de Mandriva Online é moi antiga.\n"
+"\n"
+"Cómpre actualizar a unha versión máis nova. Pode facelo en http://start."
+"mandriva.com"
 
 #: ../mdkupdate:196
 #, c-format
@@ -856,20 +862,3 @@ msgstr "Instalando paquetes...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
 "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "O sistema esta ocupado. Agarde ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Enviando a configuración..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Invocación insegura: Método dispoñible só a través de httpS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Non se atopou o ficheiro %s. Execute o asistente mdkonline primeiro"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update non puido contactar co sitio, vai intentar contactar "
-#~ "outra vez."
