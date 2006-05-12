@@ -288,19 +288,21 @@ msgid "About..."
 msgstr "Åd fwait..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright © %s pa Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
+"Mandriva Online (Mandriva so les fyis) vos dene accès åzès siervices waibe "
+"da Mandriva."
 
 #: ../mdkapplet:506
 #, c-format
@@ -313,7 +315,7 @@ msgid "Quit"
 msgstr "Cwiter"
 
 #: ../mdkonline:55
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
@@ -322,7 +324,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate modêye %s\n"
+"mdonline modêye %s\n"
 "Copyright © %s Mandriva.\n"
 "Çouchal est on libe programe et pout esse cossemé dzo les termes del licince "
 "GPL.\n"
@@ -332,37 +334,37 @@ msgstr ""
 #: ../mdkonline:60 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr " --help         - mostere ci messaedje d' aidance chal.\n"
+msgstr " --help           - mostere ci messaedje d' aidance chal.\n"
 
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=          - no do lodjoe.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country       - no do payis d' l' uzeu.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactif    - eployî l' môde interactif.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive - eployî l' môde nén interactif.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=        - no d' elodjaedje di l' uzeu.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=         - sicret d' l' uzeu.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -547,7 +549,7 @@ msgstr "C' est nén ene adresse emile valide!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "L' ahivaedje do conte a fwait berwete!"
 
 #: ../mdkonline:189
 #, c-format
@@ -768,27 +770,27 @@ msgstr ""
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr " --auto         - enonder les metaedjes a djoû otomaticmint.\n"
+msgstr " --auto           - enonder les metaedjes a djoû otomaticmint.\n"
 
 #: ../mdkupdate:71
 #, c-format
 msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr " --applet       - enonder les metaedjes a djoû di Mandriva Linux.\n"
+msgstr " --applet         - enonder les metaedjes a djoû di Mandriva Linux.\n"
 
 #: ../mdkupdate:72
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr " --mnf          - enonder les scripes especifikes mnf.\n"
+msgstr " --mnf            - enonder les scripes especifikes mnf.\n"
 
 #: ../mdkupdate:73
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr " --noX          - enonder l' modêye e môde tecse.\n"
+msgstr " --noX            - enonder l' modêye e môde tecse.\n"
 
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr "  --debug       - fé on djournå di çou k' est fwait\n"
+msgstr "  --debug         - fé on djournå di çou k' est fwait\n"
 
 #: ../mdkupdate:75
 #, c-format
@@ -796,13 +798,13 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
-"  --bundle file.bundle  - lére eyet astaker des pacaedjes a pårti d' on "
+"  --bundle file.bundle    - lére eyet astaker des pacaedjes a pårti d' on "
 "fitchî di meta-dnêyes «.bundle».\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Dji n' a nén savou aveur li djivêye des metaedjes a djoû: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -831,6 +833,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"L' otintifiaedje avou l' sierveu d' «bundle» a fwait berwete:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -992,7 +997,7 @@ msgstr ""
 #~ "vs plait."
 
 #~ msgid "  --update       - Update keys\n"
-#~ msgstr " --update       - mete a djoû les clés.\n"
+#~ msgstr "  --update       - mete a djoû les clés.\n"
 
 #~ msgid "Skip Wizard"
 #~ msgstr "Passer houte"
