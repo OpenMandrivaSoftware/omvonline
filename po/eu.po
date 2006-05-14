@@ -5,7 +5,7 @@
 # translation of mdkonline.po to Euskara
 # EUSKARA: Mandriva Linux translation.
 # Copyright (C) 2001 Mandriva S.A.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005, 2006.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
 #
 msgid ""
@@ -13,13 +13,13 @@ msgstr ""
 "Project-Id-Version: mdkonline-eu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-09-25 16:44+0200\n"
+"PO-Revision-Date: 2006-05-14 19:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: EUSKARA <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -46,15 +46,14 @@ msgid "New updates are available for your system"
 msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
+msgstr "Zure sistemarentzako fardel berriak eskuragarri daude"
 
 #: ../mdkapplet:95
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
+msgstr "Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
 
 #: ../mdkapplet:101
 #, c-format
@@ -69,8 +68,7 @@ msgstr "Zerbitzua ez dago aktibatuta. Mesedez klikatu \"Lerroko Webgunea\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -292,19 +290,19 @@ msgid "About..."
 msgstr "Honi buruz..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online-k Mandriva web zerbitzuetara sarbidea ematen du."
 
 #: ../mdkapplet:506
 #, c-format
@@ -341,32 +339,32 @@ msgstr "  --help\t\t- laguntza-mezu hau inprimatzen du.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- ostalarizena.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- erabiltzaile herrialdearen izena. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- erabili modu interaktiboa.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- erabili modu ez interaktiboa.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - erabiltzailearen sarrera izena.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- erabiltzailearen pasahitza.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -437,14 +435,14 @@ msgid "Password:"
 msgstr "Pasahitza:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Makina-izena:"
+msgstr "Makinaren deskribapena :"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Adib: Nere Bulegoko Konputagailua)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -552,7 +550,7 @@ msgstr "Helbide elektronikoa baliogabea da!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Kontu sorrerak huts egin du!"
 
 #: ../mdkonline:189
 #, c-format
@@ -628,7 +626,7 @@ msgstr "Segurtasun akatsa"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Akats generikoa (makina dagoeneko erregistratua)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -790,19 +788,19 @@ msgstr "  --noX\t\t\t- Mandriva Update-ren testu moduko bertsioa.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle file.bundle\t- sintaktikoki egiaztatu eta instalatu .bundle metainfo fitxategiko paketea.\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Ezin da eguneraketen zerrenda jaso: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -815,7 +813,7 @@ msgstr "Kontuz"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Aurrena sistema zure disko zurrunean instalatu behar duzu 'Live install' morroiarekin."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -838,6 +836,9 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Mandriva Online bezero bertsioa zaharregia da.\n"
+"\n"
+"Bertsio berriago batera eguneratu behar duzu. Berria jaso dezakezu http://start.mandriva.com helbidetik."
 
 #: ../mdkupdate:196
 #, c-format
@@ -864,18 +865,3 @@ msgstr "Paketeak instalatzen...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Sistema okupatuta dago. Itxaron..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Konfigurazioa bidaltzen..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Eskaera ez segurua: Metodoa soilik httpS bitartez dago eskuragarri"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Ez da %s fitxategia aurkitu. Aurrena exekutatu mdkonline morroia"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update-k ezin izan du lekua kontaktatu, berriro saiatuko gara."
