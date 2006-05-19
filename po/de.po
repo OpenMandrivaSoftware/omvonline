@@ -309,6 +309,7 @@ msgstr ""
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
+"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:506
 #, c-format
@@ -345,17 +346,17 @@ msgstr "  --help\t\t- Ausgabe dieser Hilfe.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr " --box=\t\t\t- hostname.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr " --country\t\t\t- Name des Heimatlandes des Benutzers.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr " --interactive\t\t- benutzen Sie den interaktiven Modus.\n"
 
 #: ../mdkonline:64
 #, c-format
@@ -365,12 +366,12 @@ msgstr ""
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr " --login=\t\t     - Benutzername des Benutzer.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr " --pass=\t\t\t- Passwort des Benutzers.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -559,7 +560,7 @@ msgstr "Keine gültige E-Mail-Adresse!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Erstellen des Benutzerkontos fehlgeschlagen!"
 
 #: ../mdkonline:189
 #, c-format
@@ -637,7 +638,7 @@ msgstr "Sicherheitswarnung"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Fehler (Der Rechner ist schon registriert)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -799,7 +800,7 @@ msgstr "  --noX\t\t\t- Textmodus Version der Mandriva Aktualisierung.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr " --debug\t\t\t- protokolliere was gemacht wird\n"
 
 #: ../mdkupdate:75
 #, c-format
@@ -807,11 +808,13 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"--bunlde fiel.bunlde\t- analysiere und installiere Packet von .bundle "
+"metainfodatei.\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Unmoeglich die Liste der Updates zu bekommen: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
