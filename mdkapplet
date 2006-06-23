@@ -497,18 +497,6 @@ sub setState {
                                         $w->run;
                                         return 1;
 
-                                        my $dialog = gtkset_border_width(_create_dialog(N("Mandriva Online %s"), $ver), 5);
-                                        $dialog->action_area->pack_start(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub { $dialog->destroy }),
-                                                                         0,0,0);
-
-                                        gtkpack_($dialog->box,
-                                                 gtktext_insert(Gtk2::TextView->new,
-                                                                join("\n",
-                                                                     ,
-                                                                 )
-                                                            )
-                                             );
-             
                                     }));
     $menu->append(gtksignal_connect(gtkset_active($checkme = Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), shouldStart()), toggled => sub { setAutoStart(uc(bool2text($checkme->get_active))) }));
     $checkme->show;
