@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: mdkonline-de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-09-17 11:21+0200\n"
-"Last-Translator: Frank Koester <frank@dueppel13.de>\n"
+"PO-Revision-Date: 2006-07-27 17:39+0100\n"
+"Last-Translator: Nicolas Bauer <rastafarii@mandrivauser.de>\n"
 "Language-Team: deutsch\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,12 +30,8 @@ msgstr "Ihr System ist aktuell"
 
 #: ../mdkapplet:71
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Konfigurationsproblem des Dienstes. Bitte überprüfen Sie die Log-Datei und "
-"senden Sie eine Mail an support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Konfigurationsproblem des Dienstes. Bitte überprüfen Sie die Log-Datei und senden Sie eine Mail an support@mandrivaonline.com"
 
 #: ../mdkapplet:83
 #, c-format
@@ -48,9 +44,9 @@ msgid "New updates are available for your system"
 msgstr "Neue Aktualisierungen für Ihr System verfügbar"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Neue Aktualisierungen für Ihr System verfügbar"
+msgstr "Neue Aktualisierungen sind für Ihr System verfügbar"
 
 #: ../mdkapplet:95
 #, c-format
@@ -70,8 +66,7 @@ msgstr "Dienst nicht verfügbar. Klicken Sie auf „Online Webseite“"
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
+msgstr "Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -187,9 +182,7 @@ msgstr "Starte mdkupdate --applet\n"
 #: ../mdkapplet:259
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online scheint neu installiert worden zu sein, lade Applet "
-"erneut ...."
+msgstr "Mandriva Online scheint neu installiert worden zu sein, lade Applet erneut ...."
 
 #: ../mdkapplet:270
 #, c-format
@@ -224,8 +217,7 @@ msgstr "Unbekannter Zustand"
 #: ../mdkapplet:309
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Onlinedienste abgeschaltet. Kontaktieren Sie die Mandriva Online Site\n"
+msgstr "Onlinedienste abgeschaltet. Kontaktieren Sie die Mandriva Online Site\n"
 
 #: ../mdkapplet:310
 #, c-format
@@ -239,21 +231,13 @@ msgstr "Falsche Aktion, falscher Host oder Anmeldekennung\n"
 
 #: ../mdkapplet:312
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"Mit Ihren Netzwerkeinstellngen scheint etwas nicht in Ordnung zu sein "
-"(Pruefen SieRoute, Firewall, oder Prxy-einstellungen)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
+msgstr "Mit Ihren Netzwerkeinstellngen scheint etwas nicht in Ordnung zu sein (Pruefen SieRoute, Firewall, oder Prxy-einstellungen)\n"
 
 #: ../mdkapplet:314
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Ein Problem ist während des Verbindungsaufbaus zum Server aufgetreten, bitte "
-"kontaktieren Sie das Support Team"
+msgid "Problem occured while connecting to the server, please contact the support team"
+msgstr "Ein Problem ist während des Verbindungsaufbaus zum Server aufgetreten, bitte kontaktieren Sie das Support Team"
 
 #: ../mdkapplet:310
 #, c-format
@@ -296,20 +280,19 @@ msgid "About..."
 msgstr "Über..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s by Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
+msgstr "Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:506
 #, c-format
@@ -326,15 +309,13 @@ msgstr "Beenden"
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdonline Version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Dies ist freie Software und kann unter den Bedingungen der GNU GPL weiter "
-"vertrieben werden.\n"
+"Dies ist freie Software und kann unter den Bedingungen der GNU GPL weiter vertrieben werden.\n"
 "\n"
 "Verwendung: \n"
 
@@ -361,7 +342,7 @@ msgstr " --interactive\t\t- benutzen Sie den interaktiven Modus.\n"
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- verwende den nicht interaktiven Modus.\n"
 
 #: ../mdkonline:65
 #, c-format
@@ -427,8 +408,7 @@ msgstr "Erstellung eines Benutzerkontos oder Authentifizierung"
 #: ../mdkonline:108
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Geben Sie Ihren Mandriva Online Benutzernamen, Passwort und Rechnernamen ein:"
+msgstr "Geben Sie Ihren Mandriva Online Benutzernamen, Passwort und Rechnernamen ein:"
 
 #: ../mdkonline:114 ../mdkonline:155
 #, c-format
@@ -441,14 +421,14 @@ msgid "Password:"
 msgstr "Passwort:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Beschreibung der Rechner:"
+msgstr "Beschreibung des Rechners:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Ex: Mein Home Office's Computer)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -477,10 +457,8 @@ msgid ""
 "1) the list of packages you have installed on your system,\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -492,12 +470,9 @@ msgstr ""
 "1)  die Liste der auf Ihrem System installierten Pakete,\n"
 "2) Ihre Hardwarekonfiguration.\n"
 "\n"
-"Falls Sie sich bei dieser Idee unwohl fühlen oder Sie nicht von diesem "
-"System profitieren wollen,\n"
-"drücken Sie bitte 'Abbrechen'. Wenn Sie 'Weiter' drücken, erlauben Sie uns "
-"Sie über\n"
-"personalisierte Email Nachrichten über Sicherheitsupdates und nützliche "
-"Updates informiert zu halten.\n"
+"Falls Sie sich bei dieser Idee unwohl fühlen oder Sie nicht von diesem System profitieren wollen,\n"
+"drücken Sie bitte 'Abbrechen'. Wenn Sie 'Weiter' drücken, erlauben Sie uns Sie über\n"
+"personalisierte Email Nachrichten über Sicherheitsupdates und nützliche Updates informiert zu halten.\n"
 "Desweiteren profitiren Sie von ermäßigten Support Diensten auf\n"
 "www.mandrivaexpert.com."
 
@@ -509,9 +484,7 @@ msgstr "Verbindungsproblem"
 #: ../mdkonline:146
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-"Ein Problem taucht beim hochladen der Dateien auf, bitte versuchen Sie es "
-"erneut"
+msgstr "Ein Problem taucht beim hochladen der Dateien auf, bitte versuchen Sie es erneut"
 
 #: ../mdkonline:153
 #, c-format
@@ -569,8 +542,7 @@ msgid ""
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 "Mandriva Online Benutzerkonto erfolgreich erstellt.\n"
-"Bitte drücken Sie „Weiter“ zum Authentifizieren und zum Hochzuladen Ihrer "
-"Konfiguration\n"
+"Bitte drücken Sie „Weiter“ zum Authentifizieren und zum Hochzuladen Ihrer Konfiguration\n"
 
 #: ../mdkonline:179
 #, c-format
@@ -593,8 +565,7 @@ msgid ""
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
 "Mandriva Online bietet Ihnen die Möglichkeit, Updates zu automatisieren.\n"
-"Ein Program wird regelmäßig auf Ihrem System laufen, um auf neue Updates zu "
-"prüfen\n"
+"Ein Program wird regelmäßig auf Ihrem System laufen, um auf neue Updates zu prüfen\n"
 
 #: ../mdkonline:196
 #, c-format
@@ -623,12 +594,8 @@ msgstr "Problem beim Hochladen der Konfiguration"
 
 #: ../mdkonline:222
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Kann Mandriva Online Webseite nicht erreichen: falscher Benutzername/"
-"Passwort oder fehlerhafte Einstellungen bei Router/Firewall"
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
+msgstr "Kann Mandriva Online Webseite nicht erreichen: falscher Benutzername/Passwort oder fehlerhafte Einstellungen bei Router/Firewall"
 
 #: ../mdkonline.pm:184
 #, c-format
@@ -765,15 +732,13 @@ msgstr "Mandriva Webdienste sind nicht erreichbar"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate Version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Dies ist freie Software und kann unter den Bedingungen der GNU GPL weiter "
-"vertrieben werden.\n"
+"Dies ist freie Software und kann unter den Bedingungen der GNU GPL weiter vertrieben werden.\n"
 "\n"
 "Verwendung: \n"
 
@@ -804,12 +769,8 @@ msgstr " --debug\t\t\t- protokolliere was gemacht wird\n"
 
 #: ../mdkupdate:75
 #, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"--bunlde fiel.bunlde\t- analysiere und installiere Packet von .bundle "
-"metainfodatei.\n"
+msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
+msgstr "--bunlde fiel.bunlde\t- analysiere und installiere Packet von .bundle metainfodatei.\n"
 
 #: ../mdkupdate:149
 #, c-format
@@ -824,10 +785,8 @@ msgstr "Warnung"
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:146
 #, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
+msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
+msgstr "Als erstes muss das System auf dem PC installiert sein über den 'Live install' wizard."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -841,15 +800,20 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Fehler bei der Authetifizierung am Bundel Server:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
 "\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
+"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
 msgstr ""
+"Die Version von Mandriva Online ist zu alt.\n"
+"\n"
+"Auf eine neuere Version updaten, welche unter http://start.mandriva.com zur Verfügung steht"
 
 #: ../mdkupdate:196
 #, c-format
@@ -859,13 +823,12 @@ msgstr "Ein Fehler ist aufgetreten"
 #: ../mdkupdate:215
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Das Bundel ist nicht richtig formatiert. Abbruch."
 
 #: ../mdkupdate:227
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
-"Wählen Sie welche Pakete installiert werden sollen und bestätigen Sie mit OK"
+msgstr "Wählen Sie welche Pakete installiert werden sollen und bestätigen Sie mit OK"
 
 #: ../mdkupdate:229
 #, c-format
