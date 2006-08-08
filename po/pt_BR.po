@@ -1,24 +1,29 @@
+# translation of cardoso-mdkonline-pt_BR-DONE.po to Brazilian Portuguese
+# translation of cardoso-mdkonline-pt_BR.po to
 # translation of mdkonline-pt_BR.po to Português do Brasil
 # translation of Mandriva Online-pt_BR.po to Português Brasileiro
-# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
 # Bruno Dorfman Buys <brunobuys@zipmail.com.br>
 # Andrei Bosco Bezerra Torres <andrei_bosco@yahoo.com.br>, 2003.
 # Carlinhos Cecconi <carlinux@terra.com.br>, 2004.
 # Deivi Lopes Kuhn <deivi@softwarelivre.org>, 2005.
 # Wanderlei Antonio Cavassin <cavassin@mandriva.com>, 2006.
+# Rafael Cardoso <cardoso@mandriva.com>, 2006.
+# Felipe Arruda <felipemiguel@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-pt_BR\n"
+"Project-Id-Version: cardoso-mdkonline-pt_BR-DONE\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-08-10 08:31-0300\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2006-08-08 17:08-0300\n"
+"Last-Translator: Felipe Arruda <felipemiguel@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms:  nplurals=2; plural=(n > 1);\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -289,9 +294,9 @@ msgid "About..."
 msgstr "Sobre.."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online."
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
@@ -301,7 +306,7 @@ msgstr "Copyright (C) %s Mandriva"
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online fornece acesso para serviços web Mandriva"
 
 #: ../mdkapplet:506
 #, c-format
@@ -338,32 +343,32 @@ msgstr "  --help\t\t- exibe esta mensagem de ajuda.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr " --box=\t\t\t- nome do host.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr " --país\t\t\t- nome do país do usuário. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interativo\t\t- use o modo interativo.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --não interativo\t- use o modo não interativo.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - nome de login do usuário.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- password  do usuário.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -548,7 +553,7 @@ msgstr "Endereço de email inválido\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Falha na criação de conta!"
 
 #: ../mdkonline:189
 #, c-format
@@ -801,7 +806,7 @@ msgstr ""
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Não é possível pegar listas de updates: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -830,6 +835,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Falha para se autenticar no servidor bundle:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -867,67 +875,5 @@ msgstr "Instalando pacotes ...\n"
 #: ../mdkupdate:240 ../mdkupdate:310
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr ""
-"Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
+msgstr "Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Sistema ocupado. Aguarde ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Enviando configuração..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Invocação insegura: Método disponível somente via https"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "Nenhum arquivo %s encontrado. Execute primeiro o assistente mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "Mandriva Update não pôde ser contactado, por favor tente de novo"
-
-#~ msgid "Login:"
-#~ msgstr "Login:"
-
-#~ msgid "or"
-#~ msgstr "ou"
-
-#~ msgid "wrong password:"
-#~ msgstr "Senha incorreta:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Seu login ou senha estão errados \n"
-#~ " Você terá que digitá-los novamente ou criar uma conta no Mandriva "
-#~ "Online, \n"
-#~ " nesse caso, volte ao passo inicial para se conectar ao Mandriva Online.\n"
-#~ " Será necessário fornecer um nome da máquina \n"
-#~ " (somente caracteres alfanuméricos são permitidos)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "E-mail para contato:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Forneça um login"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Senha e usuário deve ter menos que 12 caracteres\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Não é permitido utilizar caracteres especiais\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "O e-mail não é valido\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "A conta já existe\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problemas de conexão com o servidor\n"
