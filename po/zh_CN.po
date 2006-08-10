@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline 2006\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-09-17 03:42+0800\n"
+"PO-Revision-Date: 2006-08-10 22:31+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
 "MIME-Version: 1.0\n"
@@ -38,9 +38,9 @@ msgid "New updates are available for your system"
 msgstr "您的系统没有可用的更新"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "您的系统没有可用的更新"
+msgstr "您的系统没有可用的捆绑包"
 
 #: ../mdkapplet:95
 #, c-format
@@ -278,19 +278,19 @@ msgid "About..."
 msgstr "关于..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr "版权 (C) %s par Mandriva"
+msgstr "版权 (C) %s Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online 可让您访问 Mandriva 的 Web 服务。"
 
 #: ../mdkapplet:506
 #, c-format
@@ -326,32 +326,32 @@ msgstr "  --help\t\t- 打印本帮助信息。\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- 主机名。\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- 用户的国家名。\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- 使用交互模式。\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- 使用非交互模式。\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - 用户名。\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- 用户的密码。\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -420,14 +420,14 @@ msgid "Password:"
 msgstr "密码:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "机器名: "
+msgstr "机器描述: "
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(如: 我家里的电脑)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -531,7 +531,7 @@ msgstr "不是有效的电子邮件地址!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "创建账户失败！"
 
 #: ../mdkonline:189
 #, c-format
@@ -604,7 +604,7 @@ msgstr "安全错误"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "常规错误(机器已经注册过)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -765,7 +765,7 @@ msgstr "  --noX\t\t\t- Mandriva 更新的文本模式版本。\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- 记录所执行的操作\n"
 
 #: ../mdkupdate:75
 #, c-format
@@ -773,11 +773,12 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle file.bundle\t- 分析并安装 .bundle 元信息文件中附带的软件包。\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "无法获得更新列表：%s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -790,7 +791,7 @@ msgstr "警告"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "您需要先使用“Live Install”将系统安装到硬盘上。"
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -803,7 +804,7 @@ msgid ""
 "Failed to authenticate to the bundle server:\n"
 "\n"
 "%s"
-msgstr ""
+msgstr "认证到捆绑包服务器失败：\n\n%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -812,7 +813,7 @@ msgid ""
 "\n"
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
-msgstr ""
+msgstr "此版本的 Mandriva Online 客户端太老了。\n\n您需要更新到较新版本。您可以从 http://start.mandriva.com 获得新版本。"
 
 #: ../mdkupdate:196
 #, c-format
@@ -822,7 +823,7 @@ msgstr "发生了一个错误"
 #: ../mdkupdate:215
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "此捆绑包的格式不对。"
 
 #: ../mdkupdate:227
 #, c-format
