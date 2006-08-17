@@ -1,28 +1,25 @@
 # translation of nb.po to Norwegian Bokmål
-# translation of nb.po to Norsk Bokmål
-# translation of mdkonline-nb.po to Norwegian Bokmål
-# translation of Mandriva Online-nb.po to Norwegian Bokmål
 # Mandriva Online.
 # Copyright (C) Mandriva 2001
+#
 # Andreas Bergstrøm <abergstr@halden.net>, 2001.
 # Terje Bjerkelia <terje@bjerkelia.com>, 2002.
 # Per Øyvind Karlsen <peroyvind@sintrax.net>, 2004.
 # Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
 # Per Øyvind Karlsen <peroyvind@linux-mandrake.com>, 2005.
-# Per Øyvind Karlsen <pkarlsen@mandriva.com>, 2005.
-#
+# Per Øyvind Karlsen <pkarlsen@mandriva.com>, 2005, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-09-21 23:01+0200\n"
+"PO-Revision-Date: 2006-08-17 03:06+0200\n"
 "Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -49,15 +46,14 @@ msgid "New updates are available for your system"
 msgstr "Nye oppdateringer er tilgjengelig for ditt system"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Nye oppdateringer er tilgjengelig for ditt system"
+msgstr "Nye knipper med programvare er tilgjengelig for ditt system"
 
 #: ../mdkapplet:95
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
+msgstr "Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
 
 #: ../mdkapplet:101
 #, c-format
@@ -72,8 +68,7 @@ msgstr "Tjenesten er ikke aktivert. Vennligst klikk på \"Online-nettsted\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -295,19 +290,19 @@ msgid "About..."
 msgstr "Om..."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Opphavsrett (C) %s ved Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online gir tilgang til Mandriva netttjenester"
 
 #: ../mdkapplet:506
 #, c-format
@@ -344,32 +339,32 @@ msgstr "  --help\t\t- skriv denne hjelpebeskjeden.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- vertsnavn.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- brukers landsnavn. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- bruk interaktivt modus.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- bruk det ikke-interaktive moduset.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - brukers innlogningsnavn.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- brukers passord.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -438,14 +433,14 @@ msgid "Password:"
 msgstr "Passord:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Maskinnavn:"
+msgstr "Maskinbeskrivelse:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Feks: Mitt hjemmekontors maskin)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -555,7 +550,7 @@ msgstr "Ikke en gyldig epostadresse!\n"
 #: ../mdkonline:181
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Oppretting av konto mislyktes!"
 
 #: ../mdkonline:189
 #, c-format
@@ -632,7 +627,7 @@ msgstr "Sikkerhetsfeil"
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Generell feil (maskin allerede registrert)"
 
 #: ../mdkonline.pm:185
 #, c-format
@@ -794,19 +789,19 @@ msgstr "  --noX\t\t\t- tekstmodusversjon av Mandriva Update.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- logg hva som gjøres\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle fil.bundle\t- les og installer pakke fra .bundle-metainformasjonsfil.\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Kan ikke få liste over oppdateringer: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -819,7 +814,7 @@ msgstr "Advarsel"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Du trenger først å installere systemet på din harddisk med 'Live Install'-veiviseren"
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -833,6 +828,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Klarte ikke å autentisere med programvareknippetjeneren:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -842,6 +840,10 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Denne versjonen av Mandriva Online-klieneten er for gammel. "
+"\n"
+"\n"
+"Du trenger å oppdatere til en nyere versjon. Du kan hente en ny fra http://start.mandriva.com"
 
 #: ../mdkupdate:196
 #, c-format
@@ -851,7 +853,7 @@ msgstr "En feil oppstod"
 #: ../mdkupdate:215
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Denne programvareknippen er ikke velformatert. Avbryter."
 
 #: ../mdkupdate:227
 #, c-format
@@ -868,17 +870,3 @@ msgstr "Installerer pakke...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunne ikke oppdatere pakker fra update_source-medium.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Systemet er opptatt. Vennligst vent ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Sender konfigurasjon..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Usikker påkalling: Metode tilgjengelig kun igjennom httpS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Ingen %s fil funnet. Kjør mdkonline-veiviseren først"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "Mandriva Update kunne ikke kontakte nettstedet, vi vil prøve igjen."
