@@ -70,8 +70,11 @@ usage:
 }
 
 GetOptions('interactive!' => \$ia, 'login=s' => \$login, 'pass=s' => \$password, 'box=s' => \$boxname, 'country:s' => \$country,
+           'embedded=s' => \$::XID,
            'help'  => \&usage,
        );
+
+$::XID and $::isEmbedded = 1;
 
 my $in = interactive->vnew('su') if $ia;
 
