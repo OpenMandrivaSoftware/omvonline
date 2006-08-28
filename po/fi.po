@@ -1,25 +1,25 @@
 # mdkonline-fi - Finnish Translation
 #
-# Copyright (C) 2002,2003, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2004, 2005, 2006 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandriva
+#
+#
 # Matias Griese <mahagr@utu.fi>, 2002.
 # Esa Linna <denzo@mbnet.fi>, 2004.
 # Thomas Backlund <tmb@mandrake.org>, 2002, 2003, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2005.
-#
-#
+# Thomas Backlund <tmb@mandriva.org>, 2005, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-fi - Mandriva 2006 Release\n"
+"Project-Id-Version: mdkonline-fi - Mandriva 2007 Release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2005-09-11 18:48+0300\n"
+"PO-Revision-Date: 2006-08-27 14:38+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -46,9 +46,9 @@ msgid "New updates are available for your system"
 msgstr "Päivityksiä järjestelmällesi on saatavilla"
 
 #: ../mdkapplet:89
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Päivityksiä järjestelmällesi on saatavilla"
+msgstr "Uusia ohelmistokokonaisuuksia järjestelmällesi on saatavilla"
 
 #: ../mdkapplet:95
 #, c-format
@@ -184,8 +184,7 @@ msgstr "käynnistetään mdkupdate --applet\n"
 #: ../mdkapplet:259
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
+msgstr "Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
 
 #: ../mdkapplet:270
 #, c-format
@@ -246,8 +245,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Tapahtui virhe yhteydenotossa palvelimeen, ole hyvä ja ota yhteys tukiryhmään"
+msgstr "Tapahtui virhe yhteydenotossa palvelimeen, ole hyvä ja ota yhteys tukiryhmään"
 
 #: ../mdkapplet:310
 #, c-format
@@ -290,19 +288,19 @@ msgid "About..."
 msgstr "Tietoa.."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s, Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online avaa pääsyn Mandrivan webbipalveluihin."
 
 #: ../mdkapplet:506
 #, c-format
@@ -339,32 +337,32 @@ msgstr "  --help\t\t- tulosta tämä apuviesti.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- konenimi.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- käyttäjän maan nimi. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- käytä interaktiivinen tila.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- käytä ei-interaktiivista tilaa.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - käyttäjän kirjautumistunnus.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- käyttäjän salasanaa.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -387,9 +385,9 @@ msgid "Mr."
 msgstr "Hra."
 
 #: ../mdkonline:69
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Rouva"
 
 #: ../mdkonline:69
 #, c-format
@@ -421,13 +419,12 @@ msgstr "Tilin luonti tai kirjautuminen"
 #: ../mdkonline:108
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Syötä Mandriva Online-käyttäjätunnuksesi, salasanasi sekä koneesi nimi:"
+msgstr "Syötä Mandriva Online-käyttäjätunnuksesi, salasanasi sekä koneesi nimi:"
 
 #: ../mdkonline:114 ../mdkonline:155
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Lähtevän postipalvelimen osoite"
+msgstr "Sähköpostiosoite:"
 
 #: ../mdkonline:115 ../mdkonline:156
 #, c-format
@@ -435,14 +432,14 @@ msgid "Password:"
 msgstr "Salasana:"
 
 #: ../mdkonline:117
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Koneen nimi:"
+msgstr "Koneen kuvaus:"
 
 #: ../mdkonline:118
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Esim: Kotitoimistoni kone)"
 
 #: ../mdkonline:126 ../mdkonline:133 ../mdkonline:146 ../mdkonline:168
 #: ../mdkonline:172 ../mdkonline:176 ../mdkonline:181 ../mdkupdate:149
@@ -452,9 +449,9 @@ msgid "Error"
 msgstr "Virhe"
 
 #: ../mdkonline:126
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Liitospisteet saavat sisältää vain kirjaimia ja numeroita"
+msgstr "Koneen nimi pitää olla 1-40 kirjaimia ja numeroita"
 
 #: ../mdkonline:125
 #, c-format
@@ -509,9 +506,9 @@ msgid "Create a Mandriva Online Account"
 msgstr "Luo Mandriva Online-tunnus"
 
 #: ../mdkonline:152
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Vihreä"
+msgstr "Tervehdys:"
 
 #: ../mdkonline:153
 #, c-format
@@ -519,9 +516,9 @@ msgid "First name:"
 msgstr "Etunimi:"
 
 #: ../mdkonline:154
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Etunimi:"
+msgstr "Sukunimi:"
 
 #: ../mdkonline:157
 #, c-format
@@ -538,9 +535,9 @@ msgstr ""
 "Yritä uudestaan\n"
 
 #: ../mdkonline:164
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Täytä kaikkiin kenttiin\n"
+msgstr "Täytä kaikki kentät"
 
 #: ../mdkonline:164
 #, c-format
@@ -548,9 +545,9 @@ msgid "Not a valid mail address!\n"
 msgstr "Sähköpostiosoite ei kelpaa!\n"
 
 #: ../mdkonline:181
-#, fuzzy, c-format
+#, c-format
 msgid "Creating account failed!"
-msgstr "Muuta tunnusta"
+msgstr "Tilin luonti ei onnistunut!"
 
 #: ../mdkonline:189
 #, c-format
@@ -620,17 +617,17 @@ msgstr ""
 "palomuuri on asetettu väärin."
 
 #: ../mdkonline.pm:184
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Tietoturvahälytykset:"
+msgstr "Tietoturvavirhe"
 
 #: ../mdkonline.pm:184
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Yleisvirhe (kone jo rekisteröity)"
 
 #: ../mdkonline.pm:185
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
 msgstr "Tietokantavirhe"
 
@@ -644,19 +641,19 @@ msgstr ""
 "Yritä myöhemmin uudelleen"
 
 #: ../mdkonline.pm:186
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Rekisteröintityyppi"
+msgstr "Rekisteröintivirhe"
 
 #: ../mdkonline.pm:186
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Etätulostimen nimi puuttuu!"
+msgstr "Joitakin parametreja puuttuu"
 
 #: ../mdkonline.pm:187 ../mdkonline.pm:193
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Salasana kohteelle %s"
+msgstr "Salasanavirhe"
 
 #: ../mdkonline.pm:187
 #, c-format
@@ -664,16 +661,18 @@ msgid "Wrong password"
 msgstr "Väärä salasana"
 
 #: ../mdkonline.pm:188 ../mdkonline.pm:189 ../mdkonline.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "tuntematon virhe"
+msgstr "Kirjautumisvirhe"
 
 #: ../mdkonline.pm:188
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "Kohdehakemisto on jo käytössä, ole hyvä ja valitse toinen."
+msgstr ""
+"Antamasi säköpostiosoite on jo käytössä\n"
+"Ole hyvä ja syötä toinen\n"
 
 #: ../mdkonline.pm:189
 #, c-format
@@ -681,26 +680,28 @@ msgid "The email you provided is invalid or forbidden"
 msgstr "Antamasi sähköpostiosoite on virheellinen tai kielletty"
 
 #: ../mdkonline.pm:190
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Nimikenttä on tyhjä, ole hyvä ja määritä nimi"
+msgstr ""
+"Sähköpostiosoite-kenttä on tyhjä\n"
+"Ole hyvä ja määritä sitä"
 
 #: ../mdkonline.pm:191
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "Kuvaus: "
+msgstr "Rajoitusvirhe"
 
 #: ../mdkonline.pm:191
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Tietokantapalvelin"
+msgstr "Tietokantatyhteys kielletty"
 
 #: ../mdkonline.pm:192 ../mdkonline.pm:194
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Kirjoitusvirhe\n"
+msgstr "Palveluvirhe"
 
 #: ../mdkonline.pm:192
 #, c-format
@@ -712,9 +713,9 @@ msgstr ""
 "Ole hyvä ja yritä uudelleen myöhemmin"
 
 #: ../mdkonline.pm:193
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Salasana ei täsmää."
+msgstr "Salasana ei täsmää"
 
 #: ../mdkonline.pm:194
 #, c-format
@@ -726,9 +727,9 @@ msgstr ""
 "Ole hyvä ja yritä uudelleen myöhemmin"
 
 #: ../mdkonline.pm:195
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Kirjautumistunnus:"
+msgstr "Käyttäjä kielletty"
 
 #: ../mdkonline.pm:195
 #, c-format
@@ -736,9 +737,9 @@ msgid "User account forbidden by Mandriva web services"
 msgstr "Käyttäjätili estety Mandrivan webbipalveluissa"
 
 #: ../mdkonline.pm:196
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Yhteyden nimi"
+msgstr "Yhteysvirhe"
 
 #: ../mdkonline.pm:196
 #, c-format
@@ -785,19 +786,19 @@ msgstr "  --noX\t\t\t- tekstipohjainen Mandriva Update.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- kirjaa tapahtumalokin\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle file.bundle\t- tulkitse ja asenna paketteja .bundle metainfo tiedostosta.\n"
 
 #: ../mdkupdate:149
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Pävityslistan hakeminen ei onnistu: %s"
 
 #: ../mdkupdate:157 ../mdkupdate:174
 #, c-format
@@ -810,7 +811,7 @@ msgstr "Varoitus"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Sinun pitää ensin asenna järjestelmäsi kovalevylle käyttäen Live-asennusvelhoa."
 
 #: ../mdkupdate:162 ../mdkupdate:183
 #, c-format
@@ -824,6 +825,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Tunnistaminen kokoelma-palvelimeen epäonnistui:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -833,6 +837,9 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Mandiva Online asiakasohjelma on liian vanha.\n"
+"\n"
+"Sinun pitää päivittää uudempaan versioon. Voit hakea sitä osoitteesta: http://start.mandriva.com/"
 
 #: ../mdkupdate:196
 #, c-format
@@ -842,7 +849,7 @@ msgstr "Ilmeni virhe"
 #: ../mdkupdate:215
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Tämä kokoelma ei ole oikein määritelty, Lopetetaan."
 
 #: ../mdkupdate:227
 #, c-format
@@ -1076,3 +1083,4 @@ msgstr "Ei pystytty päivittämään paketteja update_source-lähteestä.\n"
 
 #~ msgid "Unable to create mdkupdate medium.\n"
 #~ msgstr "Ei pystytty luomaan mdkupdate lähdettä.\n"
+

@@ -14,13 +14,13 @@ msgstr ""
 "Project-Id-Version: mdkonline-sv - Mandriva 2007 Release\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-04-06 21:18+0200\n"
-"PO-Revision-Date: 2006-04-01 19:20+0300\n"
+"PO-Revision-Date: 2006-08-26 23:16+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../mdkapplet:65
 #, c-format
@@ -69,8 +69,7 @@ msgstr "Tjänsten är ej aktiverad. Klicka på \"Online webbsajt\""
 #: ../mdkapplet:113
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Denna version stöds inte (för gammal version, eller utvecklingsversion)"
+msgstr "Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
 #: ../mdkapplet:118 ../mdkapplet:203
 #, c-format
@@ -290,19 +289,19 @@ msgid "About..."
 msgstr "Om.."
 
 #: ../mdkapplet:473 ../mdkapplet:493
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:475
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s, Mandriva"
 
 #: ../mdkapplet:486
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online ger tillgång till Mandriva webtjänster."
 
 #: ../mdkapplet:506
 #, c-format
@@ -338,32 +337,32 @@ msgstr "  --help\t\t- visa det här hjälpmeddelandet.\n"
 #: ../mdkonline:61
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- maskinnamn.\n"
 
 #: ../mdkonline:62
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- namnet på användarens land. \n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- amvänd interaktivt läge.\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- använd icke-interaktivt läge.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - användarens inloggningsnamn.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- användarens lösenord.\n"
 
 #: ../mdkonline:81 ../mdkonline:114
 #, c-format
@@ -831,6 +830,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Kunde inte autentikera mot bundle-servern:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:197
 #, c-format
@@ -931,3 +933,4 @@ msgstr "Kunde ej uppdatera paket från update_source källan.\n"
 
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "Problem med att kontakta servern \n"
+
