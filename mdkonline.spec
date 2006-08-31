@@ -69,9 +69,34 @@ chmod +x $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="System" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription"
-?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="x11" kde_opt="InitialPreference=15" section="Configuration/Other" mimetypes="application/x-mdv-exec" title="Mandriva Online Bundle" longtitle="Mandriva Linux bundle handler"
+?package(%{name}): needs="x11" command="%{_sbindir}/%{name}" section="System" icon="mdkonline.png" title="Mandriva Online" longtitle="Wizard for update service subscription" xdg="true"
+?package(%{name}): command="%{_sbindir}/mdkupdate --bundle" needs="x11" kde_opt="InitialPreference=15" section="Configuration/Other" mimetypes="application/x-mdv-exec" title="Mandriva Online Bundle" longtitle="Mandriva Linux bundle handler" xdg="true"
 EOF
+
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mdvonline.desktop <<EOF
+[Desktop Entry]
+Name=Mandriva Online
+Comment=Wizard for update service subscription
+Exec=%{_sbindir}/%{name}
+Icon=mdkonline.png
+Type=Application
+StartupNotify=true
+Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
+EOF
+
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mdvonline.desktop <<EOF
+[Desktop Entry]
+Name=Mandriva Online Bundle
+Comment=Mandriva Linux bundle handler
+Exec=%{_sbindir}/mdkupdate --bundle
+Icon=mdkonline.png
+MimeType=application/x-mdv-exec
+Type=Application
+StartupNotify=true
+Categories=X-MandrivaLinux-System-Configuration-Other;Settings;
+EOF
+
 
 %post
 /usr/bin/update-mime-database /usr/share/mime >/dev/null
@@ -113,6 +138,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib/libDrakX/drakfirsttime
 %{_prefix}/lib/libDrakX/drakfirsttime/*.pm
 %{_menudir}/%{name}
+%{_datadir}/applications/mandriva-*.desktop
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
 %{_liconsdir}/*.png
@@ -134,6 +160,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Thu Aug 31 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.1-1mdv2007.0
+- XDG menu
 - translation snapshot
 
 * Thu Apr 13 2006 Warly <warly@mandrakesoft.com> 2.0-15mdk
