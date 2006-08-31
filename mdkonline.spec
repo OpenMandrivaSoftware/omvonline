@@ -1,6 +1,6 @@
-%define version 2.0
+%define version 2.1
 %define name mdkonline
-%define release %mkrel 15
+%define release %mkrel 1
 
 Summary:	Mandriva Online Update Tool  
 Name:		%{name}
@@ -133,6 +133,9 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Thu Aug 31 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.1-1mdv2007.0
+- translation snapshot
+
 * Thu Apr 13 2006 Warly <warly@mandrakesoft.com> 2.0-15mdk
 - Include server error message when requiring the bundle
 
