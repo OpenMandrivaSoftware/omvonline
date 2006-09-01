@@ -176,7 +176,9 @@ my $wiz =
 			      name => N("Create a Mandriva Online Account"),
 			      data => sub {
 				  [
-				   { label => N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo' },
+				   { label => 
+				   #-PO: that is for things like "Mr", "Ms",...
+				   N("Greeting:"), val => \$greeting, list => [ @greets ], type => 'combo' },
 				   { label => N("First name:"), val => \$firstname },
 				   { label => N("Last name:"), val => \$lastname },
 				   { label => N("Email address:"), val => \$email },
