@@ -1,20 +1,21 @@
 # translation of Mandriva Online to Hungarian
 # Mandriva Online - hu
-# Copyright (C) 2001, 2004, 2005, Free Software Foundation, Inc.
-# Arpad Biro <biro_arpad@yahoo.com>, 2001, 2004, 2005.
+# Copyright (C) 2001, 2004, 2005, 2006, Free Software Foundation, Inc.
+# Arpad Biro <biro_arpad@yahoo.com>, 2001, 2004, 2005, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mandriva Online\n"
+"Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-01 14:03+0200\n"
-"PO-Revision-Date: 2005-09-19 23:43+0200\n"
-"Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
+"PO-Revision-Date: 2006-09-02 00:22+0200\n"
+"Last-Translator: Arpad Biro\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../mdkapplet:87
 #, c-format
@@ -38,12 +39,12 @@ msgstr "A rendelkezésre álló csomagok lekérdezése..."
 #: ../mdkapplet:105
 #, c-format
 msgid "New updates are available for your system"
-msgstr "Elérhetők frissítések az Ön rendszeréhez"
+msgstr "Új frissítések érhetők el az Ön rendszeréhez"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Elérhetők frissítések az Ön rendszeréhez"
+msgstr "Új kötegek érhetők el az Ön rendszeréhez"
 
 #: ../mdkapplet:117
 #, c-format
@@ -60,8 +61,7 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:135
 #, c-format
@@ -294,19 +294,19 @@ msgid "About..."
 msgstr "Névjegy..."
 
 #: ../mdkapplet:478
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:481
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s, Mandriva"
 
 #: ../mdkapplet:493
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
 
 #: ../mdkapplet:501
 #, c-format
@@ -342,32 +342,32 @@ msgstr "  --help\t\t- jelen segítség megjelenítése\n"
 #: ../mdkonline:62
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- gépnév\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- a felhasználó országának neve\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- interaktív mód használata\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- nem-interaktív mód használata\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - a felhasználó bejelentkezési neve\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- a felhasználó jelszava\n"
 
 #: ../mdkonline:85 ../mdkonline:118
 #, c-format
@@ -437,14 +437,14 @@ msgid "Password:"
 msgstr "Jelszó:"
 
 #: ../mdkonline:143
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Gépnév:"
+msgstr "Gépleírás:"
 
 #: ../mdkonline:144
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(példa: az otthoni irodám számítógépe)"
 
 #: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
 #: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
@@ -556,7 +556,7 @@ msgstr "Helytelen levélcím.\n"
 #: ../mdkonline:206
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Nem sikerült létrehozni az azonosítót."
 
 #: ../mdkonline:214
 #, c-format
@@ -633,7 +633,7 @@ msgstr "Biztonsági hiba"
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Általános hiba (a gép már regisztrálva van)"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -743,8 +743,7 @@ msgstr "A felhasználó le van tiltva"
 #: ../mdkonline.pm:218
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
-"A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
+msgstr "A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
 
 #: ../mdkonline.pm:219
 #, c-format
@@ -790,24 +789,24 @@ msgstr "  --mnf\t\t\t- MNF-specifikus szkriptek indítása\n"
 #: ../mdkupdate:78
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX\t\t\t- a Mandriva Update Newt-felületet használó verziója\n"
+msgstr "  --noX\t\t\t- a Mandriva Update szöveges felületű verziója\n"
 
 #: ../mdkupdate:79
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- a tevékenység naplózása\n"
 
 #: ../mdkupdate:80
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle fájl.bundle\t- csomagelemzés és -telepítés .bundle metainfó-fájlból\n"
 
 #: ../mdkupdate:150
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "A frissítések listája nem érhető el: %s"
 
 #: ../mdkupdate:158 ../mdkupdate:204
 #, c-format
@@ -821,6 +820,8 @@ msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
+"Előbb telepítenie kell a rendszert a merevlemezre a \"Live Install\" "
+"varázslóval."
 
 #: ../mdkupdate:163 ../mdkupdate:214
 #, c-format
@@ -834,6 +835,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Nem sikerült bejelentkezni a kötegkiszolgálóra:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:199 ../mdkupdate:228
 #, c-format
@@ -848,11 +852,15 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"A Mandriva Online-kliens túl régi verziójú.\n"
+"\n"
+"Frissítse egy új verzióra. A következő helyen szerezhető be: "
+"http://start.mandriva.com"
 
 #: ../mdkupdate:247
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "A köteg formátuma nem megfelelő. Kilépés."
 
 #: ../mdkupdate:259
 #, c-format
@@ -869,18 +877,3 @@ msgstr "Csomagok telepítése...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Kis türelmet - a rendszer egy feldolgozást végez..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Konfiguráció küldése..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Nem biztonságos hívás: az eljárás csak httpS-en keresztül érhető el"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "%s fájl nem található. Futtassa a Mandriva Online varázslót."
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "A Mandriva Update nem tudott kapcsolatba lépni a géppel; újabb próba."
