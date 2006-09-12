@@ -1,24 +1,22 @@
 # Translation of cs.po to Czech
-# Translation of mdkonline-cs.po to Czech
 # Czech translation of Madrake Online.
 # Copyright (C) 2001 Mandriva S.A.
-# Radek Vybíral <Radek.Vybiral@vsb.cz>, 2001.
-# Michal Bukovjan <bukm@centrum.cz>, 2002, 2003, 2004, 2005.
 #
+# Radek Vybíral <Radek.Vybiral@vsb.cz>, 2001.
+# Michal Bukovjan <bukm@centrum.cz>, 2002, 2003, 2004, 2005, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-01 14:03+0200\n"
-"PO-Revision-Date: 2005-09-19 00:39+0200\n"
+"PO-Revision-Date: 2006-09-12 22:56+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../mdkapplet:87
 #, c-format
@@ -45,9 +43,9 @@ msgid "New updates are available for your system"
 msgstr "Pro váš systém jsou k dispozici nové aktualizace"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Pro váš systém jsou k dispozici nové aktualizace"
+msgstr "Pro váš systém jsou k dispozici nové produktové balíky"
 
 #: ../mdkapplet:117
 #, c-format
@@ -289,19 +287,19 @@ msgid "About..."
 msgstr "O aplikaci..."
 
 #: ../mdkapplet:478
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:481
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright ©%s by Mandriva"
 
 #: ../mdkapplet:493
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
 #: ../mdkapplet:501
 #, c-format
@@ -338,32 +336,32 @@ msgstr "  --help\t\t- vytiskne tuto nápovědu.\n"
 #: ../mdkonline:62
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- název počítače.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- název země uživatele. \n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- použít interaktivní režim.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- použít neinteraktivní režim.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - přihlašovací jméno uživatele.\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- heslo uživatele.\n"
 
 #: ../mdkonline:85 ../mdkonline:118
 #, c-format
@@ -433,14 +431,14 @@ msgid "Password:"
 msgstr "Heslo:"
 
 #: ../mdkonline:143
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Název počítače:"
+msgstr "Popis počítače:"
 
 #: ../mdkonline:144
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Např.: Počítač v mé domácí kanceláři)"
 
 #: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
 #: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
@@ -550,7 +548,7 @@ msgstr "Neplatná emailová adresa!\n"
 #: ../mdkonline:206
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Vytvoření účtu selhalo!"
 
 #: ../mdkonline:214
 #, c-format
@@ -626,7 +624,7 @@ msgstr "Bezpečnostní chyba"
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Obecná chyba (počítač je již zaregistrován)"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -788,19 +786,19 @@ msgstr "  --noX\t\t\t- textová verze Mandriva Update.\n"
 #: ../mdkupdate:79
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 
 #: ../mdkupdate:80
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle soubor.bundle\t- zpracovat a instalovat balíček z metasouboru .bundle.\n"
 
 #: ../mdkupdate:150
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Nelze získat seznam aktualizací: %s"
 
 #: ../mdkupdate:158 ../mdkupdate:204
 #, c-format
@@ -813,7 +811,7 @@ msgstr "Varování"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Nejprve musíte instalovat systém na váš pevný disk pomocí průvodce 'Live Install'."
 
 #: ../mdkupdate:163 ../mdkupdate:214
 #, c-format
@@ -827,6 +825,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Selhalo ověření na serveru s produktovými balíky:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:199 ../mdkupdate:228
 #, c-format
@@ -841,11 +842,15 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Tato verze klienta Mandriva Online je příliš stará.\n"
+"\n"
+"Musíte aktualizovat na novou verzi. Novou verzi lze získat na "
+"adrese http://start.mandriva.com"
 
 #: ../mdkupdate:247
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Tento produktový balík není správně formátován. Končím."
 
 #: ../mdkupdate:259
 #, c-format
@@ -862,21 +867,3 @@ msgstr "Instaluji balíčky...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Systém je zaneprázdněn. Počkejte..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Posílám konfiguraci..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Nezabezpečené volání: Metoda je dostupná pouze pomocí HTTPS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "Nebyl nalezen soubor %s. Spusťte prosím nejprve průvodce pro Mandriva "
-#~ "Online"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Službě Mandriva Update se nepodařilo připojit k serveru, zkuste to prosím "
-#~ "znovu."
