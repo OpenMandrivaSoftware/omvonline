@@ -1,25 +1,24 @@
-# translation of pl.po to polish
+# translation of mdkonline-pl.po to Polish
 # translation of pl.po to
-# translation of mdkonline-pl.po to polski
-# translation of pl.po to Polish
 # Aplikacja umożliwiająca zdalne korzystanie z usług Mandriva Linux.
-# Copyright (C) 2002, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
 # Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>, 2002-2004.
 # Tomasz Bednarski <bednarski@skrzynka.pl>, 2004, 2005.
 # Tomasz Bednarski <tomasz.bednarski@mandriva.pl>, 2005.
-#
+# Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: pl\n"
+"Project-Id-Version: mdkonline-pl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-01 14:03+0200\n"
-"PO-Revision-Date: 2005-10-22 11:26+0200\n"
-"Last-Translator: Tomasz Bednarski <tomasz.bednarski@mandriva.pl>\n"
-"Language-Team: polish <pl@li.org>\n"
+"PO-Revision-Date: 2006-09-12 10:46+0200\n"
+"Last-Translator: Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.2\n"
 
 #: ../mdkapplet:87
 #, c-format
@@ -46,9 +45,9 @@ msgid "New updates are available for your system"
 msgstr "Dostępne są nowe aktualizacje dla Twojego systemu"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Dostępne są nowe aktualizacje dla Twojego systemu"
+msgstr "Dostępne są nowe pakiety dla twojego systemu"
 
 #: ../mdkapplet:117
 #, c-format
@@ -179,8 +178,7 @@ msgstr "Uruchamianie programu drakconnect\n"
 #: ../mdkapplet:282
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
+msgstr "Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
 
 #: ../mdkapplet:289
 #, c-format
@@ -220,8 +218,7 @@ msgstr "Nieznany stan"
 #: ../mdkapplet:329
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
+msgstr "Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
 
 #: ../mdkapplet:330
 #, c-format
@@ -247,8 +244,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
+msgstr "Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
 
 #: ../mdkapplet:339
 #, c-format
@@ -291,19 +287,19 @@ msgid "About..."
 msgstr "O programie..."
 
 #: ../mdkapplet:478
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:481
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s by Mandriva"
 
 #: ../mdkapplet:493
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online umożliwia korzystanie z usług sieciowych Mandrivy."
 
 #: ../mdkapplet:501
 #, c-format
@@ -340,32 +336,32 @@ msgstr "  --help\t\t- wyświetla ten komunikat pomocy.\n"
 #: ../mdkonline:62
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- nazwa komputera.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- nazwa kraju użytkownika. \n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- używaj trybu interaktywnego.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- używaj trybu nie interaktywnego.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - login użytkownika.\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- hasło użytkownika.\n"
 
 #: ../mdkonline:85 ../mdkonline:118
 #, c-format
@@ -434,14 +430,14 @@ msgid "Password:"
 msgstr "Hasło:"
 
 #: ../mdkonline:143
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Nazwa komputera:"
+msgstr "Opis komputera:"
 
 #: ../mdkonline:144
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(np. Mój komputer biurowy)"
 
 #: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
 #: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
@@ -552,7 +548,7 @@ msgstr "To nie jest poprawny adres e-mail!\n"
 #: ../mdkonline:206
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Utworzenie konta nie powiodło się!"
 
 #: ../mdkonline:214
 #, c-format
@@ -628,7 +624,7 @@ msgstr "Błąd bezpieczeństwa"
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Błąd ogólny (komputer jest już zarejestrowany)"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -790,19 +786,19 @@ msgstr "  --noX\t\t\t- Mandriva Update pracujący w trybie tekstowym.\n"
 #: ../mdkupdate:79
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- zapisuj wykonane operacje\n"
 
 #: ../mdkupdate:80
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
+msgstr "  --bundle file.bundle\t- przetwarzaj i instaluj pakiet z pliku meta .bundle.\n"
 
 #: ../mdkupdate:150
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Pobranie listy aktualizacji było niemożliwe: %s"
 
 #: ../mdkupdate:158 ../mdkupdate:204
 #, c-format
@@ -815,7 +811,7 @@ msgstr "Ostrzeżenie"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "W pierwszej kolejności należy zainstalować system na dysku twardym. W tym celu użyj druida Live Install."
 
 #: ../mdkupdate:163 ../mdkupdate:214
 #, c-format
@@ -829,6 +825,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Uwierzytelnienie serwera z pakietami nie powiodło się:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:199 ../mdkupdate:228
 #, c-format
@@ -843,11 +842,14 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Zainstalowana wersja klienta Mandriva Online jest zbyt stara.\n"
+"\n"
+"Zaktualizuj program do nowej wersji. Można ją pobrać ze strony http://start.mandriva.com"
 
 #: ../mdkupdate:247
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Ten pakiet nie może zostać przetworzony. Operacja przerwana."
 
 #: ../mdkupdate:259
 #, c-format
@@ -864,19 +866,3 @@ msgstr "Instalowanie pakietów...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"
 
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "System jest zajęty. Proszę czekać ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Przesyłanie konfiguracji..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Niebezpieczne wywołanie: metoda jest dostępna tylko przez https"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Nie znaleziono pliku %s. Uruchom najpierw druida mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update nie może nawiązać połączenia z witryną, spróbujemy "
-#~ "później."
