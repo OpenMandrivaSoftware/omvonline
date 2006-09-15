@@ -1,4 +1,4 @@
-%define version 2.1
+%define version 2.2
 %define name mdkonline
 %define release %mkrel 1
 
@@ -172,6 +172,12 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Sat Sep 16 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.2-1mdv2007.0
+- fix overwriting first XDG menu entry
+- mdkapplet:
+  o fix autostart in KDE (#25099)
+  o start it under Fluxbox & XFce4 too
+
 * Thu Aug 31 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.1-1mdv2007.0
 - XDG menu
 - translation snapshot
