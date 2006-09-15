@@ -57,7 +57,7 @@ cat > $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet <<EOF
 #!/bin/sh
 DESKTOP=\$1
 case \$DESKTOP in
-   GNOME|IceWM) exec /usr/bin/mdkapplet;;
+   GNOME|IceWM|Fluxbox|XFce4) exec /usr/bin/mdkapplet;;
 esac
 EOF
 
