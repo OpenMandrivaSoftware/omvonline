@@ -57,7 +57,7 @@ cat > $RPM_BUILD_ROOT%_sysconfdir/X11/xinit.d/mdkapplet <<EOF
 #!/bin/sh
 DESKTOP=\$1
 case \$DESKTOP in
-   KDE|GNOME|IceWM) exec /usr/bin/mdkapplet;;
+   GNOME|IceWM) exec /usr/bin/mdkapplet;;
 esac
 EOF
 
@@ -97,6 +97,18 @@ StartupNotify=true
 Categories=X-MandrivaLinux-System-Configuration-Other;Settings;
 EOF
 
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/autostart
+cat > $RPM_BUILD_ROOT%{_datadir}/autostart/mandriva-mdvonline.desktop <<EOF
+[Desktop Entry]
+Name=Mandriva Online Applet
+Comment=Applet for Mandriva Online
+Exec=%{_bindir}/mdkapplet
+Icon=mdkonline.png
+Type=Application
+StartupNotify=true
+Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
+X-KDE-autostart-after=kdesktop
+EOF
 
 %post
 /usr/bin/update-mime-database /usr/share/mime >/dev/null
@@ -138,6 +150,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib/libDrakX/drakfirsttime
 %{_prefix}/lib/libDrakX/drakfirsttime/*.pm
 %{_menudir}/%{name}
+%{_datadir}/autostart/mandriva-*.desktop
 %{_datadir}/applications/mandriva-*.desktop
 %{_miconsdir}/*.png
 %{_iconsdir}/*.png
