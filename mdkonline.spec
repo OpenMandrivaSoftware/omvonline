@@ -85,7 +85,7 @@ StartupNotify=true
 Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
 EOF
 
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mdvonline.desktop <<EOF
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-mdvonline-bundle.desktop <<EOF
 [Desktop Entry]
 Name=Mandriva Online Bundle
 Comment=Mandriva Linux bundle handler
