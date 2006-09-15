@@ -237,7 +237,7 @@ sub check_valid_email {
 sub check_valid_boxname {
     my $boxname = shift;
     return 0 if length($boxname) >= 40;
-    my $bt = $boxname =~ /^[a-zA-Z][a-zA-Z0-9_]+$/i ? 1 : 0;
+    my $bt = $boxname =~ /^[a-zA-Z][a-zA-Z0-9_.]+$/i ? 1 : 0;
     $bt;
 }
 
