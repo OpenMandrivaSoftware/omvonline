@@ -96,6 +96,7 @@ export:
 cvstag:
 	cvs tag $(CVSTAGOPT) $(TAG)
 
+log: changelog
 changelog: ../common/username
 	svn2cl --authors ../common/username.xml
 	rm -f ChangeLog.bak
