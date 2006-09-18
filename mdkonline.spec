@@ -1,4 +1,4 @@
-%define version 2.2
+%define version 2.3
 %define name mdkonline
 %define release %mkrel 1
 
@@ -172,6 +172,10 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Mon Sep 18 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.3-1mdv2007.0
+- mdkonline: accept dots in machine names
+- mdkapplet: fix closing about dialog when "close" button is clicked (#25867)
+
 * Sat Sep 16 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.2-1mdv2007.0
 - fix overwriting first XDG menu entry
 - mdkapplet:
