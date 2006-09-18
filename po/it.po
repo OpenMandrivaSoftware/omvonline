@@ -11,18 +11,18 @@ msgstr ""
 "Project-Id-Version: mdkonline-it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-01 14:03+0200\n"
-"PO-Revision-Date: 2005-02-09 21:44+0100\n"
-"Last-Translator: \n"
-"Language-Team:  <en@li.org>\n"
+"PO-Revision-Date: 2006-09-17 01:10+0200\n"
+"Last-Translator: Andrea Celli <a.celli@caltanet.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #: ../mdkapplet:87
 #, c-format
 msgid "Your system is up-to-date"
-msgstr "Il tuo sistema è aggiornato"
+msgstr "Il sistema è aggiornato"
 
 #: ../mdkapplet:93
 #, c-format
@@ -44,9 +44,9 @@ msgid "New updates are available for your system"
 msgstr "Nuovi aggiornamenti disponibili per il tuo sistema"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Nuovi aggiornamenti disponibili per il tuo sistema"
+msgstr "Nuovi pacchetti disponibili per il tuo sistema"
 
 #: ../mdkapplet:117
 #, c-format
@@ -289,19 +289,19 @@ msgid "About..."
 msgstr "Informazioni su..."
 
 #: ../mdkapplet:478
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:481
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s di Mandriva"
 
 #: ../mdkapplet:493
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online dà accesso ai servizi web di Mandriva."
 
 #: ../mdkapplet:501
 #, c-format
@@ -338,32 +338,32 @@ msgstr "  --help\t\t- stampa questo messaggio d'aiuto.\n"
 #: ../mdkonline:62
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- nome host.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- Paese dell'utente. \n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- usa modalità interattiva.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- usa modalità non-interattiva.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - nome con cui l'utente accede.\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- password  dell'utente.\n"
 
 #: ../mdkonline:85 ../mdkonline:118
 #, c-format
@@ -386,9 +386,9 @@ msgid "Mr."
 msgstr "Sig."
 
 #: ../mdkonline:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mrs."
-msgstr "XMrIs"
+msgstr "Sig.ra"
 
 #: ../mdkonline:94
 #, c-format
@@ -423,9 +423,9 @@ msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "Immetti nome utente, password e nome computer per Mandriva Online:"
 
 #: ../mdkonline:140 ../mdkonline:184
-#, fuzzy, c-format
+#, c-format
 msgid "Email address:"
-msgstr "Indirizzo di posta in uscita"
+msgstr "Indirizzo email:"
 
 #: ../mdkonline:141 ../mdkonline:185
 #, c-format
@@ -433,14 +433,14 @@ msgid "Password:"
 msgstr "Password:"
 
 #: ../mdkonline:143
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Nome computer:"
+msgstr "Descrizione computer:"
 
 #: ../mdkonline:144
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Ad es.: Il computer su cui lavoro)"
 
 #: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
 #: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
@@ -450,9 +450,10 @@ msgid "Error"
 msgstr "Errore"
 
 #: ../mdkonline:149
-#, fuzzy, c-format
+#, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Il nome dei punti di mount dovrebbe contenere solo lettere e numeri"
+msgstr ""
+"Il nome della macchina deve contenere solo lettere e numeri, non più di 40"
 
 #: ../mdkonline:152
 #, c-format
@@ -507,9 +508,9 @@ msgstr "Crea un account per Mandriva Online"
 
 #. -PO: that is for things like "Mr", "Ms",...
 #: ../mdkonline:181
-#, fuzzy, c-format
+#, c-format
 msgid "Greeting:"
-msgstr "Verde"
+msgstr "Titolo:"
 
 #: ../mdkonline:182
 #, c-format
@@ -517,9 +518,9 @@ msgid "First name:"
 msgstr "Nome:"
 
 #: ../mdkonline:183
-#, fuzzy, c-format
+#, c-format
 msgid "Last name:"
-msgstr "Nome:"
+msgstr "Cognome:"
 
 #: ../mdkonline:186
 #, c-format
@@ -536,9 +537,9 @@ msgstr ""
 "Per favore, riprova\n"
 
 #: ../mdkonline:197
-#, fuzzy, c-format
+#, c-format
 msgid "Please fill in each field"
-msgstr "Per favore compila tutti i campi\n"
+msgstr "Per favore compila tutti i campi"
 
 #: ../mdkonline:201
 #, c-format
@@ -548,7 +549,7 @@ msgstr "Non è un indirizzo di email valido!\n"
 #: ../mdkonline:206
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "È stato impossibile creare questo account!"
 
 #: ../mdkonline:214
 #, c-format
@@ -619,19 +620,19 @@ msgstr ""
 "errore nella login/password o nella configurazione del router/firewall"
 
 #: ../mdkonline.pm:207
-#, fuzzy, c-format
+#, c-format
 msgid "Security error"
-msgstr "Avvisi di sicurezza:"
+msgstr "Errore di sicurezza"
 
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Errore generico (macchina già registrata)"
 
 #: ../mdkonline.pm:208
-#, fuzzy, c-format
+#, c-format
 msgid "Database error"
-msgstr "Errore del database"
+msgstr "Errore nel database"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -639,21 +640,23 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Database del server con problemi\n"
+"Meglio riprovare più tardi"
 
 #: ../mdkonline.pm:209
-#, fuzzy, c-format
+#, c-format
 msgid "Registration error"
-msgstr "Tipo di iscrizione"
+msgstr "Errore di registrazione"
 
 #: ../mdkonline.pm:209
-#, fuzzy, c-format
+#, c-format
 msgid "Some parameters are missing"
-msgstr "Manca il nome della stampante remota!"
+msgstr "Mancano alcuni parametri"
 
 #: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, fuzzy, c-format
+#, c-format
 msgid "Password error"
-msgstr "Password per %s"
+msgstr "Errore nella password"
 
 #: ../mdkonline.pm:210
 #, c-format
@@ -661,43 +664,47 @@ msgid "Wrong password"
 msgstr "Password errata"
 
 #: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, fuzzy, c-format
+#, c-format
 msgid "Login error"
-msgstr "errore sconosciuto"
+msgstr "Errore nel nome utente"
 
 #: ../mdkonline.pm:211
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
-msgstr "La directory di destinazione è già in uso, scegline un'altra."
+msgstr ""
+"L'email fornita è già in uso,\n"
+"indicane un'altra.\n"
 
 #: ../mdkonline.pm:212
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "L'email fornita non è valida o è vietata."
 
 #: ../mdkonline.pm:213
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "Il campo del login è vuoto, devi inserire un nome."
+msgstr ""
+"Il campo dell'indirizzo email è vuoto\n"
+"Devi inserirne uno."
 
 #: ../mdkonline.pm:214
-#, fuzzy, c-format
+#, c-format
 msgid "Restriction Error"
-msgstr "WEP ristretto"
+msgstr "Errore di limitazione"
 
 #: ../mdkonline.pm:214
-#, fuzzy, c-format
+#, c-format
 msgid "Database access forbidden"
-msgstr "Server database"
+msgstr "Vietato l'accesso al database"
 
 #: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, fuzzy, c-format
+#, c-format
 msgid "Service error"
-msgstr "Errore di scrittura\n"
+msgstr "Errore nel servizio"
 
 #: ../mdkonline.pm:215
 #, c-format
@@ -705,11 +712,13 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"I servizi Web di Mandriva sono temporaneamente indisponibili\n"
+"È meglio riprovare più tardi"
 
 #: ../mdkonline.pm:216
-#, fuzzy, c-format
+#, c-format
 msgid "Password mismatch"
-msgstr "Le password non corrispondono."
+msgstr "La password non corrisponde"
 
 #: ../mdkonline.pm:217
 #, c-format
@@ -721,9 +730,9 @@ msgstr ""
 "Riprova più tardi per favore"
 
 #: ../mdkonline.pm:218
-#, fuzzy, c-format
+#, c-format
 msgid "User Forbidden"
-msgstr "Login utente:"
+msgstr "Utente interdetto"
 
 #: ../mdkonline.pm:218
 #, c-format
@@ -731,9 +740,9 @@ msgid "User account forbidden by Mandriva web services"
 msgstr "Account utente interdetto dai servizi web Mandriva"
 
 #: ../mdkonline.pm:219
-#, fuzzy, c-format
+#, c-format
 msgid "Connection error"
-msgstr "Nome connessione"
+msgstr "Errore di connessione"
 
 #: ../mdkonline.pm:219
 #, c-format
@@ -770,17 +779,17 @@ msgstr "  --applet\t\t- avvia Mandriva Linux Update.\n"
 #: ../mdkupdate:77
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf\t\t\t- lancia gli script specifici di mnf. \n"
 
 #: ../mdkupdate:78
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --applet       - avvia Mandriva Linux Update.\n"
+msgstr "  --noX\t\t\t- Mandriva Update in versione testuale.\n"
 
 #: ../mdkupdate:79
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- mantieni un log delle azioni fatte\n"
 
 #: ../mdkupdate:80
 #, c-format
@@ -788,11 +797,13 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle file.bundle\t- esamina e installa un pacchetto da un file "
+"metainfo .bundle.\n"
 
 #: ../mdkupdate:150
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Impossibile recuperare elenco aggiornamenti : %s"
 
 #: ../mdkupdate:158 ../mdkupdate:204
 #, c-format
@@ -806,6 +817,8 @@ msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
+"Bisogna prima installare il sistema sul disco fisso seguendo la procedura "
+"guidata \"Live install\"."
 
 #: ../mdkupdate:163 ../mdkupdate:214
 #, c-format
@@ -819,6 +832,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Impossibile autentificarsi presso il server dei pacchetti bundle :\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:199 ../mdkupdate:228
 #, c-format
@@ -833,16 +849,21 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"La versione del client Mandriva Online è troppo vecchia.\n"
+"\n"
+"Devi installare una nuova versione. Puoi scaricarla da http://start.mandriva."
+"com"
 
 #: ../mdkupdate:247
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr ""
+"Questo pacchetto non è formattato correttamente. Annullamento in corso."
 
 #: ../mdkupdate:259
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
+msgstr "Scegli i pacchetti da installare e premi OK"
 
 #: ../mdkupdate:283
 #, c-format
