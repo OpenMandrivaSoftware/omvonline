@@ -476,6 +476,7 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About..."))), activate => sub {
                                         my $ver = 1; # automatically set from spec file
                                         my $w = gtkset_name(Gtk2::AboutDialog->new, N("Mandriva Online %s"), $ver);
+                                        $w->signal_connect(response => sub { $_[0]->destroy });
                                         $w->set_version($ver);
                                         $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
                                         $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2006'));
