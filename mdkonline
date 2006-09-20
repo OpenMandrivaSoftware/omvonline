@@ -39,6 +39,8 @@ BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' }
 use mdkonline;
 use Digest::MD5  qw(md5 md5_hex md5_base64);
 
+$ugtk2::wm_icon = '/usr/share/icons/large/mdkonline.png';
+
 #my $online_link = 'http://online3.mandriva.com/o/soap/';
 
 my $confdir = '/root/.MdkOnline';
