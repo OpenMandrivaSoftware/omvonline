@@ -70,7 +70,7 @@ sub upgrade2v3() {
     if (-e $rootconf_file) {
 	my %oc = getVarsFromSh($rootconf_file);
 	my $res = soap_recover_service($oc{LOGIN}, '{md5}' . $oc{PASS}, $oc{MACHINE}, $oc{COUNTRY});
-	print Dumper($res);
+	print Data::Dumper->Dump([ $res ], [qw(res)]);
 	$res = check_server_response($res);
     }
     $res;
@@ -151,7 +151,7 @@ sub register_upload_host {
 	$res = upgrade2v3();
     } elsif (!$wc->{HOST_ID} && !-e $rootconf_file) {
 	$registered = soap_register_host($login, $password, $boxname, $descboxname, $country);
-	print Dumper($registered);
+	print Data::Dumper->Dump([ $registered ], [qw(registered)]);
 	$res = check_server_response($registered);
     }
     return $res if defined $res && $res ne 'OK';
@@ -219,7 +219,7 @@ sub check_server_response {
 	  99  => [ N("Connection error"), N("Mandriva web services not reachable") ]
 	  };
     foreach my $num ([9, 8], [21, 20]) { $hash_ret->{$num->[0]} = $hash_ret->{$num->[1]} }
-    #    print Dumper($response);
+    # print Data::Dumper->Dump([ $response ], [qw(response)]);
     my $code = $response->{code} || '99';
     my $answer = $response->{code} eq 0 ? 'OK' : $hash_ret->{$code} ? $hash_ret->{$code}[0] . ' : ' . $hash_ret->{$code}[1] . "\n\n" . $response->{message} : $response->{message};
     $answer eq 'OK' and write_conf($response) if !$<;
@@ -354,11 +354,11 @@ sub get_date() {
 
 sub write_wide_conf {
     my ($soap_response) = shift;
-    #    print Dumper($soap_response);
+    #print Data::Dumper->Dump([ $soap_response ], [qw(soap_response)]);
     my $date = get_date(); my $conf_hash;
     %$conf_hash = getVarsFromSh($conf_file);
     $conf_hash->{uc($_)} = $soap_response->{data}{$_} foreach keys %{$soap_response->{data}};
-    #print Dumper $conf_hash;
+    #print Data::Dumper->Dump([ $conf_hash ], [qw(conf_hash)]);
     $conf_hash->{DATE_SET} = $date;
     foreach my $alias (['email', 'user_email'], ['customer_id', 'user_id']) {
 	exists $conf_hash->{uc($alias->[0])} and $conf_hash->{uc($alias->[1])} = $conf_hash->{uc($alias->[0])};
@@ -442,7 +442,7 @@ sub get_conf_from_dns() {
     my $ret;
     if ($info) {
 	if (defined $info->{user}{name} && defined $info->{user}{pass} && $info->{user}{name} ne '' && $info->{user}{pass} ne '') {
-	    print Dumper($info);
+         #print Data::Dumper->Dump([ $info ], [qw(info)]);
 	    # TODO check service certificate
 	    $ret = mdkonline::register_from_dns($info);
 	    if ($ret) {
