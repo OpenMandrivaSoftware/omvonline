@@ -1,4 +1,4 @@
-%define version 2.3
+%define version 2.4
 %define name mdkonline
 %define release %mkrel 1
 
@@ -172,6 +172,15 @@ rm -rf $RPM_BUILD_ROOT
 # http://www.mandrivalinux.com/en/cvs.php3)
 
 %changelog
+* Wed Sep 20 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.4-1mdv2007.0
+- mdkonline:
+  o better looking error dialogs
+  o if authentication failed with "No host for this id", just
+    transparently register the host again (eg: when host was deleted
+    through the web interface)
+  o use mdkonline icon in window title & in banner
+- mdkupdate: fix MandrivaUpdate crash
+
 * Mon Sep 18 2006 Thierry Vignaud <tvignaud@mandriva.com> 2.3-1mdv2007.0
 - mdkonline: accept dots in machine names
 - mdkapplet: fix closing about dialog when "close" button is clicked (#25867)
