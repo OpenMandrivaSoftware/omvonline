@@ -167,7 +167,15 @@ my $wiz =
                      data => [ { } ],
 				 complete => sub { 
                          my $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
+                         # if authentication failed with "No host for this id", just transparently register the host again:
+                         # (eg: when host was deleted through the web interface)
                         if ($err ne 'OK') {
+                            if ($err =~ /No host for this id/) {
+                                log::explanations("registring again the host because the id is lost (deleted through the web interface?");
+                                substInFile { undef $_ if /HOST_ID|HOST_NAME/ } '/etc/sysconfig/mdkonline';
+                                $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
+                            }
+                            return  $err eq 'OK';
                             $in->ask_warn(N("Error"), N("Connection problem") . "\n\n" . N("Problem occurs when uploading files, please try again") . "\n\n" . $err);
                             return 1;
                         }
