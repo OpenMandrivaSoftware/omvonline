@@ -33,6 +33,7 @@ use wizards;
 use lang;
 
 use Getopt::Long;
+use Encode qw(encode);
 
 BEGIN { unshift @::textdomains, 'mdkonline', 'drakfirstboot' }
 
@@ -112,6 +113,7 @@ sub get_conf() {
 sub send_conf_via_soap {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
     my $_w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
+    my $country = encode("UTF-8", $country);
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $country);
 }
 
