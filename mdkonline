@@ -120,7 +120,7 @@ my $wiz =
    name => N("Mandriva Online"),
       pages => {
 		welcome => {
-			    name => N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n"),
+			    name => formatAlaTeX(N("This assistant will help you to upload your configuration\n(packages, hardware configuration) to a centralized database in\norder to keep you informed about security updates and useful upgrades.\n")),
 			    no_back => 1,
                    post => sub {
                        $::main_window = $::WizardWindow; # center subdialogs on main window
@@ -163,7 +163,7 @@ my $wiz =
 			   },
 		authenticate => {
 				 name => 
-					 N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n\n1) the list of packages you have installed on your system,\n\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com."),
+					 formatAlaTeX(N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n\n1) the list of packages you have installed on your system,\n\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.")),
                      data => [ { } ],
 				 complete => sub { 
                          my $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
@@ -221,11 +221,11 @@ my $wiz =
                      next => 'createaccount',
 			     },
 		createaccount => {
-				  name => N("Mandriva Online Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n"),
+				  name => formatAlaTeX(N("Mandriva Online Account successfully created.\nPlease click \"Next\" to authenticate and upload your configuration\n")),
 				  next => 'account',
 				 },
 		upload => {
-			   name => N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n"),
+			   name => formatAlaTeX(N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
 			   data => sub {
 				   [
 				    { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
