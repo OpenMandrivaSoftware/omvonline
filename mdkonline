@@ -163,7 +163,7 @@ my $wiz =
 			   },
 		authenticate => {
 				 name => 
-					 N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n1) the list of packages you have installed on your system,\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com."),
+					 N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n\n1) the list of packages you have installed on your system,\n\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com."),
                      data => [ { } ],
 				 complete => sub { 
                          my $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $country);
