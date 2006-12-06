@@ -312,6 +312,11 @@ sub soap_get_updates_for_host {
     $data;
 }
 
+sub soap_is_new_update_for_distro {
+    my $data = $s->isNewUpdateForDistribution(@_)->result;
+    $data;
+}
+
 sub mv_files {
     my ($source, $dest) = @_;
     -e $source and system("mv", $source, $dest);
