@@ -24,7 +24,7 @@
 
 use strict;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
-BEGIN { $::no_global_argv_parsing = 1 };
+BEGIN { $::no_global_argv_parsing = 1 }
 use standalone; # for explanations
 
 use interactive;
@@ -78,7 +78,7 @@ GetOptions('interactive!' => \$ia, 'login=s' => \$login, 'pass=s' => \$password,
 
 $::XID and $::isEmbedded = 1;
 
-my $in = interactive->vnew('su') if $ia;
+my $in = $ia && interactive->vnew('su');
 
 #for compatibilities
 mkdir_p($confdir) if !-d $confdir;
@@ -111,7 +111,7 @@ sub get_conf() {
 
 sub send_conf_via_soap {
     my ($login, $password, $boxname, $descboxname, $country) = @_;
-    my $_w = $in->wait_message(N("Please wait"), N("Reading configuration\n")) if $ia;
+    my $_w = $ia && $in->wait_message(N("Please wait"), N("Reading configuration\n"));
     my $reg_host = mdkonline::register_upload_host($login, $password, $boxname, $descboxname, $locale->{country});
 }
 
@@ -151,7 +151,7 @@ my $wiz =
                         $in->ask_warn(N("Error"), N("Machine name must be 1 to 40 alphanumerical characters"));
                         return 1;
 				}
-				    my $wait = $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website...")) if $ia;
+				    my $wait = $ia && $in->wait_message(N("Please wait"), N("Connecting to Mandriva Online website..."));
                     my $err = mdkonline::create_authenticate_account('authenticate', $login, $password);
                     undef $wait;
                     if ($err ne 'OK') {
@@ -175,7 +175,7 @@ my $wiz =
                                 substInFile { undef $_ if /HOST_ID|HOST_NAME/ } '/etc/sysconfig/mdkonline';
                                 $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $locale->{country});
                             }
-                            return  $err eq 'OK';
+                            return $err eq 'OK';
                             $in->ask_warn(N("Error"), N("Connection problem") . "\n\n" . N("Problem occurs when uploading files, please try again") . "\n\n" . $err);
                             return 1;
                         }
