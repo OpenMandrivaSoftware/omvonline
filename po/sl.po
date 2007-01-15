@@ -1,28 +1,26 @@
-# translation of mdkonline.po to Slovenian
-# translation of mdkonline-sl.po to Slovenian
+# translation of mdkonline-sl.po to slovenščččina
 # translation of mdkonline-sl.po to
-# translation of mdkonline-sl.po to Slovenščina
-# translation of Mandriva Online-sl.po to Slovenščina
-# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
+#
 # Alen Salamun <alen.salamun@alienworld.org>, 2002.
 # Gregor Pirnaver <gregor.pirnaver@email.si>, 2002, 2004.
 # Gregor Pirnaver <gregor.pirnaver@siol.net>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@mandrakeprinas.org>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@sdm-si.org>, 2005.
 # Jure Repinc <jlp@holodeck1.com>, 2005.
-#
+# Matjaž Kaše <matjaz.kase@telemach.net>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: mdkonline-sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-01 14:03+0200\n"
-"PO-Revision-Date: 2005-09-17 10:48+0200\n"
-"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"PO-Revision-Date: 2006-09-03 11:07+0200\n"
+"Last-Translator: Matjaž Kaše <matjaz.kase@telemach.net>\n"
+"Language-Team: slovenščččina <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3);\n"
 
@@ -51,9 +49,9 @@ msgid "New updates are available for your system"
 msgstr "Za vaš sistem so na voljo novi popravki"
 
 #: ../mdkapplet:111
-#, fuzzy, c-format
+#, c-format
 msgid "New bundles are available for your system"
-msgstr "Za vaš sistem so na voljo novi popravki"
+msgstr "Za vaš sistem so na voljo novi sklopi programov"
 
 #: ../mdkapplet:117
 #, c-format
@@ -296,19 +294,19 @@ msgid "About..."
 msgstr "O ..."
 
 #: ../mdkapplet:478
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:481
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Copyright (C) %s by Mandriva"
 
 #: ../mdkapplet:493
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online omogoča dostop do spletnih storitev Mandriva"
 
 #: ../mdkapplet:501
 #, c-format
@@ -344,32 +342,32 @@ msgstr "  --help\t\t- izpiši to sporočilo s pomočjo.\n"
 #: ../mdkonline:62
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr ""
+msgstr "  --box=\t\t\t- hostname.\n"
 
 #: ../mdkonline:63
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr ""
+msgstr "  --country\t\t\t- name of country of the user. \n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr ""
+msgstr "  --interactive\t\t- use the interactive mode.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr ""
+msgstr "  --nointeractive\t- use the non-interactive mode.\n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr ""
+msgstr "  --login=\t\t     - login name of the user.\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr ""
+msgstr "  --pass=\t\t\t- password  of the user.\n"
 
 #: ../mdkonline:85 ../mdkonline:118
 #, c-format
@@ -439,14 +437,14 @@ msgid "Password:"
 msgstr "Geslo:"
 
 #: ../mdkonline:143
-#, fuzzy, c-format
+#, c-format
 msgid "Machine description:"
-msgstr "Ime računalnika:"
+msgstr "Opis računalnika:"
 
 #: ../mdkonline:144
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr ""
+msgstr "(Prej: Moj domači - pisarniški računalnik)"
 
 #: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
 #: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
@@ -555,7 +553,7 @@ msgstr "Neveljaven poštni naslov!\n"
 #: ../mdkonline:206
 #, c-format
 msgid "Creating account failed!"
-msgstr ""
+msgstr "Ustvarjanje računa ni uspelo! "
 
 #: ../mdkonline:214
 #, c-format
@@ -631,7 +629,7 @@ msgstr "Varnostna napaka"
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Napaka (računalnik je že registriran)"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -792,7 +790,7 @@ msgstr "  --noX\t\t\t- Mandriva Update v besedilnem načinu.\n"
 #: ../mdkupdate:79
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- log what is done\n"
 
 #: ../mdkupdate:80
 #, c-format
@@ -800,11 +798,13 @@ msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
+"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+"file.\n"
 
 #: ../mdkupdate:150
 #, c-format
 msgid "Cannot get list of updates: %s"
-msgstr ""
+msgstr "Ni mogoče pridobiti seznama posodobitev: %s"
 
 #: ../mdkupdate:158 ../mdkupdate:204
 #, c-format
@@ -817,7 +817,7 @@ msgstr "Opozorilo"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
+msgstr "Najprej morate sistem namestiti na disk s pomočjo čarovnika"
 
 #: ../mdkupdate:163 ../mdkupdate:214
 #, c-format
@@ -831,6 +831,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Overitev na strežniku za ta sklop je spodletelo: \n"
+"\n"
+"%s"
 
 #: ../mdkupdate:199 ../mdkupdate:228
 #, c-format
@@ -845,11 +848,14 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
+"Različica Mandriva Online client je prestara \n"
+"\n"
+"Nadgraditi jo morate z novejšo, ki jo dobite na  http://start.mandriva.com"
 
 #: ../mdkupdate:247
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Ta sklop ni pravilno oblikovan. Prekinitev"
 
 #: ../mdkupdate:259
 #, c-format
@@ -865,20 +871,3 @@ msgstr "Nameščanje paketov ...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Sistem je zaposlen. Prosim počakajte ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Pošiljanje nastavitev ..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Sklic ni varen: metoda je na voljo samo prek HTTPS"
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "Ni moč najti datoteke %s. Najprej poženite čarovnika »mdkonline«."
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Program Mandriva Update se ni uspel povezati s spletno stranjo, poskusil "
-#~ "bo znova."
