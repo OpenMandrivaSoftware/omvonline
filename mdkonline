@@ -140,6 +140,7 @@ my $wiz =
 			    data => sub {
 				[
 				 { label => N("Email address:"), val => \$login },
+				 { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
 				 { label => N("Password:"), val => \$password, hidden => 1 },
 				 { label => N("Machine name:"), val => \$boxname },
 				 { label => N("Machine description:"), val => \$descboxname },
@@ -226,11 +227,6 @@ my $wiz =
 				 },
 		upload => {
 			   name => formatAlaTeX(N("Your upload was successful!") . "\n\n" . N("From now you will receive on security and updates \nannouncements thanks to Mandriva Online.") . "\n\n" . N("Mandriva Online offers you the ability to automate the updates.\nA program will run regulary in your system waiting for new updates\n")),
-			   data => sub {
-				   [
-				    { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
-				   ];
-			   },
 			   post => sub {
 				   mdkonline::automated_upgrades();
 				   #mdkonline::clean_confdir();
