@@ -97,7 +97,7 @@ my @greets = (N("Mr."), N("Mrs."), N("Ms."));
 
 my %countries = map { lang::c2name($_) => $_ } lang::list_countries();
 my $locale = lang::read('', $>);
-$country = lang::c2name($locale->{country});
+$country ||= lang::c2name($locale->{country});
 my $lang = $locale->{lang} || 'en_US';
 
 my $descboxname;
