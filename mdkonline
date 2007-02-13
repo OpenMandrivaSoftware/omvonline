@@ -140,7 +140,7 @@ my $wiz =
 			    data => sub {
 				[
 				 { label => N("Email address:"), val => \$login },
-				 { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 }
+				 { label => N("Country"), val => \$country, type => "combo", list => [ sort keys %countries ], not_edit => 0 },
 				 { label => N("Password:"), val => \$password, hidden => 1 },
 				 { label => N("Machine name:"), val => \$boxname },
 				 { label => N("Machine description:"), val => \$descboxname },
@@ -167,14 +167,14 @@ my $wiz =
 					 formatAlaTeX(N("In order to benefit from Mandriva Online services,\nwe are about to upload your configuration.\n\nThe Wizard will now send the following information to Mandriva:\n\n1) the list of packages you have installed on your system,\n\n2) your hardware configuration.\n\nIf you feel uncomfortable by that idea, or do not want to benefit from this service,\nplease press 'Cancel'. By pressing 'Next', you allow us to keep you informed\nabout security updates and useful upgrades via personalized email alerts.\nFurthermore, you benefit from discounted paid support services on\nwww.mandrivaexpert.com.")),
                      data => [ { } ],
 				 complete => sub { 
-                         my $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $locale->{country});
+                         my $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $countries{$country});
                          # if authentication failed with "No host for this id", just transparently register the host again:
                          # (eg: when host was deleted through the web interface)
                         if ($err ne 'OK') {
                             if ($err =~ /No host for this id/) {
                                 log::explanations("registring again the host because the id is lost (deleted through the web interface?");
                                 substInFile { undef $_ if /HOST_ID|HOST_NAME/ } '/etc/sysconfig/mdkonline';
-                                $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $locale->{country});
+                                $err = send_conf_via_soap($login, $password, $boxname, $descboxname, $countries{$country});
                             }
                             return $err eq 'OK';
                             $in->ask_warn(N("Error"), N("Connection problem") . "\n\n" . N("Problem occurs when uploading files, please try again") . "\n\n" . $err);
