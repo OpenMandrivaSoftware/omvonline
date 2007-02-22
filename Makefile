@@ -54,8 +54,7 @@ cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
 
 localcopy: clean
-	find . -not -name "$(PACKAGE)-$(VERSION)" -a -not -name '*.bz2'|cpio -pd $(PACKAGE)-$(VERSION)/
-	find $(PACKAGE)-$(VERSION) -type d -name CVS|xargs rm -rf 
+	svn export -q . $(NAME)-$(VERSION)
 
 tar:
 	tar cvf ../$(PACKAGE)-$(VERSION).tar $(PACKAGE)-$(VERSION)
