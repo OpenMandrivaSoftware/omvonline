@@ -1,7 +1,5 @@
 PACKAGE = mdkonline
-VERSION:=$(shell rpm -q --qf '%{VERSION}\n' --specfile $(PACKAGE).spec|head -n 1)
-RELEASE:=$(shell rpm -q --qf '%{RELEASE}\n' --specfile $(PACKAGE).spec|head -n 1)
-TAG := $(shell echo "V$(VERSION)_$(RELEASE)" | tr -- '-.' '__')
+VERSION:=2.4
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
 NAME = mdkonline
@@ -52,17 +50,8 @@ install: all
 
 # rules to build a test rpm
 
-localrpm:  clean localdist buildrpm
-
-localsrpm:  clean localdist buildsrpm
-
-localdist: cleandist dir localcopy tar
-
 cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
-
-dir:
-	mkdir $(PACKAGE)-$(VERSION)
 
 localcopy: clean
 	find . -not -name "$(PACKAGE)-$(VERSION)" -a -not -name '*.bz2'|cpio -pd $(PACKAGE)-$(VERSION)/
@@ -73,25 +62,9 @@ tar:
 	bzip2 -9vf ../$(PACKAGE)-$(VERSION).tar
 	rm -rf $(PACKAGE)-$(VERSION)
 
-buildrpm:
-	rpm -ta ../$(PACKAGE)-$(VERSION).tar.bz2
-	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
-
-buildsrpm:
-	rpm -ts ../$(PACKAGE)-$(VERSION).tar.bz2
-	rm -f ../$(PACKAGE)-$(VERSION).tar.bz2
-
 # rules to build a distributable rpm
 
-rpm: changelog svntag dist buildrpm
-
-dist: cleandist export tar
-
-export: 
-	svn export $(SVNROOT)/tags/$(TAG) $(PACKAGE)-$(VERSION)
-
-svntag: 
-	svn copy $(SVNROOT)/trunk $(SVNROOT)/tags/$(TAG) -m "$(TAG)"
+dist: cleandist localcopy tar
 
 log:changelog
 
