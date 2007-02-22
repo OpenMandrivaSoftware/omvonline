@@ -22,7 +22,7 @@ install: all
 	done
 
 clean:
-	rm -f *~ *.[oas] *.mo $(GOALS) TAGS $(MOFILES) $(PL_CFILES)
+	rm -f *~ *.[oas] *.mo TAGS $(PL_CFILES)
 
 %.mo: %.po
 	msgfmt -o $@ $<
