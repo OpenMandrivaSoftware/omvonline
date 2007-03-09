@@ -109,6 +109,12 @@ my $wc = mdkonline::read_conf();
 if (!$bundle) {
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
+     my ($release) = mdkonline::get_release();
+     if ($applet) {
+         my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
+         my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
+         system $rpm_exec_name, "--no-confirmation", $is_no_media_update; 
+     }
 	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
 
      my $ret = mdkonline::check_server_response($getupdates);
@@ -122,12 +128,7 @@ if (!$bundle) {
              my $pkgs = [ map { $_->{filename} } @$updates ];
              print Data::Dumper->Dump([ $updates, $pkgs], [ qw(updates pkgs) ]);
 
-	    my ($release) = mdkonline::get_release();
-	    if ($applet) {
-		my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
-		my $is_no_media_update =  $release <= 10.1 ? '' : "--no-media-update";
-		system $rpm_exec_name, "--no-confirmation", $is_no_media_update, "--media=$mirror"; 
-	    } elsif ($auto) { # FIXME
+	    if ($auto) { # FIXME
              my $ret = update_pkgs(@$pkgs);
              $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
 	    } else {
