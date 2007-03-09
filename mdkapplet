@@ -196,12 +196,8 @@ sub harvester {
     return if $clean;
 }
 sub fork_exec {
-    my $pid = fork();
-    if (defined $pid) {
-        !$pid and do { exec(@_) or POSIX::_exit() };
-    } else {
-        refresh_gui(1);                                                                        
-    }                                                                                       
+    run_program::raw({ detach => 1 }, @_);
+    refresh_gui(1);                                                                        
 }
 sub refresh_gui {
     my ($sens) = @_;
