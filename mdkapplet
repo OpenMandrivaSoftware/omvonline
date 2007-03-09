@@ -366,7 +366,6 @@ sub silentCheck() {
     eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
     }
     if ($debug) {
-	print "\nCONTENTS = $ct\n" if $debug;
      require Data::Dumper;
 	logIt(N("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
     }
