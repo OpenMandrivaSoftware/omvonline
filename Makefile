@@ -47,6 +47,9 @@ install: all
 # mime
 	mkdir -p $(DATADIR)/mimelnk/applications/
 	install -m644 x-mdv-exec.desktop $(DATADIR)/mimelnk/applications/
+	mkdir -p $(PREFIX)/etc/security/console.apps/
+	install -m644 console.apps_urpmi.update $(PREFIX)/etc/security/console.apps/urpmi.update
+	ln -sf ../sbin/urpmi.update $(PREFIX)/usr/bin/urpmi.update
 
 # rules to build a test rpm
 
