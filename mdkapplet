@@ -511,7 +511,7 @@ sub setState {
                                         $w->signal_connect(response => sub { $_[0]->destroy });
                                         $w->set_version($ver);
                                         $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
-                                        $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2006'));
+                                        $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2007'));
                                         $w->set_url_hook(sub {
                                                              my (undef, $url) = @_;
                                                              run_program::raw({ detach => 1 }, 'www-browser', $url);
