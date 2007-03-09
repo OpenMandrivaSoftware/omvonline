@@ -171,7 +171,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 checkConfig();
 checkUpdates();
-cronUpdate();
+setup_cyclic_check();
 
 $icon->show_all;
 
@@ -388,7 +388,7 @@ sub compareWithInstalled {
     }
     $isUpdate;
 }
-sub cronUpdate() {
+sub setup_cyclic_check() {
     Glib::Timeout->add(10*1000, sub {
 	checkConfig();
 	1;
