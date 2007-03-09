@@ -68,10 +68,6 @@ my $localfile = "$localdir/mdkonline";
 
 my $release = mdkonline::get_release();
 
-
-my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
-$config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
-
 sub my_sprintf_fixutf8 {
     mdkonline::get_release() < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
 }
@@ -158,11 +154,14 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
       );
 #$icon->shape_combine_mask($img, 0, 0);
 $eventbox->signal_connect(button_press_event => sub {
+			      if (!$raisedwindow) {
 				  if ($_[1]->button == 1) {
-                          installUpdates() if $state_global eq 'updates';
-			      } elsif ($_[1]->button == 3) {
-                         $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
+				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
+				  }
+			      } elsif ($_[1]->button == 1) {
+                         $applet_window->present;
                      }
+			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
@@ -172,7 +171,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 checkConfig();
 checkUpdates();
-setup_cyclic_check();
+cronUpdate();
 
 $icon->show_all;
 
@@ -197,12 +196,17 @@ sub harvester {
     return if $clean;
 }
 sub fork_exec {
-    run_program::raw({ detach => 1 }, @_);
-    refresh_gui(1);                                                                        
+    my $pid = fork();
+    if (defined $pid) {
+        !$pid and do { exec(@_) or POSIX::_exit() };
+        return $pid;
+    } else {
+        refresh_gui(1);                                                                        
+    }                                                                                       
 }
 sub refresh_gui {
     my ($sens) = @_;
-    #!$conf_launched and silentCheck(); $conf_launched = 0;
+    !$conf_launched and silentCheck(); $conf_launched = 0;
     my $w = $::main_window ? $::main_window->window : undef;
     $insensitive_while_running_a_child = !$sens;
     $sens ? gtkset_mousecursor_normal($w) : gtkset_mousecursor_wait($w);
@@ -284,7 +288,7 @@ sub installUpdates() {
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N("Launching mdkupdate --applet\n"));
     refresh_gui(0);
-    fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation');
+    fork_exec("/usr/sbin/mdkupdate --applet");
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     restart_applet() if $newmd5 ne $oldmd5;
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
@@ -302,8 +306,7 @@ sub silentCheck() {
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
     gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
-    my $response = eval { mdkonline::soap_is_new_update_for_distro($h{HOST_ID}, $h{HOST_KEY}) };
-    $response = { code => 0, data => { isUpdateAvailable => 1 } };
+    my $response = mdkonline::soap_is_new_update_for_distro($h{HOST_ID}, $h{HOST_KEY});
     my $status_err = mdkonline::check_server_response($response);
     if ($status_err eq 'OK') {
         # are there any updates ?
@@ -367,6 +370,7 @@ sub silentCheck() {
     eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
     }
     if ($debug) {
+	print "\nCONTENTS = $ct\n" if $debug;
      require Data::Dumper;
 	logIt(N("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
     }
@@ -388,12 +392,12 @@ sub compareWithInstalled {
     }
     $isUpdate;
 }
-sub setup_cyclic_check() {
+sub cronUpdate() {
     Glib::Timeout->add(10*1000, sub {
 	checkConfig();
 	1;
     });
-    $timeout = Glib::Timeout->add($config{UPDATE_FREQUENCY}*1000, sub {
+    $timeout = Glib::Timeout->add(3*60*60*1000, sub {
 				      checkUpdates();
 				      1;
 				  });
@@ -511,7 +515,7 @@ sub setState {
                                         $w->signal_connect(response => sub { $_[0]->destroy });
                                         $w->set_version($ver);
                                         $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
-                                        $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2007'));
+                                        $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2006'));
                                         $w->set_url_hook(sub {
                                                              my (undef, $url) = @_;
                                                              run_program::raw({ detach => 1 }, 'www-browser', $url);
