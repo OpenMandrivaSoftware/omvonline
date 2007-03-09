@@ -302,6 +302,7 @@ sub silentCheck() {
     gtkflush(); go2State('busy'); gtkflush();
     gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
     my $response = mdkonline::soap_is_new_update_for_distro($h{HOST_ID}, $h{HOST_KEY});
+    $response = { code => 0, data => { isUpdateAvailable => 1 } };
     my $status_err = mdkonline::check_server_response($response);
     if ($status_err eq 'OK') {
         # are there any updates ?
