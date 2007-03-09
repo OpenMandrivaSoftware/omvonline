@@ -199,7 +199,6 @@ sub fork_exec {
     my $pid = fork();
     if (defined $pid) {
         !$pid and do { exec(@_) or POSIX::_exit() };
-        return $pid;
     } else {
         refresh_gui(1);                                                                        
     }                                                                                       
