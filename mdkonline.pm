@@ -376,7 +376,7 @@ sub is_running {
     my $found;
     foreach (`ps -o '%P %p %c' -u $ENV{USER}`) {
         my ($ppid, $pid, $n) = /^\s*(\d+)\s+(\d+)\s+(.*)/;
-        if ($ppid != pid != $$ && $n eq $name) {
+        if ($ppid != 1 && $pid != $$ && $n eq $name) {
             $found = $pid;
             last;
         }
