@@ -158,14 +158,11 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
       );
 #$icon->shape_combine_mask($img, 0, 0);
 $eventbox->signal_connect(button_press_event => sub {
-			      if (!$raisedwindow) {
 				  if ($_[1]->button == 1) {
-				      if (-e $conffile) { $raisedwindow = 1; showMainWindow() } else { $raisedwindow = 0; configure() }
-				  }
-			      } elsif ($_[1]->button == 1) {
-                         $applet_window->present;
+                          installUpdates() if $state_global eq 'updates';
+			      } elsif ($_[1]->button == 3) {
+                         $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
                      }
-			      $_[1]->button == 3 && $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
 			  });
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
