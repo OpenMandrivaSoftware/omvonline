@@ -68,6 +68,10 @@ my $localfile = "$localdir/mdkonline";
 
 my $release = mdkonline::get_release();
 
+
+my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
+$config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
+
 sub my_sprintf_fixutf8 {
     mdkonline::get_release() < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
 }
@@ -392,7 +396,7 @@ sub setup_cyclic_check() {
 	checkConfig();
 	1;
     });
-    $timeout = Glib::Timeout->add(3*60*60*1000, sub {
+    $timeout = Glib::Timeout->add($config{UPDATE_FREQUENCY}*1000, sub {
 				      checkUpdates();
 				      1;
 				  });
