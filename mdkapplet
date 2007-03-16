@@ -196,7 +196,6 @@ sub harvester {
         push @pids, $childpid;
         WIFEXITED($?) and refresh_gui(1);
     } while $childpid > 0;
-    return if $clean;
     return @pids;
 }
 sub fork_exec {
