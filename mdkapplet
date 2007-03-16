@@ -145,7 +145,8 @@ my %actions = (
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
 	       'check' => { name => N("Check Updates"), launch => sub { 
 				my $w = $in->wait_message(N("Please wait"), N("Check updates") . '...');
-				checkUpdates(); undef $w } }, 
+				checkUpdates();
+                }, 
 	       'weblink' => { name => N("Online WebSite"), launch => sub { mdkonline::get_site($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'register' => { name => N("Configure Now!"), launch => sub { configure() } }
