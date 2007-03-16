@@ -193,12 +193,17 @@ my $mdv_update_pid;
 sub harvester {
     my ($_signame, $clean) = @_;
     my ($childpid, @pids);
+    my $mdvupdate_returned;
     do {
         $childpid = waitpid(-1, &WNOHANG);
-        undef $mdv_update_pid if $mdv_update_pid == $childpid;
+        if ($mdv_update_pid == $childpid) {
+            undef $mdv_update_pid;
+            $mdvupdate_returned = 1;
+        }
         push @pids, $childpid;
         WIFEXITED($?) and refresh_gui(1);
     } while $childpid > 0;
+    Glib::Timeout->add(200, sub { silentCheck(); 0 }) if $mdvupdate_returned;
     return @pids;
 }
 sub fork_exec {
