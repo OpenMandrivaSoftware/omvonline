@@ -418,7 +418,6 @@ sub checkConfig() {
 	my $logged if 0;
 	logIt(N("Checking config file: Not present\n")) if !$logged;
 	$logged = 1;
-	go2State('noconfig');
     } elsif (!isNetwork()) {
 	logIt(N("Checking Network: seems disabled\n"));
 	go2State('disconnected');
