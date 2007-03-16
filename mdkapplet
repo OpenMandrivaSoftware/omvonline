@@ -309,8 +309,23 @@ sub silentCheck() {
         # are there any updates ?
         if (my $data = $response->{data}) {
             if ($data->{isUpdateAvailable}) {
-                if (!run_program::raw({}, 'urpmi.update', '--update')) { # shoud wait for it while gtkflus()ing: { detach => 1 }
-                    logIt(N("Error updating media"));
+                my $will_not_update_media;
+                require urpm::lock;
+                my $urpm = urpm->new;
+                {
+                    local $urpm->{fatal} = sub {
+                        logIt(N("%s database locked", 'urpmi'));
+                        logIt("skipping updating urpmi database");
+                        print "Fatal: @_\n";
+                        $will_not_update_media = 1;
+                    };
+                    local $urpm->{error} = $urpm->{fatal};
+
+                    urpm::lock::urpmi_db($urpm, 'exclusive', 1);
+                }
+
+                if (!$will_not_update_media and my $res = !run_program::raw({}, 'urpmi.update', '--update')) { # shoud wait for it while gtkflus()ing: { detach => 1 }
+                    logIt(N("Error updating media") . $res);
                     go2State('critical');
                     return 0;
                 }
@@ -318,7 +333,7 @@ sub silentCheck() {
                 use urpm; # to force require
                 require urpm::select;
                 require urpm::media;
-                my $urpm = urpm->new;
+                $urpm = urpm->new;
                 urpm::media::configure($urpm);
 
                 logIt(N("Computing new updates...\n"));
