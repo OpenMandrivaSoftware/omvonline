@@ -1,3 +1,150 @@
+2007-03-19 14:05  Funda Wang <fundawang at linux.net.cn>
+
+	* soft/mdkonline/trunk/po/af.po, soft/mdkonline/trunk/po/ar.po,
+	  soft/mdkonline/trunk/po/az.po, soft/mdkonline/trunk/po/bg.po,
+	  soft/mdkonline/trunk/po/bn.po, soft/mdkonline/trunk/po/br.po,
+	  soft/mdkonline/trunk/po/bs.po, soft/mdkonline/trunk/po/ca.po,
+	  soft/mdkonline/trunk/po/cs.po, soft/mdkonline/trunk/po/cy.po,
+	  soft/mdkonline/trunk/po/da.po, soft/mdkonline/trunk/po/de.po,
+	  soft/mdkonline/trunk/po/el.po, soft/mdkonline/trunk/po/eo.po,
+	  soft/mdkonline/trunk/po/es.po, soft/mdkonline/trunk/po/et.po,
+	  soft/mdkonline/trunk/po/eu.po, soft/mdkonline/trunk/po/fa.po,
+	  soft/mdkonline/trunk/po/fi.po, soft/mdkonline/trunk/po/fr.po,
+	  soft/mdkonline/trunk/po/fur.po, soft/mdkonline/trunk/po/ga.po,
+	  soft/mdkonline/trunk/po/gl.po, soft/mdkonline/trunk/po/he.po,
+	  soft/mdkonline/trunk/po/hi.po, soft/mdkonline/trunk/po/hr.po,
+	  soft/mdkonline/trunk/po/hu.po, soft/mdkonline/trunk/po/id.po,
+	  soft/mdkonline/trunk/po/is.po, soft/mdkonline/trunk/po/it.po,
+	  soft/mdkonline/trunk/po/ja.po, soft/mdkonline/trunk/po/ka.po,
+	  soft/mdkonline/trunk/po/ko.po, soft/mdkonline/trunk/po/ky.po,
+	  soft/mdkonline/trunk/po/lt.po, soft/mdkonline/trunk/po/lv.po,
+	  soft/mdkonline/trunk/po/mdkonline.pot,
+	  soft/mdkonline/trunk/po/mk.po, soft/mdkonline/trunk/po/mn.po,
+	  soft/mdkonline/trunk/po/ms.po, soft/mdkonline/trunk/po/mt.po,
+	  soft/mdkonline/trunk/po/nb.po, soft/mdkonline/trunk/po/nl.po,
+	  soft/mdkonline/trunk/po/nn.po, soft/mdkonline/trunk/po/pa_IN.po,
+	  soft/mdkonline/trunk/po/pl.po, soft/mdkonline/trunk/po/pt.po,
+	  soft/mdkonline/trunk/po/pt_BR.po, soft/mdkonline/trunk/po/ro.po,
+	  soft/mdkonline/trunk/po/ru.po, soft/mdkonline/trunk/po/sc.po,
+	  soft/mdkonline/trunk/po/sk.po, soft/mdkonline/trunk/po/sl.po,
+	  soft/mdkonline/trunk/po/sq.po, soft/mdkonline/trunk/po/sr.po,
+	  soft/mdkonline/trunk/po/sr@Latn.po,
+	  soft/mdkonline/trunk/po/sv.po, soft/mdkonline/trunk/po/tg.po,
+	  soft/mdkonline/trunk/po/th.po, soft/mdkonline/trunk/po/tl.po,
+	  soft/mdkonline/trunk/po/tr.po, soft/mdkonline/trunk/po/uk.po,
+	  soft/mdkonline/trunk/po/uz.po,
+	  soft/mdkonline/trunk/po/uz@Latn.po,
+	  soft/mdkonline/trunk/po/vi.po, soft/mdkonline/trunk/po/wa.po,
+	  soft/mdkonline/trunk/po/zh_CN.po,
+	  soft/mdkonline/trunk/po/zh_TW.po: Updated POT file of mdkonline.
+
+2007-03-16 19:25  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester) update status once
+	  MandrivaUpdate completed
+
+2007-03-16 19:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/Makefile: bump release (2.9)
+
+2007-03-16 19:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) do not alter media
+	  while MandrivaUpdate is running
+
+2007-03-16 19:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) do not allow to run
+	  several instances of MandrivaUpdate
+
+2007-03-16 19:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester) fix returning pids
+
+2007-03-16 19:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: fix eating all CPU after running
+	  MandrivaUpdate
+
+2007-03-16 17:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: typo fix
+
+2007-03-16 17:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: cleanup
+
+2007-03-16 17:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: kill dead code
+
+2007-03-16 11:34  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/Makefile: bump release (2.8)
+
+2007-03-16 11:30  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (installUpdates) wait for
+	  MandrivaUpdate to complete before
+	  recomputing updates & restarting the applet if needed
+
+2007-03-16 11:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester) return pids of reaped
+	  children
+
+2007-03-16 11:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (fork_exec) return pid of forked
+	  process
+
+2007-03-16 11:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) check if urpm db is
+	  not lockable; if not, skip updating it
+
+2007-03-16 11:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (checkConfig) if no config file,
+	  operate offline w/o complaining
+
+2007-03-15 23:41  kamberd
+
+	* soft/mdkonline/trunk/po/he.po: update translation for Hebrew
+
+2007-03-13 11:55  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: on left click on applet, run
+	  MandrivaUpdate if there're updates
+
+2007-03-13 11:48  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: store update frequency in
+	  /etc/sysconfig/mdkapplet (default is 3h)
+
+2007-03-12 15:58  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkonline.pm: (is_running) typo fix
+
+2007-03-12 14:51  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/Makefile: bump release (2.7)
+
+2007-03-12 14:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (installUpdates) run
+	  MandrivaUpdate directly instead of mdvupdate wrapper
+
+2007-03-12 14:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/ChangeLog: Generated by svn2cl the lun 12
+	  mar 2007 14:13:37 UTC
+
+2007-03-12 14:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkonline.pm: (is_running) fix detecting
+	  running applet processes
+
 2007-03-12 14:16  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* soft/mdkonline/trunk/mdkonline.pm: (is_running) fix detection of
