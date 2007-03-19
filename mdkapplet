@@ -171,11 +171,11 @@ if ($opt eq '--debug') { $debug = 1 }
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet";
 
+$icon->show_all;
 checkConfig();
 checkUpdates();
 setup_cyclic_check();
 
-$icon->show_all;
 
 $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
