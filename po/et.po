@@ -1,14 +1,14 @@
 # translation of mdkonline.po to Estonian
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # Riho Kurg <rx@linux.ee>, 2002
-# Marek Laane <bald@starman.ee>, 2003-2006
+# Marek Laane <bald@starman.ee>, 2003-2007
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 14:55+0100\n"
-"PO-Revision-Date: 2006-04-07 11:18+0200\n"
+"PO-Revision-Date: 2007-03-19 16:08+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -200,9 +200,9 @@ msgid "%s database locked"
 msgstr "%s andmebaas on lukus"
 
 #: ../mdkapplet:341
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Andmekandja uuendamine...\n"
+msgstr "Viga andmekandja uuendamisel"
 
 #: ../mdkapplet:359 ../mdkapplet:373
 #, c-format
@@ -215,9 +215,9 @@ msgid "Packages are up to date"
 msgstr "Pole ühtegi paketti uuendada"
 
 #: ../mdkapplet:368
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "rpmdb avamine ebaõnnestus"
+msgstr "Urpmi andmebaasi avamine ebaõnnestus"
 
 #: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
 #, c-format
@@ -294,7 +294,7 @@ msgstr "Konfiguratsioonifaili kontroll: puudub\n"
 #: ../mdkapplet:450
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr "Võrgu kontroll: paistab, et see on maas\n"
+msgstr "Võrgu kontroll: paistab, et see pole aktiivne\n"
 
 #: ../mdkapplet:493
 #, c-format
@@ -346,7 +346,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdonline versioon %s\n"
+"mdkonline versioon %s\n"
 "Autoriõigus (C) %s Mandriva.\n"
 "See on vabavara, mida võib levitada vastavalt GNU Üldise Avaliku Litsentsi "
 "tingimustele.\n"
@@ -506,7 +506,7 @@ msgid ""
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
 msgstr ""
-"Et Te saaksite kasu Mandriva Online'i teenustest,\n"
+"Et saaksite kasu Mandriva Online'i teenustest,\n"
 "saadame praegu teele Teie konfiguratsiooni.\n"
 "\n"
 "Nõustaja saadab nüüd Mandrivale järgmise info:\n"
@@ -518,7 +518,7 @@ msgstr ""
 "Kui see mõte Teile ei meeldi või Te ei soovi meie teenustest kasu saada,\n"
 "vajutage nupule ' Loobu', Vajutades 'Järgmine', annate meile võimaluse\n"
 "teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike "
-"meilidega.\n"
+"e-kirjadega.\n"
 "Lisaks saate hinnaalandust www.mandrivaexpert.com tasuliste\n"
 "teenuste puhul."
 
@@ -789,7 +789,7 @@ msgstr ""
 "See on vabavara, mida võib levitada vastavalt GNU Üldise Avaliku Litsentsi "
 "tingimustele.\n"
 "\n"
-"kasutamine:\n"
+"Kasutamine:\n"
 
 #: ../mdkupdate:75
 #, c-format
@@ -891,4 +891,4 @@ msgstr "Pakettide paigaldamine...\n"
 #: ../mdkupdate:297 ../mdkupdate:359
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Pakettide värskendamine update_source andmekandjalt ebaõnnestus.\n"
+msgstr "Pakettide uuendamine update_source andmekandjalt ebaõnnestus.\n"
