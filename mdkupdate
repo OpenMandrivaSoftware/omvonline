@@ -34,7 +34,6 @@ use URI::Escape;
 use run_program;
 
 use mdkonline;
-use urpm;
 
 use Getopt::Long;
 
@@ -125,10 +124,6 @@ if (!$bundle) {
 	    if ($auto) { # FIXME
              my $ret = update_pkgs(@$pkgs);
              $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
-	    } else {
-		$pkgs = ask_pkgs($in) if !$auto;
-		install_pkgs($in, $pkgs, $mirror, { no_X => $noX || $auto });
-		$in->exit(0);
 	    }
 	    rpm_qa($afterrpm);
 	    my $wc = mdkonline::read_conf();
@@ -246,30 +241,6 @@ sub add_mirrors {
     %mirrors;
 }
 
-sub ask_pkgs {
-    my ($in) = @_;
-    my $pkgs = get_updatable_pkgs();
-    $in->ask_browse_tree_info('Mdkupdate', N("Choose which packages should be installed and Press Ok"),
-			      {
-			       node_state => sub { $pkgs->{$_[0]}{selected} ? 'selected' : 'unselected' },
-			       build_tree => sub {
-				   my ($add_node, $_flat) = @_;
-				   $add_node->($_, undef) foreach sort keys %$pkgs;
-			       },
-			       grep_unselected => sub { grep { !$pkgs->{$_}{selected} } @_ },
-			       toggle_nodes => sub {
-				   my ($set_state, @nodes) = @_;
-				   my $new_state = !$pkgs->{$nodes[0]}{selected};
-				   foreach (@nodes) {
-				       $set_state->($_, $new_state ? 'selected' : 'unselected');
-				       $pkgs->{$_}{selected} = $new_state;
-				   }
-			       },
-			       get_info => sub {},
-			      }) or return keys %$pkgs; #- no change on cancel.
-    [ grep { $pkgs->{$_}{selected} } keys %$pkgs ];
-}
-
 sub install_pkgs {
     my ($in, $choosed, $media_name, $o_options) = @_;
     $o_options ||= {};
@@ -290,27 +261,6 @@ sub install_pkgs {
     undef $w;
 }
 
-sub get_updatable_pkgs() {
-    my $urpm = new urpm;
-    $urpm->read_config;
-    my %installable_pkgs; my @update_medias;
-    my ($medium) = grep { $_->{name} eq "update_source" } @{$urpm->{media}};
-    
-    if ($medium) {
-	$urpm->configure(media => $medium->{name});
-	@update_medias = grep { !$_->{ignore} && $_->{update} } @{$urpm->{media}};
-	$urpm->compute_installed_flags(URPM::DB::open);
-	foreach my $pkg (@{$urpm->{depslist}}) {
-	    $pkg->flag_upgrade or next;
-	    my $selected = 0;
-	    $pkg->flag_installed or next;
-	    any { $pkg->id >= $_->{start} && $pkg->id <= $_->{end} } @update_medias or next;
-	    $selected = member($pkg->name, qw(perl-URPM, urpmi, mdkonline, drakxtools)) ? 1 : 0;
-	    $installable_pkgs{my_fullname($pkg)} = { selected => $selected, pkg => $pkg };
-	}
-    }
-    \%installable_pkgs;
-}
 
 sub my_fullname {
     return '?-?-?' unless ref $_[0];
