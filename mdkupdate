@@ -73,7 +73,6 @@ This is free software and may be redistributed under the terms of the GNU GPL.
 usage:
 ", $CLIENT_VERSION, $YEARS) . N("  --help		- print this help message.
 ") . N("  --auto		- Mandriva Update launched automatically.
-") . N("  --applet		- launch Mandriva Update.
 ") . N("  --mnf			- launch mnf specific scripts.
 ") . N("  --noX			- text mode version of Mandriva Update.
 ") . N("  --debug			- log what is done
@@ -82,10 +81,9 @@ usage:
     exit(0);
 }
 
-my ($auto, $applet, $mnf, $noX, $bundle, $debug);
+my ($auto, $mnf, $noX, $bundle, $debug);
 my %options = (
 	       'auto'	    => \$auto,
-	       'a|applet'   => \$applet,
 	       'mnf'	    => \$mnf,
 	       'noX'	    => \$noX,
             'd|debug'   => \$debug,
@@ -101,7 +99,7 @@ $bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $in;
 
-$applet || $bundle || $noX and $in = interactive->vnew;
+$bundle || $noX and $in = interactive->vnew;
 
 my $result;
 my $wc = mdkonline::read_conf();
@@ -109,12 +107,6 @@ my $wc = mdkonline::read_conf();
 
 if (!$bundle) {
      my ($release) = mdkonline::get_release();
-     if ($applet) {
-         my $rpm_exec_name = $release >= 2006.0 ? "/usr/bin/MandrivaUpdate" : "/usr/bin/MandrakeUpdate";
-         my $is_no_media_update = $release <= 10.1 ? () : "--no-media-update";
-         run_program::run($rpm_exec_name, "--no-confirmation", $is_no_media_update); 
-         exit(0);
-     }
     if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
 	my $getupdates;
 	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
@@ -149,7 +141,6 @@ if (!$bundle) {
          }
      } else {
          log::explanations("geting updates failed: $ret");
-         $in->ask_warn(N("Error"), N("Cannot get list of updates: %s", $ret)) if $applet;
      }
     } else { # no HOST_ID 
 	
