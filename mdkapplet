@@ -218,7 +218,7 @@ sub harvester {
     my $mdvupdate_returned;
     do {
         $childpid = waitpid(-1, &WNOHANG);
-        if ($mdv_update_pid == $childpid) {
+        if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
             $mdvupdate_returned = 1;
         }
