@@ -267,7 +267,7 @@ sub prepare_media {
 sub update_pkgs {
     my (@pkgs) = @_;
     eval {
-	system "/usr/sbin/urpmi", '--auto-update', '--update', map { if_(/(.*)-[^-]*-[^-]*\.[^-.]*?\.rpm$/, $1) } @pkgs;
+	system '/usr/sbin/urpmi', '--auto-update', '--auto', '--update', map { if_(/(.*)-[^-]*-[^-]*\.[^-.]*?\.rpm$/, $1) } @pkgs;
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     $@ and output_p($logfile, "[mdkupdate] Error 99: $@"), return 0;
