@@ -344,6 +344,7 @@ sub silentCheck() {
         # are there any updates ?
         if (my $data = $response->{data}) {
             if ($data->{isUpdateAvailable}) {
+                my $_flush_guard = Gtk2::GUI_Update_Guard->new;
                 my $will_not_update_media;
                 require urpm::lock;
                 my $urpm = urpm->new;
