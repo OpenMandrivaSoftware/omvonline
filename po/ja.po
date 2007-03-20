@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2007-03-19 23:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -68,7 +68,28 @@ msgstr ""
 msgid "Release not supported (too old release, or development release)"
 msgstr "お使いのバージョンはサービスの対象外です (期限切れ/開発版)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"更新メディアは既に設定されていますが、すべて無効になっています。\n"
+"RPM メディアマネージャを起動して、少なくとも一つは有効にしてください。\n"
+"(有効の欄にチェックを入れてください)\n"
+"その後で %s を再起動してください。"
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "システムを更新"

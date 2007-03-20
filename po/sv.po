@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv - Mandriva 2007 Release\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-08-26 23:16+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -73,7 +73,29 @@ msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Du har redan minst ett media för uppdatering konfigurerat, men\n"
+"samtliga är för närvarande inaktiva. Du bör köra 'Programhanteraren\n"
+"för källor' och aktivera minst ett (titta i kolumnen Aktiverad).\n"
+"\n"
+"Starta sedan om '%s'."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Installera uppdateringar"

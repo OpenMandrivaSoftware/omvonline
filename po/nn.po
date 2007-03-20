@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2007-02-20 20:44+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -65,7 +65,29 @@ msgstr "Tenesta er ikkje aktivert. Vel «Heimeside»."
 msgid "Release not supported (too old release, or development release)"
 msgstr "Utgåva di er ikkje støtta (anten for gammal eller utviklingsutgåve)."
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Du har allereie minst eitt oppdateringsmedium, men ingen av\n"
+"dei er i bruk. Du bør køyra medieoppsettprogrammet og der\n"
+"velja å bruka minst eitt av media.\n"
+"\n"
+"Start så %s på nytt."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Installer oppdateringar"

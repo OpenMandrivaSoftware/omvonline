@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-10-05 19:56+0100\n"
 "Last-Translator: Zé <mmodem00@gmail.com>\n"
 "Language-Team: Português <pt@li.org>\n"
@@ -76,7 +76,30 @@ msgstr ""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versão não suportada (versão demasiado antiga, ou de desenvolvimento)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Já tem pelo menos uma média de actualização configurada,\n"
+"mas todas elas estão actualmente desactivadas. Deve executar\n"
+"o Gestor de Médias de Software para activar pelo menos uma\n"
+"(marcar na coluna Activado).\n"
+"\n"
+"Depois, reinicie %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Instalar actualizações"

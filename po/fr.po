@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2007-03-19 15:59+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: Français <cooker-i18n@mandrivalinux.org>\n"
@@ -76,7 +76,30 @@ msgstr ""
 "Cette version de Mandriva Linux n'est pas supportée (obsolète ou en "
 "développement)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Vous possédez déjà au moins un média de mise à jour configuré,\n"
+"mais ils sont tous désactivés actuellement. Vous devriez lancer\n"
+"le Gestionnaire de Médias Logiciels pour en activer au moins un\n"
+"(cochez-le dans la colonne « Activé ? »)\n"
+"\n"
+"Ensuite, redémarrez %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Installer les mises à jour"

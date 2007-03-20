@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-08-13 17:43+0300\n"
 "Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -67,7 +67,31 @@ msgstr "Служба не активирована. Зайдите в \"Онла
 msgid "Release not supported (too old release, or development release)"
 msgstr "Релиз не поддерживается (слишком старый или разрабатываемый релиз)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"У вас уже есть как минимум один настроенный\n"
+"источник обновлений, но все они сейчас отключены.\n"
+"Вы должны запустить Менеджер источников\n"
+"программ, чтобы включить хотя бы один из них \n"
+"(проверьте это в колонке 'Включён?')\n"
+"\n"
+"Затем перезапустите %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Установить обновления"

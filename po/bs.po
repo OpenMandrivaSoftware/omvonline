@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-09-13 20:38+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -72,7 +72,29 @@ msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Izdanje nije podržano (prestaro izdanje ili je riječ o izdanju u razvoju)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Već ste podesili jedan ili više medija za ažuriranje, ali svi su trenutno\n"
+"isključeni. Trebate pokrenuti Upravitelj softverskim medijima i\n"
+"uključiti barem jedan (označite ga u koloni Uključen?).\n"
+"\n"
+"Zatim, restartujte %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Instaliraj ispravke"

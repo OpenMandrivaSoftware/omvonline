@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-lt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2005-09-26 16:38+0200\n"
 "Last-Translator: Arvydas Svirka <arvydas@arvis.lt>\n"
 "Language-Team: \n"
@@ -67,7 +67,24 @@ msgstr "Paslauga neįjungta. Paspauskite \"Interneto svetainė\""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versija nepalaikoma (versija per sena arba dar kuriama)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Įdiegti atnaujinimus"

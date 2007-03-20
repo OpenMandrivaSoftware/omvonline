@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2007-03-19 16:08+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -66,7 +66,30 @@ msgstr "Teenus pole aktiveeritud. Palun valige \"Veebilehekülg\""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Väljalase pole toetatud (liiga vana või arendusversioon)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Vähemalt üks uuenduste allikas peab olema seadistatud,\n"
+"kuid praegu on kõik keelatud.\n"
+"Teil tuleks käivitada tarkvara allikate haldur,\n"
+"et vähemalt üks lubada (klõpsake selleks veerul 'Kas lubada?').\n"
+"\n"
+"Seejärel käivitage %s uuesti."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Uuenduste paigaldamine"
@@ -517,8 +540,8 @@ msgstr ""
 "\n"
 "Kui see mõte Teile ei meeldi või Te ei soovi meie teenustest kasu saada,\n"
 "vajutage nupule ' Loobu', Vajutades 'Järgmine', annate meile võimaluse\n"
-"teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike "
-"e-kirjadega.\n"
+"teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike e-"
+"kirjadega.\n"
 "Lisaks saate hinnaalandust www.mandrivaexpert.com tasuliste\n"
 "teenuste puhul."
 

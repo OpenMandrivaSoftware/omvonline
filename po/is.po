@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-09-12 22:16+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -66,7 +66,29 @@ msgstr "Þjónusta ekki virk, Vinsamlega smellið á \"Tengjast vefsvæði\""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Útgáfa ekki þjónustuð (of gömul útgáfa, eða tilraunaútgáfa)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Þú hefur sett upp a.m.k. einn uppfærslumiðil, en þeir eru allir\n"
+"óvirkir.  Þú verður að keyra Hugbúnaðar-miðla-tólið til að virkja\n"
+"a.m.k. einn þeirra. (krossa við í virkur? dálknum).\n"
+"\n"
+"Endurræstu síðan %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Setja inn uppfærslur"

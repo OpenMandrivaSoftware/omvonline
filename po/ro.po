@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2004-10-06 14:18+0300\n"
 "Last-Translator: Ovidiu Constantin <ovidiusoft@gmail.com>\n"
 "Language-Team: Romanian <rtfs-project@lists.sourceforge.net>\n"
@@ -75,7 +75,30 @@ msgstr ""
 "Versiunea nu este suportată (versiunea este prea veche sau este versiune de "
 "dezvoltare)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Aveţi configurate mai multe medii de actualizare, dar toate\n"
+"sunt dezactivate. Ar trebui să activaţi cel puţin unul, pornind\n"
+"Administratorul mediilor cu programe (verificaţi coloana Activat?)\n"
+"\n"
+"\n"
+"Apoi reporniţi %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Instalare actualizări pentru sistem"

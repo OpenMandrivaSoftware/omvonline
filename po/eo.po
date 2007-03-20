@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-eo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2005-01-13 10:13+0100\n"
 "Last-Translator: Grégoire COLBERT <gcolbert2004@noos.fr>\n"
 "Language-Team: Esperanto <mandrak-eo@yahoogroups.com>\n"
@@ -67,7 +67,31 @@ msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Sistemversiono ne konvenas (tro malnova versiono, aŭ disvolva versiono)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Vi konfiguris almenaŭ unu ĝisdatigo-portilon, sed ili ĉiuj estas\n"
+"estas nun elŝaltitaj. Prefere startigu la Program-portil-mastrumilon "
+"(Software\n"
+"Media Manager) por enŝalti almenaŭ unu (kontrolu ĝin en la kolumno\n"
+"Ĉu enŝaltita? (Enabled?).\n"
+"\n"
+"Poste, restartigu Mandriva-Ĝisdatigilon (%s)."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Instalu ĝisdatigojn"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-01 14:03+0200\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2004-02-17 17:39+0200\n"
 "Last-Translator: Unknown\n"
 "Language-Team: ll10nt <ll10nt@listes.murds.lv>\n"
@@ -15,24 +15,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../mdkapplet:87
+#: ../mdkapplet:91
 #, c-format
 msgid "Your system is up-to-date"
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:97
 #, fuzzy, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr "Problemu gadīnī syutit e-posta viesti iz support@mandrivaonline.com\n"
 
-#: ../mdkapplet:99
+#: ../mdkapplet:103
 #, fuzzy, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Mekleju pīejamuos pakūtnis"
 
-#: ../mdkapplet:105
+#: ../mdkapplet:109
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr ""
@@ -41,7 +41,7 @@ msgstr ""
 "%s\n"
 "ir pīejami iz jiusu sistemys.\n"
 
-#: ../mdkapplet:111
+#: ../mdkapplet:115
 #, fuzzy, c-format
 msgid "New bundles are available for your system"
 msgstr ""
@@ -50,267 +50,309 @@ msgstr ""
 "%s\n"
 "ir pīejami iz jiusu sistemys.\n"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:121
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr ""
 
-#: ../mdkapplet:123
+#: ../mdkapplet:127
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr ""
 
-#: ../mdkapplet:129
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 
-#: ../mdkapplet:135
+#: ../mdkapplet:139
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:140 ../mdkapplet:231
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Uzstuodeit jaunynuojumus"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:145
 #, fuzzy, c-format
 msgid "Configure the service"
 msgstr "Konfigurēt"
 
-#: ../mdkapplet:142
+#: ../mdkapplet:146
 #, fuzzy, c-format
 msgid "Check Updates"
 msgstr "Modernizeijumi"
 
-#: ../mdkapplet:143 ../mdkapplet:234 ../mdkonline:112 ../mdkonline:152
-#: ../mdkupdate:163 ../mdkupdate:214 ../mdkupdate:283
+#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
 #, c-format
 msgid "Please wait"
 msgstr "Lyudzu pagaidit"
 
-#: ../mdkapplet:143 ../mdkapplet:233 ../mdkapplet:234
+#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
 #, fuzzy, c-format
 msgid "Check updates"
 msgstr "Atvārtū portu puorbaude"
 
-#: ../mdkapplet:145 ../mdkapplet:494
+#: ../mdkapplet:150 ../mdkapplet:554
 #, c-format
 msgid "Online WebSite"
 msgstr ""
 
-#: ../mdkapplet:146
+#: ../mdkapplet:151
 #, fuzzy, c-format
 msgid "Configure Network"
 msgstr "Teikla konfigureišona"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:152
 #, fuzzy, c-format
 msgid "Configure Now!"
 msgstr "Nūlosu konfiguraceju\n"
 
-#: ../mdkapplet:220 ../mdkapplet:298
+#: ../mdkapplet:227 ../mdkapplet:306
 #, fuzzy, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Mandriva Linux privātuma politika"
 
-#: ../mdkapplet:229
+#: ../mdkapplet:236
 #, fuzzy, c-format
 msgid "Actions"
 msgstr "Darbeiba"
 
-#: ../mdkapplet:232
+#: ../mdkapplet:239
 #, c-format
 msgid "Configure"
 msgstr "Konfigurēt"
 
-#: ../mdkapplet:236
+#: ../mdkapplet:243
 #, fuzzy, c-format
 msgid "See logs"
 msgstr "Meklēt +5s"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:246
 #, c-format
 msgid "Status"
 msgstr "Stuovūklis"
 
-#: ../mdkapplet:243 ../mdkapplet:444
+#: ../mdkapplet:250 ../mdkapplet:503
 #, c-format
 msgid "Close"
 msgstr "Aizvērt"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:279
 #, fuzzy, c-format
 msgid "Network Connection: "
 msgstr "Jauns pīslāgums"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:279
 #, c-format
 msgid "Up"
 msgstr "Iz augšu"
 
-#: ../mdkapplet:272
+#: ../mdkapplet:279
 #, c-format
 msgid "Down"
 msgstr "Iz leju"
 
-#: ../mdkapplet:273
+#: ../mdkapplet:280
 #, c-format
 msgid "Last check: "
 msgstr ""
 
-#: ../mdkapplet:274 ../mdkonline:142
+#: ../mdkapplet:281 ../mdkonline:145
 #, c-format
 msgid "Machine name:"
 msgstr "Datora nūsaukums:"
 
-#: ../mdkapplet:275
+#: ../mdkapplet:282
 #, fuzzy, c-format
 msgid "Updates: "
 msgstr "Modernizeijumi"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:286
 #, fuzzy, c-format
 msgid "Launching drakconnect\n"
 msgstr "Palaist userdrake"
 
-#: ../mdkapplet:282
+#: ../mdkapplet:289
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:289
+#: ../mdkapplet:297
 #, c-format
 msgid "Launching mdkupdate --applet\n"
 msgstr ""
 
-#: ../mdkapplet:303
+#: ../mdkapplet:312 ../mdkapplet:352
 #, fuzzy, c-format
 msgid "Computing new updates...\n"
 msgstr "Dasaslādzu ...\n"
 
-#: ../mdkapplet:304
+#: ../mdkapplet:313
 #, fuzzy, c-format
 msgid "Connecting to"
 msgstr "Pīslāguma problema"
 
-#: ../mdkapplet:315
+#: ../mdkapplet:330
+#, c-format
+msgid "%s database locked"
+msgstr ""
+
+#: ../mdkapplet:341
+#, c-format
+msgid "Error updating media"
+msgstr ""
+
+#: ../mdkapplet:359 ../mdkapplet:373
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:326
+#: ../mdkapplet:363
+#, c-format
+msgid "Packages are up to date"
+msgstr ""
+
+#: ../mdkapplet:368
+#, c-format
+msgid "Failed to open urpmi database"
+msgstr ""
+
+#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#, c-format
+msgid "An error occurred"
+msgstr "Atkluota kliuda"
+
+#: ../mdkapplet:387
 #, c-format
 msgid "Development release not supported by service"
 msgstr ""
 
-#: ../mdkapplet:327
+#: ../mdkapplet:388
 #, c-format
 msgid "Too old release not supported by service"
 msgstr ""
 
-#: ../mdkapplet:328
+#: ../mdkapplet:389
 #, fuzzy, c-format
 msgid "Unknown state"
 msgstr "Nazynuoms hostdatora vuords"
 
-#: ../mdkapplet:329
+#: ../mdkapplet:390
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
 
-#: ../mdkapplet:330
+#: ../mdkapplet:391
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Napareizs paroļs.\n"
 
-#: ../mdkapplet:331
+#: ../mdkapplet:392
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:332
+#: ../mdkapplet:393
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:334
+#: ../mdkapplet:395
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
 
-#: ../mdkapplet:339
+#: ../mdkapplet:399
 #, fuzzy, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Laipni lyudzam Mandriva Online"
 
-#: ../mdkapplet:342
+#: ../mdkapplet:402
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistemys režims"
 
-#: ../mdkapplet:373
+#: ../mdkapplet:433
 #, c-format
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:387
+#: ../mdkapplet:447
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:391
+#: ../mdkapplet:450
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:434
+#: ../mdkapplet:493
 #, c-format
 msgid "Logs"
 msgstr "Žurnali"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:509
 #, fuzzy, c-format
 msgid "Clear"
 msgstr "Kalendars"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:535
 #, c-format
 msgid "About..."
 msgstr "Par..."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:537
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:481
+#: ../mdkapplet:541
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:493
+#: ../mdkapplet:553
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:501
+#: ../mdkapplet:561
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:503
+#: ../mdkapplet:563
 #, c-format
 msgid "Quit"
 msgstr "Izīt"
 
-#: ../mdkonline:56
+#: ../mdkonline:58
 #, c-format
 msgid ""
 "mdonline version %s\n"
@@ -327,77 +369,77 @@ msgstr ""
 "\n"
 "pīlītuojums:\n"
 
-#: ../mdkonline:61 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:74
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- drukuot itū paliedzeibys tekstu.\n"
 
-#: ../mdkonline:62
+#: ../mdkonline:64
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
 msgstr ""
 
-#: ../mdkonline:63
+#: ../mdkonline:65
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
 msgstr ""
 
-#: ../mdkonline:64
+#: ../mdkonline:66
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
 msgstr ""
 
-#: ../mdkonline:65
+#: ../mdkonline:67
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
 msgstr ""
 
-#: ../mdkonline:66
+#: ../mdkonline:68
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
 msgstr ""
 
-#: ../mdkonline:67
+#: ../mdkonline:69
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
 msgstr ""
 
-#: ../mdkonline:85 ../mdkonline:118
+#: ../mdkonline:87 ../mdkonline:120
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
 
-#: ../mdkonline:88
+#: ../mdkonline:90
 #, c-format
 msgid "I already have an account"
 msgstr ""
 
-#: ../mdkonline:89
+#: ../mdkonline:91
 #, c-format
 msgid "I want to subscribe"
 msgstr ""
 
-#: ../mdkonline:94
+#: ../mdkonline:96
 #, c-format
 msgid "Mr."
 msgstr ""
 
-#: ../mdkonline:94
+#: ../mdkonline:96
 #, c-format
 msgid "Mrs."
 msgstr ""
 
-#: ../mdkonline:94
+#: ../mdkonline:96
 #, c-format
 msgid "Ms."
 msgstr ""
 
-#: ../mdkonline:112
+#: ../mdkonline:114
 #, c-format
 msgid "Reading configuration\n"
 msgstr "Nūlosu konfiguraceju\n"
 
-#: ../mdkonline:121
+#: ../mdkonline:123
 #, c-format
 msgid ""
 "This assistant will help you to upload your configuration\n"
@@ -409,55 +451,60 @@ msgstr ""
 "uz centralizeitu datubāzi, itys vyss teik dareits ar mierķi, lai jius tyktu\n"
 "informeits par drūšeibys uzlobuojumim i cytim vierteigim jaunumim.\n"
 
-#: ../mdkonline:129
+#: ../mdkonline:131
 #, c-format
 msgid "Account creation or authentication"
 msgstr ""
 
-#: ../mdkonline:134
+#: ../mdkonline:136
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr ""
 "Īvodit jiusu Mandriva Online lītuotuojvuordu, paroli i datora nūsaukumu:"
 
-#: ../mdkonline:140 ../mdkonline:184
+#: ../mdkonline:142 ../mdkonline:195
 #, fuzzy, c-format
 msgid "Email address:"
 msgstr "IP adrese"
 
-#: ../mdkonline:141 ../mdkonline:185
+#: ../mdkonline:143
+#, c-format
+msgid "Country"
+msgstr "Vaļsts"
+
+#: ../mdkonline:144 ../mdkonline:196
 #, c-format
 msgid "Password:"
 msgstr "Parole:"
 
-#: ../mdkonline:143
+#: ../mdkonline:146
 #, fuzzy, c-format
 msgid "Machine description:"
 msgstr "Datora nūsaukums:"
 
-#: ../mdkonline:144
+#: ../mdkonline:147
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
-#: ../mdkonline:149 ../mdkonline:156 ../mdkonline:169 ../mdkonline:193
-#: ../mdkonline:197 ../mdkonline:201 ../mdkonline:206 ../mdkupdate:150
-#: ../mdkupdate:181 ../mdkupdate:199 ../mdkupdate:228 ../mdkupdate:247
+#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
+#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
 #, c-format
 msgid "Error"
 msgstr "Klaida"
 
-#: ../mdkonline:149
+#: ../mdkonline:152
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
 msgstr ""
 
-#: ../mdkonline:152
+#: ../mdkonline:155
 #, fuzzy, c-format
 msgid "Connecting to Mandriva Online website..."
 msgstr "Laipni lyudzam Mandriva Online"
 
-#: ../mdkonline:164
+#: ../mdkonline:167
 #, c-format
 msgid ""
 "In order to benefit from Mandriva Online services,\n"
@@ -493,77 +540,77 @@ msgstr ""
 "Turkluot, jius sajimsit atlaidis www.mandrivaexpert.com moksys\n"
 "atbolsta pakolpuojumim."
 
-#: ../mdkonline:169
+#: ../mdkonline:180
 #, c-format
 msgid "Connection problem"
 msgstr "Pīslāguma problema"
 
-#: ../mdkonline:169
+#: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
 msgstr ""
 
-#: ../mdkonline:176
+#: ../mdkonline:187
 #, fuzzy, c-format
 msgid "Create a Mandriva Online Account"
 msgstr "Laipni lyudzam Mandriva Online"
 
 #. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:181
+#: ../mdkonline:192
 #, fuzzy, c-format
 msgid "Greeting:"
 msgstr "Greku:"
 
-#: ../mdkonline:182
+#: ../mdkonline:193
 #, fuzzy, c-format
 msgid "First name:"
 msgstr "Hostdatora vuords: "
 
-#: ../mdkonline:183
+#: ../mdkonline:194
 #, fuzzy, c-format
 msgid "Last name:"
 msgstr "Hostdatora vuords: "
 
-#: ../mdkonline:186
+#: ../mdkonline:197
 #, c-format
 msgid "Confirm Password:"
 msgstr "Apstyprynuot paroli:"
 
-#: ../mdkonline:193
+#: ../mdkonline:204
 #, fuzzy, c-format
 msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr "Parolis nasakreit"
 
-#: ../mdkonline:197
+#: ../mdkonline:208
 #, fuzzy, c-format
 msgid "Please fill in each field"
 msgstr "Lyudzu aizpilļdit voi izavielejit lauku"
 
-#: ../mdkonline:201
+#: ../mdkonline:212
 #, fuzzy, c-format
 msgid "Not a valid mail address!\n"
 msgstr "Lyudzu, īvodit dereigu adresi!"
 
-#: ../mdkonline:206
+#: ../mdkonline:217
 #, c-format
 msgid "Creating account failed!"
 msgstr ""
 
-#: ../mdkonline:214
+#: ../mdkonline:225
 #, c-format
 msgid ""
 "Mandriva Online Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
 
-#: ../mdkonline:218
+#: ../mdkonline:229
 #, c-format
 msgid "Your upload was successful!"
 msgstr "Nūsyuteišona beja veiksmeiga!"
 
-#: ../mdkonline:218
+#: ../mdkonline:229
 #, c-format
 msgid ""
 "From now you will receive on security and updates \n"
@@ -572,7 +619,7 @@ msgstr ""
 "Niule pasateicūt Mandriva Online jius sajimsit\n"
 "paziņuojumus par drūšeibys i cytim jaunynuojumim."
 
-#: ../mdkonline:218
+#: ../mdkonline:229
 #, c-format
 msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
@@ -581,32 +628,27 @@ msgstr ""
 "Mandriva Online pīduovoj īspieju automatizēt jaunynuojumus.\n"
 "Jiusu sistema regulari palaiss programmu, kas gaideis jaunynuojumus\n"
 
-#: ../mdkonline:221
-#, c-format
-msgid "Country"
-msgstr "Vaļsts"
-
-#: ../mdkonline:232
+#: ../mdkonline:238
 #, c-format
 msgid "Congratulations"
 msgstr "Apsveicam"
 
-#: ../mdkonline:232
+#: ../mdkonline:238
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
 msgstr ""
 
-#: ../mdkonline:247
+#: ../mdkonline:253
 #, fuzzy, c-format
 msgid "Configuration uploaded successfully"
 msgstr "Nūsyuteišona beja veiksmeiga!"
 
-#: ../mdkonline:248
+#: ../mdkonline:254
 #, fuzzy, c-format
 msgid "Problem uploading configuration"
 msgstr "Nūlosu konfiguraceju\n"
 
-#: ../mdkonline:250
+#: ../mdkonline:256
 #, c-format
 msgid ""
 "Cannot connect to Mandriva Online website: wrong login/password or router/"
@@ -782,30 +824,30 @@ msgid ""
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:150
+#: ../mdkupdate:152
 #, c-format
 msgid "Cannot get list of updates: %s"
 msgstr ""
 
-#: ../mdkupdate:158 ../mdkupdate:204
+#: ../mdkupdate:160 ../mdkupdate:206
 #, c-format
 msgid "Warning"
 msgstr "Uzmaneibu"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:160
+#: ../mdkupdate:162
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:163 ../mdkupdate:214
+#: ../mdkupdate:165 ../mdkupdate:216
 #, c-format
 msgid "Preparing..."
 msgstr ""
 
-#: ../mdkupdate:181
+#: ../mdkupdate:183
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -813,12 +855,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../mdkupdate:199 ../mdkupdate:228
-#, c-format
-msgid "An error occurred"
-msgstr "Atkluota kliuda"
-
-#: ../mdkupdate:204
+#: ../mdkupdate:206
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -827,22 +864,22 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:247
+#: ../mdkupdate:249
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr ""
 
-#: ../mdkupdate:259
+#: ../mdkupdate:261
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
 msgstr ""
 
-#: ../mdkupdate:283
+#: ../mdkupdate:285
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Instaleju pakūtnis...\n"
 
-#: ../mdkupdate:295 ../mdkupdate:357
+#: ../mdkupdate:297 ../mdkupdate:359
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nav īspiejams atjaunuot pakūtnis nu update_source medium.\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-05-10 13:21+0200\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <gpul-traduccion@ceu.fi.udc.es>\n"
@@ -67,7 +67,30 @@ msgstr "O servicio non está activado. Clique en \"Sitio Web en Liña\""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versión non soportada (versión antiga ou de desenvolvemento)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Ten como mínimo un soporte de actualización configurado, pero\n"
+"todos eles están deshabilitados. Debe executar o Xestor de Soportes\n"
+"de Software para activar como mínimo un (márqueo na columna\n"
+"¿Habilitado?).\n"
+"\n"
+"Despois, reinicie %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Instala-las actualizacións"

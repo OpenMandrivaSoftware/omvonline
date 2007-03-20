@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-09-07 23:05+0200\n"
 "Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
 "Language-Team: Nederlands\n"
@@ -67,7 +67,30 @@ msgstr "Dienst niet geactiveerd. Klik alstublieft op \"Webstek\""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Uitgave niet ondersteund (te oud, of een ontwikkelingsuitgave)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"U hebt al tenminste één pakket bijwerkingsmedium geconfigureerd, maar\n"
+"deze zijn momenteel alle uitgeschakeld. U dient Software Mediabeheer te\n"
+"starten om er tenminste één te activeren (selecteer dit in de Ingeschakeld?\n"
+"kolom).\n"
+"\n"
+"Daarna herstart u %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Herzieningen installeren"

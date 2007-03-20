@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-08-17 03:06+0200\n"
 "Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
@@ -73,7 +73,30 @@ msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Du har allerede minst et oppdateringsmedium satt opp, men\n"
+"alle av dem er for øyeblikket deaktiverte. Du burde kjøre\n"
+"Programvaremediehåndterer for å aktivere minst en (kryss av for det\n"
+"i Aktivert?-kolonnen).\n"
+"\n"
+"Start så %s på nytt."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Installer oppdateringer"

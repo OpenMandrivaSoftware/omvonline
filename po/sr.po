@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2003-02-15 09:31+0100\n"
 "Last-Translator: Toma Jankovic <tomaja@net.yu>\n"
 "Language-Team: Serbian <i18n@mandrake.co.yu>\n"
@@ -75,7 +75,31 @@ msgstr ""
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Ви имате најмање један подешен медиј за ажурирање, али \n"
+"сви они су тренутно деактивирани. Требали би да покренете Менанаџер за "
+"медије са софтвером \n"
+"и активирате бар један (селектијте ту опцију у Омогући?\n"
+"колони).\n"
+"\n"
+"Затим  рестартујте  %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Инсталирај update-ове"
@@ -323,7 +347,7 @@ msgstr "Mandriva Online"
 #: ../mdkapplet:541
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "Сва права (C) %s задржава Мандрива"
 
 #: ../mdkapplet:553
 #, c-format

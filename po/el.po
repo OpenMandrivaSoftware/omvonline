@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-05-12 11:01+0300\n"
 "Last-Translator: Theophanis Mastakas <mastakas@otenet.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -72,7 +72,30 @@ msgstr ""
 msgid "Release not supported (too old release, or development release)"
 msgstr "Η έκδοση δεν υποστηρίζεται ( πολύ παλιά έκδοση ή έκδοση σε ανάπτυξη)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Έχετε ήδη ,τουλάχιστον ένα μέσο αναβάθμισης ρυθμισμένο, αλλά\n"
+"όλα τους είναι προς το παρόν ανενεργά.Πρέπει να εκτελέσετε το λογισμικό\n"
+"Διαχειριστής Μέσων για να ενεργοποιήσετε τουλάχιστον ένα (κάντε έλεγχο στη "
+"στήλη Ενεργοποιημένο;)\n"
+"\n"
+"Μετά, επανεκκινήστε το %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Εγκατάσταση αναβαθμίσεων"

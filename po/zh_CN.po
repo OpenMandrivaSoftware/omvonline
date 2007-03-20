@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 2006\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-08-10 22:31+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -63,7 +63,29 @@ msgstr "服务未激活。请点击“在线网站”"
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支持(太旧，或者为开发版本)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"你已经至少配置了一个升级介质，但是它们现在全部都不\n"
+"可用。你需要运行“软件介质管理器”来启用其中的至少\n"
+"一项(在“启用?”栏中选中)。\n"
+"\n"
+"然后，重新启动 %s。"
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "安装更新"

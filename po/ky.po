@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ky\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2005-07-14 12:10+0000\n"
 "Last-Translator: Timur Jamakeev <ztimur@mail..ru>\n"
 "Language-Team: Kyrgyz\n"
@@ -69,7 +69,30 @@ msgstr "Кызмат активдештирилген эмес. \"Онлайн �
 msgid "Release not supported (too old release, or development release)"
 msgstr "Релиз колдоого ээ эмес (өтө эски же иштелип жаткан релиз)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"Сизде жок эле дегенде бир калыптандырылган жаңылоо\n"
+"булагы бар, бирок алардын баары иштеген эмес.Сиз алардын бирөөсүн ишке "
+"киргизүү үчүн Программалар\n"
+"булагынын менеджерин иштетүүңүз керек (аны 'Иштетилген'\n"
+"мамычасынан текшериңиз)\n"
+"Андан соң, %s кайра иштетиңиз."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "Жаңылоолорду орнотуу"

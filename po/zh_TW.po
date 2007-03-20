@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2006-04-10 18:31+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -70,7 +70,28 @@ msgstr "服務沒有啟動。請點選「線上網站」"
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支援 (您使用的版本過舊或是開發者版本)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"您已經設定好了至少一個更新媒體，但它們現在全部都是停用的。\n"
+"您應該執行軟體套件媒體管理員來啟用至少一個媒體 (選取啟用欄位)。\n"
+"\n"
+"完成後，請重新啟動 %s。"
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "安裝升級"

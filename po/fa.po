@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fa\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2005-02-05 04:12-0500\n"
 "Last-Translator: Abbas Izad <abbasizad@hotmail.com>\n"
 "Language-Team: Persian <en@li.org>\n"
@@ -69,7 +69,30 @@ msgstr "سرویس فعال نشده است. لطفا بر \"وب‌گاه ای�
 msgid "Release not supported (too old release, or development release)"
 msgstr "انتشار پشتیبانی نشده است (انتشار بسیار قدیمی، یا انتشار توسعه‌ای)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"شما حداقل یک رسانه‌ی بروزسازی را از قبل پیکربندی کرده‌اید،\n"
+"اما تمام آنها اکنون از کار افتاده‌اند. شما باید مدیر رسانه‌های\n"
+"نرم‌افزار را برای به کار انداختن حداقل یکی از آنها اجرا کنید\n"
+" (آن را در ستون به‌کار‌افتاده؟ کنترل کنید).\n"
+"\n"
+"پس از آن %s را دوباره شروع کنید."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "نصب کردن بروزسازی‌ها"

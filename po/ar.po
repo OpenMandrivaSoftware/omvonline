@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2005-02-24 23:27+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -69,7 +69,28 @@ msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "هذه الإصدارة غير مدعومة (إما بسبب أنها قديماً جداً، أو أنها إصدارة تطويريّة)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"لديك على الأقل وسيط تحديث واحد تمت تهيئته، لكن\n"
+"جميعهم معطلون حالياً. يجب عليك تشغيل مدير وسائط\n"
+"البرامج لتمكين واحد على الأقل (قم بالتأشير عليها في عامود التمكين؟).\n"
+"ثم قم بإعادة تشغيل أداة %s."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "ثبّت التّحديثات"

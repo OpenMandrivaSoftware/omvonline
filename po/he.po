@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-19 14:55+0100\n"
+"POT-Creation-Date: 2007-03-20 16:21+0100\n"
 "PO-Revision-Date: 2007-03-09 02:14+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -69,7 +69,29 @@ msgstr "השירות לא הופעל. עליך ללחוץ על \"אתר מקוו
 msgid "Release not supported (too old release, or development release)"
 msgstr "גרסה לא נתמכת (גרסה ישנה מדי או גרסת פיתוח)"
 
-#: ../mdkapplet:144 ../mdkapplet:238
+#: ../mdkapplet:145
+#, c-format
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+
+#: ../mdkapplet:151
+#, c-format
+msgid ""
+"You already have at least one update medium configured, but\n"
+"all of them are currently disabled. You should run the Software\n"
+"Media Manager to enable at least one (check it in the Enabled?\n"
+"column).\n"
+"\n"
+"Then, restart %s."
+msgstr ""
+"יש לך לפחות מקור עדכונים אחד מוגדר, אבל אף מקור אינו\n"
+"מאופשר כרגע. עליך להריץ את מנהל מקורות התוכנה ולאפשר\n"
+"לפחות מקור  אחד (עליך לסמן את תיבת האפשור).\n"
+"\n"
+"לאחר מכן עליך לאתחל את %s מחדש."
+
+#: ../mdkapplet:161 ../mdkapplet:260
 #, c-format
 msgid "Install updates"
 msgstr "התקן עדכונים"
