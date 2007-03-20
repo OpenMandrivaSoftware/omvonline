@@ -106,40 +106,12 @@ my $wc = mdkonline::read_conf();
 
 if (!$bundle) {
      my ($release) = mdkonline::get_release();
-    if ($wc->{HOST_ID} && $wc->{HOST_KEY}) {
-	my $getupdates;
-	$getupdates = mdkonline::soap_get_updates_for_host($wc->{HOST_ID}, $wc->{HOST_KEY});
 
-     my $ret = mdkonline::check_server_response($getupdates);
-	print Data::Dumper->Dump([ $getupdates ], [ qw(getupdates) ]);
-     if ($ret eq 'OK') {
-         # doble check mdkapplet:
-         if (my $updates = $getupdates->{data}{updates}) { # there're updates
-
-             my %mirrors = add_mirrors($in, undef, $getupdates->{data}{mirrors}, {}, '--update');
-             my $mirror = find { $_ } keys %mirrors; # pick a random mirror
-             my $pkgs = [ map { $_->{filename} } @$updates ];
-             print Data::Dumper->Dump([ $updates, $pkgs], [ qw(updates pkgs) ]);
-
-	    if ($auto) { # FIXME
-             my $ret = update_pkgs(@$pkgs);
+             my $ret = update_pkgs();
              $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
-	    }
 	    rpm_qa($afterrpm);
 	    my $wc = mdkonline::read_conf();
-	    my $need_upload = get_rpm_diff();
-	    if ($need_upload || $auto || $mnf) {
-		#- send configuration and get back key to use...
-		$result = mdkonline::prepare_upload_conf($wc);
-	    }
 	    clean_dir();
-         }
-     } else {
-         log::explanations("geting updates failed: $ret");
-     }
-    } else { # no HOST_ID 
-	
-    }
 } else {
     log::explanations("managing the $bundle bundle");
     if (-d '/live/media/loopbacks') {
