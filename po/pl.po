@@ -1,27 +1,25 @@
-# translation of mdkonline-pl.po to Polish
+# translation of mdkonline.po to Polish
 # translation of pl.po to
 # Aplikacja umożliwiająca zdalne korzystanie z usług Mandriva Linux.
-# Copyright (C) 2002, 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 #
 # Arkadiusz Lipiec <arkadiusz.lipiec@gazeta.pl>, 2002-2004.
 # Tomasz Bednarski <bednarski@skrzynka.pl>, 2004, 2005.
 # Tomasz Bednarski <tomasz.bednarski@mandriva.pl>, 2005.
-# Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>, 2006.
+# Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>, 2006, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-pl\n"
+"Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-19 14:55+0100\n"
-"PO-Revision-Date: 2006-09-12 10:46+0200\n"
-"Last-Translator: Tomasz Bednarski - Mandriva Poland <tomasz."
-"bednarski@mandriva.pl>\n"
+"PO-Revision-Date: 2007-03-20 08:43+0100\n"
+"Last-Translator: Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.2\n"
-"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../mdkapplet:91
 #, c-format
@@ -181,8 +179,7 @@ msgstr "Uruchamianie programu drakconnect\n"
 #: ../mdkapplet:289
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
+msgstr "Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
 
 #: ../mdkapplet:297
 #, c-format
@@ -205,9 +202,9 @@ msgid "%s database locked"
 msgstr "%s baza danych zablokowana"
 
 #: ../mdkapplet:341
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Aktualizowanie nośnika...\n"
+msgstr "Błąd w trakcie aktualizowania nośnika"
 
 #: ../mdkapplet:359 ../mdkapplet:373
 #, c-format
@@ -220,9 +217,9 @@ msgid "Packages are up to date"
 msgstr "Oprogramowanie jest zaktualizowane"
 
 #: ../mdkapplet:368
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "nie można otworzyć bazy danych rpm"
+msgstr "Nie można otworzyć bazy danych urpmi"
 
 #: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
 #, c-format
@@ -247,8 +244,7 @@ msgstr "Nieznany stan"
 #: ../mdkapplet:390
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
+msgstr "Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
 
 #: ../mdkapplet:391
 #, c-format
@@ -274,8 +270,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
+msgstr "Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
 
 #: ../mdkapplet:399
 #, c-format
@@ -900,3 +895,4 @@ msgstr "Instalowanie pakietów...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"
+
