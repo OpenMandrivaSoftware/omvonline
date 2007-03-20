@@ -177,7 +177,12 @@ gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"),
 #$icon->shape_combine_mask($img, 0, 0);
 $eventbox->signal_connect(button_press_event => sub {
 				  if ($_[1]->button == 1) {
-                          installUpdates() if $state_global eq 'updates';
+                          my %actions = (
+                              no_update_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
+                              no_enabled_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
+                              updates => \&installUpdates,
+                          );
+                          $actions{$state_global}->() if ref $actions{$state_global};
 			      } elsif ($_[1]->button == 3) {
                          $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
                      }
