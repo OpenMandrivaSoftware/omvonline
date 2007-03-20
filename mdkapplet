@@ -137,7 +137,24 @@ my %state = (
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
 		      menu => [ 'weblink' ],
 		      tt => [ N_("Release not supported (too old release, or development release)") ]
-		     }
+		     },
+          no_update_medium => {
+		      colour => [ 'noconf' ],
+		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'configureApplet', 'check', 'weblink' ],
+                tt => [ N_("No medium found. You must add some media through 'Software Media Manager'.") ],
+          },
+          no_enabled_medium => {
+		      colour => [ 'noconf' ],
+		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'configureApplet', 'check', 'weblink' ],
+                tt => [ sprintf(N_("You already have at least one update medium configured, but
+all of them are currently disabled. You should run the Software
+Media Manager to enable at least one (check it in the Enabled?
+column).
+
+Then, restart %s.", 'mdkapplet'), 'mdkapplet') ],
+          },
 	    );
 
 my %actions = (
@@ -348,6 +365,16 @@ sub silentCheck() {
                 require urpm::media;
                 $urpm = urpm->new;
                 urpm::media::configure($urpm);
+                my @update_medias = grep { $_->{update} } @{$urpm->{media}};
+                if (!@update_medias) {
+                    logIt("no update media configured");
+                    go2State('no_update_medium');
+                    return;
+                } elsif (!grep { ! $_->{ignore} } @update_medias) {
+                    logIt("all update media are disabled");
+                    go2State('no_enabled_medium');
+                    return;
+                }
 
                 logIt(N("Computing new updates...\n"));
                 
