@@ -22,7 +22,7 @@
 ################################################################################
 
 # workaround standalone.pm eating "--auto" from @ARGV:
-BEGIN { $::no_global_argv_parsing = 1 };
+BEGIN { $::no_global_argv_parsing = 1 }
 
 use strict;
 use POSIX;
@@ -260,7 +260,6 @@ sub install_pkgs {
     };
     undef $w;
 }
-
 
 sub my_fullname {
     return '?-?-?' unless ref $_[0];
