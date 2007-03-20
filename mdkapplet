@@ -305,10 +305,10 @@ sub refresh_contents {
 		   ];
     $contents;
 }
-sub configNetwork() { logIt(N("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
+sub configNetwork() { logIt(N_("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
-    logIt(N("Mandriva Online seems to be reinstalled, reloading applet ...."));
+    logIt(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
     exec($0, '--auto-update');
 }
 
@@ -316,7 +316,7 @@ sub installUpdates() {
     my $binfile = $0;
     return if $mdv_update_pid;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
-    logIt(N("Launching mdkupdate --applet\n"));
+    logIt(N_("Launching mdkupdate --applet\n"));
     refresh_gui(0);
     $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation');
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
@@ -331,8 +331,8 @@ sub silentCheck() {
     return if $mdv_update_pid;
     my %h = getVarsFromSh($conffile); 
     my $u;
-    logIt(N("Computing new updates...\n"));
-    logIt(N("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
+    logIt(N_("Computing new updates...\n"));
+    logIt(N_("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
@@ -349,7 +349,7 @@ sub silentCheck() {
                 my $urpm = urpm->new;
                 {
                     local $urpm->{fatal} = sub {
-                        logIt(N("%s database locked", 'urpmi'));
+                        logIt(N_("%s database locked", 'urpmi'));
                         logIt("skipping updating urpmi database");
                         print "Fatal: @_\n";
                         $will_not_update_media = 1;
@@ -360,7 +360,7 @@ sub silentCheck() {
                 }
 
                 if (!$will_not_update_media and my $res = !run_program::raw({}, 'urpmi.update', '--update')) { # shoud wait for it while gtkflus()ing: { detach => 1 }
-                    logIt(N("Error updating media") . $res);
+                    logIt(N_("Error updating media") . $res);
                     go2State('critical');
                     return 0;
                 }
@@ -381,34 +381,34 @@ sub silentCheck() {
                     return;
                 }
 
-                logIt(N("Computing new updates...\n"));
+                logIt(N_("Computing new updates...\n"));
                 
                 if (my $db = urpm::db_open_or_die($urpm)) {
                     my $h = $urpm->request_packages_to_upgrade($db, {}, {});
                     
                     if (my @pkgs = grep { !$_->flag_skip } map { $urpm->{depslist}[$_] } keys %$h) {
                         go2State('updates');
-                        logIt(N("Checking... Updates are available\n") . "\n");
+                        logIt(N_("Checking... Updates are available\n") . "\n");
 
                     } else {
                         go2State('okay');
-                        logIt(N("Packages are up to date") . "\n"); # mesg from urpmi
+                        logIt(N_("Packages are up to date") . "\n"); # mesg from urpmi
                         return;
                     }
                 } else {
                     go2State('critical');
-                    logIt(N("Failed to open urpmi database") . "\n");
+                    logIt(N_("Failed to open urpmi database") . "\n");
                     return;
                 }
 
                 go2State('updates');
-                logIt(N("Checking... Updates are available\n") . "\n");
+                logIt(N_("Checking... Updates are available\n") . "\n");
 
             } else {     # no update
                 okState();
             }
         } else {
-            logIt(N("An error occurred"));
+            logIt(N_("An error occurred"));
         }
     } else {
     #   99 - log or host or action or pass empty, wrong action
@@ -416,22 +416,22 @@ sub silentCheck() {
     #   97 - host not active
     logIt("Returned value after association (silentCheck)= $u\n") if $debug;
     my $retcode = {
-		   94 => sub { logIt(N("Development release not supported by service")); go2State('notsupported') },
-		   95 => sub { logIt(N("Too old release not supported by service")); go2State('notsupported') },
-		   96 => sub { logIt(N("Unknown state")); go2State('critical') },
-		   97 => sub { logIt(N("Online services disabled. Contact Mandriva Online site\n")); go2State('disabled') },
-		   98 => sub { logIt(N("Wrong Password.\n")); go2State('critical') },
-		   99 => sub { logIt(N("Wrong Action or host or login.\n")); go2State('critical') },
-                   500 => sub { logIt(N("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
+		   94 => sub { logIt(N_("Development release not supported by service")); go2State('notsupported') },
+		   95 => sub { logIt(N_("Too old release not supported by service")); go2State('notsupported') },
+		   96 => sub { logIt(N_("Unknown state")); go2State('critical') },
+		   97 => sub { logIt(N_("Online services disabled. Contact Mandriva Online site\n")); go2State('disabled') },
+		   98 => sub { logIt(N_("Wrong Password.\n")); go2State('critical') },
+		   99 => sub { logIt(N_("Wrong Action or host or login.\n")); go2State('critical') },
+                   500 => sub { logIt(N_("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
 		  };
-    eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
+    eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N_("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
     }
     if ($debug) {
      require Data::Dumper;
-	logIt(N("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
+	logIt(N_("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
     }
 }
-sub okState() { logIt(N("System is up-to-date\n")); go2State('okay') }
+sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
@@ -476,10 +476,10 @@ sub setLastTime() {
 sub checkConfig() {
     if (!-e $conffile) {
 	my $logged if 0;
-	logIt(N("Checking config file: Not present\n")) if !$logged;
+	logIt(N_("Checking config file: Not present\n")) if !$logged;
 	$logged = 1;
     } elsif (!isNetwork()) {
-	logIt(N("Checking Network: seems disabled\n"));
+	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
     } elsif (member($state_global, qw(disconnected noconfig))) {
 	silentCheck(); #- state has changed, update
@@ -598,7 +598,7 @@ sub setState {
 sub logIt {
     my $log = shift;
     my ($Second, $Minute, $Hour, undef, undef, undef, undef, undef, undef) = localtime();
-    $mLog .= $Hour . ':' . $Minute . ':' . $Second . '  ' . $log;
+    $mLog .= $Hour . ':' . $Minute . ':' . $Second . '  ' . translate($log);
     if (defined $wlog) { $buffer->insert_at_cursor($log) }
     log::explanations($log);
 }
