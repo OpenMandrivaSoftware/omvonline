@@ -132,6 +132,12 @@ my %state = (
 		      menu => [ 'configureApplet', 'weblink' ],
 		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 		     },
+          locked => {
+		      colour => [ 'noconf' ],
+		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'configureApplet', 'check', 'weblink' ],
+                tt => [ N_("%s database locked", 'urpmi') ],
+          },
 	     notsupported => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
@@ -160,7 +166,7 @@ Then, restart %s.", 'mdkapplet'), 'mdkapplet') ],
 my %comm_codes = (
     locked => {
         code => 2,
-        status => 'critical',
+        status => 'locked',
         log => N_("%s database locked", 'urpmi') . ", skipping updating urpmi database",
     },
     error_updating => {
