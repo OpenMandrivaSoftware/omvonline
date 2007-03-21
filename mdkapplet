@@ -157,6 +157,44 @@ Then, restart %s.", 'mdkapplet'), 'mdkapplet') ],
           },
 	    );
 
+my %comm_codes = (
+    locked => {
+        code => 2,
+        status => 'critical',
+        log => N_("%s database locked", 'urpmi') . ", skipping updating urpmi database",
+    },
+    error_updating => {
+        code => 3,
+        status => 'critical',
+        log => N_("Error updating media"),
+    },
+    no_update_medium => {
+        code => 4,
+        status => 'no_update_medium',
+        log => "no update media configured",
+    },
+    no_enabled_medium => {
+        code => 5,
+        status => 'no_enabled_medium',
+        log => "all update media are disabled",
+    },
+    updates => {
+        code => 6,
+        status => 'updates',
+        log => N_("Checking... Updates are available\n") . "\n",
+    },
+    uptodate => {
+        code => 7,
+        status => 'okay',
+        log => N_("Packages are up to date") . "\n",
+    },
+    db_not_open => {
+        code => 8,
+        status => 'critical',
+        log => N_("Failed to open urpmi database") . "\n",
+    },
+);
+
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
@@ -209,7 +247,7 @@ Gtk2->main;
 
 ugtk2::exit(0);
 
-my $mdv_update_pid;
+my ($mdv_update_pid, $checker_pid);
 
 # Signal management 
 sub harvester {
@@ -221,6 +259,14 @@ sub harvester {
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
             $mdvupdate_returned = 1;
+        } elsif ($checker_pid && $checker_pid == $childpid) {
+            undef $checker_pid;
+            my $status = $? >> 8;
+            my ($state) = grep { $_->{code} eq $status } values %comm_codes;
+            if ($state) {
+                logIt($state->{log});
+                go2State($state->{status});
+            }
         }
         push @pids, $childpid;
         WIFEXITED($?) and refresh_gui(1);
@@ -328,7 +374,7 @@ sub installUpdates() {
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
 sub silentCheck() {
-    return if $mdv_update_pid;
+    return if $mdv_update_pid || $checker_pid;
     my %h = getVarsFromSh($conffile); 
     my $u;
     logIt(N_("Computing new updates...\n"));
@@ -342,16 +388,24 @@ sub silentCheck() {
     my $status_err = mdkonline::check_server_response($response);
     if ($status_err eq 'OK') {
         # are there any updates ?
-        if (my $data = $response->{data}) {
-            if ($data->{isUpdateAvailable}) {
-                my $_flush_guard = Gtk2::GUI_Update_Guard->new;
+        my $data = $response->{data};
+        if ($data && $data->{isUpdateAvailable}) {
+            my $_flush_guard = Gtk2::GUI_Update_Guard->new;
+            $checker_pid = fork();
+            if (defined $checker_pid) {
+                return if $checker_pid; # parent
+
+                # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
+                my $_safe = before_leaving { POSIX::_exit(0) };
+                my $exit = sub {
+                    my ($state) = @_;
+                    POSIX::_exit($comm_codes{$state}{code});
+                };
                 my $will_not_update_media;
                 require urpm::lock;
                 my $urpm = urpm->new;
                 {
                     local $urpm->{fatal} = sub {
-                        logIt(N_("%s database locked", 'urpmi'));
-                        logIt("skipping updating urpmi database");
                         print "Fatal: @_\n";
                         $will_not_update_media = 1;
                     };
@@ -359,11 +413,10 @@ sub silentCheck() {
 
                     urpm::lock::urpmi_db($urpm, 'exclusive', 1);
                 }
+                $exit->('locked') if $will_not_update_media;
 
-                if (!$will_not_update_media and my $res = !run_program::raw({}, 'urpmi.update', '--update')) { # shoud wait for it while gtkflus()ing: { detach => 1 }
-                    logIt(N_("Error updating media") . $res);
-                    go2State('critical');
-                    return 0;
+                if (my $res = !run_program::raw({}, 'urpmi.update', '--update')) {
+                    $exit->('error_updating') if $will_not_update_media;
                 }
 
                 use urpm; # to force require
@@ -372,40 +425,26 @@ sub silentCheck() {
                 urpm::media::configure($urpm);
                 my @update_medias = grep { $_->{update} } @{$urpm->{media}};
                 if (!@update_medias) {
-                    logIt("no update media configured");
-                    go2State('no_update_medium');
-                    return;
+                    $exit->('no_update_medium');
                 } elsif (!grep { ! $_->{ignore} } @update_medias) {
-                    logIt("all update media are disabled");
-                    go2State('no_enabled_medium');
-                    return;
+                    $exit->('no_enabled_medium');
                 }
 
-                logIt(N_("Computing new updates...\n"));
-                
                 if (my $db = urpm::db_open_or_die($urpm)) {
                     my $h = $urpm->request_packages_to_upgrade($db, {}, {});
                     
                     if (my @pkgs = grep { !$_->flag_skip } map { $urpm->{depslist}[$_] } keys %$h) {
-                        go2State('updates');
-                        logIt(N_("Checking... Updates are available\n") . "\n");
-
+                        $exit->('updates');
                     } else {
-                        go2State('okay');
-                        logIt(N_("Packages are up to date") . "\n"); # mesg from urpmi
-                        return;
+                        $exit->('uptodate');
                     }
                 } else {
-                    go2State('critical');
-                    logIt(N_("Failed to open urpmi database") . "\n");
-                    return;
+                    $exit->('db_not_open');
                 }
-
-                go2State('updates');
-                logIt(N_("Checking... Updates are available\n") . "\n");
-
-            } else {     # no update
-                okState();
+                $exit->('updates');
+            } else {
+                logIt("cannot fork: %s", "update checker ($!)");
+                go2State('critical');
             }
         } else {
             logIt(N_("An error occurred"));
