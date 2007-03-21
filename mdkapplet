@@ -241,8 +241,6 @@ $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
 
-Glib::Timeout->add(200, sub { harvester('CHLD', 1); 1 });
-
 Gtk2->main;
 
 ugtk2::exit(0);
@@ -390,7 +388,6 @@ sub silentCheck() {
         # are there any updates ?
         my $data = $response->{data};
         if ($data && $data->{isUpdateAvailable}) {
-            my $_flush_guard = Gtk2::GUI_Update_Guard->new;
             $checker_pid = fork();
             if (defined $checker_pid) {
                 return if $checker_pid; # parent
