@@ -136,7 +136,7 @@ my %state = (
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'configureApplet', 'check', 'weblink' ],
-                tt => [ N_("%s database locked", 'urpmi') ],
+                tt => [ N_("urpmi database locked") ],
           },
 	     notsupported => {
 		      colour => [ 'disabled' ],
@@ -167,7 +167,7 @@ my %comm_codes = (
     locked => {
         code => 2,
         status => 'locked',
-        log => N_("%s database locked", 'urpmi') . ", skipping updating urpmi database",
+        log => N_("urpmi database locked") . ", skipping updating urpmi database",
     },
     error_updating => {
         code => 3,
