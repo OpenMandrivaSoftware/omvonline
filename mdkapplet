@@ -369,7 +369,6 @@ sub silentCheck() {
                 use urpm; # to force require
                 require urpm::select;
                 require urpm::media;
-                $urpm = urpm->new;
                 urpm::media::configure($urpm);
                 my @update_medias = grep { $_->{update} } @{$urpm->{media}};
                 if (!@update_medias) {
