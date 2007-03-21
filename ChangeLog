@@ -1,3 +1,247 @@
+2007-03-21 22:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester,silentCheck) remove
+	  the timers that make the applet constantly polling (#29788)
+
+2007-03-21 22:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester,silentCheck) fork the
+	  updates checking in background, thus fixing:
+	  - frozed applet while computing updates
+	  - memory leak (15Mb on every check)
+
+2007-03-21 22:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) do not needlessly
+	  create a new urpm object
+
+2007-03-21 18:50  Michal Bukovjan <bukovjan at mbox.dkm.cz>
+
+	* soft/mdkonline/trunk/po/cs.po: Updated Czech translation.
+
+2007-03-21 13:50  ybando
+
+	* soft/mdkonline/trunk/po/ja.po: Japanese translation updated
+
+2007-03-21 11:44  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: (update_pkgs) it shouldn't matter
+	  with stable updates but let's live
+	  on the safe side and prevent removing the whole system
+
+2007-03-21 11:07  Funda Wang <fundawang at linux.net.cn>
+
+	* soft/mdkonline/trunk/po/zh_CN.po: Updated mdkonline zh_CN
+	  translation.
+
+2007-03-21 10:21  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* soft/mdkonline/trunk/po/pl.po: update
+
+2007-03-20 21:03  Reinout van Schouwen <reinout at cs.vu.nl>
+
+	* soft/mdkonline/trunk/po/nl.po: - nl.po: Updated Dutch translation
+
+2007-03-20 20:59  Arpad Biro <biro_arpad at yahoo.com>
+
+	* soft/mdkonline/trunk/po/hu.po: update
+
+2007-03-20 20:58  Reinout van Schouwen <reinout at cs.vu.nl>
+
+	* soft/mdkonline/trunk/po/nl.po: - nl.po: Updated Dutch translation
+
+2007-03-20 20:12  Marek Laane <bald at starman.ee>
+
+	* soft/mdkonline/trunk/po/et.po: Updated Estonian translation.
+
+2007-03-20 20:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/Makefile: bump release (2.13)
+
+2007-03-20 20:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: (update_pkgs) readd the --auto
+	  option I wrongly removed in r147060
+
+2007-03-20 19:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: enable to operate offline
+
+2007-03-20 19:38  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: cleanups
+
+2007-03-20 19:37  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: get rid of non auto mode since
+	  it:
+	  - wasn't ported over new urpmi API and was thus broken
+	  - just reinvent what MandrivaUpdate does
+	  - is buggy since quite a long time (eg: #16202)
+
+2007-03-20 19:35  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: kill --applet option now that
+	  MandrivaUpdate is run directly by the applet(
+
+2007-03-20 19:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: (update_pkgs) update the media
+	  btw
+
+2007-03-20 19:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: (update_pkgs) consider all update
+	  media instead of only the old "update_source" one
+
+2007-03-20 19:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkupdate: (update_pkgs) accept to not be
+	  given the list of package to update
+
+2007-03-20 19:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet, soft/mdkonline/trunk/po/af.po,
+	  soft/mdkonline/trunk/po/ar.po, soft/mdkonline/trunk/po/az.po,
+	  soft/mdkonline/trunk/po/bg.po, soft/mdkonline/trunk/po/bn.po,
+	  soft/mdkonline/trunk/po/br.po, soft/mdkonline/trunk/po/bs.po,
+	  soft/mdkonline/trunk/po/ca.po, soft/mdkonline/trunk/po/cs.po,
+	  soft/mdkonline/trunk/po/cy.po, soft/mdkonline/trunk/po/da.po,
+	  soft/mdkonline/trunk/po/de.po, soft/mdkonline/trunk/po/el.po,
+	  soft/mdkonline/trunk/po/eo.po, soft/mdkonline/trunk/po/es.po,
+	  soft/mdkonline/trunk/po/et.po, soft/mdkonline/trunk/po/eu.po,
+	  soft/mdkonline/trunk/po/fa.po, soft/mdkonline/trunk/po/fi.po,
+	  soft/mdkonline/trunk/po/fr.po, soft/mdkonline/trunk/po/fur.po,
+	  soft/mdkonline/trunk/po/ga.po, soft/mdkonline/trunk/po/gl.po,
+	  soft/mdkonline/trunk/po/he.po, soft/mdkonline/trunk/po/hi.po,
+	  soft/mdkonline/trunk/po/hr.po, soft/mdkonline/trunk/po/hu.po,
+	  soft/mdkonline/trunk/po/hy.po, soft/mdkonline/trunk/po/id.po,
+	  soft/mdkonline/trunk/po/is.po, soft/mdkonline/trunk/po/it.po,
+	  soft/mdkonline/trunk/po/ja.po, soft/mdkonline/trunk/po/ka.po,
+	  soft/mdkonline/trunk/po/ko.po, soft/mdkonline/trunk/po/ku.po,
+	  soft/mdkonline/trunk/po/ky.po, soft/mdkonline/trunk/po/lt.po,
+	  soft/mdkonline/trunk/po/ltg.po, soft/mdkonline/trunk/po/lv.po,
+	  soft/mdkonline/trunk/po/mdkonline.pot,
+	  soft/mdkonline/trunk/po/mk.po, soft/mdkonline/trunk/po/mn.po,
+	  soft/mdkonline/trunk/po/ms.po, soft/mdkonline/trunk/po/mt.po,
+	  soft/mdkonline/trunk/po/nb.po, soft/mdkonline/trunk/po/nl.po,
+	  soft/mdkonline/trunk/po/nn.po, soft/mdkonline/trunk/po/pa_IN.po,
+	  soft/mdkonline/trunk/po/pl.po, soft/mdkonline/trunk/po/pt.po,
+	  soft/mdkonline/trunk/po/pt_BR.po, soft/mdkonline/trunk/po/ro.po,
+	  soft/mdkonline/trunk/po/ru.po, soft/mdkonline/trunk/po/sc.po,
+	  soft/mdkonline/trunk/po/sk.po, soft/mdkonline/trunk/po/sl.po,
+	  soft/mdkonline/trunk/po/sq.po, soft/mdkonline/trunk/po/sr.po,
+	  soft/mdkonline/trunk/po/sr@Latn.po,
+	  soft/mdkonline/trunk/po/sv.po, soft/mdkonline/trunk/po/ta.po,
+	  soft/mdkonline/trunk/po/tg.po, soft/mdkonline/trunk/po/th.po,
+	  soft/mdkonline/trunk/po/tl.po, soft/mdkonline/trunk/po/tr.po,
+	  soft/mdkonline/trunk/po/uk.po, soft/mdkonline/trunk/po/ur.po,
+	  soft/mdkonline/trunk/po/uz.po,
+	  soft/mdkonline/trunk/po/uz@Latn.po,
+	  soft/mdkonline/trunk/po/vi.po, soft/mdkonline/trunk/po/wa.po,
+	  soft/mdkonline/trunk/po/zh_CN.po,
+	  soft/mdkonline/trunk/po/zh_TW.po: update log message regarding
+	  s/mdkupdate/MandrivaUpdate/
+
+2007-03-20 17:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) try harder to
+	  refresh the GUI while updating (eg: if a
+	  full-screen window go above the applet)
+
+2007-03-20 16:52  nbauer
+
+	* soft/mdkonline/trunk/po/de.po: Update German translation (Nicolas
+	  Bauer)
+
+2007-03-20 15:54  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/Makefile: bump release (2.12)
+
+2007-03-20 15:54  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/ChangeLog: Generated by svn2cl the mar 20
+	  mar 2007 16:51:12 CET
+
+2007-03-20 15:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (logIt) do not log translated
+	  messages
+
+2007-03-20 15:41  ybando
+
+	* soft/mdkonline/trunk/po/ja.po: Japanese translation updated. :)
+
+2007-03-20 15:39  Marek Laane <bald at starman.ee>
+
+	* soft/mdkonline/trunk/po/et.po: Updated Estonian translation.
+
+2007-03-20 15:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/po/fr.po: update
+
+2007-03-20 15:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/po/af.po, soft/mdkonline/trunk/po/ar.po,
+	  soft/mdkonline/trunk/po/az.po, soft/mdkonline/trunk/po/bg.po,
+	  soft/mdkonline/trunk/po/bn.po, soft/mdkonline/trunk/po/br.po,
+	  soft/mdkonline/trunk/po/bs.po, soft/mdkonline/trunk/po/ca.po,
+	  soft/mdkonline/trunk/po/cs.po, soft/mdkonline/trunk/po/cy.po,
+	  soft/mdkonline/trunk/po/da.po, soft/mdkonline/trunk/po/de.po,
+	  soft/mdkonline/trunk/po/el.po, soft/mdkonline/trunk/po/eo.po,
+	  soft/mdkonline/trunk/po/es.po, soft/mdkonline/trunk/po/et.po,
+	  soft/mdkonline/trunk/po/eu.po, soft/mdkonline/trunk/po/fa.po,
+	  soft/mdkonline/trunk/po/fi.po, soft/mdkonline/trunk/po/fr.po,
+	  soft/mdkonline/trunk/po/fur.po, soft/mdkonline/trunk/po/ga.po,
+	  soft/mdkonline/trunk/po/gl.po, soft/mdkonline/trunk/po/he.po,
+	  soft/mdkonline/trunk/po/hi.po, soft/mdkonline/trunk/po/hr.po,
+	  soft/mdkonline/trunk/po/hu.po, soft/mdkonline/trunk/po/hy.po,
+	  soft/mdkonline/trunk/po/id.po, soft/mdkonline/trunk/po/is.po,
+	  soft/mdkonline/trunk/po/it.po, soft/mdkonline/trunk/po/ja.po,
+	  soft/mdkonline/trunk/po/ka.po, soft/mdkonline/trunk/po/ko.po,
+	  soft/mdkonline/trunk/po/ku.po, soft/mdkonline/trunk/po/ky.po,
+	  soft/mdkonline/trunk/po/lt.po, soft/mdkonline/trunk/po/ltg.po,
+	  soft/mdkonline/trunk/po/lv.po,
+	  soft/mdkonline/trunk/po/mdkonline.pot,
+	  soft/mdkonline/trunk/po/mk.po, soft/mdkonline/trunk/po/mn.po,
+	  soft/mdkonline/trunk/po/ms.po, soft/mdkonline/trunk/po/mt.po,
+	  soft/mdkonline/trunk/po/nb.po, soft/mdkonline/trunk/po/nl.po,
+	  soft/mdkonline/trunk/po/nn.po, soft/mdkonline/trunk/po/pa_IN.po,
+	  soft/mdkonline/trunk/po/pl.po, soft/mdkonline/trunk/po/pt.po,
+	  soft/mdkonline/trunk/po/pt_BR.po, soft/mdkonline/trunk/po/ro.po,
+	  soft/mdkonline/trunk/po/ru.po, soft/mdkonline/trunk/po/sc.po,
+	  soft/mdkonline/trunk/po/sk.po, soft/mdkonline/trunk/po/sl.po,
+	  soft/mdkonline/trunk/po/sq.po, soft/mdkonline/trunk/po/sr.po,
+	  soft/mdkonline/trunk/po/sr@Latn.po,
+	  soft/mdkonline/trunk/po/sv.po, soft/mdkonline/trunk/po/ta.po,
+	  soft/mdkonline/trunk/po/tg.po, soft/mdkonline/trunk/po/th.po,
+	  soft/mdkonline/trunk/po/tl.po, soft/mdkonline/trunk/po/tr.po,
+	  soft/mdkonline/trunk/po/uk.po, soft/mdkonline/trunk/po/ur.po,
+	  soft/mdkonline/trunk/po/uz.po,
+	  soft/mdkonline/trunk/po/uz@Latn.po,
+	  soft/mdkonline/trunk/po/vi.po, soft/mdkonline/trunk/po/wa.po,
+	  soft/mdkonline/trunk/po/zh_CN.po,
+	  soft/mdkonline/trunk/po/zh_TW.po: add new strings for warning
+	  about missing media or disabled media
+
+2007-03-20 15:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (harvester) only schedule an
+	  updates check if we really run
+	  MandrivaUpdate (not eg edit-urpm-sources)
+
+2007-03-20 15:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: when there's no media at all or
+	  when all update media are disabled,
+	  run source media manager on right click
+
+2007-03-20 15:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* soft/mdkonline/trunk/mdkapplet: (silentCheck) add two new states
+	  that enable mdkapplet to warn when
+	  there's no media at all or when all update media are disabled"
+
 2007-03-20 15:53  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* soft/mdkonline/trunk/mdkapplet: (logIt) do not log translated
