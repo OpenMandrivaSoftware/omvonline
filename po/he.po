@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: he\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-03-20 16:21+0100\n"
-"PO-Revision-Date: 2007-03-09 02:14+0200\n"
+"PO-Revision-Date: 2007-03-22 00:54+0200\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -71,9 +71,8 @@ msgstr "גרסה לא נתמכת (גרסה ישנה מדי או גרסת פית�
 
 #: ../mdkapplet:145
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "לא נמצאו מקורות תוכנה, עליך להוסיף מקורות דרך 'ניהול מקורות תוכנה'."
 
 #: ../mdkapplet:151
 #, c-format
@@ -218,14 +217,14 @@ msgid "Connecting to"
 msgstr "מתחבר אל"
 
 #: ../mdkapplet:330
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
-msgstr "בסיס הנתונים של urpmi נעול"
+msgstr "בסיס הנתונים של %s נעול"
 
 #: ../mdkapplet:341
 #, c-format
 msgid "Error updating media"
-msgstr ""
+msgstr "שגיאה בעדכון המקור"
 
 #: ../mdkapplet:359 ../mdkapplet:373
 #, c-format
@@ -235,12 +234,12 @@ msgstr "בודק... יש עדכונים זמינים\n"
 #: ../mdkapplet:363
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "החבילות מעודכנות"
 
 #: ../mdkapplet:368
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "אין אפשרות לפתוח את בסיס הנתונים של החבילות rpmdb"
+msgstr "כשל בפתיחת בסיס הנתונים של urpmi"
 
 #: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
 #, c-format
@@ -865,13 +864,13 @@ msgid "Preparing..."
 msgstr "הכנה..."
 
 #: ../mdkupdate:183
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
 "\n"
 "%s"
 msgstr ""
-"כשל באימות זהות השרת לערכה:\n"
+"כשל באימות זהות שרת העידכון:\n"
 "\n"
 "%s"
 
@@ -906,3 +905,4 @@ msgstr "מתקין חבילות...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "לא ניתן לעדכן חבילות ממדיית update_source.\n"
+
