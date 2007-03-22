@@ -87,13 +87,13 @@ my %state = (
 	     okay => {
 		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'configureApplet', 'check', 'weblink' ],
+		      menu => [ 'check', 'weblink' ],
 		      tt => [ N_("Your system is up-to-date") ]
 		     },
  	     critical => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'configureApplet', 'check', 'weblink' ],
+		      menu => [ 'check', 'weblink' ],
 		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.com") ]
 		     },
 	     busy => {
@@ -129,13 +129,13 @@ my %state = (
 	     disabled => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
-		      menu => [ 'configureApplet', 'weblink' ],
+		      menu => [ 'weblink' ],
 		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 		     },
           locked => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'configureApplet', 'check', 'weblink' ],
+		      menu => [ 'check', 'weblink' ],
                 tt => [ N_("urpmi database locked") ],
           },
 	     notsupported => {
@@ -147,13 +147,13 @@ my %state = (
           no_update_medium => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'configureApplet', 'check', 'weblink' ],
+		      menu => [ 'check', 'weblink' ],
                 tt => [ N_("No medium found. You must add some media through 'Software Media Manager'.") ],
           },
           no_enabled_medium => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'configureApplet', 'check', 'weblink' ],
+		      menu => [ 'check', 'weblink' ],
                 tt => [ sprintf(N_("You already have at least one update medium configured, but
 all of them are currently disabled. You should run the Software
 Media Manager to enable at least one (check it in the Enabled?
