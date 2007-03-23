@@ -40,6 +40,10 @@ use mdkonline;
 use Gtk2::TrayIcon;
 use Gtk2::NotificationBubble;
 
+# prevent urpmi.update to run /usr/bin/resize through Term::ReadKey->GetTerminalSize() when xterm is installed
+# (which freeze the desktop):
+$ENV{COLUMNS} = 80;
+$ENV{LINES} = 25;
 
 # POSIX unmasks the sigprocmask properly
 my $sigset = POSIX::SigSet->new;
