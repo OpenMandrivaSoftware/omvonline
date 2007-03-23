@@ -405,6 +405,7 @@ sub silentCheck() {
                     POSIX::_exit($comm_codes{$state}{code});
                 };
                 my $will_not_update_media;
+                require urpm;
                 require urpm::lock;
                 my $urpm = urpm->new;
                 {
@@ -422,7 +423,6 @@ sub silentCheck() {
                     $exit->('error_updating') if $will_not_update_media;
                 }
 
-                use urpm; # to force require
                 require urpm::select;
                 require urpm::media;
                 urpm::media::configure($urpm);
