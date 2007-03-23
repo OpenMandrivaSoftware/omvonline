@@ -239,7 +239,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 $icon->show_all;
 checkConfig();
-checkUpdates();
+Glib::Timeout->add(25000, sub { checkUpdates(); 0 });
 setup_cyclic_check();
 
 
