@@ -425,7 +425,7 @@ sub silentCheck() {
                 }
                 $exit->('locked') if $will_not_update_media;
 
-                if (my $res = !run_program::raw({}, 'urpmi.update', '--update')) {
+                if (my $res = !run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
                     $exit->('error_updating') if $will_not_update_media;
                 }
 
