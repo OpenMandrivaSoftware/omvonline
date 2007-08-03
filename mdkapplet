@@ -54,7 +54,10 @@ POSIX::sigaction(&POSIX::SIGHUP, $action);
 
 if (!find { $_ eq '--auto-update' } @ARGV) {
     my $pid = mdkonline::is_running('mdkapplet');
-    $pid and die "mdkapplet already running ($pid)\n";
+    if ($pid) {
+        warn "mdkapplet already running ($pid)\n";
+        exit(1);
+    }
 }
 
 my $in = interactive->vnew('');
