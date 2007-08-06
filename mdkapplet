@@ -48,8 +48,7 @@ my $action = POSIX::SigAction->new('restart_applet',
 POSIX::sigaction(&POSIX::SIGHUP, $action);
 
 if (!find { $_ eq '--auto-update' } @ARGV) {
-    my $pid = mdkonline::is_running('mdkapplet');
-    if ($pid) {
+    if (my $pid = mdkonline::is_running('mdkapplet')) {
         die "mdkapplet already running ($pid)\n";
     }
 }
