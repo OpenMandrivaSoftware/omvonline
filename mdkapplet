@@ -85,6 +85,17 @@ mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
 my %state = (
+	     delayed => {
+		      colour => [ 'busy' ],
+		      changes => [ 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'check', 'weblink' ],
+		      tt => [
+                    #-PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+                    N("Will check updates at %s", POSIX::strftime("%T", localtime(time() + $config{FIRST_CHECK_DELAY}/1000)))
+                ],
+                      #localtime(time() + 
+		     },
+    
 	     okay => {
 		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
@@ -239,7 +250,7 @@ if ($opt eq '--debug') { $debug = 1 }
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet";
 
 $icon->show_all;
-go2State('okay');
+go2State('delayed');
 gtkflush();
 checkConfig();
 Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub { checkUpdates(); 0 });
