@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-06-06 15:35-0300\n"
 "Last-Translator: Felipe Arruda <felipemiguel@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
@@ -23,7 +23,13 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n > 1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Verificar atualizações"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Seu sistema está atualizado"
@@ -74,8 +80,11 @@ msgstr "Versão não suportada (muito antiga ou de desenvolvimento)"
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Nenhuma mídia foi encontrada. Você deve adicionar alguma mídia através do 'Gerenciador de Mídia de Software'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Nenhuma mídia foi encontrada. Você deve adicionar alguma mídia através do "
+"'Gerenciador de Mídia de Software'."
 
 #: ../mdkapplet:151
 #, c-format
@@ -920,5 +929,5 @@ msgstr "Instalando pacotes ...\n"
 #: ../mdkupdate:297 ../mdkupdate:359
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
-
+msgstr ""
+"Não foi possível atualizar os pacotes a partir da mídia update_source.\n"

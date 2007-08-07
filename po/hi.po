@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2005-08-21 14:31+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma)\n"
 "Language-Team: Hindi, India\n"
@@ -18,7 +18,13 @@ msgstr ""
 "X-Generator: KBabel 1.10\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "अपडेटो की जाँच"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "आपका तंत्र आज-तक अप-टू-डेट है"
@@ -205,7 +211,7 @@ msgstr ""
 "है .... "
 
 #: ../mdkapplet:297
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "एमडीकेअपडेट को आरम्भ किया जा रहा है\n"
 

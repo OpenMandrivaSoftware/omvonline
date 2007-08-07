@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-03-20 17:49+0100\n"
 "Last-Translator: Nicolas Bauer <rastafarii@mandrivauser.de>\n"
 "Language-Team: deutsch\n"
@@ -22,7 +22,13 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Überprüfe Updates"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Ihr System ist aktuell"
@@ -69,12 +75,16 @@ msgstr "Dienst nicht verfügbar. Klicken Sie auf „Online Webseite“"
 #: ../mdkapplet:139
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
+msgstr ""
+"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Kein Medium gefunden. Sie müssen einige Medien mit dem 'Software Medien Manager'"
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Kein Medium gefunden. Sie müssen einige Medien mit dem 'Software Medien "
+"Manager'"
 
 #: ../mdkapplet:151
 #, c-format
@@ -268,7 +278,8 @@ msgstr "Unbekannter Zustand"
 #: ../mdkapplet:390
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Onlinedienste abgeschaltet. Kontaktieren Sie die Mandriva Online Site\n"
+msgstr ""
+"Onlinedienste abgeschaltet. Kontaktieren Sie die Mandriva Online Site\n"
 
 #: ../mdkapplet:391
 #, c-format
@@ -351,7 +362,8 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:553
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
+msgstr ""
+"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:561
 #, c-format
@@ -469,7 +481,8 @@ msgstr "Erstellung eines Benutzerkontos oder Authentifizierung"
 #: ../mdkonline:136
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Geben Sie Ihren Mandriva Online Benutzernamen, Passwort und Rechnernamen ein:"
+msgstr ""
+"Geben Sie Ihren Mandriva Online Benutzernamen, Passwort und Rechnernamen ein:"
 
 #: ../mdkonline:142 ../mdkonline:195
 #, c-format
@@ -914,7 +927,8 @@ msgstr "Das Bundel ist nicht richtig formatiert. Abbruch."
 #: ../mdkupdate:261
 #, c-format
 msgid "Choose which packages should be installed and Press Ok"
-msgstr "Wählen Sie welche Pakete installiert werden sollen und bestätigen Sie mit OK"
+msgstr ""
+"Wählen Sie welche Pakete installiert werden sollen und bestätigen Sie mit OK"
 
 #: ../mdkupdate:285
 #, c-format
@@ -925,4 +939,3 @@ msgstr "Installiere Pakete...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Aktualisieren der Pakete vom Mdkupdate Medium nicht möglich.\n"
-

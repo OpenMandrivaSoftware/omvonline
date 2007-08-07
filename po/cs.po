@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-03-21 19:46+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -16,9 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Zkontrolovat aktualizace"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Váš systém je plně aktuální"
@@ -69,8 +76,11 @@ msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Nebyl nalezen žádný zdroj software. Je třeba přidat alespoň jeden zdroj pomocí Správce zdrojů software."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Nebyl nalezen žádný zdroj software. Je třeba přidat alespoň jeden zdroj "
+"pomocí Správce zdrojů software."
 
 #: ../mdkapplet:151
 #, c-format
@@ -345,7 +355,8 @@ msgstr "Copyright ©%s by Mandriva"
 #: ../mdkapplet:553
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr ""
+"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
 #: ../mdkapplet:561
 #, c-format
@@ -915,4 +926,3 @@ msgstr "Instaluji balíčky...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
-

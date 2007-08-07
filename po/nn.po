@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-07-20 20:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -16,7 +16,13 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Sjå etter oppdateringar"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Systemet ditt er oppdatert."
@@ -53,7 +59,8 @@ msgstr "Tenesta er ikkje sett opp enno. Vel «Set opp tenesta»."
 #: ../mdkapplet:127
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
+msgstr ""
+"Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
 
 #: ../mdkapplet:133
 #, c-format
@@ -67,7 +74,8 @@ msgstr "Utgåva di er ikkje støtta (anten for gammal eller utviklingsutgåve)."
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fann ingen medium. Du må leggja til medium gjennom «Mediehandtering»."
 
 #: ../mdkapplet:151
@@ -462,7 +470,8 @@ msgstr "Oppretting eller autentisering av konto"
 #: ../mdkonline:136
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Skriv inn brukarnamn, passord og maskinnamn frå Mandriva Online-kontoen:"
+msgstr ""
+"Skriv inn brukarnamn, passord og maskinnamn frå Mandriva Online-kontoen:"
 
 #: ../mdkonline:142 ../mdkonline:195
 #, c-format
@@ -839,7 +848,8 @@ msgstr "  --debug\t\t\t– Logg over kva som vert gjort.\n"
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr "  --bundle file.bundle\t– Installer pakkar frå ei .bundle-metainfofil.\n"
+msgstr ""
+"  --bundle file.bundle\t– Installer pakkar frå ei .bundle-metainfofil.\n"
 
 #: ../mdkupdate:152
 #, c-format
@@ -857,7 +867,8 @@ msgstr "Åtvaring"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr "Du må først installera systemet på harddisken med «Live-install»-vegvisaren."
+msgstr ""
+"Du må først installera systemet på harddisken med «Live-install»-vegvisaren."
 
 #: ../mdkupdate:165 ../mdkupdate:216
 #, c-format
@@ -969,4 +980,3 @@ msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
 #~ msgstr ""
 #~ "Det oppstod ein feil ved tilkopling til tenaren. Ta kontakt med "
 #~ "kundestøttetenesta."
-

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-03-20 21:54+0200\n"
 "Last-Translator: Reinout van Schouwen <reinout@gmail.com>\n"
 "Language-Team: Nederlands\n"
@@ -18,7 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Herzieningen nagaan"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Uw systeem is bijgewerkt"
@@ -72,7 +78,8 @@ msgstr "Uitgave niet ondersteund (te oud, of een ontwikkelingsuitgave)"
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
-"Geen medium gevonden. U dient er één of meer toe te voegen via ‘Software Mediabeheer’."
+"Geen medium gevonden. U dient er één of meer toe te voegen via ‘Software "
+"Mediabeheer’."
 
 #: ../mdkapplet:151
 #, c-format
@@ -200,8 +207,7 @@ msgstr "Drakconnect wordt gestart\n"
 #: ../mdkapplet:289
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online lijkt opnieuw geïnstalleerd te zijn, applet herladen…"
+msgstr "Mandriva Online lijkt opnieuw geïnstalleerd te zijn, applet herladen…"
 
 #: ../mdkapplet:297
 #, c-format

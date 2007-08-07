@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-03-20 21:53+0100\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: \n"
@@ -17,7 +17,13 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Frissítések keresése"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "A rendszer naprakész"
@@ -61,7 +67,8 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr ""
+"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:139
 #, c-format
@@ -70,10 +77,11 @@ msgstr "Nem támogatott verzió (túl régi, vagy fejlesztői verzió)"
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
-"Adatforrás nem található. Fel kell venni egy vagy több adatforrást "
-"a szoftverforrás-kezelővel."
+"Adatforrás nem található. Fel kell venni egy vagy több adatforrást a "
+"szoftverforrás-kezelővel."
 
 #: ../mdkapplet:151
 #, c-format
@@ -355,7 +363,8 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../mdkapplet:553
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
+msgstr ""
+"A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
 
 #: ../mdkapplet:561
 #, c-format
@@ -795,7 +804,8 @@ msgstr "A felhasználó le van tiltva"
 #: ../mdkonline.pm:218
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr "A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
+msgstr ""
+"A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
 
 #: ../mdkonline.pm:219
 #, c-format
@@ -925,4 +935,3 @@ msgstr "Csomagok telepítése...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen.\n"
-

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2005-06-27 13:37+0300\n"
 "Last-Translator: Taras Boychuk <btr1@mail.ru>\n"
 "Language-Team: ukrainian <translation@linux.org.ua>\n"
@@ -22,7 +22,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Перевірити поновлення"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Система поновлена"

@@ -11,17 +11,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-20 16:21+0100\n"
+"POT-Creation-Date: 2007-08-07 14:11+0200\n"
 "PO-Revision-Date: 2007-03-21 11:21+0100\n"
-"Last-Translator: Tomasz Bednarski - Mandriva Poland <tomasz.bednarski@mandriva.pl>\n"
+"Last-Translator: Tomasz Bednarski - Mandriva Poland <tomasz."
+"bednarski@mandriva.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../mdkapplet:91
+#. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+#: ../mdkapplet:94
+#, fuzzy, c-format
+msgid "Will check updates at %s"
+msgstr "Sprawdź aktualizacje"
+
+#: ../mdkapplet:103
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Oprogramowanie systemu jest aktualne"
@@ -72,8 +80,10 @@ msgstr "Nieobsługiwane wydanie (za stare, lub wydanie rozwojowe)"
 
 #: ../mdkapplet:145
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżere Nośników Oprogramowania'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżere Nośników Oprogramowania'."
 
 #: ../mdkapplet:151
 #, c-format
@@ -201,7 +211,8 @@ msgstr "Uruchamianie programu drakconnect\n"
 #: ../mdkapplet:289
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
+msgstr ""
+"Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie apletu ...."
 
 #: ../mdkapplet:297
 #, c-format
@@ -266,7 +277,8 @@ msgstr "Nieznany stan"
 #: ../mdkapplet:390
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
+msgstr ""
+"Usługi internetowe są wyłączone. Skontaktuj się z witryną Mandriva Online\n"
 
 #: ../mdkapplet:391
 #, c-format
@@ -292,7 +304,8 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr "Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
+msgstr ""
+"Podczas łączenia z serwerem wystąpił błąd, skontaktuj się z pomocą techniczną"
 
 #: ../mdkapplet:399
 #, c-format
@@ -917,4 +930,3 @@ msgstr "Instalowanie pakietów...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"
-
