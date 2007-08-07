@@ -45,8 +45,8 @@ install: all
 	install -m644 mdkonline.pm $(FBLIBDIR)
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 # mime
-	mkdir -p $(DATADIR)/mimelnk/applications/
-	install -m644 x-mdv-exec.desktop $(DATADIR)/mimelnk/applications/
+	mkdir -p $(DATADIR)/mimelnk/application/
+	install -m644 x-mdv-exec.desktop $(DATADIR)/mimelnk/application/
 	mkdir -p $(PREFIX)/etc/security/console.apps/
 	install -m644 console.apps_urpmi.update $(PREFIX)/etc/security/console.apps/urpmi.update
 	mkdir -p $(PREFIX)/etc/pam.d
