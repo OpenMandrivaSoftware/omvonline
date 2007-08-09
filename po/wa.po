@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2004-08-11 20:48+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -28,7 +28,7 @@ msgstr "Verifyî les metaedjes a djoû"
 msgid "Your system is up-to-date"
 msgstr "Li sistinme da vosse est a djoû"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -37,43 +37,48 @@ msgstr ""
 "Åk n' a nén stî tot-z apontiant l' siervice. Loukîz les djournås eyet emilez "
 "po dire li problinme a support@mandrivaonline.com"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Tårdjîz on pô s' i vs plait, dji cwir après les pacaedjes k' i gn a..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, c-format
 msgid "New updates are available for your system"
 msgstr "I gn des noveas metaedjes a djoû po vosse sistinme"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, c-format
 msgid "New bundles are available for your system"
 msgstr "I gn des noveas «bundles» po vosse sistinme"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Siervice nén apontyî. Clitchîz so «Apontyî l' siervice»"
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Li rantoele est djus. Apontyîz l' rantoele s' i vs plait."
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Siervice nén èn alaedje. Clitchîz so «Waibe»"
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, c-format
+msgid "urpmi database locked"
+msgstr "båze di dnêyes urpmi serêye"
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Modêye nén sopoirtêye (modêye pår trop viye, ou modêye di diswalpaedje)"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -81,15 +86,15 @@ msgstr ""
 "Nou sopoirt di trové. Vos ndè dvoz radjouter onk avou l' «Manaedjeu des "
 "sopoirts d' astalaedje»."
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 "Vos avoz ddja pol moens on sopoirt di metaedjes a djoû d' apontyî, mins i "
 "sont tos dismetous. Vos dvrîz enonder li programe manaedjeu des sopoirts "
@@ -98,195 +103,195 @@ msgstr ""
 "\n"
 "Poy, renondez %s."
 
-#: ../mdkapplet:161 ../mdkapplet:260
+#: ../mdkapplet:174
+#, c-format
+msgid "Enabled"
+msgstr ""
+
+#: ../mdkapplet:187
+#, c-format
+msgid "Error updating media"
+msgstr "Åk n' a nén stî tot metant a djoû les sopoirts"
+
+#: ../mdkapplet:202
+#, c-format
+msgid "Checking... Updates are available\n"
+msgstr "Verifiant... Des metaedjes a djoû sont disponibes\n"
+
+#: ../mdkapplet:207
+#, c-format
+msgid "Packages are up to date"
+msgstr "Les pacaedjes sont-st a djoû"
+
+#: ../mdkapplet:212
+#, c-format
+msgid "Failed to open urpmi database"
+msgstr "Dji n' sai drovi l' båze di dnêyes urpmi"
+
+#: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
 msgid "Install updates"
 msgstr "Astaler les metaedjes a djoû"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure the service"
 msgstr "Apontyî l' siervice"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:219
 #, c-format
 msgid "Check Updates"
 msgstr "Verifyî les metaedjes a djoû"
 
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
 #, c-format
 msgid "Please wait"
 msgstr "Tårdjîz on pô, s' i vs plait"
 
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
 #, c-format
 msgid "Check updates"
 msgstr "Verifyî les metaedjes a djoû"
 
-#: ../mdkapplet:150 ../mdkapplet:554
+#: ../mdkapplet:223 ../mdkapplet:648
 #, c-format
 msgid "Online WebSite"
 msgstr "Waibe"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:224
 #, c-format
 msgid "Configure Network"
 msgstr "Apontyî l' rantoele"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:225
 #, c-format
 msgid "Configure Now!"
 msgstr "Apontyî do côp!"
 
-#: ../mdkapplet:227 ../mdkapplet:306
+#: ../mdkapplet:313 ../mdkapplet:392
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Aplikete di metaedjes a djoû"
 
-#: ../mdkapplet:236
+#: ../mdkapplet:322
 #, c-format
 msgid "Actions"
 msgstr "Accions"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:325
 #, c-format
 msgid "Configure"
 msgstr "Apontyî"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:329
 #, c-format
 msgid "See logs"
 msgstr "Vey les djournås"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:332
 #, c-format
 msgid "Status"
 msgstr "Estat"
 
-#: ../mdkapplet:250 ../mdkapplet:503
+#: ../mdkapplet:336 ../mdkapplet:597
 #, c-format
 msgid "Close"
 msgstr "Clôre"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Network Connection: "
 msgstr "Raloyaedje al rantoele: "
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Up"
 msgstr "En alaedje"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Down"
 msgstr "Essocté"
 
-#: ../mdkapplet:280
+#: ../mdkapplet:366
 #, c-format
 msgid "Last check: "
 msgstr "Dierin verifiaedje: "
 
-#: ../mdkapplet:281 ../mdkonline:145
+#: ../mdkapplet:367 ../mdkonline:145
 #, c-format
 msgid "Machine name:"
 msgstr "No d' l' éndjole:"
 
-#: ../mdkapplet:282
+#: ../mdkapplet:368
 #, c-format
 msgid "Updates: "
 msgstr "Metaedjes a djoû: "
 
-#: ../mdkapplet:286
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Enondant drakconnect\n"
 
-#: ../mdkapplet:289
+#: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "I shonnreut k' Mandriva Online åye sitî rastalé, dji rtchedje l' aplikete..."
 
-#: ../mdkapplet:297
+#: ../mdkapplet:383
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Enondant «MandrivaUpdate»\n"
 
-#: ../mdkapplet:312 ../mdkapplet:352
+#: ../mdkapplet:398
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Carculaedje des metaedjes a djoû...\n"
 
-#: ../mdkapplet:313
+#: ../mdkapplet:399
 #, c-format
 msgid "Connecting to"
 msgstr "Dji m' raloyaedje a"
 
-#: ../mdkapplet:330
-#, c-format
-msgid "urpmi database locked"
-msgstr "båze di dnêyes urpmi serêye"
-
-#: ../mdkapplet:341
-#, c-format
-msgid "Error updating media"
-msgstr "Åk n' a nén stî tot metant a djoû les sopoirts"
-
-#: ../mdkapplet:359 ../mdkapplet:373
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Verifiant... Des metaedjes a djoû sont disponibes\n"
-
-#: ../mdkapplet:363
-#, c-format
-msgid "Packages are up to date"
-msgstr "Les pacaedjes sont-st a djoû"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Dji n' sai drovi l' båze di dnêyes urpmi"
-
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "Dj' aroke so ene sacwè"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Modêye di diswalpaedje nén sopoirtêye på siervice"
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Modêye pår trop viye nén sopoirtêye på siervice"
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, c-format
 msgid "Unknown state"
 msgstr "Estat nén cnoxhou"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
 "Les siervices so les fyis sont essoctés. Contactez li site Mandriva Online\n"
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Måva scret.\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Accion, no d' lodjoe ou no d' elodjaedje nén corek.\n"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -295,7 +300,7 @@ msgstr ""
 "I gn a åk ki n' va nén avou vost apontiaedje rantoele (verifyîz vosse "
 "routaedje, li côpe-feu eyet l' apontiaedje do procsi)\n"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
@@ -304,69 +309,69 @@ msgstr ""
 "Åk n' a nén stî tot s' raloyant å sierveu, atôtchîz l' ekipe di sopoirt s' i "
 "vs plait"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Response do sierveu Mandriva Online\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Li sistinme est a djoû\n"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr "Pont d' verifiaedje"
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Verifiaedje do fitchî d' apontiaedje: nén la\n"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Verifiaedje del rantoele: i shonnreut k' ele ni soeye nén en alaedje\n"
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "Djournås"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "Netyî"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "Åd fwait..."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright © %s pa Mandriva"
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 "Mandriva Online (Mandriva so les fyis) vos dene accès åzès siervices waibe "
 "da Mandriva."
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr "El drovi tofer a l' enondaedje"
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "Cwiter"
@@ -388,7 +393,7 @@ msgstr ""
 "\n"
 "Po s' è siervi:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr " --help           - mostere ci messaedje d' aidance chal.\n"
@@ -507,8 +512,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr "(Eg: Copiutrece å buro)"
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "Aroke"
@@ -812,7 +817,7 @@ msgstr "Åk n' a nén stî avou l' raloyaedje"
 msgid "Mandriva web services not reachable"
 msgstr "Les siervices waibe di Mandriva èn sont nén djondåves"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -829,32 +834,27 @@ msgstr ""
 "\n"
 "Po s' è siervi:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr " --auto           - enonder les metaedjes a djoû otomaticmint.\n"
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr " --applet         - enonder les metaedjes a djoû di Mandriva Linux.\n"
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr " --mnf            - enonder les scripes especifikes mnf.\n"
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr " --noX            - enonder l' modêye e môde tecse.\n"
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug         - fé on djournå di çou k' est fwait\n"
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
@@ -863,18 +863,13 @@ msgstr ""
 "  --bundle file.bundle    - lére eyet astaker des pacaedjes a pårti d' on "
 "fitchî di meta-dnêyes «.bundle».\n"
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr "Dji n' a nén savou aveur li djivêye des metaedjes a djoû: %s"
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "Adviertixhmint"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
@@ -883,12 +878,12 @@ msgstr ""
 "Vos dvoz d' aprume astaler l' sistinme so vosse deure plake avou l' macrea "
 "«Live Install»."
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Dj' aprestêye..."
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -899,7 +894,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -912,26 +907,31 @@ msgstr ""
 "Vos dvoz mete a djoû viè ene nouve modêye. Vos ndè ploz prinde ene so http://"
 "start.mandriva.com"
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr "Ci «bundle» chal n' est nén bén fwait. Dji rnonce."
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr "Tchoezixhoz les pacaedjes a-z astaler eyet clitchîz so «'l est bon»"
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Astalant les pacaedjes...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
 "Dji n' a nén savou mete a djoû les pacaedjes foû do sopoirt update_source.\n"
+
+#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
+#~ msgstr ""
+#~ " --applet         - enonder les metaedjes a djoû di Mandriva Linux.\n"
+
+#~ msgid "Cannot get list of updates: %s"
+#~ msgstr "Dji n' a nén savou aveur li djivêye des metaedjes a djoû: %s"
+
+#~ msgid "Choose which packages should be installed and Press Ok"
+#~ msgstr "Tchoezixhoz les pacaedjes a-z astaler eyet clitchîz so «'l est bon»"
 
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "Li sistinme est ocupé. Tårdjîz ene miete..."

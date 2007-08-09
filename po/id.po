@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2006-04-07 07:40+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
@@ -32,7 +32,7 @@ msgstr "Cek update"
 msgid "Your system is up-to-date"
 msgstr "Sistem Anda sudah up-to-date"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -41,57 +41,62 @@ msgstr ""
 "Masalah konfigurasi layanan. Harap perika file log dan kirimkan mail ke "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Harap tunggu, mencari paket yang tersedia..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Update baru tersedia untuk sistem Anda"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, c-format
 msgid "New bundles are available for your system"
 msgstr "Bundel baru tersedia untuk sistem Anda"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr ""
 "Layanan belum terkonfigurasi. Silahkan klik pada \"Konfigurasikan layanan\""
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Jaringan sedang non-aktif. Harap konfigurasikan jaringan Anda"
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Layanan tidak diaktifkan. Silahkan klik pada \"Website Online\""
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, c-format
+msgid "urpmi database locked"
+msgstr "database urpmi terkunci"
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Rilis tidak didukung (rilis terlalu lama, atau rilis pengembangan)"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 "Anda sudah punya setidaknya satu konfigurasi media update, tapi\n"
 "semua tidak aktif. Anda harus menjalankan Manajer Media Perangkat\n"
@@ -100,194 +105,194 @@ msgstr ""
 "\n"
 "Lalu jalankan ulang %s."
 
-#: ../mdkapplet:161 ../mdkapplet:260
+#: ../mdkapplet:174
+#, c-format
+msgid "Enabled"
+msgstr ""
+
+#: ../mdkapplet:187
+#, fuzzy, c-format
+msgid "Error updating media"
+msgstr "Mengupdate media...\n"
+
+#: ../mdkapplet:202
+#, c-format
+msgid "Checking... Updates are available\n"
+msgstr "Memeriksa... Update tersedia\n"
+
+#: ../mdkapplet:207
+#, c-format
+msgid "Packages are up to date"
+msgstr "Paket-paket sudah update"
+
+#: ../mdkapplet:212
+#, fuzzy, c-format
+msgid "Failed to open urpmi database"
+msgstr "gagal membuka rpmdb"
+
+#: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
 msgid "Install updates"
 msgstr "Installasikan update-update"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure the service"
 msgstr "Konfigurasikan layanan"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:219
 #, c-format
 msgid "Check Updates"
 msgstr "Cek Update"
 
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
 #, c-format
 msgid "Please wait"
 msgstr "Harap tunggu..."
 
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
 #, c-format
 msgid "Check updates"
 msgstr "Cek update"
 
-#: ../mdkapplet:150 ../mdkapplet:554
+#: ../mdkapplet:223 ../mdkapplet:648
 #, c-format
 msgid "Online WebSite"
 msgstr "WebSite Online"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:224
 #, c-format
 msgid "Configure Network"
 msgstr "Konfigurasikan Jaringan"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:225
 #, c-format
 msgid "Configure Now!"
 msgstr "Konfigurasi Sekarang!"
 
-#: ../mdkapplet:227 ../mdkapplet:306
+#: ../mdkapplet:313 ../mdkapplet:392
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Applet Update Mandriva Linux"
 
-#: ../mdkapplet:236
+#: ../mdkapplet:322
 #, c-format
 msgid "Actions"
 msgstr "Aksi"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:325
 #, c-format
 msgid "Configure"
 msgstr "Konfigurasikan"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:329
 #, c-format
 msgid "See logs"
 msgstr "Lihat log"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:332
 #, c-format
 msgid "Status"
 msgstr "Status"
 
-#: ../mdkapplet:250 ../mdkapplet:503
+#: ../mdkapplet:336 ../mdkapplet:597
 #, c-format
 msgid "Close"
 msgstr "Tutup"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Network Connection: "
 msgstr "Koneksi Jaringan: "
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Up"
 msgstr "Aktif"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Down"
 msgstr "Non-aktif"
 
-#: ../mdkapplet:280
+#: ../mdkapplet:366
 #, c-format
 msgid "Last check: "
 msgstr "Pengujian terakhir: "
 
-#: ../mdkapplet:281 ../mdkonline:145
+#: ../mdkapplet:367 ../mdkonline:145
 #, c-format
 msgid "Machine name:"
 msgstr "Nama mesin:"
 
-#: ../mdkapplet:282
+#: ../mdkapplet:368
 #, c-format
 msgid "Updates: "
 msgstr "Update"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Menjalankan drakconnect\n"
 
-#: ../mdkapplet:289
+#: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online tampaknya baru saja diinstall ulang, memuat ulang applet ...."
 
-#: ../mdkapplet:297
+#: ../mdkapplet:383
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Menjalankan MandrivaUpdate\n"
 
-#: ../mdkapplet:312 ../mdkapplet:352
+#: ../mdkapplet:398
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Menghitung update baru...\n"
 
-#: ../mdkapplet:313
+#: ../mdkapplet:399
 #, c-format
 msgid "Connecting to"
 msgstr "Menghubungkan ke"
 
-#: ../mdkapplet:330
-#, c-format
-msgid "urpmi database locked"
-msgstr "database urpmi terkunci"
-
-#: ../mdkapplet:341
-#, fuzzy, c-format
-msgid "Error updating media"
-msgstr "Mengupdate media...\n"
-
-#: ../mdkapplet:359 ../mdkapplet:373
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Memeriksa... Update tersedia\n"
-
-#: ../mdkapplet:363
-#, c-format
-msgid "Packages are up to date"
-msgstr "Paket-paket sudah update"
-
-#: ../mdkapplet:368
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "gagal membuka rpmdb"
-
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "Terjadi kesalahan"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Rilis pengembangan tidak didukung oleh layanan"
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Rilis terlalu lama tidak didukung oleh layanan"
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, c-format
 msgid "Unknown state"
 msgstr "Kondisi yang  tidak diketahui"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr "Layanan Online dinonaktifkan. Hubungi situs Mandriva Online\n"
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Katasandi salah.\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Aksi, host, atau login salah.\n"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -296,7 +301,7 @@ msgstr ""
 "Terjadi kesalahan dengan setting jaringan Anda (periksa rute, firewall atau "
 "setting proxy Anda)\n"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
@@ -305,67 +310,67 @@ msgstr ""
 "Masalah muncul ketika melakukan koneksi ke server, silakan menghubungi tim "
 "pendukung."
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Jawaban dari server Mandriva Online\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem up-to-date\n"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr "Tidak ada pemeriksaan"
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Memeriksa file konfigurasi: Tidak ada\n"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Memeriksa Jaringan: tampaknya dinonaktifkan\n"
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "Log"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "Keterangan..."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Hak cipta (C) %s oleh Mandriva"
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online memberikan akses ke layanan web Mandriva."
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr "Selalu jalankan ketika pembukaan"
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
@@ -387,7 +392,7 @@ msgstr ""
 "\n"
 "pemakaian:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- cetak pesan bantuan ini.\n"
@@ -504,8 +509,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr "(Contoh: Komputer Kantor Saya)"
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "Kesalahan"
@@ -805,7 +810,7 @@ msgstr "Kesalahan koneksi"
 msgid "Mandriva web services not reachable"
 msgstr "Layanan web Mandriva tidak dapat dicapai"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -822,32 +827,27 @@ msgstr ""
 "\n"
 "pemakaian:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update dijalankan secara otomatis.\n"
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet\t\t- jalankan Mandriva Update.\n"
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- jalankan script khusus mnf.\n"
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- versi mode teks dari Mandriva Update.\n"
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- mencatat apa yang sudah selesai\n"
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
@@ -856,18 +856,13 @@ msgstr ""
 "  --bundel file.bundle\t- parsing dan install paket dari file .bundle "
 "metainfo.\n"
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr "Tidak bisa mendapatkan daftar update: %s"
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "Peringatan"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
@@ -876,12 +871,12 @@ msgstr ""
 "Anda pertama-tama perlu menginstall sistem pada harddisk dengan wizard 'Live "
 "Install'."
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Persiapan..."
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -892,7 +887,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -905,25 +900,29 @@ msgstr ""
 "Anda perlu mengupdatenya ke versi yang baru. Anda bisa mendapatkannya dari "
 "http://start.mandriva.com"
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr "Paket ini tidak terformat dengan baik. Membatalkan."
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr "Pilih paket yang akan diinstall dan tekan Ok"
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Menginstall paket...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal meng-update paket dari media update_source.\n"
+
+#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
+#~ msgstr "  --applet\t\t- jalankan Mandriva Update.\n"
+
+#~ msgid "Cannot get list of updates: %s"
+#~ msgstr "Tidak bisa mendapatkan daftar update: %s"
+
+#~ msgid "Choose which packages should be installed and Press Ok"
+#~ msgstr "Pilih paket yang akan diinstall dan tekan Ok"
 
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "Sistem sedang sibuk. Harap tunggu ..."

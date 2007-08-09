@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2007-06-06 15:35-0300\n"
 "Last-Translator: Felipe Arruda <felipemiguel@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "Verificar atualizações"
 msgid "Your system is up-to-date"
 msgstr "Seu sistema está atualizado"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -43,42 +43,47 @@ msgstr ""
 "Problema no serviço de configuração.  Por favor, verifique os logs gerados e "
 "envie para support@mandrivaonline.com"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Aguarde, procurando pacotes disponíveis..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Novas atualizações estão disponíveis para o seu sistema"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, c-format
 msgid "New bundles are available for your system"
 msgstr "Novos kits (bundles) estão disponíveis para o seu sistema"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "O serviço não está configurado. Clique em \"Configurar o serviço\""
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Sem conexão de rede. Por favor configure sua rede"
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "O Serviço não está ativado. Por favor clique em \"WebSite Online\""
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, c-format
+msgid "urpmi database locked"
+msgstr "base de dados bloqueada urpmi"
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versão não suportada (muito antiga ou de desenvolvimento)"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -86,15 +91,15 @@ msgstr ""
 "Nenhuma mídia foi encontrada. Você deve adicionar alguma mídia através do "
 "'Gerenciador de Mídia de Software'."
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 "Você já tem pelo menos uma mídia de atualização configurada,\n"
 "mas todas estão desabilitadas atualmente. Você deve executar o\n"
@@ -103,193 +108,193 @@ msgstr ""
 "\n"
 "Após isso, reinicie o %s."
 
-#: ../mdkapplet:161 ../mdkapplet:260
+#: ../mdkapplet:174
 #, c-format
-msgid "Install updates"
-msgstr "Instalar atualizações"
+msgid "Enabled"
+msgstr ""
 
-#: ../mdkapplet:145
-#, c-format
-msgid "Configure the service"
-msgstr "Configurar o serviço"
-
-#: ../mdkapplet:146
-#, c-format
-msgid "Check Updates"
-msgstr "Verificar Atualizações"
-
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
-#, c-format
-msgid "Please wait"
-msgstr "Por favor aguarde"
-
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
-#, c-format
-msgid "Check updates"
-msgstr "Verificar atualizações"
-
-#: ../mdkapplet:150 ../mdkapplet:554
-#, c-format
-msgid "Online WebSite"
-msgstr "WebSite Online"
-
-#: ../mdkapplet:151
-#, c-format
-msgid "Configure Network"
-msgstr "Configurar Rede"
-
-#: ../mdkapplet:152
-#, c-format
-msgid "Configure Now!"
-msgstr "Configurar Agora!"
-
-#: ../mdkapplet:227 ../mdkapplet:306
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Aplicativo de Atualizações Mandriva Linux"
-
-#: ../mdkapplet:236
-#, c-format
-msgid "Actions"
-msgstr "Ações"
-
-#: ../mdkapplet:239
-#, c-format
-msgid "Configure"
-msgstr "Configurar"
-
-#: ../mdkapplet:243
-#, c-format
-msgid "See logs"
-msgstr "Ver logs"
-
-#: ../mdkapplet:246
-#, c-format
-msgid "Status"
-msgstr "Status"
-
-#: ../mdkapplet:250 ../mdkapplet:503
-#, c-format
-msgid "Close"
-msgstr "Fechar"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Network Connection: "
-msgstr "Conexão de rede: "
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Up"
-msgstr "Ativa"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Down"
-msgstr "Caída"
-
-#: ../mdkapplet:280
-#, c-format
-msgid "Last check: "
-msgstr "Última verificação: "
-
-#: ../mdkapplet:281 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "Nome da máquina:"
-
-#: ../mdkapplet:282
-#, c-format
-msgid "Updates: "
-msgstr "Atualizações: "
-
-#: ../mdkapplet:286
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Lançando o drakconnect\n"
-
-#: ../mdkapplet:289
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "O Mandriva Online parece ter sido reinstalado, recarregando ...."
-
-#: ../mdkapplet:297
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Lançando o MandrivaUpdate\n"
-
-#: ../mdkapplet:312 ../mdkapplet:352
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Conferindo novas atualizações...\n"
-
-#: ../mdkapplet:313
-#, c-format
-msgid "Connecting to"
-msgstr "Conectando em"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "urpmi database locked"
-msgstr "base de dados bloqueada urpmi"
-
-#: ../mdkapplet:341
+#: ../mdkapplet:187
 #, c-format
 msgid "Error updating media"
 msgstr "Erro ao atualizar a mídia"
 
-#: ../mdkapplet:359 ../mdkapplet:373
+#: ../mdkapplet:202
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Verificando... Atualizações estão disponíveis\n"
 
-#: ../mdkapplet:363
+#: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
 msgstr "Pacotes estão atualizados"
 
-#: ../mdkapplet:368
+#: ../mdkapplet:212
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Não foi possível abrir a base de dados urpmi"
 
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:217 ../mdkapplet:324
+#, c-format
+msgid "Install updates"
+msgstr "Instalar atualizações"
+
+#: ../mdkapplet:218
+#, c-format
+msgid "Configure the service"
+msgstr "Configurar o serviço"
+
+#: ../mdkapplet:219
+#, c-format
+msgid "Check Updates"
+msgstr "Verificar Atualizações"
+
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "Por favor aguarde"
+
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
+#, c-format
+msgid "Check updates"
+msgstr "Verificar atualizações"
+
+#: ../mdkapplet:223 ../mdkapplet:648
+#, c-format
+msgid "Online WebSite"
+msgstr "WebSite Online"
+
+#: ../mdkapplet:224
+#, c-format
+msgid "Configure Network"
+msgstr "Configurar Rede"
+
+#: ../mdkapplet:225
+#, c-format
+msgid "Configure Now!"
+msgstr "Configurar Agora!"
+
+#: ../mdkapplet:313 ../mdkapplet:392
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Aplicativo de Atualizações Mandriva Linux"
+
+#: ../mdkapplet:322
+#, c-format
+msgid "Actions"
+msgstr "Ações"
+
+#: ../mdkapplet:325
+#, c-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: ../mdkapplet:329
+#, c-format
+msgid "See logs"
+msgstr "Ver logs"
+
+#: ../mdkapplet:332
+#, c-format
+msgid "Status"
+msgstr "Status"
+
+#: ../mdkapplet:336 ../mdkapplet:597
+#, c-format
+msgid "Close"
+msgstr "Fechar"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Network Connection: "
+msgstr "Conexão de rede: "
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Up"
+msgstr "Ativa"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Down"
+msgstr "Caída"
+
+#: ../mdkapplet:366
+#, c-format
+msgid "Last check: "
+msgstr "Última verificação: "
+
+#: ../mdkapplet:367 ../mdkonline:145
+#, c-format
+msgid "Machine name:"
+msgstr "Nome da máquina:"
+
+#: ../mdkapplet:368
+#, c-format
+msgid "Updates: "
+msgstr "Atualizações: "
+
+#: ../mdkapplet:372
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Lançando o drakconnect\n"
+
+#: ../mdkapplet:375
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "O Mandriva Online parece ter sido reinstalado, recarregando ...."
+
+#: ../mdkapplet:383
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Lançando o MandrivaUpdate\n"
+
+#: ../mdkapplet:398
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Conferindo novas atualizações...\n"
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Connecting to"
+msgstr "Conectando em"
+
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "Ocorreu um erro"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Versão de desenvolvimento não é suportada por este serviço"
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Versão muito antiga e não suportada pelo serviço"
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, c-format
 msgid "Unknown state"
 msgstr "Estado desconhecido"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr "Serviços on-line desativados. Contacte o site Mandriva Online\n"
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Senha incorreta.\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Erro na ação, host ou login.\n"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -298,7 +303,7 @@ msgstr ""
 "Algo está errado com a configuração da rede (verifique a rota, firewall ou "
 "as configurações proxy)\n"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
@@ -307,67 +312,67 @@ msgstr ""
 "Um problema ocorreu durante a conexão ao servidor, por favor contacte nosso "
 "time de suporte"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Resposta do servidor Mandriva Online\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistema está atualizado\n"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr "Não verificado"
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Checando arquivo de configuração: Não presente\n"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Checando a Rede: parece inativa\n"
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "Logs:"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "Limpar"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "Sobre.."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s Mandriva"
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online fornece acesso para serviços web Mandriva"
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr "Sempre iniciar no boot"
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "Sair"
@@ -389,7 +394,7 @@ msgstr ""
 "\n"
 "uso:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- exibe esta mensagem de ajuda.\n"
@@ -507,8 +512,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr "(Ex: Meu Computador de Casa)"
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "Erro"
@@ -811,7 +816,7 @@ msgstr "Erro de conexão"
 msgid "Mandriva web services not reachable"
 msgstr "Serviços web da Mandriva não acessíveis"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -828,32 +833,27 @@ msgstr ""
 "\n"
 "uso:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Lançar Mandriva Update automaticamente.\n"
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet\t\t- lançar Mandriva Update.\n"
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- roda scripts específicos do mnf.\n"
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- versão modo texto do Mandriva Update.\n"
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- registra o que é feito\n"
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
@@ -862,18 +862,13 @@ msgstr ""
 "  --bundle file.bundle\t- instala pacotes a partir do arquivo de\n"
 "                          meta-informações .bundle.\n"
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr "Não é possível pegar listas de updates: %s"
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "Aviso"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
@@ -882,12 +877,12 @@ msgstr ""
 "Você deve primeiramente instalar o sistema no disco rígido com o assistente "
 "'Live Install'."
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Preparando..."
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -898,7 +893,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -911,23 +906,27 @@ msgstr ""
 "Você precisa atualizar para uma versão mais nova. Para obtê-la acesse http://"
 "start.mandriva.com"
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr "Este kit (bundle) está mal formado. Abortando."
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr "Escolha quais pacotes devem ser instalados e pressione Ok"
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Instalando pacotes ...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
 "Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
+
+#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
+#~ msgstr "  --applet\t\t- lançar Mandriva Update.\n"
+
+#~ msgid "Cannot get list of updates: %s"
+#~ msgstr "Não é possível pegar listas de updates: %s"
+
+#~ msgid "Choose which packages should be installed and Press Ok"
+#~ msgstr "Escolha quais pacotes devem ser instalados e pressione Ok"

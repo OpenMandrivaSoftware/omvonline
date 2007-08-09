@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2002-08-16 12:34+0900\n"
 "Last-Translator: Jaegeum Cze <baedaron@hanafos.com>\n"
 "Language-Team: korean <baedaron@hanafos.com>\n"
@@ -26,326 +26,331 @@ msgstr "보안 업데이트"
 msgid "Your system is up-to-date"
 msgstr ""
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, fuzzy, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr "문의사항은 support@mandrivaonline.com로 메일 주세요.\n"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "기다려 주세요. 유효한 팩키지 검색 중..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr "네트웍 어댑터를 찾을 수 없습니다!"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, fuzzy, c-format
 msgid "New bundles are available for your system"
 msgstr "네트웍 어댑터를 찾을 수 없습니다!"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr ""
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr ""
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, c-format
+msgid "urpmi database locked"
+msgstr ""
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 
-#: ../mdkapplet:161 ../mdkapplet:260
-#, fuzzy, c-format
-msgid "Install updates"
-msgstr "테마 설치"
-
-#: ../mdkapplet:145
-#, fuzzy, c-format
-msgid "Configure the service"
-msgstr "서비스 설정"
-
-#: ../mdkapplet:146
-#, fuzzy, c-format
-msgid "Check Updates"
-msgstr "업데이트 버전"
-
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
+#: ../mdkapplet:174
 #, c-format
-msgid "Please wait"
-msgstr "기다려 주세요"
-
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
-#, fuzzy, c-format
-msgid "Check updates"
-msgstr "보안 업데이트"
-
-#: ../mdkapplet:150 ../mdkapplet:554
-#, c-format
-msgid "Online WebSite"
+msgid "Enabled"
 msgstr ""
 
-#: ../mdkapplet:151
-#, c-format
-msgid "Configure Network"
-msgstr "네트웍 설정"
-
-#: ../mdkapplet:152
-#, fuzzy, c-format
-msgid "Configure Now!"
-msgstr "설정사항 읽는 중\n"
-
-#: ../mdkapplet:227 ../mdkapplet:306
-#, fuzzy, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "맨드리바 프라이버시 정책"
-
-#: ../mdkapplet:236
-#, c-format
-msgid "Actions"
-msgstr "동작"
-
-#: ../mdkapplet:239
-#, c-format
-msgid "Configure"
-msgstr "설정"
-
-#: ../mdkapplet:243
-#, c-format
-msgid "See logs"
-msgstr "기록 보기"
-
-#: ../mdkapplet:246
-#, c-format
-msgid "Status"
-msgstr "상태"
-
-#: ../mdkapplet:250 ../mdkapplet:503
-#, c-format
-msgid "Close"
-msgstr "닫기"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Network Connection: "
-msgstr "네트워크 연결: "
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Up"
-msgstr "위로"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Down"
-msgstr "아래로"
-
-#: ../mdkapplet:280
-#, c-format
-msgid "Last check: "
-msgstr ""
-
-#: ../mdkapplet:281 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "컴퓨터 이름:"
-
-#: ../mdkapplet:282
-#, c-format
-msgid "Updates: "
-msgstr "업데이트: "
-
-#: ../mdkapplet:286
-#, fuzzy, c-format
-msgid "Launching drakconnect\n"
-msgstr "사용자드레이크 실행"
-
-#: ../mdkapplet:289
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-
-#: ../mdkapplet:297
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr ""
-
-#: ../mdkapplet:312 ../mdkapplet:352
-#, fuzzy, c-format
-msgid "Computing new updates...\n"
-msgstr "연결 문제"
-
-#: ../mdkapplet:313
-#, fuzzy, c-format
-msgid "Connecting to"
-msgstr "연결 문제"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "urpmi database locked"
-msgstr ""
-
-#: ../mdkapplet:341
+#: ../mdkapplet:187
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:359 ../mdkapplet:373
+#: ../mdkapplet:202
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:363
+#: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
 msgstr ""
 
-#: ../mdkapplet:368
+#: ../mdkapplet:212
 #, fuzzy, c-format
 msgid "Failed to open urpmi database"
 msgstr "%s 파일을 열 수 없습니다.\n"
 
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:217 ../mdkapplet:324
+#, fuzzy, c-format
+msgid "Install updates"
+msgstr "테마 설치"
+
+#: ../mdkapplet:218
+#, fuzzy, c-format
+msgid "Configure the service"
+msgstr "서비스 설정"
+
+#: ../mdkapplet:219
+#, fuzzy, c-format
+msgid "Check Updates"
+msgstr "업데이트 버전"
+
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "기다려 주세요"
+
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
+#, fuzzy, c-format
+msgid "Check updates"
+msgstr "보안 업데이트"
+
+#: ../mdkapplet:223 ../mdkapplet:648
+#, c-format
+msgid "Online WebSite"
+msgstr ""
+
+#: ../mdkapplet:224
+#, c-format
+msgid "Configure Network"
+msgstr "네트웍 설정"
+
+#: ../mdkapplet:225
+#, fuzzy, c-format
+msgid "Configure Now!"
+msgstr "설정사항 읽는 중\n"
+
+#: ../mdkapplet:313 ../mdkapplet:392
+#, fuzzy, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "맨드리바 프라이버시 정책"
+
+#: ../mdkapplet:322
+#, c-format
+msgid "Actions"
+msgstr "동작"
+
+#: ../mdkapplet:325
+#, c-format
+msgid "Configure"
+msgstr "설정"
+
+#: ../mdkapplet:329
+#, c-format
+msgid "See logs"
+msgstr "기록 보기"
+
+#: ../mdkapplet:332
+#, c-format
+msgid "Status"
+msgstr "상태"
+
+#: ../mdkapplet:336 ../mdkapplet:597
+#, c-format
+msgid "Close"
+msgstr "닫기"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Network Connection: "
+msgstr "네트워크 연결: "
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Up"
+msgstr "위로"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Down"
+msgstr "아래로"
+
+#: ../mdkapplet:366
+#, c-format
+msgid "Last check: "
+msgstr ""
+
+#: ../mdkapplet:367 ../mdkonline:145
+#, c-format
+msgid "Machine name:"
+msgstr "컴퓨터 이름:"
+
+#: ../mdkapplet:368
+#, c-format
+msgid "Updates: "
+msgstr "업데이트: "
+
+#: ../mdkapplet:372
+#, fuzzy, c-format
+msgid "Launching drakconnect\n"
+msgstr "사용자드레이크 실행"
+
+#: ../mdkapplet:375
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr ""
+
+#: ../mdkapplet:383
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr ""
+
+#: ../mdkapplet:398
+#, fuzzy, c-format
+msgid "Computing new updates...\n"
+msgstr "연결 문제"
+
+#: ../mdkapplet:399
+#, fuzzy, c-format
+msgid "Connecting to"
+msgstr "연결 문제"
+
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "오류 발생"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr ""
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr ""
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, fuzzy, c-format
 msgid "Unknown state"
 msgstr "알 수 없는 호스트 이름"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "잘못된 암호\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr ""
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
 msgstr ""
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, fuzzy, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "맨드리바 온라인에 잘 오셨습니다."
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "시스템 모드"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr ""
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr ""
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "로그"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "지우기"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "정보..."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "맨드리바 온라인"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "종료"
@@ -366,7 +371,7 @@ msgstr ""
 "\n"
 "usage:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- 이 도움말 출력.\n"
@@ -484,8 +489,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "오류"
@@ -772,7 +777,7 @@ msgstr "연결 이름"
 msgid "Mandriva web services not reachable"
 msgstr ""
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -788,62 +793,52 @@ msgstr ""
 "\n"
 "usage:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr ""
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr ""
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr ""
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr ""
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr ""
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "경고"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, fuzzy, c-format
 msgid "Preparing..."
 msgstr "부트 로더 준비중"
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -851,7 +846,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -860,22 +855,17 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr ""
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "팩키지 설치 중...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2004-10-06 14:18+0300\n"
 "Last-Translator: Ovidiu Constantin <ovidiusoft@gmail.com>\n"
 "Language-Team: Romanian <rtfs-project@lists.sourceforge.net>\n"
@@ -35,7 +35,7 @@ msgstr "Verifică actualizări"
 msgid "Your system is up-to-date"
 msgstr "Sistemul dumneavoastră este actualizat"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -44,58 +44,63 @@ msgstr ""
 "Problemă de configuraţie a serviciului. Vă rog verificaţi jurnalele şi "
 "trimiteţi mail la support@mandrivaonline.com"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Vă rog să aşteptaţi, caut pachetele disponibile..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, fuzzy, c-format
 msgid "New bundles are available for your system"
 msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr "Serviciul nu este configurat. Apăsaţi pe \"Configurează serviciul\""
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Reţeaua nu merge. Vă rog configuraţi-vă reţeaua"
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Serviciul nu este activat. Apăsaţi pe \"Sit online\""
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, fuzzy, c-format
+msgid "urpmi database locked"
+msgstr "baza de date urpmi este blocată"
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Versiunea nu este suportată (versiunea este prea veche sau este versiune de "
 "dezvoltare)"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 "Aveţi configurate mai multe medii de actualizare, dar toate\n"
 "sunt dezactivate. Ar trebui să activaţi cel puţin unul, pornind\n"
@@ -104,193 +109,193 @@ msgstr ""
 "\n"
 "Apoi reporniţi %s."
 
-#: ../mdkapplet:161 ../mdkapplet:260
+#: ../mdkapplet:174
 #, c-format
-msgid "Install updates"
-msgstr "Instalare actualizări pentru sistem"
+msgid "Enabled"
+msgstr ""
 
-#: ../mdkapplet:145
-#, c-format
-msgid "Configure the service"
-msgstr "Configurează serviciul"
-
-#: ../mdkapplet:146
-#, c-format
-msgid "Check Updates"
-msgstr "Verificare Actualizări"
-
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
-#, c-format
-msgid "Please wait"
-msgstr "Vă rog să aşteptaţi"
-
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
-#, c-format
-msgid "Check updates"
-msgstr "Verifică actualizări"
-
-#: ../mdkapplet:150 ../mdkapplet:554
-#, c-format
-msgid "Online WebSite"
-msgstr "Pagină web"
-
-#: ../mdkapplet:151
-#, c-format
-msgid "Configure Network"
-msgstr "Configurare Reţea"
-
-#: ../mdkapplet:152
-#, c-format
-msgid "Configure Now!"
-msgstr "Setări"
-
-#: ../mdkapplet:227 ../mdkapplet:306
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux Updates Applet"
-
-#: ../mdkapplet:236
-#, c-format
-msgid "Actions"
-msgstr "Acţiuni"
-
-#: ../mdkapplet:239
-#, c-format
-msgid "Configure"
-msgstr "Configurează"
-
-#: ../mdkapplet:243
-#, c-format
-msgid "See logs"
-msgstr "Vezi logurile"
-
-#: ../mdkapplet:246
-#, c-format
-msgid "Status"
-msgstr "Statut"
-
-#: ../mdkapplet:250 ../mdkapplet:503
-#, c-format
-msgid "Close"
-msgstr "Închide"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Network Connection: "
-msgstr "Conexiune Reţea:"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Up"
-msgstr "Pornită"
-
-#: ../mdkapplet:279
-#, c-format
-msgid "Down"
-msgstr "Oprită"
-
-#: ../mdkapplet:280
-#, c-format
-msgid "Last check: "
-msgstr "Ultima verificare:"
-
-#: ../mdkapplet:281 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "Nume maşină:"
-
-#: ../mdkapplet:282
-#, c-format
-msgid "Updates: "
-msgstr "Actualizări: "
-
-#: ../mdkapplet:286
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Lansez drakconnect\n"
-
-#: ../mdkapplet:289
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online pare să fi fost reinstalat, reîncarc applet-ul ...."
-
-#: ../mdkapplet:297
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Lansez MandrivaUpdate\n"
-
-#: ../mdkapplet:312 ../mdkapplet:352
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Calculez actualizările noi...\n"
-
-#: ../mdkapplet:313
-#, c-format
-msgid "Connecting to"
-msgstr "Mă conectez la"
-
-#: ../mdkapplet:330
-#, fuzzy, c-format
-msgid "urpmi database locked"
-msgstr "baza de date urpmi este blocată"
-
-#: ../mdkapplet:341
+#: ../mdkapplet:187
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:359 ../mdkapplet:373
+#: ../mdkapplet:202
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Verific...Actualizări sunt disponibile\n"
 
-#: ../mdkapplet:363
+#: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
 msgstr ""
 
-#: ../mdkapplet:368
+#: ../mdkapplet:212
 #, fuzzy, c-format
 msgid "Failed to open urpmi database"
 msgstr "nu pot deschide rpmdb"
 
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:217 ../mdkapplet:324
+#, c-format
+msgid "Install updates"
+msgstr "Instalare actualizări pentru sistem"
+
+#: ../mdkapplet:218
+#, c-format
+msgid "Configure the service"
+msgstr "Configurează serviciul"
+
+#: ../mdkapplet:219
+#, c-format
+msgid "Check Updates"
+msgstr "Verificare Actualizări"
+
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "Vă rog să aşteptaţi"
+
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
+#, c-format
+msgid "Check updates"
+msgstr "Verifică actualizări"
+
+#: ../mdkapplet:223 ../mdkapplet:648
+#, c-format
+msgid "Online WebSite"
+msgstr "Pagină web"
+
+#: ../mdkapplet:224
+#, c-format
+msgid "Configure Network"
+msgstr "Configurare Reţea"
+
+#: ../mdkapplet:225
+#, c-format
+msgid "Configure Now!"
+msgstr "Setări"
+
+#: ../mdkapplet:313 ../mdkapplet:392
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Mandriva Linux Updates Applet"
+
+#: ../mdkapplet:322
+#, c-format
+msgid "Actions"
+msgstr "Acţiuni"
+
+#: ../mdkapplet:325
+#, c-format
+msgid "Configure"
+msgstr "Configurează"
+
+#: ../mdkapplet:329
+#, c-format
+msgid "See logs"
+msgstr "Vezi logurile"
+
+#: ../mdkapplet:332
+#, c-format
+msgid "Status"
+msgstr "Statut"
+
+#: ../mdkapplet:336 ../mdkapplet:597
+#, c-format
+msgid "Close"
+msgstr "Închide"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Network Connection: "
+msgstr "Conexiune Reţea:"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Up"
+msgstr "Pornită"
+
+#: ../mdkapplet:365
+#, c-format
+msgid "Down"
+msgstr "Oprită"
+
+#: ../mdkapplet:366
+#, c-format
+msgid "Last check: "
+msgstr "Ultima verificare:"
+
+#: ../mdkapplet:367 ../mdkonline:145
+#, c-format
+msgid "Machine name:"
+msgstr "Nume maşină:"
+
+#: ../mdkapplet:368
+#, c-format
+msgid "Updates: "
+msgstr "Actualizări: "
+
+#: ../mdkapplet:372
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Lansez drakconnect\n"
+
+#: ../mdkapplet:375
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Mandriva Online pare să fi fost reinstalat, reîncarc applet-ul ...."
+
+#: ../mdkapplet:383
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Lansez MandrivaUpdate\n"
+
+#: ../mdkapplet:398
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Calculez actualizările noi...\n"
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Connecting to"
+msgstr "Mă conectez la"
+
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "A apărut o eroare"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Versiunea de dezvoltare nu este suportată de serviciu"
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Versiunea este prea veche si nu este suportată de serviciu"
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, c-format
 msgid "Unknown state"
 msgstr "Stare necunoscută"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr "Servicii online dezactivate Contactaţi pagina de web Mandriva Online\n"
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Parolă greşită.\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Acţiune sau Gazdă sau Login greşit.\n"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -299,74 +304,74 @@ msgstr ""
 "Sunt probleme cu setarile reţelei(verifică ruta, firewall-ul sau setarile "
 "proxy-ului)\n"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
 msgstr ""
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, fuzzy, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Bun venit la Mandriva Online"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistemul este la zi cu actualizările\n"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr "Fără verificare"
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Verificare fisier de configurare: Nu este prezent\n"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Verificare Reţea:se pare că este dezactivată\n"
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "Loguri"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "Şterge"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "Despre..."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lansează întotdeauna la pornire"
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "Ieşire"
@@ -387,7 +392,7 @@ msgstr ""
 "\n"
 "Utilizare:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- afişează acest mesaj de ajutor.\n"
@@ -505,8 +510,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr ""
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "Eroare"
@@ -801,7 +806,7 @@ msgstr "Nume de conexiune"
 msgid "Mandriva web services not reachable"
 msgstr ""
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -817,62 +822,52 @@ msgstr ""
 "\n"
 "Utilizare:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update este lansat automat.\n"
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet\t\t- lansează Mandriva Update.\n"
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr ""
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, fuzzy, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --auto         - Mandriva Update este lansat automat.\n"
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
 msgstr ""
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr ""
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "Avertisment"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
 msgstr ""
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Pregătire..."
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -880,7 +875,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -889,25 +884,23 @@ msgid ""
 "start.mandriva.com"
 msgstr ""
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr ""
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr ""
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Instalare pachete...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nu pot actualiza pachetele de pe mediul update_source.\n"
+
+#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
+#~ msgstr "  --applet\t\t- lansează Mandriva Update.\n"
 
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "Sistemul este ocupat. Vă rugăm aşteptaţi..."

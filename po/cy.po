@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:18+0200\n"
+"POT-Creation-Date: 2007-08-09 16:26+0200\n"
 "PO-Revision-Date: 2006-05-27 09:24-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg/Welsh <post@meddal.com>\n"
@@ -27,7 +27,7 @@ msgstr "Gwirio diweddariad"
 msgid "Your system is up-to-date"
 msgstr "Mae'r system yn gyfredol"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:109
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -36,58 +36,63 @@ msgstr ""
 "Problemau ffurfweddu'r gwasanaethwr. Gwiriwch gofnodion ac anfon e-byst at "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Arhoswch, canfod pecynnau sydd ar gael..."
 
-#: ../mdkapplet:109
+#: ../mdkapplet:121
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Mae diweddariadau newydd ar gael ar gyfer eich system"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:127
 #, c-format
 msgid "New bundles are available for your system"
 msgstr "Mae bwndeli newydd ar gael ar gyfer eich system"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
 msgstr ""
 "Nid yw'r gwasanaeth wedi ei ffurfweddu. Cliciwch \"Ffurfweddu'r gwasanaeth\""
 
-#: ../mdkapplet:127
+#: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Nid yw'r rhwydwaith ar gael.  Ffurfweddwch eich rhwydwaith"
 
-#: ../mdkapplet:133
+#: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Nid yw'r gwasanaeth ar gael. Cliciwch \"Gwefan Ar-lein\""
 
-#: ../mdkapplet:139
+#: ../mdkapplet:151 ../mdkapplet:182
+#, c-format
+msgid "urpmi database locked"
+msgstr "Cronfa ddata urpmi wedi cloi"
+
+#: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Nid yw'r rhyddhad yn cael ei gynnal (mae'n rhy hen neu'n rhyddhad datblygu)"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:163
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:151
+#: ../mdkapplet:169
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
-"Media Manager to enable at least one (check it in the \"Enabled\"\n"
+"Media Manager to enable at least one (check it in the \"%s\"\n"
 "column).\n"
 "\n"
-"Then, restart %s."
+"Then, restart \"%s\"."
 msgstr ""
 "Mae gennych o leiaf un cyfrwng diweddaru wedi ei ffurfweddu,\n"
 "ond maen nhw i gyd wedi eu hanalluogi. Dylech redeg y Rheolwr\n"
@@ -96,196 +101,196 @@ msgstr ""
 "\n"
 "Yna ailgychwyn %s."
 
-#: ../mdkapplet:161 ../mdkapplet:260
+#: ../mdkapplet:174
+#, c-format
+msgid "Enabled"
+msgstr ""
+
+#: ../mdkapplet:187
+#, fuzzy, c-format
+msgid "Error updating media"
+msgstr "Diweddaru cyfrwng...\n"
+
+#: ../mdkapplet:202
+#, c-format
+msgid "Checking... Updates are available\n"
+msgstr "Gwirio... Mae diweddariadau ar gael\n"
+
+#: ../mdkapplet:207
+#, c-format
+msgid "Packages are up to date"
+msgstr "Mae'r pecynnau'n rhai diweddaraf"
+
+#: ../mdkapplet:212
+#, fuzzy, c-format
+msgid "Failed to open urpmi database"
+msgstr "methu agor rpmdb"
+
+#: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
 msgid "Install updates"
 msgstr "Gosod diweddariadau"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure the service"
 msgstr "Ffurfweddu'r gwasanaeth"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:219
 #, c-format
 msgid "Check Updates"
 msgstr "Gwirio Diweddariad"
 
-#: ../mdkapplet:147 ../mdkapplet:241 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:165 ../mdkupdate:216 ../mdkupdate:285
+#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
 #, c-format
 msgid "Please wait"
 msgstr "Arhoswch"
 
-#: ../mdkapplet:147 ../mdkapplet:240 ../mdkapplet:241
+#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
 #, c-format
 msgid "Check updates"
 msgstr "Gwirio diweddariad"
 
-#: ../mdkapplet:150 ../mdkapplet:554
+#: ../mdkapplet:223 ../mdkapplet:648
 #, c-format
 msgid "Online WebSite"
 msgstr "Safle Gwe Ar-lein"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:224
 #, c-format
 msgid "Configure Network"
 msgstr "Ffurfweddu'r Rhwydwaith"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:225
 #, c-format
 msgid "Configure Now!"
 msgstr "Ffurfweddu!"
 
-#: ../mdkapplet:227 ../mdkapplet:306
+#: ../mdkapplet:313 ../mdkapplet:392
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Rhaglennig Diweddaru Mandriva Linux"
 
-#: ../mdkapplet:236
+#: ../mdkapplet:322
 #, c-format
 msgid "Actions"
 msgstr "Gweithredoedd"
 
-#: ../mdkapplet:239
+#: ../mdkapplet:325
 #, c-format
 msgid "Configure"
 msgstr "Ffurfweddu"
 
-#: ../mdkapplet:243
+#: ../mdkapplet:329
 #, c-format
 msgid "See logs"
 msgstr "Darllen cofnodion"
 
-#: ../mdkapplet:246
+#: ../mdkapplet:332
 #, c-format
 msgid "Status"
 msgstr "Statws"
 
-#: ../mdkapplet:250 ../mdkapplet:503
+#: ../mdkapplet:336 ../mdkapplet:597
 #, c-format
 msgid "Close"
 msgstr "Cau"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Network Connection: "
 msgstr "Cyswllt Rhwydwaith:"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Up"
 msgstr "Fyny"
 
-#: ../mdkapplet:279
+#: ../mdkapplet:365
 #, c-format
 msgid "Down"
 msgstr "Lawr"
 
-#: ../mdkapplet:280
+#: ../mdkapplet:366
 #, c-format
 msgid "Last check: "
 msgstr "Gwiriad diwethaf:"
 
-#: ../mdkapplet:281 ../mdkonline:145
+#: ../mdkapplet:367 ../mdkonline:145
 #, c-format
 msgid "Machine name:"
 msgstr "Enw'r peiriant:"
 
-#: ../mdkapplet:282
+#: ../mdkapplet:368
 #, c-format
 msgid "Updates: "
 msgstr "Diweddariadau:"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Cychwyn drakconnect\n"
 
-#: ../mdkapplet:289
+#: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mae Mandriva Online i'w weld wedi ei ail osod, ail lwytho'r rhaglennig..."
 
-#: ../mdkapplet:297
+#: ../mdkapplet:383
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Cychwyn MandrivaUpdate\n"
 
-#: ../mdkapplet:312 ../mdkapplet:352
+#: ../mdkapplet:398
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Cyfrifo diweddariadau newydd...\n"
 
-#: ../mdkapplet:313
+#: ../mdkapplet:399
 #, c-format
 msgid "Connecting to"
 msgstr "Cysylltu â"
 
-#: ../mdkapplet:330
-#, c-format
-msgid "urpmi database locked"
-msgstr "Cronfa ddata urpmi wedi cloi"
-
-#: ../mdkapplet:341
-#, fuzzy, c-format
-msgid "Error updating media"
-msgstr "Diweddaru cyfrwng...\n"
-
-#: ../mdkapplet:359 ../mdkapplet:373
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Gwirio... Mae diweddariadau ar gael\n"
-
-#: ../mdkapplet:363
-#, c-format
-msgid "Packages are up to date"
-msgstr "Mae'r pecynnau'n rhai diweddaraf"
-
-#: ../mdkapplet:368
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "methu agor rpmdb"
-
-#: ../mdkapplet:379 ../mdkupdate:201 ../mdkupdate:230
+#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
 
-#: ../mdkapplet:387
+#: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
 msgstr "Nid yw ryddhad datblygu'n cael ei gynnal gan y gwasanaeth"
 
-#: ../mdkapplet:388
+#: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
 msgstr "Nid yw hen ryddhad yn cael ei gynnal gan y gwasanaeth"
 
-#: ../mdkapplet:389
+#: ../mdkapplet:477
 #, c-format
 msgid "Unknown state"
 msgstr "Cyflwr anhysbys"
 
-#: ../mdkapplet:390
+#: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
 msgstr ""
 "Mae'r gwasanaethau ar-lein wedi eu hatal. Cysylltwch â safle Mandriva "
 "Online\n"
 
-#: ../mdkapplet:391
+#: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
 msgstr "Y cyfrinair anghywir\n"
 
-#: ../mdkapplet:392
+#: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
 msgstr "Gweithred, gwestai neu fewngofnod anghywir.\n"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
@@ -294,7 +299,7 @@ msgstr ""
 "Mae rhywbeth o'i le ar osodiadau eich rhwydwaith (gwiriwch eich llwybr, mur "
 "cadarn neu osodiadau dirprwy)\n"
 
-#: ../mdkapplet:395
+#: ../mdkapplet:483
 #, c-format
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
@@ -302,67 +307,67 @@ msgid ""
 msgstr ""
 "Digwyddodd anhawster wrth gysylltu â'r gweinydd, cysylltwch â'r tîm cefnogi"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:487
 #, c-format
 msgid "Response from Mandriva Online server\n"
 msgstr "Ymateb gan weinydd Mandriva Online\n"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:490
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Mae'r system yn gyfredol\n"
 
-#: ../mdkapplet:433
+#: ../mdkapplet:527
 #, c-format
 msgid "No check"
 msgstr "Dim gwiriad"
 
-#: ../mdkapplet:447
+#: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
 msgstr "Gwirio ffeil ffurfweddiad: Nid yw ar gael\n"
 
-#: ../mdkapplet:450
+#: ../mdkapplet:544
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Gwirio'r Rhwydwaith: i weld wedi ei anablu\n"
 
-#: ../mdkapplet:493
+#: ../mdkapplet:587
 #, c-format
 msgid "Logs"
 msgstr "Cofnodion"
 
-#: ../mdkapplet:509
+#: ../mdkapplet:603
 #, c-format
 msgid "Clear"
 msgstr "Clirio"
 
-#: ../mdkapplet:535
+#: ../mdkapplet:629
 #, c-format
 msgid "About..."
 msgstr "Ynghylch..."
 
-#: ../mdkapplet:537
+#: ../mdkapplet:631
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:541
+#: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Hawlfraint (C) %s  Mandriva"
 
-#: ../mdkapplet:553
+#: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online yw gwasanaethau gwe Mandriva."
 
-#: ../mdkapplet:561
+#: ../mdkapplet:655
 #, c-format
 msgid "Always launch on startup"
 msgstr "Cychwyn wrth gychwyn"
 
-#: ../mdkapplet:563
+#: ../mdkapplet:657
 #, c-format
 msgid "Quit"
 msgstr "Gadael"
@@ -384,7 +389,7 @@ msgstr ""
 "\n"
 "defnydd:\n"
 
-#: ../mdkonline:63 ../mdkupdate:74
+#: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- argraffu'r neges cymorth hon.\n"
@@ -502,8 +507,8 @@ msgid "(Ex: My Home Office's Computer)"
 msgstr "(E.e.: Cyfrifiadur Swyddfa Cartref)"
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:152
-#: ../mdkupdate:183 ../mdkupdate:201 ../mdkupdate:230 ../mdkupdate:249
+#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
+#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "Gwall"
@@ -806,7 +811,7 @@ msgstr "Gwall cysylltiad"
 msgid "Mandriva web services not reachable"
 msgstr "Methu cyrraedd gwasanaethau gwe Mandriva"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -823,32 +828,27 @@ msgstr ""
 "\n"
 "defnydd:\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- cychwyn Mandriva Update yn awtomatig\n"
 
-#: ../mdkupdate:76
-#, c-format
-msgid "  --applet\t\t- launch Mandriva Update.\n"
-msgstr "  --applet\t\t- cychwyn Mandriva Update.\n"
-
-#: ../mdkupdate:77
+#: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- cychwyn sgriptiau mnf penodol.\n"
 
-#: ../mdkupdate:78
+#: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- fersiwn modd testun o Mandriva Update\n"
 
-#: ../mdkupdate:79
+#: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- cofnodi'r hyn sydd wedi ei wneud\n"
 
-#: ../mdkupdate:80
+#: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
@@ -856,18 +856,13 @@ msgid ""
 msgstr ""
 "  --bundle file.bundle\t- didoli a gosod pecyn o .bundle metainfo file.\n"
 
-#: ../mdkupdate:152
-#, c-format
-msgid "Cannot get list of updates: %s"
-msgstr "Methu estyn rhestr y diweddariadau: %s"
-
-#: ../mdkupdate:160 ../mdkupdate:206
+#: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "Rhybudd"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:162
+#: ../mdkupdate:120
 #, c-format
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
@@ -875,12 +870,12 @@ msgid ""
 msgstr ""
 "Rhaid gosod y system ar eich disg caled yn gyntaf gyda dewin 'Live Install'."
 
-#: ../mdkupdate:165 ../mdkupdate:216
+#: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Paratoi..."
 
-#: ../mdkupdate:183
+#: ../mdkupdate:141
 #, c-format
 msgid ""
 "Failed to authenticate to the bundle server:\n"
@@ -891,7 +886,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: ../mdkupdate:206
+#: ../mdkupdate:164
 #, c-format
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
@@ -903,25 +898,29 @@ msgstr ""
 "\n"
 "Rhaid diweddaru i fersiwn newydd. Gallwch ei gael o http://start.mandriva.com"
 
-#: ../mdkupdate:249
+#: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
 msgstr "Nid yw'r bwndel wedi ei ffurfio'n dda. Atal."
 
-#: ../mdkupdate:261
-#, c-format
-msgid "Choose which packages should be installed and Press Ok"
-msgstr "Dewiswch pa becynnau i'w gosod a chlicio Iawn"
-
-#: ../mdkupdate:285
+#: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
 msgstr "Gosod pecynnau...\n"
 
-#: ../mdkupdate:297 ../mdkupdate:359
+#: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
+
+#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
+#~ msgstr "  --applet\t\t- cychwyn Mandriva Update.\n"
+
+#~ msgid "Cannot get list of updates: %s"
+#~ msgstr "Methu estyn rhestr y diweddariadau: %s"
+
+#~ msgid "Choose which packages should be installed and Press Ok"
+#~ msgstr "Dewiswch pa becynnau i'w gosod a chlicio Iawn"
 
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "Mae'r system yn brysur. Arhoswch..."
