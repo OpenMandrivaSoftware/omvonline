@@ -247,7 +247,7 @@ my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
 if ($opt eq '--debug') { $debug = 1 }
 
-shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet";
+shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
 $icon->show_all;
 go2State('delayed');
