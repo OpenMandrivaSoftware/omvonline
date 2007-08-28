@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: pt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2007-07-23 08:00+0100\n"
+"PO-Revision-Date: 2007-08-28 03:46+0100\n"
 "Last-Translator: Zé <mmodem00@gmail.com>\n"
 "Language-Team: Português <pt@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,9 +27,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Verificar actualizações"
+msgstr "Irá verificar actualizações em %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -63,8 +63,7 @@ msgstr "Novos 'bundles' disponíveis para o seu sistema"
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"O serviço não está configurado. Por favor clique em \"Configurar Serviço\""
+msgstr "O serviço não está configurado. Por favor clique em \"Configurar Serviço\""
 
 #: ../mdkapplet:139
 #, c-format
@@ -74,8 +73,7 @@ msgstr "A rede não está a funcionar. Por favor configure a sua rede"
 #: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"O serviço não está activado. Por favor clique em \"Sítio Web Em Linha\""
+msgstr "O serviço não está activado. Por favor clique em \"Sítio Web Em Linha\""
 
 #: ../mdkapplet:151 ../mdkapplet:182
 #, c-format
@@ -89,14 +87,13 @@ msgstr "Versão não suportada (versão demasiado antiga, ou de desenvolvimento)
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nenhuma média encontrada. Precisa adicionar alguma média através do 'Gestor "
 "de Médias de Programas'."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -105,12 +102,12 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
-"Já tem pelo menos uma média de actualização configurada,\n"
-"mas todas elas estão actualmente desactivadas. Deve executar\n"
-"o 'Gestor de Médias de Programa' para activar pelo menos uma\n"
-"(marcar na coluna Activado).\n"
+"Já tem pelo menos uma média de actualização configurada, mas\n"
+"todas as médias estão actualmente desactivadas. Deve executar\n"
+"o 'Gestor de Médias de Programas' para activar pelo menos uma\n"
+"(marcar a coluna \"%s\").\n"
 "\n"
-"Depois, reinicie %s."
+"Depois, reinicie \"%s\"."
 
 #: ../mdkapplet:174
 #, c-format
@@ -246,8 +243,7 @@ msgstr "A iniciar drakconnect\n"
 #: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"O Mandriva Online parece ter sido reinstalado, a recarregar o componente..."
+msgstr "O Mandriva Online parece ter sido reinstalado, a recarregar o componente..."
 
 #: ../mdkapplet:383
 #, c-format
@@ -526,8 +522,7 @@ msgstr "Erro"
 #: ../mdkonline:152
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"O nome da máquina deve apenas conter entre 1 e 40 caracteres alfanuméricos"
+msgstr "O nome da máquina deve apenas conter entre 1 e 40 caracteres alfanuméricos"
 
 #: ../mdkonline:155
 #, c-format
@@ -578,8 +573,7 @@ msgstr "Problema na ligação"
 #: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr ""
-"Ocorrem problemas apenas ao enviar ficheiros, por favor tente novamente"
+msgstr "Ocorrem problemas apenas ao enviar ficheiros, por favor tente novamente"
 
 #: ../mdkonline:187
 #, c-format
@@ -929,11 +923,3 @@ msgstr "A instalar pacotes...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Não é possível actualizar os pacotes da média update_source.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- executa o Mandriva Update..\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Não é possível obter a lista de actualizações: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Escolha que pacotes devem ser instalados e Prima Ok"
