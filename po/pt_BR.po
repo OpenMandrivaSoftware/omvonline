@@ -14,9 +14,9 @@ msgstr ""
 "Project-Id-Version: pt_BR\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2007-06-06 15:35-0300\n"
-"Last-Translator: Felipe Arruda <felipemiguel@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
+"PO-Revision-Date: 2007-08-28 17:38-0300\n"
+"Last-Translator: Felipe Arruda\n"
+"Language-Team: Brazilian Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,9 +25,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Verificar atualizações"
+msgstr "Verificar atualizações em %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -85,14 +85,13 @@ msgstr "Versão não suportada (muito antiga ou de desenvolvimento)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nenhuma mídia foi encontrada. Você deve adicionar alguma mídia através do "
 "'Gerenciador de Mídia de Software'."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -103,10 +102,9 @@ msgid ""
 msgstr ""
 "Você já tem pelo menos uma mídia de atualização configurada,\n"
 "mas todas estão desabilitadas atualmente. Você deve executar o\n"
-"'Gerenciador de Mídias' para habilitar ao menos uma\n"
-"(selecionando a coluna 'Habilitar?'). \n"
+"'Gerenciador de Mídias' para habilitar ao menos uma (verifique a coluna \"%s\").\n"
 "\n"
-"Após isso, reinicie o %s."
+"Depois, reinicie o \"%s\"."
 
 #: ../mdkapplet:174
 #, c-format
@@ -919,14 +917,5 @@ msgstr "Instalando pacotes ...\n"
 #: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr ""
-"Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
+msgstr "Não foi possível atualizar os pacotes a partir da mídia update_source.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- lançar Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Não é possível pegar listas de updates: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Escolha quais pacotes devem ser instalados e pressione Ok"
