@@ -439,7 +439,7 @@ sub silentCheck() {
 
                 require urpm::select;
                 require urpm::media;
-                urpm::media::configure($urpm);
+                urpm::media::configure($urpm, update => 1);
                 my @update_medias = grep { $_->{update} } @{$urpm->{media}};
                 if (!@update_medias) {
                     $exit->('no_update_medium');
