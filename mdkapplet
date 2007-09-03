@@ -634,7 +634,7 @@ sub setState {
                                         my $w = gtknew('AboutDialog', name => N("Mandriva Online %s", $ver),
                                                        version => $ver,
                                                        copyright => N("Copyright (C) %s by Mandriva", '2001-2006'),
-                                                       license => join('', cat_('/usr/share/common-licenses/GPL')), wrap_license => 1,
+                                                       license => join('', cat_('/usr/share/common-licenses/GPL')),
                                                        icon => '/usr/share/icons/mini/mdkonline.png',
                                                        comments => N("Mandriva Online gives access to Mandriva web services."),
                                                        website => $url,
