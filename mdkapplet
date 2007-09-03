@@ -34,6 +34,7 @@ use Gtk2::Pango;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
+use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
@@ -628,25 +629,24 @@ sub setState {
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About..."))), activate => sub {
                                         my $ver = 1; # automatically set from spec file
-                                        my $w = gtkset_name(Gtk2::AboutDialog->new, N("Mandriva Online %s", $ver));
-                                        $w->signal_connect(response => sub { $_[0]->destroy });
-                                        $w->set_version($ver);
-                                        $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
-                                        $w->set_copyright(N("Copyright (C) %s by Mandriva", '2001-2007'));
-                                        $w->set_url_hook(sub {
-                                                             my (undef, $url) = @_;
-                                                             run_program::raw({ detach => 1 }, 'www-browser', $url);
-                                                         });
-
                                         my $url = $online_site;
                                         $url =~ s/^https:/http:/;
-                                        $w->set_website($url);
-                                        #$w->set_license(formatAlaTeX(join("\n", cat_('/usr/share/common-licenses/GPL'))));
-                                        #$w->set_wrap_license(1);
-                                        $w->set_license(join('', cat_('/usr/share/common-licenses/GPL')));
-                                        $w->set_comments(N("Mandriva Online gives access to Mandriva web services."));
-                                        $w->set_website_label(N("Online WebSite"));
-                                        $w->set_authors('Thierry Vignaud <vignaud@mandriva.com>');
+                                        my $w = gtknew('AboutDialog', name => N("Mandriva Online %s", $ver),
+                                                       version => $ver,
+                                                       copyright => N("Copyright (C) %s by Mandriva", '2001-2006'),
+                                                       license => join('', cat_('/usr/share/common-licenses/GPL')), wrap_license => 1,
+                                                       icon => '/usr/share/icons/mini/mdkonline.png',
+                                                       comments => N("Mandriva Online gives access to Mandriva web services."),
+                                                       website => $url,
+                                                       website_label => N("Online WebSite"),
+                                                       authors => 'Thierry Vignaud <vignaud@mandriva.com>',
+                                                       artists => 'Hélène Durosini <ln@mandriva.com>',
+                                                       translator_credits =>
+                                                         #-PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+                                                         N("_: Translator(s) name(s) & email(s)\n"),
+                                                       transient_for => $::main_window, modal => 1, position_policy => 'center-on-parent',
+                                                   );
+
                                         $w->show_all;
                                         $w->run;
                                         return 1;
