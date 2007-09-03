@@ -620,7 +620,6 @@ sub setState {
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $img->set_from_pixbuf($tmp);
-    #my $tooltip = Gtk2::Tooltips->new;
     gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(my_sprintf_fixutf8(translate($state{$state_type}{tt}[0]))));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
