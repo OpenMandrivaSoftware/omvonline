@@ -632,7 +632,6 @@ sub setState {
                                         my $url = $online_site;
                                         $url =~ s/^https:/http:/;
                                         my $w = gtknew('AboutDialog', name => N("Mandriva Online %s", $ver),
-                                                       version => $ver,
                                                        copyright => N("Copyright (C) %s by Mandriva", '2001-2006'),
                                                        license => join('', cat_('/usr/share/common-licenses/GPL')),
                                                        icon => '/usr/share/icons/mini/mdkonline.png',
