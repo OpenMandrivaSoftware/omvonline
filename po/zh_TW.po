@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2006-04-10 18:31+0800\n"
-"Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
+"PO-Revision-Date: 2007-09-06 20:01+0800\n"
+"Last-Translator: You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,9 +24,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "檢查更新"
+msgstr "將於 %s 檢查更新"
 
 #: ../mdkapplet:103
 #, c-format
@@ -35,11 +35,8 @@ msgstr "您的系統處於最新的狀態"
 
 #: ../mdkapplet:109
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"服務設定發生問題，請檢查錯誤紀錄並寄封電子郵件至 support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "服務設定發生問題，請檢查錯誤紀錄並寄封電子郵件至 support@mandrivaonline.com"
 
 #: ../mdkapplet:115
 #, c-format
@@ -71,24 +68,24 @@ msgstr "網路沒有啟動，請設定您的網路連線"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "服務沒有啟動。請點選「線上網站」"
 
-#: ../mdkapplet:151 ../mdkapplet:182
-#, fuzzy, c-format
+#: ../mdkapplet:151
+#: ../mdkapplet:182
+#, c-format
 msgid "urpmi database locked"
 msgstr "urpmi 資料庫被鎖住了"
 
 #: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "版本不支援 (您使用的版本過舊或是開發者版本)"
+msgstr "版本不支援 (您使用的版本過舊或是開發中版本)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "找不到媒體。您必須經由「套件媒體管理員」新增一些媒體。"
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -98,7 +95,7 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 "您已經設定好了至少一個更新媒體，但它們現在全部都是停用的。\n"
-"您應該執行軟體套件媒體管理員來啟用至少一個媒體 (選取啟用欄位)。\n"
+"您應該執行軟體套件媒體管理員來啟用至少一個媒體 (選取 %s 欄位)。\n"
 "\n"
 "完成後，請重新啟動 %s。"
 
@@ -108,9 +105,9 @@ msgid "Enabled"
 msgstr "是否啟用？"
 
 #: ../mdkapplet:187
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "正在更新媒體...\n"
+msgstr "更新媒體時發生錯誤"
 
 #: ../mdkapplet:202
 #, c-format
@@ -120,17 +117,18 @@ msgstr "檢查中...有可用的更新\n"
 #: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "套件都已經更新了"
 
 #: ../mdkapplet:212
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "無法開啟 rpmdb"
+msgstr "無法開啟 urpmi 資料庫"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:217
+#: ../mdkapplet:324
 #, c-format
 msgid "Install updates"
-msgstr "安裝升級"
+msgstr "安裝更新"
 
 #: ../mdkapplet:218
 #, c-format
@@ -142,18 +140,26 @@ msgstr "設定本服務"
 msgid "Check Updates"
 msgstr "檢查更新"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#: ../mdkapplet:220
+#: ../mdkapplet:327
+#: ../mdkonline:114
+#: ../mdkonline:155
+#: ../mdkupdate:123
+#: ../mdkupdate:174
+#: ../mdkupdate:219
 #, c-format
 msgid "Please wait"
 msgstr "請稍候"
 
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
+#: ../mdkapplet:220
+#: ../mdkapplet:326
+#: ../mdkapplet:327
 #, c-format
 msgid "Check updates"
 msgstr "檢查更新"
 
-#: ../mdkapplet:223 ../mdkapplet:648
+#: ../mdkapplet:223
+#: ../mdkapplet:648
 #, c-format
 msgid "Online WebSite"
 msgstr "線上網站"
@@ -168,7 +174,8 @@ msgstr "設定網路連線"
 msgid "Configure Now!"
 msgstr "立即設定！"
 
-#: ../mdkapplet:313 ../mdkapplet:392
+#: ../mdkapplet:313
+#: ../mdkapplet:392
 #, c-format
 msgid "Mandriva Linux Updates Applet"
 msgstr "Mandriva Linux 自動更新面板程式"
@@ -186,14 +193,15 @@ msgstr "設定"
 #: ../mdkapplet:329
 #, c-format
 msgid "See logs"
-msgstr "查看日誌"
+msgstr "檢視紀錄"
 
 #: ../mdkapplet:332
 #, c-format
 msgid "Status"
 msgstr "狀態"
 
-#: ../mdkapplet:336 ../mdkapplet:597
+#: ../mdkapplet:336
+#: ../mdkapplet:597
 #, c-format
 msgid "Close"
 msgstr "關閉"
@@ -218,7 +226,8 @@ msgstr "未啟動"
 msgid "Last check: "
 msgstr "最近一次檢查："
 
-#: ../mdkapplet:367 ../mdkonline:145
+#: ../mdkapplet:367
+#: ../mdkonline:145
 #, c-format
 msgid "Machine name:"
 msgstr "電腦名稱："
@@ -253,7 +262,9 @@ msgstr "計算新的更新...\n"
 msgid "Connecting to"
 msgstr "連線到"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
+#: ../mdkapplet:467
+#: ../mdkupdate:159
+#: ../mdkupdate:188
 #, c-format
 msgid "An error occurred"
 msgstr "發生一個錯誤"
@@ -261,12 +272,12 @@ msgstr "發生一個錯誤"
 #: ../mdkapplet:475
 #, c-format
 msgid "Development release not supported by service"
-msgstr "本服務不提供開發者版本的支援"
+msgstr "本服務不支援開發中的版本"
 
 #: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
-msgstr "本服務不提供過舊版本的支援"
+msgstr "本服務不支援過舊的版本"
 
 #: ../mdkapplet:477
 #, c-format
@@ -281,25 +292,21 @@ msgstr "線上服務關閉。請聯繫 Mandriva Online 網站\n"
 #: ../mdkapplet:479
 #, c-format
 msgid "Wrong Password.\n"
-msgstr "密碼錯誤\n"
+msgstr "密碼錯誤。\n"
 
 #: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
-msgstr "錯誤的動作、主機或帳號。\n"
+msgstr "錯誤的動作或主機或帳號。\n"
 
 #: ../mdkapplet:481
 #, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
+msgid "Something is wrong with your network settings (check your route, firewall or proxy settings)\n"
 msgstr "您的網路設定發生錯誤 (請檢查您的路由器、防火牆或代理伺服器設定)\n"
 
 #: ../mdkapplet:483
 #, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
+msgid "Problem occured while connecting to the server, please contact the support team"
 msgstr "連結到伺服器發生錯誤，請聯繫支援團隊"
 
 #: ../mdkapplet:487
@@ -330,7 +337,7 @@ msgstr "檢查網路狀態中：似乎已停用\n"
 #: ../mdkapplet:587
 #, c-format
 msgid "Logs"
-msgstr "日誌記錄"
+msgstr "記錄檔"
 
 #: ../mdkapplet:603
 #, c-format
@@ -372,8 +379,7 @@ msgstr "結束"
 msgid ""
 "mdonline version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -383,7 +389,8 @@ msgstr ""
 "\n"
 "用法：\n"
 
-#: ../mdkonline:63 ../mdkupdate:73
+#: ../mdkonline:63
+#: ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- 顯示本輔助說明。\n"
@@ -418,7 +425,8 @@ msgstr "  --login=\t\t     - 使用者的登入名稱。\n"
 msgid "  --pass=\t\t\t- password  of the user.\n"
 msgstr "  --pass=\t\t\t- 使用者密碼。\n"
 
-#: ../mdkonline:87 ../mdkonline:120
+#: ../mdkonline:87
+#: ../mdkonline:120
 #, c-format
 msgid "Mandriva Online"
 msgstr "Mandriva Online"
@@ -426,7 +434,7 @@ msgstr "Mandriva Online"
 #: ../mdkonline:90
 #, c-format
 msgid "I already have an account"
-msgstr "我已經有了一個帳號"
+msgstr "我已經有一個帳號"
 
 #: ../mdkonline:91
 #, c-format
@@ -473,7 +481,8 @@ msgstr "帳號建立或認證"
 msgid "Enter your Mandriva Online login, password and machine name:"
 msgstr "請輸入您在 Mandriva Online 上的帳號、密碼與電腦名稱："
 
-#: ../mdkonline:142 ../mdkonline:195
+#: ../mdkonline:142
+#: ../mdkonline:195
 #, c-format
 msgid "Email address:"
 msgstr "郵件地址："
@@ -483,10 +492,11 @@ msgstr "郵件地址："
 msgid "Country"
 msgstr "國家"
 
-#: ../mdkonline:144 ../mdkonline:196
+#: ../mdkonline:144
+#: ../mdkonline:196
 #, c-format
 msgid "Password:"
-msgstr "    密碼："
+msgstr "密碼："
 
 #: ../mdkonline:146
 #, c-format
@@ -498,9 +508,17 @@ msgstr "電腦描述："
 msgid "(Ex: My Home Office's Computer)"
 msgstr "(例如：我家的電腦)"
 
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#: ../mdkonline:152
+#: ../mdkonline:159
+#: ../mdkonline:180
+#: ../mdkonline:204
+#: ../mdkonline:208
+#: ../mdkonline:212
+#: ../mdkonline:217
+#: ../mdkupdate:141
+#: ../mdkupdate:159
+#: ../mdkupdate:188
+#: ../mdkupdate:207
 #, c-format
 msgid "Error"
 msgstr "錯誤"
@@ -527,10 +545,8 @@ msgid ""
 "\n"
 "2) your hardware configuration.\n"
 "\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
+"If you feel uncomfortable by that idea, or do not want to benefit from this service,\n"
+"please press 'Cancel'. By pressing 'Next', you allow us to keep you informed\n"
 "about security updates and useful upgrades via personalized email alerts.\n"
 "Furthermore, you benefit from discounted paid support services on\n"
 "www.mandrivaexpert.com."
@@ -565,7 +581,7 @@ msgstr "上傳檔案時發生問題，請再試一次"
 #: ../mdkonline:187
 #, c-format
 msgid "Create a Mandriva Online Account"
-msgstr "註冊 Mandriva Online 帳號"
+msgstr "建立 Mandriva Online 帳號"
 
 #. -PO: that is for things like "Mr", "Ms",...
 #: ../mdkonline:192
@@ -594,7 +610,7 @@ msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr ""
-"密碼錯誤\n"
+"密碼不符\n"
 " 請再試一次\n"
 
 #: ../mdkonline:208
@@ -652,7 +668,7 @@ msgstr "恭喜"
 #: ../mdkonline:238
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "您的 Mandriva Online 帳號設定成功\n"
+msgstr "您的 Mandriva Online 帳號已經成功設定\n"
 
 #: ../mdkonline:253
 #, c-format
@@ -666,9 +682,7 @@ msgstr "上傳組態設定時發生問題"
 
 #: ../mdkonline:256
 #, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
+msgid "Cannot connect to Mandriva Online website: wrong login/password or router/firewall bad settings"
 msgstr "無法連線到 Mandriva Online 網站：錯誤的帳號/密碼或路由器/防火牆設定"
 
 #: ../mdkonline.pm:207
@@ -705,7 +719,8 @@ msgstr "註冊錯誤"
 msgid "Some parameters are missing"
 msgstr "某些參數遺失"
 
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
+#: ../mdkonline.pm:210
+#: ../mdkonline.pm:216
 #, c-format
 msgid "Password error"
 msgstr "密碼錯誤"
@@ -715,7 +730,9 @@ msgstr "密碼錯誤"
 msgid "Wrong password"
 msgstr "錯誤密碼"
 
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
+#: ../mdkonline.pm:211
+#: ../mdkonline.pm:212
+#: ../mdkonline.pm:213
 #, c-format
 msgid "Login error"
 msgstr "登入錯誤"
@@ -753,7 +770,8 @@ msgstr "限制錯誤"
 msgid "Database access forbidden"
 msgstr "連結資料庫遭拒"
 
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
+#: ../mdkonline.pm:215
+#: ../mdkonline.pm:217
 #, c-format
 msgid "Service error"
 msgstr "服務錯誤"
@@ -806,8 +824,7 @@ msgstr "無法連線到 Mandriva 網頁服務"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -839,12 +856,11 @@ msgstr "  --debug\t\t\t- 紀錄做了那些事情\n"
 
 #: ../mdkupdate:78
 #, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
+msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
 msgstr "  --bundle file.bundle\t- 分析並安裝 .bundle 資訊檔中的套件。\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkupdate:118
+#: ../mdkupdate:164
 #, c-format
 msgid "Warning"
 msgstr "警告"
@@ -852,12 +868,11 @@ msgstr "警告"
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
+msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
 msgstr "首先您必須用「Live Install」精靈將系統安裝到您的硬碟。"
 
-#: ../mdkupdate:123 ../mdkupdate:174
+#: ../mdkupdate:123
+#: ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "準備中..."
@@ -878,8 +893,7 @@ msgstr ""
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
 "\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
+"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
 msgstr ""
 "這個 Mandriva Online 客戶端的版本太舊了。\n"
 "\n"
@@ -895,44 +909,34 @@ msgstr "這個加值軟體沒有經過良好的格式化，略過。"
 msgid "Installing packages ...\n"
 msgstr "正在安裝套件...\n"
 
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:231
+#: ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "無法由 update_source 媒體更新套件。\n"
 
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- 啟動 Mandriva Update 面板程式。\n"
-
 #~ msgid "Cannot get list of updates: %s"
 #~ msgstr "無法取得更新列表：%s"
-
 #~ msgid "Choose which packages should be installed and Press Ok"
 #~ msgstr "請選取要安裝的套件並按下確定"
-
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "系統忙碌中，請稍候..."
-
 #~ msgid "Sending configuration..."
 #~ msgstr "正在送出組態設定..."
-
 #~ msgid "Unsecure invocation: Method available through httpS only"
 #~ msgstr "不安全的請求：僅能使用 httpS"
-
 #~ msgid "No %s file found. Run mdkonline wizard first"
 #~ msgstr "沒有找到檔案 %s，請先執行 mdkonline 設定精靈"
-
 #~ msgid "Mandriva Update could not contact the site, we will try again."
 #~ msgstr "Mandriva Update 無法連線到網站，我們將再試一次。"
-
 #~ msgid "Login:"
 #~ msgstr "帳號："
-
 #~ msgid "or"
 #~ msgstr "或"
-
 #~ msgid "wrong password:"
 #~ msgstr "密碼錯誤："
-
 #~ msgid ""
 #~ "Your login or password was wrong.\n"
 #~ " Either you'll have to type it again, or you'll need to create an account "
@@ -946,29 +950,22 @@ msgstr "無法由 update_source 媒體更新套件。\n"
 #~ "請重新輸入一次，或者您需要在 Mandriva Online 上註冊一個帳號。\n"
 #~ "若是後者，請回到第一步以連線到 Mandriva Online。\n"
 #~ "請注意您必須同時提供一個電腦名稱 (僅包含英文字母)"
-
 #~ msgid "Mail contact:"
 #~ msgstr "聯絡信箱："
-
 #~ msgid "Please provide a login"
 #~ msgstr "請輸入帳號"
-
 #~ msgid "Login and password should be less than 12 characters\n"
 #~ msgstr "登入帳號與密碼應該少於 12 個字元\n"
-
 #~ msgid "Special characters are not allowed\n"
 #~ msgstr "不允許使用特殊字元\n"
-
 #~ msgid "Email not valid\n"
 #~ msgstr "無效的電子郵件位址\n"
-
 #~ msgid "Account already exists\n"
 #~ msgstr "帳號已經存在\n"
-
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "連線到伺服器出問題\n"
-
 #~ msgid ""
 #~ "Problem occurred while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr "連結到伺服器發生錯誤，請聯繫支援團隊"
+
