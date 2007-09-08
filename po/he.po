@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2007-08-02 00:03+0300\n"
+"PO-Revision-Date: 2007-09-08 23:57+0300\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
 "MIME-Version: 1.0\n"
@@ -22,9 +22,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "בדוק עדכונים"
+msgstr "עדכונים יבדקו ב-%s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -82,12 +82,11 @@ msgstr "גרסה לא נתמכת (גרסה ישנה מדי או גרסת פית�
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "לא נמצאו מקורות תוכנה, עליך להוסיף מקורות דרך 'ניהול מקורות תוכנה'."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -97,10 +96,10 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 "יש לך לפחות מקור עדכונים אחד מוגדר, אבל אף מקור אינו\n"
-"מאופשר כרגע. עליך להריץ את מנהל מקורות התוכנה ולאפשר\n"
-"לפחות מקור  אחד (עליך לסמן את תיבת האפשור).\n"
+"מופעל כרגע. עליך להריץ את מנהל מקורות התכנה ולאפשר\n"
+"לפחות מקור אחד (יש לסמנו בטור \"%s\").\n"
 "\n"
-"לאחר מכן עליך לאתחל את %s מחדש."
+"לאחר מכן יש לאתחל את \"%s\" מחדש."
 
 #: ../mdkapplet:174
 #, c-format
@@ -411,9 +410,9 @@ msgid "  --nointeractive\t- use the non-interactive mode.\n"
 msgstr "  --nointeractive\t- השתמש במצב לא אינטראקטיבי.\n"
 
 #: ../mdkonline:68
-#, fuzzy, c-format
+#, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - השם שבחר המשתמש.\n"
+msgstr "  --login=\t\t     - שם המשתמש.\n"
 
 #: ../mdkonline:69
 #, c-format
@@ -903,11 +902,3 @@ msgstr "מתקין חבילות...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "לא ניתן לעדכן חבילות ממדיית update_source.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- הרץ את Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "לא ניתן לקבל את רשימת העידכונים: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "עליך לבחור אילו חבילות יותקנו וללחוץ על \"המשך\""
