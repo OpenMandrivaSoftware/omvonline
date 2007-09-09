@@ -1,34 +1,33 @@
-# translation of mdkonline-sl.po to Slovenian
+# translation of sl.po to Slovenščina
 # translation of mdkonline-sl.po to
-# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
 #
 # Alen Salamun <alen.salamun@alienworld.org>, 2002.
 # Gregor Pirnaver <gregor.pirnaver@email.si>, 2002, 2004.
 # Gregor Pirnaver <gregor.pirnaver@siol.net>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@mandrakeprinas.org>, 2004.
 # Gregor Pirnaver <gregor.pirnaver@sdm-si.org>, 2005.
-# Jure Repinc <jlp@holodeck1.com>, 2005, 2006.
+# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007.
 # Matjaž Kaše <matjaz.kase@telemach.net>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-sl\n"
+"Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2006-09-16 00:45+0200\n"
+"PO-Revision-Date: 2007-09-09 13:08+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"Language-Team: Slovenščina <lugos-slo@lugos.si>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Pregled posodobitev"
+msgstr "Za posodobitve bom preveril ob %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -62,8 +61,7 @@ msgstr "Za vaš sistem so na voljo novi sklopi programov"
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Storitev ni nastavljena. Prosim iz menija izberite »Nastavitev storitve«"
+msgstr "Storitev ni nastavljena. Prosim iz menija izberite »Nastavitev storitve«"
 
 #: ../mdkapplet:139
 #, c-format
@@ -76,9 +74,9 @@ msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Storitev ni aktivirana. Prosim kliknite na »Spletna stran«"
 
 #: ../mdkapplet:151 ../mdkapplet:182
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
-msgstr "podatkovna baza urpmi je zaklenjena"
+msgstr "podatkovna zbirka urpmi je zaklenjena"
 
 #: ../mdkapplet:157
 #, c-format
@@ -87,12 +85,13 @@ msgstr "Izdaja ni podprta (prestara ali razvojna različica)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
+"Ni moč najti virov. Vire lahko dodate s pomočjo "
+"upravljalnika virov programske opreme."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -104,9 +103,9 @@ msgstr ""
 "Že zdaj je nastavljen najmanj en vir posodobitev, toda\n"
 "vsi so trenutno onemogočeni. Pognati bi morali Upravitelja\n"
 "virov programske opreme, da omogočite najmanj enega\n"
-"(preverite v stolpcu Omogočen?).\n"
+"(preverite v stolpcu »%s«).\n"
 "\n"
-"Potem ponovno zaženite %s."
+"Potem ponovno zaženite »%s«."
 
 #: ../mdkapplet:174
 #, c-format
@@ -114,9 +113,9 @@ msgid "Enabled"
 msgstr "Omogočen"
 
 #: ../mdkapplet:187
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Posodabljanje vira ....\n"
+msgstr "Napaka pri posodabljanju"
 
 #: ../mdkapplet:202
 #, c-format
@@ -126,12 +125,12 @@ msgstr "Preverjanje ... Posodobitve so na voljo\n"
 #: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "Paketi so posodobljeni"
 
 #: ../mdkapplet:212
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "ni mogoče odpreti rpmdb"
+msgstr "Odpiranje zbirke podatkov urpmi je spodletelo"
 
 #: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
@@ -310,8 +309,7 @@ msgstr ""
 msgid ""
 "Problem occured while connecting to the server, please contact the support "
 "team"
-msgstr ""
-"Težava pri povezovanju s strežnikom. Prosim obrnite se na skupino za podporo"
+msgstr "Težava pri povezovanju s strežnikom. Prosim obrnite se na skupino za podporo"
 
 #: ../mdkapplet:487
 #, c-format
@@ -483,8 +481,7 @@ msgstr "Ustvarjanje računa ali overjanje"
 #: ../mdkonline:136
 #, c-format
 msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr ""
-"Vnesite svoje uporabniško ime, geslo in ime računalnika za Mandriva Online:"
+msgstr "Vnesite svoje uporabniško ime, geslo in ime računalnika za Mandriva Online:"
 
 #: ../mdkonline:142 ../mdkonline:195
 #, c-format
@@ -916,11 +913,3 @@ msgstr "Nameščanje paketov ...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- poženi Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Ni mogoče pridobiti seznama posodobitev: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Izberite pakete, ki naj se namestijo, in kliknite »V redu«."
