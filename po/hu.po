@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: hu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2007-03-20 21:53+0100\n"
+"PO-Revision-Date: 2007-09-11 22:04+0200\n"
 "Last-Translator: Arpad Biro <biro_arpad@yahoo.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,9 +19,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Frissítések keresése"
+msgstr "Frissítések keresésének következő időpontja: %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -67,8 +67,7 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:151 ../mdkapplet:182
 #, c-format
@@ -82,14 +81,13 @@ msgstr "Nem támogatott verzió (túl régi, vagy fejlesztői verzió)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Adatforrás nem található. Fel kell venni egy vagy több adatforrást a "
 "szoftverforrás-kezelővel."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -100,7 +98,7 @@ msgid ""
 msgstr ""
 "Már be van állítva egy vagy több frissítési adatforrás, de egyik sincs\n"
 "aktív állapotban. Ahhoz, hogy legalább egyet aktiváljon közülük,\n"
-"használja a szoftverforrás-kezelőt (az \"Engedélyezve\" oszlopban\n"
+"használja a szoftverforrás-kezelőt (a(z) \"%s\" oszlopban\n"
 "végezhető az aktiválás).\n"
 "\n"
 "Ez után indítsa el újra a(z) %s programot."
@@ -368,8 +366,7 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
+msgstr "A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
 
 #: ../mdkapplet:655
 #, c-format
@@ -809,8 +806,7 @@ msgstr "A felhasználó le van tiltva"
 #: ../mdkonline.pm:218
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr ""
-"A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
+msgstr "A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
 
 #: ../mdkonline.pm:219
 #, c-format
@@ -926,11 +922,3 @@ msgstr "Csomagok telepítése...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- Mandriva Update indítása\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "A frissítések listája nem érhető el: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Válassza ki a telepítendő csomagokat, majd nyomja meg az OK-t"
