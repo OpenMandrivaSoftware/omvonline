@@ -1,30 +1,30 @@
-# translation of mdkonline-it.po to italian
-# translation of Mandriva Online-it.po to italian
+# translation of it.po to Italian
 # Italian translation of Mandriva Online.
-# Copyright (C) 2002,2003, 2004, 2005 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+#
 # Simone Riccio <s.riccio@aeb-informatica.it>, 2002.
 # Roberto Rosselli Del Turco <rosselli@ling.unipi.it>, 2002.
 # Daniele Pighin <daniele@dcs.it>, 2003, 2004, 2005.
-#
+# Andrea Celli <andrea.celli@libero.it>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-it\n"
+"Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2006-09-17 01:10+0200\n"
-"Last-Translator: Andrea Celli <a.celli@caltanet.it>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"PO-Revision-Date: 2007-09-13 21:58+0200\n"
+"Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
+"Language-Team: Italian <timl@freelists.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Controlla aggiornamenti"
+msgstr "Controlla aggiornamenti per %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -82,12 +82,13 @@ msgstr "Versione non supportata (troppo vecchia o di sviluppo)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
+"Nessun supporto trovato.\n"
+"Bisogna aggiungerne uno usando la \"Gestione sorgenti software\"."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -99,7 +100,7 @@ msgstr ""
 "Hai già configurato uno o più supporti per gli aggiornamenti, ma\n"
 "attualmente sono tutti disabilitati. Dovresti avviare la gestione\n"
 "dei supporti software per abilitarne almeno uno (contrassegnandolo\n"
-"nella colonna \"Abilitato?\").\n"
+"nella colonna \"%s\").\n"
 "\n"
 "Poi riavvia %s."
 
@@ -109,9 +110,9 @@ msgid "Enabled"
 msgstr "Abilitata"
 
 #: ../mdkapplet:187
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Aggiorno il supporto...\n"
+msgstr "Errore nell'aggiornare il supporto"
 
 #: ../mdkapplet:202
 #, c-format
@@ -124,9 +125,9 @@ msgid "Packages are up to date"
 msgstr "I pacchetti sono aggiornati"
 
 #: ../mdkapplet:212
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "impossibile aprire il database rpm"
+msgstr "Impossibile aprire il database urpmi"
 
 #: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
@@ -237,8 +238,7 @@ msgstr "Sto avviando drakconnect\n"
 #: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Sembra che Mandriva Online sia stato reinstallato, ricarico l'applet ..."
+msgstr "Sembra che Mandriva Online sia stato reinstallato, ricarico l'applet ..."
 
 #: ../mdkapplet:383
 #, c-format
@@ -517,8 +517,7 @@ msgstr "Errore"
 #: ../mdkonline:152
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"Il nome della macchina deve contenere solo lettere e numeri, non più di 40"
+msgstr "Il nome della macchina deve contenere solo lettere e numeri, non più di 40"
 
 #: ../mdkonline:155
 #, c-format
@@ -555,7 +554,7 @@ msgstr ""
 "2) la tua configurazione hardware.\n"
 "\n"
 "Se la cosa non ti piace, o se non vuoi usufruire di questo servizio,\n"
-"fai clic su 'Annulla''. Premendo 'Avanti', ci consenti di tenerti informato\n"
+"fai clic su \"Annulla\". Premendo \"Avanti\", ci consenti di tenerti informato\n"
 "su aggiornamenti del software e della sicurezza con email personalizzate.\n"
 "Inoltre, potrai accedere a sconti sul supporto tecnico presso\n"
 "www.mandrivaexpert.com."
@@ -661,8 +660,7 @@ msgstr "Congratulazioni"
 #: ../mdkonline:238
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr ""
-"Il tuo account presso Mandriva Online è stato configurato correttamente\n"
+msgstr "Il tuo account presso Mandriva Online è stato configurato correttamente\n"
 
 #: ../mdkonline:253
 #, c-format
@@ -906,8 +904,7 @@ msgstr ""
 #: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
-"Questo pacchetto non è formattato correttamente. Annullamento in corso."
+msgstr "Questo pacchetto non è formattato correttamente. Annullamento in corso."
 
 #: ../mdkupdate:219
 #, c-format
@@ -919,78 +916,3 @@ msgstr "Installazione dei pacchetti ...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossibile aggiornare i pacchetti dalla sorgente update_source.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- avvia Mandriva Linux Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Impossibile recuperare elenco aggiornamenti : %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Scegli i pacchetti da installare e premi OK"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Il sistema è occupato. Attendi ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Invio della configurazione in corso..."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "File %s non trovato. Devi prima eseguire mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update non è riuscito a contattare il sito, nuovo tentativo."
-
-#~ msgid "Login:"
-#~ msgstr "Nome utente:"
-
-#~ msgid "or"
-#~ msgstr "o"
-
-#~ msgid "wrong password:"
-#~ msgstr "password errata:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Il nome utente o la password sono errati.\n"
-#~ " Dovrai ridigitarli oppure, qualora non ne avessi uno, creare un account "
-#~ "su Mandriva Online.\n"
-#~ " Nel secondo caso, torna al primo passo per collegarti a Mandriva "
-#~ "Online.\n"
-#~ " Ricorda che devi fornire anche un nome per il tuo computer \n"
-#~ " (sono ammessi solo caratteri alfabetici)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Contatto email:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Fornisci un nome utente"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Login e password non devono superare i 12 caratteri\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "I caratteri speciali non sono consentiti\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Email non valida\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Account già esistente\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problema di connessione al server\n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "C'è stato un problema cercando di contattare il server. Contatta il team "
-#~ "di supporto"
