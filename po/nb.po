@@ -8,14 +8,15 @@
 # Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
 # Per Øyvind Karlsen <peroyvind@linux-mandrake.com>, 2005.
 # Per Øyvind Karlsen <pkarlsen@mandriva.com>, 2005, 2006.
+# Per Øyvind Karlsen <peroyvind@mandriva.org>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2006-08-17 03:06+0200\n"
-"Last-Translator: Per Øyvind Karlsen <pkarlsen@mandriva.com>\n"
-"Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.com>\n"
+"PO-Revision-Date: 2007-09-14 16:32+0200\n"
+"Last-Translator: Per Øyvind Karlsen <peroyvind@mandriva.org>\n"
+"Language-Team: Norwegian Bokmål <i18n-no@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,9 +25,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Sjekk etter oppdateringer"
+msgstr "Vil se etter oppdateringer på %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -45,7 +46,7 @@ msgstr ""
 #: ../mdkapplet:115
 #, c-format
 msgid "Please wait, finding available packages..."
-msgstr "Finner tilgjengelige pakker..."
+msgstr "Finner tilgjengelige pakker …"
 
 #: ../mdkapplet:121
 #, c-format
@@ -55,43 +56,40 @@ msgstr "Nye oppdateringer er tilgjengelig for ditt system"
 #: ../mdkapplet:127
 #, c-format
 msgid "New bundles are available for your system"
-msgstr "Nye knipper med programvare er tilgjengelig for ditt system"
+msgstr "Nye programvaresamlinger er tilgjengelig for ditt system"
 
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Tjenesten er ikke konfigurert. Vennligst klikk på \"Konfigurer tjenesten\""
+msgstr "Tjenesten er ikke konfigurert. Velg «Sett opp tjenesten»"
 
 #: ../mdkapplet:139
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Nettverket er nede. Vennligst konfigurerer nettverket ditt"
+msgstr "Nettverket er nede. Vennligst sett opp nettverket ditt"
 
 #: ../mdkapplet:145
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Tjenesten er ikke aktivert. Vennligst klikk på «Online-nettsted»"
+msgstr "\tTjenesten er ikke aktivert. Vennligst klikk på «Online-nettsted»"
 
 #: ../mdkapplet:151 ../mdkapplet:182
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-database låst"
 
 #: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Fant inget medium. Du må legge til medium gjennom «Mediehåndtering»."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -101,9 +99,8 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 "Du har allerede minst et oppdateringsmedium satt opp, men\n"
-"alle av dem er for øyeblikket deaktiverte. Du burde kjøre\n"
-"Programvaremediehåndterer for å aktivere minst en (kryss av for det\n"
-"i Aktivert?-kolonnen).\n"
+"ingen av dem er i bruk. Du burde kjøre\n"
+"medieoppsettsprogrammet  for å aktivere minst et (se i «%s»-kolonnen).\n"
 "\n"
 "Start så %s på nytt."
 
@@ -113,24 +110,24 @@ msgid "Enabled"
 msgstr "Aktivert"
 
 #: ../mdkapplet:187
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Oppdaterer medie...\n"
+msgstr "Feil ved oppdatering av medie"
 
 #: ../mdkapplet:202
 #, c-format
 msgid "Checking... Updates are available\n"
-msgstr "Sjekker... Opdateringer er tilgjengelig\n"
+msgstr "Sjekker … Nye oppdateringer er tilgjengelig\n"
 
 #: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "Alle pakker er oppdaterte"
 
 #: ../mdkapplet:212
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "kunne ikke åpne rpmdb"
+msgstr "Klarte ikke åpne urpmi-database"
 
 #: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
@@ -140,7 +137,7 @@ msgstr "Installer oppdateringer"
 #: ../mdkapplet:218
 #, c-format
 msgid "Configure the service"
-msgstr "Konfigurer tjenesten"
+msgstr "Sett opp tjenesten"
 
 #: ../mdkapplet:219
 #, c-format
@@ -161,22 +158,22 @@ msgstr "Sjekk etter oppdateringer"
 #: ../mdkapplet:223 ../mdkapplet:648
 #, c-format
 msgid "Online WebSite"
-msgstr "Online Nettsted"
+msgstr "Hjemmeside"
 
 #: ../mdkapplet:224
 #, c-format
 msgid "Configure Network"
-msgstr "Konfigurer nettverk"
+msgstr "Sett opp nettverk"
 
 #: ../mdkapplet:225
 #, c-format
 msgid "Configure Now!"
-msgstr "Konfigurer nå!"
+msgstr "Sett opp nå!"
 
 #: ../mdkapplet:313 ../mdkapplet:392
 #, c-format
 msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux Updates-panelprogram"
+msgstr "Panelprogram Mandriva Linux-oppdateringer"
 
 #: ../mdkapplet:322
 #, c-format
@@ -186,7 +183,7 @@ msgstr "Handlinger"
 #: ../mdkapplet:325
 #, c-format
 msgid "Configure"
-msgstr "Konfigurer"
+msgstr "Sett opp"
 
 #: ../mdkapplet:329
 #, c-format
@@ -206,7 +203,7 @@ msgstr "Lukk"
 #: ../mdkapplet:365
 #, c-format
 msgid "Network Connection: "
-msgstr "Nettverkstilkobling"
+msgstr "Nettverkstilkobling: "
 
 #: ../mdkapplet:365
 #, c-format
@@ -221,7 +218,7 @@ msgstr "Nede"
 #: ../mdkapplet:366
 #, c-format
 msgid "Last check: "
-msgstr "Siste sjekk: "
+msgstr "Sist sjekket: "
 
 #: ../mdkapplet:367 ../mdkonline:145
 #, c-format
@@ -241,9 +238,7 @@ msgstr "Starter drakconnect\n"
 #: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online ser ut til å være reinstallert, laster inn panelprogram på "
-"nytt ...."
+msgstr "Mandriva Online ser ut til å være installert på nytt. Starter panelprogrammet på nytt …"
 
 #: ../mdkapplet:383
 #, c-format
@@ -253,7 +248,7 @@ msgstr "Starter MandrivaUpdate\n"
 #: ../mdkapplet:398
 #, c-format
 msgid "Computing new updates...\n"
-msgstr "Sjekker nye oppdateringer...\n"
+msgstr "Gransker nye oppdateringer …\n"
 
 #: ../mdkapplet:399
 #, c-format
@@ -273,7 +268,7 @@ msgstr "Utviklingsversjon er ikke støttet av tjenesten"
 #: ../mdkapplet:476
 #, c-format
 msgid "Too old release not supported by service"
-msgstr "For gammel versjon ikke støttet av tjenesten"
+msgstr "Gamle versjoner er ikke støttet av tjenesten"
 
 #: ../mdkapplet:477
 #, c-format
@@ -283,7 +278,7 @@ msgstr "Ukjent tilstand"
 #: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Onlinetjenester deaktivert. Kontakt Mandriva Online-siden\n"
+msgstr "Tjenesten er avslått. Kontakt Mandriva Online\n"
 
 #: ../mdkapplet:479
 #, c-format
@@ -293,16 +288,14 @@ msgstr "Feil passord.\n"
 #: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
-msgstr "Feil Handling, vert eller brukernavn.\n"
+msgstr "Ugyldig handling, vert eller brukernavn.\n"
 
 #: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
-msgstr ""
-"Noe er galt med ditt nettverksoppsett (sjekk ditt route-, brannmur- eller "
-"proxy-oppsett).\n"
+msgstr "Noe er galt med ditt nettverksoppsett (sjekk oppsett for din ruter, brannmur eller mellomtjener).\n"
 
 #: ../mdkapplet:483
 #, c-format
@@ -314,7 +307,7 @@ msgstr "Et problem oppstod under tilkobling til tjeneren, kontakt brukerstøtte"
 #: ../mdkapplet:487
 #, c-format
 msgid "Response from Mandriva Online server\n"
-msgstr "Respons fra Mandriva Online-tjeneren\n"
+msgstr "Svar fra Mandriva Online-tjeneren\n"
 
 #: ../mdkapplet:490
 #, c-format
@@ -329,7 +322,7 @@ msgstr "Ingen sjekk"
 #: ../mdkapplet:541
 #, c-format
 msgid "Checking config file: Not present\n"
-msgstr "Sjekker konfigurasjonsfil. Ikke til stede\n"
+msgstr "Sjekker konfigurasjonsfil: Mangler\n"
 
 #: ../mdkapplet:544
 #, c-format
@@ -344,12 +337,12 @@ msgstr "Logger"
 #: ../mdkapplet:603
 #, c-format
 msgid "Clear"
-msgstr "Nullstill"
+msgstr "Tøm"
 
 #: ../mdkapplet:629
 #, c-format
 msgid "About..."
-msgstr "Om..."
+msgstr "Om …"
 
 #: ../mdkapplet:631
 #, c-format
@@ -359,12 +352,12 @@ msgstr "Mandriva Online %s"
 #: ../mdkapplet:635
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr "Opphavsrett (C) %s ved Mandriva"
+msgstr "Copyright © %s Mandriva"
 
 #: ../mdkapplet:647
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online gir tilgang til Mandriva netttjenester"
+msgstr "Mandriva Online gir deg tilgang til Mandriva's nettjenester."
 
 #: ../mdkapplet:655
 #, c-format
@@ -388,7 +381,7 @@ msgid ""
 msgstr ""
 "mdonline versjon %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Dette er fri programvare og kan videredistribueres under bestemmelsene til "
+"Dette er fri programvare og kan videredistribueres under vilkårene til "
 "GNU GPL.\n"
 "\n"
 "bruk:\n"
@@ -396,37 +389,37 @@ msgstr ""
 #: ../mdkonline:63 ../mdkupdate:73
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- skriv denne hjelpebeskjeden.\n"
+msgstr "  --help\t\t– vis denne hjelpebeskjeden\n"
 
 #: ../mdkonline:64
 #, c-format
 msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- vertsnavn.\n"
+msgstr "  --box=\t\t\t– Vertsnavn.\n"
 
 #: ../mdkonline:65
 #, c-format
 msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- brukers landsnavn. \n"
+msgstr "  --country\t\t\t– Navnet på landet til brukeren. \n"
 
 #: ../mdkonline:66
 #, c-format
 msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- bruk interaktivt modus.\n"
+msgstr "  --interactive\t\t– Bruk interaktivt modus.\n"
 
 #: ../mdkonline:67
 #, c-format
 msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- bruk det ikke-interaktive moduset.\n"
+msgstr "  --nointeractive\t– Bruk ikke-interaktivt modus.\n"
 
 #: ../mdkonline:68
 #, c-format
 msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - brukers innlogningsnavn.\n"
+msgstr "  --login=\t\t     – Innloggingsnavnet til brukeren.\n"
 
 #: ../mdkonline:69
 #, c-format
 msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- brukers passord.\n"
+msgstr "  --pass=\t\t\t– Passordet til brukeren.\n"
 
 #: ../mdkonline:87 ../mdkonline:120
 #, c-format
@@ -461,7 +454,7 @@ msgstr "Frøken"
 #: ../mdkonline:114
 #, c-format
 msgid "Reading configuration\n"
-msgstr "Leser konfigurasjon\n"
+msgstr "Leser oppsett\n"
 
 #: ../mdkonline:123
 #, c-format
@@ -470,14 +463,14 @@ msgid ""
 "(packages, hardware configuration) to a centralized database in\n"
 "order to keep you informed about security updates and useful upgrades.\n"
 msgstr ""
-"Denne assistenten vil hjelpe deg med å laste opp din konfigurasjon\n"
-"(pakker, maskinvarekonfigurasjon) til en sentral database for å holde\n"
-"deg informert om sikkerhetsoppdatering og verdifulle oppgraderinger\n"
+"Denne assistenten vil hjelpe deg med å laste opp ditt oppsett\n"
+"(pakker, maskinvarekonfigurasjon) til en sentralisert database for å holde\n"
+"deg informert om sikkerhetsoppdateringer og andre nyttgige oppdateringer\n"
 
 #: ../mdkonline:131
 #, c-format
 msgid "Account creation or authentication"
-msgstr "Kontoopprettelse eller -autentisering"
+msgstr "Oppretting eller autentisering av konto"
 
 #: ../mdkonline:136
 #, c-format
@@ -507,7 +500,7 @@ msgstr "Maskinbeskrivelse:"
 #: ../mdkonline:147
 #, c-format
 msgid "(Ex: My Home Office's Computer)"
-msgstr "(Feks: Mitt hjemmekontors maskin)"
+msgstr "(Feks: Min hjemmekontormaskin)"
 
 #: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
 #: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
@@ -519,12 +512,12 @@ msgstr "Feil"
 #: ../mdkonline:152
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Maskinnavn må være et til førti alfanumeriske tegn"
+msgstr "Maskinnavn må være på mellom 1 og 40 bokstaver/tegn"
 
 #: ../mdkonline:155
 #, c-format
 msgid "Connecting to Mandriva Online website..."
-msgstr "Kobler til Mandriva Online-nettsiden..."
+msgstr "Kobler til Mandriva Online-nettsiden …"
 
 #: ../mdkonline:167
 #, c-format
@@ -551,18 +544,14 @@ msgstr ""
 "\n"
 "Veiviseren vil nå sende den følgende informasjonen til Mandriva:\n"
 "\n"
-"1) lista over pakker installert på ditt system,\n"
+"1) liste over pakker installert på ditt system,\n"
 "\n"
-"2) din maskinvarekonfigurasjon.\n"
+"2) ditt maskinvareoppsett.\n"
 "\n"
-"Hvis du føler deg utilpass ved den idéen, eller ikke vil dra nytte av denne "
-"tjenesten,\n"
-"vennligst trykk 'Avbryt'. Ved å presse 'Neste', så tillater du oss å holde "
-"deg informert\n"
-"om sikkerhetsoppdateringer og verdifulle oppgraderinger via personlige "
-"epostvarslinger.\n"
-"Videre så drar du nytte av betalt kundestøttetjenester med rabatter på\n"
-"www.mandrivaexpert.com."
+"Om du ikke ønsker dette, og ikke vil bruk bruke tjenesten, må du velge «Avbryt».\n"
+"Ved å presse «Neste», så tillater du oss å holde deg informert via e-post når det\n"
+"kommer nye sikkerhetsoppdateringer og andre nyttige oppdateringer.\n"
+"Du får òg rabba på kundestøttetjenestene våre på www.mandrivaexpert.com."
 
 #: ../mdkonline:180
 #, c-format
@@ -572,7 +561,7 @@ msgstr "Tilkoblingsproblem"
 #: ../mdkonline:180
 #, c-format
 msgid "Problem occurs when uploading files, please try again"
-msgstr "Problem oppstod under opplasting av filer, vennligst prøv igjen"
+msgstr "Problem oppstod under opplasting av filer. Prøv på nytt."
 
 #: ../mdkonline:187
 #, c-format
@@ -606,23 +595,23 @@ msgid ""
 "The passwords do not match\n"
 " Please try again\n"
 msgstr ""
-"Passordene stemmer ikke overens\n"
-" Vennligst prøv på nytt\n"
+"Passordene stemmer ikke overens.\n"
+"Prøv på nytt\n"
 
 #: ../mdkonline:208
 #, c-format
 msgid "Please fill in each field"
-msgstr "Vennligst fyll ut alle felter"
+msgstr "Fyll ut alle feltene"
 
 #: ../mdkonline:212
 #, c-format
 msgid "Not a valid mail address!\n"
-msgstr "Ikke en gyldig epostadresse!\n"
+msgstr "Ugyldig e-postadresse!\n"
 
 #: ../mdkonline:217
 #, c-format
 msgid "Creating account failed!"
-msgstr "Oppretting av konto mislyktes!"
+msgstr "Klarte ikke opprette konto!"
 
 #: ../mdkonline:225
 #, c-format
@@ -630,22 +619,20 @@ msgid ""
 "Mandriva Online Account successfully created.\n"
 "Please click \"Next\" to authenticate and upload your configuration\n"
 msgstr ""
-"Mandriva Online-konto ble vellykket opprettet.\n"
-"Vennligs klikk «Neste» for å autentisere og laste opp oppsettet ditt\n"
+"Fullført oppretting av Mandriva Online-konto.\n"
+"Trykk «Neste» for å autentisere og laste opp oppsettet ditt\n"
 
 #: ../mdkonline:229
 #, c-format
 msgid "Your upload was successful!"
-msgstr "Din opplasting var vellykket!"
+msgstr "Opplasting vellykket!"
 
 #: ../mdkonline:229
 #, c-format
 msgid ""
 "From now you will receive on security and updates \n"
 "announcements thanks to Mandriva Online."
-msgstr ""
-"Fra nå av vil du motta sikkerhets- og oppdateringsannonseringer \n"
-"takket være Mandriva Online."
+msgstr "Fra nå av vil du motta varsel om sikkerhets- og andre nyttige\n oppdateringer fra Mandriva Online."
 
 #: ../mdkonline:229
 #, c-format
@@ -653,9 +640,8 @@ msgid ""
 "Mandriva Online offers you the ability to automate the updates.\n"
 "A program will run regulary in your system waiting for new updates\n"
 msgstr ""
-"Mandriva Online tilbyr deg muligheten til å automatisere oppdateringene.\n"
-"Et program vil kjøre regelmessig på ditt system i vente på nye "
-"oppdateringer\n"
+"Mandriva Online gjør det mulig å automatisere oppdateringene.\n"
+"Et program vil kjøre regelmessig på ditt system i og sjekker etter nye tilgjengelig oppdateringer.\n"
 
 #: ../mdkonline:238
 #, c-format
@@ -665,17 +651,17 @@ msgstr "Gratulerer"
 #: ../mdkonline:238
 #, c-format
 msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "Din Mandriva Online-konto har blitt vellykket konfigurert\n"
+msgstr "Mandriva Online-kontoen er nå satt opp\n"
 
 #: ../mdkonline:253
 #, c-format
 msgid "Configuration uploaded successfully"
-msgstr "Opplastingen av konfigurasjon var vellykket"
+msgstr "Opplasting av oppsett vellykket"
 
 #: ../mdkonline:254
 #, c-format
 msgid "Problem uploading configuration"
-msgstr "Problem under opplasting av konfigurasjon"
+msgstr "Problem ved opplasting av oppsett"
 
 #: ../mdkonline:256
 #, c-format
@@ -684,7 +670,7 @@ msgid ""
 "firewall bad settings"
 msgstr ""
 "Kan ikke koble til Mandriva Online-nettsiden: feil brukernavn/passord eller "
-"feil innstillinger i router/brannmur."
+"feil innstillinger i ruter/brannmur."
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -707,13 +693,13 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
-"Tjenerdatabase feilet\n"
+"Tjenerdatabase feilet!\n"
 "Prøv igjen senere"
 
 #: ../mdkonline.pm:209
 #, c-format
 msgid "Registration error"
-msgstr "Registrasjonsfeil"
+msgstr "Registreringsfeil"
 
 #: ../mdkonline.pm:209
 #, c-format
@@ -742,12 +728,12 @@ msgid ""
 "Please enter another one\n"
 msgstr ""
 "E-postadressen du oppga er allerede i bruk\n"
-"Velg et annet\n"
+"Velg en annen\n"
 
 #: ../mdkonline.pm:212
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr "E-postadressen du oppga er ugyldig eller nektet"
+msgstr "E-postadressen du oppga er ugyldig eller forbudt"
 
 #: ../mdkonline.pm:213
 #, c-format
@@ -779,7 +765,7 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
-"Mandriva-nettjenester er for øyeblikket ikk tilgjengelige\n"
+"Mandriva-nettjenester er for øyeblikket ikke tilgjengelige\n"
 "Prøv igjen senere"
 
 #: ../mdkonline.pm:216
@@ -828,7 +814,7 @@ msgid ""
 msgstr ""
 "mdkupdate versjon %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Dette er fri programvare og kan videredistribueres under bestemmelsene til "
+"Dette er fri programvare og kan videredistribueres under vilkårene til "
 "GNU GPL.\n"
 "\n"
 "bruk:\n"
@@ -836,31 +822,29 @@ msgstr ""
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto\t\t- Mandriva Update kjørt automatisk.\n"
+msgstr "  --auto\t\t– Mandriva Update kjørt automatisk.\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr "  --mnf\t\t\t- kjør mnf-spesifike script.\n"
+msgstr "  --mnf\t\t\t– Kjør mnf-spesifike script.\n"
 
 #: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --noX\t\t\t- tekstmodusversjon av Mandriva Update.\n"
+msgstr "  --noX\t\t\t– Tekstmodusversjon av Mandriva Update.\n"
 
 #: ../mdkupdate:77
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr "  --debug\t\t\t- logg hva som gjøres\n"
+msgstr "  --debug\t\t\t– Logg hva som blir gjort.\n"
 
 #: ../mdkupdate:78
 #, c-format
 msgid ""
 "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 "file.\n"
-msgstr ""
-"  --bundle fil.bundle\t- les og installer pakke fra .bundle-"
-"metainformasjonsfil.\n"
+msgstr "  --bundle fil.bundle\t– Installer pakke fra en .bundle-metainfofil.\n"
 
 #: ../mdkupdate:118 ../mdkupdate:164
 #, c-format
@@ -873,14 +857,12 @@ msgstr "Advarsel"
 msgid ""
 "You first need to install the system on your harddrive with the 'Live "
 "Install' wizard."
-msgstr ""
-"Du trenger først å installere systemet på din harddisk med 'Live Install'-"
-"veiviseren"
+msgstr "Du trenger først å installere systemet på din harddisk med «Live Install»-veiviseren"
 
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
-msgstr "Forbereder..."
+msgstr "Forbereder …"
 
 #: ../mdkupdate:141
 #, c-format
@@ -889,7 +871,7 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"Klarte ikke å autentisere med programvareknippetjeneren:\n"
+"Klarte ikke å autentisere med programvaresamlingstjeneren:\n"
 "\n"
 "%s"
 
@@ -901,31 +883,22 @@ msgid ""
 "You need to update to a newer version. You can get a new one from http://"
 "start.mandriva.com"
 msgstr ""
-"Denne versjonen av Mandriva Online-klieneten er for gammel. \n"
+"Denne versjonen av Mandriva Online-klienten er for gammel. \n"
 "\n"
-"Du trenger å oppdatere til en nyere versjon. Du kan hente en ny fra http://"
-"start.mandriva.com"
+"Du trenger å oppdatere til en nyere versjon. Du kan hente en ny fra http://start.mandriva.com."
 
 #: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr "Denne programvareknippen er ikke velformatert. Avbryter."
+msgstr "Denne programvaresamlingen er ikke velformatert. Avbryter."
 
 #: ../mdkupdate:219
 #, c-format
 msgid "Installing packages ...\n"
-msgstr "Installerer pakke...\n"
+msgstr "Installerer pakke …\n"
 
 #: ../mdkupdate:231 ../mdkupdate:271
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Kunne ikke oppdatere pakker fra update_source-medium.\n"
+msgstr "Klarte kke oppdatere pakker fra oppdateringsmedium.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- start Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Kan ikke få liste over oppdateringer: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Velg hvilke pakker som skal bli installert og trykk Ok"
