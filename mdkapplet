@@ -262,6 +262,7 @@ $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
 
+run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 Gtk2->main;
 
 ugtk2::exit(0);
