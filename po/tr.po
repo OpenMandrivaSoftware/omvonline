@@ -1,22 +1,24 @@
-# translation of mdkonline-tr.po to Turkish
-# Copyright (C) 2001, 2004 Free Software Foundation, Inc.
+# translation of tr.po to Turkce
+# Copyright (C) 2001, 2004, 2007 Free Software Foundation, Inc.
+#
+#
 # Ömer Fadıl USTA <omer_fad@hotmail.com>, 2002, 2003, 2004.
 # Tuncay YENİAY <tuncayyeniay@mynet.com>, 2002.
 # S. Alp ŞENYER <ssenyer@linux-sevenler.org>, 2004.
-#
-#
+# Taha Özket <taha.ozket@obss.net>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-tr\n"
+"Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2007-09-26 05:05+0300\n"
-"Last-Translator: Ömer Fadıl USTA <omer_fad@hotmail.com>\n"
-"Language-Team: Turkish <ceviri@bilisimlab.com>\n"
+"PO-Revision-Date: 2007-09-27 16:44+0300\n"
+"Last-Translator: Taha Özket <taha.ozket@obss.net>\n"
+"Language-Team: Turkce <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: KBabel 1.11.4\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
@@ -36,7 +38,7 @@ msgid ""
 "support@mandrivaonline.com"
 msgstr ""
 "Herhangi bir sorun için support@manrakeonline.net adresine posta "
-"gönderebilirsiniz\n "
+"gönderebilirsiniz"
 
 #: ../mdkapplet:115
 #, c-format
@@ -80,8 +82,7 @@ msgstr "Sürüm Desteklenmiyor (Çok eski ta da deneme sürümü)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Yazılım ortamı bulunamadı. Yazılım ortam yöneticisinden geçerli bir yazılım ortamı ekleyin."
 
 #: ../mdkapplet:169
@@ -94,12 +95,6 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
-"Zaten en az bir tane yapılandırılmış güncelleme ortamınız var, fakat şu\n"
-"anda hiçbiri aktif değil. Yazılım Kaynak Yöneticisini çalıştırmalı ve "
-"bunlardan\n"
-"en az birini aktif yapmalısınız(Etkin kutucuğuna bakın)\n"
-"\n"
-"Sonra %s'yi tekrar çalıştırın. "
 
 #: ../mdkapplet:174
 #, c-format
@@ -240,7 +235,7 @@ msgstr "Mandriva online yenilenmiş gözüküyor. Applet yeniden yükleniyor."
 #: ../mdkapplet:383
 #, c-format
 msgid "Launching MandrivaUpdate\n"
-msgstr "Mandriva Update Başlatılıyor."
+msgstr "Mandriva Update Başlatılıyor.\n"
 
 #: ../mdkapplet:398
 #, c-format
@@ -275,7 +270,7 @@ msgstr "Bilinmeyen durum"
 #: ../mdkapplet:478
 #, c-format
 msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Çevrimiçi servisler etkisiz. Mandriva Online ile ilişki kurun."
+msgstr "Çevrimiçi servisler etkisiz. Mandriva Online ile ilişki kurun.\n"
 
 #: ../mdkapplet:479
 #, c-format
@@ -285,14 +280,14 @@ msgstr "Yanlış parola.\n"
 #: ../mdkapplet:480
 #, c-format
 msgid "Wrong Action or host or login.\n"
-msgstr "Yanlış Eylem, sunucu, giriş."
+msgstr "Yanlış Eylem, sunucu, giriş.\n"
 
 #: ../mdkapplet:481
 #, c-format
 msgid ""
 "Something is wrong with your network settings (check your route, firewall or "
 "proxy settings)\n"
-msgstr "Ağ ayarlarınızda sorun var. Lütfen ağ ayarlarınızın doğruluğunu bir daha denetleyin."
+msgstr "Ağ ayarlarınızda sorun var. Lütfen ağ ayarlarınızın doğruluğunu bir daha denetleyin.\n"
 
 #: ../mdkapplet:483
 #, c-format
@@ -599,7 +594,7 @@ msgstr ""
 #: ../mdkonline:208
 #, c-format
 msgid "Please fill in each field"
-msgstr "Lütfen tüm alanları doldurun\n"
+msgstr "Lütfen tüm alanları doldurun"
 
 #: ../mdkonline:212
 #, c-format
@@ -662,7 +657,7 @@ msgstr "Göndermeniz tamamlanmıştır!"
 #: ../mdkonline:254
 #, c-format
 msgid "Problem uploading configuration"
-msgstr "Yapılandırmanız okuma hatası \n"
+msgstr "Yapılandırmanız okuma hatası"
 
 #: ../mdkonline:256
 #, c-format
@@ -752,7 +747,7 @@ msgstr "Veritabanı Sunucusuna erişim yasaklı"
 #: ../mdkonline.pm:215 ../mdkonline.pm:217
 #, c-format
 msgid "Service error"
-msgstr "Servis hatası\n"
+msgstr "Servis hatası"
 
 #: ../mdkonline.pm:215
 #, c-format
@@ -771,7 +766,8 @@ msgstr "Parolalar uyuşmuyor."
 msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
-msgstr "Mandriva web servisleri şu an için bakımda. "
+msgstr ""
+"Mandriva web servisleri şu an için bakımda. "
 "Daha sonra lütfen tekrar deneyiniz."
 
 #: ../mdkonline.pm:218
@@ -888,66 +884,3 @@ msgstr "Paketler kuruluyor...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source medyasından paketler güncellenemiyor.\n"
 
-#, fuzzy
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr " --update\t\t- Mandriva Linux Update'yi çalıştır.\n"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Sistem meşgül. Lütfen bekleyin ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Yapılandırma gönderiliyor..."
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update sitesine bağlantı sağlanamadı, sonra tekrar deneyeceğiz."
-
-#~ msgid "Login:"
-#~ msgstr "Giriş:"
-
-#~ msgid "or"
-#~ msgstr "veya"
-
-#~ msgid "wrong password:"
-#~ msgstr "yanlış parola:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Kullanıcıadı veya parolanız yanlış.\n"
-#~ " Parolanızı kontrollü şekilde tekrar girin, veya Mandriva Online 'dan bir "
-#~ "yeni hesap açtırın.\n"
-#~ " O halde Şimdi Geri tuşuna basın ve Mandriva Online a bağlanmak için\n"
-#~ "talimatları izleyin!. \n"
-#~ " Bir Makine adı tanımladığınıza emin olun. \n"
-#~ " ( sadece karakter bazlı makine adları geçerlidir)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Posta bağlantısı:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Lütfen bir kullanıcı adı edinin"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Kullanıcı adı ve şifre 12 karakterden küçük olmalıdır\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Özel karakterler kullanılamaz\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Geçersiz EPosta\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Böyle bir hesap zaten var\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Sunucuya bağlanırken hata oluştu\n"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "mdkupdate medyasından paketler güncellenemiyor.\n"
