@@ -74,10 +74,6 @@ my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 $config{FIRST_CHECK_DELAY} ||= 25 * 1000; # default to 25 seconds
 
-sub my_sprintf_fixutf8 {
-    mdkonline::get_release() < 2006.0 ? common::sprintf_fixutf8(@_) : @_;
-}
-
 
 my $insensitive_while_running_a_child;
 
@@ -367,7 +363,7 @@ sub refresh_contents {
     my $contents = [ [ N("Network Connection: "), $color->{second} ], [ isNetwork() ? N("Up") . "\n" : N("Down") . "\n", isNetwork() ? $color->{third} : $color->{first} ],
 		     [ N("Last check: "), $color->{second} ], [ "$last\n", $fixed_tag ],
 		     [ N("Machine name:"), $color->{second} ], [ $h{HOST_NAME} . "\n", $fixed_tag ],
-		     [ N("Updates: "), $color->{second} ], [ my_sprintf_fixutf8($state{$status}{tt}[0]), $status eq 'okay' ? $color->{third} : $color->{first} ],
+		     [ N("Updates: "), $color->{second} ], [ $state{$status}{tt}[0], $status eq 'okay' ? $color->{third} : $color->{first} ],
 		   ];
     $contents;
 }
@@ -621,7 +617,7 @@ sub setState {
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $img->set_from_pixbuf($tmp);
-    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(my_sprintf_fixutf8(translate($state{$state_type}{tt}[0]))));
+    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(translate($state{$state_type}{tt}[0])));
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
