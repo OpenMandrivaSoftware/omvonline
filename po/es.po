@@ -1,9 +1,7 @@
-# translation of mdkonline-es.po to Español
 # translation of es.po to Español
-# translation of Mandriva Online1-es.po to español
-# translation of Mandriva Online-es.po to español
 # spanish translation of Madrake Online (Mandriva Online-es.po).
 # Copyright (C) 2001 Mandriva S.A.
+#
 # Juan Manuel García Molina <juanma_gm@wanadoo.es>, 2001-2002.
 # lis c <liscortes@mi.madritel.es>, 2004.
 # Fabian Mandelbaum <fabman@mandrakesoft.com>, 2004.
@@ -11,26 +9,26 @@
 # Carlos L Pineda <clpinedac@hotmail.com>, 2004.
 # Jaime Crespo <505201@unizar.es>, 2004.
 # Pablo Saratxaga <pablo@mandriva.com>, 2005.
-#
+# Fabián Mandelbaum <fmandelbaum@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-es\n"
+"Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2004-11-07 20:42+0100\n"
-"Last-Translator: Jaime Crespo <505201@unizar.es>\n"
+"PO-Revision-Date: 2007-10-02 14:42-0300\n"
+"Last-Translator: Fabián Mandelbaum <fmandelbaum@gmail.com>\n"
 "Language-Team: Español <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Verificar actualizaciones"
+msgstr "Verificar actualizaciones a las %s"
 
 #: ../mdkapplet:103
 #, c-format
@@ -64,8 +62,7 @@ msgstr "Hay nuevos conjuntos de paquetes disponibles para su sistema"
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"El servicio no está configurado. Haga clic sobre \"Configurar el servicio\""
+msgstr "El servicio no está configurado. Haga clic sobre \"Configurar el servicio\""
 
 #: ../mdkapplet:139
 #, c-format
@@ -89,14 +86,13 @@ msgstr "Versión no soportada (muy antigua o versión de desarrollo)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "No se encontró ningún soporte. Debe añadir uno con el \"Administrador de "
 "soportes de software\"."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -108,9 +104,11 @@ msgstr ""
 "Ya tiene configurado al menos un soporte de actualizaciones, pero\n"
 "todos están deshabilitados en este momento. Debería ejecutar el\n"
 "Administrador de Soportes de Software para habilitar al menos uno\n"
-"(márquelo en la columna ¿Habilitado?)\n"
+"(márquelo en la columna "
+"\"%s\"\n"
+").\n"
 "\n"
-"Luego, vuelva a iniciar %s. "
+"Luego, vuelva a iniciar \"%s\"."
 
 #: ../mdkapplet:174
 #, c-format
@@ -246,8 +244,7 @@ msgstr "Lanzando drakconnect\n"
 #: ../mdkapplet:375
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online parece haber sido reinstalado, volviendo a cargar applet..."
+msgstr "Mandriva Online parece haber sido reinstalado, volviendo a cargar applet..."
 
 #: ../mdkapplet:383
 #, c-format
@@ -527,8 +524,7 @@ msgstr "Error"
 #: ../mdkonline:152
 #, c-format
 msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr ""
-"El nombre de máquina puede sólo contener de 1 a 40 caracteres alfanuméricos"
+msgstr "El nombre de máquina puede sólo contener de 1 a 40 caracteres alfanuméricos"
 
 #: ../mdkonline:155
 #, c-format
@@ -930,91 +926,3 @@ msgstr "Instalando paquetes...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Incapaz de actualizar paquetes desde el soporte update_source.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- lanzar Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "No se pudo obtener la lista de actualizaciones: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Elija qué paquetes deben ser instalados y pulse Aceptar"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "El sistema está ocupado. Espere ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Enviando configuración..."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "No se encontró el archivo %s. Ejecute primero el asistente mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update no pudo contactar con el sitio, se intentará de nuevo."
-
-#~ msgid "Login:"
-#~ msgstr "Usuario:"
-
-#~ msgid "or"
-#~ msgstr "o"
-
-#~ msgid "wrong password:"
-#~ msgstr "Contraseña incorrecta:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Su nombre de usuario no era correcto.\n"
-#~ " Tendrá que volverlo a escribir, o necesitará crear una cuenta en "
-#~ "Mandriva Online.\n"
-#~ " En el último caso, vaya hasta el primer paso para conectarse a Mandriva "
-#~ "Online.\n"
-#~ " Tenga presente que también debe proporcionar un nombre de Máquina \n"
-#~ " (sólo se admiten caracteres alfabéticos)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Correo de contacto:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Por favor, proporcione un login"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr ""
-#~ "El nombre de usuario y la contraseña deberían tener menos de 12 "
-#~ "caracteres\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "No se permiten caracteres especiales\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Correo electrónico no válido\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "La cuenta ya existe\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Problema conectando al servidor \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Un problema ocurrió durante la conexión con el servidor, por favor, "
-#~ "póngase en contacto con el equipo de apoyo"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Incapaz de actualizar paquetes desde el soporte mdkupdate.\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "Mandriva Update no pudo enviar los archivos diff. Envíe un correo a "
-#~ "support [at] mandrivaonline [dot] net"
