@@ -618,6 +618,12 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $img->set_from_pixbuf($tmp);
     gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(translate($state{$state_type}{tt}[0])));
+
+    my $bubble = Gtk2::NotificationBubble->new;
+    $bubble->attach($icon);
+    $bubble->set(N("Warning"), undef, formatAlaTeX(translate($state{$state_type}{tt}[0])));
+    $bubble->show(5000);
+
     my $menu = Gtk2::Menu->new;
     foreach (@$arr) { 
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
