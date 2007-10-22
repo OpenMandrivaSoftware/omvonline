@@ -213,10 +213,7 @@ my %comm_codes = (
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'configureApplet' => { name => N("Configure the service"), launch => sub { configure() } },
-	       'check' => { name => N("Check Updates"), launch => sub { 
-				my $_w = $in->wait_message(N("Please wait"), N("Check updates") . '...');
-				checkUpdates();
-                } },
+	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
 	       'weblink' => { name => N("Online WebSite"), launch => sub { mdkonline::get_site($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'register' => { name => N("Configure Now!"), launch => sub { configure() } }
