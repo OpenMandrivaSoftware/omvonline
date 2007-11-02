@@ -287,11 +287,13 @@ sub harvester {
     Glib::Timeout->add(200, sub { silentCheck(); 0 }) if $mdvupdate_returned;
     return @pids;
 }
+
 sub fork_exec {
     my $pid = run_program::raw({ detach => 1 }, @_);
     refresh_gui(1);                                                                        
     return $pid;
 }
+
 sub refresh_gui {
     my ($sens) = @_;
     #!$conf_launched and silentCheck(); $conf_launched = 0;
@@ -338,15 +340,18 @@ sub showMainWindow() {
     $w->show_all;
     gtkflush();
 }
+
 sub setLabel {
     my ($widget, $string) = shift;
     $widget->set_label($string) if defined $widget;
     gtkflush();
 }
+
 sub refresh_status {
     my $status = shift;
     gtktext_insert($textvw, refresh_contents($status));
 }
+
 sub refresh_contents {
     my $status = shift;
     my $color = {};
@@ -364,6 +369,7 @@ sub refresh_contents {
 		   ];
     $contents;
 }
+
 sub configNetwork() { logIt(N_("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
@@ -386,6 +392,7 @@ sub installUpdates() {
     my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
     if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
+
 sub silentCheck() {
     return if $mdv_update_pid || $checker_pid;
     my %h = getVarsFromSh($conffile); 
@@ -483,7 +490,9 @@ sub silentCheck() {
 	logIt(N_("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
     }
 }
+
 sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
+
 sub compareWithInstalled {
     my ($name, $ver, $rel, $t) = @_;
     my $isUpdate = 0;
@@ -500,6 +509,7 @@ sub compareWithInstalled {
     }
     $isUpdate;
 }
+
 sub setup_cyclic_check() {
     Glib::Timeout->add(10*1000, sub {
 	checkConfig();
@@ -516,21 +526,25 @@ sub setup_cyclic_check() {
 				      1;
 				  });
 }
+
 sub lastCheck() {
     my %h = getVarsFromSh($localfile);
     my $t = $h{LASTCHECK};
     $t =~ s/_/  /g;
     $t || N("No check");
 }
+
 sub getTime() {
     my $d = localtime();
     $d =~ s/\s+/_/g;
     $d;
 }
+
 sub setLastTime() {
     my $date = getTime();
     setVar($localfile, 'LASTCHECK', $date);
 }
+
 sub checkConfig() {
     if (!-e $conffile) {
 	my $logged if 0;
@@ -543,9 +557,11 @@ sub checkConfig() {
 	silentCheck(); #- state has changed, update
     }
 }
+
 sub checkUpdates() {
     member($state_global, qw(disconnected noconfig)) or silentCheck();
 }
+
 sub go2State {
     my $state = shift;
     $menu->destroy if $menu;
@@ -553,6 +569,7 @@ sub go2State {
     $state_global = $state;
     defined $textvw and refresh_status($state);
 }
+
 sub isNetwork() {
     my $network;
     if ($release <= 10.0) {
@@ -574,11 +591,13 @@ sub isNetwork() {
     }
     $network;
 }
+
 sub configure() {
     refresh_gui(0);
     fork_exec("/usr/sbin/mdkonline");
     $conf_launched = 1;
 }
+
 sub displayLogs() {
     my $w = ugtk2->new(N("Logs"), center => 1);
     gtkset_size_request($w->{window}, 500, 400);
@@ -604,11 +623,13 @@ sub displayLogs() {
 				)));
     $w;
 }
+
 sub shouldStart() {
     my %p = getVarsFromSh($localfile);
     my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
     $ret;
 }
+
 sub setState {
     my $state_type = shift;
     my $checkme;
@@ -655,6 +676,7 @@ sub setState {
     $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu;
+
 }
 sub logIt {
     my $log = shift;
@@ -663,12 +685,14 @@ sub logIt {
     if (defined $wlog) { $buffer->insert_at_cursor($log) }
     log::explanations($log);
 }
+
 sub setVar {
     my ($file, $var, $st) = @_;
     my %s = getVarsFromSh($file);
     $s{$var} = $st;
     setVarsInSh($file, \%s);
 }
+
 sub setAutoStart {
     my $state = shift;
     my $date = getTime();
@@ -680,6 +704,7 @@ LASTCHECK=$date
 );
 	 }
 }
+
 sub mainQuit() {
 #    setAutoStart('FALSE');
     Glib::Source->remove($timeout) if $timeout;
