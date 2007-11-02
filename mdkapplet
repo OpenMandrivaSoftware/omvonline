@@ -407,6 +407,7 @@ sub silentCheck() {
             if (defined $checker_pid) {
                 return if $checker_pid; # parent
 
+                run_program::raw({ detach => 1 }, 'renice', '7', $$);
                 # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
                 my $_safe = before_leaving { POSIX::_exit(0) };
                 my $exit = sub {
