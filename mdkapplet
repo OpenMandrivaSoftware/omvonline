@@ -58,12 +58,9 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "https://www.mandrivaonline.com/";
-my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $textview, $wlog, $textvw, $state_global, $MW_vbox);
-my ($raisedwindow, $debug, $conf_launched) = (0, 0, 0);
-my $applet_window;
+my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $wlog, $state_global);
+my ($debug) = (0);
 
-
-my $conffile = '/etc/sysconfig/mdkonline';
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
 
@@ -292,74 +289,7 @@ sub refresh_gui {
     my $w = $::main_window ? $::main_window->window : undef;
     $insensitive_while_running_a_child = !$sens;
     $sens ? gtkset_mousecursor_normal($w) : gtkset_mousecursor_wait($w);
-    $MW_vbox and $MW_vbox->set_sensitive($sens);
     gtkflush();
-}
-
-sub showMainWindow() {
-    my $w = $applet_window = Gtk2::Window->new('toplevel');
-    $::main_window = $w;
-    $w->set_title(N("Mandriva Linux Updates Applet"));
-    $w->signal_connect(delete_event => sub { $w->destroy; $raisedwindow = 0 });
-    gtkset_size_request($w, 400, 300);
-    $w->set_position('center');
-    $w->set_icon(Gtk2::Gdk::Pixbuf->new_from_file('/usr/share/icons/mini/mdkonline.png'));
-    $textvw = Gtk2::TextView->new;
-    $textvw->set_wrap_mode('word');
-    gtkadd($w,
-           gtkpack_($MW_vbox = Gtk2::VBox->new(0, 5),
-		    0, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Actions")), 'etched_in'),
-			      gtkpack_(Gtk2::VBox->new(0, 3),
-				       1, gtksignal_connect(Gtk2::Button->new(N("Install updates")), clicked => sub { installUpdates() }),
-				       1, gtksignal_connect(Gtk2::Button->new(N("Configure")), clicked => sub { configure() }),
-				       1, gtksignal_connect(Gtk2::Button->new(N("Check updates")), clicked => sub {
-								my $w = $in->wait_message(N("Please wait"), N("Check updates") . '...');
-								checkUpdates(); undef $w }),
-				       1, gtksignal_connect(Gtk2::Button->new(N("See logs")), clicked => sub { if (defined $wlog) { $wlog->{window}->show } else { $wlog = displayLogs(); $wlog->main } }),
-				      )
-			     ),
-		    1, gtkadd(gtkset_shadow_type(Gtk2::Frame->new(N("Status")), 'etched_in'),
-			    gtkpack_(Gtk2::VBox->new(0, 3),
-				 1, create_scrolled_window(gtktext_insert($textvw, refresh_contents($state_global))))),
-		    0, gtkpack(Gtk2::HSeparator->new),
-		    0, gtkpack(gtksignal_connect(Gtk2::Button->new(N("Close")), clicked => sub {
-						     if (defined $wlog) { $wlog->destroy; undef $wlog }
-						     $w->destroy; $raisedwindow = 0;
-						 })
-			      )
-		   )
-	  );
-    $w->show_all;
-    gtkflush();
-}
-
-sub setLabel {
-    my ($widget, $string) = shift;
-    $widget->set_label($string) if defined $widget;
-    gtkflush();
-}
-
-sub refresh_status {
-    my $status = shift;
-    gtktext_insert($textvw, refresh_contents($status));
-}
-
-sub refresh_contents {
-    my $status = shift;
-    my $color = {};
-    my %h = getVarsFromSh($conffile); 
-    foreach my $l (['first', 'red'], ['second', 'royalblue3'], ['third', 'green']) { 
-	$color->{$l->[0]} = { 'foreground' => $l->[1], 'weight' => Gtk2::Pango->PANGO_WEIGHT_BOLD };
-    }
-    my $fixed_tag = { 'font' => 'monospace' };
-    setLastTime();
-    my $last = lastCheck();
-    my $contents = [ [ N("Network Connection: "), $color->{second} ], [ isNetwork() ? N("Up") . "\n" : N("Down") . "\n", isNetwork() ? $color->{third} : $color->{first} ],
-		     [ N("Last check: "), $color->{second} ], [ "$last\n", $fixed_tag ],
-		     [ N("Machine name:"), $color->{second} ], [ $h{HOST_NAME} . "\n", $fixed_tag ],
-		     [ N("Updates: "), $color->{second} ], [ $state{$status}{tt}[0], $status eq 'okay' ? $color->{third} : $color->{first} ],
-		   ];
-    $contents;
 }
 
 sub configNetwork() { logIt(N_("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
@@ -387,21 +317,15 @@ sub installUpdates() {
 
 sub silentCheck() {
     return if $mdv_update_pid || $checker_pid;
-    my %h = getVarsFromSh($conffile); 
-    my $u;
     logIt(N_("Computing new updates...\n"));
     logIt(N_("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
     gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
-    my $response = eval { mdkonline::soap_is_new_update_for_distro($h{HOST_ID}, $h{HOST_KEY}) };
-    $response = { code => 0, data => { isUpdateAvailable => 1 } };
-    my $status_err = mdkonline::check_server_response($response);
-    if ($status_err eq 'OK') {
+
         # are there any updates ?
-        my $data = $response->{data};
-        if ($data && $data->{isUpdateAvailable}) {
+
             $checker_pid = fork();
             if (defined $checker_pid) {
                 return if $checker_pid; # parent
@@ -458,49 +382,10 @@ sub silentCheck() {
                 logIt("cannot fork: %s", "update checker ($!)");
                 go2State('critical');
             }
-        } else {
-            logIt(N_("An error occurred"));
-        }
-    } else {
-    #   99 - log or host or action or pass empty, wrong action
-    #   98 - wrong pass
-    #   97 - host not active
-    logIt("Returned value after association (silentCheck)= $u\n") if $debug;
-    my $retcode = {
-		   94 => sub { logIt(N_("Development release not supported by service")); go2State('notsupported') },
-		   95 => sub { logIt(N_("Too old release not supported by service")); go2State('notsupported') },
-		   96 => sub { logIt(N_("Unknown state")); go2State('critical') },
-		   97 => sub { logIt(N_("Online services disabled. Contact Mandriva Online site\n")); go2State('disabled') },
-		   98 => sub { logIt(N_("Wrong Password.\n")); go2State('critical') },
-		   99 => sub { logIt(N_("Wrong Action or host or login.\n")); go2State('critical') },
-                   500 => sub { logIt(N_("Something is wrong with your network settings (check your route, firewall or proxy settings)\n")); go2State('critical') }
-		  };
-    eval { $retcode->{$response->{code}}->() }; if ($@) { logIt(N_("Problem occured while connecting to the server, please contact the support team")); go2State('critical') }
-    }
-    if ($debug) {
-     require Data::Dumper;
-	logIt(N_("Response from Mandriva Online server\n") . Data::Dumper->Dumper($response));
-    }
 }
 
 sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
 
-sub compareWithInstalled {
-    my ($name, $ver, $rel, $t) = @_;
-    my $isUpdate = 0;
-    foreach my $p (@$t) { 
-	my ($n, $v, $r) = $p =~ /(.*)-(.*)-(.*)$/;
-	if ($name eq $n) {
-	    my ($iu, $ir);
-	    if ($debug) { $iu = mdkonline::rpm_ver_cmp($ver, $v); $ir = mdkonline::rpm_ver_cmp($rel, $r) } 
-	    if (mdkonline::rpm_ver_cmp($ver, $v) > 0 || mdkonline::rpm_ver_cmp($ver, $v) == 0 && mdkonline::rpm_ver_cmp($rel, $r) > 0) {
-		logIt("$name-$ver-$rel $n-$v-$r *** CMPVER=$iu ** CMPREL = $ir \n") if $debug;
-		$isUpdate = 1 and last;
-	    }
-	}
-    }
-    $isUpdate;
-}
 
 sub setup_cyclic_check() {
     Glib::Timeout->add(10*1000, sub {
@@ -519,13 +404,6 @@ sub setup_cyclic_check() {
 				  });
 }
 
-sub lastCheck() {
-    my %h = getVarsFromSh($localfile);
-    my $t = $h{LASTCHECK};
-    $t =~ s/_/  /g;
-    $t || N("No check");
-}
-
 sub getTime() {
     my $d = localtime();
     $d =~ s/\s+/_/g;
@@ -538,11 +416,7 @@ sub setLastTime() {
 }
 
 sub checkConfig() {
-    if (!-e $conffile) {
-	my $logged if 0;
-	logIt(N_("Checking config file: Not present\n")) if !$logged;
-	$logged = 1;
-    } elsif (!isNetwork()) {
+    if (!isNetwork()) {
 	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
     } elsif (member($state_global, qw(disconnected))) {
@@ -559,7 +433,6 @@ sub go2State {
     $menu->destroy if $menu;
     $menu = setState($state);
     $state_global = $state;
-    defined $textvw and refresh_status($state);
 }
 
 sub isNetwork() {
@@ -582,38 +455,6 @@ sub isNetwork() {
 	$network = to_bool($gw_address);
     }
     $network;
-}
-
-sub configure() {
-    refresh_gui(0);
-    fork_exec("/usr/sbin/mdkonline");
-    $conf_launched = 1;
-}
-
-sub displayLogs() {
-    my $w = ugtk2->new(N("Logs"), center => 1);
-    gtkset_size_request($w->{window}, 500, 400);
-    $w->{window}->signal_connect(delete_event => sub { $w->destroy; undef $wlog });
-    $textview = Gtk2::TextView->new;
-    $buffer = $textview->get_buffer;
-    gtkadd($w->{window},
-	   gtkpack_(Gtk2::VBox->new(0, 2),
-		    1, create_scrolled_window(gtktext_insert($textview, $mLog)),
-		    0, Gtk2::HSeparator->new,
-		    0,  gtkpack_(Gtk2::HBox->new(0, 5),
-				 0, gtksignal_connect(Gtk2::Button->new(N("Close")), 
-						      clicked => sub { 
-							  $w->destroy;
-							  undef $wlog;
-						      }),
-				 1, Gtk2::Label->new(""),
-				 0, gtksignal_connect(Gtk2::Button->new(N("Clear")),
-						      clicked => sub {
-							  $mLog = '';
-							  $buffer->set_text($mLog);
-						      }),
-				)));
-    $w;
 }
 
 sub shouldStart() {
