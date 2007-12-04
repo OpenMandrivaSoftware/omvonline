@@ -329,7 +329,6 @@ sub silentCheck() {
             if (defined $checker_pid) {
                 return if $checker_pid; # parent
 
-                run_program::raw({ detach => 1 }, 'renice', '7', $$);
                 # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
                 my $_safe = before_leaving { POSIX::_exit(0) };
                 my $exit = sub {
@@ -351,7 +350,7 @@ sub silentCheck() {
                 }
                 $exit->('locked') if $will_not_update_media;
 
-                if (my $res = !run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
+                if (my $res = !run_program::raw({ sensitive_arguments => 1 }, 'renice', '7', 'urpmi.update', '--update')) {
                     $exit->('error_updating') if $will_not_update_media;
                 }
 
