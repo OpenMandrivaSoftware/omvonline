@@ -82,7 +82,7 @@ my %state = (
 	     delayed => {
 		      colour => [ 'busy' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
 		      tt => [
                     #-PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
                     N("Will check updates at %s", POSIX::strftime("%T", localtime(time() + $config{FIRST_CHECK_DELAY}/1000)))
@@ -93,13 +93,13 @@ my %state = (
 	     okay => {
 		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
 		      tt => [ N_("Your system is up-to-date") ]
 		     },
  	     critical => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
 		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.com") ]
 		     },
 	     busy => {
@@ -111,13 +111,13 @@ my %state = (
 	     updates => {
 		      colour => [ 'error' ],
 		      changes => [ 'okay' ],
-		      menu => [ 'update', 'check', 'weblink' ],
+		      menu => [ 'update', 'check' ],
 		      tt => [ N_("New updates are available for your system") ]
 		     },
 	     bundles => {
 		      colour => [ 'bundle' ],
 		      changes => [ 'okay' ],
-		      menu => [ 'update', 'check', 'weblink' ],
+		      menu => [ 'update', 'check' ],
 		      tt => [ N_("New bundles are available for your system") ]
 		      },
 	     disconnected => {
@@ -129,31 +129,31 @@ my %state = (
 	     disabled => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
-		      menu => [ 'weblink' ],
+		      menu => [ ],
 		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 		     },
           locked => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
                 tt => [ N_("urpmi database locked") ],
           },
 	     notsupported => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
-		      menu => [ 'weblink' ],
+		      menu => [  ],
 		      tt => [ N_("Release not supported (too old release, or development release)") ]
 		     },
           no_update_medium => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
                 tt => [ N_("No medium found. You must add some media through 'Software Media Manager'.") ],
           },
           no_enabled_medium => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
-		      menu => [ 'check', 'weblink' ],
+		      menu => [ 'check' ],
                 tt => [ N("You already have at least one update medium configured, but
 all of them are currently disabled. You should run the Software
 Media Manager to enable at least one (check it in the \"%s\"
@@ -204,7 +204,6 @@ my %comm_codes = (
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
-	       'weblink' => { name => N("Online WebSite"), launch => sub { mdkonline::get_site($online_site, 'info.php') } },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	      );
 
