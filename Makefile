@@ -33,7 +33,6 @@ clean:
 install: all
 	$(MAKE) -C po $@
 	install -d $(PREFIX)/usr/{sbin,bin,share/{mime/packages,$(NAME)/pixmaps,autostart,gnome/autostart,icons/{mini,large}},lib/libDrakX/drakfirsttime}
-	install -m755 $(NAME) $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
 	install -m755 migrate-mdvonline-applet.pl $(SBINDIR)
