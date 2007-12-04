@@ -57,7 +57,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
-my $online_site = "https://www.mandrivaonline.com/";
+my $online_site = "http://www.mandrivalinux.com/";
 my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $wlog, $state_global);
 my ($debug) = (0);
 
