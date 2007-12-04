@@ -59,7 +59,6 @@ my $in = interactive->vnew('');
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
 my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $wlog, $state_global);
-my ($debug) = (0);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -227,7 +226,6 @@ $eventbox->signal_connect(button_press_event => sub {
 			  });
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
-if ($opt eq '--debug') { $debug = 1 }
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
