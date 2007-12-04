@@ -21,7 +21,7 @@ localedir = $(PREFIX)/usr/share/locale
 
 override CFLAGS += -DPACKAGE=\"$(NAME)\" -DLOCALEDIR=\"$(localedir)\"
 
-all: mdkonline
+all:
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 clean:
