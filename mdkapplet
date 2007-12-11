@@ -68,7 +68,7 @@ my $release = mdkonline::get_release();
 
 my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
-$config{FIRST_CHECK_DELAY} ||= 25 * 1000; # default to 25 seconds
+$config{FIRST_CHECK_DELAY} ||= 60 * 1000; # default to 60 seconds
 
 
 my $insensitive_while_running_a_child;
