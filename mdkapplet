@@ -406,28 +406,6 @@ sub go2State {
     $state_global = $state;
 }
 
-sub isNetwork() {
-    my $network;
-    if ($release <= 10.0) {
-	$network = gethostbyname("mandrivaonline.com") ? 1 : 0;
-    } elsif ($release <= 10.2) {
-	require network::netconnect;
- 	require network::tools;
-	my ($netcnx, $netc, $intf) = ({}, {}, {});
-    	network::netconnect::read_net_conf($netcnx, $netc, $intf);
-	my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($netc, $intf);
-	$network = to_bool($gw_address);
-    } else {
-	require network::network;
-	require network::tools;
-	my $net = {};
-    	network::network::read_net_conf($net);
-	my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($net);
-	$network = to_bool($gw_address);
-    }
-    $network;
-}
-
 sub shouldStart() {
     my %p = getVarsFromSh($localfile);
     my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
