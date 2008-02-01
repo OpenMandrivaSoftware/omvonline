@@ -420,7 +420,7 @@ sub setState {
     $img->set_from_pixbuf($tmp);
     gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(translate($state{$state_type}{tt}[0])));
 
-    if ($state{$state_type}{tt}[0]) {
+    if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::TrayIcon')) {
         my $bubble = Gtk2::NotificationBubble->new;
         $bubble->attach($icon);
         $bubble->set(N("Warning"), undef, formatAlaTeX(translate($state{$state_type}{tt}[0])));
