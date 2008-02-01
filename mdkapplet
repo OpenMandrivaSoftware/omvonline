@@ -100,6 +100,7 @@ my %state = (
 		      colour => [ 'busy' ], 
 		      changes => [ 'okay', 'critical', 'error' ],
 		      menu => [],
+ 		      do_not_use_bubble => 1,
 		      tt => [ N_("Please wait, finding available packages...") ]
 		     },
 	     updates => {
