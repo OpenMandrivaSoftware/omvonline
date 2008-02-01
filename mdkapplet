@@ -368,9 +368,11 @@ sub silentCheck() {
                 }
 
                 if (my $db = urpm::db_open_or_die($urpm)) {
-                    my $h = $urpm->request_packages_to_upgrade($db, {}, {});
-                    
-                    if (my @_pkgs = grep { !$_->flag_skip } map { $urpm->{depslist}[$_] } keys %$h) { # FIXME: log first found pkgs?
+                    my $requested = {};
+                    my $state = {};
+                    my $h = $urpm->request_packages_to_upgrade($db, $state, $requested);
+                    my @requested_strict = $urpm->resolve_requested($db, $state, $requested, callback_choices => sub { 0 });
+                    if (@requested_strict) { # FIXME: log first found pkgs?
                         $exit->('updates');
                     } else {
                         $exit->('uptodate');
