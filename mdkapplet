@@ -251,7 +251,7 @@ my ($mdv_update_pid, $checker_pid);
 
 # Signal management 
 sub harvester {
-    my ($_signame, $clean) = @_;
+    my ($_signame, $_clean) = @_;
     my ($childpid, @pids);
     my $mdvupdate_returned;
     do {
@@ -353,7 +353,7 @@ sub silentCheck() {
                 }
                 $exit->('locked') if $will_not_update_media;
 
-                if (my $res = !run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
+                if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
                     $exit->('error_updating') if $will_not_update_media;
                 }
 
@@ -363,14 +363,14 @@ sub silentCheck() {
                 my @update_medias = grep { $_->{update} } @{$urpm->{media}};
                 if (!@update_medias) {
                     $exit->('no_update_medium');
-                } elsif (!grep { ! $_->{ignore} } @update_medias) {
+                } elsif (!any { ! $_->{ignore} } @update_medias) {
                     $exit->('no_enabled_medium');
                 }
 
                 if (my $db = urpm::db_open_or_die($urpm)) {
                     my $h = $urpm->request_packages_to_upgrade($db, {}, {});
                     
-                    if (my @pkgs = grep { !$_->flag_skip } map { $urpm->{depslist}[$_] } keys %$h) {
+                    if (my @_pkgs = grep { !$_->flag_skip } map { $urpm->{depslist}[$_] } keys %$h) { # FIXME: log first found pkgs?
                         $exit->('updates');
                     } else {
                         $exit->('uptodate');
