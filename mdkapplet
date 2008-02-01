@@ -82,6 +82,11 @@ my %state = (
 		      colour => [ 'busy' ],
 		      changes => [ 'busy', 'critical' ],
 		      menu => [ 'check' ],
+ 		      do_not_use_bubble => 1,
+		      tt => [
+                    #-PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
+                    N("Will check updates at %s", POSIX::strftime("%T", localtime(time() + $config{FIRST_CHECK_DELAY}/1000)))
+                ],
 		     },
     
 	     okay => {
