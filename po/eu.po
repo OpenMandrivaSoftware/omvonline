@@ -1,32 +1,28 @@
-# translation of mdkonline-eu.po to EUSKARA
-# translation of mdkonline.po to EUSKARA
-# translation of Mandriva Online-eu.po to EUSKARA
-# translation of Mandriva Online-eu.po to basque
 # translation of mdkonline.po to Euskara
 # EUSKARA: Mandriva Linux translation.
 # Copyright (C) 2001 Mandriva S.A.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005, 2006.
-# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
 #
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005, 2006, 2008.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-eu\n"
+"Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-09 16:26+0200\n"
-"PO-Revision-Date: 2006-05-14 19:52+0200\n"
+"PO-Revision-Date: 2008-02-02 10:12+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: EUSKARA <itzulpena@euskalgnu.org>\n"
+"Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:94
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Egiaztatu eguneratzeak"
+msgstr "Eguneraketak egiaztatu %s-n"
 
 #: ../mdkapplet:103
 #, c-format
@@ -60,8 +56,7 @@ msgstr "Zure sistemarentzako fardel berriak eskuragarri daude"
 #: ../mdkapplet:133
 #, c-format
 msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
+msgstr "Zerbitzua ez dago konfiguratuta. Mesedez sakatu \"Zerbitzua konfiguratu\""
 
 #: ../mdkapplet:139
 #, c-format
@@ -74,24 +69,22 @@ msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Zerbitzua ez dago aktibatuta. Mesedez klikatu \"Lerroko Webgunea\""
 
 #: ../mdkapplet:151 ../mdkapplet:182
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
-msgstr "urpmi datu-basea blokeatuta"
+msgstr "urpmi datubasea blokeatuta"
 
 #: ../mdkapplet:157
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:163
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software Euskarri Kudeatzailea' bitartez."
 
 #: ../mdkapplet:169
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -100,12 +93,11 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
-"Dagoeneko gutxienez eguneraketa euskarri bat konfiguratuta daukazu, baina\n"
-"une honetan guztiak ezgaituta daude. Software Euskarrien Kudeatzailea\n"
-"exekutatu beharko zenuke gutxienez bat gaitzeko (markatu Gaituta?\n"
-"zutabean).\n"
+"Dagoeneko gutxienez eguneraketa euskarri bat konfiguratuta\n"
+"daukazu, baina une honetan guztiak ezgaituta daude. Software\n"
+"Euskarrien Kudeatzailea exekutatu beharko zenuke gutxienez\n bat gaitzeko (markatu \"%s\" zutabean).\n"
 "\n"
-"Ondoren, %s berrabiarazi."
+"Ondoren, \"%s\" berrabiarazi."
 
 #: ../mdkapplet:174
 #, c-format
@@ -113,9 +105,9 @@ msgid "Enabled"
 msgstr "Gaituta"
 
 #: ../mdkapplet:187
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Euskarria eguneratzen...\n"
+msgstr "Akatsa euskarri eguneratzerakoan"
 
 #: ../mdkapplet:202
 #, c-format
@@ -125,12 +117,12 @@ msgstr "Egiaztaketa... Dauden eguneraketak\n"
 #: ../mdkapplet:207
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "Paketeak egunean daude"
 
 #: ../mdkapplet:212
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "ezin da rpmdb ireki"
+msgstr "urpmi datubasea irekitzean huts egin du"
 
 #: ../mdkapplet:217 ../mdkapplet:324
 #, c-format
@@ -888,6 +880,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Bundle zerbitzarira autentikatzeak huts egin du:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:164
 #, c-format
@@ -905,7 +900,7 @@ msgstr ""
 #: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Bundle hau ez dago ondo eratuta. Galarazten."
 
 #: ../mdkupdate:219
 #, c-format
@@ -917,11 +912,3 @@ msgstr "Paketeak instalatzen...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- Mandriva Update abiarazten du.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Ezin da eguneraketen zerrenda jaso: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Hautatu zein pakete instalatu behar diren eta Ados sakatu"
