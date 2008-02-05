@@ -39,7 +39,7 @@ use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::TrayIcon;
-use Gtk2::NotificationBubble;
+use Gtk2::Notify -init, 'mdkapplet';
 
 # POSIX unmasks the sigprocmask properly
 my $sigset = POSIX::SigSet->new;
@@ -458,10 +458,10 @@ sub setState {
     gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(translate($state{$state_type}{tt}[0])));
 
     if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::TrayIcon') && !$state{$state_type}{do_not_use_bubble}) {
-        my $bubble = Gtk2::NotificationBubble->new;
-        $bubble->attach($icon);
-        $bubble->set(N("Warning"), undef, formatAlaTeX(translate($state{$state_type}{tt}[0])));
-        $bubble->show(5000);
+        my $bubble = Gtk2::Notify->new(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])),
+                                       '/usr/share/icons/mdkonline.png', $icon);
+        $bubble->set_timeout(5000);
+        $bubble->show();
     }
 
     my $menu = Gtk2::Menu->new;
