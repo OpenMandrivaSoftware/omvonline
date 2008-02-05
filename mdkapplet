@@ -440,8 +440,7 @@ sub isNetwork() {
 
 sub shouldStart() {
     my %p = getVarsFromSh($localfile);
-    my $ret = $p{AUTOSTART} eq 'FALSE' ? 0 : 1;
-    $ret;
+    to_bool($p{AUTOSTART} ne 'FALSE');
 }
 
 sub setState {
