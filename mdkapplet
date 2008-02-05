@@ -332,7 +332,7 @@ sub silentCheck() {
                 my $_safe = before_leaving { POSIX::_exit(0) };
 
                 # be nice with other processes:
-                setpriority('PRIO_PROCESS', $$, 7);
+                setpriority(0, $$, 7); # 0 is PRIO_PROCESS
 
                 my $exit = sub {
                     my ($state) = @_;
