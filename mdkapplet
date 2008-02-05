@@ -38,7 +38,6 @@ use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 versio
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
-use Gtk2::TrayIcon;
 use Gtk2::Notify -init, 'mdkapplet';
 
 # POSIX unmasks the sigprocmask properly
@@ -58,7 +57,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $eventbox, $img, $mLog, $buffer, $wlog, $state_global);
+my ($menu, $timeout, $mLog, $buffer, $wlog, $state_global);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -207,30 +206,25 @@ my %actions = (
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	      );
 
-gtkadd(my $icon = Gtk2::TrayIcon->new("MdkApplet"), 
-       gtkadd($eventbox = Gtk2::EventBox->new, 
-	      gtkpack($img = Gtk2::Image->new)
-	     )
-      );
+my $icon = Gtk2::StatusIcon->new;
 #$icon->shape_combine_mask($img, 0, 0);
-$eventbox->signal_connect(button_press_event => sub {
-				  if ($_[1]->button == 1) {
+$icon->signal_connect(popup_menu => sub {
+                          my ($icon, $button, $time) = @_;
+                          $menu and $menu->popup(undef, undef, undef, undef, $button, $time);
+                      });
+$icon->signal_connect(activate => sub {
                           my %actions = (
                               no_update_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
                               no_enabled_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
                               updates => \&installUpdates,
                           );
                           $actions{$state_global}->() if ref $actions{$state_global};
-			      } elsif ($_[1]->button == 3) {
-                         $menu and $menu->popup(undef, undef, undef, undef, $_[1]->button, $_[1]->time);
-                     }
 			  });
 my ($opt) = @ARGV;
 if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
-$icon->show_all;
 go2State('delayed');
 gtkflush();
 checkConfig();
@@ -454,12 +448,12 @@ sub setState {
     my $checkme;
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
-    $img->set_from_pixbuf($tmp);
-    gtkset_tip(new Gtk2::Tooltips, $eventbox, formatAlaTeX(translate($state{$state_type}{tt}[0])));
+    $icon->set_from_pixbuf($tmp);
+    $icon->set_tooltip(formatAlaTeX(translate($state{$state_type}{tt}[0])));
 
-    if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::TrayIcon') && !$state{$state_type}{do_not_use_bubble}) {
-        my $bubble = Gtk2::Notify->new(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])),
-                                       '/usr/share/icons/mdkonline.png', $icon);
+    if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state_type}{do_not_use_bubble}) {
+        my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])),
+                                                        '/usr/share/icons/mdkonline.png', $icon);
         $bubble->set_timeout(5000);
         $bubble->show();
     }
