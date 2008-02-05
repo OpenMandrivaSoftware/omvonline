@@ -38,7 +38,7 @@ use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 versio
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
-use Gtk2::Notify -init, 'mdkapplet';
+use Gtk2::Notify '-init', 'mdkapplet';
 
 # POSIX unmasks the sigprocmask properly
 my $sigset = POSIX::SigSet->new;
@@ -57,7 +57,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $mLog, $buffer, $wlog, $state_global);
+my ($menu, $timeout, $state_global);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -129,7 +129,7 @@ my %state = (
 	     disabled => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
-		      menu => [ ],
+		      menu => [],
 		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 		     },
           locked => {
@@ -141,7 +141,7 @@ my %state = (
 	     notsupported => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
-		      menu => [  ],
+		      menu => [],
 		      tt => [ N_("Release not supported (too old release, or development release)") ]
 		     },
           no_update_medium => {
@@ -210,7 +210,7 @@ my %actions = (
 my $icon = Gtk2::StatusIcon->new;
 #$icon->shape_combine_mask($img, 0, 0);
 $icon->signal_connect(popup_menu => sub {
-                          my ($icon, $button, $time) = @_;
+                          my ($_icon, $button, $time) = @_;
                           $menu and $menu->popup(undef, undef, undef, undef, $button, $time);
                       });
 $icon->signal_connect(activate => sub {
@@ -365,7 +365,7 @@ sub silentCheck() {
                 if (my $db = urpm::db_open_or_die($urpm)) {
                     my $requested = {};
                     my $state = {};
-                    my $h = $urpm->request_packages_to_upgrade($db, $state, $requested);
+                    $urpm->request_packages_to_upgrade($db, $state, $requested);
                     my @requested_strict = $urpm->resolve_requested($db, $state, $requested, callback_choices => sub { 0 });
                     if (@requested_strict) { # FIXME: log first found pkgs?
                         $exit->('updates');
@@ -457,7 +457,7 @@ sub setState {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])),
                                                         '/usr/share/icons/mdkonline.png', $icon);
         $bubble->set_timeout(5000);
-        $bubble->show();
+        $bubble->show;
     }
 
     my $menu = Gtk2::Menu->new;
@@ -497,9 +497,6 @@ sub setState {
 }
 sub logIt {
     my $log = shift;
-    my ($Second, $Minute, $Hour, undef, undef, undef, undef, undef, undef) = localtime();
-    $mLog .= $Hour . ':' . $Minute . ':' . $Second . '  ' . translate($log);
-    if (defined $wlog) { $buffer->insert_at_cursor($log) }
     log::explanations($log);
 }
 
