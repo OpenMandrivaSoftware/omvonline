@@ -317,69 +317,69 @@ sub silentCheck() {
     gtkflush(); go2State('busy'); gtkflush();
     gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
 
-        # are there any updates ?
+    # are there any updates ?
 
-            $checker_pid = fork();
-            if (defined $checker_pid) {
-                return if $checker_pid; # parent
+    $checker_pid = fork();
+    if (defined $checker_pid) {
+        return if $checker_pid; # parent
 
-                # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
-                my $_safe = before_leaving { POSIX::_exit(0) };
+        # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
+        my $_safe = before_leaving { POSIX::_exit(0) };
 
-                # be nice with other processes:
-                setpriority(0, $$, 7); # 0 is PRIO_PROCESS
+        # be nice with other processes:
+        setpriority(0, $$, 7);  # 0 is PRIO_PROCESS
 
-                my $exit = sub {
-                    my ($state) = @_;
-                    POSIX::_exit($comm_codes{$state}{code});
-                };
-                my $will_not_update_media;
-                require urpm;
-                require urpm::lock;
-                my $urpm = urpm->new;
-                {
-                    local $urpm->{fatal} = sub {
-                        print "Fatal: @_\n";
-                        $will_not_update_media = 1;
-                    };
-                    local $urpm->{error} = $urpm->{fatal};
+        my $exit = sub {
+            my ($state) = @_;
+            POSIX::_exit($comm_codes{$state}{code});
+        };
+        my $will_not_update_media;
+        require urpm;
+        require urpm::lock;
+        my $urpm = urpm->new;
+        {
+            local $urpm->{fatal} = sub {
+                print "Fatal: @_\n";
+                $will_not_update_media = 1;
+            };
+            local $urpm->{error} = $urpm->{fatal};
 
-                    urpm::lock::urpmi_db($urpm, 'exclusive', 1);
-                }
-                $exit->('locked') if $will_not_update_media;
+            urpm::lock::urpmi_db($urpm, 'exclusive', 1);
+        }
+        $exit->('locked') if $will_not_update_media;
 
-                if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
-                    $exit->('error_updating') if $will_not_update_media;
-                }
+        if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
+            $exit->('error_updating') if $will_not_update_media;
+        }
 
-                require urpm::select;
-                require urpm::media;
-                urpm::media::configure($urpm, update => 1);
-                my @update_medias = grep { $_->{update} } @{$urpm->{media}};
-                if (!@update_medias) {
-                    $exit->('no_update_medium');
-                } elsif (!any { ! $_->{ignore} } @update_medias) {
-                    $exit->('no_enabled_medium');
-                }
+        require urpm::select;
+        require urpm::media;
+        urpm::media::configure($urpm, update => 1);
+        my @update_medias = grep { $_->{update} } @{$urpm->{media}};
+        if (!@update_medias) {
+            $exit->('no_update_medium');
+        } elsif (!any { ! $_->{ignore} } @update_medias) {
+            $exit->('no_enabled_medium');
+        }
 
-                if (my $db = urpm::db_open_or_die($urpm)) {
-                    my $requested = {};
-                    my $state = {};
-                    $urpm->request_packages_to_upgrade($db, $state, $requested);
-                    my @requested_strict = $urpm->resolve_requested($db, $state, $requested, callback_choices => sub { 0 });
-                    if (@requested_strict) { # FIXME: log first found pkgs?
-                        $exit->('updates');
-                    } else {
-                        $exit->('uptodate');
-                    }
-                } else {
-                    $exit->('db_not_open');
-                }
+        if (my $db = urpm::db_open_or_die($urpm)) {
+            my $requested = {};
+            my $state = {};
+            $urpm->request_packages_to_upgrade($db, $state, $requested);
+            my @requested_strict = $urpm->resolve_requested($db, $state, $requested, callback_choices => sub { 0 });
+            if (@requested_strict) { # FIXME: log first found pkgs?
                 $exit->('updates');
             } else {
-                logIt("cannot fork: %s", "update checker ($!)");
-                go2State('critical');
+                $exit->('uptodate');
             }
+        } else {
+            $exit->('db_not_open');
+        }
+        $exit->('updates');
+    } else {
+        logIt("cannot fork: %s", "update checker ($!)");
+        go2State('critical');
+    }
 }
 
 sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
