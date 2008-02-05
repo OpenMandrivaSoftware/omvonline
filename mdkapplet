@@ -92,6 +92,7 @@ my %state = (
 		      colour => [ 'okay' ],
 		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
+ 		      do_not_use_bubble => 1,
 		      tt => [ N_("Your system is up-to-date") ]
 		     },
  	     critical => {
