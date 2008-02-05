@@ -450,6 +450,7 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $icon->set_from_pixbuf($tmp);
     $icon->set_tooltip(formatAlaTeX(translate($state{$state_type}{tt}[0])));
+    $icon->set_visible($state_type ne 'okay');
 
     if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state_type}{do_not_use_bubble}) {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])),
