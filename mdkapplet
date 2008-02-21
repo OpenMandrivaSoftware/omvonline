@@ -115,12 +115,6 @@ my %state = (
 		      menu => [ 'update', 'check' ],
 		      tt => [ N_("New updates are available for your system") ]
 		     },
-	     bundles => {
-		      colour => [ 'bundle' ],
-		      changes => [ 'okay' ],
-		      menu => [ 'update', 'check' ],
-		      tt => [ N_("New bundles are available for your system") ]
-		      },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
