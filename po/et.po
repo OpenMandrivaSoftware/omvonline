@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2007-08-14 17:02+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Uuenduste kontrollimine kell %s"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Teie süsteemis pole midagi uuendada"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -37,47 +37,37 @@ msgstr ""
 "Teenuse seadistamise probleem. Palun kontrollige logisid ja saatke e-kiri "
 "aadressile support@mandrivaonline.com"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Palun oodake, otsitakse kättesaadavaid pakette..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Teie süsteemile on uuendusi"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "Teie süsteemile on uusi tarkvarakomplekte"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Teenus pole seadistatud. Palun valige \"Teenuse seadistamine\""
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Võrk on maas. Palun seadistage võrk"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Teenus pole aktiveeritud. Palun valige \"Veebilehekülg\""
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi andmebaas on lukus"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Väljalase pole toetatud (liiga vana või arendusversioon)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -85,7 +75,7 @@ msgstr ""
 "Andmekandjat ei leitud. Andmekandja tuleb lisada tarkvaraallikate halduri "
 "abil."
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -102,583 +92,133 @@ msgstr ""
 "\n"
 "Seejärel käivitage \"%s\" uuesti."
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "Lubatud"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "Viga andmekandja uuendamisel"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Kontroll... On uuendusi\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "Pole ühtegi paketti uuendada"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Urpmi andmebaasi avamine ebaõnnestus"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "Uuenduste paigaldamine"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "Teenuse seadistamine"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "Uuenduste kontrollimine"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Palun oodake"
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "Uuenduste kontrollimine"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "Veebilehekülg"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "Võrgu seadistamine"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "Seadista"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linuxi uuenduste aplett"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "Toimingud"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "Seadistused"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "Logide vaatamine"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "Olek"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "Sulge"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "Võrguühendus: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "Olemas"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "Puudub"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "Viimati kontrollitud: "
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "Masina nimi:"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "Uuendused: "
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnecti käivitamine\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online paistab olevat uuesti paigaldatud, aplett laaditakse "
 "uuesti..."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate'i käivitamine\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Mandriva Linuxi uuenduste aplett"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Uuenduste kontrollimine...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "Ühendumine saidiga"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Tekkis mingi viga"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "Teenus ei toeta arendusversiooni"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "Teenus ei toeta liiga vanu väljalaskeid"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "Tundmatu olek"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Võrguteenused ei ole lubatud. Ühendumine Mandriva Online'i saidiga\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "Vale parool.\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "Vale toiming või masin või kasutajatunnus.\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"Teie võrguseadistustega on midagi valesti (palun kontrollige ruuteri, "
-"tulemüüri või puhverserveri seadistusi)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Serveriga ühendumisel tekkis probleem, palun võtke ühendust tugimeeskonnaga"
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Online'i serveri vastus\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Midagi pole uuendada\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "Pole kontrollitud"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "Konfiguratsioonifaili kontroll: puudub\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Võrgu kontroll: paistab, et see pole aktiivne\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "Logid"
+msgid "Warning"
+msgstr "Hoiatus"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "Puhasta"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "Info..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Autoriõigus (C) %s: Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online võimaldab kasutada Mandriva veebiteenuseid."
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "Veebilehekülg"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "Käivitatakse alati käivitumisel"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "Välju"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdkonline versioon %s\n"
-"Autoriõigus (C) %s Mandriva.\n"
-"See on vabavara, mida võib levitada vastavalt GNU Üldise Avaliku Litsentsi "
-"tingimustele.\n"
-"\n"
-"Kasutamine:\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- näitab seda abiteadet.\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- masinanimi.\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- kasutaja riigi nimi. \n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- interaktiivse režiimi kasutamine.\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- mitteinteraktiivse režiimi kasutamine.\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - kasutaja kasutajatunnus.\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- kasutaja parool.\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "Mandriva Online"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "Mul on juba konto"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "Tahan konto luua"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "Hr."
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "Pr."
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "Prl."
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "Konfiguratsiooni tuvastamine\n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"See abiline aitab saata Teie konfiguratsiooni\n"
-"(paketid, riistvara) tsentraalsesse andmebaasi, et edaspidi\n"
-"teavitada Teid turvaparandustest ja kasulikest uuendustest.\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "Konto loomine või autentimine"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Sisestage oma Mandriva Online'i kasutajatunnus, parool ja masina nimi:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "E-posti aadress:"
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "Riik"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "Parool:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "Masina kirjeldus:"
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(Näide: Minu koduarvuti)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Viga"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Haakepunkti nimi tohib sisaldada vaid 1 kuni 40 tähte ja numbrit"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "Ühendumine Mandriva Online'i saidiga..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"Et saaksite kasu Mandriva Online'i teenustest,\n"
-"saadame praegu teele Teie konfiguratsiooni.\n"
-"\n"
-"Nõustaja saadab nüüd Mandrivale järgmise info:\n"
-"\n"
-"1) Teie süsteemi paigaldatud pakettide nimekiri\n"
-"\n"
-"2) Teie riistvara kirjeldus\n"
-"\n"
-"Kui see mõte Teile ei meeldi või Te ei soovi meie teenustest kasu saada,\n"
-"vajutage nupule ' Loobu', Vajutades 'Järgmine', annate meile võimaluse\n"
-"teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike e-"
-"kirjadega.\n"
-"Lisaks saate hinnaalandust www.mandrivaexpert.com tasuliste\n"
-"teenuste puhul."
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "Probleem ühendusega"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Tekkis viga failide saatmisel, palun proovige uuesti"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "Mandriva Online'i konto loomine"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "Tiitel:"
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "Eesnimi:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "Perekonnanimi:"
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "Parool teist korda:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"Paroolid ei klapi\n"
-" Palun proovige uuesti\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "Palun täitke kõik väljad"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "See ei ole korrektne e-posti aadress!\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "Konto loomine ebaõnnestus!"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"Mandriva Online'i konto edukalt loodud.\n"
-"Palun klõpsake nupule \"Järgmine\" autentimiseks ja oma konfiguratsiooni "
-"saatmiseks\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "Saatmine õnnestus!"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr ""
-"Nüüdsest alates saate tänu Mandriva Online'ile \n"
-"teateid turvaparanduste ja uuenduste kohta."
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Mandriva Online pakub võimalust uuendamine automaatseks muuta.\n"
-"Selleks käivitatakse Teie arvutis regulaarselt rakendus, mis otsib uuendusi\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "Õnnitlused!"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "Teie Mandriva Online'i konto on edukalt loodud\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "Konfiguratsiooni saatmine õnnestus"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "Probleem konfiguratsiooni saatmisel"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Mandriva Online'i veebileheküljega ei õnnestunud ühendust luua: vigane "
-"kasutajatunnus/parool või sobimatud ruuteri/tulemüüri seadistused"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -827,6 +367,11 @@ msgstr ""
 "\n"
 "Kasutamine:\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- näitab seda abiteadet.\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -856,11 +401,6 @@ msgstr ""
 "  --bundle fail.bundle\t- parsitakse ja paigaldatakse pakett "
 "metainfofailist .bundle.\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "Hoiatus"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -870,10 +410,20 @@ msgid ""
 msgstr ""
 "Teil tuleb esmalt paigaldada süsteem kõvakettale 'Live Install' nõustajaga."
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "Palun oodake"
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Valmistumine..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "Viga"
 
 #: ../mdkupdate:141
 #, c-format
@@ -885,6 +435,11 @@ msgstr ""
 "Autentimine komplekti serveris ebaõnnestus:\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "Tekkis mingi viga"
 
 #: ../mdkupdate:164
 #, c-format
@@ -913,6 +468,310 @@ msgstr "Pakettide paigaldamine...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Pakettide uuendamine update_source andmekandjalt ebaõnnestus.\n"
+
+#~ msgid "New bundles are available for your system"
+#~ msgstr "Teie süsteemile on uusi tarkvarakomplekte"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr "Teenus pole seadistatud. Palun valige \"Teenuse seadistamine\""
+
+#~ msgid "Configure the service"
+#~ msgstr "Teenuse seadistamine"
+
+#~ msgid "Check updates"
+#~ msgstr "Uuenduste kontrollimine"
+
+#~ msgid "Configure Now!"
+#~ msgstr "Seadista"
+
+#~ msgid "Actions"
+#~ msgstr "Toimingud"
+
+#~ msgid "Configure"
+#~ msgstr "Seadistused"
+
+#~ msgid "See logs"
+#~ msgstr "Logide vaatamine"
+
+#~ msgid "Status"
+#~ msgstr "Olek"
+
+#~ msgid "Close"
+#~ msgstr "Sulge"
+
+#~ msgid "Network Connection: "
+#~ msgstr "Võrguühendus: "
+
+#~ msgid "Up"
+#~ msgstr "Olemas"
+
+#~ msgid "Down"
+#~ msgstr "Puudub"
+
+#~ msgid "Last check: "
+#~ msgstr "Viimati kontrollitud: "
+
+#~ msgid "Machine name:"
+#~ msgstr "Masina nimi:"
+
+#~ msgid "Updates: "
+#~ msgstr "Uuendused: "
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "Teenus ei toeta arendusversiooni"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "Teenus ei toeta liiga vanu väljalaskeid"
+
+#~ msgid "Unknown state"
+#~ msgstr "Tundmatu olek"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr ""
+#~ "Võrguteenused ei ole lubatud. Ühendumine Mandriva Online'i saidiga\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "Vale parool.\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "Vale toiming või masin või kasutajatunnus.\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr ""
+#~ "Teie võrguseadistustega on midagi valesti (palun kontrollige ruuteri, "
+#~ "tulemüüri või puhverserveri seadistusi)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr ""
+#~ "Serveriga ühendumisel tekkis probleem, palun võtke ühendust "
+#~ "tugimeeskonnaga"
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "Mandriva Online'i serveri vastus\n"
+
+#~ msgid "No check"
+#~ msgstr "Pole kontrollitud"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "Konfiguratsioonifaili kontroll: puudub\n"
+
+#~ msgid "Logs"
+#~ msgstr "Logid"
+
+#~ msgid "Clear"
+#~ msgstr "Puhasta"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdkonline versioon %s\n"
+#~ "Autoriõigus (C) %s Mandriva.\n"
+#~ "See on vabavara, mida võib levitada vastavalt GNU Üldise Avaliku "
+#~ "Litsentsi tingimustele.\n"
+#~ "\n"
+#~ "Kasutamine:\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- masinanimi.\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- kasutaja riigi nimi. \n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- interaktiivse režiimi kasutamine.\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- mitteinteraktiivse režiimi kasutamine.\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - kasutaja kasutajatunnus.\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- kasutaja parool.\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "Mandriva Online"
+
+#~ msgid "I already have an account"
+#~ msgstr "Mul on juba konto"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "Tahan konto luua"
+
+#~ msgid "Mr."
+#~ msgstr "Hr."
+
+#~ msgid "Mrs."
+#~ msgstr "Pr."
+
+#~ msgid "Ms."
+#~ msgstr "Prl."
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "Konfiguratsiooni tuvastamine\n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "See abiline aitab saata Teie konfiguratsiooni\n"
+#~ "(paketid, riistvara) tsentraalsesse andmebaasi, et edaspidi\n"
+#~ "teavitada Teid turvaparandustest ja kasulikest uuendustest.\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "Konto loomine või autentimine"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr ""
+#~ "Sisestage oma Mandriva Online'i kasutajatunnus, parool ja masina nimi:"
+
+#~ msgid "Email address:"
+#~ msgstr "E-posti aadress:"
+
+#~ msgid "Country"
+#~ msgstr "Riik"
+
+#~ msgid "Password:"
+#~ msgstr "Parool:"
+
+#~ msgid "Machine description:"
+#~ msgstr "Masina kirjeldus:"
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(Näide: Minu koduarvuti)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "Haakepunkti nimi tohib sisaldada vaid 1 kuni 40 tähte ja numbrit"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "Ühendumine Mandriva Online'i saidiga..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "Et saaksite kasu Mandriva Online'i teenustest,\n"
+#~ "saadame praegu teele Teie konfiguratsiooni.\n"
+#~ "\n"
+#~ "Nõustaja saadab nüüd Mandrivale järgmise info:\n"
+#~ "\n"
+#~ "1) Teie süsteemi paigaldatud pakettide nimekiri\n"
+#~ "\n"
+#~ "2) Teie riistvara kirjeldus\n"
+#~ "\n"
+#~ "Kui see mõte Teile ei meeldi või Te ei soovi meie teenustest kasu saada,\n"
+#~ "vajutage nupule ' Loobu', Vajutades 'Järgmine', annate meile võimaluse\n"
+#~ "teavitada Teid turvaparandustest ja kasulikest uuendustest isiklike e-"
+#~ "kirjadega.\n"
+#~ "Lisaks saate hinnaalandust www.mandrivaexpert.com tasuliste\n"
+#~ "teenuste puhul."
+
+#~ msgid "Connection problem"
+#~ msgstr "Probleem ühendusega"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "Tekkis viga failide saatmisel, palun proovige uuesti"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "Mandriva Online'i konto loomine"
+
+#~ msgid "Greeting:"
+#~ msgstr "Tiitel:"
+
+#~ msgid "First name:"
+#~ msgstr "Eesnimi:"
+
+#~ msgid "Last name:"
+#~ msgstr "Perekonnanimi:"
+
+#~ msgid "Confirm Password:"
+#~ msgstr "Parool teist korda:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "Paroolid ei klapi\n"
+#~ " Palun proovige uuesti\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "Palun täitke kõik väljad"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "See ei ole korrektne e-posti aadress!\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "Konto loomine ebaõnnestus!"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "Mandriva Online'i konto edukalt loodud.\n"
+#~ "Palun klõpsake nupule \"Järgmine\" autentimiseks ja oma konfiguratsiooni "
+#~ "saatmiseks\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "Saatmine õnnestus!"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr ""
+#~ "Nüüdsest alates saate tänu Mandriva Online'ile \n"
+#~ "teateid turvaparanduste ja uuenduste kohta."
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Mandriva Online pakub võimalust uuendamine automaatseks muuta.\n"
+#~ "Selleks käivitatakse Teie arvutis regulaarselt rakendus, mis otsib "
+#~ "uuendusi\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "Õnnitlused!"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "Teie Mandriva Online'i konto on edukalt loodud\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "Konfiguratsiooni saatmine õnnestus"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "Probleem konfiguratsiooni saatmisel"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "Mandriva Online'i veebileheküljega ei õnnestunud ühendust luua: vigane "
+#~ "kasutajatunnus/parool või sobimatud ruuteri/tulemüüri seadistused"
 
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- käivitatakse Mandriva Update.\n"

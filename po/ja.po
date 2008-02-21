@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2007-08-17 11:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "%s に更新をチェックします"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "新しい更新はありません"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -38,48 +38,38 @@ msgstr ""
 "サービスの設定に問題があります。ログを調べて support@mandrivaonline.com に"
 "メールしてください。"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "利用可能なパッケージを探しています。お待ちください..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "新しい更新があります"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "新しいバンドルが利用可能です"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "サービスが設定されていません。「サービスの設定」を選択してください。"
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "ネットワークが未接続です。ネットワークを設定してください。"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 "サービスが有効になっていません。「Online ウェブサイト」を選択してください。"
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi データベースがロックされています"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "お使いのバージョンはサービスの対象外です (期限切れ/開発版)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -87,7 +77,7 @@ msgstr ""
 "メディアが見つかりません。RPM メディアマネージャでメディアを追加してくださ"
 "い。"
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -103,581 +93,131 @@ msgstr ""
 "\n"
 "その後、%s を再起動してください。"
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "有効"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "メディアの更新でエラー"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "チェック中... 新しい更新があります\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "パッケージは最新です"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "urpmi データベースを開けません"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "システムを更新"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "サービスの設定"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "更新をチェック"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "お待ちください"
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "更新をチェック"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "Online ウェブサイト"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "ネットワークの設定"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "設定してください"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux 更新アプレット"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "動作"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "設定"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "ログを見る"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "状態"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "閉じる"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "ネットワーク接続: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "接続"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "未接続"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "前回チェック: "
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "マシン名:"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "更新: "
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect を起動\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online が再インストールされたようです。アプレットを更新中 ..."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate を起動\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Mandriva Linux 更新アプレット"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "新しい更新を計算中...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "接続しています"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "エラーが発生しました"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "開発版 (cooker) はサービスの対象外です"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "サポート期限の切れたバージョンはサービスの対象外です"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "不明な状態"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr ""
-"Online サービスが無効になっています。Mandriva Online に連絡してください。\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "パスワードが間違っています。\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "動作、ホスト、ログイン名のいずれかが間違っています。\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"ネットワークの設定に問題があります (ルート、ファイアウォール、プロキシの設定"
-"を確認してください)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr "サーバ接続中に問題が発生しました。サポートチームに連絡してください"
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Online サーバからの応答\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "新しい更新はありません\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "チェックなし"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "設定ファイル確認: ファイルがありません\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "ネットワーク確認: 無効になっているようです\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "ログ"
+msgid "Warning"
+msgstr "警告"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "クリア"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "情報..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online は Mandriva ウェブサービスへのアクセスを提供します。"
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "Online ウェブサイト"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "起動時に常に開始する"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "終了"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdonline バージョン %s\n"
-"Copyright (C) %s Mandriva.\n"
-"これはフリーソフトウェアであり、GNU GPL の下で再配布することができます。\n"
-"\n"
-"使用方法 :\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- このヘルプメッセージを出力\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- ホスト名\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- ユーザが住んでいる国の名前\n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- 対話式モードを使う\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- 非対話式モードを使う\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - ユーザのログイン名\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- ユーザのパスワード\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "Mandriva Online"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "既にアカウントを持っています"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "入会します"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "Mr."
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "Mrs."
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "Ms."
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "設定を読み込み中\n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"この支援ツールは、セキュリティアップデートや通常の更新情報を\n"
-"個別にお知らせするために、あなたのシステムに関する情報\n"
-"(パッケージやハードウェアの設定) を集中データベースに送信します。\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "アカウントの作成または認証"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Mandriva Online のログイン名、パスワード、マシン名を入力してください:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "メールアドレス:"
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "国名"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "パスワード:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "マシンの説明:"
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(例: ホームオフィスのコンピュータ)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "エラー"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "マシン名はアルファベットと数字 (1 から 40 まで) で指定してください"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "Mandriva Online ウェブサイトに接続中..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"Mandriva Online サービスをご利用いただくために、\n"
-"今からあなたのシステムの設定情報を送信します。\n"
-"\n"
-"このウィザードは以下の情報を Mandriva に送ります:\n"
-"\n"
-"1) インストールされているパッケージのリスト\n"
-"\n"
-"2) ハードウェアの設定\n"
-"\n"
-"これらの情報を送信したくない、またはこのサービスを利用しない場合は「キャンセ"
-"ル」を\n"
-"押してください。「次へ」を選択すると、送信された情報をもとにセキュリティアッ"
-"プデート\n"
-"と通常の更新情報をお客様ごとにメールでお知らせします。\n"
-"また、このサービスをご利用頂くと www.mandrivaexpert.com の有料サポートにも割"
-"引が\n"
-"適用されます。"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "接続トラブル"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "ファイル送信中に問題が発生しました。やり直してください。"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "Mandriva Online のアカウント作成"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "敬称:"
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "名:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "姓:"
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "パスワード確認:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"パスワードが合っていません\n"
-"やり直してください\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "すべての項目を埋めてください"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "メールアドレスが無効です\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "アカウントの作成に失敗しました"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"Mandriva Online アカウントを作成しました。\n"
-"「次へ」をクリックし、認証と設定の送信を行ってください。\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "送信成功"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr ""
-"これからはセキュリティその他の更新情報を Mandriva Online \n"
-"がお知らせします。"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Mandriva Online をご利用いただくとシステムの更新を自動化できます。\n"
-"チェックプログラムが新しい更新情報を定期的に調べに行きます。\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "設定"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "Mandriva Online アカウントの設定が完了しました\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "設定を送信しました"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "設定を送信中に問題が発生しました"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Mandriva Online ウェブサイトに接続できません (ログイン名/パスワードが間違って"
-"いるか、ルータ/ファイアウォールの設定に問題があります)"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -825,6 +365,11 @@ msgstr ""
 "\n"
 "使用方法 :\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- このヘルプメッセージを出力\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -854,11 +399,6 @@ msgstr ""
 "  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージをイ"
 "ンストールする。\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "警告"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -869,10 +409,20 @@ msgstr ""
 "Live インストールウィザードを使って、先にシステムをハードドライブにインストー"
 "ルする必要があります。"
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "お待ちください"
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "準備中..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "エラー"
 
 #: ../mdkupdate:141
 #, c-format
@@ -884,6 +434,11 @@ msgstr ""
 "バンドルサーバへの認証に失敗しました:\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "エラーが発生しました"
 
 #: ../mdkupdate:164
 #, c-format
@@ -912,3 +467,306 @@ msgstr "パッケージをインストール中...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source メディアからパッケージを更新できません。\n"
+
+#~ msgid "New bundles are available for your system"
+#~ msgstr "新しいバンドルが利用可能です"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr ""
+#~ "サービスが設定されていません。「サービスの設定」を選択してください。"
+
+#~ msgid "Configure the service"
+#~ msgstr "サービスの設定"
+
+#~ msgid "Check updates"
+#~ msgstr "更新をチェック"
+
+#~ msgid "Configure Now!"
+#~ msgstr "設定してください"
+
+#~ msgid "Actions"
+#~ msgstr "動作"
+
+#~ msgid "Configure"
+#~ msgstr "設定"
+
+#~ msgid "See logs"
+#~ msgstr "ログを見る"
+
+#~ msgid "Status"
+#~ msgstr "状態"
+
+#~ msgid "Close"
+#~ msgstr "閉じる"
+
+#~ msgid "Network Connection: "
+#~ msgstr "ネットワーク接続: "
+
+#~ msgid "Up"
+#~ msgstr "接続"
+
+#~ msgid "Down"
+#~ msgstr "未接続"
+
+#~ msgid "Last check: "
+#~ msgstr "前回チェック: "
+
+#~ msgid "Machine name:"
+#~ msgstr "マシン名:"
+
+#~ msgid "Updates: "
+#~ msgstr "更新: "
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "開発版 (cooker) はサービスの対象外です"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "サポート期限の切れたバージョンはサービスの対象外です"
+
+#~ msgid "Unknown state"
+#~ msgstr "不明な状態"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr ""
+#~ "Online サービスが無効になっています。Mandriva Online に連絡してくださ"
+#~ "い。\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "パスワードが間違っています。\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "動作、ホスト、ログイン名のいずれかが間違っています。\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr ""
+#~ "ネットワークの設定に問題があります (ルート、ファイアウォール、プロキシの設"
+#~ "定を確認してください)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr "サーバ接続中に問題が発生しました。サポートチームに連絡してください"
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "Mandriva Online サーバからの応答\n"
+
+#~ msgid "No check"
+#~ msgstr "チェックなし"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "設定ファイル確認: ファイルがありません\n"
+
+#~ msgid "Logs"
+#~ msgstr "ログ"
+
+#~ msgid "Clear"
+#~ msgstr "クリア"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdonline バージョン %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "これはフリーソフトウェアであり、GNU GPL の下で再配布することができます。\n"
+#~ "\n"
+#~ "使用方法 :\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- ホスト名\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- ユーザが住んでいる国の名前\n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- 対話式モードを使う\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- 非対話式モードを使う\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - ユーザのログイン名\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- ユーザのパスワード\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "Mandriva Online"
+
+#~ msgid "I already have an account"
+#~ msgstr "既にアカウントを持っています"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "入会します"
+
+#~ msgid "Mr."
+#~ msgstr "Mr."
+
+#~ msgid "Mrs."
+#~ msgstr "Mrs."
+
+#~ msgid "Ms."
+#~ msgstr "Ms."
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "設定を読み込み中\n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "この支援ツールは、セキュリティアップデートや通常の更新情報を\n"
+#~ "個別にお知らせするために、あなたのシステムに関する情報\n"
+#~ "(パッケージやハードウェアの設定) を集中データベースに送信します。\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "アカウントの作成または認証"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr ""
+#~ "Mandriva Online のログイン名、パスワード、マシン名を入力してください:"
+
+#~ msgid "Email address:"
+#~ msgstr "メールアドレス:"
+
+#~ msgid "Country"
+#~ msgstr "国名"
+
+#~ msgid "Password:"
+#~ msgstr "パスワード:"
+
+#~ msgid "Machine description:"
+#~ msgstr "マシンの説明:"
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(例: ホームオフィスのコンピュータ)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "マシン名はアルファベットと数字 (1 から 40 まで) で指定してください"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "Mandriva Online ウェブサイトに接続中..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "Mandriva Online サービスをご利用いただくために、\n"
+#~ "今からあなたのシステムの設定情報を送信します。\n"
+#~ "\n"
+#~ "このウィザードは以下の情報を Mandriva に送ります:\n"
+#~ "\n"
+#~ "1) インストールされているパッケージのリスト\n"
+#~ "\n"
+#~ "2) ハードウェアの設定\n"
+#~ "\n"
+#~ "これらの情報を送信したくない、またはこのサービスを利用しない場合は「キャン"
+#~ "セル」を\n"
+#~ "押してください。「次へ」を選択すると、送信された情報をもとにセキュリティ"
+#~ "アップデート\n"
+#~ "と通常の更新情報をお客様ごとにメールでお知らせします。\n"
+#~ "また、このサービスをご利用頂くと www.mandrivaexpert.com の有料サポートにも"
+#~ "割引が\n"
+#~ "適用されます。"
+
+#~ msgid "Connection problem"
+#~ msgstr "接続トラブル"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "ファイル送信中に問題が発生しました。やり直してください。"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "Mandriva Online のアカウント作成"
+
+#~ msgid "Greeting:"
+#~ msgstr "敬称:"
+
+#~ msgid "First name:"
+#~ msgstr "名:"
+
+#~ msgid "Last name:"
+#~ msgstr "姓:"
+
+#~ msgid "Confirm Password:"
+#~ msgstr "パスワード確認:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "パスワードが合っていません\n"
+#~ "やり直してください\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "すべての項目を埋めてください"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "メールアドレスが無効です\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "アカウントの作成に失敗しました"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "Mandriva Online アカウントを作成しました。\n"
+#~ "「次へ」をクリックし、認証と設定の送信を行ってください。\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "送信成功"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr ""
+#~ "これからはセキュリティその他の更新情報を Mandriva Online \n"
+#~ "がお知らせします。"
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Mandriva Online をご利用いただくとシステムの更新を自動化できます。\n"
+#~ "チェックプログラムが新しい更新情報を定期的に調べに行きます。\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "設定"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "Mandriva Online アカウントの設定が完了しました\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "設定を送信しました"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "設定を送信中に問題が発生しました"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "Mandriva Online ウェブサイトに接続できません (ログイン名/パスワードが間"
+#~ "違っているか、ルータ/ファイアウォールの設定に問題があります)"

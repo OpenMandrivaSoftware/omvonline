@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 2006\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2006-08-10 22:31+0800\n"
 "Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
 "Language-Team: Simplified Chinese <cooker-i18n@linux-mandrake.com>\n"
@@ -17,70 +17,60 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "将在 %s 检查更新"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "您的系统已为最新"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr "服务配置问题。请检查日志并发送邮件到 support@mandrivaonline.com"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "正在寻找可用的软件包，请稍候..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "您的系统没有可用的更新"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "您的系统没有可用的捆绑包"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "服务未配置。请点击“配置服务”"
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "网络已掉线。请配置您的网络"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "服务未激活。请点击“在线网站”"
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi 数据库已锁定"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支持(太旧，或者为开发版本)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "未找到介质。您必须通过“软件介质管理器”添加介质。"
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -96,569 +86,131 @@ msgstr ""
 "\n"
 "然后，重新启动 %s。"
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "启用"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "更新介质出错"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "正在检查... 有可用的更新\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "软件包已为最新"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "打开 urpmi 数据库出错"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "安装更新"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "配置服务"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "检查更新"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "请稍候"
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "检查更新"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "在线网站"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "配置网络"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "立即配置!"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux 更新小程序"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "动作"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "配置"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "查看日志"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "状态"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "关闭"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "网络连接: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "通"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "断"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "上次检查: "
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "机器名: "
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "更新: "
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "调用 Drak 连接\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online 似乎重新安装了，正在重新装入小程序..."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "调用 MandrivaUpdate\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Mandriva Linux 更新小程序"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "正在检查更新...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "正在连接到"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "发生了一个错误"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "此服务不支持开发版本"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "此服务器不支持太旧的版本"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "未知状态"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "在线服务已禁用。请浏览 Mandriva Online 网站\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "密码错误。\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "动作、主机或用户名错误。\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr "您的网络设置可能有错(请检查您的路由器、防火墙或代理服务器设置)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr "连接到服务器时发生问题，请联系支持团队"
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Mandriva Online 服务器的响应\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "系统已为最新\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "不检查"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "检查配置文件：不存在\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "检查网络：似乎已禁用\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "日志"
+msgid "Warning"
+msgstr "警告"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "清除"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "关于..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "版权 (C) %s Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online 可让您访问 Mandriva 的 Web 服务。"
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "在线网站"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "在启动时自动调用"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "退出"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdonline 版本 %s\n"
-"版权所有 (C) %s Mandriva。\n"
-"这是自由软件, 它能在 GNU GPL 条款下再次发行。\n"
-"\n"
-"用法:\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- 打印本帮助信息。\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- 主机名。\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- 用户的国家名。\n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- 使用交互模式。\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- 使用非交互模式。\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - 用户名。\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- 用户的密码。\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "Mandriva Online"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "我已经有账户了"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "我想要订阅"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "先生"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "夫人"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "女士"
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "正在读取配置\n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"您需要在本步骤中提供您在 Mandriva Online 的账户。而本助手将会帮助您将您的配置"
-"(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到安全更新和有"
-"用的升级。\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "账户创建或身份验证"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "请输入您的 Mandriva Online 登录名，密码和机器名:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "电子邮件地址："
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "国家/地区"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "密码:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "机器描述: "
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(如: 我家里的电脑)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "错误"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "计算机名称必须是 1 到 40 个字符"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "正在连接到 Mandriva Online 网站..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"为了更好的享受 Mandriva Online 的服务，我们即将上传您的配置。\n"
-"\n"
-"向导现在将向 Mandriva 发送下列信息:\n"
-"\n"
-"1) 您在系统中所安装的软件包列表；\n"
-"\n"
-"2) 您的硬件配置。\n"
-"\n"
-"如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。只要您按"
-"下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的安全更新和有用的"
-"升级。除此以外，您还能够从 www.mandrivaexpert.com 上得到支持服务的付费折扣。"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "连接问题"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "上传文件时发生了错误，请重试"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "创建一个 Mandriva Online 账户"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "欢迎："
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "名:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "姓："
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "确认密码:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"密码不匹配\n"
-" 请再试一次\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "所有内容都是必填的"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "不是有效的电子邮件地址!\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "创建账户失败！"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"Mandriva Online 账户创建成功。\n"
-"请单击“下一步”进行身份验证并上传您的配置\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "您的上传已经成功!"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr "从现在开始，您将能够收到 Mandriva Online 发出的安全和更新通知了。"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Mandriva Online 还能让您自动保持更新。您的系统中会定期运行一个特定的程序，该"
-"程序会自动下载并安装更新\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "配置"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "您的 Mandriva Online 账户已经配置成功\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "配置上传成功"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "读取配置出错"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"无法连接到 Mandriva Online 网站: 登录名/密码不对，或路由器/防火墙设置错误"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -806,6 +358,11 @@ msgstr ""
 "\n"
 "用法:\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- 打印本帮助信息。\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -834,11 +391,6 @@ msgid ""
 msgstr ""
 "  --bundle file.bundle\t- 分析并安装 .bundle 元信息文件中附带的软件包。\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "警告"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -847,10 +399,20 @@ msgid ""
 "Install' wizard."
 msgstr "您需要先使用“Live Install”将系统安装到硬盘上。"
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "请稍候"
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "正在准备..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "错误"
 
 #: ../mdkupdate:141
 #, c-format
@@ -862,6 +424,11 @@ msgstr ""
 "认证到捆绑包服务器失败：\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "发生了一个错误"
 
 #: ../mdkupdate:164
 #, c-format
@@ -889,6 +456,295 @@ msgstr "正在安装软件包...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "无法从 update_source 介质更新软件包。\n"
+
+#~ msgid "New bundles are available for your system"
+#~ msgstr "您的系统没有可用的捆绑包"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr "服务未配置。请点击“配置服务”"
+
+#~ msgid "Configure the service"
+#~ msgstr "配置服务"
+
+#~ msgid "Check updates"
+#~ msgstr "检查更新"
+
+#~ msgid "Configure Now!"
+#~ msgstr "立即配置!"
+
+#~ msgid "Actions"
+#~ msgstr "动作"
+
+#~ msgid "Configure"
+#~ msgstr "配置"
+
+#~ msgid "See logs"
+#~ msgstr "查看日志"
+
+#~ msgid "Status"
+#~ msgstr "状态"
+
+#~ msgid "Close"
+#~ msgstr "关闭"
+
+#~ msgid "Network Connection: "
+#~ msgstr "网络连接: "
+
+#~ msgid "Up"
+#~ msgstr "通"
+
+#~ msgid "Down"
+#~ msgstr "断"
+
+#~ msgid "Last check: "
+#~ msgstr "上次检查: "
+
+#~ msgid "Machine name:"
+#~ msgstr "机器名: "
+
+#~ msgid "Updates: "
+#~ msgstr "更新: "
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "此服务不支持开发版本"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "此服务器不支持太旧的版本"
+
+#~ msgid "Unknown state"
+#~ msgstr "未知状态"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr "在线服务已禁用。请浏览 Mandriva Online 网站\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "密码错误。\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "动作、主机或用户名错误。\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr "您的网络设置可能有错(请检查您的路由器、防火墙或代理服务器设置)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr "连接到服务器时发生问题，请联系支持团队"
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "Mandriva Online 服务器的响应\n"
+
+#~ msgid "No check"
+#~ msgstr "不检查"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "检查配置文件：不存在\n"
+
+#~ msgid "Logs"
+#~ msgstr "日志"
+
+#~ msgid "Clear"
+#~ msgstr "清除"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdonline 版本 %s\n"
+#~ "版权所有 (C) %s Mandriva。\n"
+#~ "这是自由软件, 它能在 GNU GPL 条款下再次发行。\n"
+#~ "\n"
+#~ "用法:\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- 主机名。\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- 用户的国家名。\n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- 使用交互模式。\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- 使用非交互模式。\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - 用户名。\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- 用户的密码。\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "Mandriva Online"
+
+#~ msgid "I already have an account"
+#~ msgstr "我已经有账户了"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "我想要订阅"
+
+#~ msgid "Mr."
+#~ msgstr "先生"
+
+#~ msgid "Mrs."
+#~ msgstr "夫人"
+
+#~ msgid "Ms."
+#~ msgstr "女士"
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "正在读取配置\n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "您需要在本步骤中提供您在 Mandriva Online 的账户。而本助手将会帮助您将您的"
+#~ "配置(软件包、硬件配置)上传到中央数据库中，这样可以保证您能够时刻收到安全更"
+#~ "新和有用的升级。\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "账户创建或身份验证"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr "请输入您的 Mandriva Online 登录名，密码和机器名:"
+
+#~ msgid "Email address:"
+#~ msgstr "电子邮件地址："
+
+#~ msgid "Country"
+#~ msgstr "国家/地区"
+
+#~ msgid "Password:"
+#~ msgstr "密码:"
+
+#~ msgid "Machine description:"
+#~ msgstr "机器描述: "
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(如: 我家里的电脑)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "计算机名称必须是 1 到 40 个字符"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "正在连接到 Mandriva Online 网站..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "为了更好的享受 Mandriva Online 的服务，我们即将上传您的配置。\n"
+#~ "\n"
+#~ "向导现在将向 Mandriva 发送下列信息:\n"
+#~ "\n"
+#~ "1) 您在系统中所安装的软件包列表；\n"
+#~ "\n"
+#~ "2) 您的硬件配置。\n"
+#~ "\n"
+#~ "如果您担心此操作会暴露您的个人隐私，或者不想享受此服务，请按“取消”。只要您"
+#~ "按下“下一步”，就表明您允许我们通过个性化的电子邮件提醒您最新的安全更新和有"
+#~ "用的升级。除此以外，您还能够从 www.mandrivaexpert.com 上得到支持服务的付费"
+#~ "折扣。"
+
+#~ msgid "Connection problem"
+#~ msgstr "连接问题"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "上传文件时发生了错误，请重试"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "创建一个 Mandriva Online 账户"
+
+#~ msgid "Greeting:"
+#~ msgstr "欢迎："
+
+#~ msgid "First name:"
+#~ msgstr "名:"
+
+#~ msgid "Last name:"
+#~ msgstr "姓："
+
+#~ msgid "Confirm Password:"
+#~ msgstr "确认密码:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "密码不匹配\n"
+#~ " 请再试一次\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "所有内容都是必填的"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "不是有效的电子邮件地址!\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "创建账户失败！"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "Mandriva Online 账户创建成功。\n"
+#~ "请单击“下一步”进行身份验证并上传您的配置\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "您的上传已经成功!"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr "从现在开始，您将能够收到 Mandriva Online 发出的安全和更新通知了。"
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Mandriva Online 还能让您自动保持更新。您的系统中会定期运行一个特定的程序，"
+#~ "该程序会自动下载并安装更新\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "配置"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "您的 Mandriva Online 账户已经配置成功\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "配置上传成功"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "读取配置出错"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "无法连接到 Mandriva Online 网站: 登录名/密码不对，或路由器/防火墙设置错误"
 
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- 调用 Mandriva Update。\n"

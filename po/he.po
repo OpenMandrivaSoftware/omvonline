@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2007-09-08 23:57+0300\n"
 "Last-Translator: Dotan Kamber <kamberd@yahoo.com>\n"
 "Language-Team: Hebrew\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "עדכונים יבדקו ב-%s"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "המערכת מעודכנת"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -40,52 +40,43 @@ msgstr ""
 "חלה תקלה בעת הגדרת השרות. באפשרותך לדווח על התקלה ל: support@mandrivaonline."
 "net"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "נא להמתין בעת קריאת מסד הנתונים של החבילות..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "עדכונים חדשים זמינים עבור המערכת שלך"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "ערכות חדשות זמינות עבור המערכת שלך"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "השירות לא מוגדר. עליך ללחוץ על \"הגדרת השרות\"."
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "הרשת לא פעילה. עליך להגדיר את הרשת"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "השירות לא הופעל. עליך ללחוץ על \"אתר מקוון\""
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "בסיס הנתונים של urpmi נעול"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "גרסה לא נתמכת (גרסה ישנה מדי או גרסת פיתוח)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr "לא נמצאו מקורות תוכנה, עליך להוסיף מקורות דרך 'ניהול מקורות תוכנה'."
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -101,577 +92,131 @@ msgstr ""
 "\n"
 "לאחר מכן יש לאתחל את \"%s\" מחדש."
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "מופעל"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "שגיאה בעדכון המקור"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "בודק... יש עדכונים זמינים\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "החבילות מעודכנות"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "כשל בפתיחת בסיס הנתונים של urpmi"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "התקן עדכונים"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "הגדרת השרות"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "בדוק עדכונים"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "נא להמתין"
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "בדוק עדכונים"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "אתר מקוון"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "הגדר את הרשת"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "הגדר כעת"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "יישומון עדכוני מנדרייבה-לינוקס"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "פעולות"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "הגדר"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "צפה ברישומי המערכת"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "מצב"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "סגור"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "חיבור רשת: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "למעלה"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "למטה"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "בדיקה אחרונה:"
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "שם המחשב:"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "עדכונים: "
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "מפעיל את drakconnect\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "נראה ש Mandriva Online הותקן מחדש, טוען את היישומון ..."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "מפעיל את MandrivaUpdate\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "יישומון עדכוני מנדרייבה-לינוקס"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "מנתח עדכונים חדשים...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "מתחבר אל"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "חלה שגיאה"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "גרסאת פיתוח לא נתמכת על ידי שרות זה"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "גרסה ישנה מדי לא נתמכת בשרות זה"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "מצב לא מוכר"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "השירותים המקוונים הופסקו. עליך להתעדכן באתר מנדרייבה-אונליין\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "סיסמה שגוייה.\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "הפעולה או שם מחשב או שם משתמש שגויים.\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"כנראה קיימת בעיה עם הגדרות הרשת שלך )עליך לבדוק את ה routing, חומת האש "
-"והגדרות השרת המתווך)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr "חלה תקלה בעת חיבור לשרת. עליך ליצור קשר עם צוות התמיכה"
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "ברוך בואך לשרת מנדרייבה-אונליין\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "המערכת מעודכנת\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "ללא בדיקה"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "בודק קובץ הגדרות: לא קיים\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "בודק זמינות רשת: אין תגובה\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "רישומים"
+msgid "Warning"
+msgstr "אזהרה"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "נקה"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "אודות..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "מנדריבה-אונליין %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "זכויות היוצרים (C) %s שמורות למנדריבה"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "מנדריבה-אונליין מאפשר גישה לשירותי הרשת של מנדריבה."
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "אתר מקוון"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "הפעל תמיד באתחול המערכת"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "יציאה"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdonline, גרסה %s\n"
-"כל הזכויות שמורות (C)  %s Mandriva.\n"
-"תוכנה זו היא חופשית וניתנת להפצה בהתאם לתנאי הרישיון של GNU GPL.\n"
-"\n"
-"שימוש:\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- הדפס הודעת עזרה זו.\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- שם מארח.\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- שם המדינה של המשתמש. \n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- השתמש במצב האינטראקטיבי.\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- השתמש במצב לא אינטראקטיבי.\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - שם המשתמש.\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- סיסמת המשתמש.\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "מנדרייבה-אונליין"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "כבר יש לי חשבון"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "ברצוני להרשם"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "מר"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "מרת"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "מרת"
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "קורא את קובץ התצורה \n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"אשף זה יעזור לך להעלות את התצורה שלך (חבילות,\n"
-"תצורת חומרה) לבסיס מידע מקוון במטרה לעדכן\n"
-"אותך אודות עדכוני אבטחה ושדרוגים שימושיים\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "יצירת חשבון או הזדהות"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "עליך להכניס את שם המשתמש, הסיסמה ושם המחשב שלך במנדרייבה-אונליין:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "כתובת דוא\"ל:"
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "מדינה"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "סיסמה:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "תיאור המכונה:"
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(לדוגמה: המחשב הביתי שלי)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "שגיאה"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "שם המכונה חייב להיות בן 1 עד 40 תווי אותיות, ספרות וקו תחתון"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "מתחבר לאתר מנדרייבה-אונליין..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"על מנת לאפשר לך ליהנות משירותי מנדרייבה-אונליין,\n"
-"אנו נעלה כעת את התצורה שלך לשרת.\n"
-"\n"
-"האשף ישלח כעת את המידע הבא אל מנדרייבהסופט:\n"
-"\n"
-"1) רשימת החבילות שמותקנות במערכת שלך,\n"
-"\n"
-"2) תצורת החומרה שלך.\n"
-"\n"
-"אם אין ברצונך לשלוח אלינו מידע זה, או שאינך רוצה בשירות,\n"
-"עליך ללחוץ על 'ביטול'. לחיצה על 'המשך' פירושה שאנו רשאים\n"
-"לידע אותך אודות עדכוני אבטחה ועדכונים שימושיים דרך דוא\"ל.\n"
-"בנוסף, נאפשר לך ליהנות מהנחות עבור שירותי תמיכה הניתנים\n"
-"בתשלום באתר www.mandrivaexpert.com."
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "ההתחברות נכשלה"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "ישנה בעיה בעת העלאת קבצים, עליך לנסות שנית"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "צור חשבון מנדרייבה-אונליין"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "קידומת לשם:"
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "שם פרטי:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "שם משפחה:"
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "אישור סיסמה:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"הסיסמאות אינן תואמות\n"
-"עליך לנסות שנית\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "נא למלא את כל השדות"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "זו אינה כתובת דוא\"ל תקינה!\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "יצירת החשבון כשלה!"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"חשבונך במנדרייבה-אונליין הוקם בהצלחה.\n"
-"עליך ללחוץ על \"המשך\" בכדי להזדהות ולטעון את תצורת מחשבך\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "העלאת הנתונים הסתימה בהצלחה"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr ""
-"מעתה ישלחו לך עדכונים לגבי עדכוני אבטחה\n"
-"ועדכונים הודות למנדרייבה-אונליין."
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"מנדרייבה-אונליין מאפשר לך לעדכן את מחשבך באופן אוטומטי.\n"
-"במערכת שלך תורץ תוכנה באופן סדיר שתחכה לעדכונים.\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "ברכותינו"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "חשבונך במנדרייבה-אונליין הוגדר בהצלחה\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "טעינת התצורה הושלמה בהצלחה"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "חלה תקלה בעת טעינת התצורה"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"ההתקשרות לאתר מנדרייבה-אונליין נכשלה עקב שם משתמש/סיסמה שגויים או הגדרות לא "
-"תקינות של הנתב/חומת האש"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -819,6 +364,11 @@ msgstr ""
 "\n"
 "שימוש:\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- הדפס הודעת עזרה זו.\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -846,11 +396,6 @@ msgid ""
 "file.\n"
 msgstr "  --bundle file.bundle\t- השג והתקן חבילה מקובץ ה- metainfo .bundle\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "אזהרה"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -859,10 +404,20 @@ msgid ""
 "Install' wizard."
 msgstr "ראשית עליך להתקין את המערכת לדיסק הקשיח שלך בעזרת האשף  'Live Install'"
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "נא להמתין"
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "הכנה..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "שגיאה"
 
 #: ../mdkupdate:141
 #, c-format
@@ -874,6 +429,11 @@ msgstr ""
 "כשל באימות זהות שרת העידכון:\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "חלה שגיאה"
 
 #: ../mdkupdate:164
 #, c-format
@@ -902,3 +462,298 @@ msgstr "מתקין חבילות...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "לא ניתן לעדכן חבילות ממדיית update_source.\n"
 
+#~ msgid "New bundles are available for your system"
+#~ msgstr "ערכות חדשות זמינות עבור המערכת שלך"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr "השירות לא מוגדר. עליך ללחוץ על \"הגדרת השרות\"."
+
+#~ msgid "Configure the service"
+#~ msgstr "הגדרת השרות"
+
+#~ msgid "Check updates"
+#~ msgstr "בדוק עדכונים"
+
+#~ msgid "Configure Now!"
+#~ msgstr "הגדר כעת"
+
+#~ msgid "Actions"
+#~ msgstr "פעולות"
+
+#~ msgid "Configure"
+#~ msgstr "הגדר"
+
+#~ msgid "See logs"
+#~ msgstr "צפה ברישומי המערכת"
+
+#~ msgid "Status"
+#~ msgstr "מצב"
+
+#~ msgid "Close"
+#~ msgstr "סגור"
+
+#~ msgid "Network Connection: "
+#~ msgstr "חיבור רשת: "
+
+#~ msgid "Up"
+#~ msgstr "למעלה"
+
+#~ msgid "Down"
+#~ msgstr "למטה"
+
+#~ msgid "Last check: "
+#~ msgstr "בדיקה אחרונה:"
+
+#~ msgid "Machine name:"
+#~ msgstr "שם המחשב:"
+
+#~ msgid "Updates: "
+#~ msgstr "עדכונים: "
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "גרסאת פיתוח לא נתמכת על ידי שרות זה"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "גרסה ישנה מדי לא נתמכת בשרות זה"
+
+#~ msgid "Unknown state"
+#~ msgstr "מצב לא מוכר"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr "השירותים המקוונים הופסקו. עליך להתעדכן באתר מנדרייבה-אונליין\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "סיסמה שגוייה.\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "הפעולה או שם מחשב או שם משתמש שגויים.\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr ""
+#~ "כנראה קיימת בעיה עם הגדרות הרשת שלך )עליך לבדוק את ה routing, חומת האש "
+#~ "והגדרות השרת המתווך)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr "חלה תקלה בעת חיבור לשרת. עליך ליצור קשר עם צוות התמיכה"
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "ברוך בואך לשרת מנדרייבה-אונליין\n"
+
+#~ msgid "No check"
+#~ msgstr "ללא בדיקה"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "בודק קובץ הגדרות: לא קיים\n"
+
+#~ msgid "Logs"
+#~ msgstr "רישומים"
+
+#~ msgid "Clear"
+#~ msgstr "נקה"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdonline, גרסה %s\n"
+#~ "כל הזכויות שמורות (C)  %s Mandriva.\n"
+#~ "תוכנה זו היא חופשית וניתנת להפצה בהתאם לתנאי הרישיון של GNU GPL.\n"
+#~ "\n"
+#~ "שימוש:\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- שם מארח.\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- שם המדינה של המשתמש. \n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- השתמש במצב האינטראקטיבי.\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- השתמש במצב לא אינטראקטיבי.\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - שם המשתמש.\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- סיסמת המשתמש.\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "מנדרייבה-אונליין"
+
+#~ msgid "I already have an account"
+#~ msgstr "כבר יש לי חשבון"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "ברצוני להרשם"
+
+#~ msgid "Mr."
+#~ msgstr "מר"
+
+#~ msgid "Mrs."
+#~ msgstr "מרת"
+
+#~ msgid "Ms."
+#~ msgstr "מרת"
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "קורא את קובץ התצורה \n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "אשף זה יעזור לך להעלות את התצורה שלך (חבילות,\n"
+#~ "תצורת חומרה) לבסיס מידע מקוון במטרה לעדכן\n"
+#~ "אותך אודות עדכוני אבטחה ושדרוגים שימושיים\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "יצירת חשבון או הזדהות"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr "עליך להכניס את שם המשתמש, הסיסמה ושם המחשב שלך במנדרייבה-אונליין:"
+
+#~ msgid "Email address:"
+#~ msgstr "כתובת דוא\"ל:"
+
+#~ msgid "Country"
+#~ msgstr "מדינה"
+
+#~ msgid "Password:"
+#~ msgstr "סיסמה:"
+
+#~ msgid "Machine description:"
+#~ msgstr "תיאור המכונה:"
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(לדוגמה: המחשב הביתי שלי)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "שם המכונה חייב להיות בן 1 עד 40 תווי אותיות, ספרות וקו תחתון"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "מתחבר לאתר מנדרייבה-אונליין..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "על מנת לאפשר לך ליהנות משירותי מנדרייבה-אונליין,\n"
+#~ "אנו נעלה כעת את התצורה שלך לשרת.\n"
+#~ "\n"
+#~ "האשף ישלח כעת את המידע הבא אל מנדרייבהסופט:\n"
+#~ "\n"
+#~ "1) רשימת החבילות שמותקנות במערכת שלך,\n"
+#~ "\n"
+#~ "2) תצורת החומרה שלך.\n"
+#~ "\n"
+#~ "אם אין ברצונך לשלוח אלינו מידע זה, או שאינך רוצה בשירות,\n"
+#~ "עליך ללחוץ על 'ביטול'. לחיצה על 'המשך' פירושה שאנו רשאים\n"
+#~ "לידע אותך אודות עדכוני אבטחה ועדכונים שימושיים דרך דוא\"ל.\n"
+#~ "בנוסף, נאפשר לך ליהנות מהנחות עבור שירותי תמיכה הניתנים\n"
+#~ "בתשלום באתר www.mandrivaexpert.com."
+
+#~ msgid "Connection problem"
+#~ msgstr "ההתחברות נכשלה"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "ישנה בעיה בעת העלאת קבצים, עליך לנסות שנית"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "צור חשבון מנדרייבה-אונליין"
+
+#~ msgid "Greeting:"
+#~ msgstr "קידומת לשם:"
+
+#~ msgid "First name:"
+#~ msgstr "שם פרטי:"
+
+#~ msgid "Last name:"
+#~ msgstr "שם משפחה:"
+
+#~ msgid "Confirm Password:"
+#~ msgstr "אישור סיסמה:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "הסיסמאות אינן תואמות\n"
+#~ "עליך לנסות שנית\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "נא למלא את כל השדות"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "זו אינה כתובת דוא\"ל תקינה!\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "יצירת החשבון כשלה!"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "חשבונך במנדרייבה-אונליין הוקם בהצלחה.\n"
+#~ "עליך ללחוץ על \"המשך\" בכדי להזדהות ולטעון את תצורת מחשבך\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "העלאת הנתונים הסתימה בהצלחה"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr ""
+#~ "מעתה ישלחו לך עדכונים לגבי עדכוני אבטחה\n"
+#~ "ועדכונים הודות למנדרייבה-אונליין."
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "מנדרייבה-אונליין מאפשר לך לעדכן את מחשבך באופן אוטומטי.\n"
+#~ "במערכת שלך תורץ תוכנה באופן סדיר שתחכה לעדכונים.\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "ברכותינו"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "חשבונך במנדרייבה-אונליין הוגדר בהצלחה\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "טעינת התצורה הושלמה בהצלחה"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "חלה תקלה בעת טעינת התצורה"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "ההתקשרות לאתר מנדרייבה-אונליין נכשלה עקב שם משתמש/סיסמה שגויים או הגדרות "
+#~ "לא תקינות של הנתב/חומת האש"

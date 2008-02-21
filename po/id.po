@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2007-10-27 19:40+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
@@ -22,17 +22,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Akan memeriksa update pada %s"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Sistem Anda sudah up-to-date"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -41,48 +41,37 @@ msgstr ""
 "Masalah konfigurasi layanan. Harap perika file log dan kirimkan mail ke "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Harap tunggu, mencari paket yang tersedia..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Update baru tersedia untuk sistem Anda"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "Bundel baru tersedia untuk sistem Anda"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr ""
-"Layanan belum terkonfigurasi. Silahkan klik pada \"Konfigurasikan layanan\""
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Jaringan sedang non-aktif. Harap konfigurasikan jaringan Anda"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Layanan tidak diaktifkan. Silahkan klik pada \"Website Online\""
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "database urpmi terkunci"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Rilis tidak didukung (rilis terlalu lama, atau rilis pengembangan)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -90,7 +79,7 @@ msgstr ""
 "Tidak ditemukan media. Anda harus menambahkan media melalui 'Manajemen Media "
 "Perangkat Lunak'"
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -106,580 +95,132 @@ msgstr ""
 "\n"
 "Lalu jalankan ulang \"%s\"."
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "Aktifkan"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "Kesalahan mengupdate media"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Memeriksa... Update tersedia\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "Paket-paket sudah update"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Gagal membuka basis data rpmdb"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "Installasikan update-update"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "Konfigurasikan layanan"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "Cek Update"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Harap tunggu..."
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "Cek update"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "WebSite Online"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "Konfigurasikan Jaringan"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "Konfigurasi Sekarang!"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Applet Update Mandriva Linux"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "Aksi"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "Konfigurasikan"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "Lihat log"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "Status"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "Tutup"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "Koneksi Jaringan: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "Aktif"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "Non-aktif"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "Pengujian terakhir: "
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "Nama mesin:"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "Update"
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Menjalankan drakconnect\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online tampaknya baru saja diinstall ulang, memuat ulang applet ...."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Menjalankan MandrivaUpdate\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Applet Update Mandriva Linux"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Menghitung update baru...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "Menghubungkan ke"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Terjadi kesalahan"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "Rilis pengembangan tidak didukung oleh layanan"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "Rilis terlalu lama tidak didukung oleh layanan"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "Kondisi tidak diketahui"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Layanan Online dinonaktifkan. Hubungi situs Mandriva Online\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "Kata sandi salah.\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "Aksi, host, atau login salah.\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"Terjadi kesalahan dengan setting jaringan Anda (periksa rute, firewall atau "
-"setting proxy Anda)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Masalah muncul ketika melakukan koneksi ke server, silakan menghubungi tim "
-"pendukung."
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Jawaban dari server Mandriva Online\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem up-to-date\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "Tidak ada pemeriksaan"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "Memeriksa file konfigurasi: Tidak ada\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Memeriksa Jaringan: tampaknya dinonaktifkan\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "Log"
+msgid "Warning"
+msgstr "Peringatan"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "Bersihkan"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "Keterangan..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Hak cipta (C) %s oleh Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online memberikan akses ke layanan web Mandriva."
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "WebSite Online"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "Selalu jalankan ketika pembukaan"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdkonline versi %s\n"
-"Hak cipta (C) %s Mandriva.\n"
-"Ini adalah software bebas dan boleh didistribusikan ulang di bawah syarat "
-"GPL GNU.\n"
-"\n"
-"pemakaian:\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- cetak pesan bantuan ini.\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- namahost.\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- nama negara pengguna. \n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- gunakan mode interaktif.\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- gundakan mode non-interaktif.\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - nama login pengguna.\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- kata sandi pengguna.\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "Mandriva Online"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "Saya sudah memiliki account"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "Saya ingin mendaftar"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "Tuan"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "Nyonya"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "Nona"
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "Membaca konfigurasi\n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"Asisten ini akan menolong Anda meng-upload konfigurasi Anda\n"
-"(paket, konfigurasi perangkat keras) ke database terpusat agar Anda selalu\n"
-"diberi tahu update keamanan dan upgrade yang berguna.\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "Pembuatan atau authentikasi account"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Masukkan login dan kata sandi Mandriva Online serta nama mesin  Anda:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "Alamat email:"
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "Negara:"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "Kata sandi:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "Deskripsi mesin:"
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(Contoh: Komputer Kantor Saya)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Kesalahan"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Nama komputer harus berupa karakter alphanumerik sebanyak 1 - 40"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "Terhubung ke website Mandriva Online..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"Agar mendapat manfaat layanan Mandriva Online,\n"
-"kami akan meng-upload konfigurasi Anda.\n"
-"\n"
-"Wizard kini akan mengirim informasi berikut ke Mandriva:\n"
-"\n"
-"1) daftar paket yang terinstall pada sistem Anda,\n"
-"\n"
-"2) konfigurasi perangkat keras Anda.\n"
-"\n"
-"Jika Anda merasa tak nyaman dengan ide ini, atau tak ingin memanfaatkan\n"
-"layanan ini, tekan 'Batal'. Dengan menekan 'Lanjut', Anda mengizinkan kami\n"
-"memberi tahu Anda tentang update keamanan dan upgrade bermanfaat via email.\n"
-"Tambah lagi, Anda akan mendapat diskon servis di www.mandrivaexpert.com."
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "Masalah koneksi"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Masalah terjadi ketika mengupload file, harap mencoba lagi"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "Buat Account Mandriva Online"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "Salam:"
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "Nama Depan:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "Nama belakang:"
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "Konfirmasi Kata sandi:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"Kata sandi tidak cocok\n"
-"Harap coba lagi!\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "Harap mengisi semua field"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "Alamat mail tak valid!\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "Pembuatan account gagal!"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"Account Mandriva Online berhasil dibuat.\n"
-"Silahkan klik \"Lanjut\" untuk authentikasi dan mengupload konfigurasi Anda\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "Upload Anda sukses!"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr ""
-"Mulai saat ini Anda akan menerima pemberitahuan keamanan dan upgrade\n"
-"dari Mandriva Online."
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Mandriva Online memberi Anda kemampuan update otomatis.\n"
-"Sebuah program akan secara periodik menunggu update baru\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "Selamat"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "Account Mandriva Online Anda telah sukses dikonfigurasi\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "Konfigurasi Anda telah sukses diupload"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "Kesalahan mengupload konfigurasi"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Tidak bisa terhubung ke website Mandriva Online: login/kata sandi salah atau "
-"settingrouter/firewall yang buruk"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -828,6 +369,11 @@ msgstr ""
 "\n"
 "pemakaian:\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- cetak pesan bantuan ini.\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -857,11 +403,6 @@ msgstr ""
 "  --bundel file.bundle\t- parsing dan install paket dari file .bundle "
 "metainfo.\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "Peringatan"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -872,10 +413,20 @@ msgstr ""
 "Anda pertama-tama perlu menginstall sistem pada harddisk dengan wizard 'Live "
 "Install'."
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "Harap tunggu..."
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Persiapan..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "Kesalahan"
 
 #: ../mdkupdate:141
 #, c-format
@@ -887,6 +438,11 @@ msgstr ""
 "Gagal melakukan authentikasi pada server:\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "Terjadi kesalahan"
 
 #: ../mdkupdate:164
 #, c-format
@@ -915,6 +471,311 @@ msgstr "Menginstall paket...\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal meng-update paket dari media update_source.\n"
+
+#~ msgid "New bundles are available for your system"
+#~ msgstr "Bundel baru tersedia untuk sistem Anda"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr ""
+#~ "Layanan belum terkonfigurasi. Silahkan klik pada \"Konfigurasikan layanan"
+#~ "\""
+
+#~ msgid "Configure the service"
+#~ msgstr "Konfigurasikan layanan"
+
+#~ msgid "Check updates"
+#~ msgstr "Cek update"
+
+#~ msgid "Configure Now!"
+#~ msgstr "Konfigurasi Sekarang!"
+
+#~ msgid "Actions"
+#~ msgstr "Aksi"
+
+#~ msgid "Configure"
+#~ msgstr "Konfigurasikan"
+
+#~ msgid "See logs"
+#~ msgstr "Lihat log"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Close"
+#~ msgstr "Tutup"
+
+#~ msgid "Network Connection: "
+#~ msgstr "Koneksi Jaringan: "
+
+#~ msgid "Up"
+#~ msgstr "Aktif"
+
+#~ msgid "Down"
+#~ msgstr "Non-aktif"
+
+#~ msgid "Last check: "
+#~ msgstr "Pengujian terakhir: "
+
+#~ msgid "Machine name:"
+#~ msgstr "Nama mesin:"
+
+#~ msgid "Updates: "
+#~ msgstr "Update"
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "Rilis pengembangan tidak didukung oleh layanan"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "Rilis terlalu lama tidak didukung oleh layanan"
+
+#~ msgid "Unknown state"
+#~ msgstr "Kondisi tidak diketahui"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr "Layanan Online dinonaktifkan. Hubungi situs Mandriva Online\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "Kata sandi salah.\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "Aksi, host, atau login salah.\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr ""
+#~ "Terjadi kesalahan dengan setting jaringan Anda (periksa rute, firewall "
+#~ "atau setting proxy Anda)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr ""
+#~ "Masalah muncul ketika melakukan koneksi ke server, silakan menghubungi "
+#~ "tim pendukung."
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "Jawaban dari server Mandriva Online\n"
+
+#~ msgid "No check"
+#~ msgstr "Tidak ada pemeriksaan"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "Memeriksa file konfigurasi: Tidak ada\n"
+
+#~ msgid "Logs"
+#~ msgstr "Log"
+
+#~ msgid "Clear"
+#~ msgstr "Bersihkan"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdkonline versi %s\n"
+#~ "Hak cipta (C) %s Mandriva.\n"
+#~ "Ini adalah software bebas dan boleh didistribusikan ulang di bawah syarat "
+#~ "GPL GNU.\n"
+#~ "\n"
+#~ "pemakaian:\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- namahost.\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- nama negara pengguna. \n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- gunakan mode interaktif.\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- gundakan mode non-interaktif.\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - nama login pengguna.\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- kata sandi pengguna.\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "Mandriva Online"
+
+#~ msgid "I already have an account"
+#~ msgstr "Saya sudah memiliki account"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "Saya ingin mendaftar"
+
+#~ msgid "Mr."
+#~ msgstr "Tuan"
+
+#~ msgid "Mrs."
+#~ msgstr "Nyonya"
+
+#~ msgid "Ms."
+#~ msgstr "Nona"
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "Membaca konfigurasi\n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "Asisten ini akan menolong Anda meng-upload konfigurasi Anda\n"
+#~ "(paket, konfigurasi perangkat keras) ke database terpusat agar Anda "
+#~ "selalu\n"
+#~ "diberi tahu update keamanan dan upgrade yang berguna.\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "Pembuatan atau authentikasi account"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr ""
+#~ "Masukkan login dan kata sandi Mandriva Online serta nama mesin  Anda:"
+
+#~ msgid "Email address:"
+#~ msgstr "Alamat email:"
+
+#~ msgid "Country"
+#~ msgstr "Negara:"
+
+#~ msgid "Password:"
+#~ msgstr "Kata sandi:"
+
+#~ msgid "Machine description:"
+#~ msgstr "Deskripsi mesin:"
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(Contoh: Komputer Kantor Saya)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "Nama komputer harus berupa karakter alphanumerik sebanyak 1 - 40"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "Terhubung ke website Mandriva Online..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "Agar mendapat manfaat layanan Mandriva Online,\n"
+#~ "kami akan meng-upload konfigurasi Anda.\n"
+#~ "\n"
+#~ "Wizard kini akan mengirim informasi berikut ke Mandriva:\n"
+#~ "\n"
+#~ "1) daftar paket yang terinstall pada sistem Anda,\n"
+#~ "\n"
+#~ "2) konfigurasi perangkat keras Anda.\n"
+#~ "\n"
+#~ "Jika Anda merasa tak nyaman dengan ide ini, atau tak ingin memanfaatkan\n"
+#~ "layanan ini, tekan 'Batal'. Dengan menekan 'Lanjut', Anda mengizinkan "
+#~ "kami\n"
+#~ "memberi tahu Anda tentang update keamanan dan upgrade bermanfaat via "
+#~ "email.\n"
+#~ "Tambah lagi, Anda akan mendapat diskon servis di www.mandrivaexpert.com."
+
+#~ msgid "Connection problem"
+#~ msgstr "Masalah koneksi"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "Masalah terjadi ketika mengupload file, harap mencoba lagi"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "Buat Account Mandriva Online"
+
+#~ msgid "Greeting:"
+#~ msgstr "Salam:"
+
+#~ msgid "First name:"
+#~ msgstr "Nama Depan:"
+
+#~ msgid "Last name:"
+#~ msgstr "Nama belakang:"
+
+#~ msgid "Confirm Password:"
+#~ msgstr "Konfirmasi Kata sandi:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "Kata sandi tidak cocok\n"
+#~ "Harap coba lagi!\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "Harap mengisi semua field"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "Alamat mail tak valid!\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "Pembuatan account gagal!"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "Account Mandriva Online berhasil dibuat.\n"
+#~ "Silahkan klik \"Lanjut\" untuk authentikasi dan mengupload konfigurasi "
+#~ "Anda\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "Upload Anda sukses!"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr ""
+#~ "Mulai saat ini Anda akan menerima pemberitahuan keamanan dan upgrade\n"
+#~ "dari Mandriva Online."
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Mandriva Online memberi Anda kemampuan update otomatis.\n"
+#~ "Sebuah program akan secara periodik menunggu update baru\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "Selamat"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "Account Mandriva Online Anda telah sukses dikonfigurasi\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "Konfigurasi Anda telah sukses diupload"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "Kesalahan mengupload konfigurasi"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "Tidak bisa terhubung ke website Mandriva Online: login/kata sandi salah "
+#~ "atau settingrouter/firewall yang buruk"
 
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- jalankan Mandriva Update.\n"

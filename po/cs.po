@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-09 16:26+0200\n"
+"POT-Creation-Date: 2008-02-21 18:21+0100\n"
 "PO-Revision-Date: 2007-09-08 23:45+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -16,20 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:94
+#: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Aktualizace se zkontrolují v %s"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:97
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Váš systém je plně aktuální"
 
-#: ../mdkapplet:109
+#: ../mdkapplet:103
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -38,54 +39,45 @@ msgstr ""
 "Problém s nastavením služby. Zkontrolujte prosím záznamy a pošlete email na "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:110
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Prosím počkejte, hledám dostupné balíčky..."
 
-#: ../mdkapplet:121
+#: ../mdkapplet:116
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Pro váš systém jsou k dispozici nové aktualizace"
 
-#: ../mdkapplet:127
-#, c-format
-msgid "New bundles are available for your system"
-msgstr "Pro váš systém jsou k dispozici nové produktové balíky"
-
-#: ../mdkapplet:133
-#, c-format
-msgid "Service is not configured. Please click on \"Configure the service\""
-msgstr "Služba není nastavena. Klikněte prosím na \"Nastavit službu\""
-
-#: ../mdkapplet:139
+#: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Síť není dostupná. Nastavte prosím vaši síť"
 
-#: ../mdkapplet:145
+#: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Služba není aktivována. Klikněte prosím na \"Online webové stránky\""
 
-#: ../mdkapplet:151 ../mdkapplet:182
+#: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
 msgstr "databáze urpmi je zamknutá"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
-#: ../mdkapplet:163
+#: ../mdkapplet:146
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nebyl nalezen žádný zdroj software. Je třeba přidat alespoň jeden zdroj "
 "pomocí Správce zdrojů software."
 
-#: ../mdkapplet:169
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -101,583 +93,132 @@ msgstr ""
 "\n"
 "Poté znovu spusťte \"%s\"."
 
-#: ../mdkapplet:174
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr "Povolen"
 
-#: ../mdkapplet:187
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr "Chyba při aktualizaci zdroje"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:185
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Zjišťuji... Aktualizace jsou dostupné\n"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
 msgstr "Balíčky jsou aktuální"
 
-#: ../mdkapplet:212
+#: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Nelze otevřít databázi urpmi"
 
-#: ../mdkapplet:217 ../mdkapplet:324
+#: ../mdkapplet:200
 #, c-format
 msgid "Install updates"
 msgstr "Instalovat aktualizace"
 
-#: ../mdkapplet:218
-#, c-format
-msgid "Configure the service"
-msgstr "Nastavit službu"
-
-#: ../mdkapplet:219
+#: ../mdkapplet:201
 #, c-format
 msgid "Check Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: ../mdkapplet:220 ../mdkapplet:327 ../mdkonline:114 ../mdkonline:155
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Prosím počkejte"
-
-#: ../mdkapplet:220 ../mdkapplet:326 ../mdkapplet:327
-#, c-format
-msgid "Check updates"
-msgstr "Zkontrolovat aktualizace"
-
-#: ../mdkapplet:223 ../mdkapplet:648
-#, c-format
-msgid "Online WebSite"
-msgstr "Online webové stránky"
-
-#: ../mdkapplet:224
+#: ../mdkapplet:202
 #, c-format
 msgid "Configure Network"
 msgstr "Nastavit síť"
 
-#: ../mdkapplet:225
-#, c-format
-msgid "Configure Now!"
-msgstr "Nastavit teď!"
-
-#: ../mdkapplet:313 ../mdkapplet:392
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Aplet pro aktualizace Mandriva Linux"
-
-#: ../mdkapplet:322
-#, c-format
-msgid "Actions"
-msgstr "Akce"
-
-#: ../mdkapplet:325
-#, c-format
-msgid "Configure"
-msgstr "Nastavit"
-
-#: ../mdkapplet:329
-#, c-format
-msgid "See logs"
-msgstr "Prohlížet záznamy"
-
-#: ../mdkapplet:332
-#, c-format
-msgid "Status"
-msgstr "Stav"
-
-#: ../mdkapplet:336 ../mdkapplet:597
-#, c-format
-msgid "Close"
-msgstr "Zavřít"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Network Connection: "
-msgstr "Připojení k síti: "
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Up"
-msgstr "Připojeno"
-
-#: ../mdkapplet:365
-#, c-format
-msgid "Down"
-msgstr "Není"
-
-#: ../mdkapplet:366
-#, c-format
-msgid "Last check: "
-msgstr "Poslední kontrola: "
-
-#: ../mdkapplet:367 ../mdkonline:145
-#, c-format
-msgid "Machine name:"
-msgstr "Název počítače:"
-
-#: ../mdkapplet:368
-#, c-format
-msgid "Updates: "
-msgstr "Aktualizace: "
-
-#: ../mdkapplet:372
+#: ../mdkapplet:283
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Spouští se drakconnect\n"
 
-#: ../mdkapplet:375
+#: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online vypadá, že je přeinstalováno, znovu nahrávám aplet...."
 
-#: ../mdkapplet:383
+#: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Spouští se MandrivaUpdate\n"
 
-#: ../mdkapplet:398
+#: ../mdkapplet:303
+#, c-format
+msgid "Mandriva Linux Updates Applet"
+msgstr "Aplet pro aktualizace Mandriva Linux"
+
+#: ../mdkapplet:308
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Vyhledávám nové aktualizace...\n"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:309
 #, c-format
 msgid "Connecting to"
 msgstr "Připojuji se k"
 
-#: ../mdkapplet:467 ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Stala se chyba"
-
-#: ../mdkapplet:475
-#, c-format
-msgid "Development release not supported by service"
-msgstr "Služba nepodporuje vývojovou verzi"
-
-#: ../mdkapplet:476
-#, c-format
-msgid "Too old release not supported by service"
-msgstr "Služba nepodporuje přiliš starou verzi"
-
-#: ../mdkapplet:477
-#, c-format
-msgid "Unknown state"
-msgstr "Neznámý stav"
-
-#: ../mdkapplet:478
-#, c-format
-msgid "Online services disabled. Contact Mandriva Online site\n"
-msgstr "Online služby jsou vypnuty. Kontaktujte stránky Mandriva Online\n"
-
-#: ../mdkapplet:479
-#, c-format
-msgid "Wrong Password.\n"
-msgstr "Špatné heslo\n"
-
-#: ../mdkapplet:480
-#, c-format
-msgid "Wrong Action or host or login.\n"
-msgstr "Chybná akce nebo počítač nebo přihlášení.\n"
-
-#: ../mdkapplet:481
-#, c-format
-msgid ""
-"Something is wrong with your network settings (check your route, firewall or "
-"proxy settings)\n"
-msgstr ""
-"S vaším nastavením sítě není něco v pořádku (zkontrolujte nastavení "
-"směrování, firewallu nebo proxy)\n"
-
-#: ../mdkapplet:483
-#, c-format
-msgid ""
-"Problem occured while connecting to the server, please contact the support "
-"team"
-msgstr ""
-"Při připojování se k serveru se vyskytl problém, kontaktuje prosím tým "
-"technické podpory"
-
-#: ../mdkapplet:487
-#, c-format
-msgid "Response from Mandriva Online server\n"
-msgstr "Odpověď od serveru Mandriva Online\n"
-
-#: ../mdkapplet:490
+#: ../mdkapplet:386
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systém je aktuální\n"
 
-#: ../mdkapplet:527
-#, c-format
-msgid "No check"
-msgstr "Nezjištěno"
-
-#: ../mdkapplet:541
-#, c-format
-msgid "Checking config file: Not present\n"
-msgstr "Kontroluji soubor s nastavením: Nenalezen\n"
-
-#: ../mdkapplet:544
+#: ../mdkapplet:415
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontroluji síť: zdá se nedostupná\n"
 
-#: ../mdkapplet:587
+#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
 #, c-format
-msgid "Logs"
-msgstr "Záznamy"
+msgid "Warning"
+msgstr "Varování"
 
-#: ../mdkapplet:603
-#, c-format
-msgid "Clear"
-msgstr "Vyčistit"
-
-#: ../mdkapplet:629
+#: ../mdkapplet:468
 #, c-format
 msgid "About..."
 msgstr "O aplikaci..."
 
-#: ../mdkapplet:631
+#: ../mdkapplet:472
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:635
+#: ../mdkapplet:473
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright ©%s by Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:476
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr ""
+"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
-#: ../mdkapplet:655
+#: ../mdkapplet:478
+#, c-format
+msgid "Online WebSite"
+msgstr "Online webové stránky"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:483
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:492
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spustit při startu"
 
-#: ../mdkapplet:657
+#: ../mdkapplet:494
 #, c-format
 msgid "Quit"
 msgstr "Konec"
-
-#: ../mdkonline:58
-#, c-format
-msgid ""
-"mdonline version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
-"\n"
-"usage:\n"
-msgstr ""
-"mdonline verze %s\n"
-"Copyright © %s Mandriva.\n"
-"Toto je volně šiřitelný software a může být šířen v souladu s licencí GNU "
-"GPL.\n"
-"\n"
-"Použití:\n"
-
-#: ../mdkonline:63 ../mdkupdate:73
-#, c-format
-msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- vytiskne tuto nápovědu.\n"
-
-#: ../mdkonline:64
-#, c-format
-msgid "  --box=\t\t\t- hostname.\n"
-msgstr "  --box=\t\t\t- název počítače.\n"
-
-#: ../mdkonline:65
-#, c-format
-msgid "  --country\t\t\t- name of country of the user. \n"
-msgstr "  --country\t\t\t- název země uživatele. \n"
-
-#: ../mdkonline:66
-#, c-format
-msgid "  --interactive\t\t- use the interactive mode.\n"
-msgstr "  --interactive\t\t- použít interaktivní režim.\n"
-
-#: ../mdkonline:67
-#, c-format
-msgid "  --nointeractive\t- use the non-interactive mode.\n"
-msgstr "  --nointeractive\t- použít neinteraktivní režim.\n"
-
-#: ../mdkonline:68
-#, c-format
-msgid "  --login=\t\t     - login name of the user.\n"
-msgstr "  --login=\t\t     - přihlašovací jméno uživatele.\n"
-
-#: ../mdkonline:69
-#, c-format
-msgid "  --pass=\t\t\t- password  of the user.\n"
-msgstr "  --pass=\t\t\t- heslo uživatele.\n"
-
-#: ../mdkonline:87 ../mdkonline:120
-#, c-format
-msgid "Mandriva Online"
-msgstr "Mandriva Online"
-
-#: ../mdkonline:90
-#, c-format
-msgid "I already have an account"
-msgstr "Už mám účet"
-
-#: ../mdkonline:91
-#, c-format
-msgid "I want to subscribe"
-msgstr "Chci se zaregistrovat"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mr."
-msgstr "Pan"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Mrs."
-msgstr "Paní"
-
-#: ../mdkonline:96
-#, c-format
-msgid "Ms."
-msgstr "Slečna"
-
-#: ../mdkonline:114
-#, c-format
-msgid "Reading configuration\n"
-msgstr "Načítám konfiguraci\n"
-
-#: ../mdkonline:123
-#, c-format
-msgid ""
-"This assistant will help you to upload your configuration\n"
-"(packages, hardware configuration) to a centralized database in\n"
-"order to keep you informed about security updates and useful upgrades.\n"
-msgstr ""
-"Tento průvodce umožní nahrát konfiguraci\n"
-"(konfigurace hardware, seznam balíčků) do centrální databáze,\n"
-"kdy budete ihned informováni o všech bezpečnostních a dalších\n"
-"potřebných aktualizacích.\n"
-
-#: ../mdkonline:131
-#, c-format
-msgid "Account creation or authentication"
-msgstr "Vytvoření nebo ověření účtu"
-
-#: ../mdkonline:136
-#, c-format
-msgid "Enter your Mandriva Online login, password and machine name:"
-msgstr "Zadejte jméno, heslo a název počítače pro Mandriva Online:"
-
-#: ../mdkonline:142 ../mdkonline:195
-#, c-format
-msgid "Email address:"
-msgstr "Emailová adresa:"
-
-#: ../mdkonline:143
-#, c-format
-msgid "Country"
-msgstr "Země"
-
-#: ../mdkonline:144 ../mdkonline:196
-#, c-format
-msgid "Password:"
-msgstr "Heslo:"
-
-#: ../mdkonline:146
-#, c-format
-msgid "Machine description:"
-msgstr "Popis počítače:"
-
-#: ../mdkonline:147
-#, c-format
-msgid "(Ex: My Home Office's Computer)"
-msgstr "(Např.: Počítač v mé domácí kanceláři)"
-
-#: ../mdkonline:152 ../mdkonline:159 ../mdkonline:180 ../mdkonline:204
-#: ../mdkonline:208 ../mdkonline:212 ../mdkonline:217 ../mdkupdate:141
-#: ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Chyba"
-
-#: ../mdkonline:152
-#, c-format
-msgid "Machine name must be 1 to 40 alphanumerical characters"
-msgstr "Název počítače musí být dlouhý 1 až 40 alfanumerických znaků"
-
-#: ../mdkonline:155
-#, c-format
-msgid "Connecting to Mandriva Online website..."
-msgstr "Připojuji se k webovým stránkám Mandriva Online..."
-
-#: ../mdkonline:167
-#, c-format
-msgid ""
-"In order to benefit from Mandriva Online services,\n"
-"we are about to upload your configuration.\n"
-"\n"
-"The Wizard will now send the following information to Mandriva:\n"
-"\n"
-"1) the list of packages you have installed on your system,\n"
-"\n"
-"2) your hardware configuration.\n"
-"\n"
-"If you feel uncomfortable by that idea, or do not want to benefit from this "
-"service,\n"
-"please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-"informed\n"
-"about security updates and useful upgrades via personalized email alerts.\n"
-"Furthermore, you benefit from discounted paid support services on\n"
-"www.mandrivaexpert.com."
-msgstr ""
-"Pokud chcete využívat službu Mandriva Online,\n"
-"je potřebné zaslat na server vaši konfiguraci.\n"
-"\n"
-"Průvodce nyní pošle následující informace do společnosti Mandriva:\n"
-"\n"
-"1) seznam balíčků, které máte nainstalovány na počítači,\n"
-"\n"
-"2) vaši konfiguraci hardware.\n"
-"\n"
-"Pokud s tím nesouhlasíte, nebo nechcete využít tuto službu,\n"
-"stiskněte tlačítko 'Zrušit'. Pokud stisknete tlačítko 'Další', dáváte nám "
-"možnost vás\n"
-"informovat o bezpečnostních nebo užitečných aktualizacích pomocí\n"
-"personalizovaného emailového upozornění.\n"
-"Můžete také využít snížených cen služeb placené podpory na\n"
-"www.mandrivaexpert.com."
-
-#: ../mdkonline:180
-#, c-format
-msgid "Connection problem"
-msgstr "Problémy při spojení"
-
-#: ../mdkonline:180
-#, c-format
-msgid "Problem occurs when uploading files, please try again"
-msgstr "Při nahrávání souborů se vyskytl problém, zkuste to prosím znovu"
-
-#: ../mdkonline:187
-#, c-format
-msgid "Create a Mandriva Online Account"
-msgstr "Vytvořit účet na Mandriva Online"
-
-#. -PO: that is for things like "Mr", "Ms",...
-#: ../mdkonline:192
-#, c-format
-msgid "Greeting:"
-msgstr "Pozdrav:"
-
-#: ../mdkonline:193
-#, c-format
-msgid "First name:"
-msgstr "Jméno:"
-
-#: ../mdkonline:194
-#, c-format
-msgid "Last name:"
-msgstr "Příjmení:"
-
-#: ../mdkonline:197
-#, c-format
-msgid "Confirm Password:"
-msgstr "Potvrdit heslo:"
-
-#: ../mdkonline:204
-#, c-format
-msgid ""
-"The passwords do not match\n"
-" Please try again\n"
-msgstr ""
-"Hesla se neshodují\n"
-"Zkuste to prosím znovu\n"
-
-#: ../mdkonline:208
-#, c-format
-msgid "Please fill in each field"
-msgstr "Vyplňte prosím každé pole"
-
-#: ../mdkonline:212
-#, c-format
-msgid "Not a valid mail address!\n"
-msgstr "Neplatná emailová adresa!\n"
-
-#: ../mdkonline:217
-#, c-format
-msgid "Creating account failed!"
-msgstr "Vytvoření účtu selhalo!"
-
-#: ../mdkonline:225
-#, c-format
-msgid ""
-"Mandriva Online Account successfully created.\n"
-"Please click \"Next\" to authenticate and upload your configuration\n"
-msgstr ""
-"Účet na Mandriva Online byl úspěšně vytvořen.\n"
-"Klikněte prosím na \"Další\" a přihlaste se a nahrajte své nastavení\n"
-
-#: ../mdkonline:229
-#, c-format
-msgid "Your upload was successful!"
-msgstr "Zaslání informací proběhlo úspěšně!"
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"From now you will receive on security and updates \n"
-"announcements thanks to Mandriva Online."
-msgstr ""
-"Od této chvíle budete díky službě Mandriva Online\n"
-"informováni o bezpečnostních a dalších aktualizacích."
-
-#: ../mdkonline:229
-#, c-format
-msgid ""
-"Mandriva Online offers you the ability to automate the updates.\n"
-"A program will run regulary in your system waiting for new updates\n"
-msgstr ""
-"Mandriva Online nabízí možnost automatizovat aktualizace.\n"
-"Program, který bude běžet v systému a čekat na aktualizace\n"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Congratulations"
-msgstr "Gratulujeme"
-
-#: ../mdkonline:238
-#, c-format
-msgid "Your Mandriva Online account has been successfully configured\n"
-msgstr "Váš účet na Mandriva Online byl úspěšně nastaven\n"
-
-#: ../mdkonline:253
-#, c-format
-msgid "Configuration uploaded successfully"
-msgstr "Informace o nastavení byly poslány úspěšně"
-
-#: ../mdkonline:254
-#, c-format
-msgid "Problem uploading configuration"
-msgstr "Problém při posílání nastavení"
-
-#: ../mdkonline:256
-#, c-format
-msgid ""
-"Cannot connect to Mandriva Online website: wrong login/password or router/"
-"firewall bad settings"
-msgstr ""
-"Nelze se připojit k webovým stránkám mandrivaonline: chybné přihlášení či "
-"heslo nebo špatně nastavený firewall či router"
 
 #: ../mdkonline.pm:207
 #, c-format
@@ -826,6 +367,11 @@ msgstr ""
 "\n"
 "Použití:\n"
 
+#: ../mdkupdate:73
+#, c-format
+msgid "  --help\t\t- print this help message.\n"
+msgstr "  --help\t\t- vytiskne tuto nápovědu.\n"
+
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
@@ -855,11 +401,6 @@ msgstr ""
 "  --bundle soubor.bundle\t- zpracovat a instalovat balíček z metasouboru ."
 "bundle.\n"
 
-#: ../mdkupdate:118 ../mdkupdate:164
-#, c-format
-msgid "Warning"
-msgstr "Varování"
-
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
@@ -870,10 +411,20 @@ msgstr ""
 "Nejprve musíte instalovat systém na váš pevný disk pomocí průvodce 'Live "
 "Install'."
 
+#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
+#, c-format
+msgid "Please wait"
+msgstr "Prosím počkejte"
+
 #: ../mdkupdate:123 ../mdkupdate:174
 #, c-format
 msgid "Preparing..."
 msgstr "Připravuji..."
+
+#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
+#, c-format
+msgid "Error"
+msgstr "Chyba"
 
 #: ../mdkupdate:141
 #, c-format
@@ -885,6 +436,11 @@ msgstr ""
 "Selhalo ověření na serveru s produktovými balíky:\n"
 "\n"
 "%s"
+
+#: ../mdkupdate:159 ../mdkupdate:188
+#, c-format
+msgid "An error occurred"
+msgstr "Stala se chyba"
 
 #: ../mdkupdate:164
 #, c-format
@@ -914,3 +470,304 @@ msgstr "Instaluji balíčky...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
+#~ msgid "New bundles are available for your system"
+#~ msgstr "Pro váš systém jsou k dispozici nové produktové balíky"
+
+#~ msgid "Service is not configured. Please click on \"Configure the service\""
+#~ msgstr "Služba není nastavena. Klikněte prosím na \"Nastavit službu\""
+
+#~ msgid "Configure the service"
+#~ msgstr "Nastavit službu"
+
+#~ msgid "Check updates"
+#~ msgstr "Zkontrolovat aktualizace"
+
+#~ msgid "Configure Now!"
+#~ msgstr "Nastavit teď!"
+
+#~ msgid "Actions"
+#~ msgstr "Akce"
+
+#~ msgid "Configure"
+#~ msgstr "Nastavit"
+
+#~ msgid "See logs"
+#~ msgstr "Prohlížet záznamy"
+
+#~ msgid "Status"
+#~ msgstr "Stav"
+
+#~ msgid "Close"
+#~ msgstr "Zavřít"
+
+#~ msgid "Network Connection: "
+#~ msgstr "Připojení k síti: "
+
+#~ msgid "Up"
+#~ msgstr "Připojeno"
+
+#~ msgid "Down"
+#~ msgstr "Není"
+
+#~ msgid "Last check: "
+#~ msgstr "Poslední kontrola: "
+
+#~ msgid "Machine name:"
+#~ msgstr "Název počítače:"
+
+#~ msgid "Updates: "
+#~ msgstr "Aktualizace: "
+
+#~ msgid "Development release not supported by service"
+#~ msgstr "Služba nepodporuje vývojovou verzi"
+
+#~ msgid "Too old release not supported by service"
+#~ msgstr "Služba nepodporuje přiliš starou verzi"
+
+#~ msgid "Unknown state"
+#~ msgstr "Neznámý stav"
+
+#~ msgid "Online services disabled. Contact Mandriva Online site\n"
+#~ msgstr "Online služby jsou vypnuty. Kontaktujte stránky Mandriva Online\n"
+
+#~ msgid "Wrong Password.\n"
+#~ msgstr "Špatné heslo\n"
+
+#~ msgid "Wrong Action or host or login.\n"
+#~ msgstr "Chybná akce nebo počítač nebo přihlášení.\n"
+
+#~ msgid ""
+#~ "Something is wrong with your network settings (check your route, firewall "
+#~ "or proxy settings)\n"
+#~ msgstr ""
+#~ "S vaším nastavením sítě není něco v pořádku (zkontrolujte nastavení "
+#~ "směrování, firewallu nebo proxy)\n"
+
+#~ msgid ""
+#~ "Problem occured while connecting to the server, please contact the "
+#~ "support team"
+#~ msgstr ""
+#~ "Při připojování se k serveru se vyskytl problém, kontaktuje prosím tým "
+#~ "technické podpory"
+
+#~ msgid "Response from Mandriva Online server\n"
+#~ msgstr "Odpověď od serveru Mandriva Online\n"
+
+#~ msgid "No check"
+#~ msgstr "Nezjištěno"
+
+#~ msgid "Checking config file: Not present\n"
+#~ msgstr "Kontroluji soubor s nastavením: Nenalezen\n"
+
+#~ msgid "Logs"
+#~ msgstr "Záznamy"
+
+#~ msgid "Clear"
+#~ msgstr "Vyčistit"
+
+#~ msgid ""
+#~ "mdonline version %s\n"
+#~ "Copyright (C) %s Mandriva.\n"
+#~ "This is free software and may be redistributed under the terms of the GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "usage:\n"
+#~ msgstr ""
+#~ "mdonline verze %s\n"
+#~ "Copyright © %s Mandriva.\n"
+#~ "Toto je volně šiřitelný software a může být šířen v souladu s licencí GNU "
+#~ "GPL.\n"
+#~ "\n"
+#~ "Použití:\n"
+
+#~ msgid "  --box=\t\t\t- hostname.\n"
+#~ msgstr "  --box=\t\t\t- název počítače.\n"
+
+#~ msgid "  --country\t\t\t- name of country of the user. \n"
+#~ msgstr "  --country\t\t\t- název země uživatele. \n"
+
+#~ msgid "  --interactive\t\t- use the interactive mode.\n"
+#~ msgstr "  --interactive\t\t- použít interaktivní režim.\n"
+
+#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
+#~ msgstr "  --nointeractive\t- použít neinteraktivní režim.\n"
+
+#~ msgid "  --login=\t\t     - login name of the user.\n"
+#~ msgstr "  --login=\t\t     - přihlašovací jméno uživatele.\n"
+
+#~ msgid "  --pass=\t\t\t- password  of the user.\n"
+#~ msgstr "  --pass=\t\t\t- heslo uživatele.\n"
+
+#~ msgid "Mandriva Online"
+#~ msgstr "Mandriva Online"
+
+#~ msgid "I already have an account"
+#~ msgstr "Už mám účet"
+
+#~ msgid "I want to subscribe"
+#~ msgstr "Chci se zaregistrovat"
+
+#~ msgid "Mr."
+#~ msgstr "Pan"
+
+#~ msgid "Mrs."
+#~ msgstr "Paní"
+
+#~ msgid "Ms."
+#~ msgstr "Slečna"
+
+#~ msgid "Reading configuration\n"
+#~ msgstr "Načítám konfiguraci\n"
+
+#~ msgid ""
+#~ "This assistant will help you to upload your configuration\n"
+#~ "(packages, hardware configuration) to a centralized database in\n"
+#~ "order to keep you informed about security updates and useful upgrades.\n"
+#~ msgstr ""
+#~ "Tento průvodce umožní nahrát konfiguraci\n"
+#~ "(konfigurace hardware, seznam balíčků) do centrální databáze,\n"
+#~ "kdy budete ihned informováni o všech bezpečnostních a dalších\n"
+#~ "potřebných aktualizacích.\n"
+
+#~ msgid "Account creation or authentication"
+#~ msgstr "Vytvoření nebo ověření účtu"
+
+#~ msgid "Enter your Mandriva Online login, password and machine name:"
+#~ msgstr "Zadejte jméno, heslo a název počítače pro Mandriva Online:"
+
+#~ msgid "Email address:"
+#~ msgstr "Emailová adresa:"
+
+#~ msgid "Country"
+#~ msgstr "Země"
+
+#~ msgid "Password:"
+#~ msgstr "Heslo:"
+
+#~ msgid "Machine description:"
+#~ msgstr "Popis počítače:"
+
+#~ msgid "(Ex: My Home Office's Computer)"
+#~ msgstr "(Např.: Počítač v mé domácí kanceláři)"
+
+#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
+#~ msgstr "Název počítače musí být dlouhý 1 až 40 alfanumerických znaků"
+
+#~ msgid "Connecting to Mandriva Online website..."
+#~ msgstr "Připojuji se k webovým stránkám Mandriva Online..."
+
+#~ msgid ""
+#~ "In order to benefit from Mandriva Online services,\n"
+#~ "we are about to upload your configuration.\n"
+#~ "\n"
+#~ "The Wizard will now send the following information to Mandriva:\n"
+#~ "\n"
+#~ "1) the list of packages you have installed on your system,\n"
+#~ "\n"
+#~ "2) your hardware configuration.\n"
+#~ "\n"
+#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
+#~ "this service,\n"
+#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
+#~ "informed\n"
+#~ "about security updates and useful upgrades via personalized email "
+#~ "alerts.\n"
+#~ "Furthermore, you benefit from discounted paid support services on\n"
+#~ "www.mandrivaexpert.com."
+#~ msgstr ""
+#~ "Pokud chcete využívat službu Mandriva Online,\n"
+#~ "je potřebné zaslat na server vaši konfiguraci.\n"
+#~ "\n"
+#~ "Průvodce nyní pošle následující informace do společnosti Mandriva:\n"
+#~ "\n"
+#~ "1) seznam balíčků, které máte nainstalovány na počítači,\n"
+#~ "\n"
+#~ "2) vaši konfiguraci hardware.\n"
+#~ "\n"
+#~ "Pokud s tím nesouhlasíte, nebo nechcete využít tuto službu,\n"
+#~ "stiskněte tlačítko 'Zrušit'. Pokud stisknete tlačítko 'Další', dáváte nám "
+#~ "možnost vás\n"
+#~ "informovat o bezpečnostních nebo užitečných aktualizacích pomocí\n"
+#~ "personalizovaného emailového upozornění.\n"
+#~ "Můžete také využít snížených cen služeb placené podpory na\n"
+#~ "www.mandrivaexpert.com."
+
+#~ msgid "Connection problem"
+#~ msgstr "Problémy při spojení"
+
+#~ msgid "Problem occurs when uploading files, please try again"
+#~ msgstr "Při nahrávání souborů se vyskytl problém, zkuste to prosím znovu"
+
+#~ msgid "Create a Mandriva Online Account"
+#~ msgstr "Vytvořit účet na Mandriva Online"
+
+#~ msgid "Greeting:"
+#~ msgstr "Pozdrav:"
+
+#~ msgid "First name:"
+#~ msgstr "Jméno:"
+
+#~ msgid "Last name:"
+#~ msgstr "Příjmení:"
+
+#~ msgid "Confirm Password:"
+#~ msgstr "Potvrdit heslo:"
+
+#~ msgid ""
+#~ "The passwords do not match\n"
+#~ " Please try again\n"
+#~ msgstr ""
+#~ "Hesla se neshodují\n"
+#~ "Zkuste to prosím znovu\n"
+
+#~ msgid "Please fill in each field"
+#~ msgstr "Vyplňte prosím každé pole"
+
+#~ msgid "Not a valid mail address!\n"
+#~ msgstr "Neplatná emailová adresa!\n"
+
+#~ msgid "Creating account failed!"
+#~ msgstr "Vytvoření účtu selhalo!"
+
+#~ msgid ""
+#~ "Mandriva Online Account successfully created.\n"
+#~ "Please click \"Next\" to authenticate and upload your configuration\n"
+#~ msgstr ""
+#~ "Účet na Mandriva Online byl úspěšně vytvořen.\n"
+#~ "Klikněte prosím na \"Další\" a přihlaste se a nahrajte své nastavení\n"
+
+#~ msgid "Your upload was successful!"
+#~ msgstr "Zaslání informací proběhlo úspěšně!"
+
+#~ msgid ""
+#~ "From now you will receive on security and updates \n"
+#~ "announcements thanks to Mandriva Online."
+#~ msgstr ""
+#~ "Od této chvíle budete díky službě Mandriva Online\n"
+#~ "informováni o bezpečnostních a dalších aktualizacích."
+
+#~ msgid ""
+#~ "Mandriva Online offers you the ability to automate the updates.\n"
+#~ "A program will run regulary in your system waiting for new updates\n"
+#~ msgstr ""
+#~ "Mandriva Online nabízí možnost automatizovat aktualizace.\n"
+#~ "Program, který bude běžet v systému a čekat na aktualizace\n"
+
+#~ msgid "Congratulations"
+#~ msgstr "Gratulujeme"
+
+#~ msgid "Your Mandriva Online account has been successfully configured\n"
+#~ msgstr "Váš účet na Mandriva Online byl úspěšně nastaven\n"
+
+#~ msgid "Configuration uploaded successfully"
+#~ msgstr "Informace o nastavení byly poslány úspěšně"
+
+#~ msgid "Problem uploading configuration"
+#~ msgstr "Problém při posílání nastavení"
+
+#~ msgid ""
+#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
+#~ "firewall bad settings"
+#~ msgstr ""
+#~ "Nelze se připojit k webovým stránkám mandrivaonline: chybné přihlášení či "
+#~ "heslo nebo špatně nastavený firewall či router"
