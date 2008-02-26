@@ -39,7 +39,6 @@ use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::Notify '-init', 'mdkapplet';
-use Rpmdrake::open_db;
 
 # POSIX unmasks the sigprocmask properly
 my $sigset = POSIX::SigSet->new;
@@ -332,7 +331,8 @@ sub silentCheck() {
         require urpm;
         require urpm::lock;
         # so that get_inactive_backport_media() doesn't vivify $urpm->{media}:
-        my $urpm = fast_open_urpmi_db();
+        require Rpmdrake::open_db;
+        my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
         {
             local $urpm->{fatal} = sub {
                 print "Fatal: @_\n";
