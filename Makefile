@@ -53,8 +53,6 @@ install: all
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.update
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
 
-# rules to build a test rpm
-
 cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
 
@@ -64,8 +62,6 @@ localcopy: clean
 tar:
 	tar cvfY ../$(PACKAGE)-$(VERSION).tar.lzma $(PACKAGE)-$(VERSION)
 	rm -rf $(PACKAGE)-$(VERSION)
-
-# rules to build a distributable rpm
 
 dist: cleandist localcopy tar
 
