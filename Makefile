@@ -42,7 +42,7 @@ install: all
 	install -m644 icons/$(NAME)48.png $(ICONSDIR)/large/$(NAME).png
 	install -m644 pixmaps/*.png $(PIXDIR)/pixmaps
 	install -m644 mdkonline.pm $(FBLIBDIR)
-	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
+	for d in $(SUBDIRS); do make -C $$d $@; done
 # mime
 	install -m644 mdkonline.xml $(DATADIR)/mime/packages/mdkonline.xml
 	mkdir -p $(DATADIR)/mimelnk/application/
