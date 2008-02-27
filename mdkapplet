@@ -445,7 +445,7 @@ sub shouldStart() {
 }
 
 sub setState {
-    my $state_type = shift;
+    my ($state_type) = @_;
     my $checkme;
     my $arr = $state{$state_type}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
