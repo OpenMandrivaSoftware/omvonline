@@ -1,7 +1,8 @@
+# translation of mdkonline-sv.po to Swedish
 # translation of mdkonline-sv.po to
 # mdkonline-sv - Swedish Translation
 #
-# Copyright (C) 2001,2002,2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2001,2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 #
 # Mattias Newzella <newzella@linux.nu>, 2001, 2002,2003.
 # Cecilia Johnsson <datb@swipnet.se>, 2002.
@@ -9,15 +10,15 @@
 # Mattias Dahlberg <voz@home.se>, 2002.
 # Kenneth Krekula <kenneth.krekula@kiruna.se>, 2004, 2005, 2007.
 # Lars Westergren <lars.westergren@home.se>, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2005, 2006.
+# Thomas Backlund <tmb@mandriva.org>, 2005, 2006, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-21 18:21+0100\n"
-"PO-Revision-Date: 2007-03-20 19:52+0100\n"
-"Last-Translator: Kenneth Krekula <kenneth.krekula@kiruna.se>\n"
-"Language-Team:  <sv@li.org>\n"
+"PO-Revision-Date: 2008-02-27 17:26+0200\n"
+"Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
+"Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,9 +27,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:88
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Kontrollera om det finns uppdateringar"
+msgstr "Kontrollerar om det finns uppdateringar vid %s"
 
 #: ../mdkapplet:97
 #, c-format
@@ -72,17 +73,15 @@ msgstr "urpmi-databas låst"
 #: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Denna version stöds inte (för gammal version, eller utvecklingsversion)"
+msgstr "Denna version stöds inte (för gammal version, eller utvecklingsversion)"
 
 #: ../mdkapplet:146
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Inget medium hittat. Du måste lägga till något media i 'Programhanteraren för källor'."
 
 #: ../mdkapplet:152
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -93,9 +92,9 @@ msgid ""
 msgstr ""
 "Du har redan minst ett media för uppdatering konfigurerat, men\n"
 "samtliga är för närvarande inaktiva. Du bör köra 'Programhanteraren\n"
-"för källor' och aktivera minst ett (titta i kolumnen Aktiverad).\n"
+"för källor' och aktivera minst ett (titta i kolumnen \"%s\").\n"
 "\n"
-"Starta sedan om '%s'."
+"Starta sedan om \"%s\"."
 
 #: ../mdkapplet:157
 #, c-format
@@ -211,7 +210,7 @@ msgstr "Online webbsajt"
 #: ../mdkapplet:483
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "Thomas Backlund <tmb@mandriva.org>\n"
 
 #: ../mdkapplet:492
 #, c-format
@@ -472,321 +471,3 @@ msgstr "Installerar paket...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kunde ej uppdatera paket från update_source källan.\n"
 
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Nya samlingar finns tillgängliga för ditt system"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Tjänsten är ej konfigurerad. Klicka på \"Konfigurera tjänsten\""
-
-#~ msgid "Configure the service"
-#~ msgstr "Konfigurera tjänsten"
-
-#~ msgid "Check updates"
-#~ msgstr "Kontrollera om det finns uppdateringar"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Konfigurera nu!"
-
-#~ msgid "Actions"
-#~ msgstr "Åtgärder"
-
-#~ msgid "Configure"
-#~ msgstr "Konfigurera"
-
-#~ msgid "See logs"
-#~ msgstr "Kontrollera loggar"
-
-#~ msgid "Status"
-#~ msgstr "Status"
-
-#~ msgid "Close"
-#~ msgstr "Stäng"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Nätverksanslutning: "
-
-#~ msgid "Up"
-#~ msgstr "Upp"
-
-#~ msgid "Down"
-#~ msgstr "Ner"
-
-#~ msgid "Last check: "
-#~ msgstr "Sist kontrollerat: "
-
-#~ msgid "Machine name:"
-#~ msgstr "Datornamn:"
-
-#~ msgid "Updates: "
-#~ msgstr "Uppdateringar: "
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Utvecklingsversion stöds inte av tjänsten"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "För gammal version för att stödjas av tjänsten"
-
-#~ msgid "Unknown state"
-#~ msgstr "Okänd status"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr "Online tjänster avaktiverade. Kontakta Mandriva Online\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Felaktigt lösenord.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Fel åtgärd, värd eller login.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Något verkar fel med dina nätverksinställningar (kontrollera dina "
-#~ "routing-, brandväggs- och proxyinställningar)\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Ett problem uppstod när servern skulle kontaktas, kontakta supporten."
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Svar från Mandriva Online server\n"
-
-#~ msgid "No check"
-#~ msgstr "Ingen kontroll"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "Kontrollerar konfigurationsfil: Ej tillgänglig\n"
-
-#~ msgid "Logs"
-#~ msgstr "Loggar"
-
-#~ msgid "Clear"
-#~ msgstr "Töm"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline version %s\n"
-#~ "Copyright © %s Mandriva.\n"
-#~ "Det här är fri programvara och får distribueras enligt villkoren i GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "användning:\n"
-
-#~ msgid "  --box=\t\t\t- hostname.\n"
-#~ msgstr "  --box=\t\t\t- maskinnamn.\n"
-
-#~ msgid "  --country\t\t\t- name of country of the user. \n"
-#~ msgstr "  --country\t\t\t- namnet på användarens land. \n"
-
-#~ msgid "  --interactive\t\t- use the interactive mode.\n"
-#~ msgstr "  --interactive\t\t- amvänd interaktivt läge.\n"
-
-#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
-#~ msgstr "  --nointeractive\t- använd icke-interaktivt läge.\n"
-
-#~ msgid "  --login=\t\t     - login name of the user.\n"
-#~ msgstr "  --login=\t\t     - användarens inloggningsnamn.\n"
-
-#~ msgid "  --pass=\t\t\t- password  of the user.\n"
-#~ msgstr "  --pass=\t\t\t- användarens lösenord.\n"
-
-#~ msgid "Mandriva Online"
-#~ msgstr "Mandriva Online"
-
-#~ msgid "I already have an account"
-#~ msgstr "Jag har redan ett konto"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "Jag vill prenumerera"
-
-#~ msgid "Mr."
-#~ msgstr "Herr"
-
-#~ msgid "Mrs."
-#~ msgstr "Fru"
-
-#~ msgid "Ms."
-#~ msgstr "Fru"
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Läser konfiguration\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Den här assistenten kommer hjälpa dig att ladda upp din\n"
-#~ "konfiguration (paket, hårdvarukonfiguration) till en centraliserad\n"
-#~ "databas för att kunna hålla dig informerad om säkerhetsuppdateringar\n"
-#~ "och andra användbara uppdateringar.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "Skapar eller autentiserar konto"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr "Ange ditt Mandriva Online-användarnamn, lösenord och datornamn:"
-
-#~ msgid "Email address:"
-#~ msgstr "E-postadress"
-
-#~ msgid "Country"
-#~ msgstr "Land"
-
-#~ msgid "Password:"
-#~ msgstr "Lösenord:"
-
-#~ msgid "Machine description:"
-#~ msgstr "Datorbeskrivning:"
-
-#~ msgid "(Ex: My Home Office's Computer)"
-#~ msgstr "(Ex: Min Hemkontor-dator)"
-
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr "Maskinens namn måste vara mellan 1 och 40 alfanumeriska tecken"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Kontaktar Mandriva Onlines websajt"
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "För att dra nytta av fördelarna hos Mandriva Online\n"
-#~ "kommer vi att sända över din konfiguration.\n"
-#~ "\n"
-#~ "Guiden kommer nu att sända följande information till Mandriva:\n"
-#~ "\n"
-#~ "1) listan på de paket du har installerat på systemet,\n"
-#~ "\n"
-#~ "2) din hårdvarukonfiguration.\n"
-#~ "\n"
-#~ "Om du inte känner dig komfortabel med denna idé, eller inte vill dra "
-#~ "nytta av fördelarna med denna tjänst,\n"
-#~ "klicka på \"Avbryt\". Genom att klicka på \"Nästa\", tillåter du oss att "
-#~ "hålla dig informerad\n"
-#~ "om säkerhetsuppdateringar och användbara uppgraderingar via personligt "
-#~ "utformad e-post.\n"
-#~ "Du kan även dra nytta av de rabbatterade supporttjänsterna på \n"
-#~ "www.mandrivaexpert.com."
-
-#~ msgid "Connection problem"
-#~ msgstr "Anslutningsproblem"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "Ett fel inträffade när filerna laddades upp, var vänlig försök igen"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Skapa ett Mandriva Online konto"
-
-#~ msgid "Greeting:"
-#~ msgstr "Hälsning:"
-
-#~ msgid "First name:"
-#~ msgstr "Förnamn:"
-
-#~ msgid "Last name:"
-#~ msgstr "Efternamn:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Bekräfta lösenord:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Lösenorden är inte lika.\n"
-#~ " Försök igen.\n"
-
-#~ msgid "Please fill in each field"
-#~ msgstr "Var vänlig  och fyll i alla fält"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Inte en giltig e-postadress.\n"
-
-#~ msgid "Creating account failed!"
-#~ msgstr "Skapande av konto misslyckades!"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "Mandriva Online konto skapades.\n"
-#~ "Klicka \"Nästa\" för att autentisera och ladda upp din konfiguration\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Uppladdningen lyckades!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "Från och med nu kommer du att få säkerhets-\n"
-#~ "och uppdateringsannonseringar tack vare Mandriva Online."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online erbjuder dig möjligheten att automatisera "
-#~ "uppdateringarna.\n"
-#~ "Ett program kommer regelbundet att köras på systemet och vänta på nya "
-#~ "uppdateringar.\n"
-
-#~ msgid "Congratulations"
-#~ msgstr "Gratulerar"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "Konfigureringen av ditt Mandriva Online-konto lyckades\n"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Uppladdning av konfigurationen klar"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Problem uppstod vid konfigurationens uppladdning"
-
-#~ msgid ""
-#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
-#~ "firewall bad settings"
-#~ msgstr ""
-#~ "Kan ej ansluta till Mandriva Onlines webbsajt: Fel användarnamn/lösenord, "
-#~ "eller felaktiga inställningar för router/brandvägg."
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- starta Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Kan inte hämta lista på uppdateringar: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Välj de paket som ska installeras och tryck Ok"
-
-#~ msgid "Launching mdkupdate --applet\n"
-#~ msgstr "Startar mdkupdate --applet\n"
-
-#~ msgid "%s database locked"
-#~ msgstr "%s databas låst"
