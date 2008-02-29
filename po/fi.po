@@ -1,19 +1,19 @@
-# mdkonline-fi - Finnish Translation
+# translation of mdkonline-fi.po to Finnish
 #
-# Copyright (C) 2002,2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandriva
 #
 #
 # Matias Griese <mahagr@utu.fi>, 2002.
 # Esa Linna <denzo@mbnet.fi>, 2004.
 # Thomas Backlund <tmb@mandrake.org>, 2002, 2003, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2005, 2006.
+# Thomas Backlund <tmb@mandriva.org>, 2005, 2006, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline-fi - Mandriva 2007 Release\n"
+"Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-02-21 18:21+0100\n"
-"PO-Revision-Date: 2006-08-27 14:38+0300\n"
+"PO-Revision-Date: 2008-02-29 18:41+0200\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,9 +24,9 @@ msgstr ""
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:88
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Tarkista päivitykset"
+msgstr "Tarkistetaan päivitykset kello %s"
 
 #: ../mdkapplet:97
 #, c-format
@@ -63,7 +63,7 @@ msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Palvelu ei ole otettu käyttöön. Paina \"Online Webbisivusto\""
 
 #: ../mdkapplet:134 ../mdkapplet:165
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-tietokanta lukittu"
 
@@ -74,12 +74,11 @@ msgstr "Jakelu ei tuettu (liian vanha jakelu, tai kehitysjakelu)"
 
 #: ../mdkapplet:146
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Lähteitä ei löydetty. Sinun pitää lisätä joitakin käyttäen 'Ojelmistolähteiden hallinta'."
 
 #: ../mdkapplet:152
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -91,9 +90,9 @@ msgstr ""
 "Olet jo määrittänyt ainakin yhden päivityslähteen, mutta\n"
 "kaikki ovat tällä hetkellä pois käytöstä. Sinun pitäisi ottaa\n"
 "käyttöön ainakin yksi lähteistä Ohjelmistolähteiden hallinnassa\n"
-"(valitse sen Käytössä?-valinta)\n"
+"(valitse sen \"%s\" sarakkeessa)\n"
 "\n"
-"Käynnistä tämän jälkeen %s uudelleen."
+"Käynnistä tämän jälkeen \"%s\" uudelleen."
 
 #: ../mdkapplet:157
 #, c-format
@@ -103,7 +102,7 @@ msgstr "Käytössä"
 #: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
-msgstr ""
+msgstr "Virhe lähteiden päivityksessä."
 
 #: ../mdkapplet:185
 #, c-format
@@ -113,12 +112,12 @@ msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
 #: ../mdkapplet:190
 #, c-format
 msgid "Packages are up to date"
-msgstr ""
+msgstr "Paketit ovat ajan tasalla"
 
 #: ../mdkapplet:195
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to open urpmi database"
-msgstr "rpm-tietokantaa ei voitu avata"
+msgstr "urpmi-tietokantaa ei voitu avata"
 
 #: ../mdkapplet:200
 #, c-format
@@ -143,8 +142,7 @@ msgstr "Käynnistetään drakconnect\n"
 #: ../mdkapplet:286
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
+msgstr "Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
 
 #: ../mdkapplet:294
 #, c-format
@@ -210,7 +208,7 @@ msgstr "Online-sivusto"
 #: ../mdkapplet:483
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "Thomas Backlund <tmb@mandriva.org>\n"
 
 #: ../mdkapplet:492
 #, c-format
@@ -472,533 +470,3 @@ msgstr "Asennetaan paketteja...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ei pystytty päivittämään paketteja update_source-lähteestä.\n"
 
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Uusia ohelmistokokonaisuuksia järjestelmällesi on saatavilla"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Palvelu ei ole asetettu. Paina \"Aseta palvelu\""
-
-#~ msgid "Configure the service"
-#~ msgstr "Aseta palvelu"
-
-#~ msgid "Check updates"
-#~ msgstr "Tarkista päivitykset"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Aseta Nyt!"
-
-#~ msgid "Actions"
-#~ msgstr "Toiminnot"
-
-#~ msgid "Configure"
-#~ msgstr "Aseta"
-
-#~ msgid "See logs"
-#~ msgstr "Katso lokitiedostot"
-
-#~ msgid "Status"
-#~ msgstr "Tila"
-
-#~ msgid "Close"
-#~ msgstr "Sulje"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Verkkoyhteys:"
-
-#~ msgid "Up"
-#~ msgstr "päällä"
-
-#~ msgid "Down"
-#~ msgstr "pois päältä"
-
-#~ msgid "Last check: "
-#~ msgstr "Viimeisin tarkistus:"
-
-#~ msgid "Machine name:"
-#~ msgstr "Koneen nimi:"
-
-#~ msgid "Updates: "
-#~ msgstr "Päivitykset:"
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Kehitysjakelu ei ole tuettu tässä palvelussa"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "Liian vanha jakelu ei ole tuettu tässä palvelussa"
-
-#~ msgid "Unknown state"
-#~ msgstr "Tuntematon tila"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr ""
-#~ "Online palvelut pois käytöstä. Ota yhteys Mandriva Online sivustoon\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Väärä salasana\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Väärä tili, kone tai kirjautuminen.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Jotain on vialla verkkoasetuksissasi (tarkista reittim palomuuri tai "
-#~ "välityspalvelinten asetukset)\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Tapahtui virhe yhteydenotossa palvelimeen, ole hyvä ja ota yhteys "
-#~ "tukiryhmään"
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Vastaus Mandriva Online palvelimelta\n"
-
-#~ msgid "No check"
-#~ msgstr "Ei tarkistusta"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "Tarkistetaan asetustiedostoa: Ei olemassa\n"
-
-#~ msgid "Logs"
-#~ msgstr "Lokit"
-
-#~ msgid "Clear"
-#~ msgstr "Tyhjennä"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "Tämä on vapaata ohjelmistoa ja saadaan levittää uudelleen GNU GPL "
-#~ "lisenssin alaisuudessa.\n"
-#~ "\n"
-#~ "Käyttö:\n"
-
-#~ msgid "  --box=\t\t\t- hostname.\n"
-#~ msgstr "  --box=\t\t\t- konenimi.\n"
-
-#~ msgid "  --country\t\t\t- name of country of the user. \n"
-#~ msgstr "  --country\t\t\t- käyttäjän maan nimi. \n"
-
-#~ msgid "  --interactive\t\t- use the interactive mode.\n"
-#~ msgstr "  --interactive\t\t- käytä interaktiivinen tila.\n"
-
-#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
-#~ msgstr "  --nointeractive\t- käytä ei-interaktiivista tilaa.\n"
-
-#~ msgid "  --login=\t\t     - login name of the user.\n"
-#~ msgstr "  --login=\t\t     - käyttäjän kirjautumistunnus.\n"
-
-#~ msgid "  --pass=\t\t\t- password  of the user.\n"
-#~ msgstr "  --pass=\t\t\t- käyttäjän salasanaa.\n"
-
-#~ msgid "Mandriva Online"
-#~ msgstr "Mandriva Online"
-
-#~ msgid "I already have an account"
-#~ msgstr "Minulla on jo tili"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "Haluan rekisteröityä"
-
-#~ msgid "Mr."
-#~ msgstr "Hra."
-
-#~ msgid "Mrs."
-#~ msgstr "Rouva"
-
-#~ msgid "Ms."
-#~ msgstr "Nti"
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Luetaan asetukset\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Tämä apuohjelma auttaa sinua lähettämään asetuksesi\n"
-#~ "(paketit, laitteiston asetukset) keskitettyyn tietokantaan, jotta\n"
-#~ "sinut voitaisiin pitää ajan tasalla turvapäivityksistä ja hyödyllisistä\n"
-#~ "päivityksistä.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "Tilin luonti tai kirjautuminen"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr ""
-#~ "Syötä Mandriva Online-käyttäjätunnuksesi, salasanasi sekä koneesi nimi:"
-
-#~ msgid "Email address:"
-#~ msgstr "Sähköpostiosoite:"
-
-#~ msgid "Country"
-#~ msgstr "Maa"
-
-#~ msgid "Password:"
-#~ msgstr "Salasana:"
-
-#~ msgid "Machine description:"
-#~ msgstr "Koneen kuvaus:"
-
-#~ msgid "(Ex: My Home Office's Computer)"
-#~ msgstr "(Esim: Kotitoimistoni kone)"
-
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr "Koneen nimi pitää olla 1-40 kirjaimia ja numeroita"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Yhdistetään Mandriva Online webbisivustoon..."
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "Saadaksesi hyödyn Mandriva Online palveluista,\n"
-#~ "olemme lähettämässä asetuksesi palvelimelle.\n"
-#~ "\n"
-#~ "Velho lähettää seuraavat tiedot Mandriva:ille.\n"
-#~ "\n"
-#~ "1) listauksen asennetuista paketeista, \n"
-#~ "\n"
-#~ "2) laitteistolistauksen.\n"
-#~ "Jos et ole tyytyväinen tähän ajatukseen, tai et halua hyötyä\n"
-#~ "tästä palvelusta, ole hyvä ja paina 'Peruuta'. Painamalla 'Jatka'\n"
-#~ "sallit meidän pitämään sinut ajan tasalla koskien turvallisuus-\n"
-#~ "päivityksiä ja hyödyllisiä päivityksiä henkilökohtaisilla viesteillä.\n"
-#~ "\n"
-#~ "Sen lisäksi hyödyt alennuksista www.mandrivaexpert.com:in\n"
-#~ "maksullisissa tukipalveluissa."
-
-#~ msgid "Connection problem"
-#~ msgstr "Yhteysongelma"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "Virheitä tietdostojen lähettämisessä, ole hyvä ja yritä uudelleen"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Luo Mandriva Online-tunnus"
-
-#~ msgid "Greeting:"
-#~ msgstr "Tervehdys:"
-
-#~ msgid "First name:"
-#~ msgstr "Etunimi:"
-
-#~ msgid "Last name:"
-#~ msgstr "Sukunimi:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Varmista salasana:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Salasanat eivät kelpaa\n"
-#~ "Yritä uudestaan\n"
-
-#~ msgid "Please fill in each field"
-#~ msgstr "Täytä kaikki kentät"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Sähköpostiosoite ei kelpaa!\n"
-
-#~ msgid "Creating account failed!"
-#~ msgstr "Tilin luonti ei onnistunut!"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "Mandriva Online tili luotiin onnistuneesti.\n"
-#~ "Paina \"Seuraava\" kirjautuaaksesi ja lähettääksesi laitteistotietojasi\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Tietojen siirto onnistui!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "Tästä lähtien saat turva- ja päivitysilmoitukset\n"
-#~ "suoraan Mandriva Onlinesta."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online mahdollistaa päivitysten automatisoinnin.\n"
-#~ "Ohjelma käynnistyy säännöllisesti järjestelmässäsi odottamaan uusia "
-#~ "päivityksiä\n"
-
-#~ msgid "Congratulations"
-#~ msgstr "Onnittelut"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "Mandriva Online tilisi on asetettu onnistuneesti.\n"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Järjestelmätietojen lähetys onnistui!"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Ongelmia järjestelmätietojen lähetyksessä"
-
-#~ msgid ""
-#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
-#~ "firewall bad settings"
-#~ msgstr ""
-#~ "En saa yhteyttä mandrivaonline sivustoon: väärä tunnus/salasana tai "
-#~ "reitin/palomuuri on asetettu väärin."
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- käynnistä Mandriva Update.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Pävityslistan hakeminen ei onnistu: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Valitse asennettavat paketit ja paina Ok"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Järjestelmä on varattu. Odota ..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Lähetän asetustiedot..."
-
-#~ msgid "Unsecure invocation: Method available through httpS only"
-#~ msgstr "Turvaton kutsu: Menetelmä käitettävissä ainoastaan httpS kautta."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "%s tiedosto ei löydetty. Suorita mdkonline velho ensin"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "Mandriva Update ei saanut yhteyttä sivustoon, kokeilemme uudelleen."
-
-#~ msgid "Login:"
-#~ msgstr "Tunnus:"
-
-#~ msgid "or"
-#~ msgstr "tai"
-
-#~ msgid "wrong password:"
-#~ msgstr "väärä salasana:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Käyttäjätunnuksesi tai salasanasi oli väärä.\n"
-#~ " Sinun pitää joko kirjoittaa se uudelleen tai luoda tunnus Mandriva "
-#~ "Onlineen.\n"
-#~ " Jälkimmäisessä tapauksessa mene takaisin ensimmäiseen vaiheeseen "
-#~ "ottaaksesi yhteyden Mandriva Onlineen.\n"
-#~ " Tiedoksi: sinun pitää antaa myös koneen nimi (vain kirjaimet hyväksytään)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Sähköpostiosoitteesi:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Anna tunnuksesi"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr ""
-#~ "Tunnuksen ja salasanan pituuden pitäisi olla vähemmän kuin 12 merkkiä\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Erikoismerkit eivät ole sallittuja\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Sähköpostiosoite ei kelpaa\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Tunnus on jo olemassa\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Ongelmia yhdistettäessä palvelimeen\n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Tapahtui virhe yhteydenotossa palvelimeen, ole hyvä ja ota yhteys "
-#~ "tukiryhmään"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Ei pystytty päivittämään paketteja mdkupdate-lähteestä.\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "Mandriva Update ei voinut lähettää diff tiedostoja. Lähetä viesti "
-#~ "osoitteen: upport [at] mandrivaonline [piste] net"
-
-#, fuzzy
-#~ msgid "Please Wait"
-#~ msgstr "Odota hetki"
-
-#~ msgid "Next"
-#~ msgstr "Seuraava"
-
-#~ msgid "Cancel"
-#~ msgstr "Peruuta"
-
-#~ msgid "Previous"
-#~ msgstr "Edellinen"
-
-#~ msgid "Welcome to Mandriva Online"
-#~ msgstr "Tervetuloa Mandriva Onlineen"
-
-#~ msgid "I don't have a Mandriva Online account and I want to subscribe"
-#~ msgstr "Minulla ei ole Mandriva Online-tiliä ja haluan tilaa sitä"
-
-#~ msgid "Mandriva Linux Privacy Policy"
-#~ msgstr "Mandriva Linuxin yksityisyyspolitiikka"
-
-#~ msgid "Authentification"
-#~ msgstr "Vahvistetaan"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Lähetä Asetukset"
-
-#~ msgid "Finish"
-#~ msgstr "Valmis"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "automaattiset päivitykset"
-
-#~ msgid "Country:"
-#~ msgstr "Maa:"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Poistutaan velhosta\n"
-
-#~ msgid ""
-#~ "Mandriva Online could not be contacted, please try again at a later time"
-#~ msgstr "Ei saatu yhteyttä Mandriva Onlineen kokeile myöhemmin uudelleen."
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       - Päivitä avaimet\n"
-
-#~ msgid "Skip Wizard"
-#~ msgstr "Ohita velho"
-
-#~ msgid "Subscribe"
-#~ msgstr "Liity"
-
-#~ msgid "Config problems. Launch \"configure\" again"
-#~ msgstr "Asetusongelmia. Suorita \"Asetukset\" uudelleen"
-
-#~ msgid "%s packages available for update"
-#~ msgstr "%s päivitetyjä paketteja saatavilla"
-
-#~ msgid "Service deactivated. Waiting for payment..."
-#~ msgstr "Palvelu poistettu käytöstä. Odotetaan maksua..."
-
-#~ msgid "Launch Mandriva Linux Update"
-#~ msgstr "Käynnistä Mandrivan päivitys"
-
-#~ msgid "Available"
-#~ msgstr "saatavilla"
-
-#~ msgid "Checking ..."
-#~ msgstr "Tarkistetaan ..."
-
-#~ msgid "Not Available"
-#~ msgstr "ei saatavilla"
-
-#~ msgid "Attempting to connect to mandrivaonline.com\n"
-#~ msgstr "Yritän yhdistää mandrivaonline.com sivustoon\n"
-
-#~ msgid "Creation"
-#~ msgstr "Luonti"
-
-#~ msgid "Special characters"
-#~ msgstr "Erikoismerkit"
-
-#~ msgid "Empty fields"
-#~ msgstr "Tyhjät kentät"
-
-#~ msgid "Email"
-#~ msgstr "Sähköposti"
-
-#~ msgid "Server Problem"
-#~ msgstr "Palvelinongelma"
-
-#~ msgid "Launching Mandriva Update\n"
-#~ msgstr "Käynnistä MandrivaPäivitys\n"
-
-#~ msgid "Yes I want automated updates"
-#~ msgstr "Kyllä, haluan automaattiset päivitykset"
-
-#~ msgid "Register Now!"
-#~ msgstr "Rekisteröidy nyt!"
-
-#~ msgid "About Online Applet"
-#~ msgstr "Tietoja Online-sovelmasta"
-
-#~ msgid "Mandriva Linux Online Team"
-#~ msgstr "Mandrivan Online-tiimi"
-
-#~ msgid "Mandriva Linux Update Notification Applet"
-#~ msgstr "Mandriva Linux Update huomautussovelma"
-
-#~ msgid "Team:"
-#~ msgstr "Tiimi:"
-
-#~ msgid "This Software is under GPL"
-#~ msgstr "Tämä ohjelmisto on GPL-lisenssin alainen"
-
-#~ msgid "Version:"
-#~ msgstr "Versio:"
-
-#~ msgid "Start Mandriva Update"
-#~ msgstr "Aloita Mandriva Update"
-
-#~ msgid "  --security     - use only security media.\n"
-#~ msgstr "  --security     - käytä ainoastaan turvallisuus-mediaa.\n"
-
-#~ msgid "  -v             - verbose mode.\n"
-#~ msgstr "  -v             - yksityiskohtainen tyyli.\n"
-
-#~ msgid ""
-#~ "You need to have an account on Mandriva Online, or update your "
-#~ "subscription."
-#~ msgstr "Tarvitset tilin Mandriva Online:ssä, tai päivitä tilauksesi."
-
-#~ msgid "Your login or password may be wrong"
-#~ msgstr "Käyttäjänimesi tai salasanasi voi olla väärä."
-
-#~ msgid "Unable to create mdkupdate medium.\n"
-#~ msgstr "Ei pystytty luomaan mdkupdate lähdettä.\n"
