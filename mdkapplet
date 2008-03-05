@@ -421,6 +421,8 @@ sub setLastTime() {
 
 sub checkNetwork() {
     if (!isNetwork()) {
+        # do not notify if already done:
+        return if member($state_global, qw(disconnected));
 	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
     } elsif (member($state_global, qw(disconnected))) {
