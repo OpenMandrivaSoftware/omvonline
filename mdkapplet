@@ -423,8 +423,6 @@ sub checkConfig() {
     if (!isNetwork()) {
 	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
-    } elsif (member($state_global, qw(disconnected))) {
-	silentCheck(); #- state has changed, update
     }
 }
 
