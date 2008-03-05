@@ -222,7 +222,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 go2State('delayed');
 gtkflush();
-checkConfig();
+checkNetwork();
 Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub { checkUpdates(); 0 });
 setup_cyclic_check();
 
@@ -402,7 +402,7 @@ sub setup_cyclic_check() {
 		  $first_run = 1;
 		  return 1;
 	   }
-           checkConfig();
+           checkNetwork();
            checkUpdates();
            1;
        });
@@ -419,7 +419,7 @@ sub setLastTime() {
     setVar($localfile, 'LASTCHECK', $date);
 }
 
-sub checkConfig() {
+sub checkNetwork() {
     if (!isNetwork()) {
 	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
