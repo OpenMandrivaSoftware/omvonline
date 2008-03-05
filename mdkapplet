@@ -57,7 +57,7 @@ my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $network_timeout, $state_global);
+my ($menu, $timeout, $state_global);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -396,13 +396,13 @@ sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
 
 
 sub setup_cyclic_check() {
-    $network_timeout = Glib::Timeout->add(2000, \&checkNetwork);
     $timeout = Glib::Timeout->add($config{UPDATE_FREQUENCY}*1000, sub {
 	   my $first_run if 0;
 	   if (!$first_run) {
 		  $first_run = 1;
 		  return 1;
 	   }
+           checkNetwork();
            checkUpdates();
            1;
        });
@@ -423,8 +423,7 @@ sub checkNetwork() {
     if (!isNetwork()) {
 	logIt(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
-    } elsif (member($state_global, qw(disconnected))) {
-	silentCheck(); #- state has changed, update
+    }
 }
 
 sub checkUpdates() {
@@ -531,6 +530,5 @@ LASTCHECK=$date
 sub mainQuit() {
 #    setAutoStart('FALSE');
     Glib::Source->remove($timeout) if $timeout;
-    Glib::Source->remove($network_timeout) if $network_timeout;
     Gtk2->main_quit;
 }
