@@ -467,7 +467,7 @@ sub setState {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state_type}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
         $bubble->set_timeout(5000);
-        $bubble->show;
+        eval { $bubble->show };
     }
 
     my $menu = Gtk2::Menu->new;
