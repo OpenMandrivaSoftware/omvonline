@@ -425,6 +425,7 @@ sub checkNetwork() {
 	go2State('disconnected');
     } elsif (member($state_global, qw(disconnected))) {
 	silentCheck(); #- state has changed, update
+    }
 }
 
 sub checkUpdates() {
