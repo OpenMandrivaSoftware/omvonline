@@ -366,16 +366,13 @@ sub silentCheck() {
         if (my $db = urpm::db_open_or_die($urpm)) {
             my $requested = {};
             my $state = {};
-            my @requested_strict;
             my $need_restart = urpm::select::resolve_dependencies(
                 $urpm, $state, $requested,
                 callback_choices => sub { 0 },
                 priority_upgrade => $urpm->{options}{'priority-upgrade'},
                 auto_select => 1,
-                resolve_req_callback => sub {
-                    @requested_strict = sort map { scalar $_->fullname } @_;
-                },
             );
+            my @requested_strict = map { scalar $_->fullname } @{$urpm->{depslist}}[keys %{$state->{selected}}];
 
             if ($need_restart || @requested_strict) { # FIXME: log first found pkgs?
                 $exit->('updates');
