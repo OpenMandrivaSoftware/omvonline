@@ -298,8 +298,6 @@ sub installUpdates() {
     #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush();
     #undef $w;
-    my $mdkupdate_status = cat_('/var/tmp/mdkupdate.log');
-    if ($mdkupdate_status && $mdkupdate_status !~ /OK/) { logIt($mdkupdate_status); $in->ask_warn(N("Mandriva Linux Updates Applet"), $mdkupdate_status) }
 }
 
 sub silentCheck() {
