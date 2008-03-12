@@ -295,9 +295,7 @@ sub installUpdates() {
     $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation');
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     restart_applet() if $newmd5 ne $oldmd5;
-    #my $w = $in->wait_message(N("Please wait"), N("Check updates"));
     silentCheck(); gtkflush();
-    #undef $w;
 }
 
 sub silentCheck() {
