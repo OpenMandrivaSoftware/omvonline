@@ -52,8 +52,6 @@ install: all
 	mkdir -p $(PREFIX)/etc/pam.d
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.update
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
-	mkdir -p $(PREFIX)/etc/X11/xinit.d
-	install -m 755 draksnapshot-applet.xinit $(PREFIX)/etc/X11/xinit.d/
 
 cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
