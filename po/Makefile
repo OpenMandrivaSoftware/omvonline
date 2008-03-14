@@ -30,10 +30,12 @@ clean:
 $(PGOAL).pot: $(PL_FILES) $(CFILES)
 	perl_checker -q --generate-pot $(PGOAL).pot $(PL_FILES)
 
-merge: $(PGOAL).pot
+update_n_merge: $(PGOAL).pot merge
+
+merge:
 	@for n in $(POFILES); do \
 		echo "Merging $$n"; \
-		msgmerge "$$n" $< > "$$n"t; \
+		msgmerge "$$n" $(PGOAL).pot > "$$n"t; \
 		mv -f "$$n"t "$$n"; \
 	done
 
