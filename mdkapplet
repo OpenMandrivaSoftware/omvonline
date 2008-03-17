@@ -222,7 +222,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 go2State('delayed');
 gtkflush();
-checkNetwork();
+
 Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub { checkUpdates(); 0 });
 setup_cyclic_check();
 
