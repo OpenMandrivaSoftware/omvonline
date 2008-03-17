@@ -1,3 +1,254 @@
+2008-03-16 22:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: kill helene's email
+
+2008-03-16 22:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: bump copyright year
+
+2008-03-14 17:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: (tar) no need to be verbose
+
+2008-03-14 16:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: revert bogus latest commit
+
+2008-03-14 16:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: 2.35
+
+2008-03-14 16:15  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.35
+
+2008-03-14 16:14  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) offer to install updates in
+	  notifications
+
+2008-03-14 10:41  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/de.po: update (Nicolas Bauer)
+
+2008-03-14 10:41  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/Makefile: (update_n_merge) split it out of (merge) ; now
+	  (merge) only update po w/o updating main pot file
+
+2008-03-12 13:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (installUpdates) kill dead code
+
+2008-03-12 13:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.34
+
+2008-03-12 13:46  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (installUpdates) do not keep complaining if
+	  nightly update cron had
+	  failled (#38531) ; the way to check them is to look at cron mails
+	  
+	  was introduced by daouda in r53060 on 2004-11-04 20:00:11: "merge
+	  changes from MNF, MDK-10-update"
+	  
+	  really introduced in revision 1.115.4.1 in MDK10_0_update CVS
+	  branch
+	  on Thu Oct 28 17:33:25 2004:
+	  
+	  "- don't process all the update list (too slow)
+	  - better handling of error"
+
+2008-03-11 20:14  aleph
+
+	* po/hu.po: update translation for hungarian language
+
+2008-03-10 12:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.33
+
+2008-03-10 12:48  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (silentCheck) adapt to urpmi-5.9 (#38724)
+
+2008-03-07 21:01  Wanderlei Antonio Cavassin <cavassin at mandriva.com>
+
+	* po/pt_BR.po: small translation fix
+
+2008-03-07 20:36  Andrea Celli <andrea.celli at libero.it>
+
+	* po/it.po: update translation for Italian
+
+2008-03-07 14:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/cy.po: update (Rhoslyn Prys)
+
+2008-03-07 12:29  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-03-07 08:46  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-03-07 01:00  Reinout van Schouwen <reinout at gmail.com>
+
+	* po/nl.po: 2008-03-07 Reinout van Schouwen <reinout@gmail.com>
+	  
+	  - nl.po: Updated Dutch translation
+
+2008-03-05 15:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: log changes since 2008.0
+
+2008-03-05 08:06  Shiva Huang <blueshiva at giga.net.tw>
+
+	* po/zh_TW.po: Update zh_TW translation
+
+2008-03-05 00:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.32
+
+2008-03-05 00:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setup_cyclic_check) check more often for
+	  network (#37701, #38004)
+
+2008-03-05 00:43  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (checkNetwork) do not notify if already done
+
+2008-03-05 00:39  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkNetwork) typo fix
+
+2008-03-05 00:36  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkNetwork) revert 238578 ("(checkConfig) remove
+	  unreachable code")
+
+2008-03-05 00:36  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: revert
+
+2008-03-05 00:34  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkNetwork) revert 238578 ("(checkConfig) remove
+	  unreachable code")
+
+2008-03-05 00:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkConfig) rename it as checkNetwork() since that
+	  really what it does
+
+2008-03-05 00:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (checkConfig) remove unreachable code
+
+2008-03-05 00:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) do not crash if notfiy failed on
+	  ->show (#38496)
+
+2008-03-05 00:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (silentCheck) use more modern API to check for
+	  updates
+
+2008-03-05 00:03  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: initial creation
+
+2008-03-04 22:42  Michal Bukovjan <bukovjan at mbox.dkm.cz>
+
+	* po/cs.po: Update Czech translation.
+
+2008-03-03 10:01  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-03-02 20:15  aleph
+
+	* po/hu.po: update translation for hungarian language
+
+2008-03-01 14:12  Dotan Kamber <kamberd at yahoo.com>
+
+	* po/he.po: update translation for Hebrew
+
+2008-02-29 16:42  thomas
+
+	* po/fi.po: Update Finnish translation
+
+2008-02-29 15:15  Jure Repinc
+
+	* po/sl.po: Updated Slovenian translation
+
+2008-02-28 14:56  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-02-27 22:15  Christophe Berthelé <cpjc at free.fr>
+
+	* po/fr.po: Update fr translation on behalf of fr team
+
+2008-02-27 16:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) make sure that bubbles are displayed on
+	  right icon
+
+2008-02-27 15:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) enable perl_checker to check callers
+
+2008-02-27 15:26  thomas
+
+	* po/sv.po: update Swedish translation
+
+2008-02-27 15:26  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: (install) do not run commands in sub shells which hides
+	  errors
+
+2008-02-27 13:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: (install) group MIME related commands together
+
+2008-02-27 13:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: kill obsolete comments
+
+2008-02-27 13:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: (install) kill double rule
+
+2008-02-26 15:39  Keld Jørn Simonsen <keld at dkuug.dk>
+
+	* po/da.po: updates
+
+2008-02-26 04:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: lazy load Rpmdrake::open_db so that urpm really is
+	  lazy loaded at
+	  runtime when forking checker
+
+2008-02-26 04:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: update blacklist
+
+2008-02-26 03:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: 2.31
+
+2008-02-26 03:45  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* ChangeLog: Generated by svn2cl the mar 26 fév 2008 04:45:43 CET
+
+2008-02-26 03:11  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) make sure notifications' text doesn't got
+	  truncated
+
 2008-02-26 03:11  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* mdkapplet: (setState) make sure notifications' text doesn't got
