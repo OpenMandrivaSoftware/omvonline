@@ -413,7 +413,8 @@ sub setLastTime() {
 }
 
 sub checkNetwork() {
-    if (!isNetwork()) {
+    require network::tools;
+    if (!network::tools::has_network_connection()) {
         # do not notify if already done:
         return if member($state_global, qw(disconnected));
 	logIt(N_("Checking Network: seems disabled\n"));
@@ -432,15 +433,6 @@ sub go2State {
     $menu->destroy if $menu;
     $menu = setState($state);
     $state_global = $state;
-}
-
-sub isNetwork() {
-    require network::network;
-    require network::tools;
-    my $net = {};
-    network::network::read_net_conf($net);
-    my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($net);
-    to_bool($gw_address);
 }
 
 sub shouldStart() {
