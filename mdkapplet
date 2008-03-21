@@ -261,7 +261,6 @@ sub harvester {
             }
         }
         push @pids, $childpid;
-        WIFEXITED($?) and refresh_gui(1);
     } while $childpid > 0;
     Glib::Timeout->add(200, sub { silentCheck(); 0 }) if $mdvupdate_returned;
     return @pids;
@@ -269,20 +268,11 @@ sub harvester {
 
 sub fork_exec {
     my $pid = run_program::raw({ detach => 1 }, @_);
-    refresh_gui(1);                                                                        
     return $pid;
 }
 
-sub refresh_gui {
-    my ($sens) = @_;
-    #!$conf_launched and silentCheck(); $conf_launched = 0;
-    my $w = $::main_window ? $::main_window->window : undef;
-    $insensitive_while_running_a_child = !$sens;
-    $sens ? gtkset_mousecursor_normal($w) : gtkset_mousecursor_wait($w);
-    gtkflush();
-}
 
-sub configNetwork() { logIt(N_("Launching drakconnect\n")); refresh_gui(0); fork_exec("/usr/sbin/drakconnect") }
+sub configNetwork() { logIt(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
     logIt(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
@@ -294,7 +284,6 @@ sub installUpdates() {
     return if $mdv_update_pid;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N_("Launching MandrivaUpdate\n"));
-    refresh_gui(0);
     $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation');
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     restart_applet() if $newmd5 ne $oldmd5;
