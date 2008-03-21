@@ -47,14 +47,8 @@ require_root_capability();
 my $confdir = '/root/.MdkOnline';
 my $conffile = "$confdir/mdkupdate";
 
-my $difflog = '/var/tmp/diff.log';
 my $logfile = '/var/tmp/mdkupdate.log';
 
-
-my $currentrpm = "$confdir/rpm_qa_installed_current";
-my $afterrpm =  "$confdir/rpm_qa_installed_after";
-
-my $startpage = 'http://start.mandriva.com/';
 
 my $CLIENT_VERSION = "4";
 my $YEARS = "2002-2006";
@@ -75,194 +69,31 @@ usage:
 ") . N("  --mnf			- launch mnf specific scripts.
 ") . N("  --noX			- text mode version of Mandriva Update.
 ") . N("  --debug			- log what is done
-") . N("  --bundle file.bundle	- parse and install package from .bundle metainfo file.
 ");
     exit(0);
 }
 
-my ($auto, $mnf, $noX, $bundle, $debug);
+my ($auto, $mnf, $noX, $debug);
 my %options = (
 	       'auto'	    => \$auto,
 	       'mnf'	    => \$mnf,
 	       'noX'	    => \$noX,
             'd|debug'   => \$debug,
-	       'b|bundle:s' => sub { $bundle = $_[1] || 'webbundle' } ,
 	       'h|help'    => \&usage,
 	      );
 
 GetOptions(%options);
-# workaround an issue with browsers that sometimes drop the --bundle option:
-$bundle = shift @ARGV if $ARGV[0] =~ /\.bundle$/;
-
-$bundle eq "webbundle" and mdkonline::get_site($startpage), exit(0);
 
 my $in;
 
-$bundle || $noX and $in = interactive->vnew;
+$noX and $in = interactive->vnew;
 
-my $result;
-my $wc = mdkonline::read_conf();
 -e $logfile and system "/bin/rm", $logfile;
-
-if (!$bundle) {
-     my ($release) = mdkonline::get_release();
 
              my $ret = update_pkgs();
              $ret == 1 or output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
-	    rpm_qa($afterrpm);
-	    my $wc = mdkonline::read_conf();
 	    clean_dir();
-} else {
-    log::explanations("managing the $bundle bundle");
-    if (-d '/live/media/loopbacks') {
-        $in->ask_warn(N("Warning"),
-                      #-PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-                      N("You first need to install the system on your harddrive with the 'Live Install' wizard."));
-        $in->exit(1);
-    }
-    my $w = $in->wait_message(N("Please wait"), N("Preparing..."));
-    my %bundle_vars = getVarsFromSh($bundle);
-    rm_rf($bundle);
-    
-    my %mapping = (
-        USER => 'USER_EMAIL',
-        #SESSION_ID => 'HOST_KEY',
-    );
-    while (my ($bundle_varname, $onlinesrv_varname) = each %mapping) {
-        $wc->{$onlinesrv_varname} = $bundle_vars{$bundle_varname};
-    }
-    if (!($wc->{HOST_ID} && $wc->{HOST_KEY})) {
-        use lang;
-        my $hostname = chomp_(cat_('/proc/sys/kernel/hostname'));
-        my $reg_host = mdkonline::soap_register_host($bundle_vars{USER}, $bundle_vars{PASS}, $hostname, ' ', lang::read()->{country});
-        my $res = mdkonline::check_server_response($reg_host);
-        if ($res ne 'OK') {
-            undef $w;
-            $in->ask_warn(N("Error"), N("Failed to authenticate to the bundle server:\n\n%s", $reg_host->{message}));
-            exit(3);
-        }
-        # we've no previous config so write one so that write_wide_conf() do not miss some fields:
-        setVarsInSh('/etc/sysconfig/mdkonline', {
-            USER_EMAIL => $bundle_vars{USER},
-            HOST_NAME => $hostname,
-        });
-        mdkonline::write_wide_conf($reg_host);
-    }
 
-    $wc = mdkonline::read_conf();
-    $wc->{USER_EMAIL} or die("Configuration not uploaded to Mandriva Online");
-    
-    my $res = mdkonline::prepare_upload_conf($wc);
-    if ($res ne 'OK') {
-        undef $w;
-        log::explanations("we failed to be accepted by the server: $res");
-        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res);
-    }
-    
-    if ($bundle_vars{CLIENT_VERSION} > $CLIENT_VERSION) {
-        log::explanations("the client is too old in order to install the bundle $bundle_vars{BUNDLE}");
-        $in->ask_warn(N("Warning"), N("The version of the Mandriva Online client is too old.
-
-You need to update to a newer version. You can get a new one from http://start.mandriva.com"));
-        $in->exit(1);
-    }
-    my $bundle_info = mdkonline::soap_query_bundle($wc, $bundle_vars{BUNDLE});
-    $res = mdkonline::check_server_response($bundle_info);
-    print Data::Dumper->Dump([ $bundle_info ], [ qw(bundle_info) ]);
-    if ($res eq 'OK') {
-	my @bundles;
-	$w = $in->wait_message(N("Please wait"), N("Preparing..."));
-	my ($mirrors, $bundle) = ($bundle_info->{data}{mirrors}, $bundle_info->{data}{bundle});
-	$bundle =~ s/-[^-]*-[^-]*\.[^.]*\.rpm$//;
-	push @bundles, $bundle;
-     my %mirrors = add_mirrors($in, $w, $mirrors, \%bundle_vars);
-     undef $w;
-	install_pkgs($in, \@bundles, (find { /^bundle/ } keys %mirrors),
-                  { is_bundle => 1,
-                    auto_select => ($bundle_vars{POST} =~ /AUTO_SELECT/ ? 1 : 0),
-                    medias => [ keys %mirrors ],
-                });
-    } else {
-        undef $w;
-        log::explanations("we did not got back a bundle: $bundle_info->{message}");
-        $in->ask_warn(N("Error"), N("An error occurred") . "\n\n" . $res . "\n\n" . $bundle_info->{message});
-    }
-}
-
-sub add_mirrors {
-    my ($in, $w, $mirrors, $bundle_vars, $option) = @_;
-    foreach my $mirror (@$mirrors) {
-        next if $mirror->{mode} eq 'anon'; # nothing to do
-        if ($mirror->{mode} eq 'auth') {
-            # add "user:pass@" substring if needed:
-            # user password & login provided by server on those provided with the bundle:
-            $bundle_vars->{USER} = $mirror->{user} if $mirror->{user};
-            $bundle_vars->{PASS} = $mirror->{pass} if $mirror->{pass};
-            my $encoded_login = uri_escape($bundle_vars->{USER});
-            my $encoded_pass = uri_escape($bundle_vars->{PASS});
-            $mirror->{url} =~ s!^([^:]*)://!\1://$encoded_login:$encoded_pass@!;
-        } else { # unknown method, aborting
-             undef $w;
-             log::explanations("we got a bad bundle");
-             $in->ask_warn(N("Error"), N("This bundle is not well formated. Aborting."));
-             $in->exit(1);
-         } 
-    }
-    my %mirrors = map { $_->{name} => join('@', grep { $_ } $_->{auth}, $_->{url}) } @$mirrors;
-    add_media($_, $mirrors{$_}, 'media_info/synthesis.hdlist.cz', $option) foreach keys %mirrors;
-    %mirrors;
-}
-
-sub install_pkgs {
-    my ($in, $choosed, $media_name, $o_options) = @_;
-    $o_options ||= {};
-    my $w = $in->wait_message(N("Please wait"), N("Installing packages ...\n")) if !$o_options->{is_bundle};
-    my $program = $o_options->{no_X} ? '/usr/sbin/urpmi' : '/usr/bin/gurpmi';
-    eval {
-        if (!$o_options->{is_bundle}) {
-            log::explanations("applying the updates");
-            system $program, "--auto", "--media", $media_name, @$choosed;
-        } else {
-            log::explanations("installing the bundle");
-            system $program, '--auto', if_($o_options->{auto_select}, "--auto-select"),
-              if_($o_options->{medias}, "--media", join(',', @{$o_options->{medias}})),
-                "--searchmedia", $media_name, @$choosed;
-        }
-	$? == 0 or die N("Unable to update packages from update_source medium.\n");
-    };
-    undef $w;
-}
-
-sub my_fullname {
-    return '?-?-?' unless ref $_[0];
-    my ($name, $version, $release) = $_[0]->fullname;
-    "$name-$version-$release";
-}
-
-sub add_media {
-    my ($media_name, $mirror, $hdlist, $option) = @_;
-    log::explanations("removing/adding the media $media_name");
-    eval { 
-	system "/usr/sbin/urpmi.removemedia", $media_name;
-	# use curl because wget sometime fail on https url
-	system "/usr/sbin/urpmi.addmedia", if_($option, $option), '--curl', $media_name, $mirror, "with", $hdlist;
-    };
-    $@ and die "Problem adding bundle media with urpmi";
-}
-
-sub prepare_media {
-    my $mirror = shift;
-    my ($r, $da, $is_x8664, $dist_name);
-    ($r) = mdkonline::get_release();
-    # retrieve dist and arch from /etc/mandrakelinux file
-    $da = mdkonline::get_distro_type();
-    my ($path2new_arch, $path2new_synthesis) = $r <= 10.0 ? ('/RPMS/', '../base/synthesis.hdlist.cz') : ('/main_updates/', 'media_info/synthesis.hdlist.cz');
-    #sometimes server returns the full link http:// or ftp://
-    ($is_x8664) = $da->{arch} =~ /(x86_64)/;
-    $dist_name = $da->{name};
-    my $fullpath2mir = if_($mirror !~ m!^(?:http|ftp)://! , "ftp://") . $mirror . if_($is_x8664, "/$is_x8664") . if_($dist_name, "/$dist_name") . "/$r" . $path2new_arch;
-    add_media('update_source', $fullpath2mir, $path2new_synthesis, '--update');
-}
 
 sub update_pkgs {
     my (@pkgs) = @_;
@@ -274,23 +105,7 @@ sub update_pkgs {
     return 1;
 }
 
-sub get_rpm_diff() {
-    my $isdif = `sdiff -s $afterrpm $currentrpm`;
-    $isdif and output_p($difflog, $isdif), return 1;
-    return 0;
-}
-
-sub new_rpm_base() {
-    -f $afterrpm and system('/bin/mv', $afterrpm, $currentrpm);
-}
-
 sub clean_dir() {
-    new_rpm_base();
     mdkonline::clean_confdir();
     output_p($logfile, 'OK');
-}
-
-sub rpm_qa {
-    my ($file) = @_;
-    output($file, chomp_(join('', sort(`rpm -qa`))));
 }
