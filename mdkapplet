@@ -408,6 +408,7 @@ sub setLastTime() {
 }
 
 sub checkNetwork() {
+    return if $checker_pid;
     require network::tools;
     if (!network::tools::has_network_connection()) {
         # do not notify if already done:
