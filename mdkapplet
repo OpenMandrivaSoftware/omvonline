@@ -224,6 +224,7 @@ go2State('delayed');
 gtkflush();
 
 Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub {
+                       # schedule future checks:
                        setup_cyclic_check();
                        # perform a test after initial delay:
                        checkNetwork();
