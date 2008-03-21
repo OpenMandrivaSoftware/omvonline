@@ -223,7 +223,12 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 go2State('delayed');
 gtkflush();
 
-Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub { checkUpdates(); 0 });
+Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub {
+                       # perform a test after initial delay:
+                       checkNetwork();
+                       checkUpdates();
+                       0;
+                   });
 setup_cyclic_check();
 
 
