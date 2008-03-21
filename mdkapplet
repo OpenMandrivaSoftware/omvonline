@@ -67,8 +67,6 @@ $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 $config{FIRST_CHECK_DELAY} ||= 5 * 60 * 1000; # default to 5 minutes
 
 
-my $insensitive_while_running_a_child;
-
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
@@ -297,7 +295,7 @@ sub silentCheck() {
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
-    gtkset_mousecursor_normal($w) if !$insensitive_while_running_a_child;
+    gtkset_mousecursor_normal($w);
 
     # are there any updates ?
 
