@@ -28,8 +28,6 @@ use standalone; # for explanations
 use common;
 use run_program;
 
-use Gtk2::Pango;
-
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
