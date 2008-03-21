@@ -27,6 +27,7 @@ use lib qw(/usr/lib/libDrakX);
 use standalone; # for explanations
 use common;
 use run_program;
+use feature 'state';
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -427,12 +428,19 @@ sub shouldStart() {
 sub setState {
     my ($state) = @_;
     my $checkme;
+    state $previous_state;
     my $arr = $state{$state}{menu};
     my $tmp = gtkcreate_pixbuf($state{$state}{colour}[0]);
     $icon->set_from_pixbuf($tmp);
     $icon->set_tooltip(formatAlaTeX(translate($state{$state}{tt}[0])));
     my @invisible_states = qw(delayed okay);
     $icon->set_visible(!member($state, @invisible_states));
+
+    # do not show icon while checking if previously hidden:
+    $icon->set_visible(0) if $state eq 'busy' && member($previous_state, @invisible_states);
+
+    $previous_state = $state;
+
     gtkflush(); # so that bubbles are displayed on right icon
 
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
