@@ -449,7 +449,7 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state_type}{colour}[0]);
     $icon->set_from_pixbuf($tmp);
     $icon->set_tooltip(formatAlaTeX(translate($state{$state_type}{tt}[0])));
-    $icon->set_visible($state_type ne 'okay');
+    $icon->set_visible(!member($state_type, qw(delayed okay)));
     gtkflush(); # so that bubbles are displayed on right icon
 
     if ($state{$state_type}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state_type}{do_not_use_bubble}) {
