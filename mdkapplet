@@ -391,11 +391,6 @@ sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
 sub setup_cyclic_check() {
     $network_timeout = Glib::Timeout->add(2000, sub { checkNetwork(); 1 });
     $timeout = Glib::Timeout->add($config{UPDATE_FREQUENCY}*1000, sub {
-	   my $first_run if 0;
-	   if (!$first_run) {
-		  $first_run = 1;
-		  return 1;
-	   }
            checkUpdates();
            1;
        });
