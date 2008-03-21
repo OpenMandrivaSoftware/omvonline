@@ -26,7 +26,6 @@ use POSIX ":sys_wait_h";
 use Config;
 use lib qw(/usr/lib/libDrakX);
 use standalone; # for explanations
-use interactive;
 use common;
 use run_program;
 
@@ -53,7 +52,6 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
     }
 }
 
-my $in = interactive->vnew('');
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
