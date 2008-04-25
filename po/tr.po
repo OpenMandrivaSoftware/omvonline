@@ -1,29 +1,28 @@
-# translation of tr.po to Turkce
-# Copyright (C) 2001, 2004, 2007 Free Software Foundation, Inc.
-#
-#
+# translation of mdkonline.po to Turkish
+# Copyright (C) 2008 Free Software Foundation, Inc.
 # Ömer Fadıl USTA <omer_fad@hotmail.com>, 2002, 2003, 2004.
 # Tuncay YENİAY <tuncayyeniay@mynet.com>, 2002.
 # S. Alp ŞENYER <ssenyer@linux-sevenler.org>, 2004.
 # Taha Özket <taha.ozket@obss.net>, 2007.
+# Atilla ÖNTAŞ <atilla_ontas@hotmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: tr\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: mdkonline\n"
 "POT-Creation-Date: 2008-02-21 18:21+0100\n"
-"PO-Revision-Date: 2007-09-27 16:44+0300\n"
-"Last-Translator: Taha Özket <taha.ozket@obss.net>\n"
-"Language-Team: Turkce <tr@li.org>\n"
+"PO-Revision-Date: 2008-04-17 22:57+0300\n"
+"Last-Translator: Atilla ÖNTAŞ <atilla_ontas@hotmail.com>\n"
+"Language-Team: Türkçe <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;X-Generator: KBabel 1.11.4\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:88
 #, c-format
 msgid "Will check updates at %s"
-msgstr "Güncellemeler %s itibari ile kontrol edilecek."
+msgstr "Güncellemeler %s itibarî ile kontrol edilecek."
 
 #: ../mdkapplet:97
 #, c-format
@@ -32,12 +31,8 @@ msgstr "Sisteminiz güncel"
 
 #: ../mdkapplet:103
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Herhangi bir sorun için support@manrakeonline.net adresine posta "
-"gönderebilirsiniz"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Hizmet yapılandırma sorunu.Lütfen kayıtları kontrol edin ve support@manrakeonline.net adresine posta gönderin"
 
 #: ../mdkapplet:110
 #, c-format
@@ -52,30 +47,27 @@ msgstr "Sisteminiz için yeni güncellemeler mevcut"
 #: ../mdkapplet:122
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Ağ'ınız çalışmıyor. Lütfen ağ yapılandırmanızı kontrol edin"
+msgstr "Ağınız çalışmıyor. Lütfen ağ yapılandırmanızı kontrol edin"
 
 #: ../mdkapplet:128
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Servis etkin değil. Lütfen çevrimiçi Websitesi Linkine tıklayın."
+msgstr "Hizmet etkin değil. Lütfen çevrimiçi Websitesi Bağlantısına tıklayın."
 
 #: ../mdkapplet:134 ../mdkapplet:165
 #, c-format
 msgid "urpmi database locked"
-msgstr "urpmi veri tabanı kilitlendi "
+msgstr "urpmi veri tabanı kilitli "
 
 #: ../mdkapplet:140
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Sürüm Desteklenmiyor (Çok eski ta da deneme sürümü)"
+msgstr "Sürüm Desteklenmiyor (Çok eski ya da deneme sürümü)"
 
 #: ../mdkapplet:146
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Yazılım ortamı bulunamadı. Yazılım ortam yöneticisinden geçerli bir yazılım "
-"ortamı ekleyin."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi'nden geçerli bir yazılım ortamı ekleyin."
 
 #: ../mdkapplet:152
 #, c-format
@@ -87,6 +79,12 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
+"Zaten en az bir güncelleme medyası yapılandırılmış; fakat\n"
+"tümü de şu anda devre dışı. En az birini etkinleştirmek için Yazılım\n"
+"Ortam Yöneticisi'ni çalıştırmalısınız.(Bunun için  \"%s\"\n"
+"kutucuğunu işaretleyin.)\n"
+"\n"
+"Sonra, \"%s\" yeniden başlatın."
 
 #: ../mdkapplet:157
 #, c-format
@@ -111,7 +109,7 @@ msgstr "Paketler güncel"
 #: ../mdkapplet:195
 #, c-format
 msgid "Failed to open urpmi database"
-msgstr "urpmi veri tabanı açılamıyor"
+msgstr "Urpmi veri tabanı açılamıyor"
 
 #: ../mdkapplet:200
 #, c-format
@@ -141,7 +139,7 @@ msgstr "Mandriva online yenilenmiş gözüküyor. Applet yeniden yükleniyor."
 #: ../mdkapplet:294
 #, c-format
 msgid "Launching MandrivaUpdate\n"
-msgstr "Mandriva Update Başlatılıyor.\n"
+msgstr "Mandriva Güncelleme Başlatılıyor.\n"
 
 #: ../mdkapplet:303
 #, c-format
@@ -202,7 +200,7 @@ msgstr "Online WebSite"
 #: ../mdkapplet:483
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "_: Çevirmen adı & e-postası\n"
 
 #: ../mdkapplet:492
 #, c-format
@@ -222,7 +220,7 @@ msgstr "Güvenlik hatası:"
 #: ../mdkonline.pm:207
 #, c-format
 msgid "Generic error (machine already registered)"
-msgstr ""
+msgstr "Genel hata (makine zaten kayıtlı)"
 
 #: ../mdkonline.pm:208
 #, c-format
@@ -235,6 +233,8 @@ msgid ""
 "Server Database failed\n"
 "Please Try again Later"
 msgstr ""
+"Sunucu Veritabanı başarısız\n"
+"Lütfen daha sonra tekrar deneyin"
 
 #: ../mdkonline.pm:209
 #, c-format
@@ -244,7 +244,7 @@ msgstr "Kayıt Hatası"
 #: ../mdkonline.pm:209
 #, c-format
 msgid "Some parameters are missing"
-msgstr "Bağzı değişkenler eksik!"
+msgstr "Bazı değişkenler eksik!"
 
 #: ../mdkonline.pm:210 ../mdkonline.pm:216
 #, c-format
@@ -267,25 +267,27 @@ msgid ""
 "The email you provided is already in use\n"
 "Please enter another one\n"
 msgstr ""
-"vermiş olduğunuz E-Posta adresi kullanımda veya geçersiz\n"
-"Lütfen başka birtane veriniz\n"
+"Vermiş olduğunuz E-Posta adresi kullanımda\n"
+"Lütfen başka bir tane veriniz\n"
 
 #: ../mdkonline.pm:212
 #, c-format
 msgid "The email you provided is invalid or forbidden"
-msgstr ""
+msgstr "Vermiş olduğunuz posta adresi geçersiz ya da yasaklı"
 
 #: ../mdkonline.pm:213
 #, c-format
 msgid ""
 "Email address box is empty\n"
 "Please provide one"
-msgstr "E-Posta alanı boş bırakılmış lütfen uygun şekilde doldurunuz"
+msgstr ""
+"E-Posta alanı boş bırakılmış\n"
+"Lütfen doldurunuz"
 
 #: ../mdkonline.pm:214
 #, c-format
 msgid "Restriction Error"
-msgstr "Sınırlama hatası: "
+msgstr "Sınırlama Hatası"
 
 #: ../mdkonline.pm:214
 #, c-format
@@ -295,7 +297,7 @@ msgstr "Veritabanı Sunucusuna erişim yasaklı"
 #: ../mdkonline.pm:215 ../mdkonline.pm:217
 #, c-format
 msgid "Service error"
-msgstr "Servis hatası"
+msgstr "Hizmet hatası"
 
 #: ../mdkonline.pm:215
 #, c-format
@@ -303,6 +305,8 @@ msgid ""
 "Mandriva web services are currently unavailable\n"
 "Please Try again Later"
 msgstr ""
+"Mandriva web hizmetlerine şu anda erişilemez\n"
+"Lütfen Daha sonra tekrar deneyin"
 
 #: ../mdkonline.pm:216
 #, c-format
@@ -315,8 +319,8 @@ msgid ""
 "Mandriva web services are under maintenance\n"
 "Please Try again Later"
 msgstr ""
-"Mandriva web servisleri şu an için bakımda. Daha sonra lütfen tekrar "
-"deneyiniz."
+"Mandriva web servisleri şu an için bakımda.\n"
+"Daha sonra lütfen tekrar deneyiniz."
 
 #: ../mdkonline.pm:218
 #, c-format
@@ -326,7 +330,7 @@ msgstr "Kullanıcı yasaklı"
 #: ../mdkonline.pm:218
 #, c-format
 msgid "User account forbidden by Mandriva web services"
-msgstr "Kullanıcı hesabı Mandriva web saervisleri tarafından yasaklanmıştır."
+msgstr "Kullanıcı hesabı Mandriva web servisleri tarafından yasaklanmıştır."
 
 #: ../mdkonline.pm:219
 #, c-format
@@ -336,22 +340,21 @@ msgstr "Bağlantı hatası"
 #: ../mdkonline.pm:219
 #, c-format
 msgid "Mandriva web services not reachable"
-msgstr "Mandriva web servisleri erişilemez"
+msgstr "Mandriva web servislerine erişilemez"
 
 #: ../mdkupdate:68
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate sürüm %s\n"
 "Copyright (C) %s Mandriva.\n"
 "Bu bir serbest yazılımdır ve GNU GPL lisansı altında tekrar "
-"dağıtılabilinir.\n"
+"dağıtılabilir.\n"
 "\n"
 "kullanımı:\n"
 
@@ -363,17 +366,17 @@ msgstr "  --help\t\t- bu yardım mesajını görüntüler.\n"
 #: ../mdkupdate:74
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr " --update\t\t- Mandriva Update'yi çalıştır.\n"
+msgstr " --auto\t\t- Mandriva Güncelleme'yi otomatik çalıştır.\n"
 
 #: ../mdkupdate:75
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr " --mnf\t\t\t- mnfye özgü betiklere erişin.\n"
+msgstr "  --mnf\t\t\t- mnfye özgü betikleri çalıştır.\n"
 
 #: ../mdkupdate:76
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr " --update        - Mandriva Linux Update'yi çalıştır.\n"
+msgstr "  --noX\t\t\t- Mandriva Güncelleme'nin metin sürümü.\n"
 
 #: ../mdkupdate:77
 #, c-format
@@ -382,18 +385,14 @@ msgstr "  --debug\t\t\t- kayıt tut\n"
 
 #: ../mdkupdate:78
 #, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
+msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
+msgstr "  --bundle file.bundle\t- paketi .bundle metaverisi dosyasından incele ve kur.\n"
 
 #. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
 #: ../mdkupdate:120
 #, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
+msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
+msgstr "Öncelikle sistem 'Canlı Kurma' sihirbazı ile sabit diskinize kurmanız gereklidir."
 
 #: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
 #, c-format
@@ -417,6 +416,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Yığın sunucusuna doğrulatma başarısız:\n"
+"\n"
+"%s"
 
 #: ../mdkupdate:159 ../mdkupdate:188
 #, c-format
@@ -428,14 +430,16 @@ msgstr "Bir hata oluştu"
 msgid ""
 "The version of the Mandriva Online client is too old.\n"
 "\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
+"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
 msgstr ""
+"Mandriva Online aracı sürümü çok eski.\n"
+"\n"
+"Yeni bir sürüme yükseltmeniz gerekli. Yeni sürümü http://start.mandriva.com adresinden edinebilirsiniz."
 
 #: ../mdkupdate:207
 #, c-format
 msgid "This bundle is not well formated. Aborting."
-msgstr ""
+msgstr "Yığın iyi biçimlenmemiş. İptal ediliyor."
 
 #: ../mdkupdate:219
 #, c-format
@@ -447,263 +451,3 @@ msgstr "Paketler kuruluyor...\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source medyasından paketler güncellenemiyor.\n"
 
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Sisteminiz için yeni güncellemeler mevcut "
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Servis yapılandırılmadı. Lütfen yapılandırın."
-
-#~ msgid "Configure the service"
-#~ msgstr "Servisi Yapılandır"
-
-#~ msgid "Check updates"
-#~ msgstr "Güncellemeleri Kontrol Et"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Yapılandır"
-
-#~ msgid "Actions"
-#~ msgstr "Eylemler"
-
-#~ msgid "Configure"
-#~ msgstr "Yapılandır"
-
-#~ msgid "See logs"
-#~ msgstr "Günlüğü göster"
-
-#~ msgid "Status"
-#~ msgstr "Durum"
-
-#~ msgid "Close"
-#~ msgstr "Kapat"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Ağ Bağlantısı:"
-
-#~ msgid "Up"
-#~ msgstr "Yukarı"
-
-#~ msgid "Down"
-#~ msgstr "Aşağı"
-
-#~ msgid "Last check: "
-#~ msgstr "Son Kontrol:"
-
-#~ msgid "Machine name:"
-#~ msgstr "Makine adı:"
-
-#~ msgid "Updates: "
-#~ msgstr "Yeni Güncellemeler:"
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Geliştirme sürümü: Desteklenmemektedir."
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "Aşırı eski sürüm : Desteklenmemektedir"
-
-#~ msgid "Unknown state"
-#~ msgstr "Bilinmeyen durum"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr "Çevrimiçi servisler etkisiz. Mandriva Online ile ilişki kurun.\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Yanlış parola.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Yanlış Eylem, sunucu, giriş.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Ağ ayarlarınızda sorun var. Lütfen ağ ayarlarınızın doğruluğunu bir daha "
-#~ "denetleyin.\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr "Sunucu bağlantı hatası. Lütfen sunucu destek ekibine başvurun."
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Mandriva Online Cevabı: \n"
-
-#~ msgid "No check"
-#~ msgstr "Kontrolsüz:"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "yapılandırma dosyası mevcut değil.\n"
-
-#~ msgid "Logs"
-#~ msgstr "Kayıtlar"
-
-#~ msgid "Clear"
-#~ msgstr "Temizle"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline sürüm %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "Bu bir serbest yazılımdır ve GNU GPL lisansı altında tekrar "
-#~ "dağıtılabilinir.\n"
-#~ "\n"
-#~ "kullanımı:\n"
-
-#~ msgid "  --box=\t\t\t- hostname.\n"
-#~ msgstr "  --box=\t\t\t- hostname.\n"
-
-#~ msgid "  --country\t\t\t- name of country of the user. \n"
-#~ msgstr "  --country\t\t\t- Kullanıcının ülke adı. \n"
-
-#~ msgid "  --interactive\t\t- use the interactive mode.\n"
-#~ msgstr "  --interactive\t\t- interaktif modu kullanın.\n"
-
-#~ msgid "Mandriva Online"
-#~ msgstr "Mandriva Online"
-
-#~ msgid "Mr."
-#~ msgstr "Bay"
-
-#~ msgid "Mrs."
-#~ msgstr "Bayan"
-
-#~ msgid "Ms."
-#~ msgstr "Bayan"
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Yapılandırmanız okunuyor\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Bu asistan size yapılandırmanızı yollarken yardımcı olacaktır.\n"
-#~ "(paketler, donanım bilgisi) Bu bilgilerle Mandrivata bir veri tabanı\n"
-#~ "oluşturulacak ve sisteminiz hakkında güvenlik yamaları ve "
-#~ "güncellemelerden\n"
-#~ "her an haberdar olacaksınız.\n"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr ""
-#~ "Mandriva Online kullanıcıadınızı , parolanızı ve makine adını giriniz:"
-
-#~ msgid "Email address:"
-#~ msgstr "E-Posta adresi:"
-
-#~ msgid "Country"
-#~ msgstr "Ülke"
-
-#~ msgid "Password:"
-#~ msgstr "Parola:"
-
-#~ msgid "Machine description:"
-#~ msgstr "Makine açıklaması:"
-
-#~ msgid "(Ex: My Home Office's Computer)"
-#~ msgstr " "
-
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr "Makine adı 40 karektere kadar ve alfanumerik olmalıdır."
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Mandriva Online'na Bağlanıyor"
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "Yapacağınız seçim ile Mandriva Linux'a yardım etme şansına sahipsiniz .\n"
-#~ "\n"
-#~ "Bu sihirbaz aşağıda listelenen bilgileri Mandriva a yollayacaktır:\n"
-#~ "\n"
-#~ "1) Sistemde yüklü olan paketlerin(programların) isimleri,\n"
-#~ "\n"
-#~ "2) Bilgisayarınızın donanım listesi.\n"
-#~ "\n"
-#~ "Bu sizde hoşnutsuzluk oluşturdu ise Vazgeç e tıklayıp çıkabilirsiniz!\n"
-#~ "İleri ye tıklamanız halinde Mandriva Linux un ihtiyaçlara göre \n"
-#~ "yapılandırılmasında büyük bir yardımda bulunmuş olacaksınız.\n"
-#~ "Sistem bilginiz kesinlikle bir 3. şahısa iletilmeyecektir.\n"
-#~ "Tüm bu bilgiler Mandriva Linux Gizlilik Poliçesi ile korunacaktır."
-
-#~ msgid "Connection problem"
-#~ msgstr "Bağlantı problemi"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Mandriva Linux Online Hesabı Oluştur"
-
-#~ msgid "Greeting:"
-#~ msgstr "KArşılama"
-
-#~ msgid "First name:"
-#~ msgstr "İlk isim:"
-
-#~ msgid "Last name:"
-#~ msgstr "Soyad:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Parolayı Onayla:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Şifreler uyuşmuyor\n"
-#~ "Lütfen tekrar deneyin\n"
-
-#~ msgid "Please fill in each field"
-#~ msgstr "Lütfen tüm alanları doldurun"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Geçerli bir EPosta adresi değil\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Göndermeniz tamamlanmıştır!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "Bundan böyle Mandriva Online'dan sisteminiz\n"
-#~ "hakkında ki tüm gelişmeler ve güvenlik açıkları size bildirilecektir.\n"
-#~ "Mandriva teşekkürlerini sunar..."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online otamatikman uygulanabilecek güncellemeleri "
-#~ "teklif edecektir.\n"
-#~ "Sistemizde belirli aralıklarla çalışacak ve\n"
-#~ "güncellemeleri takip edecek olan bir programdır\n"
-
-#~ msgid "Congratulations"
-#~ msgstr "Tebrikler"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Göndermeniz tamamlanmıştır!"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Yapılandırmanız okuma hatası"
