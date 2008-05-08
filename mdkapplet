@@ -281,7 +281,7 @@ sub installUpdates() {
     return if $mdv_update_pid;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N_("Launching MandrivaUpdate\n"));
-    $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation');
+    $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash');
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     restart_applet() if $newmd5 ne $oldmd5;
     silentCheck(); gtkflush();
