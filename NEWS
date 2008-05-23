@@ -82,6 +82,46 @@ Version 2.28 - Fri Feb  1 2008, Thierry Vignaud
 - readd back tooltips regarding "initial check delay"
 - try harder not to report false positives (#36358)
 
+Version 2.27-1mdv2008.1 - Dec 11 2007, Thierry Vignaud
+
+- delay initial check by 1 mn instead of by 25 seconds
+- do not display bubbles while waiting for the initial check
+
+Version 2.26-1mdv2008.1 - Dec 05 2007, Thierry Vignaud
+
+- kill disconnect state (thus make mdkapplet works again w/o network)
+- mdkapplet.conf: fix default update frequency
+
+Version 2.25-1mdv2008.1 - Dec 04 2007, Thierry Vignaud
+
+- drop --debug option
+- drop online registration wizard (obsolete since we locally compute
+  updates)
+- drop web link from menu (was only relevant for web based Online
+  service)
+- install config file for applet
+- kill dead code
+- renice checking updates at level 7
+- show Mandriva Linux site instead of old mdvonline one
+
+Version 2.24-1mdv2008.1 - Oct 23 2007, Thierry Vignaud
+
+- use notification bubbles
+- do not harcode icon extension
+
+Version 2.23.1 - Oct 02 2007, Thierry Vignaud
+
+- fix bogus catalog
+- mdkapplet:
+  o fix a crash when /etc/mandriva-release isn't readable due to high msec
+    level (#34323))
+  o run with reduced I/O priority (#33888)
+- own /etc/cron.daily/mdkupdate (#33454)
+
+Version 2.22 - Sep 04 2007, Thierry Vignaud
+
+- improve About dialog
+
 Version 2.21 - Tue Dec  4 2007, Thierry Vignaud
 - drop --debug option
 - drop online registration wizard (obsolete since we locally compute
