@@ -58,16 +58,20 @@ Version 2.32 - 5 March 2008, Thierry Vignaud
   o use more modern API to check for updates
 
 Version 2.32 - Tue Feb 26 2008, Thierry Vignaud
+
 - lazy load Rpmdrake::open_db so that urpm really is lazy loaded at
   runtime when forking checker
 
 Version 2.31 - Tue Feb 26 2008, Thierry Vignaud
+
 - make sure notifications' text doesn't got truncated
 
 Version 2.30 - Mon Feb 18 2008, Thierry Vignaud
+
 - update inactive backport media (#34620)
 
 Version 2.29 - Tue Feb  5 2008, Thierry Vignaud
+
 - increase initial check delayed from 60 seconds to 5 minutes
 - make sure to not display any bubbles at all if no updates (#37451)
 - really set nice priority
@@ -76,6 +80,7 @@ Version 2.29 - Tue Feb  5 2008, Thierry Vignaud
 - hide icon when no updates are availlable (#29728)
 
 Version 2.28 - Fri Feb  1 2008, Thierry Vignaud
+
 - do not crash when icon is removed from the panel socket (#35908)
 - do not display a bubble while checking updates (#36526)
 - make mdkapplet aware again of network status (#35107)
@@ -123,6 +128,7 @@ Version 2.22 - Sep 04 2007, Thierry Vignaud
 - improve About dialog
 
 Version 2.21 - Tue Dec  4 2007, Thierry Vignaud
+
 - drop --debug option
 - drop online registration wizard (obsolete since we locally compute
   updates)
