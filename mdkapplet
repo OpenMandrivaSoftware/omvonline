@@ -65,6 +65,7 @@ my $release = mdkonline::get_release();
 my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 $config{FIRST_CHECK_DELAY} ||= 5 * 60 * 1000; # default to 5 minutes
+$config{DISTRO_CHECK_DELAY} ||= 60*60*24; # default : one day
 
 
 #compatibility
@@ -109,6 +110,12 @@ my %state = (
 		      menu => [ 'update', 'check' ],
 		      tt => [ N_("New updates are available for your system") ]
 		     },
+             new_distribution => {
+                 colour => [ 'error' ],
+                 changes => [ 'okay' ],
+                 menu => [ 'update', 'check' ],
+                 tt => [ N("A new stable distribution has been released") ."\n\n" . N("Do you want to upgrade?") ]
+             },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
@@ -207,6 +214,7 @@ $icon->signal_connect(activate => sub {
                               no_update_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
                               no_enabled_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
                               updates => \&installUpdates,
+                              new_distribution => \&upgrade,
                           );
                           $actions{$state_global}->() if ref $actions{$state_global};
 			  });
@@ -218,6 +226,9 @@ foreach my $opt (@ARGV) {
 }
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
+
+my $new_distro_version;
+my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
@@ -242,6 +253,43 @@ run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 Gtk2->main;
 
 ugtk2::exit(0);
+
+
+sub is_there_a_new_distributions() {
+    #- contact the following URL to retrieve the list of released distributions.
+    my $type = lc($product_id->{type}); $type =~ s/\s//g;
+    my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
+    log::explanations("trying distributions list from $list");
+
+    my @lines = eval {
+        my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+        my $res = urpm::download::sync($urpm, undef, [ $list ], dir => $urpm->{cachedir} || '/root');
+        $res or die N("retrieval of [%s] failed", $list) . "\n";
+    };
+
+    if (my $err = $@) {
+        log::explanations("failed to download distribution list");
+        return; # not a fatal error
+    }
+    
+    if (!@lines) {
+        log::explanations("empty distribution list");
+        return;
+    }
+
+    my @distros = map { common::parse_LDAP_namespace_structure(chomp_($_)) } @lines;
+
+    # only compare first distro: if it's not the same as the currently installed one,
+    # then it's the most recent release:
+    my $new_distro = $distros[0];
+
+    if ($new_distro && $new_distro->{version} ne $product_id->{version}) {
+        $new_distro_version = $new_distro->{version};
+        log::explanations(sprintf("new '%s' distribution was released on %s", $new_distro_version, $new_distro->{release_date}));
+        return 1;
+    }
+}
+
 
 my ($mdv_update_pid, $checker_pid);
 
@@ -283,6 +331,47 @@ sub restart_applet() {
     exec($0, '--auto-update');
 }
 
+sub upgrade() {
+    logIt(N_("backuping urpmi configuration"));
+    cp_af("$root/etc/urpmi/urpmi.cfg", "$root/etc/urpmi/urpmi.cfg.backup." . int(rand 100000));
+
+    my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+
+    my $_urpmi_lock = eval {
+        local $urpm->{fatal} = sub { die @_ };
+        urpm::lock::urpmi_db($urpm, 'exclusive');
+    };
+
+    if (my $err = $@) {
+        logIt(sprintf N_("locking urpmi database failed: %s"), $err);
+        return;
+    }
+
+    urpm::media::read_config($urpm);
+    urpm::download::set_cmdline_proxy();
+
+    my @entries = map { $_->{name} } @{$urpm->{media}};
+    my @selected = urpm::media::select_media_by_name($urpm, \@entries, 1);
+
+    if (@selected) {
+        logIt(N_("removing all existing urpmi media for upgrade"));
+        urpm::media::remove_media($urpm, \@selected);
+        urpm::media::write_urpmi_cfg($urpm);
+    }
+
+    logIt(N_("adding urpmi media for new distribution"));
+    my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
+    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list";
+    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
+      and return;
+
+    logIt(N_("upgrading urpmi and rpmdrake"));
+    logIt(N_("upgrading the whole system"));
+    # we cannot use installUpdates() as MandrivaUpdate needs the media
+    # flaged as update (or else, we need to add a new option to MandrivaUpdate):
+    $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--silent-success', if_($root, "--urpmi-root=$root"));
+}
+
 sub installUpdates() {
     my $binfile = $0;
     return if $mdv_update_pid;
@@ -296,6 +385,17 @@ sub installUpdates() {
 }
 
 sub silentCheck() {
+    state $check_time;
+    my $new_time = time ();
+    if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
+        $check_time = $new_time;
+        if (is_there_a_new_distributions()) {
+            go2State('new_distribution'); 
+            gtkflush();
+            return;
+        }
+    }
+
     return if $mdv_update_pid || $checker_pid;
     logIt(N_("Computing new updates...\n"));
     logIt(N_("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
@@ -454,6 +554,8 @@ sub setState {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
         $bubble->add_action('clicked', N("Install updates"), \&installUpdates) if $state eq 'updates';
+        $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade) if $state eq 'new_distribution';
+
         $bubble->set_timeout(5000);
         eval { $bubble->show };
     }
