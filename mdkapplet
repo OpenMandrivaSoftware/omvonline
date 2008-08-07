@@ -209,8 +209,13 @@ $icon->signal_connect(activate => sub {
                           );
                           $actions{$state_global}->() if ref $actions{$state_global};
 			  });
-my ($opt) = @ARGV;
-if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
+foreach my $opt (@ARGV) {
+    if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
+    if ($opt =~ '--(rpm-root|urpmi-root)=(.*)') {
+        $::rpmdrake_options{$1}[0] = $2;
+    }
+}
+
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
