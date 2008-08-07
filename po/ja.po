@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2007-08-17 11:00+0900\n"
 "Last-Translator: BANDO Yukiko\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "%s に更新をチェックします"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "新しい更新はありません"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -38,38 +38,48 @@ msgstr ""
 "サービスの設定に問題があります。ログを調べて support@mandrivaonline.com に"
 "メールしてください。"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "利用可能なパッケージを探しています。お待ちください..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "新しい更新があります"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "ネットワークが未接続です。ネットワークを設定してください。"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 "サービスが有効になっていません。「Online ウェブサイト」を選択してください。"
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi データベースがロックされています"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "お使いのバージョンはサービスの対象外です (期限切れ/開発版)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -77,7 +87,7 @@ msgstr ""
 "メディアが見つかりません。RPM メディアマネージャでメディアを追加してくださ"
 "い。"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -93,263 +103,133 @@ msgstr ""
 "\n"
 "その後、%s を再起動してください。"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "有効"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "メディアの更新でエラー"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "チェック中... 新しい更新があります\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "パッケージは最新です"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "urpmi データベースを開けません"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "システムを更新"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "更新をチェック"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "ネットワークの設定"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect を起動\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online が再インストールされたようです。アプレットを更新中 ..."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate を起動\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux 更新アプレット"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "新しい更新を計算中...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "接続しています"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "新しい更新はありません\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "ネットワーク確認: 無効になっているようです\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "情報..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online は Mandriva ウェブサービスへのアクセスを提供します。"
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Online ウェブサイト"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "起動時に常に開始する"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "終了"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "セキュリティエラー"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "一般的なエラー (マシンが既に登録済み)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "データベースエラー"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"サーバのデータベースに問題が発生。\n"
-"しばらくたってからもう一度やり直してください。"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "登録エラー"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "足りないパラメータがあります"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "パスワードエラー"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "パスワード誤り"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "ログインエラー"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"入力されたメールアドレスは既に使用されています。\n"
-"別のものを入力してください。\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "入力されたメールアドレスは無効か禁止されています"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"メールアドレスが空白です。\n"
-"入力してください。"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "アクセス制限エラー"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "データベースへのアクセスが禁止されています"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "サービスエラー"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva ウェブサービスは現在ご利用いただけません。\n"
-"しばらくたってからもう一度やり直してください。"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "パスワード不一致"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva ウェブサービスはメンテナンス中です。\n"
-"しばらくたってからもう一度やり直してください。"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "ユーザが禁止されています"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "ユーザアカウントが Mandriva ウェブサービスによって禁止されています"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "接続エラー"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Mandriva ウェブサービスに接続できません"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -365,108 +245,176 @@ msgstr ""
 "\n"
 "使用方法 :\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- このヘルプメッセージを出力\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update を自動的に起動する。\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- MNF 固有のスクリプトを起動する。\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- テキストモードの Mandriva Update\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- 記録を取る\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージをイ"
-"ンストールする。\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Live インストールウィザードを使って、先にシステムをハードドライブにインストー"
-"ルする必要があります。"
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "お待ちください"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "準備中..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "エラー"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"バンドルサーバへの認証に失敗しました:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "エラーが発生しました"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Mandriva Online クライアントのバージョンが古すぎます。\n"
-"\n"
-"アップグレードが必要です。http://start.mandriva.com から新しいバージョンを取"
-"得できます。"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "このバンドルは正しくフォーマットされていません。中止します。"
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "パッケージをインストール中...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source メディアからパッケージを更新できません。\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux 更新アプレット"
+
+#~ msgid "Security error"
+#~ msgstr "セキュリティエラー"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "一般的なエラー (マシンが既に登録済み)"
+
+#~ msgid "Database error"
+#~ msgstr "データベースエラー"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "サーバのデータベースに問題が発生。\n"
+#~ "しばらくたってからもう一度やり直してください。"
+
+#~ msgid "Registration error"
+#~ msgstr "登録エラー"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "足りないパラメータがあります"
+
+#~ msgid "Password error"
+#~ msgstr "パスワードエラー"
+
+#~ msgid "Wrong password"
+#~ msgstr "パスワード誤り"
+
+#~ msgid "Login error"
+#~ msgstr "ログインエラー"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "入力されたメールアドレスは既に使用されています。\n"
+#~ "別のものを入力してください。\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "入力されたメールアドレスは無効か禁止されています"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "メールアドレスが空白です。\n"
+#~ "入力してください。"
+
+#~ msgid "Restriction Error"
+#~ msgstr "アクセス制限エラー"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "データベースへのアクセスが禁止されています"
+
+#~ msgid "Service error"
+#~ msgstr "サービスエラー"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva ウェブサービスは現在ご利用いただけません。\n"
+#~ "しばらくたってからもう一度やり直してください。"
+
+#~ msgid "Password mismatch"
+#~ msgstr "パスワード不一致"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva ウェブサービスはメンテナンス中です。\n"
+#~ "しばらくたってからもう一度やり直してください。"
+
+#~ msgid "User Forbidden"
+#~ msgstr "ユーザが禁止されています"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "ユーザアカウントが Mandriva ウェブサービスによって禁止されています"
+
+#~ msgid "Connection error"
+#~ msgstr "接続エラー"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Mandriva ウェブサービスに接続できません"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle file.bundle\t- .bundle メタ情報ファイルをパースしてパッケージを"
+#~ "インストールする。\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Live インストールウィザードを使って、先にシステムをハードドライブにインス"
+#~ "トールする必要があります。"
+
+#~ msgid "Please wait"
+#~ msgstr "お待ちください"
+
+#~ msgid "Preparing..."
+#~ msgstr "準備中..."
+
+#~ msgid "Error"
+#~ msgstr "エラー"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "バンドルサーバへの認証に失敗しました:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "エラーが発生しました"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Mandriva Online クライアントのバージョンが古すぎます。\n"
+#~ "\n"
+#~ "アップグレードが必要です。http://start.mandriva.com から新しいバージョンを"
+#~ "取得できます。"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "このバンドルは正しくフォーマットされていません。中止します。"
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "パッケージをインストール中...\n"
 
 #~ msgid "New bundles are available for your system"
 #~ msgstr "新しいバンドルが利用可能です"

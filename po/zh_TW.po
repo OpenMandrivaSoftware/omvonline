@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-03-05 16:06+0800\n"
 "Last-Translator: You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "將於 %s 檢查更新"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "您的系統處於最新的狀態"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -41,43 +41,53 @@ msgid ""
 msgstr ""
 "服務設定發生問題，請檢查錯誤紀錄並寄封電子郵件至 support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "請稍候，正在尋找可用的套件..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "有適用於您系統的更新"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "網路沒有啟動，請設定您的網路連線"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "服務沒有啟動。請點選「線上網站」"
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi 資料庫被鎖住了"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支援 (您使用的版本過舊或是開發中版本)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "找不到媒體。您必須經由「套件媒體管理員」新增一些媒體。"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -92,264 +102,135 @@ msgstr ""
 "\n"
 "完成後，請重新啟動 %s。"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "是否啟用？"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "更新媒體時發生錯誤"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "檢查中...有可用的更新\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "套件都已經更新了"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "無法開啟 urpmi 資料庫"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "安裝更新"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "檢查更新"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "設定網路連線"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "啟動 drakconnect 連線程式\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online 似乎重新安裝過，重新載入面板程式..."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "啟動 MandrivaUpdate\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux 自動更新面板程式"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "計算新的更新...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "連線到"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "系統已經在最新狀態了\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "檢查網路狀態中：似乎已停用\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "關於..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online 將引導您連結到 Mandriva 網頁服務。"
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "線上網站"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr "Shiva Huang <shivahuang@gmail.com>\n"
+msgstr ""
+"Shiva Huang <shivahuang@gmail.com>\n"
 "You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "總是在啟動時執行"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "結束"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "安全性警示"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "一般性錯誤 (電腦已經註冊)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "資料庫錯誤"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"伺服器資料庫錯誤\n"
-"請稍後再試"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "註冊錯誤"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "某些參數遺失"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "密碼錯誤"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "錯誤密碼"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "登入錯誤"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"您提供的電子郵件信箱已經在使用了。\n"
-"請另外選一個\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "您提供的電子郵件信箱是不合法或遭拒的"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"電子郵件位址欄位是空白的，\n"
-"請提供一個郵件位址"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "限制錯誤"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "連結資料庫遭拒"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "服務錯誤"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva 網頁服務現在無法使用\n"
-"請稍候再試"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "密碼不符"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva 網頁服務正在維護中\n"
-"請稍候再試"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "使用者遭拒"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "使用者帳號遭到 Mandriva 網頁服務拒絕"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "連線錯誤"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "無法連線到 Mandriva 網頁服務"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -365,103 +246,171 @@ msgstr ""
 "\n"
 "用法：\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- 顯示本輔助說明。\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- 自動啟動 Mandriva Update。\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- 啟動 mnf 指定的 script。\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- 文字介面版的 Mandriva Update。\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- 紀錄做了那些事情\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr "  --bundle file.bundle\t- 分析並安裝 .bundle 資訊檔中的套件。\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr "首先您必須用「Live Install」精靈將系統安裝到您的硬碟。"
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "請稍候"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "準備中..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "錯誤"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"加值伺服器的認證失敗：\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "發生一個錯誤"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"這個 Mandriva Online 客戶端的版本太舊了。\n"
-"\n"
-"您需要升級到一個較新的版本。您可以從 http://start.mandriva.com 取得新版。"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "這個加值軟體沒有經過良好的格式化，略過。"
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "正在安裝套件...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "無法由 update_source 媒體更新套件。\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux 自動更新面板程式"
+
+#~ msgid "Security error"
+#~ msgstr "安全性警示"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "一般性錯誤 (電腦已經註冊)"
+
+#~ msgid "Database error"
+#~ msgstr "資料庫錯誤"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "伺服器資料庫錯誤\n"
+#~ "請稍後再試"
+
+#~ msgid "Registration error"
+#~ msgstr "註冊錯誤"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "某些參數遺失"
+
+#~ msgid "Password error"
+#~ msgstr "密碼錯誤"
+
+#~ msgid "Wrong password"
+#~ msgstr "錯誤密碼"
+
+#~ msgid "Login error"
+#~ msgstr "登入錯誤"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "您提供的電子郵件信箱已經在使用了。\n"
+#~ "請另外選一個\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "您提供的電子郵件信箱是不合法或遭拒的"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "電子郵件位址欄位是空白的，\n"
+#~ "請提供一個郵件位址"
+
+#~ msgid "Restriction Error"
+#~ msgstr "限制錯誤"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "連結資料庫遭拒"
+
+#~ msgid "Service error"
+#~ msgstr "服務錯誤"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva 網頁服務現在無法使用\n"
+#~ "請稍候再試"
+
+#~ msgid "Password mismatch"
+#~ msgstr "密碼不符"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva 網頁服務正在維護中\n"
+#~ "請稍候再試"
+
+#~ msgid "User Forbidden"
+#~ msgstr "使用者遭拒"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "使用者帳號遭到 Mandriva 網頁服務拒絕"
+
+#~ msgid "Connection error"
+#~ msgstr "連線錯誤"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "無法連線到 Mandriva 網頁服務"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr "  --bundle file.bundle\t- 分析並安裝 .bundle 資訊檔中的套件。\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr "首先您必須用「Live Install」精靈將系統安裝到您的硬碟。"
+
+#~ msgid "Please wait"
+#~ msgstr "請稍候"
+
+#~ msgid "Preparing..."
+#~ msgstr "準備中..."
+
+#~ msgid "Error"
+#~ msgstr "錯誤"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "加值伺服器的認證失敗：\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "發生一個錯誤"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "這個 Mandriva Online 客戶端的版本太舊了。\n"
+#~ "\n"
+#~ "您需要升級到一個較新的版本。您可以從 http://start.mandriva.com 取得新版。"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "這個加值軟體沒有經過良好的格式化，略過。"
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "正在安裝套件...\n"
 
 #~ msgid "New bundles are available for your system"
 #~ msgstr "有適用於您系統的加值軟體"

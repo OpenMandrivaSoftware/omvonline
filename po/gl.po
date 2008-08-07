@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-03-30 15:40+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -18,58 +18,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Comprobará as actualizacións en %s"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "O seu sistema está actualizado"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
-msgstr "Problema na configuración do servicio. Por favor comprobe os logs e envíe un correo-e a support@mandrivaonline.com"
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrivaonline.com"
+msgstr ""
+"Problema na configuración do servicio. Por favor comprobe os logs e envíe un "
+"correo-e a support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Por favor agarde, buscando os paquetes dispoñibles..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Hai novas actualizacións dispoñibles para o seu sistema"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "A rede está caída. Configure a súa rede"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "O servicio non está activado. Clique en \"Sitio Web en Liña\""
 
-#: ../mdkapplet:134
-#: ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "a base de datos de urpmi está bloqueada"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versión non soportada (versión antiga ou de desenvolvemento)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Non se atopou ningún soporte. Debe engadir algún soporte usando o 'Xestor de Soportes de Software'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Non se atopou ningún soporte. Debe engadir algún soporte usando o 'Xestor de "
+"Soportes de Software'."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -86,274 +102,139 @@ msgstr ""
 "\n"
 "Despois, reinicie \"%s\"."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "¿Habilitado"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Erro ó actualizar o soporte"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Comprobando... As actualizacións están dispoñibles\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Os paquetes están actualizados"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Fallo ó abrir a base de datos de urpmi"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Instala-las actualizacións"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Comprobar se hai Actualizacións"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Configura-la Rede"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Executando drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Semella ser que se reinstalou Mandriva Online, recargando applet ...."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Executando MandrivaUpdate\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Applet de Actualización de Mandriva Linux"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Procesando as novas actualizacións...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Conectando a"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "O sistema está actualizado\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Comprobando a Rede: parece que está deshabilitada\n"
 
-#: ../mdkapplet:457
-#: ../mdkupdate:118
-#: ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Advertencia"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Acerca de..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s de Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online da acceso ós servicios web de Mandriva."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Sitio Web en Liña"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Executar sempre ó inicia-lo sistema"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Pechar"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Erro de seguridade"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Erro xenérico (a máquina xa está rexistrada)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Erro na base de datos"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Fallo no Servidor da Base de Datos\n"
-"Por favor, inténteo de novo máis tarde"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Erro no rexistro"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Faltan algúns parámetros"
-
-#: ../mdkonline.pm:210
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Erro no contrasinal"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Contrasinal incorrecto"
-
-#: ../mdkonline.pm:211
-#: ../mdkonline.pm:212
-#: ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Erro de rexistro"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"O enderezo de correo-e que proporcionou xa se está usando\n"
-"Introduza outro\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "O email que proporcionou é incorrecto ou está prohibido"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"O cadro do enderezo de correo-e está baleiro\n"
-"Proporcione un"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Erro de Restricción"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Acceso á base de datos prohibido"
-
-#: ../mdkonline.pm:215
-#: ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Erro do servicio"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Os servicios web de Mandriva non están dispoñibles\n"
-"Por favor, inténteo de novo máis tarde"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Os contrasinais non coinciden"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Estáse realizando o mantemento dos servicios web de Mandriva\n"
-"Por favor, inténteo de novo máis tarde"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Usuario Prohibido"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Conta de usuario prohibida polos servicios web de Mandriva"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Erro de conexión"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Os servicios web de Mandriva non están dispoñibles"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -363,177 +244,277 @@ msgstr ""
 "\n"
 "uso:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- amosa esta mensaxe de axuda.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- executar Mandriva Update automáticamente.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- executa scripts mnf específicos.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- versión en modo texto de Mandriva Update.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- rexistrar o que se fai\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
-msgstr "  --bundle ficheiro.bundle\t- analiza e instala o paquete dende o ficheiro de metainformación .bundle.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
-msgstr "Primeiro ten que instalar o sistema no seu disco duro co asistente de 'Instalación Live'."
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#: ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Por favor, agarde"
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Preparando..."
-
-#: ../mdkupdate:141
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#: ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Erro"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Fallo ó autenticarse no servidor de paquetes:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Ocorreu un erro"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
-msgstr ""
-"A versión do cliente de Mandriva Online é moi antiga.\n"
-"\n"
-"Cómpre actualizar a unha versión máis nova. Pode facelo en http://start.mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Este paquete non está ben formatado. Abortando."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Instalando paquetes...\n"
-
-#: ../mdkupdate:231
-#: ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
+msgstr ""
+"Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Applet de Actualización de Mandriva Linux"
+
+#~ msgid "Security error"
+#~ msgstr "Erro de seguridade"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Erro xenérico (a máquina xa está rexistrada)"
+
+#~ msgid "Database error"
+#~ msgstr "Erro na base de datos"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Fallo no Servidor da Base de Datos\n"
+#~ "Por favor, inténteo de novo máis tarde"
+
+#~ msgid "Registration error"
+#~ msgstr "Erro no rexistro"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Faltan algúns parámetros"
+
+#~ msgid "Password error"
+#~ msgstr "Erro no contrasinal"
+
+#~ msgid "Wrong password"
+#~ msgstr "Contrasinal incorrecto"
+
+#~ msgid "Login error"
+#~ msgstr "Erro de rexistro"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "O enderezo de correo-e que proporcionou xa se está usando\n"
+#~ "Introduza outro\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "O email que proporcionou é incorrecto ou está prohibido"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "O cadro do enderezo de correo-e está baleiro\n"
+#~ "Proporcione un"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Erro de Restricción"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Acceso á base de datos prohibido"
+
+#~ msgid "Service error"
+#~ msgstr "Erro do servicio"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Os servicios web de Mandriva non están dispoñibles\n"
+#~ "Por favor, inténteo de novo máis tarde"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Os contrasinais non coinciden"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Estáse realizando o mantemento dos servicios web de Mandriva\n"
+#~ "Por favor, inténteo de novo máis tarde"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Usuario Prohibido"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Conta de usuario prohibida polos servicios web de Mandriva"
+
+#~ msgid "Connection error"
+#~ msgstr "Erro de conexión"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Os servicios web de Mandriva non están dispoñibles"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle ficheiro.bundle\t- analiza e instala o paquete dende o "
+#~ "ficheiro de metainformación .bundle.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Primeiro ten que instalar o sistema no seu disco duro co asistente de "
+#~ "'Instalación Live'."
+
+#~ msgid "Please wait"
+#~ msgstr "Por favor, agarde"
+
+#~ msgid "Preparing..."
+#~ msgstr "Preparando..."
+
+#~ msgid "Error"
+#~ msgstr "Erro"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Fallo ó autenticarse no servidor de paquetes:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Ocorreu un erro"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "A versión do cliente de Mandriva Online é moi antiga.\n"
+#~ "\n"
+#~ "Cómpre actualizar a unha versión máis nova. Pode facelo en http://start."
+#~ "mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Este paquete non está ben formatado. Abortando."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Instalando paquetes...\n"
 
 #, fuzzy
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Hai novas actualizacións dispoñibles para o seu sistema"
+
 #~ msgid "Service is not configured. Please click on \"Configure the service\""
 #~ msgstr ""
 #~ "O servicio non está configurado. Clique en \"Configura-lo servicio\""
+
 #~ msgid "Configure the service"
 #~ msgstr "Configura-lo servicio"
+
 #~ msgid "Check updates"
 #~ msgstr "Comprobar actualizacións"
+
 #~ msgid "Configure Now!"
 #~ msgstr "Configurar agora!"
+
 #~ msgid "Actions"
 #~ msgstr "Accións"
+
 #~ msgid "Configure"
 #~ msgstr "Configurar"
+
 #~ msgid "See logs"
 #~ msgstr "Ve-los logs"
+
 #~ msgid "Status"
 #~ msgstr "Estado"
+
 #~ msgid "Close"
 #~ msgstr "Pechar"
+
 #~ msgid "Network Connection: "
 #~ msgstr "Conexión á Rede: "
+
 #~ msgid "Up"
 #~ msgstr "Arriba"
+
 #~ msgid "Down"
 #~ msgstr "Abaixo"
+
 #~ msgid "Last check: "
 #~ msgstr "Última comprobación: "
+
 #~ msgid "Machine name:"
 #~ msgstr "Nome do ordenador:"
+
 #~ msgid "Updates: "
 #~ msgstr "Actualizacións: "
+
 #~ msgid "Development release not supported by service"
 #~ msgstr "Versión de desenvolvemento non soportada polo servicio"
+
 #~ msgid "Too old release not supported by service"
 #~ msgstr "Versión antiga non soportada polo servicio"
+
 #~ msgid "Unknown state"
 #~ msgstr "Estado descoñecido"
+
 #~ msgid "Online services disabled. Contact Mandriva Online site\n"
 #~ msgstr ""
 #~ "Os sevicios en liña están deshabilitados. Contacte co sitio Mandriva "
 #~ "Online\n"
+
 #~ msgid "Wrong Password.\n"
 #~ msgstr "Contrasinal Non Válido.\n"
+
 #~ msgid "Wrong Action or host or login.\n"
 #~ msgstr "Acción ou máquina ou nome de usuario incorrecto.\n"
+
 #~ msgid ""
 #~ "Something is wrong with your network settings (check your route, firewall "
 #~ "or proxy settings)\n"
 #~ msgstr ""
 #~ "Algo está mal na configuración da súa rede (verifique a configuración do "
 #~ "seu encamiñador, cortalumes ou proxy)\n"
+
 #~ msgid ""
 #~ "Problem occured while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr ""
 #~ "Ocorreu un problema mentres se conectaba co servidor, por favor contacte "
 #~ "co equipo de soporte"
+
 #~ msgid "Response from Mandriva Online server\n"
 #~ msgstr "Resposta do servidor de Mandriva Online\n"
+
 #~ msgid "No check"
 #~ msgstr "Sen comprobar"
+
 #~ msgid "Checking config file: Not present\n"
 #~ msgstr "Comprobando o ficheiro de configuración: Non existe\n"
+
 #~ msgid "Logs"
 #~ msgstr "Logs"
+
 #~ msgid "Clear"
 #~ msgstr "Limpar"
+
 #~ msgid ""
 #~ "mdonline version %s\n"
 #~ "Copyright (C) %s Mandriva.\n"
@@ -547,32 +528,46 @@ msgstr "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
 #~ "Isto é software libre e pode redistribuirse baixo os termos da GNU GPL.\n"
 #~ "\n"
 #~ "uso:\n"
+
 #~ msgid "  --box=\t\t\t- hostname.\n"
 #~ msgstr "  --box=\t\t\t- nome de máquina.\n"
+
 #~ msgid "  --country\t\t\t- name of country of the user. \n"
 #~ msgstr "  --country\t\t\t- nome do país do usuario. \n"
+
 #~ msgid "  --interactive\t\t- use the interactive mode.\n"
 #~ msgstr "  --interactive\t\t- usar o modo interactivo.\n"
+
 #~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
 #~ msgstr "  --nointeractive\t- usar o modo non interactivo.\n"
+
 #~ msgid "  --login=\t\t     - login name of the user.\n"
 #~ msgstr "  --login=\t\t     - nome de usuario do usuario.\n"
+
 #~ msgid "  --pass=\t\t\t- password  of the user.\n"
 #~ msgstr "  --pass=\t\t\t- contrasinal do usuario.\n"
+
 #~ msgid "Mandriva Online"
 #~ msgstr "Mandriva Online"
+
 #~ msgid "I already have an account"
 #~ msgstr "Xa teño unha conta"
+
 #~ msgid "I want to subscribe"
 #~ msgstr "Desexo subscribirme"
+
 #~ msgid "Mr."
 #~ msgstr "Sr."
+
 #~ msgid "Mrs."
 #~ msgstr "Sra."
+
 #~ msgid "Ms."
 #~ msgstr "Srta."
+
 #~ msgid "Reading configuration\n"
 #~ msgstr "Lendo a configuración\n"
+
 #~ msgid ""
 #~ "This assistant will help you to upload your configuration\n"
 #~ "(packages, hardware configuration) to a centralized database in\n"
@@ -581,26 +576,36 @@ msgstr "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
 #~ "Este asistente axudaralle a subi-la sua configuración\n"
 #~ "(paquetes, configuración do hardware) a unha base de datos central para\n"
 #~ "mantelo informado acerca de actualizacións útiles e de seguridade.\n"
+
 #~ msgid "Account creation or authentication"
 #~ msgstr "Creación da conta ou autenticación"
+
 #~ msgid "Enter your Mandriva Online login, password and machine name:"
 #~ msgstr ""
 #~ "Introduza o seu login e contrasinal de Mandriva Online e o nome do "
 #~ "ordenador:"
+
 #~ msgid "Email address:"
 #~ msgstr "Enderezo de correo-e:"
+
 #~ msgid "Country"
 #~ msgstr "País"
+
 #~ msgid "Password:"
 #~ msgstr "Contrasinal:"
+
 #~ msgid "Machine description:"
 #~ msgstr "Descrición da máquina:"
+
 #~ msgid "(Ex: My Home Office's Computer)"
 #~ msgstr "(P.Ex: O Meu Ordenador Na Oficina)"
+
 #~ msgid "Machine name must be 1 to 40 alphanumerical characters"
 #~ msgstr "O nome de máquina debe ter entre 1 e 40 caracteres alfanuméricos"
+
 #~ msgid "Connecting to Mandriva Online website..."
 #~ msgstr "Conectando ó sitio web de Mandriva Online..."
+
 #~ msgid ""
 #~ "In order to benefit from Mandriva Online services,\n"
 #~ "we are about to upload your configuration.\n"
@@ -637,46 +642,61 @@ msgstr "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
 #~ "Ademais, vostede beneficiarase con descontos nos servicios de soporte de "
 #~ "pago\n"
 #~ "en www.mandrivaexpert.com."
+
 #~ msgid "Connection problem"
 #~ msgstr "Problema de conexión"
+
 #~ msgid "Problem occurs when uploading files, please try again"
 #~ msgstr "Ocorreu un problema ó subi-los ficheiros, inténteo de novo"
+
 #~ msgid "Create a Mandriva Online Account"
 #~ msgstr "Crear unha Conta en Mandriva Online"
+
 #~ msgid "Greeting:"
 #~ msgstr "Benvida:"
+
 #~ msgid "First name:"
 #~ msgstr "Nome:"
+
 #~ msgid "Last name:"
 #~ msgstr "Apelidos:"
+
 #~ msgid "Confirm Password:"
 #~ msgstr "Confirma-lo Contrasinal:"
+
 #~ msgid ""
 #~ "The passwords do not match\n"
 #~ " Please try again\n"
 #~ msgstr ""
 #~ "Os contrasinais non coinciden\n"
 #~ "Por favor, inténteo de novo\n"
+
 #~ msgid "Please fill in each field"
 #~ msgstr "Complete tódolos campos"
+
 #~ msgid "Not a valid mail address!\n"
 #~ msgstr "Non é un enderezo de email válido!\n"
+
 #~ msgid "Creating account failed!"
 #~ msgstr "Erro ó crea-la conta!"
+
 #~ msgid ""
 #~ "Mandriva Online Account successfully created.\n"
 #~ "Please click \"Next\" to authenticate and upload your configuration\n"
 #~ msgstr ""
 #~ "A Conta de Mandriva Online creouse con éxito.\n"
 #~ "Prema \"Seguinte\" para autenticarse e subir a súa configuración\n"
+
 #~ msgid "Your upload was successful!"
 #~ msgstr "O envio de datos tivo éxito!"
+
 #~ msgid ""
 #~ "From now you will receive on security and updates \n"
 #~ "announcements thanks to Mandriva Online."
 #~ msgstr ""
 #~ "Dende agora recibirá avisos referentes á seguridade \n"
 #~ "e ás actualizacións gracias a Mandriva Online."
+
 #~ msgid ""
 #~ "Mandriva Online offers you the ability to automate the updates.\n"
 #~ "A program will run regulary in your system waiting for new updates\n"
@@ -685,24 +705,31 @@ msgstr "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
 #~ "actualizacións.\n"
 #~ "Un programa executarase regularmente no seu sistema agardando novas "
 #~ "actualizacións\n"
+
 #~ msgid "Congratulations"
 #~ msgstr "Noraboa"
+
 #~ msgid "Your Mandriva Online account has been successfully configured\n"
 #~ msgstr "A súa conta de Mandriva Online configurouse con éxito\n"
+
 #~ msgid "Configuration uploaded successfully"
 #~ msgstr "A configuración subiuse con éxito"
+
 #~ msgid "Problem uploading configuration"
 #~ msgstr "Problema ó subir a configuración"
+
 #~ msgid ""
 #~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
 #~ "firewall bad settings"
 #~ msgstr ""
 #~ "Non se puido conectar ó sitio web de mandrivaonline: nome de usuario/"
 #~ "contrasinal incorrecto ou mala configuración do encamiñador/cortalumes"
+
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- executar Mandriva Update.\n"
+
 #~ msgid "Cannot get list of updates: %s"
 #~ msgstr "Non se puido obter a lista de actualizacións: %s"
+
 #~ msgid "Choose which packages should be installed and Press Ok"
 #~ msgstr "Escolla os paquetes que deben instalarse e prema Aceptar"
-

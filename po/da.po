@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-02-26 16:26+0100\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: dansk <dansk@dansk-gruppen.dk>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Vil tjekke for opdateringer klokken %s"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Dit system er opdateret"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -40,44 +40,56 @@ msgstr ""
 "Problem med konfiguration af tjeneste. Tjek venligst loggene og send post "
 "til support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Vent venligst, finder tilgængelige pakker..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Nye opdateringer er tilgængelige for dit system"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Netværket er nede. Konfigurér venligst dit netværk"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Tjeneste er ikke aktiveret. Klik på \"Websted på nettet\""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-database låst"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
+msgstr ""
+"Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Intet medie fundet. Du skal tilføje et medie via 'Administration af "
 "programmedier'."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -93,263 +105,134 @@ msgstr ""
 "\n"
 "Derefter skal '%s' genstartes."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Aktiveret"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Fejl ved opdatering af medie"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Tjekker... Opdateringer er tilgængelige\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Pakker er opdaterede"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Kunne ikke åbne urpmi-database"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Installér opdateringer"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Tjek for opdateringer"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Konfigurér netværk"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Begynder på drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
+msgstr ""
+"Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Start MandrivaUpdate op\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux Opdateringer panelprogram"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Beregner nye opdateringer...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Kobler op til"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systemet er opdateret\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Tjekker netværk: ser ud til at være deaktiveret\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Advarsel"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Om..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Ophavsret © %s ved Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online giver adgang til Mandrivas webtjenester."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "WebSite på nettet"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Keld Simonsen,<keld@dkuug.dk>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Start altid op ved opstart"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Afslut"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Sikkerhedsfejl"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Generel fejl (maskine allerede registreret)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Databasefejl"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Databasen på serveren havde fejl\n"
-"Prøv venligst igen senere"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Fejl ved registrering"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Nogle parametre mangler"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Fejl ved adgangskode"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Forkert adgangskode"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Fejl ved logind"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Den email du opgav er allerede i brug\n"
-"Indtast venligst et andet\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "Den email du angav er ugyldig eller forbudt"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"Email-adressefelter er tomt\n"
-"giv venligst en email-adresse"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Fejl ved begrænsning"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Adgang til database forbudt"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Fejl på tjenesten"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva-webtjenester er utilgængelige i øjeblikket\n"
-"Prøv venligst igen senere"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Adgangskoder stemmer ikke overens"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva-webtjenester er ved at blive vedligeholdt\n"
-"Prøv venligst igen senere"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Bruger er forbudt"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Bruger-konto er forbudt af Mandriva-webtjenester"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Fejl ved forbindelsen"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Der kan ikke opnås forbindelse til Mandriva-webtjenester"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -365,106 +248,173 @@ msgstr ""
 "\n"
 "brug:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- udskriv denne hjælpebesked.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update startes automatisk.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t - start mnf-specifikke skripter.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- teksttilstandsversion af Mandriva Update.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- log der laves\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundle fil.bundle\t- fortolk og installér pakke fra .bundle metainfo-"
-"fil.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Du skal først installere systemet på din disk med hjælperen 'Levende "
-"installering'."
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Vent venligst"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Forbereder..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Fejl"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Kunne ikke godkendes på fællesserveren:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Der er opstået en fejl"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Versionen af Mandriva Online klienten er for gammel.\n"
-"\n"
-"Du skal opdatere til en nyere version. Du kan få en ny fra http://start."
-"mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Denne samling er ikke velformateret. Afbryder."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Installerer pakker...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
 
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux Opdateringer panelprogram"
+
+#~ msgid "Security error"
+#~ msgstr "Sikkerhedsfejl"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Generel fejl (maskine allerede registreret)"
+
+#~ msgid "Database error"
+#~ msgstr "Databasefejl"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Databasen på serveren havde fejl\n"
+#~ "Prøv venligst igen senere"
+
+#~ msgid "Registration error"
+#~ msgstr "Fejl ved registrering"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Nogle parametre mangler"
+
+#~ msgid "Password error"
+#~ msgstr "Fejl ved adgangskode"
+
+#~ msgid "Wrong password"
+#~ msgstr "Forkert adgangskode"
+
+#~ msgid "Login error"
+#~ msgstr "Fejl ved logind"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Den email du opgav er allerede i brug\n"
+#~ "Indtast venligst et andet\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "Den email du angav er ugyldig eller forbudt"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Email-adressefelter er tomt\n"
+#~ "giv venligst en email-adresse"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Fejl ved begrænsning"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Adgang til database forbudt"
+
+#~ msgid "Service error"
+#~ msgstr "Fejl på tjenesten"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva-webtjenester er utilgængelige i øjeblikket\n"
+#~ "Prøv venligst igen senere"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Adgangskoder stemmer ikke overens"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva-webtjenester er ved at blive vedligeholdt\n"
+#~ "Prøv venligst igen senere"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Bruger er forbudt"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Bruger-konto er forbudt af Mandriva-webtjenester"
+
+#~ msgid "Connection error"
+#~ msgstr "Fejl ved forbindelsen"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Der kan ikke opnås forbindelse til Mandriva-webtjenester"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle fil.bundle\t- fortolk og installér pakke fra .bundle metainfo-"
+#~ "fil.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Du skal først installere systemet på din disk med hjælperen 'Levende "
+#~ "installering'."
+
+#~ msgid "Please wait"
+#~ msgstr "Vent venligst"
+
+#~ msgid "Preparing..."
+#~ msgstr "Forbereder..."
+
+#~ msgid "Error"
+#~ msgstr "Fejl"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Kunne ikke godkendes på fællesserveren:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Der er opstået en fejl"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Versionen af Mandriva Online klienten er for gammel.\n"
+#~ "\n"
+#~ "Du skal opdatere til en nyere version. Du kan få en ny fra http://start."
+#~ "mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Denne samling er ikke velformateret. Afbryder."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Installerer pakker...\n"

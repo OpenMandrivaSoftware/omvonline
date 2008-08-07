@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-02-22 01:21+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Eguneraketak egiaztatu %s-n"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Zure sistema eguneratuta dago"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -38,44 +38,56 @@ msgstr ""
 "Zerbitzuaren konfigurazio arazoa. Mesedez aztertu erregistroak eta bidali "
 "posta support@mandrivaonline.com helbidera"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Itxaron, pakete erabilgarriak bilatzen..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Sarea erorita dago. Mesedez konfiguratu zure sarea"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Zerbitzua ez dago aktibatuta. Mesedez klikatu \"Lerroko Webgunea\""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi datubasea blokeatuta"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr ""
+"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -92,263 +104,133 @@ msgstr ""
 "\n"
 "Ondoren, \"%s\" berrabiarazi."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Gaituta"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Akatsa euskarri eguneratzerakoan"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Egiaztaketa... Dauden eguneraketak\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Paketeak egunean daude"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "urpmi datubasea irekitzean huts egin du"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Instalatu eguneratzeak"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Egiaztatu eguneratzeak"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Konfiguratu sarea"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "drakconect abiarazten\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online berrinstalatu dela dirudi, appleta birzamatzen ..."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate abiarazten\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux eguneratzeen applet-a"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Eguneraketa berriak kalkulatzen...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Hona konektatzen"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistema eguneratzera doa\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Sare egiaztaketa: desgaituta dagoela dirudi\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Kontuz"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Honi buruz..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online-k Mandriva web zerbitzuetara sarbidea ematen du."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Lerroko Webgunea"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Jaurti beti hasterakoan"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Irten"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Segurtasun akatsa"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Akats generikoa (makina dagoeneko erregistratua)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Datubase akatsa"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Zerbitzariaren Datubaseak huts egin du\n"
-"Mesedez Saituta berriro Beranduago"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Erregistratzerakoan akatsa"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Parametro batzuk falta dira"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Pasahitz okerra"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Pasahitza ez da zuzena"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Login akatsa"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Hornitu duzun post@ dagoeneko erabilita dago\n"
-"Mesedez sartu beste bat\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "Hornitu duzun post@ baliogabea da edo debekatuta dago"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"Post@ helbidearen laukia hutsik dago\n"
-"Mesedez bat eman"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Mugaketa Akatsa"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Datubase sarbidea debekatuta"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Zerbitzu akatsa"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva web zerbitzuak une honetan eskuraezin daude\n"
-"Mesedez Saiatu berriro Beranduago"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Passahitzak ez datoz bat"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva web zerbitzuak mantenupean daude\n"
-"Mesedez Saiatu berriro Beranduago"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Erabiltzailea Debekatuta"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Mandriva web zerbitzuek debekatutako erabiltzaile kontua"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Lotura akatsa"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Mandriva web zerbitzuak eskuraezin"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -365,106 +247,173 @@ msgstr ""
 "\n"
 "erabilera:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- laguntza-mezu hau inprimatzen du.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update automatikoki abiarazten du.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- jaurti mnf script espezifikoak.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- Mandriva Update-ren testu moduko bertsioa.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundle file.bundle\t- sintaktikoki egiaztatu eta instalatu .bundle "
-"metainfo fitxategiko paketea.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Aurrena sistema zure disko zurrunean instalatu behar duzu 'Live install' "
-"morroiarekin."
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Itxaron"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Prestatzen..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Errorea"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Bundle zerbitzarira autentikatzeak huts egin du:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Errore bat izan da"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Mandriva Online bezero bertsioa zaharregia da.\n"
-"\n"
-"Bertsio berriago batera eguneratu behar duzu. Berria jaso dezakezu http://"
-"start.mandriva.com helbidetik."
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Bundle hau ez dago ondo eratuta. Galarazten."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Paketeak instalatzen...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux eguneratzeen applet-a"
+
+#~ msgid "Security error"
+#~ msgstr "Segurtasun akatsa"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Akats generikoa (makina dagoeneko erregistratua)"
+
+#~ msgid "Database error"
+#~ msgstr "Datubase akatsa"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Zerbitzariaren Datubaseak huts egin du\n"
+#~ "Mesedez Saituta berriro Beranduago"
+
+#~ msgid "Registration error"
+#~ msgstr "Erregistratzerakoan akatsa"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Parametro batzuk falta dira"
+
+#~ msgid "Password error"
+#~ msgstr "Pasahitz okerra"
+
+#~ msgid "Wrong password"
+#~ msgstr "Pasahitza ez da zuzena"
+
+#~ msgid "Login error"
+#~ msgstr "Login akatsa"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Hornitu duzun post@ dagoeneko erabilita dago\n"
+#~ "Mesedez sartu beste bat\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "Hornitu duzun post@ baliogabea da edo debekatuta dago"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Post@ helbidearen laukia hutsik dago\n"
+#~ "Mesedez bat eman"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Mugaketa Akatsa"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Datubase sarbidea debekatuta"
+
+#~ msgid "Service error"
+#~ msgstr "Zerbitzu akatsa"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva web zerbitzuak une honetan eskuraezin daude\n"
+#~ "Mesedez Saiatu berriro Beranduago"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Passahitzak ez datoz bat"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva web zerbitzuak mantenupean daude\n"
+#~ "Mesedez Saiatu berriro Beranduago"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Erabiltzailea Debekatuta"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Mandriva web zerbitzuek debekatutako erabiltzaile kontua"
+
+#~ msgid "Connection error"
+#~ msgstr "Lotura akatsa"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Mandriva web zerbitzuak eskuraezin"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle file.bundle\t- sintaktikoki egiaztatu eta instalatu .bundle "
+#~ "metainfo fitxategiko paketea.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Aurrena sistema zure disko zurrunean instalatu behar duzu 'Live install' "
+#~ "morroiarekin."
+
+#~ msgid "Please wait"
+#~ msgstr "Itxaron"
+
+#~ msgid "Preparing..."
+#~ msgstr "Prestatzen..."
+
+#~ msgid "Error"
+#~ msgstr "Errorea"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Bundle zerbitzarira autentikatzeak huts egin du:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Errore bat izan da"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Mandriva Online bezero bertsioa zaharregia da.\n"
+#~ "\n"
+#~ "Bertsio berriago batera eguneratu behar duzu. Berria jaso dezakezu http://"
+#~ "start.mandriva.com helbidetik."
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Bundle hau ez dago ondo eratuta. Galarazten."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Paketeak instalatzen...\n"

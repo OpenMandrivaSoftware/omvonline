@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2007-10-27 19:40+0700\n"
 "Last-Translator: Willy Sudiarto Raharjo <willysr@gmail.com>\n"
 "Language-Team: Indonesia <mdk-id@yahoogroups.com>\n"
@@ -22,17 +22,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Akan memeriksa update pada %s"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Sistem Anda sudah up-to-date"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -41,37 +41,47 @@ msgstr ""
 "Masalah konfigurasi layanan. Harap perika file log dan kirimkan mail ke "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Harap tunggu, mencari paket yang tersedia..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Update baru tersedia untuk sistem Anda"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Jaringan sedang non-aktif. Harap konfigurasikan jaringan Anda"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Layanan tidak diaktifkan. Silahkan klik pada \"Website Online\""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "database urpmi terkunci"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Rilis tidak didukung (rilis terlalu lama, atau rilis pengembangan)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -79,7 +89,7 @@ msgstr ""
 "Tidak ditemukan media. Anda harus menambahkan media melalui 'Manajemen Media "
 "Perangkat Lunak'"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -95,264 +105,134 @@ msgstr ""
 "\n"
 "Lalu jalankan ulang \"%s\"."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Aktifkan"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Kesalahan mengupdate media"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Memeriksa... Update tersedia\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Paket-paket sudah update"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Gagal membuka basis data rpmdb"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Installasikan update-update"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Cek Update"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Konfigurasikan Jaringan"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Menjalankan drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online tampaknya baru saja diinstall ulang, memuat ulang applet ...."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Menjalankan MandrivaUpdate\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Applet Update Mandriva Linux"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Menghitung update baru...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Menghubungkan ke"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem up-to-date\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Memeriksa Jaringan: tampaknya dinonaktifkan\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Peringatan"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Keterangan..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Hak cipta (C) %s oleh Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online memberikan akses ke layanan web Mandriva."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "WebSite Online"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Selalu jalankan ketika pembukaan"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Kesalahan keamanan"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Kesalahan umum (komputer sudah terdaftar)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Kesalahan basis data"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Server Basis Data gagal\n"
-"Harap Mencoba Kembali Nanti"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Kesalahan registrasi"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Beberapa paramater hilang"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Kesalahan kata sandi"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Kata sandi salah"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Kesalahan login"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Email yang Anda sediakan sudah digunakan\n"
-"Harap masukan yang lain\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "Email yang Anda sediakan tidak valid atau dilarang"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"Kolom alamat email kosong\n"
-"Harap menyediakan satu"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Kesalahan Pembatasan"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Akses basis data dilarang"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Kesalahan layanan"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Layanan web Mandriva sedang tidak tersedia\n"
-"Harap mencoba lagi nanti"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Kata sandi tidak cocok"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Layanan web Mandriva sedang dalam perawatan\n"
-"Harap mencoba lagi nanti"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Pengguna Dilarang"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Account pengguna dilarang oleh layanan web Mandriva"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Kesalahan koneksi"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Layanan web Mandriva tidak dapat dicapai"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -369,108 +249,176 @@ msgstr ""
 "\n"
 "pemakaian:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- cetak pesan bantuan ini.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update dijalankan secara otomatis.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- jalankan script khusus mnf.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- versi mode teks dari Mandriva Update.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- mencatat apa yang sudah selesai\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundel file.bundle\t- parsing dan install paket dari file .bundle "
-"metainfo.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Anda pertama-tama perlu menginstall sistem pada harddisk dengan wizard 'Live "
-"Install'."
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Harap tunggu..."
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Persiapan..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Kesalahan"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Gagal melakukan authentikasi pada server:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Terjadi kesalahan"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Versi dari klien Mandriva Online terlalu lama.\n"
-"\n"
-"Anda perlu mengupdatenya ke versi yang baru. Anda bisa mendapatkannya dari "
-"http://start.mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Paket ini tidak terformat dengan baik. Membatalkan."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Menginstall paket...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal meng-update paket dari media update_source.\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Applet Update Mandriva Linux"
+
+#~ msgid "Security error"
+#~ msgstr "Kesalahan keamanan"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Kesalahan umum (komputer sudah terdaftar)"
+
+#~ msgid "Database error"
+#~ msgstr "Kesalahan basis data"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Server Basis Data gagal\n"
+#~ "Harap Mencoba Kembali Nanti"
+
+#~ msgid "Registration error"
+#~ msgstr "Kesalahan registrasi"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Beberapa paramater hilang"
+
+#~ msgid "Password error"
+#~ msgstr "Kesalahan kata sandi"
+
+#~ msgid "Wrong password"
+#~ msgstr "Kata sandi salah"
+
+#~ msgid "Login error"
+#~ msgstr "Kesalahan login"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Email yang Anda sediakan sudah digunakan\n"
+#~ "Harap masukan yang lain\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "Email yang Anda sediakan tidak valid atau dilarang"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Kolom alamat email kosong\n"
+#~ "Harap menyediakan satu"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Kesalahan Pembatasan"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Akses basis data dilarang"
+
+#~ msgid "Service error"
+#~ msgstr "Kesalahan layanan"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Layanan web Mandriva sedang tidak tersedia\n"
+#~ "Harap mencoba lagi nanti"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Kata sandi tidak cocok"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Layanan web Mandriva sedang dalam perawatan\n"
+#~ "Harap mencoba lagi nanti"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Pengguna Dilarang"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Account pengguna dilarang oleh layanan web Mandriva"
+
+#~ msgid "Connection error"
+#~ msgstr "Kesalahan koneksi"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Layanan web Mandriva tidak dapat dicapai"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundel file.bundle\t- parsing dan install paket dari file .bundle "
+#~ "metainfo.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Anda pertama-tama perlu menginstall sistem pada harddisk dengan wizard "
+#~ "'Live Install'."
+
+#~ msgid "Please wait"
+#~ msgstr "Harap tunggu..."
+
+#~ msgid "Preparing..."
+#~ msgstr "Persiapan..."
+
+#~ msgid "Error"
+#~ msgstr "Kesalahan"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Gagal melakukan authentikasi pada server:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Terjadi kesalahan"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Versi dari klien Mandriva Online terlalu lama.\n"
+#~ "\n"
+#~ "Anda perlu mengupdatenya ke versi yang baru. Anda bisa mendapatkannya "
+#~ "dari http://start.mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Paket ini tidak terformat dengan baik. Membatalkan."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Menginstall paket...\n"
 
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Bundel baru tersedia untuk sistem Anda"

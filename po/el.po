@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-04-07 02:12+0200\n"
 "Last-Translator: nikos papadopoulos <231036448@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -21,58 +21,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Θα γίνει έλεγχος για αναβαθμίσεις στο %s"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Το σύστημα σας είναι ενημερωμένο "
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
-msgstr "Πρόβλημα υπηρεσίας ρυθμίσεων. Παρακαλώ ελέγξτε τα ημερολόγια και στείλτε μήνυμα στο support@mandrivaonline.com"
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrivaonline.com"
+msgstr ""
+"Πρόβλημα υπηρεσίας ρυθμίσεων. Παρακαλώ ελέγξτε τα ημερολόγια και στείλτε "
+"μήνυμα στο support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Παρακαλώ περιμένετε, αναζητούνται τα διαθέσιμα πακέτα..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Υπάρχουν νέες αναβαθμίσεις για το σύστημα σας"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Το δίκτυο δεν λειτουργεί.Παρακαλώ διαμορφώστε το δίκτυο σας "
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Η υπηρεσία δεν είναι ενεργοποιημένη.Παρακαλώ κάντε κλικ στο \"Online Δικτυακός τόπος\" "
+msgstr ""
+"Η υπηρεσία δεν είναι ενεργοποιημένη.Παρακαλώ κάντε κλικ στο \"Online "
+"Δικτυακός τόπος\" "
 
-#: ../mdkapplet:134
-#: ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "η βάση δεδομένων urpmi είναι κλειδωμένη"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Η έκδοση δεν υποστηρίζεται ( πολύ παλιά έκδοση ή έκδοση σε ανάπτυξη)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Δε βρέθηκε κάποιο μέσο. Πρέπει να προσθέσεις κάποια μέσα, χρησιμοποιώντας το «Διαχειριστή Μέσων Λογισμικού»."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Δε βρέθηκε κάποιο μέσο. Πρέπει να προσθέσεις κάποια μέσα, χρησιμοποιώντας το "
+"«Διαχειριστή Μέσων Λογισμικού»."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -89,453 +107,424 @@ msgstr ""
 "\n"
 "Μετά, επανεκίνησε το \"%s\"."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Ενεργοποίηση;"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Σφάλμα στην ενημέρωση των μέσων"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Έλεγχος...Υπάρχουν αναβαθμίσεις\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Έχεις τις τελευταίες ενημερώσεις των πακέτων"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Αδυναμία ανοίγματος της βάσης δεδομένων urpmi"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Εγκατάσταση αναβαθμίσεων"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Ελεγχος  αναβαθμίσεων"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Ρύθμιση δικτύου"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Εκτέλεση drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Η υπηρεσία Mandriva Online φαίνεται πώς έχει επανεγκατασταθεί, επαναφόρτωση μικροεφαρμογής...  "
+msgstr ""
+"Η υπηρεσία Mandriva Online φαίνεται πώς έχει επανεγκατασταθεί, επαναφόρτωση "
+"μικροεφαρμογής...  "
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr " Εκτέλεση μικροεφαρμογής MandrivaUpdate\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Μικροεφαρμογή αναβαθμίσεων της Mandriva Linux"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Επεξεργασία νέων αναβαθμίσεων...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Σύνδεση με"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Το σύστημα είναι ενημερωμένο\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Έλεγχος δικτύου: φαίνεται απενεργοποιημένο\n"
 
-#: ../mdkapplet:457
-#: ../mdkupdate:118
-#: ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Προσοχή"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Περί..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C)%s by mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr " Η Mandriva Online παρέχει πρόσβαση στις δικτυακές υπηρεσίες της Mandriva."
+msgstr ""
+" Η Mandriva Online παρέχει πρόσβαση στις δικτυακές υπηρεσίες της Mandriva."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Online Δικτυακός τόπος"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "_: Nikos Papadopoulos <231036448@freemail.gr>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Να εκτελείται πάντοτε στην εκκίνηση"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Σφάλμα ασφαλείας"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Γενικό σφάλμα (μηχάνημα ήδη καταχωρημένο)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Σφάλμα στη βάση δεδομένων"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Αστοχία βάσης δεδομένων του διακομιστή\n"
-"Παρακαλώ δοκιμάστε ξανά αργότερα"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Σφάλμα καταχώρισις"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Λείπουν ορισμένοι παράμετροι"
-
-#: ../mdkonline.pm:210
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Σφάλμα κωδικού"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Λάθος κωδικός πρόσβασης"
-
-#: ../mdkonline.pm:211
-#: ../mdkonline.pm:212
-#: ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Σφάλμα σύνδεσης"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Η ηλεκτρονική διεύθυνση που δώσατε είναι ήδη σε χρήση \n"
-"Παρακαλώ εισάγετε μια άλλη\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "Η ηλεκτρονική διεύθυνση που δώσατε είναι άκυρη ή απαγορευμένη"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr "Το πεδίο διεύθυνσης ηλεκτρονικού.ταχυδρομείου είναι κενό, παρακαλώ δώστε ·μία διεύθυνση"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Σφάλμα περιορισμού"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Η πρόσβαση στη  Βάση Δεδομένων απαγορεύεται"
-
-#: ../mdkonline.pm:215
-#: ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Σφάλμα υπηρεσίας"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Οι δικτυακές υπηρεσίες της Mandriva είναι προς το παρόν μη διαθέσιμες\n"
-"Παρακαλώ προσπαθήστε ξανά αργότερα"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Το συνθηματικό δεν ταιριάζει."
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Οι δικτυακές υπηρεσίες της Mandriva είναι υπό συντήρηση\n"
-"Παρακαλώ προσπαθήστε ξανά αργότερα"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Ο χρήστης είναι απαγορευμένος"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Λογαριασμός χρήστη απαγορευμένος από τις δικτυακές υπηρεσίες της Mandriva"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Σφάλμα σύνδεσης"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Οι δικτυακές υπηρεσίες της Mandriva δεν είναι προσβάσιμες"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "έκδοση mdkupdate %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Αυτό είναι ελεύθερο λογισμικό και μπορεί να διανεμηθεί υπό τους όρους του GNU GPL.\n"
+"Αυτό είναι ελεύθερο λογισμικό και μπορεί να διανεμηθεί υπό τους όρους του "
+"GNU GPL.\n"
 "\n"
 "χρήση:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- εκτύπωση αυτού του μηνύματος βοήθειας.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Αυτόματη εκτέλεση του Mandriva Update.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- εκτέλεση ειδικών mnf σεναρίων.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- έκδοση του Mandriva Update σε μορφή κειμένου.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- καταγραφή γενόμενων\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
-msgstr "  --bundle file.bundle\t- ανάλυση και εγκατάσταση πακέτου από αρχείο δέσμης metainfo.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
-msgstr "Αρχικά πρέπει να εγκαταστήσετε το σύστημα στο σκληρό σας δίσκο με τον αυτόματο οδηγό 'Live install'."
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#: ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Παρακαλώ περιμένετε"
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Προετοιμασία..."
-
-#: ../mdkupdate:141
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#: ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Σφάλμα"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Αποτυχία πιστοποίησης στον διακομιστή bundle:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Προκλήθηκε σφάλμα"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
-msgstr ""
-"Η έκδοση του Mandriva online client είναι πολύ παλιά\n"
-"\n"
-"Πρέπει να γίνει αναβάθμιση σε νεότερη έκδοση.Μπορείτε να πάρετε μια νέα από το http:// star.mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Αυτή η δεσμίδα δεν είναι καλά μορφοποιημένη.Διακόπτω."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Εγκατάσταση πακέτων...\n"
-
-#: ../mdkupdate:231
-#: ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Αδύνατη η αναβάθμιση των πακέτων από το μέσο update_source.\n"
 
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Μικροεφαρμογή αναβαθμίσεων της Mandriva Linux"
+
+#~ msgid "Security error"
+#~ msgstr "Σφάλμα ασφαλείας"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Γενικό σφάλμα (μηχάνημα ήδη καταχωρημένο)"
+
+#~ msgid "Database error"
+#~ msgstr "Σφάλμα στη βάση δεδομένων"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Αστοχία βάσης δεδομένων του διακομιστή\n"
+#~ "Παρακαλώ δοκιμάστε ξανά αργότερα"
+
+#~ msgid "Registration error"
+#~ msgstr "Σφάλμα καταχώρισις"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Λείπουν ορισμένοι παράμετροι"
+
+#~ msgid "Password error"
+#~ msgstr "Σφάλμα κωδικού"
+
+#~ msgid "Wrong password"
+#~ msgstr "Λάθος κωδικός πρόσβασης"
+
+#~ msgid "Login error"
+#~ msgstr "Σφάλμα σύνδεσης"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Η ηλεκτρονική διεύθυνση που δώσατε είναι ήδη σε χρήση \n"
+#~ "Παρακαλώ εισάγετε μια άλλη\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "Η ηλεκτρονική διεύθυνση που δώσατε είναι άκυρη ή απαγορευμένη"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Το πεδίο διεύθυνσης ηλεκτρονικού.ταχυδρομείου είναι κενό, παρακαλώ δώστε "
+#~ "·μία διεύθυνση"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Σφάλμα περιορισμού"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Η πρόσβαση στη  Βάση Δεδομένων απαγορεύεται"
+
+#~ msgid "Service error"
+#~ msgstr "Σφάλμα υπηρεσίας"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Οι δικτυακές υπηρεσίες της Mandriva είναι προς το παρόν μη διαθέσιμες\n"
+#~ "Παρακαλώ προσπαθήστε ξανά αργότερα"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Το συνθηματικό δεν ταιριάζει."
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Οι δικτυακές υπηρεσίες της Mandriva είναι υπό συντήρηση\n"
+#~ "Παρακαλώ προσπαθήστε ξανά αργότερα"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Ο χρήστης είναι απαγορευμένος"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr ""
+#~ "Λογαριασμός χρήστη απαγορευμένος από τις δικτυακές υπηρεσίες της Mandriva"
+
+#~ msgid "Connection error"
+#~ msgstr "Σφάλμα σύνδεσης"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Οι δικτυακές υπηρεσίες της Mandriva δεν είναι προσβάσιμες"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle file.bundle\t- ανάλυση και εγκατάσταση πακέτου από αρχείο "
+#~ "δέσμης metainfo.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Αρχικά πρέπει να εγκαταστήσετε το σύστημα στο σκληρό σας δίσκο με τον "
+#~ "αυτόματο οδηγό 'Live install'."
+
+#~ msgid "Please wait"
+#~ msgstr "Παρακαλώ περιμένετε"
+
+#~ msgid "Preparing..."
+#~ msgstr "Προετοιμασία..."
+
+#~ msgid "Error"
+#~ msgstr "Σφάλμα"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Αποτυχία πιστοποίησης στον διακομιστή bundle:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Προκλήθηκε σφάλμα"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Η έκδοση του Mandriva online client είναι πολύ παλιά\n"
+#~ "\n"
+#~ "Πρέπει να γίνει αναβάθμιση σε νεότερη έκδοση.Μπορείτε να πάρετε μια νέα "
+#~ "από το http:// star.mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Αυτή η δεσμίδα δεν είναι καλά μορφοποιημένη.Διακόπτω."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Εγκατάσταση πακέτων...\n"
+
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Υπάρχουν νέες δέσμες για το σύστημα σας"
+
 #~ msgid "Service is not configured. Please click on \"Configure the service\""
 #~ msgstr ""
 #~ "Η υπηρεσία δεν εχει ρυθμιστεί.Παρακαλώ κάντε κλίκ στο \"Ρύθμιση υπηρεσίας"
 #~ "\" "
+
 #~ msgid "Configure the service"
 #~ msgstr "Ρύθμιση υπηρεσίας "
+
 #~ msgid "Check updates"
 #~ msgstr "Ελεγχος αναβαθμίσεων"
+
 #~ msgid "Configure Now!"
 #~ msgstr "Ρύθμιση τώρα !"
+
 #~ msgid "Actions"
 #~ msgstr "Ενέργειες"
+
 #~ msgid "Configure"
 #~ msgstr "Ρύθμιση"
+
 #~ msgid "See logs"
 #~ msgstr "Δές ημερολόγια"
+
 #~ msgid "Status"
 #~ msgstr "Κατάσταση"
+
 #~ msgid "Close"
 #~ msgstr "Κλείσιμο"
+
 #~ msgid "Network Connection: "
 #~ msgstr "Σύνδεση δικτύου:"
+
 #~ msgid "Up"
 #~ msgstr "Πάνω"
+
 #~ msgid "Down"
 #~ msgstr "Κάτω"
+
 #~ msgid "Last check: "
 #~ msgstr "Τελευταίος έλεγχος:"
+
 #~ msgid "Machine name:"
 #~ msgstr "Όνομα μηχανήματος:"
+
 #~ msgid "Updates: "
 #~ msgstr "Αναβαθμίσεις"
+
 #~ msgid "Development release not supported by service"
 #~ msgstr "Διανομή υπο εξέλιξη δεν υποστηρίζεται απο την υπηρεσία"
+
 #~ msgid "Too old release not supported by service"
 #~ msgstr "Πολύ παλιά διανομή δεν υποστηρίζεται απο την υπηρεσία"
+
 #~ msgid "Unknown state"
 #~ msgstr "Αγνωστη κατάσταση"
+
 #~ msgid "Online services disabled. Contact Mandriva Online site\n"
 #~ msgstr ""
 #~ "Υπηρεσία Online απενεργοποιημένη. Επικοινωνήστε με δικτυακό τόπο Manriva "
 #~ "Online\n"
+
 #~ msgid "Wrong Password.\n"
 #~ msgstr "Λάθος κωδικός πρόσβασης\n"
+
 #~ msgid "Wrong Action or host or login.\n"
 #~ msgstr ""
 #~ "Λανθασμένη ενέργεια ή λάθος κεντρικός υπολογιστής ή λάθος σύνδεση.\n"
+
 #~ msgid ""
 #~ "Something is wrong with your network settings (check your route, firewall "
 #~ "or proxy settings)\n"
 #~ msgstr ""
 #~ "Υπάρχει πρόβλημα με τις ρυθμίσεις του δικτύου σας (ελέγξτε τη δρομολόγηση "
 #~ "σας,το δικτυακό φίλτρο ασφάλειας ή τις ρυθμίσεις διαμεσολαβητή\n"
+
 #~ msgid ""
 #~ "Problem occured while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr ""
 #~ "Υπήρξε πρόβλημα κατά τη σύνδεση σας με τον διακομιστή,παρακαλώ "
 #~ "επικοινωνήστε με την ομάδα υποστήριξης"
+
 #~ msgid "Response from Mandriva Online server\n"
 #~ msgstr "Απάντηση απο τόν διακομιστή της Mandriva Online\n"
+
 #~ msgid "No check"
 #~ msgstr "Μη έλεγχος"
+
 #~ msgid "Checking config file: Not present\n"
 #~ msgstr "Έλεγχος αρχείου config:Δεν υπάρχει\n"
+
 #~ msgid "Logs"
 #~ msgstr "Ημερολόγια"
+
 #~ msgid "Clear"
 #~ msgstr "Καθαρισμός"
+
 #~ msgid ""
 #~ "mdonline version %s\n"
 #~ "Copyright (C) %s Mandriva.\n"
@@ -550,32 +539,46 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "GNU GPL.\n"
 #~ "\n"
 #~ "χρήση:\n"
+
 #~ msgid "  --box=\t\t\t- hostname.\n"
 #~ msgstr "  --box=\t\t\t- όνομα κεντρικού υπολογιστή.\n"
+
 #~ msgid "  --country\t\t\t- name of country of the user. \n"
 #~ msgstr "  --country\t\t\t- όνομα χώρας του χρήστη. \n"
+
 #~ msgid "  --interactive\t\t- use the interactive mode.\n"
 #~ msgstr "  --interactive\t\t- χρήση διαδραστικής κατάστασης.\n"
+
 #~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
 #~ msgstr "  --nointeractive\t -χρήση της μή διαδραστικής κατάστασης.\n"
+
 #~ msgid "  --login=\t\t     - login name of the user.\n"
 #~ msgstr "  --login=\t\t     - όνομα σύνδεσης του χρήστη.\n"
+
 #~ msgid "  --pass=\t\t\t- password  of the user.\n"
 #~ msgstr "  --pass=\t\t\t- κωδικός χρήστη.\n"
+
 #~ msgid "Mandriva Online"
 #~ msgstr "Mandriva Online"
+
 #~ msgid "I already have an account"
 #~ msgstr "Εχω ήδη ενα λογαριασμό"
+
 #~ msgid "I want to subscribe"
 #~ msgstr "Θέλω να εγγραφώ συνδρομητής"
+
 #~ msgid "Mr."
 #~ msgstr "Κος."
+
 #~ msgid "Mrs."
 #~ msgstr "Κα."
+
 #~ msgid "Ms."
 #~ msgstr "Δνις."
+
 #~ msgid "Reading configuration\n"
 #~ msgstr "Ανάγνωση Ρυθμίσεων\n"
+
 #~ msgid ""
 #~ "This assistant will help you to upload your configuration\n"
 #~ "(packages, hardware configuration) to a centralized database in\n"
@@ -584,28 +587,38 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "Ο βοηθός θα σας διευκολύνει να στείλετε την σύνθεση σας\n"
 #~ "(πακέτα, υλικό του υπολογιστή σας) σε μια κεντρική βάση για να μπορείτε\n"
 #~ "να ενημερώνεστε για αναβαθμίσεις ασφαλείας και χρήσιμες αναβαθμίσεις.\n"
+
 #~ msgid "Account creation or authentication"
 #~ msgstr "Δημιουργία λογαριασμού ή πιστοποίηση ταυτότητας"
+
 #~ msgid "Enter your Mandriva Online login, password and machine name:"
 #~ msgstr ""
 #~ "Εισάγετε το όνομα χρήστη ,κωδικό πρόσβασης και το Όνομα μηχανήματος για "
 #~ "το Mandriva Online:"
+
 #~ msgid "Email address:"
 #~ msgstr "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
+
 #~ msgid "Country"
 #~ msgstr "Χώρα"
+
 #~ msgid "Password:"
 #~ msgstr "Κωδικός πρόσβασης:               "
+
 #~ msgid "Machine description:"
 #~ msgstr "Περιγραφή μηχανήματος:"
+
 #~ msgid "(Ex: My Home Office's Computer)"
 #~ msgstr "(Εχ:"
+
 #~ msgid "Machine name must be 1 to 40 alphanumerical characters"
 #~ msgstr ""
 #~ "Το όνομα μηχανήματος πρέπει να είναι απο 1 εώς 40 αλφαριθμητικούς "
 #~ "χαρακτήρες"
+
 #~ msgid "Connecting to Mandriva Online website..."
 #~ msgstr "Σύνδεση με τον δικτυακό τόπο Mandriva Online"
+
 #~ msgid ""
 #~ "In order to benefit from Mandriva Online services,\n"
 #~ "we are about to upload your configuration.\n"
@@ -641,34 +654,46 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "mail\n"
 #~ "Θα μπορείτε να επωφεληθείτε από έκπτωση στην υπηρεσία με πληρωμή στο \n"
 #~ "www.mandrivaexpert.com"
+
 #~ msgid "Connection problem"
 #~ msgstr "Πρόβλημα σύνδεσης"
+
 #~ msgid "Problem occurs when uploading files, please try again"
 #~ msgstr ""
 #~ "Παρουσιάστηκε πρόβλημα κατά την αποστολή των αρχείων,παρακαλώ δοκιμάστε "
 #~ "ξανά"
+
 #~ msgid "Create a Mandriva Online Account"
 #~ msgstr "Δημιουργήστε ένα λογαριασμό Mandriva Online"
+
 #~ msgid "Greeting:"
 #~ msgstr "Χαιρετισμός:"
+
 #~ msgid "First name:"
 #~ msgstr "Όνομα:"
+
 #~ msgid "Last name:"
 #~ msgstr "Επίθετο:"
+
 #~ msgid "Confirm Password:"
 #~ msgstr "Επαλήθευση Κωδικού:"
+
 #~ msgid ""
 #~ "The passwords do not match\n"
 #~ " Please try again\n"
 #~ msgstr ""
 #~ "Οι κωδικοί δεν συμπίπτουν\n"
 #~ "Παρακαλώ προσπαθήστε ξανά\n"
+
 #~ msgid "Please fill in each field"
 #~ msgstr "Παρακαλώ συμπληρώστε τα παρακάτω πεδία"
+
 #~ msgid "Not a valid mail address!\n"
 #~ msgstr "Μη έγκυρη διεύθυνση ταχυδρομείου!\n"
+
 #~ msgid "Creating account failed!"
 #~ msgstr "Αποτυχία δημιουργίας λογαριασμού !"
+
 #~ msgid ""
 #~ "Mandriva Online Account successfully created.\n"
 #~ "Please click \"Next\" to authenticate and upload your configuration\n"
@@ -676,8 +701,10 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "Επιτυχής δημιουργία λογαριασμού Mandriva Online\n"
 #~ "Παρακαλώ κάντε κλικ \"Next/Επόμενο\"για πιστοποίηση ταυτότητας και "
 #~ "αποστολή ρυθμίσεων\n"
+
 #~ msgid "Your upload was successful!"
 #~ msgstr "Η αποστολή ήταν επιτυχής!"
+
 #~ msgid ""
 #~ "From now you will receive on security and updates \n"
 #~ "announcements thanks to Mandriva Online."
@@ -685,6 +712,7 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "Από εδώ και πέρα θα παραλαμβάνετε ανακοινώσεις\n"
 #~ "σχετικά με ενημερώσεις ασφαλείας και αναβαθμίσεις χάρη στο Mandriva "
 #~ "Online."
+
 #~ msgid ""
 #~ "Mandriva Online offers you the ability to automate the updates.\n"
 #~ "A program will run regulary in your system waiting for new updates\n"
@@ -693,14 +721,19 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "ενημερώσεων.\n"
 #~ "Ένα πρόγραμμα θα εκτελείται τακτικά στο σύστημά σας αναμένοντας νέες "
 #~ "αναβαθμίσεις\n"
+
 #~ msgid "Congratulations"
 #~ msgstr "Συγχαρητήρια"
+
 #~ msgid "Your Mandriva Online account has been successfully configured\n"
 #~ msgstr "Ο λογαριασμός σας Mandriva Online ρυθμίστηκε επιτυχώς\n"
+
 #~ msgid "Configuration uploaded successfully"
 #~ msgstr "Η αποστολή ρυθμίσεων ήταν επιτυχής!"
+
 #~ msgid "Problem uploading configuration"
 #~ msgstr "Πρόβλημα στην αποστολή Ρυθμίσεων"
+
 #~ msgid ""
 #~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
 #~ "firewall bad settings"
@@ -708,10 +741,12 @@ msgstr "Αδύνατη η αναβάθμιση των πακέτων από το
 #~ "Η σύνδεση με τον δικτυακό τόπο της Mandriva Online δεν είναι εφικτή:λάθος "
 #~ "σύνδεση/κωδικός ή δρομολογητής/εσφαλμένες ρυθμίσεις  δικτυακού φίλτρου "
 #~ "ασφάλειας"
+
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- εκτέλεση Mandriva Update.\n"
+
 #~ msgid "Cannot get list of updates: %s"
 #~ msgstr "Αδυναμία λήψης καταλόγου αναβαθμίσεων:%s"
+
 #~ msgid "Choose which packages should be installed and Press Ok"
 #~ msgstr "Διαλέξτε ποία πακέτα θα εγκατασταθούν και πιέστε ΟΚ"
-

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2008-03-07 01:59+0100\n"
 "Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
 "Language-Team: Nederlands\n"
@@ -19,58 +19,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Volgende controle op herzieningen om %s"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Uw systeem is bijgewerkt"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
-msgstr "Dienst-instellingsprobleem. Verifieer uw logboeken en stuur een e-mail naar support@mandrivaonline.com"
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrivaonline.com"
+msgstr ""
+"Dienst-instellingsprobleem. Verifieer uw logboeken en stuur een e-mail naar "
+"support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Even geduld, bezig met opzoeken van beschikbare pakketten…"
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Er zijn nieuwe herzieningen beschikbaar voor uw systeem"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Netwerk niet actief. Configureer uw netwerk"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Dienst niet geactiveerd. Klik alstublieft op \"Webstek\""
 
-#: ../mdkapplet:134
-#: ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-database gesloten"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Uitgave niet ondersteund (te oud, of een ontwikkelingsuitgave)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Geen medium gevonden. U dient er één of meer toe te voegen via ‘Software Mediabeheer’."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Geen medium gevonden. U dient er één of meer toe te voegen via ‘Software "
+"Mediabeheer’."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -87,450 +103,415 @@ msgstr ""
 "\n"
 "Daarna herstart u ‘%s’."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Er is een fout opgetreden bij het bijwerken van de media"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Nagaan… Herzieningen zijn beschikbaar\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Pakketten zijn bijgewerkt"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Openen van urpmi-database is mislukt"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Herzieningen installeren"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Herzieningen nagaan"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Netwerk configureren"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect wordt gestart\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Mandriva Online lijkt opnieuw geïnstalleerd te zijn, applet herladen…"
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate wordt gestart\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux herzieningen-applet"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Nieuwe herzieningen nagaan...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Verbinding aan het maken met"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systeem is bijgewerkt\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Controle van het netwerk: lijkt uitgeschakeld te zijn\n"
 
-#: ../mdkapplet:457
-#: ../mdkupdate:118
-#: ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Info…"
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright © %s van Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online geeft toegang tot webdiensten van Mandriva."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Webstek"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Reinout van Schouwen <reinout@gmail.com>\n"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Altijd starten bij systeemstart"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Afsluiten"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Beveiligingsfout"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Algemene fout (computer al geregistreerd)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Database-fout"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Server-database werkte niet\n"
-"Probeer het later nog eens"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Registratiefout"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Enkele parameters ontbreken"
-
-#: ../mdkonline.pm:210
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Wachtwoordfout"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Wachtwoord onjuist"
-
-#: ../mdkonline.pm:211
-#: ../mdkonline.pm:212
-#: ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Aanmeldingsfout"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Het e-mailadres dat u heeft opgegeven is reeds in gebruik\n"
-"Geef alstublieft een andere op\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "Het door u opgegeven e-mailadres is ongeldig of niet toegestaan"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"E-mailadres-veld is leeg\n"
-"Geef alstublieft een adres op"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Restrictiefout"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Database-toegang niet toegestaan"
-
-#: ../mdkonline.pm:215
-#: ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Service-fout"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva webdiensten zijn momenteel niet beschikbaar\n"
-"Probeer het later nog eens"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Wachtwoorden kloppen niet"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva webdiensten zijn momenteel in onderhoud\n"
-"Probeer het later nog eens"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Gebruiker niet toegestaan"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Gebruikersaccount niet toegestaan door Mandriva webdiensten"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Verbindingsfout"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Mandriva webdiensten niet bereikbaar"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate versie %s\n"
 "Copyright © %s Mandriva.\n"
-"Dit is vrije software en mag verder gedistribueerd worden onder de voorwaarden van de GNU GPL.\n"
+"Dit is vrije software en mag verder gedistribueerd worden onder de "
+"voorwaarden van de GNU GPL.\n"
 "\n"
 "gebruik:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- deze gebruiksaanwijzing.tonen\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update automatisch starten.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- specifieke mnf scripts starten.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- tekstmodus van Mandriva Update.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- in logboek bijhouden wat er gebeurt\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid "  --bundle file.bundle\t- parse and install package from .bundle metainfo file.\n"
-msgstr " --budle bestand.bundle\t- pakket analyseren en installeren vanuit .bundle metainfo-bestand.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid "You first need to install the system on your harddrive with the 'Live Install' wizard."
-msgstr "U dient het systeem eerst op uw harde schijf te installeren met de 'Live Installatie'-wizard."
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#: ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Even geduld"
-
-#: ../mdkupdate:123
-#: ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Voorbereiden..."
-
-#: ../mdkupdate:141
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#: ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Fout"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Aanmeldingscontrole op de bundelserver is mislukt:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159
-#: ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Er is een fout opgetreden"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://start.mandriva.com"
-msgstr ""
-"Deze versie van de Mandriva Online-client is te oud.\n"
-"\n"
-"U dient op te waarderen naar een nieuwere versie. U kunt deze vinden op http://start.mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Deze bundel is niet correct ingedeeld. Afgebroken."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Installeren van pakketten...\n"
-
-#: ../mdkupdate:231
-#: ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux herzieningen-applet"
+
+#~ msgid "Security error"
+#~ msgstr "Beveiligingsfout"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Algemene fout (computer al geregistreerd)"
+
+#~ msgid "Database error"
+#~ msgstr "Database-fout"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Server-database werkte niet\n"
+#~ "Probeer het later nog eens"
+
+#~ msgid "Registration error"
+#~ msgstr "Registratiefout"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Enkele parameters ontbreken"
+
+#~ msgid "Password error"
+#~ msgstr "Wachtwoordfout"
+
+#~ msgid "Wrong password"
+#~ msgstr "Wachtwoord onjuist"
+
+#~ msgid "Login error"
+#~ msgstr "Aanmeldingsfout"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Het e-mailadres dat u heeft opgegeven is reeds in gebruik\n"
+#~ "Geef alstublieft een andere op\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "Het door u opgegeven e-mailadres is ongeldig of niet toegestaan"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "E-mailadres-veld is leeg\n"
+#~ "Geef alstublieft een adres op"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Restrictiefout"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Database-toegang niet toegestaan"
+
+#~ msgid "Service error"
+#~ msgstr "Service-fout"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva webdiensten zijn momenteel niet beschikbaar\n"
+#~ "Probeer het later nog eens"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Wachtwoorden kloppen niet"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva webdiensten zijn momenteel in onderhoud\n"
+#~ "Probeer het later nog eens"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Gebruiker niet toegestaan"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Gebruikersaccount niet toegestaan door Mandriva webdiensten"
+
+#~ msgid "Connection error"
+#~ msgstr "Verbindingsfout"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Mandriva webdiensten niet bereikbaar"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ " --budle bestand.bundle\t- pakket analyseren en installeren vanuit ."
+#~ "bundle metainfo-bestand.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "U dient het systeem eerst op uw harde schijf te installeren met de 'Live "
+#~ "Installatie'-wizard."
+
+#~ msgid "Please wait"
+#~ msgstr "Even geduld"
+
+#~ msgid "Preparing..."
+#~ msgstr "Voorbereiden..."
+
+#~ msgid "Error"
+#~ msgstr "Fout"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Aanmeldingscontrole op de bundelserver is mislukt:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Er is een fout opgetreden"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Deze versie van de Mandriva Online-client is te oud.\n"
+#~ "\n"
+#~ "U dient op te waarderen naar een nieuwere versie. U kunt deze vinden op "
+#~ "http://start.mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Deze bundel is niet correct ingedeeld. Afgebroken."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Installeren van pakketten...\n"
+
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Er zijn nieuwe bundels beschikbaar voor uw systeem"
+
 #~ msgid "Service is not configured. Please click on \"Configure the service\""
 #~ msgstr "Dienst niet ingesteld. Klik op \"Dienst configureren\""
+
 #~ msgid "Configure the service"
 #~ msgstr "Dienst configureren"
+
 #~ msgid "Check updates"
 #~ msgstr "Herzieningen nagaan"
+
 #~ msgid "Configure Now!"
 #~ msgstr "Nu configureren!"
+
 #~ msgid "Actions"
 #~ msgstr "Acties"
+
 #~ msgid "Configure"
 #~ msgstr "Configureren"
+
 #~ msgid "See logs"
 #~ msgstr "Logboeken inzien"
+
 #~ msgid "Status"
 #~ msgstr "Status"
+
 #~ msgid "Close"
 #~ msgstr "Sluiten"
+
 #~ msgid "Network Connection: "
 #~ msgstr "Netwerkverbinding: "
+
 #~ msgid "Up"
 #~ msgstr "Actief"
+
 #~ msgid "Down"
 #~ msgstr "Inactief"
+
 #~ msgid "Last check: "
 #~ msgstr "Laatste controle: "
+
 #~ msgid "Machine name:"
 #~ msgstr "Computernaam:"
+
 #~ msgid "Updates: "
 #~ msgstr "Herzieningen: "
+
 #~ msgid "Development release not supported by service"
 #~ msgstr "Ontwikkelingsuitgaven worden niet ondersteund door deze dienst"
+
 #~ msgid "Too old release not supported by service"
 #~ msgstr "Te oude uitgaven worden niet ondersteund door deze dienst"
+
 #~ msgid "Unknown state"
 #~ msgstr "Onbekende toestand"
+
 #~ msgid "Online services disabled. Contact Mandriva Online site\n"
 #~ msgstr "Online diensten uitgeschakeld. Zie de Mandriva Online webstek\n"
+
 #~ msgid "Wrong Password.\n"
 #~ msgstr "Wachtwoord onjuist.\n"
+
 #~ msgid "Wrong Action or host or login.\n"
 #~ msgstr "Onjuiste actie of host of gebruikersnaam.\n"
+
 #~ msgid ""
 #~ "Something is wrong with your network settings (check your route, firewall "
 #~ "or proxy settings)\n"
 #~ msgstr ""
 #~ "Er is een probleem met uw netwerk instellingen (verifieer uw route-, "
 #~ "firewall- of proxy-instellingen)\n"
+
 #~ msgid ""
 #~ "Problem occured while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr ""
 #~ "Er heeft zich een probleem voorgedaan bij het maken van de verbinding met "
 #~ "de server, neem alstublieft contact op met het ondersteuningsteam"
+
 #~ msgid "Response from Mandriva Online server\n"
 #~ msgstr "Antwoord van Mandriva Online server\n"
+
 #~ msgid "No check"
 #~ msgstr "Geen controle"
+
 #~ msgid "Checking config file: Not present\n"
 #~ msgstr "Controle van het instellingsbestand: niet aanwezig\n"
+
 #~ msgid "Logs"
 #~ msgstr "Logboek"
+
 #~ msgid "Clear"
 #~ msgstr "Wissen"
+
 #~ msgid ""
 #~ "mdonline version %s\n"
 #~ "Copyright (C) %s Mandriva.\n"
@@ -545,32 +526,46 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "voorwaarden van de GNU GPL.\n"
 #~ "\n"
 #~ "gebruik:\n"
+
 #~ msgid "  --box=\t\t\t- hostname.\n"
 #~ msgstr "  --box=\t\t\t- computernaam.\n"
+
 #~ msgid "  --country\t\t\t- name of country of the user. \n"
 #~ msgstr "  --country\t\t\t- naam van het land van de gebruiker. \n"
+
 #~ msgid "  --interactive\t\t- use the interactive mode.\n"
 #~ msgstr "  --interactive\t\t- interactieve modus gebruiken.\n"
+
 #~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
 #~ msgstr "  --nointeractive\t- de non-interactieve modus gebruiken.\n"
+
 #~ msgid "  --login=\t\t     - login name of the user.\n"
 #~ msgstr "  --login=\t\t     - aanmeldnaam van de gebruiker.\n"
+
 #~ msgid "  --pass=\t\t\t- password  of the user.\n"
 #~ msgstr "  --pass=\t\t\t- wachtwoord van de gebruiker.\n"
+
 #~ msgid "Mandriva Online"
 #~ msgstr "Mandriva Online"
+
 #~ msgid "I already have an account"
 #~ msgstr "Ik heb al een account"
+
 #~ msgid "I want to subscribe"
 #~ msgstr "Ik wil mijzelf aanmelden"
+
 #~ msgid "Mr."
 #~ msgstr "Dhr."
+
 #~ msgid "Mrs."
 #~ msgstr "Mw."
+
 #~ msgid "Ms."
 #~ msgstr "Mej."
+
 #~ msgid "Reading configuration\n"
 #~ msgstr "Lezen instellingen\n"
+
 #~ msgid ""
 #~ "This assistant will help you to upload your configuration\n"
 #~ "(packages, hardware configuration) to a centralized database in\n"
@@ -580,25 +575,35 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "(pakketten, hardwareconfiguratie) naar een centrale database om\n"
 #~ "u op de hoogte te kunnen houden van beveiligingsherzieningen en nuttige "
 #~ "opwaarderingen.\n"
+
 #~ msgid "Account creation or authentication"
 #~ msgstr "Aanmaken van account of aanmeldingscontrole"
+
 #~ msgid "Enter your Mandriva Online login, password and machine name:"
 #~ msgstr ""
 #~ "Voer uw Mandriva Online gebruikersnaam, wachtwoord en computernaam in:"
+
 #~ msgid "Email address:"
 #~ msgstr "E-mailadres:"
+
 #~ msgid "Country"
 #~ msgstr "Land"
+
 #~ msgid "Password:"
 #~ msgstr "Wachtwoord:"
+
 #~ msgid "Machine description:"
 #~ msgstr "Computeromschrijving:"
+
 #~ msgid "(Ex: My Home Office's Computer)"
 #~ msgstr "(Bijv.: Computer op mijn kantoor)"
+
 #~ msgid "Machine name must be 1 to 40 alphanumerical characters"
 #~ msgstr "Machinenaam dient uit 1 tot 40 alfanumerieke tekens te bestaan"
+
 #~ msgid "Connecting to Mandriva Online website..."
 #~ msgstr "Verbinden met Mandriva Online webstek..."
+
 #~ msgid ""
 #~ "In order to benefit from Mandriva Online services,\n"
 #~ "we are about to upload your configuration.\n"
@@ -633,32 +638,44 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "opwaarderingen via persoonlijke e-mail.\n"
 #~ "Verder profiteert u van goedkopere betaalde ondersteuning op\n"
 #~ "www.mandrivaexpert.com."
+
 #~ msgid "Connection problem"
 #~ msgstr "Verbindingsprobleem"
+
 #~ msgid "Problem occurs when uploading files, please try again"
 #~ msgstr "Probleem met het versturen van de gegevens, probeert u het opnieuw"
+
 #~ msgid "Create a Mandriva Online Account"
 #~ msgstr "Mandriva Online account aanmaken"
+
 #~ msgid "Greeting:"
 #~ msgstr "Aanhef:"
+
 #~ msgid "First name:"
 #~ msgstr "Voornaam:"
+
 #~ msgid "Last name:"
 #~ msgstr "Achternaam:"
+
 #~ msgid "Confirm Password:"
 #~ msgstr "Wachtwoord bevestigen:"
+
 #~ msgid ""
 #~ "The passwords do not match\n"
 #~ " Please try again\n"
 #~ msgstr ""
 #~ "De wachtwoorden komen niet overeen\n"
 #~ "Probeer het opnieuw\n"
+
 #~ msgid "Please fill in each field"
 #~ msgstr "Gelieve alle velden in te vullen"
+
 #~ msgid "Not a valid mail address!\n"
 #~ msgstr "Geen geldig emailadres\n"
+
 #~ msgid "Creating account failed!"
 #~ msgstr "Aanmaken van account is mislukt!"
+
 #~ msgid ""
 #~ "Mandriva Online Account successfully created.\n"
 #~ "Please click \"Next\" to authenticate and upload your configuration\n"
@@ -666,14 +683,17 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "Aanmaken van een Mandriva Online-account is gelukt.\n"
 #~ "Klik op \"Volgende\" om aan te melden en uw systeemsamenstelling te "
 #~ "verzenden\n"
+
 #~ msgid "Your upload was successful!"
 #~ msgstr "Het versturen is gelukt!"
+
 #~ msgid ""
 #~ "From now you will receive on security and updates \n"
 #~ "announcements thanks to Mandriva Online."
 #~ msgstr ""
 #~ "Vanaf nu ontvangt u beveiligings- en\n"
 #~ "herzieningsaankondigingen dankzij Mandriva Online"
+
 #~ msgid ""
 #~ "Mandriva Online offers you the ability to automate the updates.\n"
 #~ "A program will run regulary in your system waiting for new updates\n"
@@ -682,44 +702,61 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "automatiseren.\n"
 #~ "Een programma in uw systeem zal regelmatig kijken of er nieuwe herziene\n"
 #~ "versies zijn\n"
+
 #~ msgid "Congratulations"
 #~ msgstr "Gefeliciteerd"
+
 #~ msgid "Your Mandriva Online account has been successfully configured\n"
 #~ msgstr "Uw Mandriva Online account is met succes geconfigureerd\n"
+
 #~ msgid "Configuration uploaded successfully"
 #~ msgstr "Het versturen van de configuratie is gelukt!"
+
 #~ msgid "Problem uploading configuration"
 #~ msgstr "Probleem met versturen van de configuratie"
+
 #~ msgid ""
 #~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
 #~ "firewall bad settings"
 #~ msgstr ""
 #~ "Niet in staat verbinding te maken met de Mandriva Online website: "
 #~ "onjuiste gebruikersnaam/wachtwoord of router/firewall instelling"
+
 #~ msgid "  --applet\t\t- launch Mandriva Update.\n"
 #~ msgstr "  --applet\t\t- Mandriva Update starten.\n"
+
 #~ msgid "Cannot get list of updates: %s"
 #~ msgstr "Kan lijst met herzieningen niet ophalen: %s"
+
 #~ msgid "Choose which packages should be installed and Press Ok"
 #~ msgstr "Kies welke pakketten geïnstalleerd dienen te worden en druk op OK"
+
 #~ msgid "System is busy. Please wait ..."
 #~ msgstr "Systeem is bezig. Even geduld..."
+
 #~ msgid "Sending configuration..."
 #~ msgstr "Configuratie sturen"
+
 #~ msgid "Unsecure invocation: Method available through httpS only"
 #~ msgstr "Onbeveiligde aanroep: Methode alleen beschikbaar via httpS"
+
 #~ msgid "No %s file found. Run mdkonline wizard first"
 #~ msgstr "Geen %s-bestand gevonden. Start eerst de mdkonline-assistent"
+
 #~ msgid "Mandriva Update could not contact the site, we will try again."
 #~ msgstr ""
 #~ "Mandriva Update kan geen verbinding met de webstek maken, we proberen het "
 #~ "later nog eens."
+
 #~ msgid "Login:"
 #~ msgstr "Gebruikersnaam:"
+
 #~ msgid "or"
 #~ msgstr "of"
+
 #~ msgid "wrong password:"
 #~ msgstr "wachtwoord onjuist:"
+
 #~ msgid ""
 #~ "Your login or password was wrong.\n"
 #~ " Either you'll have to type it again, or you'll need to create an account "
@@ -736,18 +773,24 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ "verbinding te maken met Mandriva Online.\n"
 #~ " Weest u zich ervan bewust dat u ook een computernaam moet invoeren \n"
 #~ " (alleen letters zijn toegestaan)"
+
 #~ msgid "Mail contact:"
 #~ msgstr "Mailadres: "
+
 #~ msgid "Please provide a login"
 #~ msgstr "Geef alstublieft uw gebruikersnaam"
+
 #~ msgid "Login and password should be less than 12 characters\n"
 #~ msgstr "Gebruikersnaam en wachtwoord moeten korter zijn dan 12 tekens\n"
+
 #~ msgid "Special characters are not allowed\n"
 #~ msgstr "Speciale tekens zijn niet toegestaan\n"
+
 #~ msgid "Email not valid\n"
 #~ msgstr "E-mailadres is ongeldig\n"
+
 #~ msgid "Account already exists\n"
 #~ msgstr "Account bestaat al\n"
+
 #~ msgid "Problem connecting to server \n"
 #~ msgstr "Er is een probleem opgetreden bij het verbinden met de server \n"
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2004-08-11 20:48+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Verifyî les metaedjes a djoû"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Li sistinme da vosse est a djoû"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -37,38 +37,48 @@ msgstr ""
 "Åk n' a nén stî tot-z apontiant l' siervice. Loukîz les djournås eyet emilez "
 "po dire li problinme a support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Tårdjîz on pô s' i vs plait, dji cwir après les pacaedjes k' i gn a..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "I gn des noveas metaedjes a djoû po vosse sistinme"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Li rantoele est djus. Apontyîz l' rantoele s' i vs plait."
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Siervice nén èn alaedje. Clitchîz so «Waibe»"
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr "båze di dnêyes urpmi serêye"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Modêye nén sopoirtêye (modêye pår trop viye, ou modêye di diswalpaedje)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -76,7 +86,7 @@ msgstr ""
 "Nou sopoirt di trové. Vos ndè dvoz radjouter onk avou l' «Manaedjeu des "
 "sopoirts d' astalaedje»."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -93,266 +103,136 @@ msgstr ""
 "\n"
 "Poy, renondez %s."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "En alaedje"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr "Åk n' a nén stî tot metant a djoû les sopoirts"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Verifiant... Des metaedjes a djoû sont disponibes\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr "Les pacaedjes sont-st a djoû"
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr "Dji n' sai drovi l' båze di dnêyes urpmi"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Astaler les metaedjes a djoû"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Verifyî les metaedjes a djoû"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Apontyî l' rantoele"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Enondant drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "I shonnreut k' Mandriva Online åye sitî rastalé, dji rtchedje l' aplikete..."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Enondant «MandrivaUpdate»\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Aplikete di metaedjes a djoû"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Carculaedje des metaedjes a djoû...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Dji m' raloyaedje a"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Li sistinme est a djoû\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Verifiaedje del rantoele: i shonnreut k' ele ni soeye nén en alaedje\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Adviertixhmint"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Åd fwait..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright © %s pa Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 "Mandriva Online (Mandriva so les fyis) vos dene accès åzès siervices waibe "
 "da Mandriva."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Waibe"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "El drovi tofer a l' enondaedje"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Cwiter"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Aroke di såvrité"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Aroke djenerike (éndjole dedja edjîstrêye)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Åk n' a nén stî avou l' båze di dnêyes"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Li sierveu d' båze di dnêyes a fwait berwete\n"
-"Rissayîz pus tård s' i vs plait"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Åk n' a nén stî avou l' edjîstraedje"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Des parametes k' i gn a mankèt"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Åk n' a nén stî avou l' sicret"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Måva scret"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Åk n' a nén stî avou l' elodjaedje"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"L' emile ki vos avoz dné est ddja eployî\n"
-"Dinez è èn ôte s' i vs plait.\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "L' emile ki vos avoz dné n' est nén valide ou il est interdit"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"Li tchamp di l' adresse emile est vude,\n"
-"i vs fåt dner ene adresse emile s' i vs plait"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Åk n' a nén stî avou les restriccions"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "L' accès al båze di dnêyes est disfindou"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Åk n' a nén stî avou l' siervice"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Les siervices waibe di Mandriva èn sont nén disponibes pol moumint\n"
-"Rissayîz pus tård s' i vs plait"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Les screts n' corespondèt nén"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"Les siervices waibe di Mandriva sont-st e mintnance\n"
-"Rissayîz pus tård s' i vs plait"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Uzeu interdit"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Ci conte uzeu la est interdit pås siervices waibe di Mandriva"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Åk n' a nén stî avou l' raloyaedje"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Les siervices waibe di Mandriva èn sont nén djondåves"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -369,109 +249,177 @@ msgstr ""
 "\n"
 "Po s' è siervi:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr " --help           - mostere ci messaedje d' aidance chal.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr " --auto           - enonder les metaedjes a djoû otomaticmint.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr " --mnf            - enonder les scripes especifikes mnf.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr " --noX            - enonder l' modêye e môde tecse.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug         - fé on djournå di çou k' est fwait\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundle file.bundle    - lére eyet astaker des pacaedjes a pårti d' on "
-"fitchî di meta-dnêyes «.bundle».\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Vos dvoz d' aprume astaler l' sistinme so vosse deure plake avou l' macrea "
-"«Live Install»."
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Tårdjîz on pô, s' i vs plait"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Dj' aprestêye..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Aroke"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"L' otintifiaedje avou l' sierveu d' «bundle» a fwait berwete:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Dj' aroke so ene sacwè"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Li modêye di Mandriva so les fyis est pår trop viye.\n"
-"\n"
-"Vos dvoz mete a djoû viè ene nouve modêye. Vos ndè ploz prinde ene so http://"
-"start.mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Ci «bundle» chal n' est nén bén fwait. Dji rnonce."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Astalant les pacaedjes...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
 "Dji n' a nén savou mete a djoû les pacaedjes foû do sopoirt update_source.\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Aplikete di metaedjes a djoû"
+
+#~ msgid "Security error"
+#~ msgstr "Aroke di såvrité"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Aroke djenerike (éndjole dedja edjîstrêye)"
+
+#~ msgid "Database error"
+#~ msgstr "Åk n' a nén stî avou l' båze di dnêyes"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Li sierveu d' båze di dnêyes a fwait berwete\n"
+#~ "Rissayîz pus tård s' i vs plait"
+
+#~ msgid "Registration error"
+#~ msgstr "Åk n' a nén stî avou l' edjîstraedje"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Des parametes k' i gn a mankèt"
+
+#~ msgid "Password error"
+#~ msgstr "Åk n' a nén stî avou l' sicret"
+
+#~ msgid "Wrong password"
+#~ msgstr "Måva scret"
+
+#~ msgid "Login error"
+#~ msgstr "Åk n' a nén stî avou l' elodjaedje"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "L' emile ki vos avoz dné est ddja eployî\n"
+#~ "Dinez è èn ôte s' i vs plait.\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "L' emile ki vos avoz dné n' est nén valide ou il est interdit"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Li tchamp di l' adresse emile est vude,\n"
+#~ "i vs fåt dner ene adresse emile s' i vs plait"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Åk n' a nén stî avou les restriccions"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "L' accès al båze di dnêyes est disfindou"
+
+#~ msgid "Service error"
+#~ msgstr "Åk n' a nén stî avou l' siervice"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Les siervices waibe di Mandriva èn sont nén disponibes pol moumint\n"
+#~ "Rissayîz pus tård s' i vs plait"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Les screts n' corespondèt nén"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Les siervices waibe di Mandriva sont-st e mintnance\n"
+#~ "Rissayîz pus tård s' i vs plait"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Uzeu interdit"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Ci conte uzeu la est interdit pås siervices waibe di Mandriva"
+
+#~ msgid "Connection error"
+#~ msgstr "Åk n' a nén stî avou l' raloyaedje"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Les siervices waibe di Mandriva èn sont nén djondåves"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle file.bundle    - lére eyet astaker des pacaedjes a pårti d' on "
+#~ "fitchî di meta-dnêyes «.bundle».\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Vos dvoz d' aprume astaler l' sistinme so vosse deure plake avou "
+#~ "l' macrea «Live Install»."
+
+#~ msgid "Please wait"
+#~ msgstr "Tårdjîz on pô, s' i vs plait"
+
+#~ msgid "Preparing..."
+#~ msgstr "Dj' aprestêye..."
+
+#~ msgid "Error"
+#~ msgstr "Aroke"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "L' otintifiaedje avou l' sierveu d' «bundle» a fwait berwete:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Dj' aroke so ene sacwè"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Li modêye di Mandriva so les fyis est pår trop viye.\n"
+#~ "\n"
+#~ "Vos dvoz mete a djoû viè ene nouve modêye. Vos ndè ploz prinde ene so "
+#~ "http://start.mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Ci «bundle» chal n' est nén bén fwait. Dji rnonce."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Astalant les pacaedjes...\n"
 
 #~ msgid "New bundles are available for your system"
 #~ msgstr "I gn des noveas «bundles» po vosse sistinme"

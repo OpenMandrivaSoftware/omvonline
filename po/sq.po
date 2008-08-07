@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2002-09-24 15:30+0100\n"
 "Last-Translator: Naim Daka <naim70@freesurf.ch>\n"
 "Language-Team: Albanian <LL@li.org>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Azhurnimet e sigurisë"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr ""
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, fuzzy, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr "Për çdo problem na dërgoni një e-mail në suppport@mandrivaonline.com\n"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Një moment ju lutemi, gjetja e pakove të lira..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr ""
@@ -48,33 +48,43 @@ msgstr ""
 "%s\n"
 "janë lidhur direkt në sistemin tuaj.\n"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr ""
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "baza e të dhënave urpmi është e mbyllur"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -91,255 +101,133 @@ msgstr ""
 "\n"
 "Dhe, riniseni %s."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Aktivizuar"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr ""
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, fuzzy, c-format
 msgid "Failed to open urpmi database"
 msgstr "e pa mundur hapja e rpmdb"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Instaloi azhurnimet"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, fuzzy, c-format
 msgid "Check Updates"
 msgstr "Azhurnimi"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, fuzzy, c-format
 msgid "Configure Network"
 msgstr "Konfigurim i rrjetin"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, fuzzy, c-format
 msgid "Launching drakconnect\n"
 msgstr "Nise userdrake"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr ""
 
-#: ../mdkapplet:303
-#, fuzzy, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux dhe jeta e juaj private"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, fuzzy, c-format
 msgid "Computing new updates...\n"
 msgstr "Lidhje e ballafaquar"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, fuzzy, c-format
 msgid "Connecting to"
 msgstr "Lidhje e ballafaquar"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "Modë i sistemit"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Kujdes"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Në lidhje me..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr ""
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Dalje"
 
-#: ../mdkonline.pm:207
-#, fuzzy, c-format
-msgid "Security error"
-msgstr "Siguria e Alarmeve:"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr ""
-
-#: ../mdkonline.pm:208
-#, fuzzy, c-format
-msgid "Database error"
-msgstr "Server i bazës së të dhënave"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:209
-#, fuzzy, c-format
-msgid "Registration error"
-msgstr "Tipi i Regjistrimit"
-
-#: ../mdkonline.pm:209
-#, fuzzy, c-format
-msgid "Some parameters are missing"
-msgstr "Emri i stampuesit të largët mungonë!"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, fuzzy, c-format
-msgid "Password error"
-msgstr "Parullë për %s"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Parulla e gabuar"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, fuzzy, c-format
-msgid "Login error"
-msgstr "Gabim i pa njoftur"
-
-#: ../mdkonline.pm:211
-#, fuzzy, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"Nick-emri * %s * është veçse në përdorim e sipër apo invalid\n"
-"Ju lutemi zgjedheni një tjetër\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr ""
-
-#: ../mdkonline.pm:213
-#, fuzzy, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr "Emri i fushës është zbrazët ju lutemi furnizoni një emër"
-
-#: ../mdkonline.pm:214
-#, fuzzy, c-format
-msgid "Restriction Error"
-msgstr "Përshkrimi: "
-
-#: ../mdkonline.pm:214
-#, fuzzy, c-format
-msgid "Database access forbidden"
-msgstr "Server i bazës së të dhënave"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, fuzzy, c-format
-msgid "Service error"
-msgstr "Shkrim i gabuar\n"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:216
-#, fuzzy, c-format
-msgid "Password mismatch"
-msgstr "Parulla nuk Përputhet"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:218
-#, fuzzy, c-format
-msgid "User Forbidden"
-msgstr "Menu e Përdoruesit"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr ""
-
-#: ../mdkonline.pm:219
-#, fuzzy, c-format
-msgid "Connection error"
-msgstr "Emri i lidhjes"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr ""
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -355,97 +243,119 @@ msgstr ""
 "\n"
 "përdorim:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- çfaqe këtë lajm ndihmues.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, fuzzy, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --applet\t\t- azhurnoi të gjitha informacionet.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr ""
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, fuzzy, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --applet       - azhurnoi të gjitha informacionet.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Një moment ju lutemi"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Përgatitje..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Gabim"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Një gabim është paraqitur"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Intalimi i pakove...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "I pa mundur azhurnimi i pakove nga update_source mesatar.\n"
+
+#, fuzzy
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux dhe jeta e juaj private"
+
+#, fuzzy
+#~ msgid "Security error"
+#~ msgstr "Siguria e Alarmeve:"
+
+#, fuzzy
+#~ msgid "Database error"
+#~ msgstr "Server i bazës së të dhënave"
+
+#, fuzzy
+#~ msgid "Registration error"
+#~ msgstr "Tipi i Regjistrimit"
+
+#, fuzzy
+#~ msgid "Some parameters are missing"
+#~ msgstr "Emri i stampuesit të largët mungonë!"
+
+#, fuzzy
+#~ msgid "Password error"
+#~ msgstr "Parullë për %s"
+
+#~ msgid "Wrong password"
+#~ msgstr "Parulla e gabuar"
+
+#, fuzzy
+#~ msgid "Login error"
+#~ msgstr "Gabim i pa njoftur"
+
+#, fuzzy
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "Nick-emri * %s * është veçse në përdorim e sipër apo invalid\n"
+#~ "Ju lutemi zgjedheni një tjetër\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr "Emri i fushës është zbrazët ju lutemi furnizoni një emër"
+
+#, fuzzy
+#~ msgid "Restriction Error"
+#~ msgstr "Përshkrimi: "
+
+#, fuzzy
+#~ msgid "Database access forbidden"
+#~ msgstr "Server i bazës së të dhënave"
+
+#, fuzzy
+#~ msgid "Service error"
+#~ msgstr "Shkrim i gabuar\n"
+
+#, fuzzy
+#~ msgid "Password mismatch"
+#~ msgstr "Parulla nuk Përputhet"
+
+#, fuzzy
+#~ msgid "User Forbidden"
+#~ msgstr "Menu e Përdoruesit"
+
+#, fuzzy
+#~ msgid "Connection error"
+#~ msgstr "Emri i lidhjes"
+
+#~ msgid "Please wait"
+#~ msgstr "Një moment ju lutemi"
+
+#~ msgid "Preparing..."
+#~ msgstr "Përgatitje..."
+
+#~ msgid "Error"
+#~ msgstr "Gabim"
+
+#~ msgid "An error occurred"
+#~ msgstr "Një gabim është paraqitur"
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Intalimi i pakove...\n"
 
 #, fuzzy
 #~ msgid "New bundles are available for your system"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2006-09-13 20:38+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -23,17 +23,17 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Provjeri ispravke"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Vaš sistem je up-to-date"
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -42,44 +42,54 @@ msgstr ""
 "Problem kod podešavanja servisa. Provjerite logove i pošaljite mail za "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Molim sačekajte, tražim dostupne pakete..."
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Nove ispravke su dostupne za vaš sistem"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Mreža ne radi. Podesite vašu mrežu"
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servis nije aktiviran. Kliknite na \"Online web stranica\""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "urpmi baza podataka je zaključana"
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Izdanje nije podržano (prestaro izdanje ili je riječ o izdanju u razvoju)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -95,263 +105,133 @@ msgstr ""
 "\n"
 "Zatim, restartujte %s."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, c-format
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, fuzzy, c-format
 msgid "Error updating media"
 msgstr "Ažuriram medije...\n"
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr "Provjeravam... Ispravke su dostupne\n"
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr ""
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, fuzzy, c-format
 msgid "Failed to open urpmi database"
 msgstr "ne mogu otvoriti rpmdb"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Instaliraj ispravke"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, c-format
 msgid "Check Updates"
 msgstr "Provjeri da li ima ispravki"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Configure Network"
 msgstr "Podesi mrežu"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Pokrećem drakconnect\n"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr "Madrakeonline je izgleda ponovo instaliran, pokrećem aplet..."
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Pokrećem MandrivaUpdate\n"
 
-#: ../mdkapplet:303
-#, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux aplet sa ispravkama"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Izračunavam nove ispravke...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, c-format
 msgid "Connecting to"
 msgstr "Vežem se na"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem je up-to-date\n"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Provjeravam mrežu: čini se da je isključena\n"
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "O programu..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Autorska prava (C) %s Mandriva"
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online vam omogućuje pristup Mandriva web uslugama."
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr "Online web stranica"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr "Uvijek pokreni na početku"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Završi"
 
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Security error"
-msgstr "Sigurnosna greška"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr "Opšta greška (računar je već registrovan)"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid "Database error"
-msgstr "Greška u bazi podataka"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-"Baza na serveru je u kvaru\n"
-"Probajte ponovo kasnije"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr "Greška u registraciji"
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Some parameters are missing"
-msgstr "Nedostaju neki od parametara"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, c-format
-msgid "Password error"
-msgstr "Pogrešna šifra"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Pogrešna šifra"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, c-format
-msgid "Login error"
-msgstr "Greška sa prijavom"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-"E-mail koji ste naveli se već koristi\n"
-"Molim unesite neki drugi\n"
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr "E-mail koji ste naveli je neispravan ili zabranjen"
-
-#: ../mdkonline.pm:213
-#, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr ""
-"Polje za e-mail adresu je prazno\n"
-"Unesite e-mail"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr "Greška ograničenja"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Database access forbidden"
-msgstr "Pristup bazi podataka je zabranjen"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, c-format
-msgid "Service error"
-msgstr "Greška u usluzi"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-"Mandriva web servisi su trenutno nedostupni\n"
-"Molim probajte opet kasnije"
-
-#: ../mdkonline.pm:216
-#, c-format
-msgid "Password mismatch"
-msgstr "Šifre se ne poklapaju"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-"U toku je redovno održavanje Mandriva web servisa\n"
-"Molim probajte opet kasnije"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User Forbidden"
-msgstr "Korisnik zabranjen"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr "Korisnički račun je zabranjen na Mandriva web servisima"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Connection error"
-msgstr "Greška u konekciji"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr "Mandriva web servisi su nedostupni"
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -367,108 +247,176 @@ msgstr ""
 "\n"
 "upotreba:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- štampa ovu poruku.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update se automatski pokreće.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- pokreni skripte specifične za mnf.\n"
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- tekstualna verzija Mandriva Update.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- ispisuje sve što se radi\n"
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-"  --bundle file.bundle\t- obradi i instaliraj paket iz .bundle metainfo "
-"fajla.\n"
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-"Najprije morate instalirati sistem na vaš hard disk koristeći čarobnjak "
-"'Live Install'."
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Molim sačekajte"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr "Pripremam..."
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Greška"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-"Nisam se uspio autenticiriati kod bundle servera:\n"
-"\n"
-"%s"
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Došlo je do greške"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-"Verzija vašeg Mandriva Online klijenta je prestara.\n"
-"\n"
-"Morate nabaviti noviju verziju. Možete je preuzeti sa adrese http://start."
-"mandriva.com"
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr "Bundle nije ispravno formatiran. Prekidam."
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Instaliram pakete...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nisam u mogućnosti da uradim update paketa sa update_source medija.\n"
+
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux aplet sa ispravkama"
+
+#~ msgid "Security error"
+#~ msgstr "Sigurnosna greška"
+
+#~ msgid "Generic error (machine already registered)"
+#~ msgstr "Opšta greška (računar je već registrovan)"
+
+#~ msgid "Database error"
+#~ msgstr "Greška u bazi podataka"
+
+#~ msgid ""
+#~ "Server Database failed\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Baza na serveru je u kvaru\n"
+#~ "Probajte ponovo kasnije"
+
+#~ msgid "Registration error"
+#~ msgstr "Greška u registraciji"
+
+#~ msgid "Some parameters are missing"
+#~ msgstr "Nedostaju neki od parametara"
+
+#~ msgid "Password error"
+#~ msgstr "Pogrešna šifra"
+
+#~ msgid "Wrong password"
+#~ msgstr "Pogrešna šifra"
+
+#~ msgid "Login error"
+#~ msgstr "Greška sa prijavom"
+
+#~ msgid ""
+#~ "The email you provided is already in use\n"
+#~ "Please enter another one\n"
+#~ msgstr ""
+#~ "E-mail koji ste naveli se već koristi\n"
+#~ "Molim unesite neki drugi\n"
+
+#~ msgid "The email you provided is invalid or forbidden"
+#~ msgstr "E-mail koji ste naveli je neispravan ili zabranjen"
+
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr ""
+#~ "Polje za e-mail adresu je prazno\n"
+#~ "Unesite e-mail"
+
+#~ msgid "Restriction Error"
+#~ msgstr "Greška ograničenja"
+
+#~ msgid "Database access forbidden"
+#~ msgstr "Pristup bazi podataka je zabranjen"
+
+#~ msgid "Service error"
+#~ msgstr "Greška u usluzi"
+
+#~ msgid ""
+#~ "Mandriva web services are currently unavailable\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "Mandriva web servisi su trenutno nedostupni\n"
+#~ "Molim probajte opet kasnije"
+
+#~ msgid "Password mismatch"
+#~ msgstr "Šifre se ne poklapaju"
+
+#~ msgid ""
+#~ "Mandriva web services are under maintenance\n"
+#~ "Please Try again Later"
+#~ msgstr ""
+#~ "U toku je redovno održavanje Mandriva web servisa\n"
+#~ "Molim probajte opet kasnije"
+
+#~ msgid "User Forbidden"
+#~ msgstr "Korisnik zabranjen"
+
+#~ msgid "User account forbidden by Mandriva web services"
+#~ msgstr "Korisnički račun je zabranjen na Mandriva web servisima"
+
+#~ msgid "Connection error"
+#~ msgstr "Greška u konekciji"
+
+#~ msgid "Mandriva web services not reachable"
+#~ msgstr "Mandriva web servisi su nedostupni"
+
+#~ msgid ""
+#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
+#~ "file.\n"
+#~ msgstr ""
+#~ "  --bundle file.bundle\t- obradi i instaliraj paket iz .bundle metainfo "
+#~ "fajla.\n"
+
+#~ msgid ""
+#~ "You first need to install the system on your harddrive with the 'Live "
+#~ "Install' wizard."
+#~ msgstr ""
+#~ "Najprije morate instalirati sistem na vaš hard disk koristeći čarobnjak "
+#~ "'Live Install'."
+
+#~ msgid "Please wait"
+#~ msgstr "Molim sačekajte"
+
+#~ msgid "Preparing..."
+#~ msgstr "Pripremam..."
+
+#~ msgid "Error"
+#~ msgstr "Greška"
+
+#~ msgid ""
+#~ "Failed to authenticate to the bundle server:\n"
+#~ "\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Nisam se uspio autenticiriati kod bundle servera:\n"
+#~ "\n"
+#~ "%s"
+
+#~ msgid "An error occurred"
+#~ msgstr "Došlo je do greške"
+
+#~ msgid ""
+#~ "The version of the Mandriva Online client is too old.\n"
+#~ "\n"
+#~ "You need to update to a newer version. You can get a new one from http://"
+#~ "start.mandriva.com"
+#~ msgstr ""
+#~ "Verzija vašeg Mandriva Online klijenta je prestara.\n"
+#~ "\n"
+#~ "Morate nabaviti noviju verziju. Možete je preuzeti sa adrese http://start."
+#~ "mandriva.com"
+
+#~ msgid "This bundle is not well formated. Aborting."
+#~ msgstr "Bundle nije ispravno formatiran. Prekidam."
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Instaliram pakete...\n"
 
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Novi bundles su dostupni za vaš sistem"

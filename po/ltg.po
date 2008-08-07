@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-21 18:21+0100\n"
+"POT-Creation-Date: 2008-08-07 20:21+0200\n"
 "PO-Revision-Date: 2004-02-17 17:39+0200\n"
 "Last-Translator: Unknown\n"
 "Language-Team: ll10nt <ll10nt@listes.murds.lv>\n"
@@ -16,29 +16,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:88
+#: ../mdkapplet:83
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Atvārtū portu puorbaude"
 
-#: ../mdkapplet:97
+#: ../mdkapplet:92
 #, c-format
 msgid "Your system is up-to-date"
 msgstr ""
 
-#: ../mdkapplet:103
+#: ../mdkapplet:98
 #, fuzzy, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr "Problemu gadīnī syutit e-posta viesti iz support@mandrivaonline.com\n"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:105
 #, fuzzy, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Mekleju pīejamuos pakūtnis"
 
-#: ../mdkapplet:116
+#: ../mdkapplet:111
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr ""
@@ -47,33 +47,43 @@ msgstr ""
 "%s\n"
 "ir pīejami iz jiusu sistemys.\n"
 
-#: ../mdkapplet:122
+#: ../mdkapplet:117
+#, c-format
+msgid "A new stable distribution has been released"
+msgstr ""
+
+#: ../mdkapplet:117
+#, c-format
+msgid "Do you want to upgrade?"
+msgstr ""
+
+#: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr ""
 
-#: ../mdkapplet:128
+#: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 
-#: ../mdkapplet:134 ../mdkapplet:165
+#: ../mdkapplet:135 ../mdkapplet:166
 #, c-format
 msgid "urpmi database locked"
 msgstr ""
 
-#: ../mdkapplet:140
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:146
+#: ../mdkapplet:147
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:152
+#: ../mdkapplet:153
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -84,253 +94,133 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 
-#: ../mdkapplet:157
+#: ../mdkapplet:158
 #, fuzzy, c-format
 msgid "Enabled"
 msgstr "īslēgt"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:171
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:185
+#: ../mdkapplet:186
 #, c-format
 msgid "Checking... Updates are available\n"
 msgstr ""
 
-#: ../mdkapplet:190
+#: ../mdkapplet:191
 #, c-format
 msgid "Packages are up to date"
 msgstr ""
 
-#: ../mdkapplet:195
+#: ../mdkapplet:196
 #, c-format
 msgid "Failed to open urpmi database"
 msgstr ""
 
-#: ../mdkapplet:200
+#: ../mdkapplet:201 ../mdkapplet:556
 #, c-format
 msgid "Install updates"
 msgstr "Uzstuodeit jaunynuojumus"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:202
 #, fuzzy, c-format
 msgid "Check Updates"
 msgstr "Modernizeijumi"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, fuzzy, c-format
 msgid "Configure Network"
 msgstr "Teikla konfigureišona"
 
-#: ../mdkapplet:283
+#: ../mdkapplet:327
 #, fuzzy, c-format
 msgid "Launching drakconnect\n"
 msgstr "Palaist userdrake"
 
-#: ../mdkapplet:286
+#: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 
-#: ../mdkapplet:294
+#: ../mdkapplet:379
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr ""
 
-#: ../mdkapplet:303
-#, fuzzy, c-format
-msgid "Mandriva Linux Updates Applet"
-msgstr "Mandriva Linux privātuma politika"
-
-#: ../mdkapplet:308
+#: ../mdkapplet:400
 #, fuzzy, c-format
 msgid "Computing new updates...\n"
 msgstr "Dasaslādzu ...\n"
 
-#: ../mdkapplet:309
+#: ../mdkapplet:401
 #, fuzzy, c-format
 msgid "Connecting to"
 msgstr "Pīslāguma problema"
 
-#: ../mdkapplet:386
+#: ../mdkapplet:484
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistemys režims"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:512
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:457 ../mdkupdate:118 ../mdkupdate:164
+#: ../mdkapplet:554
 #, c-format
 msgid "Warning"
 msgstr "Uzmaneibu"
 
-#: ../mdkapplet:468
+#: ../mdkapplet:557
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:568
 #, c-format
 msgid "About..."
 msgstr "Par..."
 
-#: ../mdkapplet:472
+#: ../mdkapplet:572
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:573
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:476
+#: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:478
+#: ../mdkapplet:578
 #, c-format
 msgid "Online WebSite"
 msgstr ""
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:483
+#: ../mdkapplet:583
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:492
+#: ../mdkapplet:592
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:494
+#: ../mdkapplet:594
 #, c-format
 msgid "Quit"
 msgstr "Izīt"
 
-#: ../mdkonline.pm:207
-#, fuzzy, c-format
-msgid "Security error"
-msgstr "Drūšeibys trauksmis:"
-
-#: ../mdkonline.pm:207
-#, c-format
-msgid "Generic error (machine already registered)"
-msgstr ""
-
-#: ../mdkonline.pm:208
-#, fuzzy, c-format
-msgid "Database error"
-msgstr "Datubāžu servers"
-
-#: ../mdkonline.pm:208
-#, c-format
-msgid ""
-"Server Database failed\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:209
-#, c-format
-msgid "Registration error"
-msgstr ""
-
-#: ../mdkonline.pm:209
-#, fuzzy, c-format
-msgid "Some parameters are missing"
-msgstr "Nav attuoluo printera nūsaukuma!"
-
-#: ../mdkonline.pm:210 ../mdkonline.pm:216
-#, fuzzy, c-format
-msgid "Password error"
-msgstr "%s parole"
-
-#: ../mdkonline.pm:210
-#, c-format
-msgid "Wrong password"
-msgstr "Napareizs paroļs"
-
-#: ../mdkonline.pm:211 ../mdkonline.pm:212 ../mdkonline.pm:213
-#, fuzzy, c-format
-msgid "Login error"
-msgstr "Nazynuoma kliuda"
-
-#: ../mdkonline.pm:211
-#, c-format
-msgid ""
-"The email you provided is already in use\n"
-"Please enter another one\n"
-msgstr ""
-
-#: ../mdkonline.pm:212
-#, c-format
-msgid "The email you provided is invalid or forbidden"
-msgstr ""
-
-#: ../mdkonline.pm:213
-#, fuzzy, c-format
-msgid ""
-"Email address box is empty\n"
-"Please provide one"
-msgstr "Vuorda lauks ir tukšs, lyudzu īvodit vuordu"
-
-#: ../mdkonline.pm:214
-#, c-format
-msgid "Restriction Error"
-msgstr ""
-
-#: ../mdkonline.pm:214
-#, fuzzy, c-format
-msgid "Database access forbidden"
-msgstr "Datubāžu servers"
-
-#: ../mdkonline.pm:215 ../mdkonline.pm:217
-#, fuzzy, c-format
-msgid "Service error"
-msgstr "Servisi"
-
-#: ../mdkonline.pm:215
-#, c-format
-msgid ""
-"Mandriva web services are currently unavailable\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:216
-#, fuzzy, c-format
-msgid "Password mismatch"
-msgstr "Parolis nasakreit"
-
-#: ../mdkonline.pm:217
-#, c-format
-msgid ""
-"Mandriva web services are under maintenance\n"
-"Please Try again Later"
-msgstr ""
-
-#: ../mdkonline.pm:218
-#, fuzzy, c-format
-msgid "User Forbidden"
-msgstr "Lītuotuoja izvielne"
-
-#: ../mdkonline.pm:218
-#, c-format
-msgid "User account forbidden by Mandriva web services"
-msgstr ""
-
-#: ../mdkonline.pm:219
-#, fuzzy, c-format
-msgid "Connection error"
-msgstr "Savīnuojuma nūsaukums"
-
-#: ../mdkonline.pm:219
-#, c-format
-msgid "Mandriva web services not reachable"
-msgstr ""
-
-#: ../mdkupdate:68
+#: ../mdkupdate:62
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -347,97 +237,100 @@ msgstr ""
 "\n"
 "pīlītuojums:\n"
 
-#: ../mdkupdate:73
+#: ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- drukuot itū paliedzeibys tekstu.\n"
 
-#: ../mdkupdate:74
+#: ../mdkupdate:68
 #, fuzzy, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --applet\t\t- atjaunuot vysu informaceju.\n"
 
-#: ../mdkupdate:75
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr ""
 
-#: ../mdkupdate:76
+#: ../mdkupdate:70
 #, fuzzy, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --applet       - atjaunuot vysu informaceju.\n"
 
-#: ../mdkupdate:77
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:78
-#, c-format
-msgid ""
-"  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-"file.\n"
-msgstr ""
-
-#. -PO: here Live Install is currently *NOT* translated on the desktop, so it's better to keep as it:
-#: ../mdkupdate:120
-#, c-format
-msgid ""
-"You first need to install the system on your harddrive with the 'Live "
-"Install' wizard."
-msgstr ""
-
-#: ../mdkupdate:123 ../mdkupdate:174 ../mdkupdate:219
-#, c-format
-msgid "Please wait"
-msgstr "Lyudzu pagaidit"
-
-#: ../mdkupdate:123 ../mdkupdate:174
-#, c-format
-msgid "Preparing..."
-msgstr ""
-
-#: ../mdkupdate:141 ../mdkupdate:159 ../mdkupdate:188 ../mdkupdate:207
-#, c-format
-msgid "Error"
-msgstr "Klaida"
-
-#: ../mdkupdate:141
-#, c-format
-msgid ""
-"Failed to authenticate to the bundle server:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: ../mdkupdate:159 ../mdkupdate:188
-#, c-format
-msgid "An error occurred"
-msgstr "Atkluota kliuda"
-
-#: ../mdkupdate:164
-#, c-format
-msgid ""
-"The version of the Mandriva Online client is too old.\n"
-"\n"
-"You need to update to a newer version. You can get a new one from http://"
-"start.mandriva.com"
-msgstr ""
-
-#: ../mdkupdate:207
-#, c-format
-msgid "This bundle is not well formated. Aborting."
-msgstr ""
-
-#: ../mdkupdate:219
-#, c-format
-msgid "Installing packages ...\n"
-msgstr "Instaleju pakūtnis...\n"
-
-#: ../mdkupdate:231 ../mdkupdate:271
+#: ../mdkupdate:102
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nav īspiejams atjaunuot pakūtnis nu update_source medium.\n"
+
+#, fuzzy
+#~ msgid "Mandriva Linux Updates Applet"
+#~ msgstr "Mandriva Linux privātuma politika"
+
+#, fuzzy
+#~ msgid "Security error"
+#~ msgstr "Drūšeibys trauksmis:"
+
+#, fuzzy
+#~ msgid "Database error"
+#~ msgstr "Datubāžu servers"
+
+#, fuzzy
+#~ msgid "Some parameters are missing"
+#~ msgstr "Nav attuoluo printera nūsaukuma!"
+
+#, fuzzy
+#~ msgid "Password error"
+#~ msgstr "%s parole"
+
+#~ msgid "Wrong password"
+#~ msgstr "Napareizs paroļs"
+
+#, fuzzy
+#~ msgid "Login error"
+#~ msgstr "Nazynuoma kliuda"
+
+#, fuzzy
+#~ msgid ""
+#~ "Email address box is empty\n"
+#~ "Please provide one"
+#~ msgstr "Vuorda lauks ir tukšs, lyudzu īvodit vuordu"
+
+#, fuzzy
+#~ msgid "Database access forbidden"
+#~ msgstr "Datubāžu servers"
+
+#, fuzzy
+#~ msgid "Service error"
+#~ msgstr "Servisi"
+
+#, fuzzy
+#~ msgid "Password mismatch"
+#~ msgstr "Parolis nasakreit"
+
+#, fuzzy
+#~ msgid "User Forbidden"
+#~ msgstr "Lītuotuoja izvielne"
+
+#, fuzzy
+#~ msgid "Connection error"
+#~ msgstr "Savīnuojuma nūsaukums"
+
+#~ msgid "Please wait"
+#~ msgstr "Lyudzu pagaidit"
+
+#~ msgid "Error"
+#~ msgstr "Klaida"
+
+#~ msgid "An error occurred"
+#~ msgstr "Atkluota kliuda"
+
+#~ msgid "Installing packages ...\n"
+#~ msgstr "Instaleju pakūtnis...\n"
 
 #, fuzzy
 #~ msgid "New bundles are available for your system"
