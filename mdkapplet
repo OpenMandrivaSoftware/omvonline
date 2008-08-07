@@ -264,7 +264,7 @@ sub is_there_a_new_distributions() {
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
         my $res = urpm::download::sync($urpm, undef, [ $list ], dir => $urpm->{cachedir} || '/root');
-        $res or die N("retrieval of [%s] failed", $list) . "\n";
+        $res or die sprintf("retrieval of [%s] failed", $list) . "\n";
     };
 
     if (my $err = $@) {
@@ -332,7 +332,7 @@ sub restart_applet() {
 }
 
 sub upgrade() {
-    logIt(N_("backuping urpmi configuration"));
+    logIt("backuping urpmi configuration");
     cp_af("$root/etc/urpmi/urpmi.cfg", "$root/etc/urpmi/urpmi.cfg.backup." . int(rand 100000));
 
     my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
@@ -343,7 +343,7 @@ sub upgrade() {
     };
 
     if (my $err = $@) {
-        logIt(sprintf N_("locking urpmi database failed: %s"), $err);
+        logIt(sprintf("locking urpmi database failed: %s"), $err);
         return;
     }
 
@@ -354,19 +354,19 @@ sub upgrade() {
     my @selected = urpm::media::select_media_by_name($urpm, \@entries, 1);
 
     if (@selected) {
-        logIt(N_("removing all existing urpmi media for upgrade"));
+        logIt("removing all existing urpmi media for upgrade");
         urpm::media::remove_media($urpm, \@selected);
         urpm::media::write_urpmi_cfg($urpm);
     }
 
-    logIt(N_("adding urpmi media for new distribution"));
+    logIt("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
     my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list";
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
       and return;
 
-    logIt(N_("upgrading urpmi and rpmdrake"));
-    logIt(N_("upgrading the whole system"));
+    logIt("upgrading urpmi and rpmdrake");
+    logIt("upgrading the whole system");
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
     $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--silent-success', if_($root, "--urpmi-root=$root"));
