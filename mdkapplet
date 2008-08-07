@@ -268,7 +268,7 @@ sub is_there_a_new_distributions() {
     };
 
     if (my $err = $@) {
-        log::explanations("failed to download distribution list");
+        log::explanations("failed to download distribution list:\n$err");
         return; # not a fatal error
     }
     
