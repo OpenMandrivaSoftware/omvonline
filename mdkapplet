@@ -36,6 +36,7 @@ use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Gtk2::Notify '-init', 'mdkapplet';
+use Rpmdrake::open_db;
 
 # POSIX unmasks the sigprocmask properly
 my $sigset = POSIX::SigSet->new;
@@ -216,6 +217,7 @@ foreach my $opt (@ARGV) {
     }
 }
 
+my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
@@ -286,7 +288,8 @@ sub installUpdates() {
     return if $mdv_update_pid;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     logIt(N_("Launching MandrivaUpdate\n"));
-    $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash');
+    $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash',
+                                if_($root, "--urpmi-root=$root"));
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     restart_applet() if $newmd5 ne $oldmd5;
     silentCheck(); gtkflush();
@@ -321,7 +324,6 @@ sub silentCheck() {
         require urpm;
         require urpm::lock;
         # so that get_inactive_backport_media() doesn't vivify $urpm->{media}:
-        require Rpmdrake::open_db;
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
         {
             local $urpm->{fatal} = sub {
