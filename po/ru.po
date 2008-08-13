@@ -1,22 +1,24 @@
+# translation of ru.po to
 # Translation of mdkonline messages to Russian
-# Copyright (C) 2002, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Copyright (C) 2002 Mandriva.
+#
 # Pavel Maryanov <acid_jack@ukr.net>, 2002, 2004, 2005, 2006, 2007, 2008.
 # Alice Lafox <alice@lafox.net>, 2004, 2005.
-#
+# akdengi <kazancas@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-08-07 20:21+0200\n"
-"PO-Revision-Date: 2008-02-22 13:26+0200\n"
-"Last-Translator: Pavel Maryanov <acid_jack@ukr.net>\n"
-"Language-Team: Russian <gnu@mx.ru>\n"
+"PO-Revision-Date: 2008-08-13 22:29+0500\n"
+"Last-Translator: akdengi <kazancas@gmail.com>\n"
+"Language-Team:  <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:83
@@ -51,12 +53,12 @@ msgstr "Для системы доступны новые обновления"
 #: ../mdkapplet:117
 #, c-format
 msgid "A new stable distribution has been released"
-msgstr ""
+msgstr "Появилась новая стабильная версия дистрибутива"
 
 #: ../mdkapplet:117
 #, c-format
 msgid "Do you want to upgrade?"
-msgstr ""
+msgstr "Вы хотите выполнить обновление?"
 
 #: ../mdkapplet:123
 #, c-format
@@ -80,8 +82,7 @@ msgstr "Релиз не поддерживается (слишком стары�
 
 #: ../mdkapplet:147
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Источник не найден. Нужно добавить хотя бы один источник с помощью Менеджера "
 "источников программ."
@@ -186,7 +187,7 @@ msgstr "Внимание"
 #: ../mdkapplet:557
 #, c-format
 msgid "Upgrade the system"
-msgstr ""
+msgstr "Обновление системы"
 
 #: ../mdkapplet:568
 #, c-format
@@ -276,458 +277,3 @@ msgstr "  --debug\t\t\t- журналирование выполняемых д�
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Невозможно обновить пакеты из источника update_source.\n"
 
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "Апплет 'Обновления Mandriva Linux'"
-
-#~ msgid "Security error"
-#~ msgstr "Ошибка безопасности"
-
-#~ msgid "Generic error (machine already registered)"
-#~ msgstr "Общая ошибка (машина уже зарегистрирована)"
-
-#~ msgid "Database error"
-#~ msgstr "Ошибка базы данных"
-
-#~ msgid ""
-#~ "Server Database failed\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Сбой сервера базы данных\n"
-#~ "Пожалуйста, попробуйте ещё раз позднее"
-
-#~ msgid "Registration error"
-#~ msgstr "Ошибка регистрации"
-
-#~ msgid "Some parameters are missing"
-#~ msgstr "Отсутствуют некоторые параметры"
-
-#~ msgid "Password error"
-#~ msgstr "Ошибка пароля"
-
-#~ msgid "Wrong password"
-#~ msgstr "Неверный пароль"
-
-#~ msgid "Login error"
-#~ msgstr "Ошибка логина"
-
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr ""
-#~ "Указанный e-mail уже используется\n"
-#~ "Выберите другой\n"
-
-#~ msgid "The email you provided is invalid or forbidden"
-#~ msgstr "Указан неправильный или запрещённый e-mail"
-
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr ""
-#~ "Поле e-mail не заполнено\n"
-#~ "Укажите e-mail"
-
-#~ msgid "Restriction Error"
-#~ msgstr "Ошибка ограничения"
-
-#~ msgid "Database access forbidden"
-#~ msgstr "Доступ к базе данных запрещён"
-
-#~ msgid "Service error"
-#~ msgstr "Ошибка службы"
-
-#~ msgid ""
-#~ "Mandriva web services are currently unavailable\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Веб-службы Mandriva в данный момент недоступны\n"
-#~ "Попробуйте ещё раз позднее"
-
-#~ msgid "Password mismatch"
-#~ msgstr "Пароли не совпадают"
-
-#~ msgid ""
-#~ "Mandriva web services are under maintenance\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Веб-службы Mandriva в данный момент находятся в техническом обслуживании\n"
-#~ "Пожалуйста, попробуйте ещё раз позднее"
-
-#~ msgid "User Forbidden"
-#~ msgstr "Пользователь запрещён"
-
-#~ msgid "User account forbidden by Mandriva web services"
-#~ msgstr "Учётная запись пользователя запрещена веб-службами Mandriva"
-
-#~ msgid "Connection error"
-#~ msgstr "Ошибка подключения"
-
-#~ msgid "Mandriva web services not reachable"
-#~ msgstr "Веб-службы Mandriva недоступны"
-
-#~ msgid ""
-#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-#~ "file.\n"
-#~ msgstr ""
-#~ "  --bundle file.bundle\t- разбор и установка пакета из файла .bundle с "
-#~ "метаинформацией.\n"
-
-#~ msgid ""
-#~ "You first need to install the system on your harddrive with the 'Live "
-#~ "Install' wizard."
-#~ msgstr ""
-#~ "Нужно сначала установить систему на жёсткий диск с помощью мастера 'Live "
-#~ "Install'."
-
-#~ msgid "Please wait"
-#~ msgstr "Подождите..."
-
-#~ msgid "Preparing..."
-#~ msgstr "Подготовка..."
-
-#~ msgid "Error"
-#~ msgstr "Ошибка"
-
-#~ msgid ""
-#~ "Failed to authenticate to the bundle server:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Не удалось пройти аутентификацию на сервере:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "An error occurred"
-#~ msgstr "Произошла ошибка"
-
-#~ msgid ""
-#~ "The version of the Mandriva Online client is too old.\n"
-#~ "\n"
-#~ "You need to update to a newer version. You can get a new one from http://"
-#~ "start.mandriva.com"
-#~ msgstr ""
-#~ "Слишком старая версия клиента Mandriva Online.\n"
-#~ "\n"
-#~ "Обновите клиент до более свежей версии. Загрузить его можно с сайта "
-#~ "http://start.mandriva.com"
-
-#~ msgid "This bundle is not well formated. Aborting."
-#~ msgstr "Этот bundle имеет неверный формат. Установка прервана."
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "Устанавливаются пакеты...\n"
-
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Для системы доступны новые программные комплексы"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Служба не настроена. Выберите \"Настроить службу\""
-
-#~ msgid "Configure the service"
-#~ msgstr "Настроить службу"
-
-#~ msgid "Check updates"
-#~ msgstr "Проверить обновления"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Настроить"
-
-#~ msgid "Actions"
-#~ msgstr "Действия"
-
-#~ msgid "Configure"
-#~ msgstr "Настроить"
-
-#~ msgid "See logs"
-#~ msgstr "Просмотр журнала"
-
-#~ msgid "Status"
-#~ msgstr "Статус"
-
-#~ msgid "Close"
-#~ msgstr "Закрыть"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Сетевое подключение: "
-
-#~ msgid "Up"
-#~ msgstr "Активно"
-
-#~ msgid "Down"
-#~ msgstr "Неактивно"
-
-#~ msgid "Last check: "
-#~ msgstr "Последняя проверка: "
-
-#~ msgid "Machine name:"
-#~ msgstr "Имя машины:"
-
-#~ msgid "Updates: "
-#~ msgstr "Обновления: "
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Разрабатываемый релиз службой не поддерживается"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "Слишком старый релиз, не поддерживаемый службой"
-
-#~ msgid "Unknown state"
-#~ msgstr "Неизвестное состояние"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr "Онлайновые службы отключены. Зайдите на сайт Mandriva Online\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Неверный пароль.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Неверное действие, хост или логин.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Что-то не так с конфигурацией сети (проверьте маршрут, файервол или "
-#~ "настройки прокси)\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Возникла проблема при обращении к серверу. Обратитесь в службу "
-#~ "технической поддержки"
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Ответ сервера Mandriva Online\n"
-
-#~ msgid "No check"
-#~ msgstr "Без проверок"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "Проверка файла config: Отсутствует\n"
-
-#~ msgid "Logs"
-#~ msgstr "Журнал"
-
-#~ msgid "Clear"
-#~ msgstr "Очистить"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline версия %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "Это открытое программное обеспечение и может распространяться согласно "
-#~ "условиям GNU GPL.\n"
-#~ "\n"
-#~ "использование:\n"
-
-#~ msgid "  --box=\t\t\t- hostname.\n"
-#~ msgstr "  --box=\t\t\t- имя хоста.\n"
-
-#~ msgid "  --country\t\t\t- name of country of the user. \n"
-#~ msgstr "  --country\t\t\t- страна пользователя. \n"
-
-#~ msgid "  --interactive\t\t- use the interactive mode.\n"
-#~ msgstr "  --interactive\t\t- использовать интерактивный режим.\n"
-
-#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
-#~ msgstr "  --nointeractive\t- использовать не интерактивный режим.\n"
-
-#~ msgid "  --login=\t\t     - login name of the user.\n"
-#~ msgstr "  --login=\t\t     - логин пользователя.\n"
-
-#~ msgid "  --pass=\t\t\t- password  of the user.\n"
-#~ msgstr "  --pass=\t\t\t- пароль пользователя.\n"
-
-#~ msgid "Mandriva Online"
-#~ msgstr "Mandriva Online"
-
-#~ msgid "I already have an account"
-#~ msgstr "У меня уже есть учётная запись"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "Я хочу получить учётную запись"
-
-#~ msgid "Mr."
-#~ msgstr "Г-н"
-
-#~ msgid "Mrs."
-#~ msgstr "Г-жа"
-
-#~ msgid "Ms."
-#~ msgstr "Г-жа"
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Считывается конфигурация\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Этот ассистент поможет вам выгрузить свою конфигурацию \n"
-#~ "(пакеты, конфигурацию оборудования) в центральную базу данных,\n"
-#~ "чтобы держать вас в курсе при появлении обновлений по безопасности \n"
-#~ "и полезных апгрейдов.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "Создание учётной записи или аутентификация"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr "Введите свой логин Mandriva Online, пароль и имя машины:"
-
-#~ msgid "Email address:"
-#~ msgstr "Адрес e-mail:"
-
-#~ msgid "Country"
-#~ msgstr "Страна"
-
-#~ msgid "Password:"
-#~ msgstr "Пароль:"
-
-#~ msgid "Machine description:"
-#~ msgstr "Описание машины:"
-
-#~ msgid "(Ex: My Home Office's Computer)"
-#~ msgstr "(напр: мой домашний компьютер)"
-
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr ""
-#~ "Название машины должно содержать от 1 до 40 алфавитно-цифровых символов"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Выполняется подключение к веб-сайту Mandriva Online..."
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "Чтобы воспользоваться преимуществами служб Mandriva Online,\n"
-#~ "рекомендуется выгрузить на сервер свою конфигурацию.\n"
-#~ "\n"
-#~ "Мастер отправит на сервер Mandriva следующую информацию:\n"
-#~ "1) Список пакетов, установленных в системе.\n"
-#~ "2) Конфигурацию оборудования.\n"
-#~ "\n"
-#~ "Если вас это не устраивает или вы не хотите использовать\n"
-#~ "преимущества этой службы, нажмите кнопку 'Отмена'. Нажимая\n"
-#~ "но кнопку 'Далее', вы тем самым разрешаете нам сообщать вам\n"
-#~ "об обновлениях по безопасности и полезных обновлениях, используя\n"
-#~ "электронную почту.\n"
-#~ "Кроме того, вы получаете скидку на оплачиваемую техническую\n"
-#~ "поддержку на сайте www.mandrivaexpert.com."
-
-#~ msgid "Connection problem"
-#~ msgstr "Проблема подключения"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "При загрузке файлов возникла проблема, попробуйте снова"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Создать учетную запись Mandriva Online"
-
-#~ msgid "Greeting:"
-#~ msgstr "Приветствие:"
-
-#~ msgid "First name:"
-#~ msgstr "Имя:"
-
-#~ msgid "Last name:"
-#~ msgstr "Фамилия:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Подтвердить пароль:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Пароли не совпадают\n"
-#~ "Попробуйте еще раз\n"
-
-#~ msgid "Please fill in each field"
-#~ msgstr "Пожалуйста, заполните все поля"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Недействительный почтовый адрес!\n"
-
-#~ msgid "Creating account failed!"
-#~ msgstr "Не удалось создать учётную запись!"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "Учётная запись Mandriva Online успешно создана.\n"
-#~ "Нажмите \"Далее\", чтобы пройти аутентификацию\n"
-#~ "и выгрузить свою конфигурацию\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Выгрузка произведена успешно!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "С этого момента, благодаря Mandriva Online, вы будете\n"
-#~ "получать уведомления о безопасности и обновлениях."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online предлагает вам возможность автоматизировать обновления.\n"
-#~ "Программа будет регулярно запускаться в вашей системе, ожидая новых "
-#~ "обновлений\n"
-
-#~ msgid "Congratulations"
-#~ msgstr "Поздравляем"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "Учётная запись Mandriva Online была успешно настроена\n"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Конфигурация успешно выгружена"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Проблема выгрузки конфигурации"
-
-#~ msgid ""
-#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
-#~ "firewall bad settings"
-#~ msgstr ""
-#~ "Невозможно подключится к веб-сайту Mandriva Online: неверные логин/пароль "
-#~ "или неверная настройка маршрутизатора/файервола"
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- запуск Mandriva Update\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Невозможно получить перечень обновлений: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Выберите пакеты, которые необходимо установить, и нажмите ОК"
-
-#~ msgid "Launching mdkupdate --applet\n"
-#~ msgstr "Запускается mdkupdate --applet\n"
