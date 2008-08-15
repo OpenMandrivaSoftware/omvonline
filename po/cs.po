@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-08-07 20:21+0200\n"
-"PO-Revision-Date: 2008-03-15 16:04+0100\n"
-"Last-Translator: Vlastimil Ott <vlastimil@e-ott.info>\n"
-"Language-Team:  <cs@li.org>\n"
+"PO-Revision-Date: 2008-08-16 00:56+0200\n"
+"Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
+"Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:83
@@ -53,12 +53,12 @@ msgstr "Pro váš systém jsou k dispozici nové aktualizace"
 #: ../mdkapplet:117
 #, c-format
 msgid "A new stable distribution has been released"
-msgstr ""
+msgstr "Byla vydána nová stabilní distribuce"
 
 #: ../mdkapplet:117
 #, c-format
 msgid "Do you want to upgrade?"
-msgstr ""
+msgstr "Chcete povýšit systém?"
 
 #: ../mdkapplet:123
 #, c-format
@@ -82,8 +82,7 @@ msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
 #: ../mdkapplet:147
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nebyl nalezen žádný zdroj softwaru. Je třeba přidat alespoň jeden zdroj "
 "pomocí Správce zdrojů softwaru."
@@ -152,8 +151,7 @@ msgstr "Spouští se drakconnect\n"
 #: ../mdkapplet:330
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-"Služba Mandriva Online je zřejmě přeinstalovaná, nahrávám applet znovu...."
+msgstr "Služba Mandriva Online je zřejmě přeinstalovaná, nahrávám applet znovu...."
 
 #: ../mdkapplet:379
 #, c-format
@@ -188,7 +186,7 @@ msgstr "Varování"
 #: ../mdkapplet:557
 #, c-format
 msgid "Upgrade the system"
-msgstr ""
+msgstr "Povýšit systém"
 
 #: ../mdkapplet:568
 #, c-format
@@ -208,8 +206,7 @@ msgstr "Copyright ©%s by Mandriva"
 #: ../mdkapplet:576
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
 #: ../mdkapplet:578
 #, c-format
@@ -281,143 +278,3 @@ msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "Applet pro aktualizace Mandriva Linux"
-
-#~ msgid "Security error"
-#~ msgstr "Bezpečnostní chyba"
-
-#~ msgid "Generic error (machine already registered)"
-#~ msgstr "Obecná chyba (počítač je již zaregistrován)"
-
-#~ msgid "Database error"
-#~ msgstr "Chyba databáze"
-
-#~ msgid ""
-#~ "Server Database failed\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Server s databází selhal\n"
-#~ "Zkuste to prosím později"
-
-#~ msgid "Registration error"
-#~ msgstr "Chyba registrace"
-
-#~ msgid "Some parameters are missing"
-#~ msgstr "Některé parametry chybí"
-
-#~ msgid "Password error"
-#~ msgstr "Chyba hesla"
-
-#~ msgid "Wrong password"
-#~ msgstr "Špatné heslo"
-
-#~ msgid "Login error"
-#~ msgstr "Chyba přihlášení"
-
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr ""
-#~ "Zadaný email se již používá\n"
-#~ "Zadejte prosím jiný\n"
-
-#~ msgid "The email you provided is invalid or forbidden"
-#~ msgstr "Zadaný email je neplatný nebo zakázaný"
-
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr ""
-#~ "Pole s emailovou adresou je prázdné\n"
-#~ "Zadejte ji prosím"
-
-#~ msgid "Restriction Error"
-#~ msgstr "Chyba omezení"
-
-#~ msgid "Database access forbidden"
-#~ msgstr "Přístup k databázi zakázán"
-
-#~ msgid "Service error"
-#~ msgstr "Chyba služby"
-
-#~ msgid ""
-#~ "Mandriva web services are currently unavailable\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Webové služby společnosti Mandriva jsou momentálně nedostupné\n"
-#~ "Zkuste to prosím znovu později"
-
-#~ msgid "Password mismatch"
-#~ msgstr "Hesla se neshodují"
-
-#~ msgid ""
-#~ "Mandriva web services are under maintenance\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Webové služby společnosti Mandriva jsou právě v režimu údržby\n"
-#~ "Zkuste to prosím znovu později"
-
-#~ msgid "User Forbidden"
-#~ msgstr "Uživatel zakázán"
-
-#~ msgid "User account forbidden by Mandriva web services"
-#~ msgstr "Uživatelský účet u webových služeb společnosti Mandriva zakázán"
-
-#~ msgid "Connection error"
-#~ msgstr "Chyba připojení"
-
-#~ msgid "Mandriva web services not reachable"
-#~ msgstr "K webovým službám společnosti Mandriva se nelze připojit"
-
-#~ msgid ""
-#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-#~ "file.\n"
-#~ msgstr ""
-#~ "  --bundle soubor.bundle\t- zpracovat a instalovat balíček z metasouboru ."
-#~ "bundle.\n"
-
-#~ msgid ""
-#~ "You first need to install the system on your harddrive with the 'Live "
-#~ "Install' wizard."
-#~ msgstr ""
-#~ "Nejprve musíte instalovat systém na váš pevný disk pomocí průvodce 'Live "
-#~ "Install'."
-
-#~ msgid "Please wait"
-#~ msgstr "Prosím počkejte"
-
-#~ msgid "Preparing..."
-#~ msgstr "Připravuji..."
-
-#~ msgid "Error"
-#~ msgstr "Chyba"
-
-#~ msgid ""
-#~ "Failed to authenticate to the bundle server:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Selhalo ověření na serveru s produktovými balíky:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "An error occurred"
-#~ msgstr "Došlo k chybě"
-
-#~ msgid ""
-#~ "The version of the Mandriva Online client is too old.\n"
-#~ "\n"
-#~ "You need to update to a newer version. You can get a new one from http://"
-#~ "start.mandriva.com"
-#~ msgstr ""
-#~ "Tato verze klienta Mandriva Online je příliš stará.\n"
-#~ "\n"
-#~ "Musíte aktualizovat na novou verzi. Novou verzi lze získat na adrese "
-#~ "http://start.mandriva.com"
-
-#~ msgid "This bundle is not well formated. Aborting."
-#~ msgstr "Tento produktový balík není správně formátován. Končím."
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "Instaluji balíčky...\n"
