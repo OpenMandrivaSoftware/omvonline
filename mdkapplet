@@ -373,7 +373,7 @@ sub upgrade() {
 }
 
 sub add_media() {
-    fork_exec('/usr/sbin/edit-urpm-sources.pl');
+    fork_exec('/usr/sbin/edit-urpm-sources.pl', '--no-splash', if_($root, "--urpmi-root=$root"));
 }
 
 sub installUpdates() {
