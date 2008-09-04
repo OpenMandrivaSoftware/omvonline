@@ -375,6 +375,7 @@ sub upgrade() {
 sub add_media() {
     logIt("Launching 'Software Media Manager'");
     fork_exec('/usr/sbin/edit-urpm-sources.pl', '--no-splash', if_($root, "--urpmi-root=$root"));
+    silentCheck(); gtkflush();
 }
 
 sub installUpdates() {
