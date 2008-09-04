@@ -263,7 +263,7 @@ sub is_there_a_new_distributions() {
 
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
-        my $res = urpm::download::sync($urpm, undef, [ $list ], dir => $urpm->{cachedir} || '/root');
+        my $res = urpm::download::sync($urpm, undef, [ $list ], dir => urpm::userdir($urpm) || $urpm->{cachedir});
         $res or die sprintf("retrieval of [%s] failed", $list) . "\n";
     };
 
