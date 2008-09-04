@@ -311,6 +311,8 @@ sub harvester {
                 logIt($state->{log});
                 go2State($state->{status});
             }
+        } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
+            undef $media_manager_pid;
         }
         push @pids, $childpid;
     } while $childpid > 0;
