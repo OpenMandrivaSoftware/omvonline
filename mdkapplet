@@ -564,6 +564,9 @@ sub setState {
                                                         '/usr/share/icons/mdkonline.png', $icon);
         $bubble->add_action('clicked', N("Install updates"), \&installUpdates) if $state eq 'updates';
         $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade) if $state eq 'new_distribution';
+        if (member($state, qw(no_enabled_medium no_update_medium))) {
+            $bubble->add_action('clicked', N("Add media"), \&add_media);
+        }
 
         $bubble->set_timeout(5000);
         eval { $bubble->show };
