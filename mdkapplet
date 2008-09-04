@@ -261,6 +261,12 @@ sub is_there_a_new_distributions() {
     my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
     log::explanations("trying distributions list from $list");
 
+    # sanity check for cooker:
+    if ($product_id->{branch} eq 'Devel') {
+        log::explanations("devel distribution is not supported");
+        return;
+    }
+
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
         urpm::download::get_content($urpm, $list);
