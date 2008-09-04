@@ -211,8 +211,8 @@ $icon->signal_connect(popup_menu => sub {
                       });
 $icon->signal_connect(activate => sub {
                           my %actions = (
-                              no_update_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
-                              no_enabled_medium => sub { fork_exec('/usr/sbin/edit-urpm-sources.pl') },
+                              no_update_medium => \&add_media,
+                              no_enabled_medium => \&add_media,
                               updates => \&installUpdates,
                               new_distribution => \&upgrade,
                           );
@@ -370,6 +370,10 @@ sub upgrade() {
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
     $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--silent-success', if_($root, "--urpmi-root=$root"));
+}
+
+sub add_media() {
+    fork_exec('/usr/sbin/edit-urpm-sources.pl');
 }
 
 sub installUpdates() {
