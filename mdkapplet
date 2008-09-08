@@ -114,7 +114,7 @@ my %state = (
                  colour => [ 'error' ],
                  changes => [ 'okay' ],
                  menu => [ 'update', 'check' ],
-                 tt => [ N("A new stable distribution has been released") ."\n\n" . N("Do you want to upgrade?") ]
+                 tt => [ N("A new stable distribution has been released") . "\n\n" . N("Do you want to upgrade?") ]
              },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
@@ -163,7 +163,7 @@ my %comm_codes = (
     locked => {
         code => 2,
         status => 'locked',
-        log => N_("urpmi database locked") . ", skipping updating urpmi database",
+        log => "urpmi database locked, skipping updating urpmi database",
     },
     error_updating => {
         code => 3,
@@ -183,17 +183,17 @@ my %comm_codes = (
     updates => {
         code => 6,
         status => 'updates',
-        log => N_("Checking... Updates are available\n") . "\n",
+        log => "Checking... Updates are available\n\n",
     },
     uptodate => {
         code => 7,
         status => 'okay',
-        log => N_("Packages are up to date") . "\n",
+        log => "Packages are up to date\n",
     },
     db_not_open => {
         code => 8,
         status => 'critical',
-        log => N_("Failed to open urpmi database") . "\n",
+        log => "Failed to open urpmi database\n",
     },
 );
 
@@ -220,7 +220,7 @@ $icon->signal_connect(activate => sub {
 			  });
 foreach my $opt (@ARGV) {
     if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
-    if ($opt =~ '--(rpm-root|urpmi-root)=(.*)') {
+    if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
         $::rpmdrake_options{$1}[0] = $2;
     }
 }
@@ -400,7 +400,7 @@ sub installUpdates() {
 
 sub silentCheck() {
     state $check_time;
-    my $new_time = time ();
+    my $new_time = time();
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
         $check_time = $new_time;
         if (is_there_a_new_distributions()) {
@@ -412,7 +412,7 @@ sub silentCheck() {
 
     return if $mdv_update_pid || $checker_pid;
     logIt(N_("Computing new updates...\n"));
-    logIt(N_("Connecting to") . "  ...\n"); # i18n bug to fix in cooker
+    logIt("Connecting to  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     gtkflush(); go2State('busy'); gtkflush();
