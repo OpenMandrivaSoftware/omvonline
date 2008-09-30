@@ -261,12 +261,6 @@ sub is_there_a_new_distributions() {
     my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
     log::explanations("trying distributions list from $list");
 
-    # sanity check for cooker:
-    if ($product_id->{branch} eq 'Devel') {
-        log::explanations("devel distribution is not supported");
-        return;
-    }
-
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
         if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
@@ -292,6 +286,8 @@ sub is_there_a_new_distributions() {
     # only compare first distro: if it's not the same as the currently installed one,
     # then it's the most recent release:
     my $new_distro = $distros[0];
+
+    return if !member($product_id->{version}, map { $_->{version} } @distros);
 
     if ($new_distro && $new_distro->{version} ne $product_id->{version}) {
         $new_distro_version = $new_distro->{version};
