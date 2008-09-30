@@ -269,7 +269,12 @@ sub is_there_a_new_distributions() {
 
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
-        urpm::download::get_content($urpm, $list);
+        if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
+            require mdkapplet_urpm;
+            mdkapplet_urpm::get_content($urpm, $list);
+        } else {
+            urpm::download::get_content($urpm, $list);
+        }
     };
 
     if (my $err = $@) {
