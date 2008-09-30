@@ -554,7 +554,7 @@ sub setState {
     my $tmp = gtkcreate_pixbuf($state{$state}{colour}[0]);
     $icon->set_from_pixbuf($tmp);
     $icon->set_tooltip(formatAlaTeX(translate($state{$state}{tt}[0])));
-    my @invisible_states = qw(delayed okay);
+    my @invisible_states = qw(delayed okay disconnected);
     $icon->set_visible(!member($state, @invisible_states));
 
     # do not show icon while checking if previously hidden:
