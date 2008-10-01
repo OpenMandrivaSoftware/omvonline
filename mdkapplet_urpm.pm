@@ -43,7 +43,7 @@ sub get_content {
     my $file = $download_dir . basename($url);
 
     unlink $file; # prevent "partial file" errors
-    urpm::download::sync($urpm, undef, [ $url ], quiet => 1, dir => $download_dir) or return;
+    eval { urpm::download::sync($urpm, undef, [ $url ], quiet => 1, dir => $download_dir) };
     #sync_url($urpm, $url, dir => $download_dir, quiet => 1) or return;
 
     my @l = cat_($file);
