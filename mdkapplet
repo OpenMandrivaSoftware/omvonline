@@ -341,7 +341,7 @@ sub restart_applet() {
 
 sub upgrade() {
     logIt("backuping urpmi configuration");
-    cp_af("$root/etc/urpmi/urpmi.cfg", "$root/etc/urpmi/urpmi.cfg.backup." . int(rand 100000));
+    cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
 
     my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
 
