@@ -354,18 +354,10 @@ sub upgrade() {
         logIt(sprintf("locking urpmi database failed: %s"), $err);
         return;
     }
+    undef $_urpmi_lock;
 
-    urpm::media::read_config($urpm);
-    urpm::download::set_cmdline_proxy();
-
-    my @entries = map { $_->{name} } @{$urpm->{media}};
-    my @selected = urpm::media::select_media_by_name($urpm, \@entries, 1);
-
-    if (@selected) {
-        logIt("removing all existing urpmi media for upgrade");
-        urpm::media::remove_media($urpm, \@selected);
-        urpm::media::write_urpmi_cfg($urpm);
-    }
+    logIt("removing all existing urpmi media for upgrade");
+    run_program::run('urpmi.removemedia', '-a');
 
     logIt("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
