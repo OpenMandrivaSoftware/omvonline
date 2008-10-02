@@ -1,4 +1,6 @@
 - mdkapplet
+  o prevent SIGCHILD handler's waitpid to interfere with urpmi waiting
+    for curl exit code, which broke downloads
   o workarounding issue with downloading files as user
 
 Version 2.46 - 2 October 2008

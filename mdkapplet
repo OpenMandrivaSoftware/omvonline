@@ -263,6 +263,11 @@ sub is_there_a_new_distributions() {
 
     my @lines = eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+
+        # prevent SIGCHILD handler's waitpid to interfere with urpmi waiting
+        # for curl exit code, which broke downloads:
+        local $SIG{CHLD} = 'DEFAULT';
+
         if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
             require mdkapplet_urpm;
             mdkapplet_urpm::ensure_valid_cachedir($urpm);
