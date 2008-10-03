@@ -264,8 +264,6 @@ ugtk2::exit(0);
 
 
 sub is_there_a_new_distributions() {
-    return if $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} =~ /^TRUE$/i;
-
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
@@ -333,7 +331,8 @@ sub harvester {
             if ($state) {
                 logIt($state->{log});
                 $sub_state = $state->{status};
-                go2State($new_distro_version ? 'new_distribution' : $sub_state);
+                go2State($new_distro_version && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
+                           'new_distribution' : $sub_state);
             }
         } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
             undef $media_manager_pid;
