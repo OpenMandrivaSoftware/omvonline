@@ -327,7 +327,7 @@ sub harvester {
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
             if ($state) {
                 logIt($state->{log});
-                go2State($state->{status});
+                go2State($new_distro_version ? 'new_distribution' : $state->{status});
             }
         } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
             undef $media_manager_pid;
@@ -426,10 +426,7 @@ sub silentCheck() {
     my $new_time = time();
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
         $check_time = $new_time;
-        if (is_there_a_new_distributions()) {
-            go2State('new_distribution'); 
-            return;
-        }
+        is_there_a_new_distributions();
     }
 
     return if $mdv_update_pid || $checker_pid;
