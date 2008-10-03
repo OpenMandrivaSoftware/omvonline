@@ -595,6 +595,7 @@ sub setState {
             $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
+                $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
             }
         } elsif ($state eq 'updates') {
             $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
