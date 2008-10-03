@@ -113,7 +113,7 @@ my %state = (
              new_distribution => {
                  colour => [ 'error' ],
                  changes => [ 'okay' ],
-                 menu => [ 'update', 'check' ],
+                 menu => [ 'upgrade_distro', 'update', 'check' ],
                  tt => [ N("A new stable distribution has been released") . "\n\n" . N("Do you want to upgrade?") ]
              },
 	     disconnected => {
@@ -202,6 +202,7 @@ my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
+	       'upgrade_distro' => { name => N("Upgrade the system"), launch => \&upgrade },
 	      );
 
 my $icon = Gtk2::StatusIcon->new;
