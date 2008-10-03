@@ -371,6 +371,7 @@ sub confirm_upgrade() {
     $w->{ok}->grab_focus;
     my $res = $w->main;
     setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
+    $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} = bool2text($warn_me);
     $res;
 }
 
