@@ -260,6 +260,8 @@ ugtk2::exit(0);
 
 
 sub is_there_a_new_distributions() {
+    return if $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} =~ /^TRUE$/i;
+
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
@@ -352,11 +354,20 @@ sub restart_applet() {
 }
 
 sub confirm_upgrade() {
-    my $bool = ugtk2::ask_yesorno(N("A new stable distribution has been released"),
-                                  N("A new stable distribution has been released."),
-                                  N("Do you want to upgrade to the '\%s' distribution?", $new_distro_version),
-                              );
-    $bool;
+    my $w = ugtk2->new(N("A new stable distribution has been released"));
+    my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
+    gtkadd($w->{window},
+           gtknew('VBox', children_tight => [
+               N("A new stable distribution has been released."),
+               N("Do you want to upgrade to the '\%s' distribution?", $new_distro_version),
+               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
+               create_okcancel($w, N("Yes"), N("No")),
+           ]),
+       );
+    $w->{ok}->grab_focus;
+    my $res = $w->main;
+    setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
+    $res;
 }
 
 sub upgrade() {
