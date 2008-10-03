@@ -574,7 +574,7 @@ sub setState {
     my ($state) = @_;
     my $checkme;
     state $previous_state;
-    my $arr = $state{$state}{menu};
+    my @arr = @{$state{$state}{menu}};
     my $tmp = gtkcreate_pixbuf($state{$state}{colour}[0]);
     $icon->set_from_pixbuf($tmp);
     $icon->set_tooltip(formatAlaTeX(translate($state{$state}{tt}[0])));
@@ -604,7 +604,7 @@ sub setState {
     }
 
     my $menu = Gtk2::Menu->new;
-    foreach (@$arr) { 
+    foreach (@arr) { 
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($actions{$_}{name})), activate => $actions{$_}{launch}));
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
