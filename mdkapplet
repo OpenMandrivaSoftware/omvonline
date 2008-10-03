@@ -600,6 +600,7 @@ sub setState {
                 $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
             }
         } elsif ($state eq 'updates') {
+            unshift @arr, 'upgrade_distro' if $new_distro_version;
             $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
         } elsif (member($state, qw(no_enabled_medium no_update_medium))) {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
