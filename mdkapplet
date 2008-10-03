@@ -636,10 +636,11 @@ sub setAutoStart {
     my $date = getTime();
     if (-f $localfile) {
 	setVar('AUTOSTART', $state);
-    } else { output_p $localfile, 
+    } else { 
+        output_p($localfile, 
 	       qq(AUTOSTART=$state
 LASTCHECK=$date
-);
+));
 	 }
 }
 
