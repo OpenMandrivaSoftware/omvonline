@@ -295,6 +295,7 @@ sub is_there_a_new_distributions() {
     # only compare first distro: if it's not the same as the currently installed one,
     # then it's the most recent release:
     my $new_distro = $distros[0];
+    local $product_id->{version} = '2008.1';
 
     return if !member($product_id->{version}, map { $_->{version} } @distros);
 
@@ -520,7 +521,7 @@ sub getTime() {
 
 sub setLastTime() {
     my $date = getTime();
-    setVar($localfile, 'LASTCHECK', $date);
+    setVar('LASTCHECK', $date);
 }
 
 sub checkNetwork() {
@@ -624,17 +625,17 @@ sub logIt {
 }
 
 sub setVar {
-    my ($file, $var, $st) = @_;
-    my %s = getVarsFromSh($file);
+    my ($var, $st) = @_;
+    my %s = getVarsFromSh($localfile);
     $s{$var} = $st;
-    setVarsInSh($file, \%s);
+    setVarsInSh($localfile, \%s);
 }
 
 sub setAutoStart {
     my $state = shift;
     my $date = getTime();
     if (-f $localfile) {
-	setVar($localfile, 'AUTOSTART', $state);
+	setVar('AUTOSTART', $state);
     } else { output_p $localfile, 
 	       qq(AUTOSTART=$state
 LASTCHECK=$date
