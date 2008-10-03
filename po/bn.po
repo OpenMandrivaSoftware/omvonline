@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2005-02-03 20:01+0600\n"
 "Last-Translator: Jamil Ahmed <jamil@bengalinux.org>\n"
 "Language-Team: Bangla <mdk-translation@bengalinux.org>\n"
@@ -48,7 +48,7 @@ msgstr "উপস্থিত প্যাকেজসমুহ খোঁজা 
 msgid "New updates are available for your system"
 msgstr "আপনার সিস্টেমের জন্য নতুন আপডেট উপস্হিত আছে"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -69,23 +69,23 @@ msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 "পরিসেবা (service) বর্তমানে সক্রিয় নেই। অনুগ্রহ করে \"অনলাইন ওয়েবসাইট\"-এ ক্লিক করুন"
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "urpmi ডাটাবেস লক করা আছে"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "সংস্করণটির সমর্থন নেই (খুব পুরানো, অথবা ডেভেলপমেন্ট সংস্করণ)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -103,129 +103,124 @@ msgstr ""
 "এর পরে %s পুনরায় চালু করুন।"
 
 #  আছে কি
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "সক্রিয়"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "পরীক্ষা চলছে... আপডেট পাওয়া গেছে\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr ""
-
-#: ../mdkapplet:196
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "rpmdb খুলতে অক্ষম"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "আপডেট গুলো ইনস্টল করো"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "আপডেট পরীক্ষা করো"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "নেটওয়ার্ক কনফিগার করো"
 
-#: ../mdkapplet:327
+#: ../mdkapplet:205 ../mdkapplet:577
+#, c-format
+msgid "Upgrade the system"
+msgstr ""
+
+#: ../mdkapplet:344
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "drakconnect চালু করা হচ্ছে\n"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:347
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "মনে হচ্ছে ম্যান্ড্রেকঅনলাইন পুনরায় ইনস্টল করা হয়েছে, পুনরায় applet চালানো হচ্ছে ...."
 
-#: ../mdkapplet:379
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate চালু করা হচ্ছে\n"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:420
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "নতুন আপডেট পরীক্ষা করা হচ্ছে...\n"
 
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "এর সাথে সংযোগ করা হচ্ছে"
-
-#: ../mdkapplet:484
+#: ../mdkapplet:504
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "সিস্টেম আপ-টু-ডেট আছে\n"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:532
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "নেটওয়ার্ক পরীক্ষা করা হচ্ছে: সম্ভবত নিষ্ক্রিয় করা আছে\n"
 
-#: ../mdkapplet:554
+#: ../mdkapplet:574
 #, c-format
 msgid "Warning"
 msgstr "নোটিশ"
 
-#: ../mdkapplet:557
+#: ../mdkapplet:579
 #, c-format
-msgid "Upgrade the system"
+msgid "Add media"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "পরিচিতি..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "ম্যান্ড্রিব অনলাইন"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "অনলাইন ওয়েবসাইট"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "সবসময় স্টার্টআপে আরম্ভ করো"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "প্রস্থান"
@@ -275,6 +270,16 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source মাধ্যম থেকে প্যাকেজ আপডেট করা যায় নি।\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "পরীক্ষা চলছে... আপডেট পাওয়া গেছে\n"
+
+#, fuzzy
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "rpmdb খুলতে অক্ষম"
+
+#~ msgid "Connecting to"
+#~ msgstr "এর সাথে সংযোগ করা হচ্ছে"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "ম্যান্ড্রেক আপডেট অ্যাপ্লেট"

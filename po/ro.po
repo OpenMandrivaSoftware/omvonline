@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-10-01 22:57+0100\n"
 "Last-Translator: Florin Catalin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Mandrivausers.ro <cfrussen@yahoo.co.uk>\n"
@@ -77,7 +77,7 @@ msgstr "Aşteptaţi, se caută pachetele disponibile..."
 msgid "New updates are available for your system"
 msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "O nouă distribuţie stabilă a fost lansată"
@@ -97,19 +97,19 @@ msgstr "Reţeaua nu funcţionează. Configuraţi-vă reţeaua"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Serviciul nu este activat. Apăsaţi pe \"Site online\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "baza de date urpmi este blocată"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Versiunea nu este suportată (versiunea este prea veche sau este versiune de "
 "dezvoltare)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -117,7 +117,7 @@ msgstr ""
 "Nu s-au găsit medii. Trebuie adăugate medii prin 'Administrator Medii de "
 "Programe'. "
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -134,129 +134,124 @@ msgstr ""
 "\n"
 "Apoi reporniţi \"%s\"."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Activat"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Eroare la actualizarea mediului"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Se verifică... Actualizări sunt disponibile\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Pachetele sunt actualizate"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Nu se deschide baza de date urpmi"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Instalare actualizări pentru sistem"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Verificare actualizări"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Configurare reţea"
 
-#: ../mdkapplet:327
+#: ../mdkapplet:205 ../mdkapplet:577
+#, c-format
+msgid "Upgrade the system"
+msgstr "Actualizarea sistemului"
+
+#: ../mdkapplet:344
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Se lansează drakconnect\n"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:347
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online pare să fi fost reinstalat, se reîncarcă mini-aplicaţia ...."
 
-#: ../mdkapplet:379
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "O nouă distribuţie stabilă a fost lansată"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "Doriţi să actualizaţi sistemul?"
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Se lansează MandrivaUpdate\n"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:420
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Se calculează actualizările noi...\n"
 
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Conectare la"
-
-#: ../mdkapplet:484
+#: ../mdkapplet:504
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistemul este la zi cu actualizările\n"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:532
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Verificare reţea: se pare că este dezactivată\n"
 
-#: ../mdkapplet:554
+#: ../mdkapplet:574
 #, c-format
 msgid "Warning"
 msgstr "Avertisment"
 
-#: ../mdkapplet:557
+#: ../mdkapplet:579
 #, c-format
-msgid "Upgrade the system"
-msgstr "Actualizarea sistemului"
+msgid "Add media"
+msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Despre..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Drepturi de autor (C) %s Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online permite accesul la serviciile web Mandriva."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Pagină web"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lansează întotdeauna la pornire"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Ieşire"
@@ -306,6 +301,18 @@ msgstr "  --debug\t\t\t- jurnal activitate\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nu se pot actualiza pachetele de pe mediul update_source.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Se verifică... Actualizări sunt disponibile\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Pachetele sunt actualizate"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "Nu se deschide baza de date urpmi"
+
+#~ msgid "Connecting to"
+#~ msgstr "Conectare la"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux Updates Applet"

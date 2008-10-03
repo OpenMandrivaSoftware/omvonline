@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-03-30 15:40+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -47,7 +47,7 @@ msgstr "Por favor agarde, buscando os paquetes dispoñibles..."
 msgid "New updates are available for your system"
 msgstr "Hai novas actualizacións dispoñibles para o seu sistema"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -67,17 +67,17 @@ msgstr "A rede está caída. Configure a súa rede"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "O servicio non está activado. Clique en \"Sitio Web en Liña\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "a base de datos de urpmi está bloqueada"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versión non soportada (versión antiga ou de desenvolvemento)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -85,7 +85,7 @@ msgstr ""
 "Non se atopou ningún soporte. Debe engadir algún soporte usando o 'Xestor de "
 "Soportes de Software'."
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -102,128 +102,123 @@ msgstr ""
 "\n"
 "Despois, reinicie \"%s\"."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "¿Habilitado"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Erro ó actualizar o soporte"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Comprobando... As actualizacións están dispoñibles\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Os paquetes están actualizados"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Fallo ó abrir a base de datos de urpmi"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Instala-las actualizacións"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Comprobar se hai Actualizacións"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Configura-la Rede"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Executando drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Semella ser que se reinstalou Mandriva Online, recargando applet ...."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Executando MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Procesando as novas actualizacións...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Conectando a"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "O sistema está actualizado\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Comprobando a Rede: parece que está deshabilitada\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Advertencia"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Executando drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Semella ser que se reinstalou Mandriva Online, recargando applet ...."
+
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Executando MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Procesando as novas actualizacións...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "O sistema está actualizado\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Comprobando a Rede: parece que está deshabilitada\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Acerca de..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s de Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online da acceso ós servicios web de Mandriva."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Sitio Web en Liña"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Executar sempre ó inicia-lo sistema"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Pechar"
@@ -274,6 +269,18 @@ msgstr "  --debug\t\t\t- rexistrar o que se fai\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
 "Non foi posible actualiza-los paquetes dende o soporte update_source.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Comprobando... As actualizacións están dispoñibles\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Os paquetes están actualizados"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "Fallo ó abrir a base de datos de urpmi"
+
+#~ msgid "Connecting to"
+#~ msgstr "Conectando a"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Applet de Actualización de Mandriva Linux"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2006-09-13 20:38+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -52,7 +52,7 @@ msgstr "Molim sačekajte, tražim dostupne pakete..."
 msgid "New updates are available for your system"
 msgstr "Nove ispravke su dostupne za vaš sistem"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -72,24 +72,24 @@ msgstr "Mreža ne radi. Podesite vašu mrežu"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servis nije aktiviran. Kliknite na \"Online web stranica\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "urpmi baza podataka je zaključana"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Izdanje nije podržano (prestaro izdanje ili je riječ o izdanju u razvoju)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -105,128 +105,123 @@ msgstr ""
 "\n"
 "Zatim, restartujte %s."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, fuzzy, c-format
 msgid "Error updating media"
 msgstr "Ažuriram medije...\n"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Provjeravam... Ispravke su dostupne\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr ""
-
-#: ../mdkapplet:196
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "ne mogu otvoriti rpmdb"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Instaliraj ispravke"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Provjeri da li ima ispravki"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Podesi mrežu"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Pokrećem drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Madrakeonline je izgleda ponovo instaliran, pokrećem aplet..."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Pokrećem MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Izračunavam nove ispravke...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Vežem se na"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Sistem je up-to-date\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Provjeravam mrežu: čini se da je isključena\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Upozorenje"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Pokrećem drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Madrakeonline je izgleda ponovo instaliran, pokrećem aplet..."
+
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Pokrećem MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Izračunavam nove ispravke...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "Sistem je up-to-date\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Provjeravam mrežu: čini se da je isključena\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Upozorenje"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "O programu..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Autorska prava (C) %s Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online vam omogućuje pristup Mandriva web uslugama."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Online web stranica"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Uvijek pokreni na početku"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Završi"
@@ -276,6 +271,16 @@ msgstr "  --debug\t\t\t- ispisuje sve što se radi\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nisam u mogućnosti da uradim update paketa sa update_source medija.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Provjeravam... Ispravke su dostupne\n"
+
+#, fuzzy
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "ne mogu otvoriti rpmdb"
+
+#~ msgid "Connecting to"
+#~ msgstr "Vežem se na"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux aplet sa ispravkama"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-09-28 23:22+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "Odota, etsitään saatavilla olevia paketteja"
 msgid "New updates are available for your system"
 msgstr "Päivityksiä järjestelmällesi on saatavilla"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "Uusi jakelu on saatavilla"
@@ -72,24 +72,25 @@ msgstr "Verkko on alhaalla. Ole hyvä ja aseta verkkosi"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Palvelu ei ole otettu käyttöön. Paina \"Online Webbisivusto\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-tietokanta lukittu"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Jakelu ei tuettu (liian vanha jakelu, tai kehitysjakelu)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Lähteitä ei löydetty. Sinun pitää lisätä joitakin käyttäen "
 "'Ojelmistolähteiden hallinta'."
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -106,128 +107,124 @@ msgstr ""
 "\n"
 "Käynnistä tämän jälkeen \"%s\" uudelleen."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Käytössä"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Virhe lähteiden päivityksessä."
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Paketit ovat ajan tasalla"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "urpmi-tietokantaa ei voitu avata"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Asenna päivitykset"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Tarkista päivitykset"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Aseta verkko"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Käynnistetään drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "käynnistetään MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Lasketaan  uudet päivitykset...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Yhdistetään kohteeseen"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Järjestelmäsi on ajan tasalla\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Tarkistetaan verkko: Näyttää poistettu käytöstä\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Varoitus"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr "Päivitä järjestelmä"
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Käynnistetään drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr ""
+"Mandriva Online on asennettu uudelleen, käynnistetäänsovelma uudestan ..."
+
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "Uusi jakelu on saatavilla"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "Haluatko päivittää?"
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "käynnistetään MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Lasketaan  uudet päivitykset...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "Järjestelmäsi on ajan tasalla\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Tarkistetaan verkko: Näyttää poistettu käytöstä\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Varoitus"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Tietoa.."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s, Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online avaa pääsyn Mandrivan webbipalveluihin."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Online-sivusto"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Thomas Backlund <tmb@mandriva.org>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Käynnistä ainä käynnistyksen yhteydessä"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Poistu"
@@ -278,6 +275,18 @@ msgstr "  --debug\t\t\t- kirjaa tapahtumalokin\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ei pystytty päivittämään paketteja update_source-lähteestä.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Tarkistetaan... Päivityksiä on saatavilla\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Paketit ovat ajan tasalla"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "urpmi-tietokantaa ei voitu avata"
+
+#~ msgid "Connecting to"
+#~ msgstr "Yhdistetään kohteeseen"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandrivan päivityssovelma"
@@ -419,4 +428,3 @@ msgstr "Ei pystytty päivittämään paketteja update_source-lähteestä.\n"
 
 #~ msgid "Installing packages ...\n"
 #~ msgstr "Asennetaan paketteja...\n"
-

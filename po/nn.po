@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-08-22 18:24+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -46,7 +46,7 @@ msgstr "Ser etter tilgjengelege pakkar. Vent litt …"
 msgid "New updates are available for your system"
 msgstr "Det finst nye oppdateringar for systemet ditt."
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "Ein ny stabil distribusjon er no ute"
@@ -59,29 +59,31 @@ msgstr "Ønskjer du å oppgradera?"
 #: ../mdkapplet:123
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
+msgstr ""
+"Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
 
 #: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Tenesta er ikkje aktivert. Vel «Heimeside»."
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-databasen er låst."
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Utgåva di er ikkje støtta (anten for gammal eller utviklingsutgåve)."
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fann ingen medium. Du må leggja til medium gjennom «Mediehandtering»."
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -97,128 +99,123 @@ msgstr ""
 "\n"
 "Start så %s på nytt."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "I bruk"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Feil ved oppdatering av medie"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Kontrollererer … Det finst nye oppdateringar.\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Alle pakkane er i nyaste versjon."
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Klarte ikkje opna pakkedatabase."
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Installer oppdateringar"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Sjå etter oppdateringar"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Set opp nettverket"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Køyrer drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online er installert på nytt. Startar panelprogrammet om att."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Køyrer MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Granskar nye oppdateringar …\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Koplar til"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Systemet er oppdatert\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Kontrollerer nettverk: Ser avslått ut.\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Åtvaring"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr "Oppgrader systemet"
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Køyrer drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Mandriva Online er installert på nytt. Startar panelprogrammet om att."
+
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "Ein ny stabil distribusjon er no ute"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "Ønskjer du å oppgradera?"
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Køyrer MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Granskar nye oppdateringar …\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "Systemet er oppdatert\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Kontrollerer nettverk: Ser avslått ut.\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Åtvaring"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Om …"
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright © %s Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online gjev deg tilgang til vevtenestene til Mandriva."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Heimeside"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Karl Ove Hufthammer <karl@huftis.org>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Køyr ved oppstart"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Avslutt"
@@ -269,6 +266,18 @@ msgstr "  --debug\t\t\t– Logg over kva som vert gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Kontrollererer … Det finst nye oppdateringar.\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Alle pakkane er i nyaste versjon."
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "Klarte ikkje opna pakkedatabase."
+
+#~ msgid "Connecting to"
+#~ msgstr "Koplar til"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Panelprogram for Mandriva Linux-oppdateringar"
@@ -407,4 +416,3 @@ msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
 
 #~ msgid "Installing packages ...\n"
 #~ msgstr "Installerer pakkar …\n"
-

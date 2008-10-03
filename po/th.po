@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2003-02-28 05:55+0900\n"
 "Last-Translator: Pramote Khuwijitjaru <kmote@hotmail.com>\n"
 "Language-Team: Thai <en@li.org>\n"
@@ -45,7 +45,7 @@ msgstr "กำลังหาเพกเกจที่มีอยู่, ก�
 msgid "New updates are available for your system"
 msgstr ""
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -65,23 +65,23 @@ msgstr ""
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "ฐานข้อมูล urpmi ถูกล็อก"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -92,128 +92,123 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "เปิดใช้"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr ""
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr ""
-
-#: ../mdkapplet:196
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "ไม่สามารถเปิดแฟ้ม %s\n"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, fuzzy, c-format
 msgid "Install updates"
 msgstr "ติดตั้งระบบ"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr ""
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, fuzzy, c-format
 msgid "Configure Network"
 msgstr "คอนฟิกระบบเน็ตเวิร์ก"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr ""
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr ""
-
-#: ../mdkapplet:400
-#, fuzzy, c-format
-msgid "Computing new updates...\n"
-msgstr "ปัญหาการคอนเน็ค"
-
-#: ../mdkapplet:401
-#, fuzzy, c-format
-msgid "Connecting to"
-msgstr "ปัญหาการคอนเน็ค"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr ""
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr ""
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "คำเตือน"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr ""
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr ""
+
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr ""
+
+#: ../mdkapplet:420
+#, fuzzy, c-format
+msgid "Computing new updates...\n"
+msgstr "ปัญหาการคอนเน็ค"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr ""
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr ""
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "คำเตือน"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "เกี่ยวกับ..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr ""
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "ออก"
@@ -263,6 +258,14 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "ไม่สามารถอัพเดทแพ็จเกจจากมีเดียของ update_source \n"
+
+#, fuzzy
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "ไม่สามารถเปิดแฟ้ม %s\n"
+
+#, fuzzy
+#~ msgid "Connecting to"
+#~ msgstr "ปัญหาการคอนเน็ค"
 
 #, fuzzy
 #~ msgid "Security error"

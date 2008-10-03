@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-08-17 21:06+0800\n"
 "Last-Translator: You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -51,7 +51,7 @@ msgstr "請稍候，正在尋找可用的套件..."
 msgid "New updates are available for your system"
 msgstr "有適用於您系統的更新"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "有新的穩定版本已經釋出了"
@@ -71,23 +71,23 @@ msgstr "網路沒有啟動，請設定您的網路連線"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "服務沒有啟動。請點選「線上網站」"
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi 資料庫被鎖住了"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支援 (您使用的版本過舊或是開發中版本)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "找不到媒體。您必須經由「套件媒體管理員」新增一些媒體。"
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -102,130 +102,125 @@ msgstr ""
 "\n"
 "完成後，請重新啟動 %s。"
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "是否啟用？"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "更新媒體時發生錯誤"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "檢查中...有可用的更新\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "套件都已經更新了"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "無法開啟 urpmi 資料庫"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "安裝更新"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "檢查更新"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "設定網路連線"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "啟動 drakconnect 連線程式\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online 似乎重新安裝過，重新載入面板程式..."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "啟動 MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "計算新的更新...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "連線到"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "系統已經在最新狀態了\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "檢查網路狀態中：似乎已停用\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "警告"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr "升級系統"
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "啟動 drakconnect 連線程式\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Mandriva Online 似乎重新安裝過，重新載入面板程式..."
+
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "有新的穩定版本已經釋出了"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "您想要升級嗎？"
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "啟動 MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "計算新的更新...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "系統已經在最新狀態了\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "檢查網路狀態中：似乎已停用\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "警告"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "關於..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online 將引導您連結到 Mandriva 網頁服務。"
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "線上網站"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Shiva Huang <shivahuang@gmail.com>\n"
 "You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "總是在啟動時執行"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "結束"
@@ -275,6 +270,18 @@ msgstr "  --debug\t\t\t- 紀錄做了那些事情\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "無法由 update_source 媒體更新套件。\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "檢查中...有可用的更新\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "套件都已經更新了"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "無法開啟 urpmi 資料庫"
+
+#~ msgid "Connecting to"
+#~ msgstr "連線到"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux 自動更新面板程式"

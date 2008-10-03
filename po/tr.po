@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-09-27 01:56+0300\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@hotmail.com>\n"
 "Language-Team: Turkish <cooker-i18n@mandrivalinux.org>\n"
@@ -48,7 +48,7 @@ msgstr "Lütfen bekleyin, güncellemeler denetleniyor..."
 msgid "New updates are available for your system"
 msgstr "Sisteminiz için yeni güncellemeler mevcut"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "Yeni bir kararlı sürüm yayınlanmış"
@@ -68,17 +68,17 @@ msgstr "Ağınız çalışmıyor. Lütfen ağ yapılandırmanızı kontrol edin"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Hizmet etkin değil. Lütfen \"Çevrimiçi Website\"bağlantısına tıklayın"
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi veri tabanı kilitli "
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Sürüm Desteklenmiyor (Çok eski ya da deneme sürümü)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -86,7 +86,7 @@ msgstr ""
 "Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir "
 "yazılım ortamı ekleyin."
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -103,129 +103,124 @@ msgstr ""
 "\n"
 "Sonra, \"%s\" yeniden başlatın."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Etkin"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Kaynak güncelleme hatası"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Denetleniyor.... Güncelleştirmeler mevcut.\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Paketler güncel"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Urpmi veri tabanı açılamıyor"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Güncellemeleri kur"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Ağı Yapılandır"
 
-#: ../mdkapplet:327
+#: ../mdkapplet:205 ../mdkapplet:577
+#, c-format
+msgid "Upgrade the system"
+msgstr "Sistemi yükselt"
+
+#: ../mdkapplet:344
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect başlatılıyor\n"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:347
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Mandriva Online yenilenmiş gözüküyor. Programcık yeniden yükleniyor ...."
 
-#: ../mdkapplet:379
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "Yeni bir kararlı sürüm yayınlanmış"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "Yükseltmek ister misniz?"
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Mandriva Güncelleme Başlatılıyor.\n"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:420
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Yeni güncellemeler hesaplanıyor...\n"
 
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Bağlanıyor"
-
-#: ../mdkapplet:484
+#: ../mdkapplet:504
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sisteminiz güncel \n"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:532
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Ağ Denetleniyor: etkinleştirilmemiş\n"
 
-#: ../mdkapplet:554
+#: ../mdkapplet:574
 #, c-format
 msgid "Warning"
 msgstr "Uyarı"
 
-#: ../mdkapplet:557
+#: ../mdkapplet:579
 #, c-format
-msgid "Upgrade the system"
-msgstr "Sistemi yükselt"
+msgid "Add media"
+msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Hakkında..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s bir Mandriva ürünüdür"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online, Mandriva web hizmetlerine erişim sağlar."
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Çevrimiçi Website"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Her zaman başlangıçta çalıştır"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Çıkış"
@@ -275,6 +270,18 @@ msgstr "  --debug\t\t\t- kayıt tut\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Denetleniyor.... Güncelleştirmeler mevcut.\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Paketler güncel"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "Urpmi veri tabanı açılamıyor"
+
+#~ msgid "Connecting to"
+#~ msgstr "Bağlanıyor"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux Güncelleme Uygulamacığı"

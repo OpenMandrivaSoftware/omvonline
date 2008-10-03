@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2008-09-14 04:26+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -54,7 +54,7 @@ msgstr "Prosim počakajte, iščem dostopne pakete..."
 msgid "New updates are available for your system"
 msgstr "Za vaš sistem so na voljo nove posodobitve"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr "Izdana je bila nova stabilna različica distribucije"
@@ -74,17 +74,17 @@ msgstr "Ni povezave z omrežjem. Prosim nastavite omrežje"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Storitev ni aktivirana. Prosim kliknite na »Spletna stran«"
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, c-format
 msgid "urpmi database locked"
 msgstr "Podatkovna zbirka urpmi je zaklenjena"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Izdaja ni podprta (prestara ali razvojna različica)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -92,7 +92,7 @@ msgstr ""
 "Ni moč najti virov. Vire lahko dodate s pomočjo upravljalnika virov "
 "programske opreme."
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -109,130 +109,125 @@ msgstr ""
 "\n"
 "Potem ponovno zaženite »%s«."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Omogočen"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr "Napaka pri posodabljanju"
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Preverjanje ... Posodobitve so na voljo\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr "Paketi so posodobljeni"
-
-#: ../mdkapplet:196
-#, c-format
-msgid "Failed to open urpmi database"
-msgstr "Odpiranje zbirke podatkov urpmi je spodletelo"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Namesti posodobitve"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Pregled posodobitev"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Nastavitev omrežja"
 
-#: ../mdkapplet:327
+#: ../mdkapplet:205 ../mdkapplet:577
+#, c-format
+msgid "Upgrade the system"
+msgstr "Nadgradi sistem"
+
+#: ../mdkapplet:344
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "»drakconnect« se zaganja\n"
 
-#: ../mdkapplet:330
+#: ../mdkapplet:347
 #, c-format
 msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 msgstr ""
 "Izgleda, da je Mandriva Online na novo nameščen. Ponovno nalaganje "
 "vstavka ..."
 
-#: ../mdkapplet:379
+#: ../mdkapplet:353
+#, fuzzy, c-format
+msgid "A new stable distribution has been released."
+msgstr "Izdana je bila nova stabilna različica distribucije"
+
+#: ../mdkapplet:354
+#, fuzzy, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr "Ali želite opraviti nadgradnjo?"
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "»MandrivaUpdate« se zaganja\n"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:420
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Procesiranje novih popravkov ...\n"
 
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Povezovanje z"
-
-#: ../mdkapplet:484
+#: ../mdkapplet:504
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem je posodobljen\n"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:532
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Preverjanje omrežja: izgleda onemogočeno\n"
 
-#: ../mdkapplet:554
+#: ../mdkapplet:574
 #, c-format
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: ../mdkapplet:557
+#: ../mdkapplet:579
 #, c-format
-msgid "Upgrade the system"
-msgstr "Nadgradi sistem"
+msgid "Add media"
+msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "O ..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Avtorske pravice © %s, Mandriva"
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online omogoča dostop do spletnih storitev Mandriva"
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Spletna stran"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Jure Repinc <jlp@holodeck1.com>\n"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vedno zaženi ob zagonu"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Končaj"
@@ -282,6 +277,18 @@ msgstr "  --debug\t\t\t- log what is done\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Preverjanje ... Posodobitve so na voljo\n"
+
+#~ msgid "Packages are up to date"
+#~ msgstr "Paketi so posodobljeni"
+
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "Odpiranje zbirke podatkov urpmi je spodletelo"
+
+#~ msgid "Connecting to"
+#~ msgstr "Povezovanje z"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Vstavek Mandriva Linux za posodobitve"

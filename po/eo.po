@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-eo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2005-01-13 10:13+0100\n"
 "Last-Translator: Grégoire COLBERT <gcolbert2004@noos.fr>\n"
 "Language-Team: Esperanto <mandrak-eo@yahoogroups.com>\n"
@@ -47,7 +47,7 @@ msgstr "Bonvole atendu, mi serĉas haveblajn pakaĵojn..."
 msgid "New updates are available for your system"
 msgstr "Novaj ĝisdatigojn estas haveblajn por via sistemo"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -67,24 +67,24 @@ msgstr "Reto estas haltita. Bonvole konfiguru vian reton"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servo ne estas aktiva. Bonvole musklaku \"TTT-a retejo\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "urpmi-datenbazo ŝlosita"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Sistemversiono ne konvenas (tro malnova versiono, aŭ disvolva versiono)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -102,128 +102,123 @@ msgstr ""
 "\n"
 "Poste, restartigu Mandriva-Ĝisdatigilon (%s)."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Ĉu enŝaltita"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Kontrolante... Ĝisdatigojn haveblas\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr ""
-
-#: ../mdkapplet:196
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "ne povis malfermi rpmdb"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Instalu ĝisdatigojn"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Serĉu ĝisdatigojn"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Konfiguru la reton"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Lanĉu drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online ŝajnas reinstalita, reŝarĝas programeton ...."
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Lanĉu MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Kalkulu novajn ĝisdatigojn...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Konektiĝas al"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Sistemo estas ĝisdata\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Kontrolante Reton: ĝi ŝajnas haltita\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Averto"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Lanĉu drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr "Mandriva Online ŝajnas reinstalita, reŝarĝas programeton ...."
+
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Lanĉu MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Kalkulu novajn ĝisdatigojn...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "Sistemo estas ĝisdata\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Kontrolante Reton: ĝi ŝajnas haltita\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Averto"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Pri..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "TTT-a retejo"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Ĉiam startu post sistemstartado"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Eliru"
@@ -274,6 +269,16 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ne kapablas ĝisdatigi pakaĵojn el 'update_source medium'.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Kontrolante... Ĝisdatigojn haveblas\n"
+
+#, fuzzy
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "ne povis malfermi rpmdb"
+
+#~ msgid "Connecting to"
+#~ msgstr "Konektiĝas al"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux-Ĝisdatigajn programeto"

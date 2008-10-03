@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-07 20:21+0200\n"
+"POT-Creation-Date: 2008-10-03 16:04+0200\n"
 "PO-Revision-Date: 2005-11-26 15:20+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -45,7 +45,7 @@ msgstr "muat ulang senarai pakej yg tersedia"
 msgid "New updates are available for your system"
 msgstr "Kemaskini baru terdapat untuk sistem anda"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:117 ../mdkapplet:352
 #, c-format
 msgid "A new stable distribution has been released"
 msgstr ""
@@ -65,24 +65,24 @@ msgstr "Rangkaian tidak berfungsi. Sila tetapkan rangkaian anda"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servis tidak diaktifkan. Sila klik pada \"Laman Web Online\""
 
-#: ../mdkapplet:135 ../mdkapplet:166
+#: ../mdkapplet:135
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "database urpmi terkunci"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Keluaran tidak disokong (keluaran terlalu lama, atau keluaran pembangunan)"
 
-#: ../mdkapplet:147
+#: ../mdkapplet:148
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:153
+#: ../mdkapplet:154
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -93,128 +93,123 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr "dimatikan dalam ulanghidup."
 
-#: ../mdkapplet:158
+#: ../mdkapplet:159
 #, c-format
 msgid "Enabled"
 msgstr "Hidupkan"
 
-#: ../mdkapplet:171
+#: ../mdkapplet:172
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:186
-#, c-format
-msgid "Checking... Updates are available\n"
-msgstr "Memeriksa... Terdapat kemaskini\n"
-
-#: ../mdkapplet:191
-#, c-format
-msgid "Packages are up to date"
-msgstr ""
-
-#: ../mdkapplet:196
-#, fuzzy, c-format
-msgid "Failed to open urpmi database"
-msgstr "tidak dapat membuka rpmdb"
-
-#: ../mdkapplet:201 ../mdkapplet:556
+#: ../mdkapplet:202 ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Pasang kemaskini"
 
-#: ../mdkapplet:202
+#: ../mdkapplet:203
 #, c-format
 msgid "Check Updates"
 msgstr "Periksa Kemaskini"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:204
 #, c-format
 msgid "Configure Network"
 msgstr "Tetapkan Rangkaian"
 
-#: ../mdkapplet:327
-#, c-format
-msgid "Launching drakconnect\n"
-msgstr "Melaksanakan drakconnect\n"
-
-#: ../mdkapplet:330
-#, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr ""
-
-#: ../mdkapplet:379
-#, c-format
-msgid "Launching MandrivaUpdate\n"
-msgstr "Melaksanakan MandrivaUpdate\n"
-
-#: ../mdkapplet:400
-#, c-format
-msgid "Computing new updates...\n"
-msgstr "Memeriksa kemaskini baru...\n"
-
-#: ../mdkapplet:401
-#, c-format
-msgid "Connecting to"
-msgstr "Menyambung ke"
-
-#: ../mdkapplet:484
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Sistem adalah terkini\n"
-
-#: ../mdkapplet:512
-#, c-format
-msgid "Checking Network: seems disabled\n"
-msgstr "Pemeriksaan Rangkaian: seperti dimatikan\n"
-
-#: ../mdkapplet:554
-#, c-format
-msgid "Warning"
-msgstr "Amaran"
-
-#: ../mdkapplet:557
+#: ../mdkapplet:205 ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:568
+#: ../mdkapplet:344
+#, c-format
+msgid "Launching drakconnect\n"
+msgstr "Melaksanakan drakconnect\n"
+
+#: ../mdkapplet:347
+#, c-format
+msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgstr ""
+
+#: ../mdkapplet:353
+#, c-format
+msgid "A new stable distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:354
+#, c-format
+msgid "Do you want to upgrade to the '%s' distribution?"
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid "Launching MandrivaUpdate\n"
+msgstr "Melaksanakan MandrivaUpdate\n"
+
+#: ../mdkapplet:420
+#, c-format
+msgid "Computing new updates...\n"
+msgstr "Memeriksa kemaskini baru...\n"
+
+#: ../mdkapplet:504
+#, c-format
+msgid "System is up-to-date\n"
+msgstr "Sistem adalah terkini\n"
+
+#: ../mdkapplet:532
+#, c-format
+msgid "Checking Network: seems disabled\n"
+msgstr "Pemeriksaan Rangkaian: seperti dimatikan\n"
+
+#: ../mdkapplet:574
+#, c-format
+msgid "Warning"
+msgstr "Amaran"
+
+#: ../mdkapplet:579
+#, c-format
+msgid "Add media"
+msgstr ""
+
+#: ../mdkapplet:591
 #, c-format
 msgid "About..."
 msgstr "Keterangan..."
 
-#: ../mdkapplet:572
+#: ../mdkapplet:595
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:573
+#: ../mdkapplet:596
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:576
+#: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:578
+#: ../mdkapplet:601
 #, c-format
 msgid "Online WebSite"
 msgstr "Lamanweb Dalam Talian"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:583
+#: ../mdkapplet:606
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:592
+#: ../mdkapplet:615
 #, c-format
 msgid "Always launch on startup"
 msgstr "Sentiasa lancar ketika permulaan"
 
-#: ../mdkapplet:594
+#: ../mdkapplet:617
 #, c-format
 msgid "Quit"
 msgstr "Keluar"
@@ -264,6 +259,16 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gagal mengemaskini pakej dari media update_source.\n"
+
+#~ msgid "Checking... Updates are available\n"
+#~ msgstr "Memeriksa... Terdapat kemaskini\n"
+
+#, fuzzy
+#~ msgid "Failed to open urpmi database"
+#~ msgstr "tidak dapat membuka rpmdb"
+
+#~ msgid "Connecting to"
+#~ msgstr "Menyambung ke"
 
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Aplet Kemaskini Mandriva Linux"
