@@ -298,7 +298,6 @@ sub is_there_a_new_distributions() {
     # only compare first distro: if it's not the same as the currently installed one,
     # then it's the most recent release:
     my $new_distro = $distros[0];
-    local $product_id->{version} = '2008.1';
 
     return if !member($product_id->{version}, map { $_->{version} } @distros);
 
