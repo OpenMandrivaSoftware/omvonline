@@ -237,7 +237,6 @@ my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
 go2State('delayed');
-gtkflush();
 
 Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub {
                        # schedule future checks:
@@ -430,7 +429,6 @@ sub silentCheck() {
         $check_time = $new_time;
         if (is_there_a_new_distributions()) {
             go2State('new_distribution'); 
-            gtkflush();
             return;
         }
     }
@@ -440,7 +438,7 @@ sub silentCheck() {
     logIt("Connecting to  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
-    gtkflush(); go2State('busy'); gtkflush();
+    go2State('busy');
     gtkset_mousecursor_normal($w);
 
     # are there any updates ?
@@ -564,6 +562,7 @@ sub go2State {
     $menu->destroy if $menu;
     $menu = setState($state);
     $state_global = $state;
+    gtkflush();
 }
 
 sub shouldStart() {
