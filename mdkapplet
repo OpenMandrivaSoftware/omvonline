@@ -590,9 +590,11 @@ sub setState {
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
-        $bubble->add_action('clicked', N("Install updates"), \&installUpdates) if $state eq 'updates';
-        $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade) if $state eq 'new_distribution';
-        if (member($state, qw(no_enabled_medium no_update_medium))) {
+        if ($state eq 'new_distribution') {
+            $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade);
+        } elsif ($state eq 'updates') {
+            $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
+        } elsif (member($state, qw(no_enabled_medium no_update_medium))) {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
         }
 
