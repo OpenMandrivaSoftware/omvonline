@@ -54,7 +54,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $network_timeout, $state_global);
+my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -327,7 +327,8 @@ sub harvester {
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
             if ($state) {
                 logIt($state->{log});
-                go2State($new_distro_version ? 'new_distribution' : $state->{status});
+                $sub_state = $state->{status};
+                go2State($new_distro_version ? 'new_distribution' : $sub_state);
             }
         } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
             undef $media_manager_pid;
