@@ -596,8 +596,6 @@ sub setState {
             $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
-                # default to updates rather than distro upgrade:
-                $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
             }
         } elsif ($state eq 'updates') {
             unshift @arr, 'upgrade_distro' if $new_distro_version;
