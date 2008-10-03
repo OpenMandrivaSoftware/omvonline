@@ -220,7 +220,11 @@ $icon->signal_connect(activate => sub {
                               updates => \&installUpdates,
                               new_distribution => \&upgrade,
                           );
-                          $actions{$state_global}->() if ref $actions{$state_global};
+                          my $action = $state_global;
+                          if ($action eq 'new_distribution' && $sub_state eq 'updates') {
+                              $action = 'updates';
+                          }
+                          $actions{$action}->() if ref $actions{$action};
 			  });
 foreach my $opt (@ARGV) {
     if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
