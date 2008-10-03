@@ -221,6 +221,7 @@ $icon->signal_connect(activate => sub {
                               new_distribution => \&upgrade,
                           );
                           my $action = $state_global;
+                          # default to updates rather than distro upgrade:
                           if ($action eq 'new_distribution' && $sub_state eq 'updates') {
                               $action = 'updates';
                           }
@@ -595,6 +596,7 @@ sub setState {
             $bubble->add_action('clicked', N("Upgrade the system"), \&upgrade);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
+                # default to updates rather than distro upgrade:
                 $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
             }
         } elsif ($state eq 'updates') {
