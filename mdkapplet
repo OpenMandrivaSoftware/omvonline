@@ -72,6 +72,8 @@ $config{DISTRO_CHECK_DELAY} ||= 60*60*24; # default : one day
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
+my %local_config = getVarsFromSh($localfile);
+
 my %state = (
 	     delayed => {
 		      colour => [ 'busy' ],
@@ -549,8 +551,7 @@ sub go2State {
 }
 
 sub shouldStart() {
-    my %p = getVarsFromSh($localfile);
-    to_bool($p{AUTOSTART} ne 'FALSE');
+    to_bool($local_config{AUTOSTART} ne 'FALSE');
 }
 
 sub setState {
