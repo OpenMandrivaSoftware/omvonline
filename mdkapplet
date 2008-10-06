@@ -370,7 +370,7 @@ sub confirm_upgrade() {
                gtknew('HButtonBox', layout => 'start', children_tight => [
                    my $link = Gtk2::LinkButton->new($new_distro->{url}, N("More info about this new version")),
                ]),
-               N("Do you want to upgrade to the '\%s' distribution?", $new_distro->{version}),
+               N("Do you want to upgrade to the '\%s' distribution?", $new_distro->{name} || $new_distro->{version}),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Yes"), N("No")),
            ]),
