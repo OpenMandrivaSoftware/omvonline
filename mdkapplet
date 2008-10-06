@@ -331,7 +331,7 @@ sub harvester {
             if ($state) {
                 logIt($state->{log});
                 $sub_state = $state->{status};
-                go2State($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
+                go2State($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
                            && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
                            'new_distribution' : $sub_state);
             }
