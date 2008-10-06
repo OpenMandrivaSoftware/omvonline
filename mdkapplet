@@ -422,7 +422,7 @@ sub upgrade() {
     fork_gurpmi();
 }
 
-sub fork_gurpmi {
+sub fork_gurpmi() {
     $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--silent-success', if_($root, "--urpmi-root=$root"));
 }
 
