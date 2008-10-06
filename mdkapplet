@@ -406,7 +406,7 @@ sub upgrade() {
     undef $_urpmi_lock;
 
     logIt("removing all existing urpmi media for upgrade");
-    run_program::run('urpmi.removemedia', '-a');
+    run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
     logIt("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
