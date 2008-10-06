@@ -324,8 +324,8 @@ sub harvester {
         my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
-            if ($refork_gurpmi) {
-                $mdv_update_pid = fork_gurpmi() if $status;
+            if ($refork_gurpmi && $status) {
+                $mdv_update_pid = fork_gurpmi();
             } else {
                 $mdvupdate_returned = 1;
             }
