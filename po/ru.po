@@ -1,3 +1,4 @@
+# translation of ru.po to Russian
 # translation of ru.po to
 # Translation of mdkonline messages to Russian
 # Copyright (C) 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
@@ -6,20 +7,20 @@
 # Pavel Maryanov <acid_jack@ukr.net>, 2002, 2004, 2005, 2006, 2007, 2008.
 # Alice Lafox <alice@lafox.net>, 2004, 2005.
 # akdengi <kazancas@gmail.com>, 2008.
+# Alexander Kazancev <kazancas@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-06 16:14+0200\n"
-"PO-Revision-Date: 2008-08-13 22:29+0500\n"
-"Last-Translator: akdengi <kazancas@gmail.com>\n"
-"Language-Team:  <ru@li.org>\n"
+"PO-Revision-Date: 2008-10-06 22:27+0500\n"
+"Last-Translator: Alexander Kazancev <kazancas@gmail.com>\n"
+"Language-Team: Russian <gnu@mx.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:83
@@ -83,8 +84,7 @@ msgstr "Релиз не поддерживается (слишком стары�
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Источник не найден. Нужно добавить хотя бы один источник с помощью Менеджера "
 "источников программ."
@@ -149,7 +149,7 @@ msgstr "Служба Mandriva Online была переустановлена. А
 #: ../mdkapplet:374
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Обновление дистрибутива"
 
 #: ../mdkapplet:376
 #, fuzzy, c-format
@@ -159,7 +159,7 @@ msgstr "Появилась новая стабильная версия дист
 #: ../mdkapplet:378
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Подробная информация об этой новой версии"
 
 #: ../mdkapplet:380
 #, fuzzy, c-format
@@ -209,7 +209,7 @@ msgstr "Внимание"
 #: ../mdkapplet:579
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Добавление источника"
 
 #: ../mdkapplet:591
 #, c-format
@@ -299,14 +299,3 @@ msgstr "  --debug\t\t\t- журналирование выполняемых д�
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Невозможно обновить пакеты из источника update_source.\n"
 
-#~ msgid "Checking... Updates are available\n"
-#~ msgstr "Выполняется проверка... Обновления доступны\n"
-
-#~ msgid "Packages are up to date"
-#~ msgstr "Пакеты не нуждаются в обновлении"
-
-#~ msgid "Failed to open urpmi database"
-#~ msgstr "Ошибка открытия базы данных urpmi"
-
-#~ msgid "Connecting to"
-#~ msgstr "Выполняется подключение к"
