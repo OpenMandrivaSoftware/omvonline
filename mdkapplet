@@ -430,8 +430,9 @@ sub upgrade() {
     fork_gurpmi();
 }
 
-sub fork_gurpmi() {
-    $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--expect-install', if_($root, "--urpmi-root=$root"));
+sub fork_gurpmi {
+    $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--expect-install',
+                                if_($root, "--urpmi-root=$root"), @_);
 }
 
 sub add_media() {
