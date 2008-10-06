@@ -400,7 +400,7 @@ sub upgrade() {
 
     my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
 
-    my $_urpmi_lock = eval {
+    my $urpmi_lock = eval {
         local $urpm->{fatal} = sub { die @_ };
         urpm::lock::urpmi_db($urpm, 'exclusive');
     };
@@ -409,7 +409,7 @@ sub upgrade() {
         logIt(sprintf("locking urpmi database failed: %s"), $err);
         return;
     }
-    undef $_urpmi_lock;
+    undef $urpmi_lock;
 
     logIt("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
