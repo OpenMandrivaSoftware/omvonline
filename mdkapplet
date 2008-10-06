@@ -300,12 +300,12 @@ sub is_there_a_new_distributions() {
 
     # only compare first distro: if it's not the same as the currently installed one,
     # then it's the most recent release:
-    my $new_distro = $distros[0];
+    my $new_distribution = $distros[0];
 
     return if !member($product_id->{version}, map { $_->{version} } @distros);
 
-    if ($new_distro && $new_distro->{version} ne $product_id->{version}) {
-        $::new_distro = $new_distro;
+    if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
+        $new_distro = $new_distribution;
         log::explanations(sprintf("new '%s' distribution was released on %s", $new_distro->{version}, $new_distro->{release_date}));
         return 1;
     }
