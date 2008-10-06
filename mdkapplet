@@ -427,7 +427,7 @@ sub upgrade() {
     $refork_gurpmi = 1;
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
-    fork_gurpmi();
+    fork_gurpmi('--replacefiles');
 }
 
 sub fork_gurpmi {
