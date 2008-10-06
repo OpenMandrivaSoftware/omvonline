@@ -312,7 +312,7 @@ sub is_there_a_new_distributions() {
 }
 
 
-my ($mdv_update_pid, $checker_pid, $media_manager_pid);
+my ($mdv_update_pid, $checker_pid, $media_manager_pid, $refork_gurpmi);
 
 # Signal management 
 sub harvester {
@@ -323,7 +323,13 @@ sub harvester {
         $childpid = waitpid(-1, &WNOHANG);
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
-            $mdvupdate_returned = 1;
+            if ($refork_gurpmi) {
+                undef $refork_gurpmi;
+                my $status = $? >> 8;
+                fork_gurpmi() if $status;
+            } else {
+                $mdvupdate_returned = 1;
+            }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
             my $status = $? >> 8;
@@ -417,6 +423,8 @@ sub upgrade() {
 
     logIt("upgrading urpmi and rpmdrake");
     logIt("upgrading the whole system");
+    # rerun gurpmi in case there was an issue (with eg: big transactions:
+    $refork_gurpmi = 1;
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
     fork_gurpmi();
