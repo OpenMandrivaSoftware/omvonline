@@ -326,7 +326,7 @@ sub harvester {
             undef $mdv_update_pid;
             if ($refork_gurpmi) {
                 undef $refork_gurpmi;
-                fork_gurpmi() if $status;
+                $mdv_update_pid = fork_gurpmi() if $status;
             } else {
                 $mdvupdate_returned = 1;
             }
