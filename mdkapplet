@@ -361,6 +361,11 @@ sub confirm_upgrade() {
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
+               Gtk2::Banner->new(
+                   (find { -e $_ } 
+                      qw(/usr/share/mcc/themes/default/mdkonline-mdk.png /usr/share/icons/large/mdkonline.png)),
+                   N("Distribution Upgrade")
+               ),
                N("A new stable distribution has been released."),
                N("Do you want to upgrade to the '\%s' distribution?", $new_distro_version),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
