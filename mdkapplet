@@ -321,8 +321,8 @@ sub harvester {
     my $mdvupdate_returned;
     do {
         $childpid = waitpid(-1, &WNOHANG);
+        my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
-            my $status = $? >> 8;
             undef $mdv_update_pid;
             if ($refork_gurpmi) {
                 undef $refork_gurpmi;
@@ -332,7 +332,6 @@ sub harvester {
             }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
-            my $status = $? >> 8;
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
             if ($state) {
                 logIt($state->{log});
