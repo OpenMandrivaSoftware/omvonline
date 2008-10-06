@@ -330,6 +330,16 @@ sub harvester {
                 $mdvupdate_returned = 1;
             }
             undef $refork_gurpmi;
+            if ($status) {
+                ugtk2::ask_warn(N("Error"),
+                                N("Installation failed"),
+                            );
+            } else {
+                ugtk2::ask_warn(N("Congratulations"),
+                                N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
+                                N("You should restart your system.")
+                            );
+            }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
