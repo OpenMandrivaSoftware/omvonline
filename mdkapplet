@@ -419,6 +419,10 @@ sub upgrade() {
     logIt("upgrading the whole system");
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
+    fork_gurpmi();
+}
+
+sub fork_gurpmi {
     $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select', '--silent-success', if_($root, "--urpmi-root=$root"));
 }
 
