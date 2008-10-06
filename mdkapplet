@@ -236,7 +236,7 @@ foreach my $opt (@ARGV) {
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
-my ($new_distro_version, $new_distro_url);
+my $new_distro;
 my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
@@ -305,9 +305,8 @@ sub is_there_a_new_distributions() {
     return if !member($product_id->{version}, map { $_->{version} } @distros);
 
     if ($new_distro && $new_distro->{version} ne $product_id->{version}) {
-        $new_distro_version = $new_distro->{version};
-        $new_distro_url = $new_distro->{url};
-        log::explanations(sprintf("new '%s' distribution was released on %s", $new_distro_version, $new_distro->{release_date}));
+        $::new_distro = $new_distro;
+        log::explanations(sprintf("new '%s' distribution was released on %s", $new_distro->{version}, $new_distro->{release_date}));
         return 1;
     }
 }
@@ -332,7 +331,7 @@ sub harvester {
             if ($state) {
                 logIt($state->{log});
                 $sub_state = $state->{status};
-                go2State($new_distro_version && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
+                go2State($new_distro && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
                            'new_distribution' : $sub_state);
             }
         } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
@@ -369,9 +368,9 @@ sub confirm_upgrade() {
                ),
                N("A new stable distribution has been released."),
                gtknew('HButtonBox', layout => 'start', children_tight => [
-                   my $link = Gtk2::LinkButton->new($new_distro_url, N("More info about this new version")),
+                   my $link = Gtk2::LinkButton->new($new_distro->{url}, N("More info about this new version")),
                ]),
-               N("Do you want to upgrade to the '\%s' distribution?", $new_distro_version),
+               N("Do you want to upgrade to the '\%s' distribution?", $new_distro->{version}),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Yes"), N("No")),
            ]),
@@ -411,7 +410,7 @@ sub upgrade() {
 
     logIt("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
-    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list";
+    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list";
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
       and return;
 
@@ -616,7 +615,7 @@ sub setState {
                 push @arr, 'update';
             }
         } elsif ($state eq 'updates') {
-            unshift @arr, 'upgrade_distro' if $new_distro_version;
+            unshift @arr, 'upgrade_distro' if $new_distro;
             $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
         } elsif (member($state, qw(no_enabled_medium no_update_medium))) {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
