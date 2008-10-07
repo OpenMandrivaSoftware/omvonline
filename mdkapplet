@@ -370,7 +370,7 @@ sub restart_applet() {
     exec($0, '--auto-update');
 }
 
-sub congratulations {
+sub congratulations() {
     local $mygtk2::left_padding = 0;
     my $width = 500;
     my $w = ugtk2->new(N("Congratulations"));
@@ -395,7 +395,7 @@ sub get_banner() {
         (find { -e $_ } 
            qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
         N("Distribution Upgrade")
-    )
+    );
 }
 
 sub confirm_upgrade() {
