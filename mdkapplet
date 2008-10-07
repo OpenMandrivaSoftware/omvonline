@@ -54,7 +54,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
+my ($menu, $timeout, $network_timeout, $state_global, $sub_state, $log_file);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -333,6 +333,7 @@ sub harvester {
             if ($status) {
                 ugtk2::ask_warn(N("Error"),
                                 N("Installation failed"),
+                                N("Installation logs can be found in '%s'", $log_file)
                             );
             } else {
                 ugtk2::ask_warn(N("Congratulations"),
@@ -441,13 +442,18 @@ sub upgrade() {
     logIt("upgrading the whole system");
     # rerun gurpmi in case there was an issue (with eg: big transactions:
     $refork_gurpmi = 1;
+    {
+        # force PATH:
+        local $ENV{TMPDIR} = undef;
+        $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
+    }
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
     fork_gurpmi('--replacefiles');
 }
 
 sub fork_gurpmi {
-    $mdv_update_pid = fork_exec('gurpmi', '--auto', '--auto-select',
+    $mdv_update_pid = fork_exec('gurpmi', '>>', $log_file, '--auto', '--auto-select',
                                 if_($root, "--urpmi-root=$root"), @_);
 }
 
