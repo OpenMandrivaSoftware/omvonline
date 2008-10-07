@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-06 16:14+0200\n"
+"POT-Creation-Date: 2008-10-07 11:38+0200\n"
 "PO-Revision-Date: 2008-09-28 23:22+0300\n"
 "Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -137,7 +137,37 @@ msgstr "Aseta verkko"
 msgid "Upgrade the system"
 msgstr "Päivitä järjestelmä"
 
-#: ../mdkapplet:344
+#: ../mdkapplet:334
+#, c-format
+msgid "Error"
+msgstr "Virhe"
+
+#: ../mdkapplet:335
+#, c-format
+msgid "Installation failed"
+msgstr ""
+
+#: ../mdkapplet:336
+#, c-format
+msgid "Installation logs can be found in %s"
+msgstr ""
+
+#: ../mdkapplet:339
+#, c-format
+msgid "Congratulations"
+msgstr ""
+
+#: ../mdkapplet:340
+#, c-format
+msgid "Upgrade to Mandriva %s release was successfull."
+msgstr ""
+
+#: ../mdkapplet:341
+#, c-format
+msgid "You should restart your system."
+msgstr ""
+
+#: ../mdkapplet:369
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Käynnistetään drakconnect\n"
@@ -421,9 +451,6 @@ msgstr "Ei pystytty päivittämään paketteja update_source-lähteestä.\n"
 
 #~ msgid "Preparing..."
 #~ msgstr "Valmistellaan..."
-
-#~ msgid "Error"
-#~ msgstr "Virhe"
 
 #~ msgid ""
 #~ "Failed to authenticate to the bundle server:\n"

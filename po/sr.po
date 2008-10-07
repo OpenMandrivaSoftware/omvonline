@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-06 16:14+0200\n"
+"POT-Creation-Date: 2008-10-07 11:38+0200\n"
 "PO-Revision-Date: 2003-02-15 09:31+0100\n"
 "Last-Translator: Toma Jankovic <tomaja@net.yu>\n"
 "Language-Team: Serbian <i18n@mandrake.co.yu>\n"
@@ -136,7 +136,37 @@ msgstr "Подеси мрежу"
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:344
+#: ../mdkapplet:334
+#, c-format
+msgid "Error"
+msgstr "Грешка"
+
+#: ../mdkapplet:335
+#, c-format
+msgid "Installation failed"
+msgstr ""
+
+#: ../mdkapplet:336
+#, c-format
+msgid "Installation logs can be found in %s"
+msgstr ""
+
+#: ../mdkapplet:339
+#, c-format
+msgid "Congratulations"
+msgstr "Честитке"
+
+#: ../mdkapplet:340
+#, c-format
+msgid "Upgrade to Mandriva %s release was successfull."
+msgstr ""
+
+#: ../mdkapplet:341
+#, c-format
+msgid "You should restart your system."
+msgstr ""
+
+#: ../mdkapplet:369
 #, fuzzy, c-format
 msgid "Launching drakconnect\n"
 msgstr "Покрени userdrake"
@@ -383,9 +413,6 @@ msgstr "Не могу да ажурирам пакете са update_source ме
 #~ msgid "Preparing..."
 #~ msgstr "Припремам..."
 
-#~ msgid "Error"
-#~ msgstr "Грешка"
-
 #~ msgid "An error occurred"
 #~ msgstr "Хм,појавила се грешка"
 
@@ -555,9 +582,6 @@ msgstr "Не могу да ажурирам пакете са update_source ме
 
 #~ msgid "Not a valid mail address!\n"
 #~ msgstr "Е-mail адреса није исправна!\n"
-
-#~ msgid "Congratulations"
-#~ msgstr "Честитке"
 
 #, fuzzy
 #~ msgid "Problem uploading configuration"
