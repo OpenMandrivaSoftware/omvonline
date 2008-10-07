@@ -1,3 +1,896 @@
+2008-10-07 15:57  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (congratulations) extract it out of harvester()
+	  ; add a banner and
+	  pack Ok button to the right
+
+2008-10-07 15:54  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (get_banner) extract it out of confirm_upgrade() (will
+	  be reused in next commit)
+
+2008-10-07 14:55  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-10-07 12:31  kazancas
+
+	* po/ru.po: update russian
+
+2008-10-07 12:14  Marek Laane <bald at starman.ee>
+
+	* po/et.po: Updated Estonian translation.
+
+2008-10-07 12:06  felipe
+
+	* po/pt_BR.po: Translating new messages
+
+2008-10-07 11:34  obgr_seneca
+
+	* po/de.po: Update for German (de) translation
+
+2008-10-07 11:19  aleph
+
+	* po/hu.po: Hungarian translation update
+
+2008-10-07 10:34  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: add a note
+
+2008-10-07 10:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: 2.51 is now ready to be released
+
+2008-10-07 10:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: perl_checker cleanups
+
+2008-10-07 10:32  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (fork_gurpmi,harvester,upgrade) keep update log
+	  around and tell users
+	  where they are if upgrade failed
+
+2008-10-07 10:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (confirm_upgrade) no padding for labels (side effect
+	  of previous
+	  commit that makes us explicitely using Label_Left widgets)
+
+2008-10-07 10:07  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (confirm_upgrade) make "Distro Upgrade"
+	  confirmation dialog wider
+
+2008-10-07 10:04  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (confirm_upgrade) explicitely initialize labels
+	  through mygtk2
+
+2008-10-07 09:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (fork_gurpmi) do not run with --expect-install
+	  (no remaining packages to install is same as success for us)
+
+2008-10-07 09:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/hy.po,
+	  po/id.po, po/is.po, po/it.po, po/ja.po, po/ka.po, po/ko.po,
+	  po/ku.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mdkonline.pot, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/ur.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  better phrasing
+
+2008-10-07 09:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2008-10-07 09:43  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/ar.po, po/az.po, po/bg.po, po/bn.po, po/br.po,
+	  po/bs.po, po/ca.po, po/cs.po, po/cy.po, po/da.po, po/de.po,
+	  po/el.po, po/eo.po, po/es.po, po/et.po, po/eu.po, po/fa.po,
+	  po/fi.po, po/fr.po, po/fur.po, po/ga.po, po/gl.po, po/he.po,
+	  po/hi.po, po/hr.po, po/hu.po, po/id.po, po/is.po, po/it.po,
+	  po/ja.po, po/ko.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mk.po, po/ms.po, po/mt.po, po/nb.po, po/nl.po, po/nn.po,
+	  po/pa_IN.po, po/pl.po, po/pt.po, po/pt_BR.po, po/ro.po, po/ru.po,
+	  po/sc.po, po/sk.po, po/sl.po, po/sq.po, po/sr.po, po/sr@Latn.po,
+	  po/sv.po, po/ta.po, po/tg.po, po/th.po, po/tl.po, po/tr.po,
+	  po/uk.po, po/uz.po, po/uz@cyrillic.po, po/vi.po, po/wa.po,
+	  po/zh_CN.po, po/zh_TW.po: merge in translations from drakx
+
+2008-10-07 09:39  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: 2.51 didn't got released yet
+
+2008-10-07 09:39  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/hy.po,
+	  po/id.po, po/is.po, po/it.po, po/ja.po, po/ka.po, po/ko.po,
+	  po/ku.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mdkonline.pot, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/ur.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  sync with code
+
+2008-10-07 08:57  Сергій Рибалченко (Sergey Ribalchenko) <fisher at obu.ck.ua>
+
+	* po/uk.po: ukrainian translation update
+
+2008-10-06 21:48  Andrea Celli <andrea.celli at libero.it>
+
+	* po/it.po: update translation for Italian
+
+2008-10-06 20:35  Jure Repinc
+
+	* po/sl.po: Updated Slovenian translation
+
+2008-10-06 20:31  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/cy.po: update (Rhoslyn Prys)
+
+2008-10-06 19:02  Michal Bukovjan <bukovjan at mbox.dkm.cz>
+
+	* po/cs.po: Updated Czech translation.
+
+2008-10-06 17:29  kazancas
+
+	* po/ru.po: update russian
+
+2008-10-06 17:26  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (harvester) display a success or an error
+	  message at end of installation
+
+2008-10-06 17:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) keep record we succeeded even when first
+	  gurpmi pass succeeded
+
+2008-10-06 17:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) just always drop the refork_gurpmi bit
+	  even when already
+	  unset (needed for next commit)
+
+2008-10-06 17:08  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-10-06 17:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) wait for the proper child when running
+	  gurpmi again
+
+2008-10-06 16:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (upgrade) perl_checker cleanup
+
+2008-10-06 16:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) factorize code
+
+2008-10-06 16:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) compute child status earlier (safer and
+	  needed for next commit)
+
+2008-10-06 16:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.51
+
+2008-10-06 16:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (upgrade) run gurpmi with --replacefiles option
+	  (so that temporary
+	  file conflicts doesn't break upgrade due to missing conflict
+	  tags)
+	  
+	  will be used by gurpmi once it has restarted with 2009.0's update
+	  one
+
+2008-10-06 16:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: enhance latest log
+
+2008-10-06 16:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_gurpmi) enable to pass additional options
+	  (needed for next commit)
+
+2008-10-06 16:00  Funda Wang <fundawang at gmail.com>
+
+	* po/zh_TW.po: updated zh_TW translation
+
+2008-10-06 15:59  felipe
+
+	* po/pt_BR.po: Translating two new messages
+
+2008-10-06 15:45  Zé <ze at mandriva.org>
+
+	* po/pt.po: update
+
+2008-10-06 15:29  Funda Wang <fundawang at gmail.com>
+
+	* po/zh_CN.po: updated zh_CN translation
+
+2008-10-06 15:21  Marek Laane <bald at starman.ee>
+
+	* po/et.po: Updated Estonian translation.
+
+2008-10-06 15:15  aleph
+
+	* po/hu.po: Hungarian translation update
+
+2008-10-06 15:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (fork_gurpmi) run gurpmi with --expect-install
+	  option
+
+2008-10-06 14:38  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.50
+
+2008-10-06 14:38  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (harvester,upgrade) run a 2nd gurpmi pass if
+	  first failed
+
+2008-10-06 14:28  obgr_seneca
+
+	* po/de.po: Update for German (de) translation
+
+2008-10-06 14:25  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2008-10-06 14:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/cs.po, po/cy.po, po/da.po, po/de.po, po/el.po, po/es.po,
+	  po/et.po, po/eu.po, po/fi.po, po/fr.po, po/gl.po, po/he.po,
+	  po/hu.po, po/hy.po, po/it.po, po/ja.po, po/ka.po, po/ku.po,
+	  po/ms.po, po/nb.po, po/nl.po, po/nn.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sl.po, po/sv.po, po/tr.po,
+	  po/uk.po, po/uz.po, po/uz@cyrillic.po, po/zh_CN.po, po/zh_TW.po:
+	  merge in translations from rpmdrake
+
+2008-10-06 14:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/id.po,
+	  po/is.po, po/it.po, po/ja.po, po/ko.po, po/ky.po, po/lt.po,
+	  po/ltg.po, po/lv.po, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  merge in translations from drakx
+
+2008-10-06 14:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/hy.po,
+	  po/id.po, po/is.po, po/it.po, po/ja.po, po/ka.po, po/ko.po,
+	  po/ku.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mdkonline.pot, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/ur.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  sync with code
+
+2008-10-06 14:14  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) typo fix
+
+2008-10-06 14:12  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_gurpmi) do not use --silent-success: this option
+	  is only
+	  available with gurpmi.addmedia, not gurpmi
+
+2008-10-06 14:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet, mdkapplet.conf: enable to globally
+	  enable/disable new distribution check
+
+2008-10-06 14:08  felipe
+
+	* po/pt_BR.po: Fixing fuzzy entries and translating a new message
+
+2008-10-06 13:53  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: enable to remove media in chroot specified by
+	  --urpmi-root
+
+2008-10-06 12:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (confirm_upgrade) display nicer distribution
+	  name if available
+
+2008-10-06 12:47  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (is_there_a_new_distributions) rename a variable b/c
+	  of hidden
+	  variable (bug in previous commit)
+
+2008-10-06 12:41  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: keep around the whole structure of the new distro
+	  (needed for next commit)
+
+2008-10-06 12:39  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_gurpmi) perl_checker cleanup
+
+2008-10-06 12:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (fork_gurpmi) split it out of upgrade()
+
+2008-10-06 11:36  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (confirm_upgrade) display a URL link button
+
+2008-10-06 11:35  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: reindent
+
+2008-10-06 11:34  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (confirm_upgrade) use rpmdrake icon for confirmation
+	  dialog
+
+2008-10-06 11:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (confirm_upgrade) display a banner in "Distro
+	  Upgrade" confirmation dialog
+
+2008-10-05 14:51  obgr_seneca
+
+	* po/de.po: Update of German (de) translation
+
+2008-10-05 07:11  Сергій Рибалченко (Sergey Ribalchenko) <fisher at obu.ck.ua>
+
+	* po/uk.po: translation update for ukrainian language
+
+2008-10-04 18:02  Inigo Salvador Azurmendi <xalba at euskalnet.net>
+
+	* po/eu.po: Osatuta.
+
+2008-10-04 14:22  Andrea Celli <andrea.celli at libero.it>
+
+	* po/it.po: update translation for Italian
+
+2008-10-04 11:46  atilla
+
+	* po/tr.po: update translation for turkish language
+
+2008-10-04 10:33  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-10-04 09:23  Karl Ove Hufthammer <karl at huftis.org>
+
+	* po/nn.po: Updated Norwegian Nynorsk translation.
+
+2008-10-03 20:14  Reinout van Schouwen <reinout at gmail.com>
+
+	* po/nl.po: 2008-10-03 Reinout van Schouwen <reinouts@gnome.org>
+	  
+	  * nl.po: Updated Dutch translation
+
+2008-10-03 19:49  Michal Bukovjan <bukovjan at mbox.dkm.cz>
+
+	* po/cs.po: Updated Czech translation.
+
+2008-10-03 18:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.49
+
+2008-10-03 18:10  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester,is_there_a_new_distributions) still check
+	  for new distro if
+	  popup is disabled so that one can still performs it from menu
+
+2008-10-03 17:59  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (confirm_upgrade) change the setting in RAM too
+	  (instead of only on disk)
+
+2008-10-03 17:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) revert bogus r247677 that results in
+	  doble buttons performing the same thing; was:
+	  
+	  'default to "Install updates" instead of distro upgrade on left
+	  click on icon
+	  if there're updates'
+
+2008-10-03 17:30  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) add an "upgrade system" in the menu when in
+	  'updates' mode (needed for next commits)
+
+2008-10-03 17:28  Funda Wang <fundawang at gmail.com>
+
+	* po/cy.po: update cy translation
+
+2008-10-03 17:05  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: comment
+
+2008-10-03 17:02  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: typo fix
+
+2008-10-03 17:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: default to "Install updates" instead of distro
+	  upgrade on left click on icon if
+	  there're updates
+
+2008-10-03 17:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) only show "Install updates" in right
+	  menu only if there're actually updates
+
+2008-10-03 17:00  Funda Wang <fundawang at gmail.com>
+
+	* po/zh_TW.po: update zh_TW translation
+
+2008-10-03 17:00  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: reorder
+
+2008-10-03 16:56  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) dereference array earlier (needed for next
+	  commit)
+
+2008-10-03 16:55  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: if there're updates, install regular updates
+	  instead of performing
+	  distro upgrade on left click
+
+2008-10-03 16:51  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (harvester) keep around update result when we detect a
+	  new distro
+
+2008-10-03 16:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (harvester,silentCheck) compute regular updates
+	  even if there's a new distro
+
+2008-10-03 15:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (is_there_a_new_distributions) remove debug statement
+	  that wongly went it along r247649
+
+2008-10-03 15:09  aleph
+
+	* po/hu.po: Hungarian translation update
+
+2008-10-03 14:59  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setState) make it more readable
+
+2008-10-03 14:55  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (go2State) factorize calling gtkflush() after calling
+	  go2state() into
+	  go2state() itself (which is redundant with setState() one...)
+
+2008-10-03 14:42  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (confirm_upgrade,is_there_a_new_distributions)
+	  enable to not check again for new distro
+
+2008-10-03 14:41  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (confirm_upgrade) split it out of upgrade()
+
+2008-10-03 14:40  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: read user config file earlier (needed for next
+	  commits)
+
+2008-10-03 14:36  Marek Laane <bald at starman.ee>
+
+	* po/et.po: I was too fast...
+
+2008-10-03 14:30  Marek Laane <bald at starman.ee>
+
+	* po/et.po: Updated Estonian translation.
+
+2008-10-03 14:24  Funda Wang <fundawang at gmail.com>
+
+	* po/zh_CN.po: update zh_CN translation
+
+2008-10-03 14:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setAutoStart) make it more readable
+
+2008-10-03 14:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (setVar) simplify signature
+
+2008-10-03 14:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: use blue icon when there's a new distro
+
+2008-10-03 14:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2008-10-03 14:06  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/hy.po,
+	  po/id.po, po/is.po, po/it.po, po/ja.po, po/ka.po, po/ko.po,
+	  po/ku.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mdkonline.pot, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/ur.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  sync with code
+
+2008-10-03 13:55  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (upgrade) ask for confirmation before performing
+	  distro upgrade
+
+2008-10-03 13:09  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: typo fix
+
+2008-10-03 13:08  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: add an "upgrade system" in the menu when a new
+	  distro is availlable
+
+2008-10-02 13:01  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.48
+
+2008-10-02 12:54  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) do not complain if urpmi DB is locked
+	  by another program,
+	  just wait for next check slot)
+
+2008-10-02 12:44  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.47
+
+2008-10-02 12:43  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (is_there_a_new_distributions) prevent SIGCHILD
+	  handler's waitpid to
+	  interfere with urpmi waiting for curl (which was messing up with
+	  urpmi
+	  trying to get curl exit code)
+	  
+	  Kudo pixel!!!
+
+2008-10-02 12:15  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (is_there_a_new_distributions) use
+	  ensure_valid_cachedir() to
+	  workarounding issue with downloading files as usero
+
+2008-10-02 01:08  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: fix 2.45's date
+
+2008-10-02 01:07  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.46
+
+2008-10-02 01:03  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS, mdkapplet: (upgrade) fix removing media as user
+
+2008-10-01 23:37  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: fix backuping urpmi.cfg
+
+2008-10-01 23:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.45
+
+2008-10-01 23:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet_urpm.pm: workarounding downloading distro list as
+	  user for 2008.1 where
+	  sometimes urpmi reports it failed to download the list when it
+	  actually did with success
+	  
+	  "curl failed: exited with signal 127"
+	  
+	  however the requested file did got downloaded and did exist on
+	  local
+	  hard disk even if it was unlinked just before performing the
+	  sync()
+	  call
+	  
+	  what's more, it only failed in 50% of the case; even more
+	  strangely,
+	  when run with "strace" it works (but still failed if run with
+	  "strace
+	  -f")
+
+2008-10-01 20:59  cfrussen
+
+	* po/ro.po: Updated Romanian translation
+
+2008-09-30 17:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.44
+
+2008-09-30 17:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: install new module
+
+2008-09-30 17:33  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (is_there_a_new_distributions) better check in
+	  order to exclude cooker
+	  from distro upgrade
+	  
+	  rationale: older/unsupported distro aren't in the list as well as
+	  cooker (2009.1 won't be in the list)
+
+2008-09-30 17:17  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet, mdkapplet_urpm.pm: dd support for downloading
+	  distro list as user for 2008.1
+
+2008-09-30 16:26  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile: bump version
+
+2008-09-30 16:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS: add spacing
+
+2008-09-30 14:00  Arnaud Patard <apatard at mandriva.com>
+
+	* NEWS, mdkapplet: mdkapplet: Don't show it when disconnected
+
+2008-09-28 20:24  thomas
+
+	* po/fi.po: update Finnish translations
+
+2008-09-28 11:19  atilla
+
+	* po/tr.po: update translation for turkish language
+
+2008-09-22 06:04  Shiva Huang <blueshiva at giga.net.tw>
+
+	* po/zh_TW.po: Update zh_TW translation
+
+2008-09-20 23:23  Keld Jørn Simonsen <keld at dkuug.dk>
+
+	* po/da.po: updates
+
+2008-09-14 22:35  Reinout van Schouwen <reinout at gmail.com>
+
+	* po/nl.po: Updated Dutch translation by Rob Teng
+
+2008-09-14 02:27  Jure Repinc
+
+	* po/sl.po: Updated Slovenian translation
+
+2008-09-08 18:23  Andrea Celli <andrea.celli at libero.it>
+
+	* po/it.po: update translation for Italian
+
+2008-09-08 17:29  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: further update
+
+2008-09-08 17:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: perl_checker cleanups
+
+2008-09-08 17:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* .perl_checker: update perl_checker blacklist
+
+2008-09-06 22:28  thomas
+
+	* po/sv.po: update Swedish translation
+
+2008-09-06 10:46  Zé <ze at mandriva.org>
+
+	* po/pt.po: update
+
+2008-09-05 18:30  felipe
+
+	* po/pt_BR.po: translating new messages and fixing the fuzzy ones
+
+2008-09-05 15:44  Tomasz Bednarski <tbednarski at mandrivalinux.pl>
+
+	* po/pl.po: update translation for Polish
+
+2008-09-04 17:50  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.42
+
+2008-09-04 15:49  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (is_there_a_new_distributions) add sanity check for
+	  cooker
+
+2008-09-04 13:57  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (is_there_a_new_distributions) further fix dowloading
+	  distributions
+	  list by really gettint URI's content
+
+2008-09-04 13:28  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (is_there_a_new_distributions) fix dowloading
+	  distributions list by downloading in a writeable directory
+
+2008-09-04 13:24  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (setState) offer to add media directly from
+	  bubble (#39987)
+
+2008-09-04 13:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (harvester) prevent running media manager more
+	  than one at a time
+
+2008-09-04 13:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (add_media) keep media manager PID around (needed for
+	  next commits)
+
+2008-09-04 13:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (add_media) check again after adding update
+	  mediap
+
+2008-09-04 13:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (add_media) log starting media manager
+
+2008-09-04 13:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (add_media) run media manager with --no-splash'
+	  option and handle "--urpmi-root=$root"
+
+2008-09-04 13:18  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (add_media) factorize code
+
+2008-08-25 20:31  Fabian Mandelbaum <fabman at mandriva.com>
+
+	* po/es.po: Updated ES translation
+
+2008-08-23 10:12  Marek Laane <bald at starman.ee>
+
+	* po/et.po: Updated Estonian translation.
+
+2008-08-22 17:31  Karl Ove Hufthammer <karl at huftis.org>
+
+	* po/nn.po: Updated Norwegian Nynorsk translation.
+
+2008-08-19 07:46  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/cy.po: update (Rhoslyn Prys)
+
+2008-08-17 17:34  Nicolas Lécureuil <neoclust at mandriva.org>
+
+	* x-mdv-exec.desktop: Validate x-mdv-exec.desktop desktop file (
+	  Ony Type= is left)
+
+2008-08-15 22:56  Michal Bukovjan <bukovjan at mbox.dkm.cz>
+
+	* po/cs.po: Updated Czech translation.
+
+2008-08-14 16:35  Yukiko Bando <ybando at k6.dion.ne.jp>
+
+	* po/ja.po: Japanese translation updated.
+
+2008-08-13 17:38  kazancas
+
+	* po/ru.po: update russian
+
+2008-08-12 14:38  Сергій Рибалченко (Sergey Ribalchenko) <fisher at obu.ck.ua>
+
+	* po/uk.po: ukrainian translation update
+
+2008-08-10 08:03  nikos
+
+	* po/el.po: greek (el) language update by Nikos
+
+2008-08-08 22:29  aleph
+
+	* po/hu.po: Update hungarian translation
+
+2008-08-08 13:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* ChangeLog: Generated by svn2cl the D'ar gwener 08 a viz Eost 2008
+
+2008-08-07 18:23  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* Makefile, NEWS: 2.41
+
+2008-08-07 18:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/fr.po: update
+
+2008-08-07 18:22  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* po/af.po, po/am.po, po/ar.po, po/az.po, po/be.po, po/bg.po,
+	  po/bn.po, po/br.po, po/bs.po, po/ca.po, po/cs.po, po/cy.po,
+	  po/da.po, po/de.po, po/el.po, po/eo.po, po/es.po, po/et.po,
+	  po/eu.po, po/fa.po, po/fi.po, po/fr.po, po/fur.po, po/ga.po,
+	  po/gl.po, po/he.po, po/hi.po, po/hr.po, po/hu.po, po/hy.po,
+	  po/id.po, po/is.po, po/it.po, po/ja.po, po/ka.po, po/ko.po,
+	  po/ku.po, po/ky.po, po/lt.po, po/ltg.po, po/lv.po,
+	  po/mdkonline.pot, po/mk.po, po/mn.po, po/ms.po, po/mt.po,
+	  po/nb.po, po/nl.po, po/nn.po, po/pa_IN.po, po/pl.po, po/pt.po,
+	  po/pt_BR.po, po/ro.po, po/ru.po, po/sc.po, po/sk.po, po/sl.po,
+	  po/sq.po, po/sr.po, po/sr@Latn.po, po/sv.po, po/ta.po, po/tg.po,
+	  po/th.po, po/tl.po, po/tr.po, po/uk.po, po/ur.po, po/uz.po,
+	  po/uz@cyrillic.po, po/vi.po, po/wa.po, po/zh_CN.po, po/zh_TW.po:
+	  sync with code
+
+2008-08-07 18:20  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: log actual error message
+
+2008-08-07 18:19  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: do not translate some log messages
+
+2008-08-07 18:16  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* NEWS, mdkapplet: (is_there_a_new_distributions,upgrade) check if
+	  a new distro is
+	  available and offer to upgrade the system (live upgrade mode)
+
+2008-08-07 17:21  Thierry Vignaud <tvignaud at mandriva.com>
+
+	* mdkapplet: (installUpdates) complete latest commit by running
+	  MandrivaUpdate with--urpmi-root if needed
+
 2008-08-07 18:23  Thierry Vignaud <tvignaud at mandriva.com>
 
 	* Makefile, NEWS: 2.41
