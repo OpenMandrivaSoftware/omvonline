@@ -382,11 +382,12 @@ sub confirm_upgrade() {
                       qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
                    N("Distribution Upgrade")
                ),
-               N("A new stable distribution has been released."),
+               gtknew('Label_Left', text => N("A new stable distribution has been released.")),
                gtknew('HButtonBox', layout => 'start', children_tight => [
                    my $link = Gtk2::LinkButton->new($new_distro->{url}, N("More info about this new version")),
                ]),
-               N("Do you want to upgrade to the '\%s' distribution?", $new_distro->{name} || $new_distro->{version}),
+               gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
+                                         $new_distro->{name} || $new_distro->{version})),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Yes"), N("No")),
            ]),
