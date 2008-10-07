@@ -373,6 +373,14 @@ sub restart_applet() {
     exec($0, '--auto-update');
 }
 
+sub get_banner() {
+    Gtk2::Banner->new(
+        (find { -e $_ } 
+           qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
+        N("Distribution Upgrade")
+    )
+}
+
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $width = 500;
@@ -380,11 +388,7 @@ sub confirm_upgrade() {
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
-               Gtk2::Banner->new(
-                   (find { -e $_ } 
-                      qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
-                   N("Distribution Upgrade")
-               ),
+               get_banner(),
                gtknew('Label_Left', text => N("A new stable distribution has been released."),
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
