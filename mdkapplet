@@ -373,6 +373,7 @@ sub restart_applet() {
 }
 
 sub confirm_upgrade() {
+    local $mygtk2::left_padding = 0;
     my $width = 500;
     my $w = ugtk2->new(N("A new stable distribution has been released"));
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
