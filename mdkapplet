@@ -387,14 +387,14 @@ sub confirm_upgrade() {
                ),
                gtknew('Label_Left', text => N("A new stable distribution has been released."),
                       # workaround infamous 6 years old gnome bug #101968:
-                      width => $width -50),
+                      width => $width - 50),
                gtknew('HButtonBox', layout => 'start', children_tight => [
                    my $link = Gtk2::LinkButton->new($new_distro->{url}, N("More info about this new version")),
                ]),
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
                                               $new_distro->{name} || $new_distro->{version}),
                       # workaround infamous 6 years old gnome bug #101968:
-                      width => $width -50),
+                      width => $width - 50),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Yes"), N("No")),
            ]),
@@ -543,7 +543,7 @@ sub silentCheck() {
             $exit->('no_enabled_medium');
         }
 
-        if (my $db = urpm::db_open_or_die($urpm)) {
+        if (my $_db = urpm::db_open_or_die($urpm)) {
             my $requested = {};
             my $state = {};
             my $need_restart = urpm::select::resolve_dependencies(
