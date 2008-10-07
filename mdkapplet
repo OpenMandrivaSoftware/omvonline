@@ -336,10 +336,7 @@ sub harvester {
                                 N("Installation logs can be found in '%s'", $log_file)
                             );
             } else {
-                ugtk2::ask_warn(N("Congratulations"),
-                                N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
-                                N("You should restart your system.")
-                            );
+                congratulations();
             }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -371,6 +368,26 @@ sub configNetwork() { logIt(N_("Launching drakconnect\n")); fork_exec("/usr/sbin
 sub restart_applet() {
     logIt(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
     exec($0, '--auto-update');
+}
+
+sub congratulations {
+    local $mygtk2::left_padding = 0;
+    my $width = 500;
+    my $w = ugtk2->new(N("Congratulations"));
+    gtkadd($w->{window},
+           gtknew('VBox', children_tight => [
+               get_banner(),
+               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
+                      # workaround infamous 6 years old gnome bug #101968:
+                      width => $width - 50),
+               gtknew('Label_Left', text => N("You should restart your system."),
+                      # workaround infamous 6 years old gnome bug #101968:
+                      width => $width - 50),
+               create_okcancel($w, N("Ok")),
+           ]),
+       );
+    $w->{ok}->grab_focus;
+    $w->main;
 }
 
 sub get_banner() {
