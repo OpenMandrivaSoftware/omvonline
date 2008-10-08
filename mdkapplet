@@ -378,9 +378,13 @@ sub congratulations() {
            gtknew('VBox', children_tight => [
                get_banner(),
                gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
+                      # explicitely wrap (for 2008.1):
+                      line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
                gtknew('Label_Left', text => N("You should restart your system."),
+                      # explicitely wrap (for 2008.1):
+                      line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
                create_okcancel($w, N("Ok")),
