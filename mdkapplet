@@ -436,7 +436,11 @@ sub confirm_upgrade() {
     $res;
 }
 
+my $already_in_upgrade;
 sub upgrade() {
+    return if $already_in_upgrade;
+    $already_in_upgrade = 1;
+    my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
     logIt("backuping urpmi configuration");
     cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
