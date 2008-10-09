@@ -264,6 +264,7 @@ ugtk2::exit(0);
 
 
 sub is_there_a_new_distributions() {
+    return if $product_id->{product} =~ /Flash/;
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $list = "http://api.mandriva.com/distributions/$type.$product_id->{arch}.list?product=$product_id->{product}";
