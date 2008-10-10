@@ -331,13 +331,15 @@ sub harvester {
                 $mdvupdate_returned = 1;
             }
             undef $refork_gurpmi;
-            if ($status) {
-                ugtk2::ask_warn(N("Error"),
-                                N("Installation failed"),
-                                N("Installation logs can be found in '%s'", $log_file)
-                            );
-            } elsif ($state_global eq 'new_distribution') {
-                upgrade_distro_congratulations();
+            if ($state_global eq 'new_distribution') {
+                if ($status) {
+                    ugtk2::ask_warn(N("Error"),
+                                    N("Installation failed"),
+                                    N("Installation logs can be found in '%s'", $log_file)
+                                );
+                } else {
+                    upgrade_distro_congratulations();
+                }
             }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
