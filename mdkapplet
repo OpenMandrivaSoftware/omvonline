@@ -336,8 +336,8 @@ sub harvester {
                                 N("Installation failed"),
                                 N("Installation logs can be found in '%s'", $log_file)
                             );
-            } else {
-                congratulations();
+            } elsif ($state_global eq 'new_distribution') {
+                upgrade_distro_congratulations();
             }
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -371,7 +371,7 @@ sub restart_applet() {
     exec($0, '--auto-update');
 }
 
-sub congratulations() {
+sub upgrade_distro_congratulations() {
     local $mygtk2::left_padding = 0;
     my $width = 500;
     my $w = ugtk2->new(N("Congratulations"));
