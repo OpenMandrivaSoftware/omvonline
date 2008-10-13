@@ -28,6 +28,9 @@ use strict;
 use lib qw(/usr/lib/libDrakX);
 use common;
 
+our @ISA = qw(Exporter);
+our @EXPORT = qw(fork_exec get_banner);
+
 use log;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
@@ -54,6 +57,19 @@ sub get_release() {
 sub clean_confdir() {
     my $confdir = '/root/.MdkOnline';
     system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
+}
+
+
+sub fork_exec {
+    run_program::raw({ detach => 1 }, @_);
+}
+
+sub get_banner() {
+    Gtk2::Banner->new(
+        (find { -e $_ } 
+           qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
+        N("Distribution Upgrade")
+    );
 }
 
 sub is_running {

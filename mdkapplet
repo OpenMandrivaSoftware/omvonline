@@ -360,12 +360,6 @@ sub harvester {
     return @pids;
 }
 
-sub fork_exec {
-    my $pid = run_program::raw({ detach => 1 }, @_);
-    return $pid;
-}
-
-
 sub configNetwork() { logIt(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
@@ -395,14 +389,6 @@ sub upgrade_distro_congratulations() {
        );
     $w->{ok}->grab_focus;
     $w->main;
-}
-
-sub get_banner() {
-    Gtk2::Banner->new(
-        (find { -e $_ } 
-           qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
-        N("Distribution Upgrade")
-    );
 }
 
 sub confirm_upgrade() {
