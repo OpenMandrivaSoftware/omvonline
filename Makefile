@@ -32,6 +32,7 @@ clean:
 
 install: all
 	install -d $(PREFIX)/usr/{sbin,bin,share/{mime/packages,$(NAME)/pixmaps,autostart,gnome/autostart,icons/{mini,large}},lib/libDrakX/drakfirsttime}
+	install -m755 mdkapplet-upgrade-helper $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
 	install -m755 migrate-mdvonline-applet.pl $(SBINDIR)
@@ -56,6 +57,7 @@ install: all
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.removemedia
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.removemedia
+	ln -sf consolehelper $(PREFIX)/usr/bin/mdkapplet-upgrade-helper
 
 cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
