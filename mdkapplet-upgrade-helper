@@ -41,15 +41,17 @@ use Rpmdrake::open_db;
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($log_file);
 
+my $new_distro_version;
 foreach my $opt (@ARGV) {
     if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
         $::rpmdrake_options{$1}[0] = $2;
+    } elsif ($opt =~ /--new_distro_version=(.*)/) {
+        $new_distro_version = $1;
     }
 }
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
-my $new_distro;
 my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
 
 run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
@@ -84,7 +86,7 @@ sub upgrade_distro_congratulations() {
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
-               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
+               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro_version),
                       # explicitely wrap (for 2008.1):
                       line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
@@ -123,7 +125,7 @@ sub upgrade() {
 
     log::explanations("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
-    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list?" .
+    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list?" .
       join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
       and return;
