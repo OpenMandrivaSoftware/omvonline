@@ -466,7 +466,8 @@ sub upgrade() {
 
     logIt("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
-    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list";
+    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list?" .
+      join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
       and return;
 
