@@ -72,6 +72,8 @@ sub run_gurpmi() {
             } else {
                 undef $refork_gurpmi;
             }
+
+        if (!$refork_gurpmi) {
                 if ($status) {
                     ugtk2::ask_warn(N("Error"),
                                     N("Installation failed"),
@@ -80,6 +82,7 @@ sub run_gurpmi() {
                 } else {
                     upgrade_distro_congratulations();
                 }
+        }
     }
 }
 
