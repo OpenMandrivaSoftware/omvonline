@@ -345,7 +345,7 @@ sub harvester {
             undef $checker_pid;
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
             if ($state) {
-                logIt($state->{log});
+                log::explanations($state->{log});
                 $sub_state = $state->{status};
                 go2State($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
                            && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i ?
@@ -360,10 +360,10 @@ sub harvester {
     return @pids;
 }
 
-sub configNetwork() { logIt(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
+sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
-    logIt(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
+    log::explanations(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
     exec($0, '--auto-update');
 }
 
@@ -431,7 +431,7 @@ sub upgrade() {
     $already_in_upgrade = 1;
     my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
-    logIt("backuping urpmi configuration");
+    log::explanations("backuping urpmi configuration");
     cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
 
     my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
@@ -442,23 +442,23 @@ sub upgrade() {
     };
 
     if (my $err = $@) {
-        logIt(sprintf("locking urpmi database failed: %s"), $err);
+        log::explanations(sprintf("locking urpmi database failed: %s"), $err);
         return;
     }
     undef $urpmi_lock;
 
-    logIt("removing all existing urpmi media for upgrade");
+    log::explanations("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
-    logIt("adding urpmi media for new distribution");
+    log::explanations("adding urpmi media for new distribution");
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
     my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list?" .
       join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
       and return;
 
-    logIt("upgrading urpmi and rpmdrake");
-    logIt("upgrading the whole system");
+    log::explanations("upgrading urpmi and rpmdrake");
+    log::explanations("upgrading the whole system");
     # rerun gurpmi in case there was an issue (with eg: big transactions:
     $refork_gurpmi = 1;
     {
@@ -478,7 +478,7 @@ sub fork_gurpmi {
 
 sub add_media() {
     return if $media_manager_pid;
-    logIt("Launching 'Software Media Manager'");
+    log::explanations("Launching 'Software Media Manager'");
     $media_manager_pid = fork_exec('/usr/sbin/edit-urpm-sources.pl', '--no-splash', if_($root, "--urpmi-root=$root"));
     silentCheck(); gtkflush();
 }
@@ -487,7 +487,7 @@ sub installUpdates() {
     my $binfile = $0;
     return if $mdv_update_pid;
     my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
-    logIt(N_("Launching MandrivaUpdate\n"));
+    log::explanations(N_("Launching MandrivaUpdate\n"));
     $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash',
                                 if_($root, "--urpmi-root=$root"));
     my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
@@ -504,8 +504,8 @@ sub silentCheck() {
     }
 
     return if $mdv_update_pid || $checker_pid;
-    logIt(N_("Computing new updates...\n"));
-    logIt("Connecting to  ...\n"); # i18n bug to fix in cooker
+    log::explanations(N_("Computing new updates...\n"));
+    log::explanations("Connecting to  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     go2State('busy');
@@ -549,7 +549,7 @@ sub silentCheck() {
 
         # update inactive backport media:
         my @inactive_backport_media = Rpmdrake::open_db::get_inactive_backport_media($urpm);
-        logIt("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
+        log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
         run_program::run('urpmi.update', $_) foreach @inactive_backport_media;
         
         require urpm::select;
@@ -583,12 +583,12 @@ sub silentCheck() {
         }
         $exit->('updates');
     } else {
-        logIt("cannot fork: %s", "update checker ($!)");
+        log::explanations("cannot fork: %s", "update checker ($!)");
         go2State('critical');
     }
 }
 
-sub okState() { logIt(N_("System is up-to-date\n")); go2State('okay') }
+sub okState() { log::explanations(N_("System is up-to-date\n")); go2State('okay') }
 
 
 sub setup_cyclic_check() {
@@ -616,7 +616,7 @@ sub checkNetwork() {
     if (!network::tools::has_network_connection()) {
         # do not notify if already done:
         return if member($state_global, qw(disconnected));
-	logIt(N_("Checking Network: seems disabled\n"));
+	log::explanations(N_("Checking Network: seems disabled\n"));
 	go2State('disconnected');
     } elsif (member($state_global, qw(disconnected))) {
 	silentCheck(); #- state has changed, update
@@ -710,10 +710,6 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu;
 
-}
-sub logIt {
-    my $log = shift;
-    log::explanations($log);
 }
 
 sub setVar {
