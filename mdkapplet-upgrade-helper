@@ -145,7 +145,7 @@ sub upgrade() {
 }
 
 sub fork_gurpmi {
-    run_program::run(('gurpmi', '>>', $log_file, '--auto', '--auto-select',
+    run_program::run('gurpmi', '>>', $log_file, '--auto', '--auto-select',
                       if_($root, "--urpmi-root=$root"), @_);
 }
 
