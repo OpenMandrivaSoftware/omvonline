@@ -1,7 +1,8 @@
 - mdkapplet
   o log reason as well as current & target distro for distro upgrade
   o do not crash if image cannot be loaded (#44750)
-  o split upgrade code into mdkapplet-upgrade-helper
+  o split upgrade code into mdkapplet-upgrade-helper:
+    * ask for root password earlier, before removing media (#44771)
 
 Version 2.55 - 10 October 2008
 
