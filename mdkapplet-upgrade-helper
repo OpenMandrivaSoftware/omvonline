@@ -62,12 +62,16 @@ my ($refork_gurpmi);
 
 
 sub run_gurpmi() {
+    my @initial_args = '--replacefiles';
     while ($refork_gurpmi) {
+        fork_gurpmi(@initial_args);
+        undef @initial_args;
         my $status = $? >> 8;
             if ($refork_gurpmi && $status) {
-                fork_gurpmi();
+                $refork_gurpmi--;
+            } else {
+                undef $refork_gurpmi;
             }
-            undef $refork_gurpmi;
                 if ($status) {
                     ugtk2::ask_warn(N("Error"),
                                     N("Installation failed"),
@@ -133,7 +137,7 @@ sub upgrade() {
     log::explanations("upgrading urpmi and rpmdrake");
     log::explanations("upgrading the whole system");
     # rerun gurpmi in case there was an issue (with eg: big transactions:
-    $refork_gurpmi = 1;
+    $refork_gurpmi = 4;
     {
         # force PATH:
         local $ENV{TMPDIR} = undef;
@@ -141,7 +145,7 @@ sub upgrade() {
     }
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
-    fork_gurpmi('--replacefiles');
+    run_gurpmi();
 }
 
 sub fork_gurpmi {
