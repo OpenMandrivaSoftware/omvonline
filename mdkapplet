@@ -54,7 +54,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
-my ($menu, $timeout, $network_timeout, $state_global, $sub_state, $log_file);
+my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
@@ -313,7 +313,7 @@ sub is_there_a_new_distributions() {
 }
 
 
-my ($mdv_update_pid, $checker_pid, $media_manager_pid, $refork_gurpmi);
+my ($mdv_update_pid, $checker_pid, $media_manager_pid);
 
 # Signal management 
 sub harvester {
@@ -325,22 +325,7 @@ sub harvester {
         my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
-            if ($refork_gurpmi && $status) {
-                $mdv_update_pid = fork_gurpmi();
-            } else {
-                $mdvupdate_returned = 1;
-            }
-            undef $refork_gurpmi;
-            if ($state_global eq 'new_distribution') {
-                if ($status) {
-                    ugtk2::ask_warn(N("Error"),
-                                    N("Installation failed"),
-                                    N("Installation logs can be found in '%s'", $log_file)
-                                );
-                } else {
-                    upgrade_distro_congratulations();
-                }
-            }
+            $mdvupdate_returned = 1;
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
@@ -365,30 +350,6 @@ sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exe
 sub restart_applet() {
     log::explanations(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
     exec($0, '--auto-update');
-}
-
-sub upgrade_distro_congratulations() {
-    local $mygtk2::left_padding = 0;
-    my $width = 500;
-    my $w = ugtk2->new(N("Congratulations"));
-    gtkadd($w->{window},
-           gtknew('VBox', children_tight => [
-               get_banner(),
-               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
-                      # explicitely wrap (for 2008.1):
-                      line_wrap => 1,
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
-               gtknew('Label_Left', text => N("You should restart your system."),
-                      # explicitely wrap (for 2008.1):
-                      line_wrap => 1,
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
-               create_okcancel($w, N("Ok")),
-           ]),
-       );
-    $w->{ok}->grab_focus;
-    $w->main;
 }
 
 sub confirm_upgrade() {
@@ -431,49 +392,7 @@ sub upgrade() {
     $already_in_upgrade = 1;
     my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
-    log::explanations("backuping urpmi configuration");
-    cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
-
-    my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
-
-    my $urpmi_lock = eval {
-        local $urpm->{fatal} = sub { die @_ };
-        urpm::lock::urpmi_db($urpm, 'exclusive');
-    };
-
-    if (my $err = $@) {
-        log::explanations(sprintf("locking urpmi database failed: %s"), $err);
-        return;
-    }
-    undef $urpmi_lock;
-
-    log::explanations("removing all existing urpmi media for upgrade");
-    run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
-
-    log::explanations("adding urpmi media for new distribution");
-    my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
-    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list?" .
-      join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
-    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
-      and return;
-
-    log::explanations("upgrading urpmi and rpmdrake");
-    log::explanations("upgrading the whole system");
-    # rerun gurpmi in case there was an issue (with eg: big transactions:
-    $refork_gurpmi = 1;
-    {
-        # force PATH:
-        local $ENV{TMPDIR} = undef;
-        $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
-    }
-    # we cannot use installUpdates() as MandrivaUpdate needs the media
-    # flaged as update (or else, we need to add a new option to MandrivaUpdate):
-    fork_gurpmi('--replacefiles');
-}
-
-sub fork_gurpmi {
-    $mdv_update_pid = fork_exec('gurpmi', '>>', $log_file, '--auto', '--auto-select',
-                                if_($root, "--urpmi-root=$root"), @_);
+    fork_exec('mdkapplet-upgrade-helper');
 }
 
 sub add_media() {
