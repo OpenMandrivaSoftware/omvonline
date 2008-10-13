@@ -67,21 +67,21 @@ sub run_gurpmi() {
         fork_gurpmi(@initial_args);
         undef @initial_args;
         my $status = $? >> 8;
-            if ($refork_gurpmi && $status) {
-                $refork_gurpmi--;
-            } else {
-                undef $refork_gurpmi;
-            }
+        if ($refork_gurpmi && $status) {
+            $refork_gurpmi--;
+        } else {
+            undef $refork_gurpmi;
+        }
 
         if (!$refork_gurpmi) {
-                if ($status) {
-                    ugtk2::ask_warn(N("Error"),
-                                    N("Installation failed"),
-                                    N("Installation logs can be found in '%s'", $log_file)
-                                );
-                } else {
-                    upgrade_distro_congratulations();
-                }
+            if ($status) {
+                ugtk2::ask_warn(N("Error"),
+                                N("Installation failed"),
+                                N("Installation logs can be found in '%s'", $log_file)
+                            );
+            } else {
+                upgrade_distro_congratulations();
+            }
         }
     }
 }
