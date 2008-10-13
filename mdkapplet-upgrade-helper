@@ -1,0 +1,148 @@
+#!/usr/bin/perl
+################################################################################
+# Mandriva Online Distribution Upgrade Helper                                  # 
+#                                                                              #
+# Copyright (C) 2008 Mandriva                                                  #
+#                                                                              #
+# Thierry Vignaud <tvignaud at mandriva dot com>                               #
+#                                                                              #
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
+
+use strict;
+use POSIX ":sys_wait_h";
+use lib qw(/usr/lib/libDrakX);
+use standalone; # for explanations
+use common;
+use run_program;
+use feature 'state';
+
+BEGIN { unshift @::textdomains, 'mdkonline' }
+
+use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
+use ugtk2 qw(:all);
+use lib qw(/usr/lib/libDrakX/drakfirsttime);
+use mdkonline;
+use Rpmdrake::open_db;
+
+
+ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
+my ($log_file);
+
+foreach my $opt (@ARGV) {
+    if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
+        $::rpmdrake_options{$1}[0] = $2;
+    }
+}
+
+my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
+
+my $new_distro;
+my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+
+run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
+
+upgrade();
+
+my ($refork_gurpmi);
+
+
+sub run_gurpmi() {
+    while ($refork_gurpmi) {
+        my $status = $? >> 8;
+            if ($refork_gurpmi && $status) {
+                fork_gurpmi();
+            }
+            undef $refork_gurpmi;
+                if ($status) {
+                    ugtk2::ask_warn(N("Error"),
+                                    N("Installation failed"),
+                                    N("Installation logs can be found in '%s'", $log_file)
+                                );
+                } else {
+                    upgrade_distro_congratulations();
+                }
+    }
+}
+
+sub upgrade_distro_congratulations() {
+    local $mygtk2::left_padding = 0;
+    my $width = 500;
+    my $w = ugtk2->new(N("Congratulations"));
+    gtkadd($w->{window},
+           gtknew('VBox', children_tight => [
+               get_banner(),
+               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro->{version}),
+                      # explicitely wrap (for 2008.1):
+                      line_wrap => 1,
+                      # workaround infamous 6 years old gnome bug #101968:
+                      width => $width - 50),
+               gtknew('Label_Left', text => N("You should restart your system."),
+                      # explicitely wrap (for 2008.1):
+                      line_wrap => 1,
+                      # workaround infamous 6 years old gnome bug #101968:
+                      width => $width - 50),
+               create_okcancel($w, N("Ok")),
+           ]),
+       );
+    $w->{ok}->grab_focus;
+    $w->main;
+}
+
+sub upgrade() {
+    log::explanations("backuping urpmi configuration");
+    cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
+
+    my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+
+    my $urpmi_lock = eval {
+        local $urpm->{fatal} = sub { die @_ };
+        urpm::lock::urpmi_db($urpm, 'exclusive');
+    };
+
+    if (my $err = $@) {
+        log::explanations(sprintf("locking urpmi database failed: %s"), $err);
+        return;
+    }
+    undef $urpmi_lock;
+
+    log::explanations("removing all existing urpmi media for upgrade");
+    run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
+
+    log::explanations("adding urpmi media for new distribution");
+    my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
+    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro->{version}.$product_id->{arch}.list?" .
+      join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
+    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
+      and return;
+
+    log::explanations("upgrading urpmi and rpmdrake");
+    log::explanations("upgrading the whole system");
+    # rerun gurpmi in case there was an issue (with eg: big transactions:
+    $refork_gurpmi = 1;
+    {
+        # force PATH:
+        local $ENV{TMPDIR} = undef;
+        $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
+    }
+    # we cannot use installUpdates() as MandrivaUpdate needs the media
+    # flaged as update (or else, we need to add a new option to MandrivaUpdate):
+    fork_gurpmi('--replacefiles');
+}
+
+sub fork_gurpmi {
+    fork_exec('gurpmi', '>>', $log_file, '--auto', '--auto-select',
+              if_($root, "--urpmi-root=$root"), @_);
+}
+
