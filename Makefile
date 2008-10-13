@@ -51,12 +51,9 @@ install: all
 	install -m644 x-mdv-exec.desktop $(DATADIR)/mimelnk/application/
 	mkdir -p $(PREFIX)/etc/security/console.apps/
 	install -m644 console.apps_urpmi.update $(PREFIX)/etc/security/console.apps/urpmi.update
-	install -m644 console.apps_urpmi.update $(PREFIX)/etc/security/console.apps/urpmi.removemedia
 	mkdir -p $(PREFIX)/etc/pam.d
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.update
-	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.removemedia
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
-	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.removemedia
 	ln -sf consolehelper $(PREFIX)/usr/bin/mdkapplet-upgrade-helper
 
 cleandist:
