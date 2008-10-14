@@ -305,7 +305,7 @@ sub is_there_a_new_distributions() {
 }
 
 
-my ($mdv_update_pid, $checker_pid, $media_manager_pid, $distro_upgrade);
+my ($mdv_update_pid, $checker_pid, $media_manager_pid);
 
 # Signal management 
 sub harvester {
@@ -317,7 +317,6 @@ sub harvester {
         my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
-            undef $distro_upgrade;
             $mdvupdate_returned = 1;
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -380,7 +379,6 @@ sub upgrade() {
     $already_in_upgrade = 1;
     my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
-    $distro_upgrade = 1;
     $mdv_update_pid = fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
                                 if_($root, "--urpmi-root=$root"));
 }
