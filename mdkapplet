@@ -38,13 +38,6 @@ use mdkonline;
 use Gtk2::Notify '-init', 'mdkapplet';
 use Rpmdrake::open_db;
 
-# POSIX unmasks the sigprocmask properly
-my $sigset = POSIX::SigSet->new;
-my $action = POSIX::SigAction->new('restart_applet',
-                                   $sigset,
-                                   &POSIX::SA_NODEFER);
-POSIX::sigaction(&POSIX::SIGHUP, $action);
-
 if (!find { $_ eq '--auto-update' } @ARGV) {
     if (my $pid = mdkonline::is_running('mdkapplet')) {
         die "mdkapplet already running ($pid)\n";
@@ -58,9 +51,6 @@ my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
 my $localdir = "$ENV{HOME}/.MdkOnline";
 my $localfile = "$localdir/mdkonline";
-
-my $release = mdkonline::get_release();
-
 
 my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
@@ -350,12 +340,6 @@ sub harvester {
 
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
-sub restart_applet() {
-    return if $distro_upgrade;
-    log::explanations(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
-    exec($0, '--auto-update');
-}
-
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $width = 500;
@@ -409,14 +393,10 @@ sub add_media() {
 }
 
 sub installUpdates() {
-    my $binfile = $0;
     return if $mdv_update_pid;
-    my $oldmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
     log::explanations(N_("Launching MandrivaUpdate\n"));
     $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash',
                                 if_($root, "--urpmi-root=$root"));
-    my $newmd5 = $release <= 10.2 ? mdkonline::md5file($binfile) : common::md5file($binfile);
-    restart_applet() if $newmd5 ne $oldmd5;
     silentCheck(); gtkflush();
 }
 

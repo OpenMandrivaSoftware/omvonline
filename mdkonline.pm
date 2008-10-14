@@ -35,19 +35,6 @@ use log;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
-sub md5file {
-    require Digest::MD5;
-    my @md5 = map {
-        my $sum;
-        if (open(my $FILE, $_)) {
-            binmode($FILE);
-            $sum = Digest::MD5->new->addfile($FILE)->hexdigest;
-            close($FILE); 
-        }
-        $sum;
-    } @_;   
-    return wantarray() ? @md5 : $md5[0];
-}
 
 sub get_release() {
     my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
