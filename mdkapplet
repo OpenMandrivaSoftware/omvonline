@@ -237,7 +237,7 @@ foreach my $opt (@ARGV) {
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
 my $new_distro;
-my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+my $product_id;
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
@@ -264,6 +264,7 @@ ugtk2::exit(0);
 
 
 sub is_there_a_new_distributions() {
+    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
     return if $product_id->{product} =~ /Flash/;
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
