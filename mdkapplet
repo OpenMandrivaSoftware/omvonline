@@ -315,7 +315,7 @@ sub is_there_a_new_distributions() {
 }
 
 
-my ($mdv_update_pid, $checker_pid, $media_manager_pid);
+my ($mdv_update_pid, $checker_pid, $media_manager_pid, $distro_upgrade);
 
 # Signal management 
 sub harvester {
