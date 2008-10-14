@@ -65,7 +65,6 @@ sub run_gurpmi() {
     my @initial_args = '--replacefiles';
     while ($refork_gurpmi) {
         fork_gurpmi(@initial_args);
-        undef @initial_args;
         my $status = $? >> 8;
         if ($refork_gurpmi && $status) {
             $refork_gurpmi--;
