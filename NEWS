@@ -1,8 +1,9 @@
 Version 2.59 - 14 October 2008
 
 - mdkapplet
-  o call gurpmi with --clean
   o do not restart the applet on package update anymore
+- mdkapplet-upgrade-helper
+  o call gurpmi with --clean
   o log where gurpmi logs are ending
   o log gurpmi STDERR too
   o make all gurpmi passes using --replacefiles instead of just the
@@ -11,7 +12,7 @@ Version 2.59 - 14 October 2008
 
 Version 2.58 - 14 October 2008
 
-- mdkapplet
+- mdkapplet-upgrade-helper
   o enable to test distro upgrade even when service is disabled
     through either --testing option or "TEST_DISTRO_UPGRADE=yes" in
     /etc/sysconfig/mdkapplet
