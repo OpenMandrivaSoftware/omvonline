@@ -418,6 +418,7 @@ sub installUpdates() {
 sub silentCheck() {
     state $check_time;
     my $new_time = time();
+    undef $new_distro;
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
         $check_time = $new_time;
         is_there_a_new_distributions();
