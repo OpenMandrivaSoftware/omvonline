@@ -35,7 +35,6 @@ install: all
 	install -m755 mdkapplet-upgrade-helper $(SBINDIR)
 	install -m755 $(MDKUPDATE) $(SBINDIR)
 	install -m755 $(MDKAPPLET) $(BINDIR)
-	install -m755 migrate-mdvonline-applet.pl $(SBINDIR)
 	install -d $(SYSCONFDIR)
 	install -m644 mdkapplet.conf $(SYSCONFDIR)/mdkapplet
 	install -m644 icons/$(NAME)16.png $(ICONSDIR)/mini/$(NAME).png
