@@ -146,6 +146,7 @@ sub upgrade() {
         # force PATH:
         local $ENV{TMPDIR} = undef;
         $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
+        log::explanations("logging gurpmi message in '$log_file'");
     }
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
