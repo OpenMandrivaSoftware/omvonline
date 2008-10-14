@@ -64,16 +64,16 @@ my ($refork_gurpmi);
 sub run_gurpmi() {
     my @initial_args = ('--replacefiles', '--clean');
     while ($refork_gurpmi) {
-        fork_gurpmi(@initial_args);
-        my $status = $? >> 8;
-        if ($refork_gurpmi && $status) {
+        
+        my $ok = fork_gurpmi(@initial_args);
+        if ($refork_gurpmi && !$ok) {
             $refork_gurpmi--;
         } else {
             undef $refork_gurpmi;
         }
 
         if (!$refork_gurpmi) {
-            if ($status) {
+            if (!$ok) {
                 ugtk2::ask_warn(N("Error"),
                                 N("Installation failed"),
                                 N("Installation logs can be found in '%s'", $log_file)
@@ -131,10 +131,13 @@ sub upgrade() {
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
     log::explanations("adding urpmi media for new distribution");
-    my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
-    my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list?" .
-      join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
-    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list) and do {
+
+    $ENV{URPMI_ADDMEDIA_REASON} = join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
+    # the following modifies $MIRRORLIST expansion in urpm/mirrors.pm,
+    # it must be set for gurpmi.addmedia, but also for gurpmi
+    $ENV{URPMI_ADDMEDIA_PRODUCT_VERSION} = $new_distro_version;
+
+    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', '$MIRRORLIST') and do {
         log::explanations("adding media for new distribution failed");
         log::explanations("restoringing urpmi configuration from $file");
         cp_af($file, "$root/etc/urpmi/urpmi.cfg");
@@ -158,7 +161,8 @@ sub upgrade() {
 }
 
 sub fork_gurpmi {
-    run_program::run('gurpmi', '>>', $log_file, '2>>', $log_file, '--auto', '--auto-select',
+    run_program::raw({ timeout => 'never' },
+		     'gurpmi', '>>', $log_file, '2>>', $log_file, '--auto', '--auto-select',
                       if_($root, "--urpmi-root=$root"), @_);
 }
 
