@@ -327,6 +327,7 @@ sub harvester {
         my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
+            undef $distro_upgrade;
             $mdvupdate_returned = 1;
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -350,6 +351,7 @@ sub harvester {
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
 sub restart_applet() {
+    return if $distro_upgrade;
     log::explanations(N_("Mandriva Online seems to be reinstalled, reloading applet ...."));
     exec($0, '--auto-update');
 }
@@ -394,6 +396,7 @@ sub upgrade() {
     $already_in_upgrade = 1;
     my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
+    $distro_upgrade = 1;
     $mdv_update_pid = fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
                                 if_($root, "--urpmi-root=$root"));
 }
