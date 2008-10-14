@@ -392,7 +392,7 @@ sub upgrade() {
     $already_in_upgrade = 1;
     my $_a = before_leaving { undef $already_in_upgrade };
     return if !confirm_upgrade();
-    fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}");
+    fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}", if_($root, "--urpmi-root=$root"));
 }
 
 sub add_media() {
