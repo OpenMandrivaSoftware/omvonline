@@ -134,8 +134,13 @@ sub upgrade() {
     my $product_type = lc($product_id->{type}); $product_type =~ s/\s//g;
     my $mirror_list = "http://api.mandriva.com/mirrors/$product_type.$new_distro_version.$product_id->{arch}.list?" .
       join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
-    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list)
-      and return;
+    system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', $mirror_list) and do {
+        log::explanations("adding media for new distribution failed");
+        log::explanations("restoringing urpmi configuration from $file");
+        cp_af($file, "$root/etc/urpmi/urpmi.cfg");
+        run_program::run('urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
+        return;
+    };
 
     log::explanations("upgrading urpmi and rpmdrake");
     log::explanations("upgrading the whole system");
