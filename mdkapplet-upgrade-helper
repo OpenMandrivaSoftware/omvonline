@@ -111,8 +111,9 @@ sub upgrade_distro_congratulations() {
 }
 
 sub upgrade() {
-    log::explanations("backuping urpmi configuration");
-    cp_af("$root/etc/urpmi/urpmi.cfg", "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000));
+    my $file = "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000);
+    log::explanations("backuping urpmi configuration in $file");
+    cp_af("$root/etc/urpmi/urpmi.cfg", $file);
 
     my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
 
