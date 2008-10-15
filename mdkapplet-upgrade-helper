@@ -123,7 +123,15 @@ sub upgrade() {
 
     if (my $err = $@) {
         log::explanations(sprintf("locking urpmi database failed: %s"), $err);
-        return;
+        ugtk2::ask_warn(N("Error"),
+                        N("Installation failed"),
+                        '',
+                        formatAlaTeX(N("Packages database is locked. Please close other applications
+working with packages database (do you have another media
+manager on another desktop, or are you currently installing
+packages as well?)."))
+                    );
+        exit(1);
     }
     undef $urpmi_lock;
 
@@ -142,7 +150,11 @@ sub upgrade() {
         log::explanations("restoringing urpmi configuration from $file");
         cp_af($file, "$root/etc/urpmi/urpmi.cfg");
         run_program::run('urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
-        return;
+        ugtk2::ask_warn(N("Error"),
+                        N("Installation failed"),
+                        N("Failure when adding medium"),
+                    );
+        exit(2);
     };
 
     log::explanations("upgrading urpmi and rpmdrake");
