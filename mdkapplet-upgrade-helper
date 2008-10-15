@@ -72,6 +72,9 @@ sub run_gurpmi() {
             undef $refork_gurpmi;
         }
 
+        # update media in case mirrors got updated if needed:
+        update_media() if $refork_gurpmi;
+
         if (!$refork_gurpmi) {
             if (!$ok) {
                 ugtk2::ask_warn(N("Error"),
