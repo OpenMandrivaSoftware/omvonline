@@ -149,7 +149,7 @@ packages as well?)."))
         log::explanations("adding media for new distribution failed");
         log::explanations("restoringing urpmi configuration from $file");
         cp_af($file, "$root/etc/urpmi/urpmi.cfg");
-        run_program::run('urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
+        update_media();
         ugtk2::ask_warn(N("Error"),
                         N("Installation failed"),
                         N("Failure when adding medium"),
@@ -178,3 +178,6 @@ sub fork_gurpmi {
                       if_($root, "--urpmi-root=$root"), @_);
 }
 
+sub update_media() {
+    run_program::run('urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
+}
