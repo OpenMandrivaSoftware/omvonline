@@ -447,14 +447,14 @@ sub silentCheck() {
         }
         $exit->('locked') if $will_not_update_media;
 
-        if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update')) {
+        if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update', if_($root, "--urpmi-root=$root"))) {
             $exit->('error_updating') if $will_not_update_media;
         }
 
         # update inactive backport media:
         my @inactive_backport_media = Rpmdrake::open_db::get_inactive_backport_media($urpm);
         log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
-        run_program::run('urpmi.update', $_) foreach @inactive_backport_media;
+        run_program::run('urpmi.update', if_($root, "--urpmi-root=$root"), $_) foreach @inactive_backport_media;
         
         require urpm::select;
         require urpm::media;
