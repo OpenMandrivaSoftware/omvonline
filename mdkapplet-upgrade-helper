@@ -54,12 +54,34 @@ my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
 my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
 
+if (!$ENV{URPMI_IGNORESIZE}) {
+    check_available_free_space('/usr', 800) &&
+      check_available_free_space('/var', 800)
+	or exit(1);
+}
+
 run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 
 upgrade();
 
 my ($refork_gurpmi);
 
+sub check_available_free_space {
+    my ($dir, $wanted_MB) = @_;
+
+    my (undef, $free_KB) = MDK::Common::System::df($dir);
+
+    if ($free_KB / 1024 < $wanted_MB) {
+	my $msg = ugtk2::escape_text_for_TextView_markup_format(
+	    N("Your system does not have enough space left in %s for upgrade (%dMB < %dMB)",
+	      $dir,
+	      $free_KB / 1024, $wanted_MB));
+	ugtk2::ask_warn(N("Error"), $msg);
+	0;
+    } else {
+	1;
+    }
+}
 
 sub run_gurpmi() {
     my @initial_args = ('--replacefiles', '--clean');
