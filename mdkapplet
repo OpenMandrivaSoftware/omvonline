@@ -373,11 +373,8 @@ sub confirm_upgrade() {
     $res;
 }
 
-my $already_in_upgrade;
 sub upgrade() {
-    return if $already_in_upgrade;
-    $already_in_upgrade = 1;
-    my $_a = before_leaving { undef $already_in_upgrade };
+    return if $mdv_update_pid;
     return if !confirm_upgrade();
     $mdv_update_pid = fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
                                 if_($root, "--urpmi-root=$root"));
