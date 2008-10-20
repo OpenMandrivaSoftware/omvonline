@@ -106,7 +106,7 @@ my %state = (
                  colour => [ 'bundle' ],
                  changes => [ 'okay' ],
                  menu => [ 'upgrade_distro', 'check' ],
-                 tt => [ N("A new stable distribution has been released") . "\n\n" . N("Do you want to upgrade?") ]
+                 tt => [ N("A new version of Mandriva Linux distribution has been released") . "\n\n" . N("Do you want to upgrade?") ]
              },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
@@ -342,12 +342,12 @@ sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exe
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $width = 500;
-    my $w = ugtk2->new(N("A new stable distribution has been released"));
+    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
-               gtknew('Label_Left', text => N("A new stable distribution has been released."),
+               gtknew('Label_Left', text => N("A new version of Mandriva Linux distribution has been released."),
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
                gtknew('HButtonBox', layout => 'start', children_tight => [
