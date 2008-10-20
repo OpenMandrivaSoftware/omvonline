@@ -344,19 +344,19 @@ sub confirm_upgrade() {
     my $width = 500;
     my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
+    my @common = (
+        # workaround infamous 6 years old gnome bug #101968:
+        width => $width - 50,
+    );
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
-               gtknew('Label_Left', text => N("A new version of Mandriva Linux distribution has been released."),
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
+               gtknew('Label_Left', text => N("A new version of Mandriva Linux distribution has been released."), @common),
                gtknew('HButtonBox', layout => 'start', children_tight => [
                    my $link = Gtk2::LinkButton->new($new_distro->{url}, N("More info about this new version")),
                ]),
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
-                                              $new_distro->{name} || $new_distro->{version}),
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
+                                              $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Yes"), N("No")),
            ]),
