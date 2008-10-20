@@ -163,6 +163,13 @@ packages as well?)."))
     log::explanations("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
+    $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+    if ($urpm->{global_config}{downloader}) {
+        log::explanations("disabling custom downloader in order to use aria2");
+        delete $urpm->{global_config}{downloader};
+        urpm::media::write_config($urpm);
+    }
+
     log::explanations("adding urpmi media for new distribution");
 
     $ENV{URPMI_ADDMEDIA_REASON} = join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
