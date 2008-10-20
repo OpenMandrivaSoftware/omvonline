@@ -135,6 +135,11 @@ sub upgrade_distro_congratulations() {
 }
 
 sub upgrade() {
+    my $xid = gtkroot()->XWINDOW;
+    
+    run_program::raw({ detach => 1 }, 'xdg-screensaver', 'suspend', $xid);
+    my $_w = before_leaving { run_program::raw({ detach => 1 }, 'xdg-screensaver', 'resume', $xid) };
+   
     my $file = "$ENV{HOME}/urpmi.cfg.backup." . int(rand 100000);
     log::explanations("backuping urpmi configuration in $file");
     cp_af("$root/etc/urpmi/urpmi.cfg", $file);
