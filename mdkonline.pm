@@ -29,12 +29,16 @@ use lib qw(/usr/lib/libDrakX);
 use common;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(fork_exec get_banner);
+our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename);
 
 use log;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
+
+sub get_stale_upgrade_filename() {
+    '/var/lib/urpmi/stale_upgrade_in_progress';
+}
 
 sub get_release() {
     my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
