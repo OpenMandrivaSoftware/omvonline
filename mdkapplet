@@ -106,6 +106,7 @@ my %state = (
                  colour => [ 'bundle' ],
                  changes => [ 'okay' ],
                  menu => [ 'upgrade_distro', 'check' ],
+                 urgency => 'low',
                  tt => [ N("A new version of Mandriva Linux distribution has been released") . "\n\n" . N("Do you want to upgrade?") ]
              },
 	     disconnected => {
@@ -573,6 +574,7 @@ sub setState {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
         }
 
+        $bubble->set_urgency($state{$state}{urgency}) if $state{$state}{urgency};
         $bubble->set_timeout(5000);
         eval { $bubble->show };
     }
