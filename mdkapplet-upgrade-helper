@@ -116,11 +116,20 @@ my @common = (
 );
 
 sub upgrade_failed() {
-    ugtk2::ask_warn(N("Error"),
-                    N("Installation failed"),
-                    N("Installation logs can be found in '%s'", $log_file)
-                );
- }
+    local $mygtk2::left_padding = 0;
+    my $w = ugtk2->new(N("Error"));
+    gtkadd($w->{window},
+           gtknew('VBox', children_tight => [
+               get_banner(),
+               gtknew('Label_Left', text => N("Installation failed"), @common),
+               gtknew('Label_Left', text => N("Installation logs can be found in '%s'", $log_file), @common),
+               create_okcancel($w, N("Retry"), N("Cancel")),
+           ]),
+       );
+    $w->{ok}->grab_focus;
+    my $answer = $w->main;
+    upgrade() if $answer;
+}
 
 sub upgrade_distro_congratulations() {
     local $mygtk2::left_padding = 0;
