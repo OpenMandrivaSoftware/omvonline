@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-2009.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2008-10-07 13:19+0100\n"
 "Last-Translator: Lónyai Gergely <aleph@mandriva.org>\n"
 "Language-Team: Hungarian <aleph@mandriva.org>\n"
@@ -50,12 +50,12 @@ msgstr "A rendelkezésre álló csomagok lekérdezése..."
 msgid "New updates are available for your system"
 msgstr "Új frissítések érhetők el az Ön rendszeréhez"
 
-#: ../mdkapplet:117 ../mdkapplet:352
-#, c-format
-msgid "A new stable distribution has been released"
+#: ../mdkapplet:110
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Egy új, stabil kiadás jelent meg"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr "Szeretne frissíteni?"
@@ -143,19 +143,17 @@ msgstr "A rendszer frissítése"
 msgid "Launching drakconnect\n"
 msgstr "A DrakConnect indítása\n"
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
-"Úgy tűnik, a Mandriva Online újra lett telepítve - az alkalmazás "
-"újratöltése..."
 
-#: ../mdkapplet:363
-#, c-format
-msgid "A new stable distribution has been released."
+#: ../mdkapplet:357
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Egy új, stabil kiadás jelent meg."
 
-#: ../mdkapplet:378
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr "Több információ az új verzióról"
@@ -180,7 +178,31 @@ msgstr "Igen"
 msgid "No"
 msgstr "Nem"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "\"MandrivaUpdate\" indítása\n"
@@ -205,7 +227,12 @@ msgstr "A hálózat ellenőrzése: úgy tűnik, nem aktív\n"
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr "Adathordozó felvétele"
@@ -252,7 +279,14 @@ msgstr "Minden rendszerindításnál induljon el"
 msgid "Quit"
 msgstr "Kilépés"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Hiba"
@@ -267,7 +301,17 @@ msgstr "A telepítés hibával ért véget."
 msgid "Installation logs can be found in '%s'"
 msgstr "A telepítésről készített naplót a %s fájlban találja"
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:136
 #, c-format
 msgid "Congratulations"
 msgstr "Gratulálunk"
@@ -277,17 +321,31 @@ msgstr "Gratulálunk"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "A Mandriva %s kiadására történő frissítés sikeresen lezajlott."
 
-#: ../mdkapplet-upgrade-helper:101
-#, c-format
-msgid "You should restart your system."
+#: ../mdkapplet-upgrade-helper:142
+#, fuzzy, c-format
+msgid "You must restart your system."
 msgstr "A rendszer újraindítása szükséges."
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "OK"
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Disztribúció frissítése"
@@ -337,6 +395,14 @@ msgstr "  --debug\t\t\t- a tevékenység naplózása\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen.\n"
+
+#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+#~ msgstr ""
+#~ "Úgy tűnik, a Mandriva Online újra lett telepítve - az alkalmazás "
+#~ "újratöltése..."
+
+#~ msgid "Ok"
+#~ msgstr "OK"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Ellenőrzés... vannak elérhető frissítések\n"

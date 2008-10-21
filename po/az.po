@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-az\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2004-09-12 19:12+0300\n"
 "Last-Translator: Mətin Əmirov <metin@karegen.com>\n"
 "Language-Team: Azerbaijani <translation-team-az@lists.sourceforge.net>\n"
@@ -47,12 +47,12 @@ msgstr "Xahiş edirik gözləyin, mövcud paketlər tapılır..."
 msgid "New updates are available for your system"
 msgstr "Sisteminiz üçün yeniləmələr mövcuddur"
 
-#: ../mdkapplet:117 ../mdkapplet:352
+#: ../mdkapplet:110
 #, c-format
-msgid "A new stable distribution has been released"
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr ""
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr ""
@@ -136,17 +136,17 @@ msgstr ""
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect başladılır\n"
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-msgstr "Mandriva Online yenidən qurulub, applet yenidən yüklənir ..."
-
-#: ../mdkapplet:363
-#, c-format
-msgid "A new stable distribution has been released."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
 
-#: ../mdkapplet:378
+#: ../mdkapplet:357
+#, c-format
+msgid "A new version of Mandriva Linux distribution has been released."
+msgstr ""
+
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr ""
@@ -171,7 +171,31 @@ msgstr "Bəli"
 msgid "No"
 msgstr "Xeyir"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate başladılır\n"
@@ -196,7 +220,12 @@ msgstr "Şəbəkə Yoxlanır: deyəsən qeyri-fəaldır\n"
 msgid "Warning"
 msgstr "Xəbərdarlıq"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr ""
@@ -242,7 +271,14 @@ msgstr "Həmişə başlanğıcda işə sal"
 msgid "Quit"
 msgstr "Çıx"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Xəta"
@@ -257,7 +293,17 @@ msgstr "Qurulum bacarılmadı"
 msgid "Installation logs can be found in '%s'"
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr "Ləğv et"
+
+#: ../mdkapplet-upgrade-helper:136
 #, c-format
 msgid "Congratulations"
 msgstr "Təbriklər"
@@ -267,17 +313,31 @@ msgstr "Təbriklər"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:101
+#: ../mdkapplet-upgrade-helper:142
 #, c-format
-msgid "You should restart your system."
+msgid "You must restart your system."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "Oldu"
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr ""
@@ -327,6 +387,12 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
+
+#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+#~ msgstr "Mandriva Online yenidən qurulub, applet yenidən yüklənir ..."
+
+#~ msgid "Ok"
+#~ msgstr "Oldu"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Yoxlanır... Yeniləmələr mövcuddur\n"
@@ -718,9 +784,6 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr "Sonrakı"
-
-#~ msgid "Cancel"
-#~ msgstr "Ləğv et"
 
 #~ msgid "Previous"
 #~ msgstr "Əvvəlki"

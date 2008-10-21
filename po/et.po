@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2008-10-07 15:12+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -47,12 +47,12 @@ msgstr "Palun oodake, otsitakse kättesaadavaid pakette..."
 msgid "New updates are available for your system"
 msgstr "Teie süsteemile on uuendusi"
 
-#: ../mdkapplet:117 ../mdkapplet:352
-#, c-format
-msgid "A new stable distribution has been released"
+#: ../mdkapplet:110
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Ilmunud on uus stabiilne distributsioon"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr "Kas soovite uuendada?"
@@ -137,19 +137,17 @@ msgstr "Uuenda süsteemi"
 msgid "Launching drakconnect\n"
 msgstr "Drakconnecti käivitamine\n"
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
-"Mandriva Online paistab olevat uuesti paigaldatud, aplett laaditakse "
-"uuesti..."
 
-#: ../mdkapplet:363
-#, c-format
-msgid "A new stable distribution has been released."
+#: ../mdkapplet:357
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Ilmunud on uus stabiilne distributsioon."
 
-#: ../mdkapplet:378
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr "Rohkem teavet uue versiooni kohta"
@@ -174,7 +172,31 @@ msgstr "Jah"
 msgid "No"
 msgstr "Ei"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate'i käivitamine\n"
@@ -199,7 +221,12 @@ msgstr "Võrgu kontroll: paistab, et see pole aktiivne\n"
 msgid "Warning"
 msgstr "Hoiatus"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr "Lisa andmekandjad"
@@ -245,7 +272,14 @@ msgstr "Käivitatakse alati käivitumisel"
 msgid "Quit"
 msgstr "Välju"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Viga"
@@ -260,7 +294,17 @@ msgstr "Paigaldamine nurjus"
 msgid "Installation logs can be found in '%s'"
 msgstr "Paigaldamislogid leiab asukohast '%s'"
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:136
 #, c-format
 msgid "Congratulations"
 msgstr "Õnnitlused!"
@@ -270,17 +314,31 @@ msgstr "Õnnitlused!"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Uuendamine ja Mandriva väljalaske %s paigaldamine õnnestus."
 
-#: ../mdkapplet-upgrade-helper:101
-#, c-format
-msgid "You should restart your system."
+#: ../mdkapplet-upgrade-helper:142
+#, fuzzy, c-format
+msgid "You must restart your system."
 msgstr "Nüüd tuleks süsteem uuesti käivitada."
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "Olgu"
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Distributsiooni uuendamine"
@@ -331,6 +389,14 @@ msgstr "  --debug\t\t\t- toimingud logitakse\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Pakettide uuendamine update_source andmekandjalt nurjus.\n"
+
+#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+#~ msgstr ""
+#~ "Mandriva Online paistab olevat uuesti paigaldatud, aplett laaditakse "
+#~ "uuesti..."
+
+#~ msgid "Ok"
+#~ msgstr "Olgu"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Kontroll... On uuendusi\n"

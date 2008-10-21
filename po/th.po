@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2003-02-28 05:55+0900\n"
 "Last-Translator: Pramote Khuwijitjaru <kmote@hotmail.com>\n"
 "Language-Team: Thai <en@li.org>\n"
@@ -45,12 +45,12 @@ msgstr "กำลังหาเพกเกจที่มีอยู่, ก�
 msgid "New updates are available for your system"
 msgstr ""
 
-#: ../mdkapplet:117 ../mdkapplet:352
+#: ../mdkapplet:110
 #, c-format
-msgid "A new stable distribution has been released"
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr ""
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr ""
@@ -127,17 +127,17 @@ msgstr ""
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
 
-#: ../mdkapplet:363
+#: ../mdkapplet:357
 #, c-format
-msgid "A new stable distribution has been released."
+msgid "A new version of Mandriva Linux distribution has been released."
 msgstr ""
 
-#: ../mdkapplet:378
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr ""
@@ -162,7 +162,31 @@ msgstr "ใช่"
 msgid "No"
 msgstr "ไม่ต้อง"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr ""
@@ -187,7 +211,12 @@ msgstr ""
 msgid "Warning"
 msgstr "คำเตือน"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr ""
@@ -233,7 +262,14 @@ msgstr ""
 msgid "Quit"
 msgstr "ออก"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "ข้อผิดพลาด"
@@ -248,7 +284,17 @@ msgstr "การติดตั้งไม่สำเร็จ"
 msgid "Installation logs can be found in '%s'"
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: ../mdkapplet-upgrade-helper:136
 #, fuzzy, c-format
 msgid "Congratulations"
 msgstr "ขอแสดงความยินดี"
@@ -258,17 +304,31 @@ msgstr "ขอแสดงความยินดี"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:101
+#: ../mdkapplet-upgrade-helper:142
 #, c-format
-msgid "You should restart your system."
+msgid "You must restart your system."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "ตกลง"
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr ""
@@ -318,6 +378,9 @@ msgstr ""
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "ไม่สามารถอัพเดทแพ็จเกจจากมีเดียของ update_source \n"
+
+#~ msgid "Ok"
+#~ msgstr "ตกลง"
 
 #, fuzzy
 #~ msgid "Failed to open urpmi database"
@@ -497,9 +560,6 @@ msgstr "ไม่สามารถอัพเดทแพ็จเกจจา
 
 #~ msgid "Next"
 #~ msgstr "ถัดไป"
-
-#~ msgid "Cancel"
-#~ msgstr "ยกเลิก"
 
 #~ msgid "Previous"
 #~ msgstr "ก่อน"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2008-09-21 01:13+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -49,12 +49,12 @@ msgstr "Vent venligst, finder tilgængelige pakker..."
 msgid "New updates are available for your system"
 msgstr "Nye opdateringer er tilgængelige for dit system"
 
-#: ../mdkapplet:117 ../mdkapplet:352
-#, c-format
-msgid "A new stable distribution has been released"
+#: ../mdkapplet:110
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "En ny stabil distribution er blevet udgivet"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr "Ønsker du at opgradere?"
@@ -139,18 +139,17 @@ msgstr "Opgradér systemet"
 msgid "Launching drakconnect\n"
 msgstr "Begynder på drakconnect\n"
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
-"Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
 
-#: ../mdkapplet:363
+#: ../mdkapplet:357
 #, fuzzy, c-format
-msgid "A new stable distribution has been released."
+msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "En ny stabil distribution er blevet udgivet"
 
-#: ../mdkapplet:378
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr ""
@@ -175,7 +174,31 @@ msgstr "Ja"
 msgid "No"
 msgstr "Nej"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Start MandrivaUpdate op\n"
@@ -200,7 +223,12 @@ msgstr "Tjekker netværk: ser ud til at være deaktiveret\n"
 msgid "Warning"
 msgstr "Advarsel"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr ""
@@ -246,7 +274,14 @@ msgstr "Start altid op ved opstart"
 msgid "Quit"
 msgstr "Afslut"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Fejl"
@@ -261,7 +296,17 @@ msgstr "Installation mislykkedes"
 msgid "Installation logs can be found in '%s'"
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:136
 #, c-format
 msgid "Congratulations"
 msgstr "Tillykke"
@@ -271,17 +316,31 @@ msgstr "Tillykke"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:101
+#: ../mdkapplet-upgrade-helper:142
 #, c-format
-msgid "You should restart your system."
+msgid "You must restart your system."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "O.k."
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr ""
@@ -331,6 +390,13 @@ msgstr "  --debug\t\t\t- log der laves\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
+
+#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+#~ msgstr ""
+#~ "Mandriva Online ser ud til at være geninstalleret, genindlæser applet ...."
+
+#~ msgid "Ok"
+#~ msgstr "O.k."
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Tjekker... Opdateringer er tilgængelige\n"

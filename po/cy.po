@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 02:44+0200\n"
+"POT-Creation-Date: 2008-10-21 18:03+0200\n"
 "PO-Revision-Date: 2008-10-07 18:49-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg/Welsh <post@meddal.com>\n"
@@ -46,12 +46,12 @@ msgstr "Arhoswch, canfod pecynnau sydd ar gael..."
 msgid "New updates are available for your system"
 msgstr "Mae diweddariadau newydd ar gael ar gyfer eich system"
 
-#: ../mdkapplet:117 ../mdkapplet:352
-#, c-format
-msgid "A new stable distribution has been released"
+#: ../mdkapplet:110
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mae dosbarthiad newydd sefydlog wedi ei ryddhau"
 
-#: ../mdkapplet:117
+#: ../mdkapplet:110
 #, c-format
 msgid "Do you want to upgrade?"
 msgstr "Hoffech chi ddiweddaru?"
@@ -137,18 +137,17 @@ msgstr "Diweddaru'r system"
 msgid "Launching drakconnect\n"
 msgstr "Cychwyn drakconnect\n"
 
-#: ../mdkapplet:347
+#: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
-msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+msgid "New version of Mandriva Linux distribution"
 msgstr ""
-"Mae Mandriva Online i'w weld wedi ei ail osod, ail lwytho'r rhaglennig..."
 
-#: ../mdkapplet:363
-#, c-format
-msgid "A new stable distribution has been released."
+#: ../mdkapplet:357
+#, fuzzy, c-format
+msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mae dosbarthiad newydd sefydlog wedi ei ryddhau."
 
-#: ../mdkapplet:378
+#: ../mdkapplet:359
 #, c-format
 msgid "More info about this new version"
 msgstr "Mwy o wybodaeth am y fersiwn newydd"
@@ -173,7 +172,31 @@ msgstr "Iawn"
 msgid "No"
 msgstr "Na"
 
-#: ../mdkapplet:448
+#: ../mdkapplet:393
+#, c-format
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+
+#: ../mdkapplet:395
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr ""
+
+#: ../mdkapplet:396
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+
+#: ../mdkapplet:399
+#, c-format
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+
+#: ../mdkapplet:425
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Cychwyn MandrivaUpdate\n"
@@ -198,7 +221,12 @@ msgstr "Gwirio'r Rhwydwaith: i weld wedi ei anablu\n"
 msgid "Warning"
 msgstr "Rhybudd"
 
-#: ../mdkapplet:579
+#: ../mdkapplet:598
+#, c-format
+msgid "More Information"
+msgstr ""
+
+#: ../mdkapplet:606
 #, c-format
 msgid "Add media"
 msgstr "Ychwanegu cyfrwng"
@@ -244,7 +272,14 @@ msgstr "Cychwyn wrth gychwyn"
 msgid "Quit"
 msgstr "Gadael"
 
-#: ../mdkapplet-upgrade-helper:78
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Gwall"
@@ -259,7 +294,17 @@ msgstr "Methodd y gosod"
 msgid "Installation logs can be found in '%s'"
 msgstr "Mae cofnodion gosod i'w gweld yn '%s'"
 
-#: ../mdkapplet-upgrade-helper:92
+#: ../mdkapplet-upgrade-helper:126
+#, c-format
+msgid "Retry"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#, c-format
+msgid "Cancel"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:136
 #, c-format
 msgid "Congratulations"
 msgstr "Llongyfarchiadau"
@@ -269,17 +314,31 @@ msgstr "Llongyfarchiadau"
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Mae diweddaru i Mandriva %s wedi bod yn llwyddiant."
 
-#: ../mdkapplet-upgrade-helper:101
-#, c-format
-msgid "You should restart your system."
+#: ../mdkapplet-upgrade-helper:142
+#, fuzzy, c-format
+msgid "You must restart your system."
 msgstr "Nawr ailgychwynnwch eich system."
 
-#: ../mdkapplet-upgrade-helper:106
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
-msgid "Ok"
-msgstr "Iawn"
+msgid "Reboot"
+msgstr ""
 
-#: ../mdkonline.pm:71
+#: ../mdkapplet-upgrade-helper:173
+#, c-format
+msgid ""
+"Packages database is locked. Please close other applications\n"
+"working with packages database (do you have another media\n"
+"manager on another desktop, or are you currently installing\n"
+"packages as well?)."
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:206
+#, c-format
+msgid "Failure when adding medium"
+msgstr ""
+
+#: ../mdkonline.pm:58
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Diweddaru'r Dosbarthiad"
@@ -330,6 +389,13 @@ msgstr "  --debug\t\t\t- cofnodi'r hyn sydd wedi ei wneud\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
+
+#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
+#~ msgstr ""
+#~ "Mae Mandriva Online i'w weld wedi ei ail osod, ail lwytho'r rhaglennig..."
+
+#~ msgid "Ok"
+#~ msgstr "Iawn"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Gwirio... Mae diweddariadau ar gael\n"
