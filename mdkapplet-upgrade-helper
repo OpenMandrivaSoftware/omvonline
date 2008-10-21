@@ -132,6 +132,8 @@ sub upgrade_failed() {
 }
 
 sub upgrade_distro_congratulations() {
+    rm_rf(get_stale_upgrade_filename());
+
     local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Congratulations"));
     gtkadd($w->{window},
@@ -178,6 +180,8 @@ packages as well?)."))
         exit(1);
     }
     undef $urpmi_lock;
+
+    touch(get_stale_upgrade_filename());
 
     log::explanations("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
