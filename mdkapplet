@@ -373,7 +373,37 @@ sub confirm_upgrade() {
     my $res = $w->main;
     setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} = bool2text($warn_me);
-    $res;
+    $res ? really_confirm_upgrade() : 0;
+}
+
+sub really_confirm_upgrade() {
+    local $mygtk2::left_padding = 0;
+    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
+
+    # estimated package size:
+    my $c;
+    foreach (run_program::get_stdout('rpm', '-qa', '--qf', '%{Archivesize}\n')) {
+        $c += $_;
+    }
+    $c = formatXiB($c);
+
+    gtkadd($w->{window},
+           gtknew('VBox', children_tight => [
+               get_banner(),
+               gtknew('Label_Left', text => N("This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."),
+                      @common),
+               gtknew('Label_Left', text => N("Estimated download data will be %s", $c), @common),
+               gtknew('Label_Left', text => N("You should close all other running applications before continuing.") .
+                        (1 || detect_devices::isLaptop() ?
+                           ' ' .
+                             N("You should put your laptop on AC and favor ethernet connection over wifi, if available.")
+                               : ''),
+                      @common),
+               create_okcancel($w, N("Yes"), N("No")),
+           ]),
+       );
+    $w->{ok}->grab_focus;
+    return $w->main;
 }
 
 sub upgrade() {
