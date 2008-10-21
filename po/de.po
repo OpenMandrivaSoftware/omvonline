@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-07 13:33+0200\n"
+"PO-Revision-Date: 2008-10-21 22:30+0200\n"
 "Last-Translator: Oliver Burger <oliver@mandrivauser.de>\n"
 "Language-Team: deutsch <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -54,9 +54,9 @@ msgid "New updates are available for your system"
 msgstr "Neue Aktualisierungen für Ihr System verfügbar"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Eine neue stabile Distribution ist erschienen"
+msgstr "Eine neue Version von Mandriva Linux ist erschienen"
 
 #: ../mdkapplet:110
 #, c-format
@@ -81,13 +81,11 @@ msgstr "urpmi Datenbank ist gesperrt"
 #: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
+msgstr "Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Kein Medium gefunden. Sie müssen einige Medien mit dem 'Software Medien "
 "Manager'"
@@ -147,12 +145,12 @@ msgstr "Starte drakconnect\n"
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Neue Version der Mandriva Linux Distribution"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Eine neue stabile Distribution ist erschienen."
+msgstr "Eine neue Version von Mandriva Linux ist erschienen."
 
 #: ../mdkapplet:359
 #, c-format
@@ -185,23 +183,25 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Diese Aktualisierung erfordert eine Netzwerkverbindung mit hoher Bandbreite (Kabel, xDSL,...)  "
+"und kann mehrere Stunden benötigen, um vollständig zu sein."
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Die geschätzten Download-Daten werden %s groß sein"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Sie sollten alle anderen Programme beenden, bevor sie fortfahren."
 
 #: ../mdkapplet:399
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Sie sollten Ihr Notebook an das Stromnetz anschließen und eine Ethernet-Verbindung vor einer WLAN-Verbindung bevorzugen, wenn dies möglich ist."
 
 #: ../mdkapplet:425
 #, c-format
@@ -231,7 +231,7 @@ msgstr "Warnung"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Mehr Informationen"
 
 #: ../mdkapplet:606
 #, c-format
@@ -256,8 +256,7 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
+msgstr "Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:601
 #, c-format
@@ -282,9 +281,8 @@ msgstr "Beenden"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Auf Ihrem System befindet sich nicht genug freier Speicherplatz in %s für die Aktualisierung (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -323,9 +321,9 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Eine Aktualisierung auf die Mandriva-Version %s war erfolgreich."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
-msgstr "Sie sollten Ihr System neustarten."
+msgstr "Sie müssen Ihr System neustarten."
 
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
@@ -401,10 +399,3 @@ msgstr " --debug\t\t\t- protokolliere was gemacht wird\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Aktualisieren der Pakete vom Mdkupdate Medium nicht möglich.\n"
 
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr ""
-#~ "Mandriva Online scheint neu installiert worden zu sein, lade Applet "
-#~ "erneut ...."
-
-#~ msgid "Ok"
-#~ msgstr "OK"
