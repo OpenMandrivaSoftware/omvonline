@@ -122,7 +122,7 @@ sub upgrade_distro_congratulations() {
                       line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
-               gtknew('Label_Left', text => N("You should restart your system."),
+               gtknew('Label_Left', text => N("You must restart your system."),
                       # explicitely wrap (for 2008.1):
                       line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
