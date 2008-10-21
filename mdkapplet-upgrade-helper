@@ -107,6 +107,7 @@ sub run_gurpmi() {
     }
 }
 
+my $width = 500;
 my @common = (
     # explicitely wrap (for 2008.1):
     line_wrap => 1,
@@ -123,7 +124,6 @@ sub upgrade_failed() {
 
 sub upgrade_distro_congratulations() {
     local $mygtk2::left_padding = 0;
-    my $width = 500;
     my $w = ugtk2->new(N("Congratulations"));
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
