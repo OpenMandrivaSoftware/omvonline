@@ -127,11 +127,12 @@ sub upgrade_distro_congratulations() {
                       line_wrap => 1,
                       # workaround infamous 6 years old gnome bug #101968:
                       width => $width - 50),
-               create_okcancel($w, N("Ok")),
+               create_okcancel($w, N("Reboot"), N("Cancel")),
            ]),
        );
     $w->{ok}->grab_focus;
-    $w->main;
+    my $answer = $w->main;
+    any::reboot() if $answer && !$::testing;
 }
 
 sub upgrade() {
