@@ -249,6 +249,13 @@ $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
 
 run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
+
+my $width = 500;
+my @common = (
+    # workaround infamous 6 years old gnome bug #101968:
+    width => $width - 50,
+);
+
 Gtk2->main;
 
 ugtk2::exit(0);
@@ -342,13 +349,8 @@ sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exe
 
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
-    my $width = 500;
     my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
-    my @common = (
-        # workaround infamous 6 years old gnome bug #101968:
-        width => $width - 50,
-    );
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
