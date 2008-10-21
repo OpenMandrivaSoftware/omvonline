@@ -107,6 +107,13 @@ sub run_gurpmi() {
     }
 }
 
+my @common = (
+    # explicitely wrap (for 2008.1):
+    line_wrap => 1,
+    # workaround infamous 6 years old gnome bug #101968:
+    width => $width - 50,
+);
+
 sub upgrade_failed() {
     ugtk2::ask_warn(N("Error"),
                     N("Installation failed"),
@@ -122,15 +129,8 @@ sub upgrade_distro_congratulations() {
            gtknew('VBox', children_tight => [
                get_banner(),
                gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro_version),
-                      # explicitely wrap (for 2008.1):
-                      line_wrap => 1,
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
-               gtknew('Label_Left', text => N("You must restart your system."),
-                      # explicitely wrap (for 2008.1):
-                      line_wrap => 1,
-                      # workaround infamous 6 years old gnome bug #101968:
-                      width => $width - 50),
+                      @common),
+               gtknew('Label_Left', text => N("You must restart your system."), @common),
                create_okcancel($w, N("Reboot"), N("Cancel")),
            ]),
        );
