@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-2009.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-07 13:19+0100\n"
+"PO-Revision-Date: 2008-10-22 15:41+0100\n"
 "Last-Translator: Lónyai Gergely <aleph@mandriva.org>\n"
 "Language-Team: Hungarian <aleph@mandriva.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,12 +33,8 @@ msgstr "A rendszer naprakész"
 
 #: ../mdkapplet:98
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Szolgáltatásbeállítási probléma; ellenőrizze a naplókat és küldjön levelet a "
-"következő címre: support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Szolgáltatásbeállítási probléma; ellenőrizze a naplókat és küldjön levelet a következő címre: support@mandrivaonline.com"
 
 #: ../mdkapplet:105
 #, c-format
@@ -51,9 +47,9 @@ msgid "New updates are available for your system"
 msgstr "Új frissítések érhetők el az Ön rendszeréhez"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Egy új, stabil kiadás jelent meg"
+msgstr "A Mandriva Linux disztribúciónak új verziója jelent meg"
 
 #: ../mdkapplet:110
 #, c-format
@@ -68,8 +64,7 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:129
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
 #: ../mdkapplet:135
 #, c-format
@@ -83,11 +78,8 @@ msgstr "Nem támogatott verzió (túl régi, vagy fejlesztői verzió)"
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Adatforrás nem található. Fel kell venni egy vagy több adatforrást a "
-"szoftverforrás-kezelővel."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Adatforrás nem található. Fel kell venni egy vagy több adatforrást a szoftverforrás-kezelővel."
 
 #: ../mdkapplet:154
 #, c-format
@@ -118,7 +110,8 @@ msgstr "Hiba az adatforrás frissítésekor"
 
 # "Rendszerfrissítések telepítése" volt a 8.2-ben,
 #  ebből az utolsó 2 betű nem fért ki
-#: ../mdkapplet:202 ../mdkapplet:576
+#: ../mdkapplet:202
+#: ../mdkapplet:576
 #, c-format
 msgid "Install updates"
 msgstr "Frissítések telepítése"
@@ -133,7 +126,8 @@ msgstr "Frissítések keresése"
 msgid "Configure Network"
 msgstr "A hálózat beállítása"
 
-#: ../mdkapplet:205 ../mdkapplet:577
+#: ../mdkapplet:205
+#: ../mdkapplet:577
 #, c-format
 msgid "Upgrade the system"
 msgstr "A rendszer frissítése"
@@ -143,15 +137,16 @@ msgstr "A rendszer frissítése"
 msgid "Launching drakconnect\n"
 msgstr "A DrakConnect indítása\n"
 
-#: ../mdkapplet:352 ../mdkapplet:381
+#: ../mdkapplet:352
+#: ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Mandriva Linux disztribúció új verziója"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Egy új, stabil kiadás jelent meg."
+msgstr "A Mandriva Linux disztribúciónak új verziója jelent meg."
 
 #: ../mdkapplet:359
 #, c-format
@@ -180,27 +175,23 @@ msgstr "Nem"
 
 #: ../mdkapplet:393
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Ehhez a frissítéshez nagy sávszélességű kapcsolat (Kábel, xDSL,...) szükséges és több órát is igénybe vehet a teljesítése."
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "%s adat letöltésére van szükség"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Érdemes a többi nyitott alkalmazásokat bezárni folytatás előtt."
 
 #: ../mdkapplet:399
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Rakja hálózati áramellátásra a laptopot és ha lehet váltson vezetékes hálózati kapcsolatra wifi helyett."
 
 #: ../mdkapplet:425
 #, c-format
@@ -230,7 +221,7 @@ msgstr "Figyelmeztetés"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "További információk"
 
 #: ../mdkapplet:606
 #, c-format
@@ -255,8 +246,7 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
+msgstr "A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
 
 #: ../mdkapplet:601
 #, c-format
@@ -281,12 +271,13 @@ msgstr "Kilépés"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "A rendszerben nincs elegendő szabad hely a frissítéshez (%d MB > %d MB)"
 
-#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
-#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
+#: ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:170
+#: ../mdkapplet-upgrade-helper:204
 #, c-format
 msgid "Error"
 msgstr "Hiba"
@@ -306,7 +297,8 @@ msgstr "A telepítésről készített naplót a %s fájlban találja"
 msgid "Retry"
 msgstr "Újrapróbálás"
 
-#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
+#: ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet-upgrade-helper:143
 #, c-format
 msgid "Cancel"
 msgstr "Mégsem"
@@ -322,7 +314,7 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "A Mandriva %s kiadására történő frissítés sikeresen lezajlott."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
 msgstr "A rendszer újraindítása szükséges."
 
@@ -359,8 +351,7 @@ msgstr "Disztribúció frissítése"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -404,132 +395,99 @@ msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen
 #~ msgstr ""
 #~ "Úgy tűnik, a Mandriva Online újra lett telepítve - az alkalmazás "
 #~ "újratöltése..."
-
 #~ msgid "Ok"
 #~ msgstr "OK"
-
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Ellenőrzés... vannak elérhető frissítések\n"
-
 #~ msgid "Packages are up to date"
 #~ msgstr "A csomagok naprakészek"
-
 #~ msgid "Failed to open urpmi database"
 #~ msgstr "Nem sikerült megnyitni az Urpmi-adatbázist"
-
 #~ msgid "Connecting to"
 #~ msgstr "Kapcsolódás:"
-
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux-frissítési alkalmazás"
-
 #~ msgid "Security error"
 #~ msgstr "Biztonsági hiba"
-
 #~ msgid "Generic error (machine already registered)"
 #~ msgstr "Általános hiba (a gép már regisztrálva van)"
-
 #~ msgid "Database error"
 #~ msgstr "Adatbázishiba"
-
 #~ msgid ""
 #~ "Server Database failed\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "A kiszolgáló adatbázisával probléma\n"
 #~ "lépett fel. Próbálkozzon később."
-
 #~ msgid "Registration error"
 #~ msgstr "Regisztrációs hiba"
-
 #~ msgid "Some parameters are missing"
 #~ msgstr "Bizonyos paraméterek hiányoznak"
-
 #~ msgid "Password error"
 #~ msgstr "Jelszóhiba"
-
 #~ msgid "Wrong password"
 #~ msgstr "Helytelen jelszó"
-
 #~ msgid "Login error"
 #~ msgstr "Bejelentkezési hiba"
-
 #~ msgid ""
 #~ "The email you provided is already in use\n"
 #~ "Please enter another one\n"
 #~ msgstr ""
 #~ "A megadott email-cím már foglalt.\n"
 #~ "Adjon meg másikat.\n"
-
 #~ msgid "The email you provided is invalid or forbidden"
 #~ msgstr "A megadott email-cím érvénytelen vagy tiltott"
-
 #~ msgid ""
 #~ "Email address box is empty\n"
 #~ "Please provide one"
 #~ msgstr ""
 #~ "Nincs megadva email-cím.\n"
 #~ "Adjon meg egyet."
-
 #~ msgid "Restriction Error"
 #~ msgstr "Korlátozási hiba"
-
 #~ msgid "Database access forbidden"
 #~ msgstr "Az adatbázis-elérés tiltott"
-
 #~ msgid "Service error"
 #~ msgstr "Szolgáltatási hiba"
-
 #~ msgid ""
 #~ "Mandriva web services are currently unavailable\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "A Mandriva webes szolgáltatásai jelenleg nem elérhetők.\n"
 #~ "Próbálkozzon később."
-
 #~ msgid "Password mismatch"
 #~ msgstr "A jelszavak nem egyeznek"
-
 #~ msgid ""
 #~ "Mandriva web services are under maintenance\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "A Mandriva webes szolgáltatásai karbantartás alatt állnak.\n"
 #~ "Próbálkozzon később."
-
 #~ msgid "User Forbidden"
 #~ msgstr "A felhasználó le van tiltva"
-
 #~ msgid "User account forbidden by Mandriva web services"
 #~ msgstr ""
 #~ "A felhasználói azonosító le van tiltva a Mandriva webes szolgáltatásain"
-
 #~ msgid "Connection error"
 #~ msgstr "Kapcsolódási hiba"
-
 #~ msgid "Mandriva web services not reachable"
 #~ msgstr "A Mandriva webes szolgáltatásai nem elérhetők"
-
 #~ msgid ""
 #~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 #~ "file.\n"
 #~ msgstr ""
 #~ "  --bundle fájl.bundle\t- csomagelemzés és -telepítés .bundle metainfó-"
 #~ "fájlból\n"
-
 #~ msgid ""
 #~ "You first need to install the system on your harddrive with the 'Live "
 #~ "Install' wizard."
 #~ msgstr ""
 #~ "Előbb telepítenie kell a rendszert a merevlemezre a \"Live Install\" "
 #~ "varázslóval."
-
 #~ msgid "Please wait"
 #~ msgstr "Kis türelmet"
-
 #~ msgid "Preparing..."
 #~ msgstr "Előkészítés..."
-
 #~ msgid ""
 #~ "Failed to authenticate to the bundle server:\n"
 #~ "\n"
@@ -538,10 +496,8 @@ msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen
 #~ "Nem sikerült bejelentkezni a kötegkiszolgálóra:\n"
 #~ "\n"
 #~ "%s"
-
 #~ msgid "An error occurred"
 #~ msgstr "Hiba lépett fel"
-
 #~ msgid ""
 #~ "The version of the Mandriva Online client is too old.\n"
 #~ "\n"
@@ -552,112 +508,80 @@ msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen
 #~ "\n"
 #~ "Frissítse egy új verzióra. A következő helyen szerezhető be: http://start."
 #~ "mandriva.com"
-
 #~ msgid "This bundle is not well formated. Aborting."
 #~ msgstr "A köteg formátuma nem megfelelő. Kilépés."
-
 #~ msgid "Installing packages ...\n"
 #~ msgstr "Csomagok telepítése...\n"
-
 #~ msgid "New bundles are available for your system"
 #~ msgstr "Új kötegek érhetők el az Ön rendszeréhez"
-
 #~ msgid "Service is not configured. Please click on \"Configure the service\""
 #~ msgstr ""
 #~ "A szolgáltatás nincs beállítva. Kattintson \"A szolgáltatás beállítása\" "
 #~ "funkcióra."
-
 #~ msgid "Configure the service"
 #~ msgstr "A szolgáltatás beállítása"
-
 #~ msgid "Check updates"
 #~ msgstr "Frissítések keresése"
-
 #~ msgid "Configure Now!"
 #~ msgstr "Beállítás most"
-
 #~ msgid "Actions"
 #~ msgstr "Műveletek"
-
 #~ msgid "Configure"
 #~ msgstr "Beállítás"
-
 #~ msgid "See logs"
 #~ msgstr "Információ a naplóban"
-
 #~ msgid "Status"
 #~ msgstr "Állapot"
-
 #~ msgid "Close"
 #~ msgstr "Bezárás"
-
 #~ msgid "Network Connection: "
 #~ msgstr "Hálózati kapcsolat: "
-
 #~ msgid "Up"
 #~ msgstr "Aktív"
-
 #~ msgid "Down"
 #~ msgstr "Inaktív"
-
 #~ msgid "Last check: "
 #~ msgstr "Legutóbbi ellenőrzés: "
-
 #~ msgid "Machine name:"
 #~ msgstr "Gépnév:"
-
 #~ msgid "Updates: "
 #~ msgstr "Frissítések: "
-
 #~ msgid "Development release not supported by service"
 #~ msgstr "A szolgáltatás nem támogat fejlesztői verziókat"
-
 #~ msgid "Too old release not supported by service"
 #~ msgstr "Túl régi, a szolgáltatás által nem támogatott verzió"
-
 #~ msgid "Unknown state"
 #~ msgstr "Ismeretlen állapot"
-
 #~ msgid "Online services disabled. Contact Mandriva Online site\n"
 #~ msgstr ""
 #~ "Az online szolgáltatások inaktiválva vannak. Lépjen kapcsolatba a "
 #~ "Mandriva Online weboldallal.\n"
-
 #~ msgid "Wrong Password.\n"
 #~ msgstr "Helytelen jelszó.\n"
-
 #~ msgid "Wrong Action or host or login.\n"
 #~ msgstr "Helytelen művelet, gép, vagy bejelentkezési név.\n"
-
 #~ msgid ""
 #~ "Something is wrong with your network settings (check your route, firewall "
 #~ "or proxy settings)\n"
 #~ msgstr ""
 #~ "A hálózatbeállítások nem megfelelők (ellenőrizze az útválasztást, a "
 #~ "tűzfalat és a proxybeállításokat).\n"
-
 #~ msgid ""
 #~ "Problem occured while connecting to the server, please contact the "
 #~ "support team"
 #~ msgstr ""
 #~ "Probléma lépett fel a kiszolgálóhoz való kapcsolódáskor. Lépjen "
 #~ "kapcsolatba a támogatási csapattal."
-
 #~ msgid "Response from Mandriva Online server\n"
 #~ msgstr "Válasz a Mandriva Online-kiszolgálótól\n"
-
 #~ msgid "No check"
 #~ msgstr "Nincs ellenőrzés"
-
 #~ msgid "Checking config file: Not present\n"
 #~ msgstr "Beállításfájl ellenőrzése: nem található\n"
-
 #~ msgid "Logs"
 #~ msgstr "Naplók"
-
 #~ msgid "Clear"
 #~ msgstr "Törlés"
-
 #~ msgid ""
 #~ "mdonline version %s\n"
 #~ "Copyright (C) %s Mandriva.\n"
@@ -671,42 +595,30 @@ msgstr "A csomagok Mandriva Update-adatforrásból való frissítése sikertelen
 #~ "Ez a program szabad szoftver; a GNU GPL alapján terjeszthető.\n"
 #~ "\n"
 #~ "Használat:\n"
-
 #~ msgid "  --box=\t\t\t- hostname.\n"
 #~ msgstr "  --box=\t\t\t- gépnév\n"
-
 #~ msgid "  --country\t\t\t- name of country of the user. \n"
 #~ msgstr "  --country\t\t\t- a felhasználó országának neve\n"
-
 #~ msgid "  --interactive\t\t- use the interactive mode.\n"
 #~ msgstr "  --interactive\t\t- interaktív mód használata\n"
-
 #~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
 #~ msgstr "  --nointeractive\t- nem-interaktív mód használata\n"
-
 #~ msgid "  --login=\t\t     - login name of the user.\n"
 #~ msgstr "  --login=\t\t     - a felhasználó bejelentkezési neve\n"
-
 #~ msgid "  --pass=\t\t\t- password  of the user.\n"
 #~ msgstr "  --pass=\t\t\t- a felhasználó jelszava\n"
-
 #~ msgid "Mandriva Online"
 #~ msgstr "Mandriva Online"
-
 #~ msgid "I already have an account"
 #~ msgstr "Már van azonosítóm"
-
 #~ msgid "I want to subscribe"
 #~ msgstr "Szeretnék feliratkozni"
-
 #~ msgid "Mr."
 #~ msgstr "Mr."
-
 #~ msgid "Mrs."
 #~ msgstr "Mrs."
-
 #~ msgid "Ms."
 #~ msgstr "Ms."
-
 #~ msgid "Reading configuration\n"
 #~ msgstr "Konfiguráció beolvasása\n"
+
