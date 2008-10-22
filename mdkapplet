@@ -362,7 +362,7 @@ sub confirm_upgrade() {
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
-               create_okcancel($w, N("Yes"), N("No")),
+               create_okcancel($w, N("Next"), N("Cancel")),
            ]),
        );
     $link->set_uri_hook(sub {
@@ -400,7 +400,7 @@ sub really_confirm_upgrade() {
                              N("You should put your laptop on AC and favor ethernet connection over wifi, if available.")
                                : ''),
                       @common),
-               create_okcancel($w, N("Yes"), N("No")),
+               create_okcancel($w, N("Next"), N("Cancel")),
            ]),
        );
     $w->{ok}->grab_focus;
