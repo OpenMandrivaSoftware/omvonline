@@ -14,16 +14,14 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-07 16:47+0200\n"
-"Last-Translator: Amazis.net sp. z o.o. - Tomasz Bednarski <tomasz."
-"bednarski@mandriva.pl>\n"
+"PO-Revision-Date: 2008-10-22 09:31+0200\n"
+"Last-Translator: Amazis.net sp. z o.o. - Tomasz Bednarski <tomasz.bednarski@mandriva.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:83
@@ -56,9 +54,9 @@ msgid "New updates are available for your system"
 msgstr "Dostępne są nowe aktualizacje dla Twojego systemu"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Udostępniono nową wersję dystrybucji"
+msgstr "Udostępniono nową wersję dystrybucji Mandriva Linux"
 
 #: ../mdkapplet:110
 #, c-format
@@ -87,10 +85,8 @@ msgstr "Nieobsługiwane wydanie (za stare, lub wydanie rozwojowe)"
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
 
 #: ../mdkapplet:154
 #, c-format
@@ -147,12 +143,12 @@ msgstr "Uruchamianie programu drakconnect\n"
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Nowa wersja dystrybucji Mandriva Linux"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Udostępniono nową stabilną wersję dystrybucji."
+msgstr "Udostępniono nową wersję dystrybucji Mandriva Linux."
 
 #: ../mdkapplet:359
 #, c-format
@@ -185,6 +181,8 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Aktualizacja wymaga łącza internetowego o wysokiej przepustowości "
+"(kablówka, xDSL, ...) i może potrwać kilka godzin."
 
 #: ../mdkapplet:395
 #, c-format
@@ -194,14 +192,14 @@ msgstr ""
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Przed kontynuowaniem instalacji zaleca się zamknięcie wszystkich uruchomionych programów."
 
 #: ../mdkapplet:399
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Podłącz notebooka do zasilania oraz połącz się z internetem z wykorzystaniem połączenia kablowego zamiast bezprzewodowego, np. wifi."
 
 #: ../mdkapplet:425
 #, c-format
@@ -231,7 +229,7 @@ msgstr "Ostrzeżenie"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Więcej informacji"
 
 #: ../mdkapplet:606
 #, c-format
@@ -281,9 +279,8 @@ msgstr "Zakończ"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Niewystarczająca ilość miejsca na %s do wykonania aktualizacji (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -322,7 +319,7 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Aktualizacja systemu do wersji Mandriva %s przebiegła pomyśłnie."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
 msgstr "Uruchom komputer ponownie."
 
@@ -401,10 +398,3 @@ msgstr "  --debug\t\t\t- zapisuj wykonane operacje\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"
 
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr ""
-#~ "Mandriva Online prawdopodobnie zostało przeinstalowane. Ładowanie "
-#~ "apletu ...."
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
