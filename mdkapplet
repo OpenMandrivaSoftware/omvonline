@@ -252,6 +252,8 @@ run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 
 my $width = 500;
 my @common = (
+    # explicitely wrap (for 2008.1):
+    line_wrap => 1,
     # workaround infamous 6 years old gnome bug #101968:
     width => $width - 50,
 );
