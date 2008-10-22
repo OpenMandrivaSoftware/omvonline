@@ -11,15 +11,14 @@ msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-07 21:45+0200\n"
+"PO-Revision-Date: 2008-10-22 21:57+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:83
@@ -52,9 +51,9 @@ msgid "New updates are available for your system"
 msgstr "Pro váš systém jsou k dispozici nové aktualizace"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Byla vydána nová stabilní distribuce"
+msgstr "Byla vydána nová verze distribuce Mandriva Linux"
 
 #: ../mdkapplet:110
 #, c-format
@@ -83,8 +82,7 @@ msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nebyl nalezen žádný zdroj softwaru. Je třeba přidat alespoň jeden zdroj "
 "pomocí Správce zdrojů softwaru."
@@ -143,12 +141,12 @@ msgstr "Spouští se drakconnect\n"
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Nová verze distribuce Mandriva Linux"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Byla vydána nová stabilní distribuce."
+msgstr "Byla vydána nová verze distribuce Mandriva Linux."
 
 #: ../mdkapplet:359
 #, c-format
@@ -181,16 +179,18 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Toto povýšení vyžaduje širokopásmové síťové připojení (kabelové, xDSL, …) "
+"a celkem může trvat několik hodin."
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Odhadovaná velikost stažených dat bude %s"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
 
 #: ../mdkapplet:399
 #, c-format
@@ -198,6 +198,8 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"Váš přenosný počítač by měl být v režimu napájení ze sítě a pokud je dostupné, mělo by být upřednostněno "
+"pevné síťové připojení před bezdrátovým."
 
 #: ../mdkapplet:425
 #, c-format
@@ -227,7 +229,7 @@ msgstr "Varování"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Více informací"
 
 #: ../mdkapplet:606
 #, c-format
@@ -252,8 +254,7 @@ msgstr "Copyright ©%s by Mandriva"
 #: ../mdkapplet:599
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
 #: ../mdkapplet:601
 #, c-format
@@ -280,9 +281,8 @@ msgstr "Konec"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Váš systém nemá na povýšení dostatek volného prostoru na %s (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -321,9 +321,9 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Povýšení na verzi Mandriva %s bylo úspěšné."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
-msgstr "Váš systém by měl být restartován."
+msgstr "Váš systém musí být restartován."
 
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
@@ -400,9 +400,3 @@ msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
 
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr ""
-#~ "Služba Mandriva Online je zřejmě přeinstalovaná, nahrávám applet znovu…"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
