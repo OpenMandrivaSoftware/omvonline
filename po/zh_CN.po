@@ -45,9 +45,9 @@ msgid "New updates are available for your system"
 msgstr "您的系统现有可用的更新"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "发行版已经有了新的稳定版本"
+msgstr "Mandriva Linux 发行版已经发布了新版本"
 
 #: ../mdkapplet:110
 #, c-format
@@ -129,17 +129,17 @@ msgstr "升级系统"
 #: ../mdkapplet:348
 #, c-format
 msgid "Launching drakconnect\n"
-msgstr "调用 Drak 连接\n"
+msgstr "调用 Mandriva 网络中心\n"
 
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "新版本的 Mandriva Linux 发行版"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "发行版已经有了新的稳定版本。"
+msgstr "Mandriva Linux 发行版已经发布了新版本。"
 
 #: ../mdkapplet:359
 #, c-format
@@ -171,24 +171,24 @@ msgstr "否"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr ""
+msgstr "本升级需要宽带连接，可能需要几小时才能完成。"
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "估计将下载数据为 %s"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "在继续之前，您应该关闭正在运行的其它应用程序。"
 
 #: ../mdkapplet:399
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "如果可能的话，您应该将您的笔记本转为用电源供电，并且使用高速有线连接。"
 
 #: ../mdkapplet:425
 #, c-format
@@ -218,7 +218,7 @@ msgstr "警告"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "更多信息"
 
 #: ../mdkapplet:606
 #, c-format
@@ -270,7 +270,7 @@ msgstr "退出"
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgstr "您系统中的 %s 没有足够的空间进行升级(%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -286,7 +286,7 @@ msgstr "安装失败"
 #: ../mdkapplet-upgrade-helper:80
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "安装日志可以在“%s”找到"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -306,12 +306,12 @@ msgstr "恭喜"
 #: ../mdkapplet-upgrade-helper:96
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "升级到 Mandriva %s 版本成功。"
 
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "您必须重新启动您的系统。"
 
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
@@ -384,155 +384,3 @@ msgstr "  --debug\t\t\t- 记录所执行的操作\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "无法从 update_source 介质更新软件包。\n"
-
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr "Mandriva Online 似乎重新安装了，正在重新装入小程序..."
-
-#~ msgid "Ok"
-#~ msgstr "确定"
-
-#~ msgid "Checking... Updates are available\n"
-#~ msgstr "正在检查... 有可用的更新\n"
-
-#~ msgid "Packages are up to date"
-#~ msgstr "软件包已为最新"
-
-#~ msgid "Failed to open urpmi database"
-#~ msgstr "打开 urpmi 数据库出错"
-
-#~ msgid "Connecting to"
-#~ msgstr "正在连接到"
-
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "Mandriva Linux 更新小程序"
-
-#~ msgid "Security error"
-#~ msgstr "安全错误"
-
-#~ msgid "Generic error (machine already registered)"
-#~ msgstr "常规错误(机器已经注册过)"
-
-#~ msgid "Database error"
-#~ msgstr "数据库错误"
-
-#~ msgid ""
-#~ "Server Database failed\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "服务器数据失败\n"
-#~ "请稍后再试"
-
-#~ msgid "Registration error"
-#~ msgstr "注册错误"
-
-#~ msgid "Some parameters are missing"
-#~ msgstr "缺少某些参数"
-
-#~ msgid "Password error"
-#~ msgstr "密码错误"
-
-#~ msgid "Wrong password"
-#~ msgstr "密码错误"
-
-#~ msgid "Login error"
-#~ msgstr "登录错误"
-
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr ""
-#~ "您所提供的电子邮件已经被其他人使用了\n"
-#~ "请选择另外一个电子邮件地址\n"
-
-#~ msgid "The email you provided is invalid or forbidden"
-#~ msgstr "您提供的电子邮件地址无效"
-
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr ""
-#~ "电子邮件地址为空\n"
-#~ "请提供一个地址"
-
-#~ msgid "Restriction Error"
-#~ msgstr "限制错误"
-
-#~ msgid "Database access forbidden"
-#~ msgstr "数据库访问被禁止"
-
-#~ msgid "Service error"
-#~ msgstr "服务错误"
-
-#~ msgid ""
-#~ "Mandriva web services are currently unavailable\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Mandriva Web 服务目前不可用\n"
-#~ "请稍后再试"
-
-#~ msgid "Password mismatch"
-#~ msgstr "密码不匹配"
-
-#~ msgid ""
-#~ "Mandriva web services are under maintenance\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Mandriva Web 服务目前正在维护\n"
-#~ "请稍后再试"
-
-#~ msgid "User Forbidden"
-#~ msgstr "用户被禁止"
-
-#~ msgid "User account forbidden by Mandriva web services"
-#~ msgstr "用户账户被 Mandriva Web 服务所禁止"
-
-#~ msgid "Connection error"
-#~ msgstr "连接错误"
-
-#~ msgid "Mandriva web services not reachable"
-#~ msgstr "无法连接到 Mandriva Web 服务"
-
-#~ msgid ""
-#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-#~ "file.\n"
-#~ msgstr ""
-#~ "  --bundle file.bundle\t- 分析并安装 .bundle 元信息文件中附带的软件包。\n"
-
-#~ msgid ""
-#~ "You first need to install the system on your harddrive with the 'Live "
-#~ "Install' wizard."
-#~ msgstr "您需要先使用“Live Install”将系统安装到硬盘上。"
-
-#~ msgid "Please wait"
-#~ msgstr "请稍候"
-
-#~ msgid "Preparing..."
-#~ msgstr "正在准备..."
-
-#~ msgid ""
-#~ "Failed to authenticate to the bundle server:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "认证到捆绑包服务器失败：\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "An error occurred"
-#~ msgstr "发生了一个错误"
-
-#~ msgid ""
-#~ "The version of the Mandriva Online client is too old.\n"
-#~ "\n"
-#~ "You need to update to a newer version. You can get a new one from http://"
-#~ "start.mandriva.com"
-#~ msgstr ""
-#~ "此版本的 Mandriva Online 客户端太老了。\n"
-#~ "\n"
-#~ "您需要更新到较新版本。您可以从 http://start.mandriva.com 获得新版本。"
-
-#~ msgid "This bundle is not well formated. Aborting."
-#~ msgstr "此捆绑包的格式不对。"
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "正在安装软件包...\n"
