@@ -355,6 +355,12 @@ sub confirm_upgrade() {
     my $w = ugtk2->new(N("New version of Mandriva Linux distribution"), width => $width + 20);
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
     my $link;
+
+    {
+        # use wizard button order (for both 2008.1 & 2009.0):
+        local $::isWizard = 1;
+        local $w->{pop_it} = 0;
+        local $::isInstall = 1;
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
@@ -368,6 +374,8 @@ sub confirm_upgrade() {
                create_okcancel($w, N("Next"), N("Cancel")),
            ]),
        );
+    }
+    
     $link->set_uri_hook(sub {
                             my (undef, $url) = @_;
                             run_program::raw({ detach => 1, setuid => get_parent_uid() }, 'www-browser', $url);
@@ -391,6 +399,11 @@ sub really_confirm_upgrade() {
     }
     $c = formatXiB($c);
 
+    {
+        # use wizard button order (for both 2008.1 & 2009.0):
+        local $::isWizard = 1;
+        local $w->{pop_it} = 0;
+        local $::isInstall = 1;
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
@@ -406,6 +419,7 @@ sub really_confirm_upgrade() {
                create_okcancel($w, N("Next"), N("Cancel")),
            ]),
        );
+    }
     $w->{ok}->grab_focus;
     return $w->main;
 }
