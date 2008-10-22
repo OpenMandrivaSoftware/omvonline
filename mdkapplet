@@ -266,7 +266,6 @@ ugtk2::exit(0);
 sub is_there_a_new_distributions() {
     $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
     return if $product_id->{product} =~ /Flash/;
-    return 1 if -e get_stale_upgrade_filename();
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
@@ -306,6 +305,10 @@ sub is_there_a_new_distributions() {
     # then it's the most recent release:
     my $new_distribution = $distros[0];
 
+    if (-e get_stale_upgrade_filename()) {
+        $new_distro = $new_distribution;
+        return 1;
+    }
     return if !member($product_id->{version}, map { $_->{version} } @distros);
 
     if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
