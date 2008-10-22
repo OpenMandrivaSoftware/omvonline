@@ -352,7 +352,7 @@ sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exe
 
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
-    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
+    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"), width => $width + 20);
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
@@ -381,7 +381,7 @@ sub confirm_upgrade() {
 
 sub really_confirm_upgrade() {
     local $mygtk2::left_padding = 0;
-    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"));
+    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"), width => $width + 20);
 
     # estimated package size:
     my $c;
