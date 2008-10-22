@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-08 08:56+0200\n"
+"PO-Revision-Date: 2008-10-22 21:31+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,9 +49,9 @@ msgid "New updates are available for your system"
 msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Banaketa egonkor berri bat kaleratu da"
+msgstr "Mandriva Linux banaketaren bertsio berri bat kaleratu da"
 
 #: ../mdkapplet:110
 #, c-format
@@ -76,13 +76,11 @@ msgstr "urpmi datubasea blokeatuta"
 #: ../mdkapplet:142
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:148
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
@@ -142,12 +140,12 @@ msgstr "drakconect abiarazten\n"
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Mandriva Linux banaketaren bertsio berria"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Banaketa egonkor berri bat kaleratu da."
+msgstr "Mandriva Linux banaketaren bertsio berri bat kaleratu da."
 
 #: ../mdkapplet:359
 #, c-format
@@ -179,24 +177,24 @@ msgstr "Ez"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr ""
+msgstr "Bertsio berritze honek banda zabalera haundiko sare lotura (kablea, xDSL, ...)  behar du eta osatzeko orduak beharko ditu."
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Jaitsi behar den datu kopurua %s izango dela kalkulatu da"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Jarraitu aurretik martxan dauden gainontzeko aplikazio guztiak itxi beharko zenituzke."
 
 #: ../mdkapplet:399
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Magalekoa sare elektrikora konektatu beharko zenuke eta wifi loturaren gainetik ethernet hobetsi, eskuragarri badago."
 
 #: ../mdkapplet:425
 #, c-format
@@ -226,7 +224,7 @@ msgstr "Kontuz"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Informazio gehiago"
 
 #: ../mdkapplet:606
 #, c-format
@@ -276,9 +274,8 @@ msgstr "Irten"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Zure sistemak ez dauka %s-n behar adina leku aske bertsio berritzeko (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -317,9 +314,9 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Bertsio berritza Mandriva %s askapenera arrakastatsua izan da."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
-msgstr "Zure sistema berrabiatu behar zenuke."
+msgstr "Zure sistema berrabiatu behar duzu."
 
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
@@ -396,8 +393,3 @@ msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr "Mandriva Online berrinstalatu dela dirudi, appleta birzamatzen ..."
-
-#~ msgid "Ok"
-#~ msgstr "Ados"
