@@ -414,7 +414,7 @@ sub really_confirm_upgrade() {
                       @common),
                gtknew('Label_Left', text => N("Estimated download data will be %s", $c), @common),
                gtknew('Label_Left', text => N("You should close all other running applications before continuing.") .
-                        (1 || detect_devices::isLaptop() ?
+                        (detect_devices::isLaptop() ?
                            ' ' .
                              N("You should put your laptop on AC and favor ethernet connection over wifi, if available.")
                                : ''),
