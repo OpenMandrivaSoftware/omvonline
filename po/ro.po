@@ -36,8 +36,8 @@ msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-21 18:03+0200\n"
-"PO-Revision-Date: 2008-10-08 09:36+0200\n"
-"Last-Translator: Cosmin Humeniuc <cosmin@mandrivausers.ro>\n"
+"PO-Revision-Date: 2008-10-24 18:59+0100\n"
+"Last-Translator: Florin Catalin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Mandrivausers.ro <cfrussen@yahoo.co.uk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,9 +79,9 @@ msgid "New updates are available for your system"
 msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
 
 #: ../mdkapplet:110
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "O nouă distribuție stabilă a fost lansată"
+msgstr "O nouă versiune a distribuţiei Mandriva Linux a fost lansată"
 
 #: ../mdkapplet:110
 #, c-format
@@ -173,12 +173,12 @@ msgstr "Se lansează drakconnect\n"
 #: ../mdkapplet:352 ../mdkapplet:381
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Versiune nouă a distribuţiei Mandriva Linux"
 
 #: ../mdkapplet:357
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "O nouă distribuție stabilă a fost lansată."
+msgstr "O nouă versiune a distribuţiei Mandriva Linux a fost lansată."
 
 #: ../mdkapplet:359
 #, c-format
@@ -211,16 +211,19 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Această actualizare majoră necesită o conexiune la reţea rapidă (cablu, "
+"xDSL, ...) şi poate dura câteva ore."
 
 #: ../mdkapplet:395
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Estimarea datelor de descărcat este de %s"
 
 #: ../mdkapplet:396
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
+"Ar trebui să închideţi toate aplicaţiile lansate înainte de a continua."
 
 #: ../mdkapplet:399
 #, c-format
@@ -228,6 +231,8 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"Ar trebui să vă conectaţi portabilul la încărcător şi să optaţi pentru o "
+"conexiune ethernet în loc de wifi."
 
 #: ../mdkapplet:425
 #, c-format
@@ -257,7 +262,7 @@ msgstr "Avertisment"
 #: ../mdkapplet:598
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Informaţii suplimentare"
 
 #: ../mdkapplet:606
 #, c-format
@@ -310,6 +315,8 @@ msgstr "Ieșire"
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
+"Sistemul dvs nu dispune de spaţiu suficient pe %s pentru actualizarea majoră "
+"(%dMo < %dMo)"
 
 #: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
 #: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
@@ -348,9 +355,9 @@ msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "Avansarea la versiunea Mandriva %s s-a încheiat cu succes."
 
 #: ../mdkapplet-upgrade-helper:142
-#, fuzzy, c-format
+#, c-format
 msgid "You must restart your system."
-msgstr "Ar trebui să vă reporniți sistemul."
+msgstr "Trebuie să reporniți sistemul."
 
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
@@ -425,544 +432,3 @@ msgstr "  --debug\t\t\t- jurnal activitate\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nu se pot actualiza pachetele de pe mediul update_source.\n"
-
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr ""
-#~ "Mandriva Online pare să fi fost reinstalat, se reîncarcă mini-"
-#~ "aplicația ...."
-
-#~ msgid "Ok"
-#~ msgstr "OK"
-
-#~ msgid "Checking... Updates are available\n"
-#~ msgstr "Se verifică... Actualizări sunt disponibile\n"
-
-#~ msgid "Packages are up to date"
-#~ msgstr "Pachetele sunt actualizate"
-
-#~ msgid "Failed to open urpmi database"
-#~ msgstr "Nu se deschide baza de date urpmi"
-
-#~ msgid "Connecting to"
-#~ msgstr "Conectare la"
-
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "Mandriva Linux Updates Applet"
-
-#~ msgid "Security error"
-#~ msgstr "Eroare securitate"
-
-#~ msgid "Generic error (machine already registered)"
-#~ msgstr "Eroare comună (mașina este deja înregistrată)"
-
-#~ msgid "Database error"
-#~ msgstr "Eroare bază de date"
-
-#~ msgid ""
-#~ "Server Database failed\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Eșec a bazei de date a serverului\n"
-#~ "Vă rugăm încercați mai târziu"
-
-#~ msgid "Registration error"
-#~ msgstr "Eroare înregistrare"
-
-#~ msgid "Some parameters are missing"
-#~ msgstr "Anumiți parametrii lipsesc"
-
-#~ msgid "Password error"
-#~ msgstr "Eroare parolă"
-
-#~ msgid "Wrong password"
-#~ msgstr "Parolă greșită"
-
-#~ msgid "Login error"
-#~ msgstr "Eroare logare"
-
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr ""
-#~ "Adresa e-mail este deja folosită\n"
-#~ "Vă rog alegeți alta\n"
-
-#~ msgid "The email you provided is invalid or forbidden"
-#~ msgstr "Adresa de e-mail furnizată este incorectă"
-
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr ""
-#~ "Câmpul e-mail este gol\n"
-#~ "Completați-l"
-
-#~ msgid "Restriction Error"
-#~ msgstr "Eroare restricționare"
-
-#~ msgid "Database access forbidden"
-#~ msgstr "Accesul interzis la baza de date"
-
-#~ msgid "Service error"
-#~ msgstr "Eroare serviciu"
-
-#~ msgid ""
-#~ "Mandriva web services are currently unavailable\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Serviciile web Mandriva sunt indisponibile momentan\n"
-#~ "Vă rugăm încercați mai târziu"
-
-#~ msgid "Password mismatch"
-#~ msgstr "Nepotrivire parole"
-
-#~ msgid ""
-#~ "Mandriva web services are under maintenance\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Serviciile web Mandriva sunt în revizie\n"
-#~ "Vă rugăm încercați mai târziu"
-
-#~ msgid "User Forbidden"
-#~ msgstr "Utilizator interzis"
-
-#~ msgid "User account forbidden by Mandriva web services"
-#~ msgstr "Cont utilizator anulat de serviciile web Mandriva"
-
-#~ msgid "Connection error"
-#~ msgstr "Eroare conexiune"
-
-#~ msgid "Mandriva web services not reachable"
-#~ msgstr "Serviciile web Mandriva indisponibile"
-
-#~ msgid ""
-#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-#~ "file.\n"
-#~ msgstr ""
-#~ "  --bundle file.bundle\t- parcurge și instalează pachetele din .bundle "
-#~ "metainfo file.\n"
-
-#~ msgid ""
-#~ "You first need to install the system on your harddrive with the 'Live "
-#~ "Install' wizard."
-#~ msgstr ""
-#~ "Este necesară instalarea sistemului instant pe hard cu asistentul 'Live "
-#~ "Install'."
-
-#~ msgid "Please wait"
-#~ msgstr "Vă rog să așteptați"
-
-#~ msgid "Preparing..."
-#~ msgstr "Pregătire..."
-
-#~ msgid ""
-#~ "Failed to authenticate to the bundle server:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Eroare de autentificare pe server:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid "An error occurred"
-#~ msgstr "A apărut o eroare"
-
-#~ msgid ""
-#~ "The version of the Mandriva Online client is too old.\n"
-#~ "\n"
-#~ "You need to update to a newer version. You can get a new one from http://"
-#~ "start.mandriva.com"
-#~ msgstr ""
-#~ "Versiunea clientului Mandriva Online este veche.\n"
-#~ "\n"
-#~ "Trebuie actualizat la o nouă versiune. Puteți utiliza unul nou de la "
-#~ "http://start.mandriva.com"
-
-#~ msgid "This bundle is not well formated. Aborting."
-#~ msgstr "Pachetul nu este format corect. Se anulează. "
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "Instalare pachete...\n"
-
-#, fuzzy
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Serviciul nu este configurat. Apăsați pe \"Configurează serviciul\""
-
-#~ msgid "Configure the service"
-#~ msgstr "Configurează serviciul"
-
-#~ msgid "Check updates"
-#~ msgstr "Verifică actualizări"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Setări"
-
-#~ msgid "Actions"
-#~ msgstr "Acțiuni"
-
-#~ msgid "Configure"
-#~ msgstr "Configurează"
-
-#~ msgid "See logs"
-#~ msgstr "Vezi logurile"
-
-#~ msgid "Status"
-#~ msgstr "Statut"
-
-#~ msgid "Close"
-#~ msgstr "Închide"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Conexiune Rețea:"
-
-#~ msgid "Up"
-#~ msgstr "Pornită"
-
-#~ msgid "Down"
-#~ msgstr "Oprită"
-
-#~ msgid "Last check: "
-#~ msgstr "Ultima verificare:"
-
-#~ msgid "Machine name:"
-#~ msgstr "Nume mașină:"
-
-#~ msgid "Updates: "
-#~ msgstr "Actualizări: "
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Versiunea de dezvoltare nu este suportată de serviciu"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "Versiunea este prea veche si nu este suportată de serviciu"
-
-#~ msgid "Unknown state"
-#~ msgstr "Stare necunoscută"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr ""
-#~ "Servicii online dezactivate Contactați pagina de web Mandriva Online\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Parolă greșită.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Acțiune sau Gazdă sau Login greșit.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Sunt probleme cu setarile rețelei(verifică ruta, firewall-ul sau setarile "
-#~ "proxy-ului)\n"
-
-#, fuzzy
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Bun venit la Mandriva Online"
-
-#~ msgid "No check"
-#~ msgstr "Fără verificare"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "Verificare fisier de configurare: Nu este prezent\n"
-
-#~ msgid "Logs"
-#~ msgstr "Loguri"
-
-#~ msgid "Clear"
-#~ msgstr "Șterge"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline versiunea %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "Acest program este liber și poate fi redistribuit sub termenii GNU GPL.\n"
-#~ "\n"
-#~ "Utilizare:\n"
-
-#~ msgid "Mandriva Online"
-#~ msgstr "Mandriva Online"
-
-#~ msgid "I already have an account"
-#~ msgstr "Am deja un cont"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "Doresc să mă înscriu"
-
-#, fuzzy
-#~ msgid "Mrs."
-#~ msgstr "XMrls"
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Citire configurație\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Acest asistent vă va ajuta să vă trimiteți configurația\n"
-#~ "(pachete, configurație hardware) la o bază de date centralizată pentru\n"
-#~ "a vă ține la curent cu actualizările de securitate și noutăți utile.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "Creare cont sau autentificare"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr ""
-#~ "Introduceți contul utilizator Mandriva Online, parola și numele mașinii:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Adresă IP"
-
-#~ msgid "Country"
-#~ msgstr "Țara"
-
-#~ msgid "Password:"
-#~ msgstr "Parolă:"
-
-#, fuzzy
-#~ msgid "Machine description:"
-#~ msgstr "Nume mașină:"
-
-#, fuzzy
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr ""
-#~ "Punctele de montare au trebui să conțină doar caractere alfanumerice"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Conectare la situl Mandriva Online..."
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "Pentru a beneficia de serviciile Mandriva Online,\n"
-#~ "suntem pe cale să trimitem configurația dumneavoastră.\n"
-#~ "\n"
-#~ "Acest asistent va trimite acum următoarele informații la Mandriva:\n"
-#~ "\n"
-#~ "1) lista pachetelor pe care le aveți instalate în sistem,\n"
-#~ "\n"
-#~ "2) configurația hardware.\n"
-#~ "\n"
-#~ "Dacă nu sunteți de acord cu acest lucru, sau nu doriți să beneficiați de "
-#~ "acest serviciu,\n"
-#~ "vă rog apăsați 'Anulare'. Apăsând 'Înainte', ne permiteți să vă ținem "
-#~ "informat\n"
-#~ "despre actualizări de securitate sau folositoare prin alerte email "
-#~ "personalizate.\n"
-#~ "Mai mult, beneficiați de discount la serviciile de suport plătit la\n"
-#~ "www.mandrivaexpert.com."
-
-#~ msgid "Connection problem"
-#~ msgstr "Problemă la conectare"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "A apărut o problemă la încărcarea fișierelor, vă rog reîncerați"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Creează un cont Mandriva Online"
-
-#, fuzzy
-#~ msgid "Greeting:"
-#~ msgstr "Verde"
-
-#~ msgid "First name:"
-#~ msgstr "Primul nume:"
-
-#, fuzzy
-#~ msgid "Last name:"
-#~ msgstr "Primul nume:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Confirmare parolă:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Parolele nu se potrivesc.\n"
-#~ "Incercați din nou\n"
-
-#, fuzzy
-#~ msgid "Please fill in each field"
-#~ msgstr "Vă rog completați poate câmpurile\n"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Nu e o adresă de mail validă!\n"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "Contul Mandriva Online a fost creat cu succes.\n"
-#~ "Vă rog apăsați \"Înainte\" pentru a vă autentifica și a transmite "
-#~ "configurația dumneavoastră\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Trimiterea a fost reușită!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "De acum veți primi anunțuri despre securitare\n"
-#~ "și actualizări cu ajutorul Mandriva Online."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online vă oferă posibilitatea să automatizați actualizările.\n"
-#~ "Un program va rula regulat pe sistemul dumneavoastră așteptând "
-#~ "actualizări\n"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "Contul dumneavoastră Mandriva Online a fost configurat cu succes\n"
-
-#, fuzzy
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Trimiterea a fost reușită!"
-
-#, fuzzy
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Citire configurație\n"
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- lansează Mandriva Update.\n"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "Sistemul este ocupat. Vă rugăm așteptați..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "Trimitere configurare..."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr ""
-#~ "Nu a fost găsit fișierul %s. Vă rog rulați înainte asistentul mdkonline"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr ""
-#~ "Mandriva Update nu a putut să contacteze situl, vom încerca din nou."
-
-#~ msgid "Login:"
-#~ msgstr "Cont:"
-
-#~ msgid "or"
-#~ msgstr "sau"
-
-#~ msgid "wrong password:"
-#~ msgstr "parolă greșită:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "Contul de utilizator sau parola au fost greșite.\n"
-#~ " Va trebui să le tastați din nou, sau va trebui să creați un cont la "
-#~ "Mandriva Online.\n"
-#~ " În acest ultim caz, mergeți înapoi la primul pas pentru a vă conecta la "
-#~ "Mandriva Online.\n"
-#~ " Va trebui de asemenea să furnizați un nume al mașinii \n"
-#~ " (doar caracterele alfabetice sunt permise)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "Contact mail:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "Vă rog să furnizați un login"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "Login-ul și parola trebuie să fie mai mici de 12 caractere\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "Caracterele speciale nu sunt permise\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "Email-ul nu este valid\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "Contul există deja\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "Am întâmpinat probleme la contactarea serverului \n"
-
-#~ msgid "Unable to update packages from mdkupdate medium.\n"
-#~ msgstr "Nu pot actualiza pachetele de pe mediul mdkupdate.\n"
-
-#~ msgid ""
-#~ "Mandriva Update could not upload the diff files. Send a mail to support "
-#~ "[at] mandrivaonline [dot] net"
-#~ msgstr ""
-#~ "Mandriva Update nu a putut uploada fișierele diff. Trimiteți un mail la "
-#~ "support [at] mandrivaonline [dot] net"
-
-#~ msgid "Next"
-#~ msgstr "Înapoi"
-
-#~ msgid "Previous"
-#~ msgstr "Precedentul"
-
-#~ msgid "I don't have a Mandriva Online account and I want to subscribe"
-#~ msgstr "Nu am un cont la Mandriva Online și vreau să mă înscriu"
-
-#~ msgid "Mandriva Linux Privacy Policy"
-#~ msgstr "Politica de protejare a intimității"
-
-#~ msgid "Authentification"
-#~ msgstr " Autentificare"
-
-#~ msgid "Send Configuration"
-#~ msgstr "Trimit Configurarea"
-
-#~ msgid "Finish"
-#~ msgstr "Terminare"
-
-#~ msgid "automated Upgrades"
-#~ msgstr "Actualizări automate"
-
-#~ msgid "Country:"
-#~ msgstr "Țara:"
-
-#~ msgid "Quitting Wizard\n"
-#~ msgstr "Terminare asistent\n"
-
-#~ msgid ""
-#~ "Mandriva Online could not be contacted, please try again at a later time"
-#~ msgstr ""
-#~ "Mandriva Online nu a putut fi contactat, vă rog încercați din nou mai "
-#~ "târziu"
-
-#~ msgid "  --update       - Update keys\n"
-#~ msgstr "  --update       -actualizeaza cheile\n"
