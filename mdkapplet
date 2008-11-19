@@ -262,10 +262,7 @@ Gtk2->main;
 
 ugtk2::exit(0);
 
-
-sub is_there_a_new_distributions() {
-    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
-    return if $product_id->{product} =~ /Flash/;
+sub get_distro_list {
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
@@ -288,6 +285,15 @@ sub is_there_a_new_distributions() {
             urpm::download::get_content($urpm, $list);
         }
     };
+}
+
+
+sub is_there_a_new_distributions() {
+    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+    return if $product_id->{product} =~ /Flash/;
+
+    my @lines = get_distro_list();
+    use Data::Dumper; warn Dumper \@lines;
 
     if (my $err = $@) {
         log::explanations("failed to download distribution list:\n$err");
