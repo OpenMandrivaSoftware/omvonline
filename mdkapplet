@@ -634,6 +634,7 @@ sub setState {
     my $menu = Gtk2::Menu->new;
     foreach (@arr) { 
 	my $action = $actions{$_};
+	next if !ref($action->{launch});
 	$menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label($action->{name})), activate => $action->{launch}));
     }
     $menu->append(gtkshow(Gtk2::SeparatorMenuItem->new));
