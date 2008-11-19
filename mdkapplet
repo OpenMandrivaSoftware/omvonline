@@ -353,17 +353,30 @@ sub harvester {
 
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
+sub new_portable_dialog {
+    my ($title) = @_;
+    my $w = ugtk2->new($title, width => $width + 20);
+}
+
+sub fill_n_run_portable_dialog {
+    my ($w, $widgets) = @_;
+
+    # use wizard button order (for both 2008.1 & 2009.0):
+    local $::isWizard = 1;
+    local $w->{pop_it} = 0;
+    local $::isInstall = 1;
+    gtkadd($w->{window}, gtknew('VBox', children_tight => $widgets));
+
+    $w->{ok}->grab_focus;
+    $w->main;
+}
+
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
-    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"), width => $width + 20);
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
-    {
-        # use wizard button order (for both 2008.1 & 2009.0):
-        local $::isWizard = 1;
-        local $w->{pop_it} = 0;
-        local $::isInstall = 1;
-    gtkadd($w->{window},
-           gtknew('VBox', children_tight => [
+    my $w = new_portable_dialog(N("New version of Mandriva Linux distribution"));
+    my $res = fill_n_run_portable_dialog($w,
+                                      [
                get_banner(),
                gtknew('Label_Left', text => N("A new version of Mandriva Linux distribution has been released."), @common),
                gtknew('HButtonBox', layout => 'start', children_tight => [
@@ -373,12 +386,8 @@ sub confirm_upgrade() {
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                create_okcancel($w, N("Next"), N("Cancel")),
-           ]),
-       );
-    }
+                                      ]);
 
-    $w->{ok}->grab_focus;
-    my $res = $w->main;
     setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} = bool2text($warn_me);
     $res ? really_confirm_upgrade() : 0;
