@@ -293,7 +293,6 @@ sub is_there_a_new_distributions() {
     return if $product_id->{product} =~ /Flash/;
 
     my @lines = get_distro_list();
-    use Data::Dumper; warn Dumper \@lines;
 
     if (my $err = $@) {
         log::explanations("failed to download distribution list:\n$err");
