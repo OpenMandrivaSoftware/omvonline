@@ -460,7 +460,6 @@ sub silentCheck() {
 
     return if $mdv_update_pid || $checker_pid;
     log::explanations(N_("Computing new updates...\n"));
-    log::explanations("Connecting to  ...\n"); # i18n bug to fix in cooker
     my $w = $::main_window ? $::main_window->window : undef;
     gtkset_mousecursor_wait($w);
     go2State('busy');
