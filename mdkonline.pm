@@ -31,6 +31,8 @@ use common;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename);
 
+our $version = 2.67;
+
 use log;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
