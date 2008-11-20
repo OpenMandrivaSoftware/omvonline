@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-21 18:03+0200\n"
+"POT-Creation-Date: 2008-11-20 16:49+0100\n"
 "PO-Revision-Date: 2008-10-22 22:27+0200\n"
 "Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
 "Language-Team: Italian <timl@freelists.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:83
+#: ../mdkapplet:65
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Orario controllo aggiornamenti: %s"
 
-#: ../mdkapplet:92
+#: ../mdkapplet:74
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Il sistema è aggiornato"
 
-#: ../mdkapplet:98
+#: ../mdkapplet:80
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -40,54 +40,55 @@ msgstr ""
 "Problema di configurazione del server. Controlla i log e scrivi a "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:105
+#: ../mdkapplet:87
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Attendere, è in corso la ricerca dei pacchetti disponibili..."
 
-#: ../mdkapplet:111
+#: ../mdkapplet:93
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Nuovi aggiornamenti disponibili per il tuo sistema"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:100
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "È stata rilasciata una nuova versione di Mandriva Linux"
 
-#: ../mdkapplet:110
+#: ../mdkapplet:107
 #, c-format
-msgid "Do you want to upgrade?"
-msgstr "Vuoi fare l'aggiornamento?"
+msgid "An additional package medium is available for your distribution."
+msgstr ""
 
-#: ../mdkapplet:123
+#: ../mdkapplet:113
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "La rete è disattivata. Prova a riconfigurare la rete"
 
-#: ../mdkapplet:129
+#: ../mdkapplet:119
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servizio non attivato. Clicca su \"Sito web online\""
 
-#: ../mdkapplet:135
+#: ../mdkapplet:125
 #, c-format
 msgid "urpmi database locked"
 msgstr "database urpmi bloccato"
 
-#: ../mdkapplet:142
+#: ../mdkapplet:132
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versione non supportata (troppo vecchia o di sviluppo)"
 
-#: ../mdkapplet:148
+#: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nessun supporto trovato.\n"
 "Bisogna aggiungerne uno usando la \"Gestione sorgenti software\"."
 
-#: ../mdkapplet:154
+#: ../mdkapplet:144
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -104,193 +105,266 @@ msgstr ""
 "\n"
 "Poi riavvia %s."
 
-#: ../mdkapplet:159
+#: ../mdkapplet:149
 #, c-format
 msgid "Enabled"
 msgstr "Abilitata"
 
-#: ../mdkapplet:172
+#: ../mdkapplet:162
 #, c-format
 msgid "Error updating media"
 msgstr "Errore nell'aggiornare il supporto"
 
-#: ../mdkapplet:202 ../mdkapplet:576
+#: ../mdkapplet:197 ../mdkapplet:618
 #, c-format
 msgid "Install updates"
 msgstr "Installa aggiornamenti"
 
-#: ../mdkapplet:203
+#: ../mdkapplet:198
+#, c-format
+msgid "Add additional package medium"
+msgstr ""
+
+#: ../mdkapplet:199
 #, c-format
 msgid "Check Updates"
 msgstr "Controlla aggiornamenti"
 
-#: ../mdkapplet:204
+#: ../mdkapplet:200
 #, c-format
 msgid "Configure Network"
 msgstr "Configura la rete"
 
-#: ../mdkapplet:205 ../mdkapplet:577
+#: ../mdkapplet:201
 #, c-format
 msgid "Upgrade the system"
 msgstr "Aggiornare il sistema"
 
-#: ../mdkapplet:348
+#: ../mdkapplet:356
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Sto avviando drakconnect\n"
 
-#: ../mdkapplet:352 ../mdkapplet:381
+#: ../mdkapplet:361 ../mdkapplet:382
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nuova edizione della distribuzione Mandriva Linux"
 
-#: ../mdkapplet:357
+#: ../mdkapplet:365
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "È stata rilasciata una nuova edizione della distribuzione Mandriva Linux."
+msgstr ""
+"È stata rilasciata una nuova edizione della distribuzione Mandriva Linux."
 
-#: ../mdkapplet:359
+#: ../mdkapplet:367
 #, c-format
 msgid "More info about this new version"
 msgstr "Altre informazioni sulla nuova edizione"
 
-#: ../mdkapplet:380
+#: ../mdkapplet:369
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Vuoi aggiornare alla versione \"%s\"?"
 
-#: ../mdkapplet:381
+#: ../mdkapplet:371 ../mdkapplet-restricted-helper:67
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Non chiederlo più"
 
-#: ../mdkapplet:382
+#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet-restricted-helper:96
 #, c-format
-msgid "Yes"
-msgstr "Sì"
+msgid "Next"
+msgstr ""
 
-#: ../mdkapplet:382
+#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet-restricted-helper:96 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet-upgrade-helper:145
 #, c-format
-msgid "No"
-msgstr "No"
-
-#: ../mdkapplet:393
-#, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr "Questo aggiornamento richiede una connessione a banda larga (cavo, xDSL, ...) e potrebbe richiedere diverse ore per essere completato."
-
-#: ../mdkapplet:395
-#, c-format
-msgid "Estimated download data will be %s"
-msgstr "Si stima che debbano essere scaricati %s di dati"
-
-#: ../mdkapplet:396
-#, c-format
-msgid "You should close all other running applications before continuing."
-msgstr "Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
+msgid "Cancel"
+msgstr "Annulla"
 
 #: ../mdkapplet:399
 #, c-format
 msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+"Questo aggiornamento richiede una connessione a banda larga (cavo, "
+"xDSL, ...) e potrebbe richiedere diverse ore per essere completato."
+
+#: ../mdkapplet:401
+#, c-format
+msgid "Estimated download data will be %s"
+msgstr "Si stima che debbano essere scaricati %s di dati"
+
+#: ../mdkapplet:402
+#, c-format
+msgid "You should close all other running applications before continuing."
+msgstr ""
+"Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
+
+#: ../mdkapplet:405
+#, c-format
+msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr "Dovresti collegare il tuo laptop alla presa elettrica e scegliere la connessione wifi, se disponibile."
+msgstr ""
+"Dovresti collegare il tuo laptop alla presa elettrica e scegliere la "
+"connessione wifi, se disponibile."
 
-#: ../mdkapplet:425
+#: ../mdkapplet:432
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Si sta avviando MandrivaUpdate\n"
 
-#: ../mdkapplet:420
+#: ../mdkapplet:453
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Calcolo dei nuovi aggiornamenti in corso...\n"
 
-#: ../mdkapplet:504
+#: ../mdkapplet:539
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Il sistema è aggiornato\n"
 
-#: ../mdkapplet:532
+#: ../mdkapplet:567
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Controllo rete: sembra disattivata\n"
 
-#: ../mdkapplet:574
+#: ../mdkapplet:609
 #, c-format
 msgid "Warning"
 msgstr "Attenzione"
 
-#: ../mdkapplet:598
+#: ../mdkapplet:612 ../mdkapplet:620
 #, c-format
 msgid "More Information"
 msgstr "Ulteriori informazioni"
 
-#: ../mdkapplet:606
+#: ../mdkapplet:622
 #, c-format
 msgid "Add media"
 msgstr "Aggiungi supporto"
 
-#: ../mdkapplet:591
+#: ../mdkapplet:637
 #, c-format
 msgid "About..."
 msgstr "Informazioni su..."
 
-#: ../mdkapplet:595
+#: ../mdkapplet:641
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:596
+#: ../mdkapplet:642
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright © %s di Mandriva"
 
-#: ../mdkapplet:599
+#: ../mdkapplet:645
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online dà accesso ai servizi web di Mandriva."
 
-#: ../mdkapplet:601
+#: ../mdkapplet:647
 #, c-format
 msgid "Online WebSite"
 msgstr "Sito online"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:606
+#: ../mdkapplet:652
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Andrea Celli (andrea.celli@libero.it)\n"
 
-#: ../mdkapplet:615
+#: ../mdkapplet:661
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lanciare sempre all'avvio"
 
-#: ../mdkapplet:617
+#: ../mdkapplet:663
 #, c-format
 msgid "Quit"
 msgstr "Esci"
 
-#: ../mdkapplet-upgrade-helper:76
+#: ../mdkapplet-restricted-helper:59
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
+msgid "New medium available"
+msgstr ""
 
-#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
-#: ../mdkapplet-upgrade-helper:170 ../mdkapplet-upgrade-helper:204
+#: ../mdkapplet-restricted-helper:65
+#, fuzzy, c-format
+msgid "You are using '%s' distribution."
+msgstr "Vuoi aggiornare alla versione \"%s\"?"
+
+#: ../mdkapplet-restricted-helper:65
+#, c-format
+msgid "Mandriva PowerPack"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:66
+#, fuzzy, c-format
+msgid "Do you want to add an additional package medium distribution?"
+msgstr "Vuoi aggiornare alla versione \"%s\"?"
+
+#: ../mdkapplet-restricted-helper:77
+#, c-format
+msgid "Adding an additional package medium"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:88
+#, c-format
+msgid "Please fill in your account ID to add an additional package medium"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:90
+#, c-format
+msgid "More information on your user account"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:92
+#, c-format
+msgid "Your email"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:93
+#, c-format
+msgid "Your password"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:95
+#, c-format
+msgid "Forgotten password"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:121 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
+#: ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Errore"
 
-#: ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:121
+#, c-format
+msgid "An error occurred"
+msgstr ""
+
+#: ../mdkapplet-upgrade-helper:76
+#, c-format
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+"Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
+
+#: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
+#: ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Installation failed"
 msgstr "Installazione non riuscita"
 
-#: ../mdkapplet-upgrade-helper:80
+#: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
 msgstr "I rapporti sull'installazione sono in \"%s\""
@@ -300,32 +374,27 @@ msgstr "I rapporti sull'installazione sono in \"%s\""
 msgid "Retry"
 msgstr "Riprova"
 
-#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:143
-#, c-format
-msgid "Cancel"
-msgstr "Annulla"
-
-#: ../mdkapplet-upgrade-helper:136
+#: ../mdkapplet-upgrade-helper:138
 #, c-format
 msgid "Congratulations"
 msgstr "Congratulazioni"
 
-#: ../mdkapplet-upgrade-helper:96
+#: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
 msgstr "L'aggiornamento alla versione %s di Mandriva è riuscito."
 
-#: ../mdkapplet-upgrade-helper:142
+#: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
 msgstr "Dovresti riavviare il sistema."
 
-#: ../mdkapplet-upgrade-helper:143
+#: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Reboot"
 msgstr "Riavvia"
 
-#: ../mdkapplet-upgrade-helper:173
+#: ../mdkapplet-upgrade-helper:175
 #, c-format
 msgid ""
 "Packages database is locked. Please close other applications\n"
@@ -337,12 +406,12 @@ msgstr ""
 "che ne fanno uso (state usando un altro gestore di pacchetti su di \n"
 "un altro desktop o state già installando dei pacchetti?)."
 
-#: ../mdkapplet-upgrade-helper:206
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Failure when adding medium"
 msgstr "Errore nell'aggiunta del supporto"
 
-#: ../mdkonline.pm:58
+#: ../mdkonline.pm:65
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Aggiornamento della distribuzione"
@@ -394,3 +463,11 @@ msgstr "  --debug\t\t\t- mantieni un log delle azioni fatte\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossibile aggiornare i pacchetti dalla sorgente update_source.\n"
 
+#~ msgid "Do you want to upgrade?"
+#~ msgstr "Vuoi fare l'aggiornamento?"
+
+#~ msgid "Yes"
+#~ msgstr "Sì"
+
+#~ msgid "No"
+#~ msgstr "No"
