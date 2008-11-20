@@ -87,12 +87,16 @@ sub get_restricted_authentication() {
               get_banner(),
               gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
                      @common),
-              new_link_button('https://my.mandriva.com/info', N("More information on your user account")),
+              gtknew('HButtonBox', layout => 'start', children_tight => [
+                  new_link_button('https://my.mandriva.com/info', N("More information on your user account"))
+              ]),
               gtknew('Table', children => [
                   [ N("Your email"), $email_w = gtknew('Entry') ],
                   [ N("Your password"), $password_w ],
               ]),
-              new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password")),
+              gtknew('HButtonBox', layout => 'start', children_tight => [
+                  new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password"))
+              ]),
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
 
