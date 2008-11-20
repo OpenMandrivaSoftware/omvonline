@@ -262,14 +262,14 @@ Gtk2->main;
 
 ugtk2::exit(0);
 
-sub get_distro_list {
+sub get_distro_list() {
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
     my $list = "http://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}";
     log::explanations("trying distributions list from $list");
 
-    my @lines = eval {
+    eval {
         my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
 
         # prevent SIGCHILD handler's waitpid to interfere with urpmi waiting
@@ -360,7 +360,7 @@ sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exe
 
 sub new_portable_dialog {
     my ($title) = @_;
-    my $w = ugtk2->new($title, width => $width + 20);
+    ugtk2->new($title, width => $width + 20);
 }
 
 sub fill_n_run_portable_dialog {
