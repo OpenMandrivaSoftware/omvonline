@@ -99,6 +99,13 @@ my %state = (
                  urgency => 'low',
                  tt => [ N("A new version of Mandriva Linux distribution has been released") ]
              },
+             unconfigured_restricted_media => {
+                 colour => [ 'bundle' ],
+                 changes => [ 'okay' ],
+                 menu => [ 'add_restricted_media', 'check' ],
+                 urgency => 'low',
+                 tt => [ N("An additional package medium is available for your distribution.") ]
+             },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
@@ -179,10 +186,16 @@ my %comm_codes = (
         status => 'critical',
         log => "Failed to open urpmi database\n",
     },
+    unconfigured_restricted_media => {
+        code => 9,
+        status => 'unconfigured_restricted_media',
+        log => "Missing restricted media\n",
+    },
 );
 
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
+	       'add_restricted_media' => { name => N("Add additional package medium"), launch => \&prepare_add_restricted },
 	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'upgrade_distro' => { name => N("Upgrade the system"), launch => \&upgrade },
@@ -196,6 +209,7 @@ $icon->signal_connect(popup_menu => sub {
                       });
 $icon->signal_connect(activate => sub {
                           my %actions = (
+                              unconfigured_restricted_media => \&prepare_add_restricted,
                               no_update_medium => \&add_media,
                               no_enabled_medium => \&add_media,
                               updates => \&installUpdates,
@@ -504,7 +518,13 @@ sub silentCheck() {
             if ($need_restart || @requested_strict) { # FIXME: log first found pkgs?
                 checker_exit('updates');
             } else {
-                checker_exit('uptodate');
+                if (!text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED})) {
+                    if (is_restricted_media_configured($urpm)) {
+                        checker_exit('uptodate');
+                    } else {
+                        checker_exit('unconfigured_restricted_media');
+                    }
+                }
             }
         } else {
             checker_exit('db_not_open');
@@ -596,6 +616,8 @@ sub setState {
         } elsif ($state eq 'updates') {
             unshift @arr, 'upgrade_distro' if $new_distro;
             $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
+        } elsif ($state eq 'unconfigured_restricted_media') {
+            $bubble->add_action('clicked', N("More Information"), \&prepare_add_restricted);
         } elsif (member($state, qw(no_enabled_medium no_update_medium))) {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
         }
@@ -661,4 +683,25 @@ sub mainQuit() {
     Glib::Source->remove($timeout) if $timeout;
     Glib::Source->remove($network_timeout) if $network_timeout;
     Gtk2->main_quit;
+}
+
+sub get_enabled_restricted_media {
+    my ($urpm) = @_;
+    grep { $_->{name} =~ /restricted/i && !$_->{ignore} } @{$urpm->{media}};
+}
+
+sub is_restricted_media_configured {
+    my ($urpm) = @_;
+    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+    return 1 if $product_id->{product} !~ /powerpack/i;
+
+    my @restricted_media = get_enabled_restricted_media($urpm);
+    my @names = map { $_->{name} } @restricted_media;
+    # we need both 'Restricted' &  'Restricted Update' media
+    # those who did online update trough mdkapplet do not have restricted medium, hence the test for 2 medium:
+    grep { /Restricted Updates/ } @names;
+}
+
+sub prepare_add_restricted() {
+    run_program::run('mdkapplet-restricted-helper');
 }
