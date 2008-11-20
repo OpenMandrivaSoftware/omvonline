@@ -53,7 +53,6 @@ prepare_add_restricted();
 ugtk2::exit(0);
 
 sub prepare_add_restricted() {
-    local $mygtk2::left_padding = 0;
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED});
     return if $warn_me;
     my $w = new_portable_dialog(N("New medium available"));
@@ -73,13 +72,14 @@ sub prepare_add_restricted() {
 }
 
 sub get_restricted_authentication() {
-    local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
     my ($password_w, $email_w, $password);
 
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
     $w->{real_window}->signal_connect(destroy => sub { $password = $password_w->get_text });
+    require interactive::gtk;
+
     my $res =
       fill_n_run_portable_dialog(
           $w,
@@ -88,14 +88,16 @@ sub get_restricted_authentication() {
               gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
-                  new_link_button('https://my.mandriva.com/info', N("More information on your user account"))
+                  interactive::gtk::add_padding(
+                      new_link_button('https://my.mandriva.com/info', N("More information on your user account")))
               ]),
-              gtknew('Table', children => [
+              gtknew('Table', col_spacings => 5, children => [
                   [ N("Your email"), $email_w = gtknew('Entry') ],
                   [ N("Your password"), $password_w ],
               ]),
               gtknew('HButtonBox', layout => 'start', children_tight => [
-                  new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password"))
+                  interactive::gtk::add_padding(
+                      new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password")))
               ]),
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
