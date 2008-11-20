@@ -63,7 +63,7 @@ sub prepare_add_restricted() {
           [
               get_banner(),
               gtknew('Label_Left', text => N("You are using '%s' distribution.", N("Mandriva PowerPack")), @common),
-              gtknew('Label_Left', text => N("Do you want to add an additional package medium distribution?"), @common),
+              gtknew('Label_Left', text => N("Do you want to add an additional package medium?"), @common),
               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
