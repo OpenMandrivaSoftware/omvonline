@@ -43,6 +43,7 @@ install: all
 	install -m644 pixmaps/*.png $(PIXDIR)/pixmaps
 	perl -pi -e "s/version = 1/version = $(VERSION)/" mdkonline.pm
 	install -m644 mdkonline.pm $(FBLIBDIR)
+	install -m644 mdkapplet_gui.pm $(FBLIBDIR)
 	install -m644 mdkapplet_urpm.pm $(FBLIBDIR)
 	for d in $(SUBDIRS); do make -C $$d $@; done
 # mime

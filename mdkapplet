@@ -35,6 +35,7 @@ use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 versio
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
+use mdkapplet_gui;
 use Gtk2::Notify '-init', 'mdkapplet';
 use Rpmdrake::open_db;
 
@@ -45,24 +46,13 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 }
 
 
-ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my $online_site = "http://www.mandrivalinux.com/";
 my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
-
-my $localdir = "$ENV{HOME}/.MdkOnline";
-my $localfile = "$localdir/mdkonline";
 
 my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 $config{FIRST_CHECK_DELAY} ||= 5 * 60 * 1000; # default to 5 minutes
 $config{DISTRO_CHECK_DELAY} ||= 60*60*24; # default : one day
-
-
-#compatibility
-mkdir_p($localdir) if !-d $localdir;
--e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
-
-my %local_config = getVarsFromSh($localfile);
 
 my %state = (
 	     delayed => {
@@ -250,13 +240,6 @@ $SIG{CHLD} = \&harvester;
 
 run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 
-my $width = 500;
-my @common = (
-    # explicitely wrap (for 2008.1):
-    line_wrap => 1,
-    # workaround infamous 6 years old gnome bug #101968:
-    width => $width - 50,
-);
 
 Gtk2->main;
 
@@ -358,24 +341,6 @@ sub harvester {
 
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
-sub new_portable_dialog {
-    my ($title) = @_;
-    ugtk2->new($title, width => $width + 20);
-}
-
-sub fill_n_run_portable_dialog {
-    my ($w, $widgets) = @_;
-
-    # use wizard button order (for both 2008.1 & 2009.0):
-    local $::isWizard = 1;
-    local $w->{pop_it} = 0;
-    local $::isInstall = 1;
-    gtkadd($w->{window}, gtknew('VBox', children_tight => $widgets));
-
-    $w->{ok}->grab_focus;
-    $w->main;
-}
-
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
@@ -396,16 +361,6 @@ sub confirm_upgrade() {
     setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} = bool2text($warn_me);
     $res ? really_confirm_upgrade() : 0;
-}
-
-sub new_link_button {
-    my ($url, $text) = @_;
-    my $link = Gtk2::LinkButton->new($url, $text);
-    $link->set_uri_hook(sub {
-                            my (undef, $url) = @_;
-                            run_program::raw({ detach => 1, setuid => get_parent_uid() }, 'www-browser', $url);
-                        });
-    $link;
 }
 
 sub really_confirm_upgrade() {
@@ -685,13 +640,6 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu;
 
-}
-
-sub setVar {
-    my ($var, $st) = @_;
-    my %s = getVarsFromSh($localfile);
-    $s{$var} = $st;
-    setVarsInSh($localfile, \%s);
 }
 
 sub setAutoStart {
