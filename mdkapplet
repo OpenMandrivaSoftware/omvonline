@@ -466,6 +466,11 @@ sub installUpdates() {
     silentCheck(); gtkflush();
 }
 
+sub checker_exit {
+    my ($state) = @_;
+    POSIX::_exit($comm_codes{$state}{code});
+}
+
 sub silentCheck() {
     state $check_time;
     my $new_time = time();
@@ -494,10 +499,6 @@ sub silentCheck() {
         # be nice with other processes:
         setpriority(0, $$, 7);  # 0 is PRIO_PROCESS
 
-        my $exit = sub {
-            my ($state) = @_;
-            POSIX::_exit($comm_codes{$state}{code});
-        };
         my $will_not_update_media;
         require urpm;
         require urpm::lock;
@@ -512,10 +513,10 @@ sub silentCheck() {
 
             urpm::lock::urpmi_db($urpm, 'exclusive', 1);
         }
-        $exit->('locked') if $will_not_update_media;
+        checker_exit('locked') if $will_not_update_media;
 
         if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update', if_($root, "--urpmi-root=$root"))) {
-            $exit->('error_updating') if $will_not_update_media;
+            checker_exit('error_updating') if $will_not_update_media;
         }
 
         # update inactive backport media:
@@ -528,9 +529,9 @@ sub silentCheck() {
         urpm::media::configure($urpm, update => 1);
         my @update_medias = grep { $_->{update} } @{$urpm->{media}};
         if (!@update_medias) {
-            $exit->('no_update_medium');
+            checker_exit('no_update_medium');
         } elsif (!any { ! $_->{ignore} } @update_medias) {
-            $exit->('no_enabled_medium');
+            checker_exit('no_enabled_medium');
         }
 
         if (my $_db = urpm::db_open_or_die($urpm)) {
@@ -545,14 +546,14 @@ sub silentCheck() {
             my @requested_strict = map { scalar $_->fullname } @{$urpm->{depslist}}[keys %{$state->{selected}}];
 
             if ($need_restart || @requested_strict) { # FIXME: log first found pkgs?
-                $exit->('updates');
+                checker_exit('updates');
             } else {
-                $exit->('uptodate');
+                checker_exit('uptodate');
             }
         } else {
-            $exit->('db_not_open');
+            checker_exit('db_not_open');
         }
-        $exit->('updates');
+        checker_exit('updates');
     } else {
         log::explanations("cannot fork: %s", "update checker ($!)");
         go2State('critical');
