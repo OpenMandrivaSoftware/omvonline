@@ -27,6 +27,7 @@ use strict;
 
 use lib qw(/usr/lib/libDrakX);
 use common;
+use ugtk2;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename);
