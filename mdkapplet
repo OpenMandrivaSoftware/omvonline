@@ -576,7 +576,7 @@ sub checkUpdates() {
 }
 
 sub go2State {
-    my $state = shift;
+    my ($state) = @_;
     $menu->destroy if $menu;
     $menu = setState($state);
     $state_global = $state;
