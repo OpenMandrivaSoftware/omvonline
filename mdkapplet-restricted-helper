@@ -127,7 +127,10 @@ sub add_restricted_medium {
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
     } else {
-        run_program::raw({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--update', 'Restricted ' . int(rand(100000)),
-                         "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/" . urpm::cfg::get_arch());
+        my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--update');
+        my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/";
+        my $arch = urpm::cfg::get_arch();
+        run_program::raw(@options, 'Restricted ' . int(rand(100000)),
+                         "$uri$arch");
     }
 }
