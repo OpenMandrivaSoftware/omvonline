@@ -697,7 +697,7 @@ sub is_restricted_media_configured {
 
     my @restricted_media = get_enabled_restricted_media($urpm);
     my @names = map { $_->{name} } @restricted_media;
-    # we need both 'Restricted' &  'Restricted Update' media
+    # we need both 'Restricted' & 'Restricted Updates' media
     # those who did online update trough mdkapplet do not have restricted medium, hence the test for 2 medium:
     grep { /Restricted Updates/ } @names;
 }
