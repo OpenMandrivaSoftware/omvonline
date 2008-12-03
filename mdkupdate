@@ -37,9 +37,6 @@ use mdkonline;
 
 use Getopt::Long;
 
-# for debug 
-use Data::Dumper;
-
 BEGIN { unshift @::textdomains, 'mdkupdate' }
 
 require_root_capability();
