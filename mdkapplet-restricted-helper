@@ -48,30 +48,10 @@ foreach my $opt (@ARGV) {
     }
 }
 
-prepare_add_restricted();
+get_restricted_authentication();
 
 ugtk2::exit(0);
 
-sub prepare_add_restricted() {
-    my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED});
-    return if $warn_me;
-    my $w = new_portable_dialog(N("New medium available"));
-    my $res =
-      fill_n_run_portable_dialog(
-          $w,
-          [
-              get_banner(N("New medium available")),
-              gtknew('Label_Left', text => 
-                       N("You use '%s' distribution and therefore have privileged access to additional software.",
-                         N("Mandriva PowerPack")) . "\n\n" .
-                           N("Do you want to install this additional software repository?"), @common),
-              gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
-              create_okcancel($w, N("Next"), N("Cancel")),
-          ]);
-    setVar('DO_NOT_ASK_FOR_RESTRICTED', bool2text($warn_me));
-    $local_config{DO_NOT_ASK_FOR_RESTRICTED} = bool2text($warn_me);
-    $res ? get_restricted_authentication() : 0;
-}
 
 sub get_restricted_authentication() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);

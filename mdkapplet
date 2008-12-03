@@ -702,6 +702,27 @@ sub is_restricted_media_configured {
     @restricted_media > 2 && (grep { /Restricted Updates/ } @names) && (grep { /Restricted/ && !/Updates/ } @names);
 }
 
-sub prepare_add_restricted() {
+sub really_prepare_add_restricted() {
     $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-restricted-helper');
+}
+
+sub prepare_add_restricted() {
+    my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED});
+    return if $warn_me;
+    my $w = new_portable_dialog(N("New medium available"));
+    my $res =
+      fill_n_run_portable_dialog(
+          $w,
+          [
+              get_banner(N("New medium available")),
+              gtknew('Label_Left', text => 
+                       N("You use '%s' distribution and therefore have privileged access to additional software.",
+                         N("Mandriva PowerPack")) . "\n\n" .
+                           N("Do you want to install this additional software repository?"), @common),
+              gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
+              create_okcancel($w, N("Next"), N("Cancel")),
+          ]);
+    setVar('DO_NOT_ASK_FOR_RESTRICTED', bool2text($warn_me));
+    $local_config{DO_NOT_ASK_FOR_RESTRICTED} = bool2text($warn_me);
+    $res ? really_prepare_add_restricted() : 0;
 }
