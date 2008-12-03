@@ -58,11 +58,12 @@ sub fork_exec {
     run_program::raw({ detach => 1 }, @_);
 }
 
-sub get_banner() {
+sub get_banner {
+    my ($o_title) = @_;
     Gtk2::Banner->new(
         (find { -e $_ } 
            qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
-        N("Distribution Upgrade")
+        $o_title || N("Distribution Upgrade")
     );
 }
 
