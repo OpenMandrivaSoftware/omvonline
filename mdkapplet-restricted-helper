@@ -119,10 +119,15 @@ sub add_restricted_medium {
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
     } else {
-        my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia');
-        my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/";
         my $arch = urpm::cfg::get_arch();
-        run_program::raw(@options, 'Restricted ' . int(rand(100000)), "$uri$arch");
-        run_program::raw(@options, '--update', 'Restricted Updates ' . int(rand(100000)), "${uri}updates/$arch");
+        actually_add_restricted_medium($ref, $password, $arch);
     }
+}
+
+sub actually_add_restricted_medium {
+    my ($ref, $password, $arch) = @_;
+    my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia');
+    my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/";
+    run_program::raw(@options, 'Restricted ' . int(rand(100000)), "$uri$arch");
+    run_program::raw(@options, '--update', 'Restricted Updates ' . int(rand(100000)), "${uri}updates/$arch");
 }
