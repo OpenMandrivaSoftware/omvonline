@@ -89,7 +89,7 @@ sub get_restricted_authentication() {
         if ($email && $password) {
             add_restricted_medium($email, $password);
         } else {
-            interactive->vnew->ask_warn(N("Error"), N("Password & email cannot be empty."));
+            interactive->vnew->ask_warn(N("Error"), N("Password and email cannot be empty."));
             goto &get_restricted_authentication;
         }
     } else {
