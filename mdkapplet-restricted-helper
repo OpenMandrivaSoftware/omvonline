@@ -120,16 +120,25 @@ sub add_restricted_medium {
         goto &get_restricted_authentication;
     } else {
         my $arch = urpm::cfg::get_arch();
-        actually_add_restricted_medium($ref, $password, $arch);
+        actually_add_restricted_medium($ref, $password, $arch)
+          or adding_media_failed();
         # FIXME: is not enough if we ever support sparc64, ppc64 and the like:
-        actually_add_restricted_medium($ref, $password, 'i586') if $arch eq 'x86_64';
+        if ($arch eq 'x86_64') {
+            actually_add_restricted_medium($ref, $password, 'i586')
+              or adding_media_failed();
+        }
     }
+}
+
+sub adding_media_failed {
+    interactive->vnew->ask_warn(N("Error"), N("An error occurred while adding medium"));
+    goto &get_restricted_authentication;
 }
 
 sub actually_add_restricted_medium {
     my ($ref, $password, $arch) = @_;
     my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia');
     my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/";
-    run_program::raw(@options, 'Restricted ' . int(rand(100000)), "$uri$arch");
+    run_program::raw(@options, 'Restricted ' . int(rand(100000)), "$uri$arch") or return 0;
     run_program::raw(@options, '--update', 'Restricted Updates ' . int(rand(100000)), "${uri}updates/$arch");
 }
