@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2008-12-03 15:28+0100\n"
+"POT-Creation-Date: 2008-12-03 16:21+0100\n"
 "PO-Revision-Date: 2008-12-03 15:29+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
@@ -172,19 +172,19 @@ msgstr "Plus d'information sur cette nouvelle version"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Voulez-vous mettre à niveau vers la nouvelle distribution « %s » ?"
 
-#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Ne pas demander la prochaine fois"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "Suivant"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
@@ -308,67 +308,74 @@ msgstr "Toujours lancer au démarrage"
 msgid "Quit"
 msgstr "Quitter"
 
-#: ../mdkapplet-restricted-helper:58
+#: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
 msgstr "Nouveau médium de package disponible"
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "Vous utilisez la distribution « %s » et bénéficiez donc d'un accès privilégié à des paquets supplémentaires."
+msgstr ""
+"Vous utilisez la distribution « %s » et bénéficiez donc d'un accès privilégié "
+"à des paquets supplémentaires."
 
-#: ../mdkapplet-restricted-helper:66
+#: ../mdkapplet:721
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:722
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Voulez-vous installer cette nouvelle source de paquets ?"
 
-#: ../mdkapplet-restricted-helper:77
+#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ajouter un nouveau médium de package"
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 "Veuillez remplir vos identifiants afin d'ajouter un nouveau médium de package"
 
-#: ../mdkapplet-restricted-helper:94
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
 msgstr "Plus d'information sur votre compte utilisateur"
 
-#: ../mdkapplet-restricted-helper:97
+#: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
 msgstr "Votre couriel"
 
-#: ../mdkapplet-restricted-helper:98
+#: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "Your password"
 msgstr "Votre mot de passe"
 
-#: ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Forgotten password"
 msgstr "Mot de passe oublié"
 
-#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Erreur"
 
-#: ../mdkapplet-restricted-helper:129
+#: ../mdkapplet-restricted-helper:92
+#, c-format
+msgid "Password & email cannot be empty."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:119
 #, c-format
 msgid "An error occurred"
 msgstr "Une erreur est survenue"
@@ -437,7 +444,7 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Échec lors de l'ajout du média"
 
-#: ../mdkonline.pm:65
+#: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Mise à niveau de la distribution"

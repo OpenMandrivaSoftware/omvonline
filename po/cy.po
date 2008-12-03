@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 15:28+0100\n"
+"POT-Creation-Date: 2008-12-03 16:21+0100\n"
 "PO-Revision-Date: 2008-10-07 18:49-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg/Welsh <post@meddal.com>\n"
@@ -162,19 +162,19 @@ msgstr "Mwy o wybodaeth am y fersiwn newydd"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Hoffech chi ddiweddaru i ddosbarthiad '%s'??"
 
-#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Peidio gofyn y tro nesaf"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "Nesaf"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
@@ -284,66 +284,71 @@ msgstr "Cychwyn wrth gychwyn"
 msgid "Quit"
 msgstr "Gadael"
 
-#: ../mdkapplet-restricted-helper:58
+#: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:66
+#: ../mdkapplet:721
 #, fuzzy, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:722
 #, fuzzy, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Hoffech chi ddiweddaru i ddosbarthiad '%s'??"
 
-#: ../mdkapplet-restricted-helper:77
+#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:94
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:97
+#: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:98
+#: ../mdkapplet-restricted-helper:78
 #, fuzzy, c-format
 msgid "Your password"
 msgstr "Y cyfrinair anghywir"
 
-#: ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-restricted-helper:82
 #, fuzzy, c-format
 msgid "Forgotten password"
 msgstr "Y cyfrinair anghywir"
 
-#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Gwall"
 
-#: ../mdkapplet-restricted-helper:129
+#: ../mdkapplet-restricted-helper:92
+#, c-format
+msgid "Password & email cannot be empty."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:119
 #, c-format
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
@@ -408,7 +413,7 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Methu ychwanegu cyfrwng"
 
-#: ../mdkonline.pm:65
+#: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Diweddaru'r Dosbarthiad"

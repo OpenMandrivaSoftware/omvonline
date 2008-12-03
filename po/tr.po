@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-12-03 15:28+0100\n"
+"POT-Creation-Date: 2008-12-03 16:21+0100\n"
 "PO-Revision-Date: 2008-11-25 00:18+0200\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 "Language-Team: Turkish < cooker-i18n@mandrivalinux.org>\n"
@@ -164,19 +164,19 @@ msgstr "Bu sürüm hakkında daha fazla bilgi"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "'%s' dağıtımına yükseltmek ister misiniz?"
 
-#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Bir daha sorma"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "İleri"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
@@ -284,67 +284,72 @@ msgstr "Her zaman başlangıçta çalıştır"
 msgid "Quit"
 msgstr "Çıkış"
 
-#: ../mdkapplet-restricted-helper:58
+#: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
 msgstr "Yeni veri kaynağı mevcut"
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:66
+#: ../mdkapplet:721
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:722
 #, fuzzy, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Ek bir paket veri kaynağı eklemek ister misiniz?"
 
-#: ../mdkapplet-restricted-helper:77
+#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ek bir paket veri kaynağı ekleniyor"
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 "Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
 
-#: ../mdkapplet-restricted-helper:94
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
 msgstr "Kullanıcı hesabınızla ilgli ayrıntılı bilgi"
 
-#: ../mdkapplet-restricted-helper:97
+#: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
 msgstr "E-posta adresiniz"
 
-#: ../mdkapplet-restricted-helper:98
+#: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "Your password"
 msgstr "Parolanız"
 
-#: ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Forgotten password"
 msgstr "Unutulan parola"
 
-#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Hata"
 
-#: ../mdkapplet-restricted-helper:129
+#: ../mdkapplet-restricted-helper:92
+#, c-format
+msgid "Password & email cannot be empty."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:119
 #, c-format
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
@@ -411,7 +416,7 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Ortam eklenirken hata oluştu"
 
-#: ../mdkonline.pm:65
+#: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Dağıtım Yükseltmesi"

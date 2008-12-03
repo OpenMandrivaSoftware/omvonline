@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 15:28+0100\n"
+"POT-Creation-Date: 2008-12-03 16:21+0100\n"
 "PO-Revision-Date: 2008-11-25 14:53+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -162,19 +162,19 @@ msgstr "更多關於新版本的資訊"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "您想要升級到 '%s' 發行版嗎？"
 
-#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
 msgid "Do not ask me next time"
 msgstr "下一次不用詢問我"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "下一步"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
@@ -285,66 +285,71 @@ msgstr "總是在啟動時執行"
 msgid "Quit"
 msgstr "結束"
 
-#: ../mdkapplet-restricted-helper:58
+#: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
 msgstr "有可用的新媒介"
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:66
+#: ../mdkapplet:721
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:722
 #, fuzzy, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "您想要新增一個額外的套件媒介嗎？"
 
-#: ../mdkapplet-restricted-helper:77
+#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "新增一個額外的套件媒介"
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "請輸入您的帳號 ID 以新增額外的套件媒介"
 
-#: ../mdkapplet-restricted-helper:94
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
 msgstr "關於您使用者帳號的更多資訊"
 
-#: ../mdkapplet-restricted-helper:97
+#: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
 msgstr "您的電子郵件"
 
-#: ../mdkapplet-restricted-helper:98
+#: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "Your password"
 msgstr "您的密碼"
 
-#: ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Forgotten password"
 msgstr "忘記密碼"
 
-#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "錯誤"
 
-#: ../mdkapplet-restricted-helper:129
+#: ../mdkapplet-restricted-helper:92
+#, c-format
+msgid "Password & email cannot be empty."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:119
 #, c-format
 msgid "An error occurred"
 msgstr "發生一個錯誤"
@@ -407,7 +412,7 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "新增媒體時發生錯誤"
 
-#: ../mdkonline.pm:65
+#: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "升級發行版本"
