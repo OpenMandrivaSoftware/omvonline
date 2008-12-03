@@ -73,7 +73,7 @@ sub get_restricted_authentication() {
                   interactive::gtk::add_padding(
                       new_link_button('https://my.mandriva.com/info', N("More information on your user account")))
               ]),
-              gtknew('Table', col_spacings => 5, children => [
+              gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
                   [ N("Your email"), $email_w = gtknew('Entry') ],
                   [ N("Your password"), $password_w ],
               ]),
