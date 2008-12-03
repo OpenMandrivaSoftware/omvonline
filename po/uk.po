@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:49+0100\n"
+"POT-Creation-Date: 2008-12-03 15:28+0100\n"
 "PO-Revision-Date: 2008-11-26 21:36+0200\n"
 "Last-Translator: Taras Boychuk <btr0001@ukr.net>\n"
 "Language-Team: ukrainian <translation@linux.org.ua>\n"
@@ -20,7 +20,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -84,7 +85,8 @@ msgstr "Версія не підтримується (занадто стара 
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Носіїв не знайдено. Ви повинні додати носії з допомогою 'Software Media "
 "Manager'."
@@ -140,50 +142,50 @@ msgstr "Налаштувати мережу"
 msgid "Upgrade the system"
 msgstr "Оновити систему"
 
-#: ../mdkapplet:356
+#: ../mdkapplet:357
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Запускається drakconnect\n"
 
-#: ../mdkapplet:361 ../mdkapplet:382
+#: ../mdkapplet:362 ../mdkapplet:383
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Нова версія збірки Мандріва Лінакс"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:366
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Вийшла нова збірка Мандріва Лінакс."
 
-#: ../mdkapplet:367
+#: ../mdkapplet:368
 #, c-format
 msgid "More info about this new version"
 msgstr "Додаткова інформація про нову версію"
 
-#: ../mdkapplet:369
+#: ../mdkapplet:370
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Ви хочете поновити систему до %s?"
 
-#: ../mdkapplet:371 ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Не запитувати наступного разу"
 
-#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:104
 #, c-format
 msgid "Next"
 msgstr "Далі"
 
-#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:400
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -192,17 +194,17 @@ msgstr ""
 "Це оновлення вимагає швидкісного з'єднання з мережею (cable, xDSL, ...) і "
 "може тривати кілька годин до завершення."
 
-#: ../mdkapplet:401
+#: ../mdkapplet:402
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Приблизний час звантаження становить %s"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Вам потрібно закрити всі програми перед тим, як продовжувати."
 
-#: ../mdkapplet:405
+#: ../mdkapplet:406
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -287,24 +289,26 @@ msgstr "Завжди виконувати при завантаженні"
 msgid "Quit"
 msgstr "Вийти"
 
-#: ../mdkapplet-restricted-helper:59
+#: ../mdkapplet-restricted-helper:58
 #, c-format
 msgid "New medium available"
 msgstr "Новий носій доступний"
 
 #: ../mdkapplet-restricted-helper:65
 #, c-format
-msgid "You are using '%s' distribution."
-msgstr "Ви використовуєте дистрибутив '%s'."
+msgid ""
+"You use '%s' distribution and therefore have privileged access to additional "
+"software."
+msgstr ""
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet-restricted-helper:66
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet-restricted-helper:66
-#, c-format
-msgid "Do you want to add an additional package medium?"
+#: ../mdkapplet-restricted-helper:67
+#, fuzzy, c-format
+msgid "Do you want to install this additional software repository?"
 msgstr "Ви хочете додати додатковий носій з пакунками?"
 
 #: ../mdkapplet-restricted-helper:77
@@ -312,46 +316,47 @@ msgstr "Ви хочете додати додатковий носій з пак
 msgid "Adding an additional package medium"
 msgstr "Додається додатковий носій з пакунками"
 
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-restricted-helper:90
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Будь ласка, заповніть свій рахунок, щоб додати носій з пакунками"
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:94
 #, c-format
 msgid "More information on your user account"
 msgstr "Додаткова інформація про рахунок"
 
-#: ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-restricted-helper:97
 #, c-format
 msgid "Your email"
 msgstr "Електронна пошта"
 
-#: ../mdkapplet-restricted-helper:93
+#: ../mdkapplet-restricted-helper:98
 #, c-format
 msgid "Your password"
 msgstr "Пароль"
 
-#: ../mdkapplet-restricted-helper:95
+#: ../mdkapplet-restricted-helper:102
 #, c-format
 msgid "Forgotten password"
 msgstr "Забутий пароль"
 
-#: ../mdkapplet-restricted-helper:121 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Помилка"
 
-#: ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:129
 #, c-format
 msgid "An error occurred"
 msgstr "Сталася помилка"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "У Вашій системі залишилося недостатньо місця на %s для оновлення (%dMB < %"
 "dMB)"
@@ -414,7 +419,7 @@ msgstr "Помилка при додаванні джерела"
 msgid "Distribution Upgrade"
 msgstr "Оновлення дистрибутиву"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:59
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -431,33 +436,35 @@ msgstr ""
 "\n"
 "використання:\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:64
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- вивести цю довідку.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:65
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update виконується автоматично.\n"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:66
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- виконати специфічний mnf-скрипт.\n"
 
-#: ../mdkupdate:70
+#: ../mdkupdate:67
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- версія Mandriva Update в текстовому режимі.\n"
 
-#: ../mdkupdate:71
+#: ../mdkupdate:68
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- створювати журнал\n"
 
-#: ../mdkupdate:102
+#: ../mdkupdate:99
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"
 
+#~ msgid "You are using '%s' distribution."
+#~ msgstr "Ви використовуєте дистрибутив '%s'."

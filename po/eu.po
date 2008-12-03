@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:49+0100\n"
+"POT-Creation-Date: 2008-12-03 15:28+0100\n"
 "PO-Revision-Date: 2008-11-29 17:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -76,11 +76,13 @@ msgstr "urpmi datubasea blokeatuta"
 #: ../mdkapplet:132
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr ""
+"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
@@ -137,50 +139,50 @@ msgstr "Konfiguratu sarea"
 msgid "Upgrade the system"
 msgstr "Sistema bertsio berritu"
 
-#: ../mdkapplet:356
+#: ../mdkapplet:357
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "drakconect abiarazten\n"
 
-#: ../mdkapplet:361 ../mdkapplet:382
+#: ../mdkapplet:362 ../mdkapplet:383
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux banaketaren bertsio berria"
 
-#: ../mdkapplet:365
+#: ../mdkapplet:366
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mandriva Linux banaketaren bertsio berri bat kaleratu da."
 
-#: ../mdkapplet:367
+#: ../mdkapplet:368
 #, c-format
 msgid "More info about this new version"
 msgstr "Bertsio berri honi buruzko informazio gehiago"
 
-#: ../mdkapplet:369
+#: ../mdkapplet:370
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "'%s' banaketara bertsio berritu nahi duzu?"
 
-#: ../mdkapplet:371 ../mdkapplet-restricted-helper:67
+#: ../mdkapplet:372 ../mdkapplet-restricted-helper:68
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Ez galdetu berriz"
 
-#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:104
 #, c-format
 msgid "Next"
 msgstr "Hurrengoa"
 
-#: ../mdkapplet:372 ../mdkapplet:408 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:104 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Utzi"
 
-#: ../mdkapplet:399
+#: ../mdkapplet:400
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -189,19 +191,19 @@ msgstr ""
 "Bertsio berritze honek banda zabalera haundiko sare lotura (kablea, "
 "xDSL, ...)  behar du eta osatzeko orduak beharko ditu."
 
-#: ../mdkapplet:401
+#: ../mdkapplet:402
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Jaitsi behar den datu kopurua %s izango dela kalkulatu da"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 "Jarraitu aurretik martxan dauden gainontzeko aplikazio guztiak itxi beharko "
 "zenituzke."
 
-#: ../mdkapplet:405
+#: ../mdkapplet:406
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -286,24 +288,26 @@ msgstr "Jaurti beti hasterakoan"
 msgid "Quit"
 msgstr "Irten"
 
-#: ../mdkapplet-restricted-helper:59
+#: ../mdkapplet-restricted-helper:58
 #, c-format
 msgid "New medium available"
 msgstr "Euskarri berria eskuragarri"
 
 #: ../mdkapplet-restricted-helper:65
 #, c-format
-msgid "You are using '%s' distribution."
-msgstr "'%s' banaketa erabiltzen ari zara."
+msgid ""
+"You use '%s' distribution and therefore have privileged access to additional "
+"software."
+msgstr ""
 
-#: ../mdkapplet-restricted-helper:65
+#: ../mdkapplet-restricted-helper:66
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet-restricted-helper:66
-#, c-format
-msgid "Do you want to add an additional package medium?"
+#: ../mdkapplet-restricted-helper:67
+#, fuzzy, c-format
+msgid "Do you want to install this additional software repository?"
 msgstr "Pakete euskarri osagarri bat erantsi nahi duzu?"
 
 #: ../mdkapplet-restricted-helper:77
@@ -311,46 +315,47 @@ msgstr "Pakete euskarri osagarri bat erantsi nahi duzu?"
 msgid "Adding an additional package medium"
 msgstr "Pakete euskarri berri bat eransten"
 
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-restricted-helper:90
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Mesedez bete zure kontu ID, pakete euskarri osagarri bat eransteko"
 
-#: ../mdkapplet-restricted-helper:90
+#: ../mdkapplet-restricted-helper:94
 #, c-format
 msgid "More information on your user account"
 msgstr "Zure erabiltzaile kontuaren gaineko informazio gehiago"
 
-#: ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-restricted-helper:97
 #, c-format
 msgid "Your email"
 msgstr "Zure post@"
 
-#: ../mdkapplet-restricted-helper:93
+#: ../mdkapplet-restricted-helper:98
 #, c-format
 msgid "Your password"
 msgstr "Zure pasahitza"
 
-#: ../mdkapplet-restricted-helper:95
+#: ../mdkapplet-restricted-helper:102
 #, c-format
 msgid "Forgotten password"
 msgstr "Ahaztutako pasahitza"
 
-#: ../mdkapplet-restricted-helper:121 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Errorea"
 
-#: ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:129
 #, c-format
 msgid "An error occurred"
 msgstr "Akats bat gertatu da"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Zure sistemak ez dauka %s-n behar adina leku aske bertsio berritzeko (%dMB < "
 "%dMB)"
@@ -414,7 +419,7 @@ msgstr "Ezin izan da euskarria gehitu"
 msgid "Distribution Upgrade"
 msgstr "Banaketaren Bertsio berritzea"
 
-#: ../mdkupdate:62
+#: ../mdkupdate:59
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
@@ -431,33 +436,35 @@ msgstr ""
 "\n"
 "erabilera:\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:64
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- laguntza-mezu hau inprimatzen du.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:65
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update automatikoki abiarazten du.\n"
 
-#: ../mdkupdate:69
+#: ../mdkupdate:66
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- jaurti mnf script espezifikoak.\n"
 
-#: ../mdkupdate:70
+#: ../mdkupdate:67
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- Mandriva Update-ren testu moduko bertsioa.\n"
 
-#: ../mdkupdate:71
+#: ../mdkupdate:68
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 
-#: ../mdkupdate:102
+#: ../mdkupdate:99
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
+#~ msgid "You are using '%s' distribution."
+#~ msgstr "'%s' banaketa erabiltzen ari zara."
