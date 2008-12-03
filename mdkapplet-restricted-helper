@@ -61,8 +61,10 @@ sub prepare_add_restricted() {
           $w,
           [
               get_banner(),
-              gtknew('Label_Left', text => N("You are using '%s' distribution.", N("Mandriva PowerPack")), @common),
-              gtknew('Label_Left', text => N("Do you want to add an additional package medium?"), @common),
+              gtknew('Label_Left', text => 
+                       N("You use '%s' distribution and therefore have privileged access to additional software.",
+                         N("Mandriva PowerPack")) . "\n\n" .
+                           N("Do you want to install this additional software repository?", ), @common),
               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
