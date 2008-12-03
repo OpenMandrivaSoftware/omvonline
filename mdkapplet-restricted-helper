@@ -84,7 +84,17 @@ sub get_restricted_authentication() {
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
 
-    $res ? add_restricted_medium($email_w->get_text, $password) : 0;
+    my $email = $email_w->get_text;
+    if ($res) {
+        if ($email && $password) {
+            add_restricted_medium($email, $password);
+        } else {
+            interactive->vnew->ask_warn(N("Error"), N("Password & email cannot be empty."));
+            goto &get_restricted_authentication;
+        }
+    } else {
+        0;
+    }
 }
 
 sub get_from {
