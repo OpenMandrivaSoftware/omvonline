@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-03 15:28+0100\n"
-"PO-Revision-Date: 2008-10-21 22:30+0200\n"
+"PO-Revision-Date: 2008-12-03 15:47+0100\n"
 "Last-Translator: Oliver Burger <oliver@mandrivauser.de>\n"
 "Language-Team: deutsch <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 #: ../mdkapplet:65
 #, c-format
 msgid "Will check updates at %s"
-msgstr "Überprüfe Updates auf %s"
+msgstr "Überprüfe Updates um %s"
 
 #: ../mdkapplet:74
 #, c-format
@@ -61,7 +61,7 @@ msgstr "Eine neue Version von Mandriva Linux ist erschienen"
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Eine weitere Paketquelle ist für Ihre Distribution verfügbar"
 
 #: ../mdkapplet:113
 #, c-format
@@ -81,13 +81,11 @@ msgstr "urpmi Datenbank ist gesperrt"
 #: ../mdkapplet:132
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
+msgstr "Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Kein Medium gefunden. Sie müssen einige Medien mit dem 'Software Medien "
 "Manager'"
@@ -127,7 +125,7 @@ msgstr "Aktualisieren"
 #: ../mdkapplet:198
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Weitere Paketquelle hinzufügen"
 
 #: ../mdkapplet:199
 #, c-format
@@ -269,8 +267,7 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:645
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
+msgstr "Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:647
 #, c-format
@@ -296,54 +293,54 @@ msgstr "Beenden"
 #: ../mdkapplet-restricted-helper:58
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Neue Paketquelle verfügbar"
 
 #: ../mdkapplet-restricted-helper:65
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "Sie nutzen die '%s' Distribution und haben deshalb Zugang zu zusätzlicher Software."
 
 #: ../mdkapplet-restricted-helper:66
 #, c-format
 msgid "Mandriva PowerPack"
-msgstr ""
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet-restricted-helper:67
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Wollen Sie auf '%s'-Distribution aktualisieren?"
+msgstr "Wollen Sie diese zusätzliche Softwarequelle einrichten?"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Füge eine weitere Paketquelle hinzu"
 
 #: ../mdkapplet-restricted-helper:90
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Bitte geben Sie Ihre Zugangsdaten ein, um eine zusätzliche Paketquelle hinzuzufügen"
 
 #: ../mdkapplet-restricted-helper:94
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Mehr Informationen über Ihr Benutzerkonto"
 
 #: ../mdkapplet-restricted-helper:97
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Ihre Emailadresse"
 
 #: ../mdkapplet-restricted-helper:98
 #, c-format
 msgid "Your password"
-msgstr ""
+msgstr "Ihr Passwort"
 
 #: ../mdkapplet-restricted-helper:102
 #, c-format
 msgid "Forgotten password"
-msgstr ""
+msgstr "Vergessenes Passwort"
 
 #: ../mdkapplet-restricted-helper:129 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
@@ -355,12 +352,11 @@ msgstr "Fehler"
 #: ../mdkapplet-restricted-helper:129
 #, c-format
 msgid "An error occurred"
-msgstr ""
+msgstr "Ein Fehler ist aufgetreten"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Auf Ihrem System befindet sich nicht genug freier Speicherplatz in %s für "
 "die Aktualisierung (%dMB < %dMB)"
@@ -470,15 +466,3 @@ msgstr " --debug\t\t\t- protokolliere was gemacht wird\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Aktualisieren der Pakete vom Mdkupdate Medium nicht möglich.\n"
 
-#, fuzzy
-#~ msgid "You are using '%s' distribution."
-#~ msgstr "Wollen Sie auf '%s'-Distribution aktualisieren?"
-
-#~ msgid "Do you want to upgrade?"
-#~ msgstr "Wollen Sie aktualisieren?"
-
-#~ msgid "Yes"
-#~ msgstr "Ja"
-
-#~ msgid "No"
-#~ msgstr "Nein"
