@@ -60,7 +60,7 @@ sub prepare_add_restricted() {
       fill_n_run_portable_dialog(
           $w,
           [
-              get_banner(),
+              get_banner(N("New medium available")),
               gtknew('Label_Left', text => 
                        N("You use '%s' distribution and therefore have privileged access to additional software.",
                          N("Mandriva PowerPack")) . "\n\n" .
@@ -86,7 +86,7 @@ sub get_restricted_authentication() {
       fill_n_run_portable_dialog(
           $w,
           [
-              get_banner(),
+              get_banner(N("Adding an additional package medium")),
               gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
