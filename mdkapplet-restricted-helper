@@ -108,6 +108,7 @@ sub get_from {
     $response;
 }
 
+my $error;
 sub add_restricted_medium {
     my ($email, $password) = @_;
 
@@ -119,6 +120,7 @@ sub add_restricted_medium {
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
     } else {
+        $error = 0;
         my $arch = urpm::cfg::get_arch();
         actually_add_restricted_medium($ref, $password, $arch)
           or adding_media_failed();
@@ -127,10 +129,17 @@ sub add_restricted_medium {
             actually_add_restricted_medium($ref, $password, 'i586')
               or adding_media_failed();
         }
+        if (!$error) {
+            #interactive->vnew->ask_okcancel(N("Error"), N("An error occurred while adding medium"));
+            my $w = ugtk2->new(N("Successfully added media %s.", 'Restricted'), grab => 1);
+            $w->_ask_okcancel(N("Successfully added media %s.", 'Restricted'), N("Ok"), undef);
+            ugtk2::main($w);
+        }
     }
 }
 
 sub adding_media_failed {
+    $error = 1;
     interactive->vnew->ask_warn(N("Error"), N("An error occurred while adding medium"));
     goto &get_restricted_authentication;
 }
