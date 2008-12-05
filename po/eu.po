@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-03 16:47+0100\n"
-"PO-Revision-Date: 2008-11-29 17:35+0100\n"
+"PO-Revision-Date: 2008-12-05 06:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -76,13 +76,11 @@ msgstr "urpmi datubasea blokeatuta"
 #: ../mdkapplet:132
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
@@ -298,7 +296,7 @@ msgstr "Euskarri berria eskuragarri"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "'%s' banaketa erabiltzen duzu, ondorioz software osagarrira sarbide pribilegioa daukazu."
 
 #: ../mdkapplet:721
 #, c-format
@@ -306,9 +304,9 @@ msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:722
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Pakete euskarri osagarri bat erantsi nahi duzu?"
+msgstr "Pakete gordetegi osagarri hau erantsi nahi duzu?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #, c-format
@@ -351,7 +349,7 @@ msgstr "Errorea"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Pasahitza eta post@ ezin dira hutsik utzi."
 
 #: ../mdkapplet-restricted-helper:119
 #, c-format
@@ -359,14 +357,13 @@ msgid "An error occurred"
 msgstr "Akats bat gertatu da"
 
 #: ../mdkapplet-restricted-helper:134
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "Ezin izan da euskarria gehitu"
+msgstr "Akatsa gertatu da euskarria eransterakoan"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Zure sistemak ez dauka %s-n behar adina leku aske bertsio berritzeko (%dMB < "
 "%dMB)"
@@ -477,5 +474,3 @@ msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
 
-#~ msgid "You are using '%s' distribution."
-#~ msgstr "'%s' banaketa erabiltzen ari zara."
