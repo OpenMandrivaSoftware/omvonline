@@ -81,10 +81,6 @@ my %options = (
 
 GetOptions(%options);
 
-my $in;
-
-$noX and $in = interactive->vnew;
-
 -e $logfile and rm_rf($logfile);
 
              my $ret = update_pkgs();
