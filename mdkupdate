@@ -83,12 +83,12 @@ GetOptions(%options);
 
 -e $logfile and rm_rf($logfile);
 
-             my $ret = update_pkgs();
-             if ($ret != 1) {
-                 output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
-                 log::explanations("[mdkupdate] Error 100: Packages failed to upgrade");
-	     }
-	    clean_dir();
+my $ret = update_pkgs();
+if ($ret != 1) {
+    output_p($logfile, "[mdkupdate] Error 100: Packages failed to upgrade");
+    log::explanations("[mdkupdate] Error 100: Packages failed to upgrade");
+}
+clean_dir();
 
 
 sub update_pkgs {
