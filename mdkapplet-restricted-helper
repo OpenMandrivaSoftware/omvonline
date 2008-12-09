@@ -120,6 +120,8 @@ sub add_restricted_medium {
         my $in = interactive->vnew;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
+    } elsif ($ref->{data}{'can-access-restricted-repositories'} ne 'YES') {
+        no_rigths_dialog();
     } else {
         $error = 0;
         my $arch = urpm::cfg::get_arch();
@@ -137,6 +139,23 @@ sub add_restricted_medium {
             ugtk2::main($w);
         }
     }
+}
+
+sub no_rigths_dialog {
+    my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
+
+    fill_n_run_portable_dialog(
+          $w,
+          [
+              get_banner(N("Adding an additional package medium")),
+              gtknew('Label_Left', text => N("Your Mandriva account does not have Powerpack download subscription enabled."),
+                     @common),
+              gtknew('HButtonBox', layout => 'start', children_tight => [
+                  interactive::gtk::add_padding(
+                      new_link_button('https://my.mandriva.com/powerpack/', N("More information")))
+              ]),
+              create_okcancel($w, N("Close"), undef),
+          ]);
 }
 
 sub adding_media_failed {
