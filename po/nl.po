@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-10-22 00:23+0200\n"
 "Last-Translator: Reinout van Schouwen <reinouts@gnome.org>\n"
 "Language-Team: Nederlands\n"
@@ -237,7 +237,7 @@ msgstr "Controle van het netwerk: lijkt uitgeschakeld te zijn\n"
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Meer informatie"
@@ -313,6 +313,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Wilt u opwaarderen naar de distributie ‘%s’?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -342,8 +343,8 @@ msgstr "Wachtwoord onjuist"
 msgid "Forgotten password"
 msgstr "Wachtwoord onjuist"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -355,12 +356,33 @@ msgstr "Fout"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Er is een fout opgetreden"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ok"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Sluiten"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Toevoegen medium mislukt"
@@ -474,7 +496,7 @@ msgstr "  --noX\t\t\t- tekstmodus van Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- in logboek bijhouden wat er gebeurt\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
@@ -495,9 +517,6 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mandriva Online lijkt opnieuw geïnstalleerd te zijn, applet herladen…"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Nagaan… Herzieningen zijn beschikbaar\n"
@@ -669,9 +688,6 @@ msgstr "Niet in staat pakketten bij te werken vanaf het update_source-medium\n"
 
 #~ msgid "Status"
 #~ msgstr "Status"
-
-#~ msgid "Close"
-#~ msgstr "Sluiten"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Netwerkverbinding: "

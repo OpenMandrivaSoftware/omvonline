@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2002-09-25 19:04+0200\n"
 "Last-Translator: Raivo Saars <spaiks@inbox.lv>\n"
 "Language-Team: ll10nt <ll10nt@listes.murds.lv>\n"
@@ -219,7 +219,7 @@ msgstr ""
 msgid "Warning"
 msgstr "Uzmanību"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -293,6 +293,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -322,8 +323,8 @@ msgstr "Nepareiza parole"
 msgid "Forgotten password"
 msgstr "Nepareiza parole"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -335,12 +336,33 @@ msgstr "Kļūda"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Atklāta kļūda"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Labi"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Aizvērt"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Atklāta kļūda"
@@ -447,7 +469,7 @@ msgstr "  --update       - izveidot atjaunināšanas datu nesēju.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
@@ -457,9 +479,6 @@ msgstr ""
 
 #~ msgid "No"
 #~ msgstr "Nē"
-
-#~ msgid "Ok"
-#~ msgstr "Labi"
 
 #, fuzzy
 #~ msgid "Failed to open urpmi database"
@@ -564,9 +583,6 @@ msgstr ""
 
 #~ msgid "Status"
 #~ msgstr "Statuss"
-
-#~ msgid "Close"
-#~ msgstr "Aizvērt"
 
 #, fuzzy
 #~ msgid "Network Connection: "

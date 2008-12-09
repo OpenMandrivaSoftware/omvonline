@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-10-21 22:53+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -230,7 +230,7 @@ msgstr "Kontrollerer nettverk: Ser avslått ut.\n"
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Meir informasjon"
@@ -304,6 +304,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Ønskjer du å oppgradera til «%s»?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -333,8 +334,8 @@ msgstr "Feil passord"
 msgid "Forgotten password"
 msgstr "Feil passord"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -346,12 +347,33 @@ msgstr "Feil"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Det oppstod ein feil"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "OK"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Klarte ikkje leggja til nytt medium"
@@ -465,7 +487,7 @@ msgstr "  --noX          – Tekstutgåva av Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t– Logg over kva som vert gjort.\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
@@ -486,9 +508,6 @@ msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mandriva Online er installert på nytt. Startar panelprogrammet om att."
-
-#~ msgid "Ok"
-#~ msgstr "OK"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Kontrollererer … Det finst nye oppdateringar.\n"

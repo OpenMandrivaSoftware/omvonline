@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: all2.po\n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandrakesoft.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Warning"
 msgstr "Rabhadh"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -292,6 +292,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -321,8 +322,8 @@ msgstr "Gan pasfhocal"
 msgid "Forgotten password"
 msgstr "Gan pasfhocal"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -334,12 +335,33 @@ msgstr "Earráid"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Tharla earráid"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ceart go Leor"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Dún"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Tharla earráid"
@@ -441,7 +463,7 @@ msgstr ""
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
@@ -451,9 +473,6 @@ msgstr ""
 
 #~ msgid "No"
 #~ msgstr "Níl"
-
-#~ msgid "Ok"
-#~ msgstr "Ceart go Leor"
 
 #, fuzzy
 #~ msgid "Failed to open urpmi database"
@@ -515,9 +534,6 @@ msgstr ""
 
 #~ msgid "Status"
 #~ msgstr "Stádas"
-
-#~ msgid "Close"
-#~ msgstr "Dún"
 
 #~ msgid "Up"
 #~ msgstr "Suas"

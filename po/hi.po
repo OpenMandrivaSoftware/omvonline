@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-hi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-08-21 14:31+0530\n"
 "Last-Translator: धनञ्जय शर्मा (Dhananjaya Sharma)\n"
 "Language-Team: Hindi, India\n"
@@ -229,7 +229,7 @@ msgstr "नेटवर्क की जाँच की जा रही है
 msgid "Warning"
 msgstr "चेतावनी"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -303,6 +303,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -332,8 +333,8 @@ msgstr "गलत कूटशब्द"
 msgid "Forgotten password"
 msgstr "गलत कूटशब्द"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -345,12 +346,33 @@ msgstr "त्रुटि"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "एक त्रुटि हो गयी है"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "ठीक"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "बन्द"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "असफ़लता जब माध्यम को जोड़ा जा रहा था..."
@@ -462,7 +484,7 @@ msgstr "  --noX\t\t\t- मैनड्रिव अपडेट का पाठ
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "एमडीकेअपडेट माध्यम से पैकेजों को अपडेट करने में असमर्थ ।\n"
@@ -477,9 +499,6 @@ msgstr "एमडीकेअपडेट माध्यम से पैके
 #~ msgstr ""
 #~ "एमडीकेऑनलाइन का लगता है कि पुनः संसाधन किया गया है, एपलेट को पुनः लाया जा रहा "
 #~ "है .... "
-
-#~ msgid "Ok"
-#~ msgstr "ठीक"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "जाँच की जा रही है... अपडेट्स उपलब्ध है\n"
@@ -590,9 +609,6 @@ msgstr "एमडीकेअपडेट माध्यम से पैके
 
 #~ msgid "Status"
 #~ msgstr "स्थिति"
-
-#~ msgid "Close"
-#~ msgstr "बन्द"
 
 #~ msgid "Network Connection: "
 #~ msgstr "नेटवर्क कनेक्शन: "

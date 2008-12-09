@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-02-24 23:27+0300\n"
 "Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
 "Language-Team: Arabic <support@arabeyes.org>\n"
@@ -228,7 +228,7 @@ msgstr "يجري فحص الشّبكة: تبدو معطّلة\n"
 msgid "Warning"
 msgstr "تحذير"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -302,6 +302,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -331,8 +332,8 @@ msgstr "كلمة مرور خاطئة"
 msgid "Forgotten password"
 msgstr "كلمة مرور خاطئة"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -344,12 +345,33 @@ msgstr "خطأ"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "موافق"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "إغلق"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "فشل عند إضافة الوسيط"
@@ -459,7 +481,7 @@ msgstr "  --auto         - تشغيل ماندريبا أبدايت تلقائي
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "لم يمكن تحديث الحزم من وسيط التحديث.\n"
@@ -472,9 +494,6 @@ msgstr "لم يمكن تحديث الحزم من وسيط التحديث.\n"
 
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr "يبدو أنّ ماندريبا أُنلاين مثبّت من جديد،ياجريإعادة تحميل البريمج..."
-
-#~ msgid "Ok"
-#~ msgstr "موافق"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "يجري الفحص... التّحديثات متوفّرة\n"
@@ -585,9 +604,6 @@ msgstr "لم يمكن تحديث الحزم من وسيط التحديث.\n"
 
 #~ msgid "Status"
 #~ msgstr "الحالة"
-
-#~ msgid "Close"
-#~ msgstr "إغلق"
 
 #~ msgid "Network Connection: "
 #~ msgstr "وصلة الشّبكة: "

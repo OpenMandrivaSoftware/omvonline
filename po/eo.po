@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-eo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-01-13 10:13+0100\n"
 "Last-Translator: Grégoire COLBERT <gcolbert2004@noos.fr>\n"
 "Language-Team: Esperanto <mandrak-eo@yahoogroups.com>\n"
@@ -228,7 +228,7 @@ msgstr "Kontrolante Reton: ĝi ŝajnas haltita\n"
 msgid "Warning"
 msgstr "Averto"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -302,6 +302,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -331,8 +332,8 @@ msgstr "Malĝusta pasvorto"
 msgid "Forgotten password"
 msgstr "Malĝusta pasvorto"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -344,12 +345,33 @@ msgstr "Eraro"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Eraro okazis"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Jeso"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Fermu"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Paneo ĉe aldono de portilo"
@@ -460,7 +482,7 @@ msgstr "  --applet       - startas Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ne kapablas ĝisdatigi pakaĵojn el 'update_source medium'.\n"
@@ -473,9 +495,6 @@ msgstr "Ne kapablas ĝisdatigi pakaĵojn el 'update_source medium'.\n"
 
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr "Mandriva Online ŝajnas reinstalita, reŝarĝas programeton ...."
-
-#~ msgid "Ok"
-#~ msgstr "Jeso"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Kontrolante... Ĝisdatigojn haveblas\n"
@@ -589,9 +608,6 @@ msgstr "Ne kapablas ĝisdatigi pakaĵojn el 'update_source medium'.\n"
 
 #~ msgid "Status"
 #~ msgstr "Statuso"
-
-#~ msgid "Close"
-#~ msgstr "Fermu"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Reta konekto: "

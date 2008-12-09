@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-02-05 00:43+0000\n"
 "Last-Translator: Arys P. Deloso <arys@deloso.org>\n"
 "Language-Team: Filipino <salin@pandaypinoy.org>\n"
@@ -229,7 +229,7 @@ msgstr "Sinusuri ang Network: tila naka-disable\n"
 msgid "Warning"
 msgstr "Babala"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -303,6 +303,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -332,8 +333,8 @@ msgstr "Maling password"
 msgid "Forgotten password"
 msgstr "Maling password"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -345,12 +346,33 @@ msgstr "Error"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "May \"error\" na nangyari"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ok"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Isara"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Kabiguan kung nagdadagdag ng medium"
@@ -462,7 +484,7 @@ msgstr "  --applet       - ilunsad ang Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Hindi ma-update ang mga package mula sa medium ng update_source.\n"
@@ -476,9 +498,6 @@ msgstr "Hindi ma-update ang mga package mula sa medium ng update_source.\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Tila in-install muli ang Mandriva Online, nilo-load muli ang applet..."
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Nagsusuri... mayroong mga Update\n"
@@ -590,9 +609,6 @@ msgstr "Hindi ma-update ang mga package mula sa medium ng update_source.\n"
 
 #~ msgid "Status"
 #~ msgstr "Kalagayan"
-
-#~ msgid "Close"
-#~ msgstr "Isara"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Koneksyon sa Network: "

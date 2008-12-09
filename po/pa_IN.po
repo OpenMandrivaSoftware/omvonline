@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-03-26 22:30+0530\n"
 "Last-Translator: Kanwaljeet Singh Brar <kanwaljeetbrar@yahoo.co.in>\n"
 "Language-Team: punlinux-i18n@lists.sourceforge.net\n"
@@ -225,7 +225,7 @@ msgstr "ਨੈਟਵਰਕ ਪੜਤਾਲ: ਆਯੋਗ ਜਾਪਦਾ ਹੈ\
 msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -299,6 +299,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -328,8 +329,8 @@ msgstr "ਗਲਤ ਗੁਪਤ-ਕੋਡ:"
 msgid "Forgotten password"
 msgstr "ਗਲਤ ਗੁਪਤ-ਕੋਡ:"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -341,12 +342,33 @@ msgstr "ਗਲਤੀ"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "ਠੀਕ ਹੈ"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "ਮਾਧਿਅਮ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਅਸਫਲ"
@@ -457,7 +479,7 @@ msgstr "  --applet       - launch Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source ਮਾਧਿਅਮ ਤੋਂ ਪੈਕੇਜ ਨਵੀਨੀਕਰਨ ਲਈ ਅਸਫਲ ਹੈ।\n"
@@ -470,9 +492,6 @@ msgstr "update_source ਮਾਧਿਅਮ ਤੋਂ ਪੈਕੇਜ ਨਵੀਨ�
 
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr "ਮੈਂਡਰਿਵਆਨਲਾਇਨ ਮੁੜ-ਇੰਸਟਾਲ ਜਾਪਦਾ ਹੈ, ਐਪਲਿਟ ਮੁੜ ਲੋਡ..."
-
-#~ msgid "Ok"
-#~ msgstr "ਠੀਕ ਹੈ"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "ਪੜਤਾਲ ਜਾਰੀ... ਨਵੀਨੀਕਰਨ ਉਪਲੱਬਧ ਹਨ\n"
@@ -584,9 +603,6 @@ msgstr "update_source ਮਾਧਿਅਮ ਤੋਂ ਪੈਕੇਜ ਨਵੀਨ�
 
 #~ msgid "Status"
 #~ msgstr "ਸਥਿਤੀ"
-
-#~ msgid "Close"
-#~ msgstr "ਬੰਦ ਕਰੋ"
 
 #~ msgid "Network Connection: "
 #~ msgstr "ਨੈਟਵਰਕ ਕੁਨੈਕਸ਼ਨ: "

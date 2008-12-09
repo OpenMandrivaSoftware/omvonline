@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-tg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-09-17 16:22+0500\n"
 "Last-Translator: Victor Ibragimov <youth_opportunities@tajikngo.org>\n"
 "Language-Team: Tajik\n"
@@ -235,7 +235,7 @@ msgstr "Тафтиши Шабака: эҳтимолан хомӯш карда ш
 msgid "Warning"
 msgstr "Огоҳӣ"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -309,6 +309,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -338,8 +339,8 @@ msgstr "Гузарвожаи нодуруст"
 msgid "Forgotten password"
 msgstr "Гузарвожаи нодуруст"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -351,12 +352,33 @@ msgstr "Хатогӣ"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Хатогӣ рух дод"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ok"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Пӯшидан"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Нокомӣ ҳангоми иловакунии муҳит"
@@ -468,7 +490,7 @@ msgstr "  --noX\t\t\t- навкунии ривояти Mandriva бо усули 
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Навсозии бастаҳо аз муҳити update_source ғайри имкон аст.\n"
@@ -483,9 +505,6 @@ msgstr "Навсозии бастаҳо аз муҳити update_source ғайр
 #~ msgstr ""
 #~ "Дар назар чунин аст, ки Mandriva Online боз коргузорӣ шудааст, "
 #~ "бозборкунии апплет ...."
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Тафтишкунӣ... Навкуниҳо имконпазиранд\n"
@@ -594,9 +613,6 @@ msgstr "Навсозии бастаҳо аз муҳити update_source ғайр
 
 #~ msgid "Status"
 #~ msgstr "Вазъият"
-
-#~ msgid "Close"
-#~ msgstr "Пӯшидан"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Пайвастшавии Шабакавӣ:  "

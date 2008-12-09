@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-10-06 22:34+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -236,7 +236,7 @@ msgstr "Preverjanje omrežja: izgleda onemogočeno\n"
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -310,6 +310,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Ali želite nadgraditi na različico »%s«?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -339,8 +340,8 @@ msgstr "Napačno geslo"
 msgid "Forgotten password"
 msgstr "Napačno geslo"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -352,12 +353,33 @@ msgstr "Napaka"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Prišlo je do napake"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "V redu"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Neuspeh pri dodajanju vira"
@@ -468,7 +490,7 @@ msgstr "  --noX\t\t\t- Mandriva Update v besedilnem načinu.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- log what is done\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
@@ -490,9 +512,6 @@ msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
 #~ msgstr ""
 #~ "Izgleda, da je Mandriva Online na novo nameščen. Ponovno nalaganje "
 #~ "vstavka ..."
-
-#~ msgid "Ok"
-#~ msgstr "V redu"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Preverjanje ... Posodobitve so na voljo\n"

@@ -13,15 +13,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-04 10:49+0100\n"
-"Last-Translator: Amazis.net sp. z o.o. - Tomasz Bednarski <tomasz.bednarski@mandriva.pl>\n"
+"Last-Translator: Amazis.net sp. z o.o. - Tomasz Bednarski <tomasz."
+"bednarski@mandriva.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%"
+"100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -85,8 +87,10 @@ msgstr "Nieobsługiwane wydanie (za stare, lub wydanie rozwojowe)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
 
 #: ../mdkapplet:144
 #, c-format
@@ -238,7 +242,7 @@ msgstr "Sprawdzanie sieci: wygląda na wyłączoną\n"
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Więcej informacji"
@@ -299,7 +303,9 @@ msgstr "Udostępniono nowy nośnik"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "Używasz dystrybucji %s i w związku z tym masz uprzywilejowany dostęp do dodatkowego oprogramowania."
+msgstr ""
+"Używasz dystrybucji %s i w związku z tym masz uprzywilejowany dostęp do "
+"dodatkowego oprogramowania."
 
 #: ../mdkapplet:721
 #, c-format
@@ -312,6 +318,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Czy chcesz zainstalować dodatkowy nośnik z pakietami?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Dodawanie dodatkowego nośnika z pakietami"
@@ -341,8 +348,8 @@ msgstr "Twoje hasło"
 msgid "Forgotten password"
 msgstr "Zapomniałem hasła"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -354,20 +361,43 @@ msgstr "Błąd"
 msgid "Password and email cannot be empty."
 msgstr "Pola hasła i adresu e-mail nie mogą być puste."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Wystąpił błąd"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Wystąpił błąd podczas dodawania nośnika"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Niewystarczająca ilość miejsca na %s do wykonania aktualizacji (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+"Niewystarczająca ilość miejsca na %s do wykonania aktualizacji (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -470,8 +500,7 @@ msgstr "  --noX\t\t\t- Mandriva Update pracujący w trybie tekstowym.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- zapisuj wykonane operacje\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nie można uaktualnić pakietów z nośnika update_source.\n"
-

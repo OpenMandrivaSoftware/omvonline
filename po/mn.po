@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2003-02-21 00:17+0100\n"
 "Last-Translator: Sanlig Badral <badral@chinggis.com>\n"
 "Language-Team: Mongolian <mn@li.org>\n"
@@ -218,7 +218,7 @@ msgstr ""
 msgid "Warning"
 msgstr "Анхааруулга"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -292,6 +292,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -321,8 +322,8 @@ msgstr "Нууц үг:"
 msgid "Forgotten password"
 msgstr "Нууц үг:"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -334,12 +335,33 @@ msgstr "Алдаа"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ок"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Хаах"
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr ""
@@ -447,7 +469,7 @@ msgstr "  --applet       - Бүх мэдээллийг шинэчлэх.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "„update_source“ хэрэгслээс багцуудыг шинэчилэхэд алдаа.\n"
@@ -457,9 +479,6 @@ msgstr "„update_source“ хэрэгслээс багцуудыг шинэчи
 
 #~ msgid "No"
 #~ msgstr "Үгүй"
-
-#~ msgid "Ok"
-#~ msgstr "Ок"
 
 #, fuzzy
 #~ msgid "Failed to open urpmi database"
@@ -540,9 +559,6 @@ msgstr "„update_source“ хэрэгслээс багцуудыг шинэчи
 
 #~ msgid "Status"
 #~ msgstr "Төлөв"
-
-#~ msgid "Close"
-#~ msgstr "Хаах"
 
 #~ msgid "Up"
 #~ msgstr "Дээш"

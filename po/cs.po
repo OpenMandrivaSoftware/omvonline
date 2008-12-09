@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-04 21:48+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -82,7 +83,8 @@ msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nebyl nalezen žádný zdroj softwaru. Je třeba přidat alespoň jeden zdroj "
 "pomocí Správce zdrojů softwaru."
@@ -198,7 +200,8 @@ msgstr "Odhadovaná velikost stažených dat bude %s"
 #: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr "Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
+msgstr ""
+"Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
 
 #: ../mdkapplet:406
 #, c-format
@@ -234,7 +237,7 @@ msgstr "Kontroluji síť: zdá se nedostupná\n"
 msgid "Warning"
 msgstr "Varování"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Více informací"
@@ -262,7 +265,8 @@ msgstr "Copyright ©%s by Mandriva"
 #: ../mdkapplet:645
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr ""
+"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
 #: ../mdkapplet:647
 #, c-format
@@ -312,6 +316,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Chcete nainstalovat tento dodatečný zdroj software?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Přidávám dodatečný zdroj balíčků"
@@ -341,8 +346,8 @@ msgstr "Vaše heslo"
 msgid "Forgotten password"
 msgstr "Zapomenuté heslo"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -354,20 +359,43 @@ msgstr "Chyba"
 msgid "Password and email cannot be empty."
 msgstr "Heslo a email nesmí být prázdné."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Vyskytla se chyba"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Během přidávání zdroje nastala chyba"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Váš systém nemá na povýšení dostatek volného prostoru na %s (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+"Váš systém nemá na povýšení dostatek volného prostoru na %s (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -470,8 +498,7 @@ msgstr "  --noX\t\t\t- textová verze Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
-

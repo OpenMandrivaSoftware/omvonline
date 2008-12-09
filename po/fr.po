@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fr\n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-03 16:47+0100\n"
 "Last-Translator: Christophe Berthelé <cpjc@free.fr>\n"
 "Language-Team: French <cooker-i18n@mandrivalinux.org>\n"
@@ -245,7 +245,7 @@ msgstr "Vérification de l'accès au réseau : il semble être désactivé\n"
 msgid "Warning"
 msgstr "Attention"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Plus d'information"
@@ -333,6 +333,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Voulez-vous installer cette nouvelle source de paquets ?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ajouter un nouveau médium de package"
@@ -363,8 +364,8 @@ msgstr "Votre mot de passe"
 msgid "Forgotten password"
 msgstr "Mot de passe oublié"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -376,12 +377,33 @@ msgstr "Erreur"
 msgid "Password and email cannot be empty."
 msgstr "Ni le mot de passe ni le courriel ne peuvent être vides."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Une erreur est survenue"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ok"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Une erreur est survenue lors de l'ajout du média"
@@ -497,7 +519,7 @@ msgstr "  --noXt\t\t- mode texte de Mandriva Update. \n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- enregistre les actions dans le journal\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"
@@ -518,9 +540,6 @@ msgstr "Impossible de mettre à jour les paquetages du média update_source.\n"
 #~ msgstr ""
 #~ "Mandriva Online semble avoir été réinstallé, rechargement de "
 #~ "l'appliquette ..."
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Vérification ... Des mises à jour sont disponibles\n"

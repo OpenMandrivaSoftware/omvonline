@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-10-07 18:49-0000\n"
 "Last-Translator: Rhoslyn Prys <post@meddal.com>\n"
 "Language-Team: Cymraeg/Welsh <post@meddal.com>\n"
@@ -233,7 +233,7 @@ msgstr "Gwirio'r Rhwydwaith: i weld wedi ei anablu\n"
 msgid "Warning"
 msgstr "Rhybudd"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Rhagor o Wybodaeth"
@@ -307,6 +307,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Hoffech chi ddiweddaru i ddosbarthiad '%s'??"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -336,8 +337,8 @@ msgstr "Y cyfrinair anghywir"
 msgid "Forgotten password"
 msgstr "Y cyfrinair anghywir"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -349,12 +350,33 @@ msgstr "Gwall"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Iawn"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Cau"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Methu ychwanegu cyfrwng"
@@ -466,7 +488,7 @@ msgstr "  --noX\t\t\t- fersiwn modd testun o Mandriva Update\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- cofnodi'r hyn sydd wedi ei wneud\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
@@ -487,9 +509,6 @@ msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mae Mandriva Online i'w weld wedi ei ail osod, ail lwytho'r rhaglennig..."
-
-#~ msgid "Ok"
-#~ msgstr "Iawn"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Gwirio... Mae diweddariadau ar gael\n"
@@ -662,9 +681,6 @@ msgstr "Methu diweddaru pecynnau o gyfrwng update_source.\n"
 
 #~ msgid "Status"
 #~ msgstr "Statws"
-
-#~ msgid "Close"
-#~ msgstr "Cau"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Cyswllt Rhwydwaith:"

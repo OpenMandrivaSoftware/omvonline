@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-04 20:44+0200\n"
 "Last-Translator: Taras Boychuk <btr0001@ukr.net>\n"
 "Language-Team: ukrainian <translation@linux.org.ua>\n"
@@ -20,7 +20,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -84,7 +85,8 @@ msgstr "Версія не підтримується (занадто стара 
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Носіїв не знайдено. Ви повинні додати носії з допомогою 'Software Media "
 "Manager'."
@@ -236,7 +238,7 @@ msgstr "Перевірка мережі: здається, вимкнена\n"
 msgid "Warning"
 msgstr "Попередження"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Детальніша інформація"
@@ -297,7 +299,8 @@ msgstr "Новий носій доступний"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "Ви використовуєте дистрибутив '%s', тому маєте доступ до додаткових програм."
+msgstr ""
+"Ви використовуєте дистрибутив '%s', тому маєте доступ до додаткових програм."
 
 #: ../mdkapplet:721
 #, c-format
@@ -310,6 +313,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Ви хочете додати цей додатковий репозиторій з програмами?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Додається додатковий носій з пакунками"
@@ -339,8 +343,8 @@ msgstr "Пароль"
 msgid "Forgotten password"
 msgstr "Забутий пароль"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -352,19 +356,41 @@ msgstr "Помилка"
 msgid "Password and email cannot be empty."
 msgstr "Пароль і поштова адреса не можуть бути порожніми."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Сталася помилка"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "При додаванні джерела сталася помилка"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "У Вашій системі залишилося недостатньо місця на %s для оновлення (%dMB < %"
 "dMB)"
@@ -469,8 +495,7 @@ msgstr "  --noX\t\t\t- версія Mandriva Update в текстовому ре
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- створювати журнал\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"
-

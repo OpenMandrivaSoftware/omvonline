@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2005-09-05 19:00+0100\n"
 "Last-Translator: Antoni Pistis <antonio.pistis@virgilio.it>\n"
 "Language-Team: Sardu\n"
@@ -229,7 +229,7 @@ msgstr "Seu controllendi s'arretza: parit disabivada\n"
 msgid "Warning"
 msgstr "Atentu"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -303,6 +303,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -332,8 +333,8 @@ msgstr "Password sballiada"
 msgid "Forgotten password"
 msgstr "Password sballiada"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -345,12 +346,33 @@ msgstr "Faddina"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Faddina"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Ok"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Serra"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Faddina açungendi su mèdiu."
@@ -461,7 +483,7 @@ msgstr "  --noX\t\t\t- versioni in modalidadi scriturali de Mandriva Update.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "No potzu ajorronai is pakitus de su mèdiu update_source.\n"
@@ -475,9 +497,6 @@ msgstr "No potzu ajorronai is pakitus de su mèdiu update_source.\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mandriva Online parit torrau a aposentai, càrrigu torra sa applet ...."
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Seu controllendi... Ajorronus a disposta\n"
@@ -586,9 +605,6 @@ msgstr "No potzu ajorronai is pakitus de su mèdiu update_source.\n"
 
 #~ msgid "Status"
 #~ msgstr "Stadu"
-
-#~ msgid "Close"
-#~ msgstr "Serra"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Acàpiu a s'Arretza: "

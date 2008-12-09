@@ -9,11 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-06 01:40+0200\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
-"Language-Team: Turkish < "
-"cooker-i18n@mandrivalinux.org>\n"
+"Language-Team: Turkish < cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,7 +81,8 @@ msgstr "Sürüm Desteklenmiyor (Çok eski ya da deneme sürümü)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir "
 "yazılım ortamı ekleyin."
@@ -187,7 +187,8 @@ msgstr "İptal"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr "Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
+msgstr ""
+"Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
 
 #: ../mdkapplet:402
 #, c-format
@@ -232,7 +233,7 @@ msgstr "Ağ Denetleniyor: etkinleştirilmemiş\n"
 msgid "Warning"
 msgstr "Uyarı"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Daha Fazla Bilgi"
@@ -293,7 +294,9 @@ msgstr "Yeni veri kaynağı mevcut"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz var."
+msgstr ""
+"'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz "
+"var."
 
 #: ../mdkapplet:721
 #, c-format
@@ -306,6 +309,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Bu ek paket veri kaynağını eklemek ister misiniz?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ek bir paket veri kaynağı ekleniyor"
@@ -313,7 +317,8 @@ msgstr "Ek bir paket veri kaynağı ekleniyor"
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr "Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
+msgstr ""
+"Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
@@ -335,8 +340,8 @@ msgstr "Parolanız"
 msgid "Forgotten password"
 msgstr "Unutulan parola"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -348,19 +353,41 @@ msgstr "Hata"
 msgid "Password and email cannot be empty."
 msgstr "Parola ve e-posta boş olamaz."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Bir hata oluştu"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Tamam"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Veri kaynağı eklenirken hata oluştu"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Sisteminizin yükseltme için %s içinde yeteri kadar boş alanı yok. (%dMB < %"
 "dMB)"
@@ -465,7 +492,7 @@ msgstr "  --noX\t\t\t- Mandriva Güncelleme'nin metin sürümü.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- kayıt tut\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
@@ -485,9 +512,6 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mandriva Online yenilenmiş gözüküyor. Programcık yeniden yükleniyor ...."
-
-#~ msgid "Ok"
-#~ msgstr "Tamam"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Denetleniyor.... Güncelleştirmeler mevcut.\n"
@@ -632,4 +656,3 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 
 #~ msgid "Installing packages ...\n"
 #~ msgstr "Paketler kuruluyor...\n"
-

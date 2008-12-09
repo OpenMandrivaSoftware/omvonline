@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: es\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-08-25 17:16-0300\n"
 "Last-Translator: Fabián Mandelbaum <fmandelbaum@gmail.com>\n"
 "Language-Team: Español <es@li.org>\n"
@@ -235,7 +235,7 @@ msgstr "Verificando red: parece estar deshabilitada\n"
 msgid "Warning"
 msgstr "Advertencia"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -309,6 +309,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "¿Desea actualizar?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -338,8 +339,8 @@ msgstr "Contraseña incorrecta"
 msgid "Forgotten password"
 msgstr "Contraseña incorrecta"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -351,12 +352,33 @@ msgstr "Error"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Ocurrió un error"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Aceptar"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Cerrar"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Fallo al añadir soporte"
@@ -468,7 +490,7 @@ msgstr "  --noX\t\t\t- Mandriva Update en versión texto.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- hacer un registro de lo que se hace\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Incapaz de actualizar paquetes desde el soporte update_source.\n"
@@ -490,9 +512,6 @@ msgstr "Incapaz de actualizar paquetes desde el soporte update_source.\n"
 #~ msgstr ""
 #~ "Mandriva Online parece haber sido reinstalado, volviendo a cargar "
 #~ "applet..."
-
-#~ msgid "Ok"
-#~ msgstr "Aceptar"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Verificando... Están disponibles actualizaciones\n"
@@ -666,9 +685,6 @@ msgstr "Incapaz de actualizar paquetes desde el soporte update_source.\n"
 
 #~ msgid "Status"
 #~ msgstr "Estado"
-
-#~ msgid "Close"
-#~ msgstr "Cerrar"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Conexión de red: "

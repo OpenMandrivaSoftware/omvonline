@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2004-08-11 20:48+0200\n"
 "Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -230,7 +230,7 @@ msgstr "Verifiaedje del rantoele: i shonnreut k' ele ni soeye nén en alaedje\n
 msgid "Warning"
 msgstr "Adviertixhmint"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -306,6 +306,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -335,8 +336,8 @@ msgstr "Måva scret"
 msgid "Forgotten password"
 msgstr "Måva scret"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -348,12 +349,33 @@ msgstr "Aroke"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Dj' aroke so ene sacwè"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "'l est bon"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Clôre"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Åk n' a nén stî tot radjoutant l' sopoirt"
@@ -465,7 +487,7 @@ msgstr " --noX            - enonder l' modêye e môde tecse.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug         - fé on djournå di çou k' est fwait\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr ""
@@ -481,9 +503,6 @@ msgstr ""
 #~ msgstr ""
 #~ "I shonnreut k' Mandriva Online åye sitî rastalé, dji rtchedje "
 #~ "l' aplikete..."
-
-#~ msgid "Ok"
-#~ msgstr "'l est bon"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Verifiant... Des metaedjes a djoû sont disponibes\n"
@@ -655,9 +674,6 @@ msgstr ""
 
 #~ msgid "Status"
 #~ msgstr "Estat"
-
-#~ msgid "Close"
-#~ msgstr "Clôre"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Raloyaedje al rantoele: "

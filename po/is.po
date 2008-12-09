@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2006-09-12 22:16+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -226,7 +226,7 @@ msgstr "Athuga net: virðist aftengt\n"
 msgid "Warning"
 msgstr "Aðvörun"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -300,6 +300,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -329,8 +330,8 @@ msgstr "Rangt lykilorð"
 msgid "Forgotten password"
 msgstr "Rangt lykilorð"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -342,12 +343,33 @@ msgstr "Villa"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Í lagi"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Loka"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Villa þegar miðli var bætt við"
@@ -457,7 +479,7 @@ msgstr "  --noX\t\t\t- textahams útgáfa af Mandriva Uppfærslum.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- skrá niður allt sem gert er\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
@@ -470,9 +492,6 @@ msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
 
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr "Mandriva Online virðist vera enduruppsett, enduræsi smáforrit ...."
-
-#~ msgid "Ok"
-#~ msgstr "Í lagi"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Athuga...Uppfærslur eru tiltækar\n"
@@ -645,9 +664,6 @@ msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
 
 #~ msgid "Status"
 #~ msgstr "Staða"
-
-#~ msgid "Close"
-#~ msgstr "Loka"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Nettenging: "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-mk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2006-09-17 20:55-0700\n"
 "Last-Translator: Zoran Dimovski <zoki.dimovski@gmail.com>\n"
 "Language-Team: Macedonian\n"
@@ -229,7 +229,7 @@ msgstr "Проверувам мрежа: изгледа е оневозможе�
 msgid "Warning"
 msgstr "Внимание"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -303,6 +303,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -332,8 +333,8 @@ msgstr "Погрешна лозинка"
 msgid "Forgotten password"
 msgstr "Погрешна лозинка"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -345,12 +346,33 @@ msgstr "Грешка"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Се случи грешка"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "Во ред"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "Затвори"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Неуспех при додавање медиум"
@@ -460,7 +482,7 @@ msgstr "  --noX\t\t\t- верзија на Mandriva Update во текстуал
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- запишува што се случува\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не можам да ги ажурирам пакетите од медиумот update_source.\n"
@@ -475,9 +497,6 @@ msgstr "Не можам да ги ажурирам пакетите од мед�
 #~ msgstr ""
 #~ "Изгледа дека Mandriva Online е повторно инсталиран, го превчитувам "
 #~ "аплетот ...."
-
-#~ msgid "Ok"
-#~ msgstr "Во ред"
 
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Проверувам... Пакетите за ажурирање се достапни\n"
@@ -649,9 +668,6 @@ msgstr "Не можам да ги ажурирам пакетите од мед�
 
 #~ msgid "Status"
 #~ msgstr "Статус"
-
-#~ msgid "Close"
-#~ msgstr "Затвори"
 
 #~ msgid "Network Connection: "
 #~ msgstr "Мрежна конекција: "

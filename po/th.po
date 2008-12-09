@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2003-02-28 05:55+0900\n"
 "Last-Translator: Pramote Khuwijitjaru <kmote@hotmail.com>\n"
 "Language-Team: Thai <en@li.org>\n"
@@ -219,7 +219,7 @@ msgstr ""
 msgid "Warning"
 msgstr "คำเตือน"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -293,6 +293,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr ""
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -322,8 +323,8 @@ msgstr "รหัสผ่าน:"
 msgid "Forgotten password"
 msgstr "รหัสผ่าน:"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -335,12 +336,33 @@ msgstr "ข้อผิดพลาด"
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "มีปัญหาเกิดขึ้น"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr "ตกลง"
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr "ปิด"
+
+#: ../mdkapplet-restricted-helper:163
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "มีปัญหาเกิดขึ้น"
@@ -447,7 +469,7 @@ msgstr "  --applet       - อัพเดทข้อมูลทั้งห�
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr ""
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "ไม่สามารถอัพเดทแพ็จเกจจากมีเดียของ update_source \n"
@@ -457,9 +479,6 @@ msgstr "ไม่สามารถอัพเดทแพ็จเกจจา
 
 #~ msgid "No"
 #~ msgstr "ไม่ต้อง"
-
-#~ msgid "Ok"
-#~ msgstr "ตกลง"
 
 #, fuzzy
 #~ msgid "Failed to open urpmi database"
@@ -537,9 +556,6 @@ msgstr "ไม่สามารถอัพเดทแพ็จเกจจา
 
 #~ msgid "Status"
 #~ msgstr "สถานภาพ"
-
-#~ msgid "Close"
-#~ msgstr "ปิด"
 
 #~ msgid "Up"
 #~ msgstr "ขึ้น"

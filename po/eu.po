@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-03 16:47+0100\n"
+"POT-Creation-Date: 2008-12-09 07:34+0100\n"
 "PO-Revision-Date: 2008-12-05 06:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Euskara <eu@li.org>\n"
@@ -76,11 +76,13 @@ msgstr "urpmi datubasea blokeatuta"
 #: ../mdkapplet:132
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr ""
+"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
@@ -235,7 +237,7 @@ msgstr "Sare egiaztaketa: desgaituta dagoela dirudi\n"
 msgid "Warning"
 msgstr "Kontuz"
 
-#: ../mdkapplet:612 ../mdkapplet:620
+#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Informazio gehiago"
@@ -296,7 +298,9 @@ msgstr "Euskarri berria eskuragarri"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "'%s' banaketa erabiltzen duzu, ondorioz software osagarrira sarbide pribilegioa daukazu."
+msgstr ""
+"'%s' banaketa erabiltzen duzu, ondorioz software osagarrira sarbide "
+"pribilegioa daukazu."
 
 #: ../mdkapplet:721
 #, c-format
@@ -309,6 +313,7 @@ msgid "Do you want to install this additional software repository?"
 msgstr "Pakete gordetegi osagarri hau erantsi nahi duzu?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Pakete euskarri berri bat eransten"
@@ -338,8 +343,8 @@ msgstr "Zure pasahitza"
 msgid "Forgotten password"
 msgstr "Ahaztutako pasahitza"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:119
-#: ../mdkapplet-restricted-helper:134 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
@@ -351,19 +356,41 @@ msgstr "Errorea"
 msgid "Password and email cannot be empty."
 msgstr "Pasahitza eta post@ ezin dira hutsik utzi."
 
-#: ../mdkapplet-restricted-helper:119
+#: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "Akats bat gertatu da"
 
-#: ../mdkapplet-restricted-helper:134
+#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Successfully added media %s."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:138
+#, c-format
+msgid "Ok"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:151
+#, c-format
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:157
+#, c-format
+msgid "Close"
+msgstr ""
+
+#: ../mdkapplet-restricted-helper:163
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Akatsa gertatu da euskarria eransterakoan"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Zure sistemak ez dauka %s-n behar adina leku aske bertsio berritzeko (%dMB < "
 "%dMB)"
@@ -469,8 +496,7 @@ msgstr "  --noX\t\t\t- Mandriva Update-ren testu moduko bertsioa.\n"
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 
-#: ../mdkupdate:99
+#: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
-
