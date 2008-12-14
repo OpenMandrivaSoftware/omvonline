@@ -1,27 +1,27 @@
-# translation of mdkonline.po to Icelandic
+# Icelandic translation of mdkonline.po
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2004, 2005, 2006.
 #
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2004, 2005, 2006, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-09 07:34+0100\n"
-"PO-Revision-Date: 2006-09-12 22:16+0000\n"
+"PO-Revision-Date: 2008-12-14 13:54+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "Athuga með uppfærslur"
+msgstr "Athuga með uppfærslur klukkan %s"
 
 #: ../mdkapplet:74
 #, c-format
@@ -50,12 +50,12 @@ msgstr "Nýjar uppfærslur eru tiltækar fyrir kerfið þitt"
 #: ../mdkapplet:100
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr ""
+msgstr "Ný útgáfa af Mandriva Linux hefur verið sett í dreifingu"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Auka pakkamiðill er tiltækur fyrir þína dreifingu."
 
 #: ../mdkapplet:113
 #, c-format
@@ -79,12 +79,11 @@ msgstr "Útgáfa ekki þjónustuð (of gömul útgáfa, eða tilraunaútgáfa)"
 
 #: ../mdkapplet:138
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Enginn miðill fannst. Þú verður að bæta við einhverjum miðlum með hugbúnaðar-miðla-tólinu."
 
 #: ../mdkapplet:144
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -95,7 +94,7 @@ msgid ""
 msgstr ""
 "Þú hefur sett upp a.m.k. einn uppfærslumiðil, en þeir eru allir\n"
 "óvirkir.  Þú verður að keyra Hugbúnaðar-miðla-tólið til að virkja\n"
-"a.m.k. einn þeirra. (krossa við í virkur? dálknum).\n"
+"a.m.k. einn þeirra. (krossa við í \"%s\" dálknum).\n"
 "\n"
 "Endurræstu síðan %s."
 
@@ -105,9 +104,9 @@ msgid "Enabled"
 msgstr "Virkur"
 
 #: ../mdkapplet:162
-#, fuzzy, c-format
+#, c-format
 msgid "Error updating media"
-msgstr "Uppfæri miðil...\n"
+msgstr "Villa við uppfærslu á miðli"
 
 #: ../mdkapplet:197 ../mdkapplet:618
 #, c-format
@@ -117,7 +116,7 @@ msgstr "Setja inn uppfærslur"
 #: ../mdkapplet:198
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Bæta við pakkamiðlum"
 
 #: ../mdkapplet:199
 #, c-format
@@ -132,7 +131,7 @@ msgstr "Stilla nettengingu"
 #: ../mdkapplet:201
 #, c-format
 msgid "Upgrade the system"
-msgstr ""
+msgstr "Uppfæra kerfið"
 
 #: ../mdkapplet:357
 #, c-format
@@ -142,27 +141,27 @@ msgstr "Ræsi drakconnect\n"
 #: ../mdkapplet:362 ../mdkapplet:383
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Ný útgáfa af Mandriva Linux dreifingunni"
 
 #: ../mdkapplet:366
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr ""
+msgstr "Ný útgáfa af Mandriva Linux hefur verið sett í dreifingu."
 
 #: ../mdkapplet:368
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Ítarlegri upplýsingar um þessa nýju útgáfu"
 
 #: ../mdkapplet:370
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr ""
+msgstr "Viltu uppfæra '%s' dreifinguna?"
 
 #: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
 msgid "Do not ask me next time"
-msgstr ""
+msgstr "Ekki spyrja í næsta skipti"
 
 #: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
 #: ../mdkapplet-restricted-helper:84
@@ -182,24 +181,24 @@ msgstr "Hætta við"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr ""
+msgstr "Þessi uppfærsla þarfnast háhraða nettengingar (beintenging, xDSL,...)   og getur tekið nokkra klukkutíma."
 
 #: ../mdkapplet:402
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Áætlað er að þaðð þurfi að sækja %s"
 
 #: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Þú ættir að loæa öllum öðrum forritum áður en þú heldur áfram."
 
 #: ../mdkapplet:406
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Þú ættir að tengja fartölvuna þína við rafmagn og nota beina nettengingu í stað þráðlauss ef hægt er."
 
 #: ../mdkapplet:432
 #, c-format
@@ -229,12 +228,12 @@ msgstr "Aðvörun"
 #: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Ítarlegri upplýsingar"
 
 #: ../mdkapplet:622
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Bæta við miðli"
 
 #: ../mdkapplet:637
 #, c-format
@@ -265,7 +264,7 @@ msgstr "Tengjast vefsvæði"
 #: ../mdkapplet:652
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 
 #: ../mdkapplet:661
 #, c-format
@@ -280,55 +279,55 @@ msgstr "Hætta"
 #: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Nýr miðill tiltækur"
 
 #: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "Þú notar '%s' dreifinguna og hefur því forgangs-aðgang að aukahugbúnaði."
 
 #: ../mdkapplet:721
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva PowerPack"
-msgstr "Mandriva Online"
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:722
 #, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr ""
+msgstr "Vilt þú bæta við þessum auka pakkamiðli?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Bæti við aukalegum pakkamiðli"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Vinsamlega fylltu inn auðkenni þitt til að hægt sé að bæta við pakkamiðli"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Ítarlegri upplýsingar um skráningu þína"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Netfangið þitt"
 
 #: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#, c-format
 msgid "Your password"
-msgstr "Rangt lykilorð"
+msgstr "Lykilorðið þitt"
 
 #: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#, c-format
 msgid "Forgotten password"
-msgstr "Rangt lykilorð"
+msgstr "Gleymt lykilorð"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -341,7 +340,7 @@ msgstr "Villa"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Lykilorð og netfang má ekki vera autt."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -351,7 +350,7 @@ msgstr "Villa kom upp"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "Tókst að bæta við miðli %s."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -360,9 +359,8 @@ msgstr "Í lagi"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Í Mandriva skráningunni þinni \"Powerpack download\" ekki virkt."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -370,15 +368,14 @@ msgid "Close"
 msgstr "Loka"
 
 #: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "Villa þegar miðli var bætt við"
+msgstr "Villa kom upp þegar reynt var að bæta við miðli"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Kerfið þitt hefur ekki nægilegt laust pláss á %s til að hægt sé að uppfæra (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -389,7 +386,7 @@ msgstr "Innsetning mistókst"
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "Innsetningarannála má finna í '%s'"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -404,12 +401,12 @@ msgstr "Til hamingju"
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Tókst að uppfæra í útgáfu Mandriva %s."
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Þú verður að endurræsa kerfið þitt."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -436,7 +433,7 @@ msgstr "Villa þegar miðli var bætt við"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Uppfærsla dreifingar"
 
 #: ../mdkupdate:59
 #, c-format
@@ -484,460 +481,3 @@ msgstr "  --debug\t\t\t- skrá niður allt sem gert er\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
 
-#~ msgid "Yes"
-#~ msgstr "Já"
-
-#~ msgid "No"
-#~ msgstr "Nei"
-
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr "Mandriva Online virðist vera enduruppsett, enduræsi smáforrit ...."
-
-#~ msgid "Checking... Updates are available\n"
-#~ msgstr "Athuga...Uppfærslur eru tiltækar\n"
-
-#~ msgid "Packages are up to date"
-#~ msgstr "Pakkar eru uppfærðir"
-
-#, fuzzy
-#~ msgid "Failed to open urpmi database"
-#~ msgstr "gat ekki opnað rpmdb"
-
-#~ msgid "Connecting to"
-#~ msgstr "Tengist við"
-
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "Mandriva Linux uppfærslubakkaforrit"
-
-#~ msgid "Security error"
-#~ msgstr "Öryggisvilla"
-
-#~ msgid "Generic error (machine already registered)"
-#~ msgstr "Almenn villa (Vél þegar skráð)"
-
-#~ msgid "Database error"
-#~ msgstr "Gagnagrunns-villa"
-
-#~ msgid ""
-#~ "Server Database failed\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Villa í gagnagrunni miðlara\n"
-#~ "Vinsamlega reynið aftur síðar"
-
-#~ msgid "Registration error"
-#~ msgstr "Skráningarvilla"
-
-#~ msgid "Some parameters are missing"
-#~ msgstr "Sum viðföng vantar"
-
-#~ msgid "Password error"
-#~ msgstr "Lykilorðsvilla"
-
-#~ msgid "Login error"
-#~ msgstr "Skráningarvilla"
-
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr ""
-#~ "Netfangið sem þú gafst upp er þegar í notkun\n"
-#~ "Vinsamlega gefið upp annað netfang\n"
-
-#~ msgid "The email you provided is invalid or forbidden"
-#~ msgstr "Netfangið sem þú gafst upp er ógilt eða ólöglegt"
-
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr ""
-#~ "Netfangs-svæðið er autt\n"
-#~ "Vinsamlega gefðu upp netfang"
-
-#~ msgid "Restriction Error"
-#~ msgstr "Takmörkunarvilla"
-
-#~ msgid "Database access forbidden"
-#~ msgstr "Gagnagrunnsaðgangur bannaður"
-
-#~ msgid "Service error"
-#~ msgstr "Þjónustuvilla"
-
-#~ msgid ""
-#~ "Mandriva web services are currently unavailable\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Mandriva vefþjónusta er ekki tiltæk\n"
-#~ "Vinsamlega reynið aftur síðar"
-
-#~ msgid "Password mismatch"
-#~ msgstr "Lykilorð eru ekki eins"
-
-#~ msgid ""
-#~ "Mandriva web services are under maintenance\n"
-#~ "Please Try again Later"
-#~ msgstr ""
-#~ "Mandriva vefþjónustur eru lokaðar vegna viðhalds\n"
-#~ "Vinsamlega reynið aftur síðar"
-
-#~ msgid "User Forbidden"
-#~ msgstr "Notanda ekki leyfður aðgangur"
-
-#~ msgid "User account forbidden by Mandriva web services"
-#~ msgstr "Notanda ekki leyfður aðgangur að Mandriva vefþjónustu"
-
-#~ msgid "Connection error"
-#~ msgstr "Tengingarvilla"
-
-#~ msgid "Mandriva web services not reachable"
-#~ msgstr "Næ ekki sambandi við Mandriva vefþjónustu"
-
-#~ msgid ""
-#~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
-#~ "file.\n"
-#~ msgstr ""
-#~ "  --bundle file.bundle\t- vinna úr og setja inn pakka samkvæmt lýsigögnum "
-#~ "uppfærslusafni.\n"
-
-#~ msgid ""
-#~ "You first need to install the system on your harddrive with the 'Live "
-#~ "Install' wizard."
-#~ msgstr ""
-#~ "Þú verður fyrst að setja kerfið inn á diskinn þinn með \"Live Install\" "
-#~ "ráðgjafanum."
-
-#~ msgid "Please wait"
-#~ msgstr "Augnablik..."
-
-#~ msgid "Preparing..."
-#~ msgstr "Undirbý..."
-
-#~ msgid ""
-#~ "Failed to authenticate to the bundle server:\n"
-#~ "\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Fékk ekki aðgang að uppfærlusafns-miðlara:\n"
-#~ "\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "The version of the Mandriva Online client is too old.\n"
-#~ "\n"
-#~ "You need to update to a newer version. You can get a new one from http://"
-#~ "start.mandriva.com"
-#~ msgstr ""
-#~ "Útgáfan af Mandriva Online biðlaranum er of gömul.\n"
-#~ "\n"
-#~ "Þú þarft að uppfæra til nýrri útgáfu. Þú getur náð í nýja útgáfu á http://"
-#~ "start.mandriva.com"
-
-#~ msgid "This bundle is not well formated. Aborting."
-#~ msgstr "Þetta uppfærslusafn er ekki rétt sniðið. Hætti við."
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "Set inn pakka...\n"
-
-#~ msgid "New bundles are available for your system"
-#~ msgstr "Ný uppfærslusöfn eru tiltæk fyrir kerfið þitt"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "Þjónusta ekki skilgreind. Vinsamlega smellið á \"Stilla þjónustu\""
-
-#~ msgid "Configure the service"
-#~ msgstr "Stilla þjónustu"
-
-#~ msgid "Check updates"
-#~ msgstr "Athuga með uppfærslur"
-
-#~ msgid "Configure Now!"
-#~ msgstr "Stilla núna!"
-
-#~ msgid "Actions"
-#~ msgstr "Aðgerðir"
-
-#~ msgid "Configure"
-#~ msgstr "Stilla"
-
-#~ msgid "See logs"
-#~ msgstr "Skoða annála"
-
-#~ msgid "Status"
-#~ msgstr "Staða"
-
-#~ msgid "Network Connection: "
-#~ msgstr "Nettenging: "
-
-#~ msgid "Up"
-#~ msgstr "Upp"
-
-#~ msgid "Down"
-#~ msgstr "Niður"
-
-#~ msgid "Last check: "
-#~ msgstr "Síðasta athugun: "
-
-#~ msgid "Machine name:"
-#~ msgstr "Vélarnafn:"
-
-#~ msgid "Updates: "
-#~ msgstr "Uppfærslur: "
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "Tilraunaútgáfa, ekki studd af þjónustu"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "Of gömul útgáfa, ekki studd af þjónustu"
-
-#~ msgid "Unknown state"
-#~ msgstr "Óþekkt staða"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr "Þjónusta ekki virk. hafið samband við Mandriva Online \n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "Rangt lykilorð.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "Röng aðgerð, vél eða auðkenni.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "Eitthvað er rangt við uppsetningu netsins (Athugaðu beinir, eldvegg eða "
-#~ "uppsetningu vefsels)\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr ""
-#~ "Villa kom upp þegar reynt var að tengjast miðlara, vinsamlega hafðu "
-#~ "samband við þjónustuhópinn"
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "Svar frá Mandriva Online miðlara\n"
-
-#~ msgid "No check"
-#~ msgstr "Engin athugun"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "Athuga stillingaskrá: ekki til staðar\n"
-
-#~ msgid "Logs"
-#~ msgstr "Annálar"
-
-#~ msgid "Clear"
-#~ msgstr "Hreinsa"
-
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ "mdonline útgáfa %s\n"
-#~ "Höfundaréttur © %s Mandriva.\n"
-#~ "þetta er frjáls hugbúnaður og má dreifa samkvæmt skilmálum GNU GPL.\n"
-#~ "\n"
-#~ "notkun:\n"
-
-#~ msgid "  --box=\t\t\t- hostname.\n"
-#~ msgstr "  --box=\t\t\t- vélarnafn.\n"
-
-#~ msgid "  --country\t\t\t- name of country of the user. \n"
-#~ msgstr "  --country\t\t\t- Nafn lands notanda. \n"
-
-#~ msgid "  --interactive\t\t- use the interactive mode.\n"
-#~ msgstr "  --interactive\t\t- nota gagnvirkan ham.\n"
-
-#~ msgid "  --nointeractive\t- use the non-interactive mode.\n"
-#~ msgstr "  --nointeractive\t- ekki nota gagnvirkan ham.\n"
-
-#~ msgid "  --login=\t\t     - login name of the user.\n"
-#~ msgstr "  --login=\t\t     - notandanafn.\n"
-
-#~ msgid "  --pass=\t\t\t- password  of the user.\n"
-#~ msgstr "  --pass=\t\t\t- lykilorð notanda.\n"
-
-#~ msgid "I already have an account"
-#~ msgstr "Ég er nú þegar áskrifandi"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "Ég vil gerast áskrifandi"
-
-#~ msgid "Mr."
-#~ msgstr "Hr."
-
-#~ msgid "Mrs."
-#~ msgstr "Frk."
-
-#~ msgid "Ms."
-#~ msgstr "Frú."
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Les stillingar\n"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "Þessi ráðgjafi hjálpar þér við að senda inn stillingar þínar\n"
-#~ "(pakka, vélbúnaðarstillingar) í miðlægan gagnagrunn svo\n"
-#~ "hæg sé að veita þér upplýsingar um öryggisuppfærslur og\n"
-#~ "nytsamlegar uppfærslur.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "Stofna áskrift eða auðkenna"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr "Skráðu Mandriva Online notandanafn, lykilorð og vélarnafn:"
-
-#~ msgid "Email address:"
-#~ msgstr "Netfang:"
-
-#~ msgid "Country"
-#~ msgstr "Land"
-
-#~ msgid "Password:"
-#~ msgstr "Lykilorð:"
-
-#~ msgid "Machine description:"
-#~ msgstr "Lýsing vélar:"
-
-#~ msgid "(Ex: My Home Office's Computer)"
-#~ msgstr "(T.d: Heima-vinnu-vélin mín)"
-
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr ""
-#~ "Vélarnafn verður að vera 1 til 40 stafir og má aðeins innihalda bókstafi "
-#~ "og tölur"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "Tengist Mandriva Online vefsíðu..."
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "Til að geta notið þjónustu Mandriva Online,\n"
-#~ "Þá munum við nú senda upplýsingar um stillingar þínar.\n"
-#~ "\n"
-#~ "Þessi ráðgjafi mun senda eftirfarandi upplýsingar til Mandriva:\n"
-#~ "\n"
-#~ "1) lista uppsettra pakka á vélinni þinni,\n"
-#~ "\n"
-#~ "2) vélbúnaðaruppsetningu.\n"
-#~ "\n"
-#~ "Ef þér þykir þetta óþægilegt, eða vilt ekki njóta þessarar þjónustu,\n"
-#~ "vinsamlega ýttu á 'Hætta við'. Með því að ýta á 'Næsta' hjálpar þú okkur\n"
-#~ "við að upplýsa þig um öryggisuppfærslur og nytsamar uppfærslur með\n"
-#~ "persónulegum tölvupósti.\n"
-#~ "Þess utan færð þú afslátt af þjónustu sem þú kaupir á\n"
-#~ "www.mandrivaexpert.com."
-
-#~ msgid "Connection problem"
-#~ msgstr "Tenging mistókst"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "Vandamál kom upp þegar skrár voru sóttar, vinsamlega reyndu aftur"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "Skrá sig hjá Mandriva Online"
-
-#~ msgid "Greeting:"
-#~ msgstr "Kveðja:"
-
-#~ msgid "First name:"
-#~ msgstr "Eiginnafn:"
-
-#~ msgid "Last name:"
-#~ msgstr "Kenninafn:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "Staðfestu lykilorð:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "Lykilorðin eru ekki eins\n"
-#~ " Vinsamlega reyndu aftur\n"
-
-#~ msgid "Please fill in each field"
-#~ msgstr "Vinsamlega fyllið í öll svæði"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "Ekki gilt netfang!\n"
-
-#~ msgid "Creating account failed!"
-#~ msgstr "Ekki tókst að búa til auðkenni!"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "Það tókst að búa til Mandriva Online auðkenni.\n"
-#~ "Vinsamlega smelltu á \"Næst\" til að auðkenna þig og senda inn stillingar "
-#~ "þinar\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "Tókst að senda upplýsingar!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "Héðan í frá munt þú fá tilkynningar um öryggisuppfærslur \n"
-#~ "og lagfæringar, þökk sé Mandriva Online."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "Mandriva Online býður upp á þann möguleika að uppfæra sjálfvirkt.\n"
-#~ "Forrit mun keyra reglulega á vélinni þinni til að athuga með nýjar "
-#~ "uppfærslur\n"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "Þú ert nú skráður hjá Mandriva Online\n"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "Tókst að senda stillingar"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "Vandamál við að senda stillingar"
-
-#~ msgid ""
-#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
-#~ "firewall bad settings"
-#~ msgstr ""
-#~ "Get ekki tengst Mandriva Online vefsíðunni: rangur notandi/lykilorð eða "
-#~ "vandamál með beinir/eldvegg"
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- ræsa Mandriva Uppfærslur.\n"
-
-#~ msgid "Cannot get list of updates: %s"
-#~ msgstr "Get ekki sótt lista af uppfærslum: %s"
-
-#~ msgid "Choose which packages should be installed and Press Ok"
-#~ msgstr "Veldu hvaða pakka á að setja inn og smelltu á \"Í lagi\""
