@@ -11,14 +11,17 @@ msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-12-09 07:34+0100\n"
-"PO-Revision-Date: 2008-08-10 10:56+0200\n"
-"Last-Translator: nikos papadopoulos <231036448@freemail.gr>\n"
+"PO-Revision-Date: 2008-12-28 10:04+0100\n"
+"Last-Translator: Glentadakis Dimitrios <dglent@gmail.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Greek\n"
+"X-Poedit-Country: GREECE\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -51,14 +54,14 @@ msgid "New updates are available for your system"
 msgstr "Υπάρχουν νέες αναβαθμίσεις για το σύστημα σας"
 
 #: ../mdkapplet:100
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Έχει γίνει έκδοση της νέας σταθερής διανομής"
+msgstr "Μια νέα έκδοση της διανομής Mandriva Linux είναι διαθέσιμη"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Ένα πρόσθετο μέσο πακέτων είναι διαθέσιμο για την διανομή σας."
 
 #: ../mdkapplet:113
 #, c-format
@@ -125,7 +128,7 @@ msgstr "Εγκατάσταση αναβαθμίσεων"
 #: ../mdkapplet:198
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Προσθήκη νέου μέσου πακέτων"
 
 #: ../mdkapplet:199
 #, c-format
@@ -150,22 +153,22 @@ msgstr "Εκτέλεση drakconnect\n"
 #: ../mdkapplet:362 ../mdkapplet:383
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Νέα έκδοση της διανομής Mandriva Linux"
 
 #: ../mdkapplet:366
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Έχει γίνει έκδοση της νέας σταθερής διανομής"
+msgstr "Μια νέα έκδοση της διανομής Mandriva Linux είναι διαθέσιμη."
 
 #: ../mdkapplet:368
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Περισσότερες πληροφορίες για την νέα έκδοση"
 
 #: ../mdkapplet:370
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr "Θέλεις να προχωρήσεις σε αναβάθμιση;"
+msgstr "Θέλετε να κάνετε αναβάθμιση στην νέα διανομή «%s» ;"
 
 #: ../mdkapplet:372 ../mdkapplet:723
 #, c-format
@@ -191,16 +194,19 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Η αναβάθμιση απαιτεί υψηλό εύρος σύνδεσης (cable, xDSL, ...) και μπορεί να "
+"χρειαστεί μερικές ώρες για να ολοκληρωθεί."
 
 #: ../mdkapplet:402
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Το εκτιμώμενο μέγεθος των δεδομένων προς λήψη είναι %s "
 
 #: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
+"Θα πρέπει να κλείσετε όλες τις άλλες εκτελούμενες εφαρμογές πριν συνεχίσετε."
 
 #: ../mdkapplet:406
 #, c-format
@@ -208,6 +214,8 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"Θα πρέπει να συνδέσετε τον φορητό σας υπολογιστή στον φορτιστή AC και να "
+"προτιμήσετε ethernet σύνδεση αντί για wifi, αν είναι διαθέσιμη."
 
 #: ../mdkapplet:432
 #, c-format
@@ -237,12 +245,12 @@ msgstr "Προσοχή"
 #: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Περισσότερες πληροφορίες"
 
 #: ../mdkapplet:622
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Προσθήκη μέσου"
 
 #: ../mdkapplet:637
 #, c-format
@@ -289,7 +297,7 @@ msgstr "Έξοδος"
 #: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Νέο μέσο διαθέσιμο"
 
 #: ../mdkapplet:720
 #, c-format
@@ -297,47 +305,51 @@ msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
+"Χρησιμοποιείτε την διανομή «%s» και και επωφελείστε επομένως από μια "
+"προνομιούχο πρόσβαση σε πρόσθετα πακέτα."
 
 #: ../mdkapplet:721
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva PowerPack"
-msgstr "Mandriva Online"
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:722
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Θέλεις να προχωρήσεις σε αναβάθμιση;"
+msgstr "Θέλετε να εγκαταστήσετε αυτό το νέο αποθετήριο λογισμικού ;"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Προσθήκη ενός νέου μέσου πακέτων"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
+"Παρακαλώ συμπληρώστε τα στοιχεία του λογαριασμού σας για να προσθέσετε ένα "
+"νέο μέσο πακέτων."
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Περισσότερες πληροφορίες για τον λογαριασμό σας"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Το e-mail σας"
 
 #: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#, c-format
 msgid "Your password"
-msgstr "Λάθος κωδικός πρόσβασης"
+msgstr "Ο κωδικός σας"
 
 #: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#, c-format
 msgid "Forgotten password"
-msgstr "Λάθος κωδικός πρόσβασης"
+msgstr "Έχω ξεχάσει τον κωδικό πρόσβασης"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -350,7 +362,7 @@ msgstr "Σφάλμα"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Θα πρέπει να συμπληρώσετε τον κωδικό και το e-mail σας."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -360,7 +372,7 @@ msgstr "Προκλήθηκε σφάλμα"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "Η προσθήκη του μέσου %s έγινε με επιτυχία."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -372,6 +384,8 @@ msgstr "Εντάξει"
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr ""
+"Ο λογαριασμός σας Mandriva δεν έχει συνδρομή στην υπηρεσία λήψης του "
+"Powerpack."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -379,15 +393,17 @@ msgid "Close"
 msgstr "Κλείσιμο"
 
 #: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "Αποτυχία κατά την προσθήκη μέσου"
+msgstr "Παρουσιάστηκε σφάλμα κατά την προσθήκη του μέσου"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
+"Το σύστημά σας δεν έχει αρκετό διαθέσιμο χώρο στο %s για την αναβάθμιση (%"
+"dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -399,6 +415,7 @@ msgstr "Η εγκατάσταση απέτυχε"
 #, c-format
 msgid "Installation logs can be found in '%s'"
 msgstr ""
+"Τα αρχεία καταγραφής (logs) της εγκατάστασης μπορείτε να τα βρείτε στο «%s»"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -413,12 +430,12 @@ msgstr "Συγχαρητήρια"
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Η αναβάθμιση σε Mandriva %s ολοκληρώθηκε με επιτυχία."
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Πρέπει να επανεκκινήστε το σύστημά σας."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -447,7 +464,7 @@ msgstr "Αποτυχία κατά την προσθήκη μέσου"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Αναβάθμιση διανομής"
 
 #: ../mdkupdate:59
 #, c-format
