@@ -2,18 +2,18 @@
 # translation of mdkonline.po to Norwegian Nynorsk
 # Copyright (C) 2004, 2005, 2007 Free Software Foundation, Inc.
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "POT-Creation-Date: 2008-12-09 07:34+0100\n"
-"PO-Revision-Date: 2008-10-21 22:53+0200\n"
+"PO-Revision-Date: 2009-01-04 14:22+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
@@ -54,13 +54,12 @@ msgstr "Ein ny versjon av distribusjon Mandriva Linux er no ute"
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Eit ekstra pakkemedium er tilgjengeleg for distribusjonen din."
 
 #: ../mdkapplet:113
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr ""
-"Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
+msgstr "Nettverket er ikkje tilgjengeleg. Kontroller at nettverksoppsettet fungerer."
 
 #: ../mdkapplet:119
 #, c-format
@@ -79,8 +78,7 @@ msgstr "Utgåva di er ikkje støtta (anten for gammal eller utviklingsutgåve)."
 
 #: ../mdkapplet:138
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fann ingen medium. Du må leggja til medium gjennom «Mediehandtering»."
 
 #: ../mdkapplet:144
@@ -117,7 +115,7 @@ msgstr "Installer oppdateringar"
 #: ../mdkapplet:198
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Legg til ekstra pakkemedium"
 
 #: ../mdkapplet:199
 #, c-format
@@ -284,55 +282,56 @@ msgstr "Avslutt"
 #: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Nytt medium tilgjengeleg"
 
 #: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "Du brukar distribusjonen «%s», og har derfor tilgang til meir programvare."
 
 #: ../mdkapplet:721
 #, c-format
 msgid "Mandriva PowerPack"
-msgstr ""
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:722
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Ønskjer du å oppgradera til «%s»?"
+msgstr "Vil du leggja til dette nye programvarelageret?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Legg til nytt pakkemedium"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
+"Skriv inn e-postadressa og passord til kontoen din for å leggja til det nye pakkemediet."
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Meir informasjon om brukarkontoen din"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "E-postadresse"
 
-#: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#: ../mdkapplet-restricted-helper:78, c-format
+#| msgid "Wrong password"
 msgid "Your password"
-msgstr "Feil passord"
+msgstr "Passord"
 
-#: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#: ../mdkapplet-restricted-helper:82, c-format
+#| msgid "Wrong password"
 msgid "Forgotten password"
-msgstr "Feil passord"
+msgstr "Gløymt passord"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -345,7 +344,7 @@ msgstr "Feil"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Passord- og e-postfelta kan ikkje stå tomme."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -355,7 +354,7 @@ msgstr "Det oppstod ein feil"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "La til mediet «%s»."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -364,24 +363,22 @@ msgstr "OK"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Mandriva-kontoen din har ikkje eit nedlastingsabonnement for PowePack."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
 msgid "Close"
 msgstr "Lukk"
 
-#: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#: ../mdkapplet-restricted-helper:163, c-format
+#| msgid "Failure when adding medium"
 msgid "An error occurred while adding medium"
-msgstr "Klarte ikkje leggja til nytt medium"
+msgstr "Klarte ikkje leggja til nytt medium."
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Systemet ditt har ikkje nok ledig plass att på «%s» for ei oppgradering (%d "
 "MB < %d MB)"
@@ -493,6 +490,7 @@ msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
 
 #, fuzzy
+#~| msgid "Do you want to upgrade to the '%s' distribution?"
 #~ msgid "You are using '%s' distribution."
 #~ msgstr "Ønskjer du å oppgradera til «%s»?"
 
