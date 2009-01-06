@@ -94,7 +94,7 @@ clean_dir();
 sub update_pkgs {
     my (@pkgs) = @_;
     eval {
-	run_program::run('/usr/sbin/urpmi', '--auto-update', '--auto', '--keep', '--update', map { if_(/(.*)-[^-]*-[^-]*\.[^-.]*?\.rpm$/, $1) } @pkgs);
+	run_program::raw({ timeout => 'never' }, '/usr/sbin/urpmi', '--auto-update', '--auto', '--keep', '--update', map { if_(/(.*)-[^-]*-[^-]*\.[^-.]*?\.rpm$/, $1) } @pkgs);
 	$? == 0 or die N("Unable to update packages from update_source medium.\n");
     };
     $@ and output_p($logfile, "[mdkupdate] Error 99: $@"), return 0;
