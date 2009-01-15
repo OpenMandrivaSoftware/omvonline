@@ -484,7 +484,7 @@ sub silentCheck() {
         }
         checker_exit('locked') if $will_not_update_media;
 
-        if (!run_program::raw({ sensitive_arguments => 1 }, 'urpmi.update', '--update', if_($root, "--urpmi-root=$root"))) {
+        if (!run_program::run('urpmi.update', '--update', if_($root, "--urpmi-root=$root"))) {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
