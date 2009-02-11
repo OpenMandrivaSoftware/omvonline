@@ -238,7 +238,7 @@ shouldStart() or die "$localfile should be set to TRUE: please use --force or -f
 
 go2State('delayed');
 
-Glib::Timeout->add($config{FIRST_CHECK_DELAY}, sub {
+Glib::Timeout->add_seconds($config{FIRST_CHECK_DELAY}/1000, sub {
                        # schedule future checks:
                        setup_cyclic_check();
                        # perform a test after initial delay:
@@ -543,7 +543,7 @@ sub okState() { log::explanations(N_("System is up-to-date\n")); go2State('okay'
 
 sub setup_cyclic_check() {
     $network_timeout = Glib::Timeout->add(2000, sub { checkNetwork(); 1 });
-    $timeout = Glib::Timeout->add($config{UPDATE_FREQUENCY}*1000, sub {
+    $timeout = Glib::Timeout->add_seconds($config{UPDATE_FREQUENCY}, sub {
            checkUpdates();
            1;
        });
