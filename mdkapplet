@@ -125,6 +125,12 @@ my %state = (
                 tt => [ N_("urpmi database locked") ],
  		      do_not_use_bubble => 1,
           },
+          loop_locked => {
+		      colour => [ 'noconf' ],
+		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'check' ],
+                tt => [ N_("urpmi database locked") ],
+          },
 	     notsupported => {
 		      colour => [ 'disabled' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
@@ -321,7 +327,7 @@ sub is_there_a_new_distributions() {
 }
 
 
-my ($mdv_update_pid, $checker_pid, $media_manager_pid);
+my ($mdv_update_pid, $checker_pid, $media_manager_pid, $locked_count);
 
 # Signal management 
 sub harvester {
@@ -344,6 +350,12 @@ sub harvester {
                       && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i) {
                     go2State('new_distribution');
                 } else {
+                    if ($sub_state eq 'locked') {
+                        $locked_count++;
+                        $sub_state = 'loop_locked' if $locked_count > 10;
+                    } else {
+                        $locked_count = 0;
+                    }
                     go2State($sub_state);
                 }
             }
