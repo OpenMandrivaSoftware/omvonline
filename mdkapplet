@@ -452,9 +452,7 @@ sub silentCheck() {
     return if $mdv_update_pid || $checker_pid;
     log::explanations(N_("Computing new updates...\n"));
     my $w = $::main_window ? $::main_window->window : undef;
-    gtkset_mousecursor_wait($w);
     go2State('busy');
-    gtkset_mousecursor_normal($w);
 
     # are there any updates ?
 
