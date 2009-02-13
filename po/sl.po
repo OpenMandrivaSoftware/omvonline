@@ -21,8 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -55,14 +54,14 @@ msgid "New updates are available for your system"
 msgstr "Za vaš sistem so na voljo nove posodobitve"
 
 #: ../mdkapplet:100
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Izdana je bila nova stabilna različica distribucije"
+msgstr "Izdana je bila nova različica distribucije Mandriva Linux"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Za vašo distribucijo je na voljo dodaten vir paketov."
 
 #: ../mdkapplet:113
 #, c-format
@@ -127,7 +126,7 @@ msgstr "Namesti posodobitve"
 #: ../mdkapplet:198
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Dodaj dodatni vir paketov"
 
 #: ../mdkapplet:199
 #, c-format
@@ -152,12 +151,12 @@ msgstr "»drakconnect« se zaganja\n"
 #: ../mdkapplet:362 ../mdkapplet:383
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Nova različica distribucije Mandriva Linux"
 
 #: ../mdkapplet:366
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Izdana je bila nova stabilna različica distribucije."
+msgstr "Izdana je bila nova različica distribucije Mandriva Linux."
 
 #: ../mdkapplet:368
 #, c-format
@@ -192,24 +191,24 @@ msgstr "Prekliči"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr ""
+msgstr "Za to nadgradnjo je potrebna širokopasovna povezava (kabel, DSL, ...) in lahko traja več ur."
 
 #: ../mdkapplet:402
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Ocenjena velikost prenešenih podatkov bo %s"
 
 #: ../mdkapplet:403
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Pred nadaljevanjem je priporočljivo, da zaprete vse zagnane programe."
 
 #: ../mdkapplet:406
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Priporočljivo je, da prenosnik priključite na omrežno napajanje in namesto brezžične povezave uporabljate povezavo prek omrežnega kabla."
 
 #: ../mdkapplet:432
 #, c-format
@@ -239,7 +238,7 @@ msgstr "Opozorilo"
 #: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Več informacij"
 
 #: ../mdkapplet:622
 #, c-format
@@ -290,55 +289,55 @@ msgstr "Končaj"
 #: ../mdkapplet:713 ../mdkapplet:718
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Na voljo je nov vir"
 
 #: ../mdkapplet:720
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "Uporabljate distribucijo »%s« in imate zato privilegij dostopati do dodatnih programov."
 
 #: ../mdkapplet:721
 #, c-format
 msgid "Mandriva PowerPack"
-msgstr ""
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:722
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Ali želite nadgraditi na različico »%s«?"
+msgstr "Ali želite dodati ta dodaten vir programov?"
 
 #: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
 #: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Dodajanje dodatnega vira paketov"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Za dodajanje dodatnega vira paketov vnesite ID svojega računa"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Več informacij o vašem uporabniškem računu"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Vaša e-pošta"
 
 #: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#, c-format
 msgid "Your password"
-msgstr "Napačno geslo"
+msgstr "Vaše geslo"
 
 #: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#, c-format
 msgid "Forgotten password"
-msgstr "Napačno geslo"
+msgstr "Pozabljeno geslo"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -351,7 +350,7 @@ msgstr "Napaka"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Geslo in e-pošta ne smeta biti prazna."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -361,7 +360,7 @@ msgstr "Prišlo je do napake"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "Vir %s je bil uspešno dodan."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -372,7 +371,7 @@ msgstr "V redu"
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgstr "Vaš račun pri Mandrivi nima omogočene naročnine za prenos PowerPack-a."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -380,15 +379,15 @@ msgid "Close"
 msgstr "Zapri"
 
 #: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "Neuspeh pri dodajanju vira"
+msgstr "Prišlo je do napake pri dodajanju vira"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgstr "Vaš računalnik na %s nima več na voljo dovolj prostora za nadgradnjo (%d MiB < %d MiB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -399,7 +398,7 @@ msgstr "Namestitev ni uspela"
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "Dnevnik namestitve lahko najdete v »%s«"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -414,12 +413,12 @@ msgstr "Čestitke"
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Nadgradnja na različico Mandriva %s je bila uspešna."
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Računalnik je potrebno znova zagnati."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -495,7 +494,6 @@ msgstr "  --debug\t\t\t- log what is done\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Paketov iz vira update_source ni mogoče posodobiti.\n"
 
-#, fuzzy
 #~ msgid "You are using '%s' distribution."
 #~ msgstr "Ali želite nadgraditi na različico »%s«?"
 
