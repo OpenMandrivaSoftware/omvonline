@@ -1,0 +1,71 @@
+#!/usr/bin/perl
+################################################################################
+# Mandriva Online                                                              # 
+#                                                                              #
+# Copyright (C) 2008 Mandriva                                             #
+#                                                                              #
+# Thierry Vignaud <tvignaud at mandriva dot com>                               #
+#                                                                              #
+# This program is free software; you can redistribute it and/or modify         #
+# it under the terms of the GNU General Public License Version 2 as            #
+# published by the Free Software Foundation.                                   #
+#                                                                              #
+# This program is distributed in the hope that it will be useful,              #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                #
+# GNU General Public License for more details.                                 #
+#                                                                              #
+# You should have received a copy of the GNU General Public License            #
+# along with this program; if not, write to the Free Software                  #
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
+################################################################################
+
+use strict;
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
+use standalone; # for explanations
+use common;
+
+BEGIN { unshift @::textdomains, 'mdkonline' }
+
+use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
+use ugtk2 qw(:all);
+use mdkonline;
+use mdkapplet_gui;
+use interactive;
+
+configure();
+
+ugtk2::exit(0);
+
+
+sub configure() {
+    my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
+
+    my $config_file = '/etc/sysconfig/mdkapplet';
+    my %config = getVarsFromSh($config_file);
+
+    # convert from ms to seconds:
+    $config{FIRST_CHECK_DELAY} /= 1000;
+
+    my $res =
+      fill_n_run_portable_dialog(
+          $w,
+          [
+              get_banner(N("Updates Configuration")),
+              gtknew('Label_Left', text => N("Here you can configure the updates applet"), @common),
+              gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
+                  [ N("Update frequency (seconds)"),
+                    gtknew('Entry', text_ref => \$config{UPDATE_FREQUENCY}) ],
+                  [ N("First check delay (seconds)"),
+                    gtknew('Entry',text_ref => \$config{FIRST_CHECK_DELAY}) ],
+              ]),
+              create_okcancel($w), #, N("Next"), N("Cancel")),
+          ]);
+
+    if ($res) {
+        # convert back into ms from seconds:
+        $config{FIRST_CHECK_DELAY} *= 1000;
+
+        setVarsInSh($config_file, \%config);
+    }
+}
