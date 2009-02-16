@@ -673,6 +673,8 @@ sub setState {
                                         return 1;
 
                                     }));
+    $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Updates Configuration"))), 
+                                    activate => sub { run_program::raw({ detach => 1 }, 'mdkapplet-config') }));
     $menu->append(gtksignal_connect(gtkset_active($checkme = Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), shouldStart()), toggled => sub { setAutoStart(uc(bool2text($checkme->get_active))) }));
     $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
