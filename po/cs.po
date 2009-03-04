@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-09 07:34+0100\n"
+"POT-Creation-Date: 2009-03-04 15:30+0100\n"
 "PO-Revision-Date: 2008-12-10 23:29+0100\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -18,7 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -70,24 +71,25 @@ msgstr "Síť není dostupná, nastavte ji prosím"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Služba není aktivována. Klepněte prosím na „Online webové stránky”"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:125 ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "databáze urpmi je zamknutá"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Verze není podporována (příliš stará nebo vývojová verze)"
 
-#: ../mdkapplet:138
+#: ../mdkapplet:144
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nebyl nalezen žádný zdroj softwaru. Je třeba přidat alespoň jeden zdroj "
 "pomocí Správce zdrojů softwaru."
 
-#: ../mdkapplet:144
+#: ../mdkapplet:150
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -103,85 +105,85 @@ msgstr ""
 "\n"
 "Poté znovu spusťte „%s”."
 
-#: ../mdkapplet:149
+#: ../mdkapplet:155
 #, c-format
 msgid "Enabled"
 msgstr "Povolen"
 
-#: ../mdkapplet:162
+#: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
 msgstr "Chyba při aktualizaci zdroje"
 
-#: ../mdkapplet:197 ../mdkapplet:618
+#: ../mdkapplet:203 ../mdkapplet:633
 #, c-format
 msgid "Install updates"
 msgstr "Instalovat aktualizace"
 
-#: ../mdkapplet:198
+#: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
 msgstr "Přidat dodatečný zdroj balíčků"
 
-#: ../mdkapplet:199
+#: ../mdkapplet:205
 #, c-format
 msgid "Check Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:206
 #, c-format
 msgid "Configure Network"
 msgstr "Nastavit síť"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
 msgstr "Povýšit systém"
 
-#: ../mdkapplet:357
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Spouští se drakconnect\n"
 
-#: ../mdkapplet:362 ../mdkapplet:383
+#: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nová verze distribuce Mandriva Linux"
 
-#: ../mdkapplet:366
+#: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Byla vydána nová verze distribuce Mandriva Linux."
 
-#: ../mdkapplet:368
+#: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
 msgstr "Více informací o této nové verzi"
 
-#: ../mdkapplet:370
+#: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Chcete povýšit systém na distribuci „%s”?"
 
-#: ../mdkapplet:372 ../mdkapplet:723
+#: ../mdkapplet:387 ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Příště se už neptat"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "Další"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:415
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -190,17 +192,18 @@ msgstr ""
 "Toto povýšení vyžaduje širokopásmové síťové připojení (kabelové, xDSL, …) a "
 "celkem může trvat několik hodin."
 
-#: ../mdkapplet:402
+#: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Odhadovaná velikost stažených dat bude %s"
 
-#: ../mdkapplet:403
+#: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr "Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
+msgstr ""
+"Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
 
-#: ../mdkapplet:406
+#: ../mdkapplet:421
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -209,90 +212,96 @@ msgstr ""
 "Váš přenosný počítač by měl být v režimu napájení ze sítě a pokud je "
 "dostupné, mělo by být upřednostněno pevné síťové připojení před bezdrátovým."
 
-#: ../mdkapplet:432
+#: ../mdkapplet:447
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Spouští se MandrivaUpdate\n"
 
-#: ../mdkapplet:453
+#: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Vyhledávám nové aktualizace…\n"
 
-#: ../mdkapplet:539
+#: ../mdkapplet:554
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systém je aktuální\n"
 
-#: ../mdkapplet:567
+#: ../mdkapplet:582
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontroluji síť: zdá se nedostupná\n"
 
-#: ../mdkapplet:609
+#: ../mdkapplet:624
 #, c-format
 msgid "Warning"
 msgstr "Varování"
 
-#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:627 ../mdkapplet:635 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Více informací"
 
-#: ../mdkapplet:622
+#: ../mdkapplet:637
 #, c-format
 msgid "Add media"
 msgstr "Přidat zdroj"
 
-#: ../mdkapplet:637
+#: ../mdkapplet:652
 #, c-format
 msgid "About..."
 msgstr "O aplikaci…"
 
-#: ../mdkapplet:641
+#: ../mdkapplet:656
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:642
+#: ../mdkapplet:657
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright ©%s by Mandriva"
 
-#: ../mdkapplet:645
+#: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
+msgstr ""
+"Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
-#: ../mdkapplet:647
+#: ../mdkapplet:662
 #, c-format
 msgid "Online WebSite"
 msgstr "Online webové stránky"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:652
+#: ../mdkapplet:667
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Michal Bukovjan <bukm@centrum.cz>\n"
 "Vlastimil Ott <vlastimil@e-ott.info>\n"
 
-#: ../mdkapplet:661
+#: ../mdkapplet:676
+#, c-format
+msgid "Updates Configuration"
+msgstr ""
+
+#: ../mdkapplet:678
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spustit při startu"
 
-#: ../mdkapplet:663
+#: ../mdkapplet:680
 #, c-format
 msgid "Quit"
 msgstr "Konec"
 
-#: ../mdkapplet:713 ../mdkapplet:718
+#: ../mdkapplet:730 ../mdkapplet:735
 #, c-format
 msgid "New medium available"
 msgstr "Dostupný nový zdroj"
 
-#: ../mdkapplet:720
+#: ../mdkapplet:737
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -301,12 +310,12 @@ msgstr ""
 "Používáte distribuci „%s” a máte tudíž privilegovaný přístup k dalšímu "
 "software."
 
-#: ../mdkapplet:721
+#: ../mdkapplet:738
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Chcete nainstalovat tento dodatečný zdroj software?"
@@ -372,7 +381,8 @@ msgstr "Ok"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Váš účet Mandriva nemá aktivní předplacené stažení verze Powerpack."
 
 #: ../mdkapplet-restricted-helper:157
@@ -387,8 +397,10 @@ msgstr "Během přidávání zdroje nastala chyba"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Váš systém nemá na povýšení dostatek volného prostoru na %s (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+"Váš systém nemá na povýšení dostatek volného prostoru na %s (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -495,4 +507,3 @@ msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
-

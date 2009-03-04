@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-09 07:34+0100\n"
+"POT-Creation-Date: 2009-03-04 15:30+0100\n"
 "PO-Revision-Date: 2008-10-06 22:34+0200\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -21,7 +21,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms:  nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -73,17 +74,17 @@ msgstr "Ni povezave z omrežjem. Prosim nastavite omrežje"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Storitev ni aktivirana. Prosim kliknite na »Spletna stran«"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:125 ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "Podatkovna zbirka urpmi je zaklenjena"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Izdaja ni podprta (prestara ali razvojna različica)"
 
-#: ../mdkapplet:138
+#: ../mdkapplet:144
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -91,7 +92,7 @@ msgstr ""
 "Ni moč najti virov. Vire lahko dodate s pomočjo upravljalnika virov "
 "programske opreme."
 
-#: ../mdkapplet:144
+#: ../mdkapplet:150
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -108,202 +109,213 @@ msgstr ""
 "\n"
 "Potem ponovno zaženite »%s«."
 
-#: ../mdkapplet:149
+#: ../mdkapplet:155
 #, c-format
 msgid "Enabled"
 msgstr "Omogočen"
 
-#: ../mdkapplet:162
+#: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
 msgstr "Napaka pri posodabljanju"
 
-#: ../mdkapplet:197 ../mdkapplet:618
+#: ../mdkapplet:203 ../mdkapplet:633
 #, c-format
 msgid "Install updates"
 msgstr "Namesti posodobitve"
 
-#: ../mdkapplet:198
+#: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
 msgstr "Dodaj dodatni vir paketov"
 
-#: ../mdkapplet:199
+#: ../mdkapplet:205
 #, c-format
 msgid "Check Updates"
 msgstr "Pregled posodobitev"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:206
 #, c-format
 msgid "Configure Network"
 msgstr "Nastavitev omrežja"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
 msgstr "Nadgradi sistem"
 
-#: ../mdkapplet:357
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "»drakconnect« se zaganja\n"
 
-#: ../mdkapplet:362 ../mdkapplet:383
+#: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nova različica distribucije Mandriva Linux"
 
-#: ../mdkapplet:366
+#: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Izdana je bila nova različica distribucije Mandriva Linux."
 
-#: ../mdkapplet:368
+#: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
 msgstr "Več podatkov o novi različici"
 
-#: ../mdkapplet:370
+#: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Ali želite nadgraditi na različico »%s«?"
 
-#: ../mdkapplet:372 ../mdkapplet:723
+#: ../mdkapplet:387 ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Ne vprašuj več"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "Naprej"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:415
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr "Za to nadgradnjo je potrebna širokopasovna povezava (kabel, DSL, ...) in lahko traja več ur."
+msgstr ""
+"Za to nadgradnjo je potrebna širokopasovna povezava (kabel, DSL, ...) in "
+"lahko traja več ur."
 
-#: ../mdkapplet:402
+#: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Ocenjena velikost prenešenih podatkov bo %s"
 
-#: ../mdkapplet:403
+#: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Pred nadaljevanjem je priporočljivo, da zaprete vse zagnane programe."
 
-#: ../mdkapplet:406
+#: ../mdkapplet:421
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr "Priporočljivo je, da prenosnik priključite na omrežno napajanje in namesto brezžične povezave uporabljate povezavo prek omrežnega kabla."
+msgstr ""
+"Priporočljivo je, da prenosnik priključite na omrežno napajanje in namesto "
+"brezžične povezave uporabljate povezavo prek omrežnega kabla."
 
-#: ../mdkapplet:432
+#: ../mdkapplet:447
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "»MandrivaUpdate« se zaganja\n"
 
-#: ../mdkapplet:453
+#: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Procesiranje novih popravkov ...\n"
 
-#: ../mdkapplet:539
+#: ../mdkapplet:554
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem je posodobljen\n"
 
-#: ../mdkapplet:567
+#: ../mdkapplet:582
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Preverjanje omrežja: izgleda onemogočeno\n"
 
-#: ../mdkapplet:609
+#: ../mdkapplet:624
 #, c-format
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:627 ../mdkapplet:635 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "Več informacij"
 
-#: ../mdkapplet:622
+#: ../mdkapplet:637
 #, c-format
 msgid "Add media"
 msgstr "Dodaj vir"
 
-#: ../mdkapplet:637
+#: ../mdkapplet:652
 #, c-format
 msgid "About..."
 msgstr "O ..."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:656
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:642
+#: ../mdkapplet:657
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Avtorske pravice © %s, Mandriva"
 
-#: ../mdkapplet:645
+#: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online omogoča dostop do spletnih storitev Mandriva"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:662
 #, c-format
 msgid "Online WebSite"
 msgstr "Spletna stran"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:652
+#: ../mdkapplet:667
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Jure Repinc <jlp@holodeck1.com>\n"
 
-#: ../mdkapplet:661
+#: ../mdkapplet:676
+#, c-format
+msgid "Updates Configuration"
+msgstr ""
+
+#: ../mdkapplet:678
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vedno zaženi ob zagonu"
 
-#: ../mdkapplet:663
+#: ../mdkapplet:680
 #, c-format
 msgid "Quit"
 msgstr "Končaj"
 
-#: ../mdkapplet:713 ../mdkapplet:718
+#: ../mdkapplet:730 ../mdkapplet:735
 #, c-format
 msgid "New medium available"
 msgstr "Na voljo je nov vir"
 
-#: ../mdkapplet:720
+#: ../mdkapplet:737
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr "Uporabljate distribucijo »%s« in imate zato privilegij dostopati do dodatnih programov."
+msgstr ""
+"Uporabljate distribucijo »%s« in imate zato privilegij dostopati do dodatnih "
+"programov."
 
-#: ../mdkapplet:721
+#: ../mdkapplet:738
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Ali želite dodati ta dodaten vir programov?"
@@ -387,7 +399,9 @@ msgstr "Prišlo je do napake pri dodajanju vira"
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Vaš računalnik na %s nima več na voljo dovolj prostora za nadgradnjo (%d MiB < %d MiB)"
+msgstr ""
+"Vaš računalnik na %s nima več na voljo dovolj prostora za nadgradnjo (%d MiB "
+"< %d MiB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209

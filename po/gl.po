@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-gl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-09 07:34+0100\n"
+"POT-Creation-Date: 2009-03-04 15:30+0100\n"
 "PO-Revision-Date: 2008-03-30 15:40+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -67,17 +67,17 @@ msgstr "A rede está caída. Configure a súa rede"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "O servicio non está activado. Clique en \"Sitio Web en Liña\""
 
-#: ../mdkapplet:125
+#: ../mdkapplet:125 ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "a base de datos de urpmi está bloqueada"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Versión non soportada (versión antiga ou de desenvolvemento)"
 
-#: ../mdkapplet:138
+#: ../mdkapplet:144
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -85,7 +85,7 @@ msgstr ""
 "Non se atopou ningún soporte. Debe engadir algún soporte usando o 'Xestor de "
 "Soportes de Software'."
 
-#: ../mdkapplet:144
+#: ../mdkapplet:150
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -102,202 +102,207 @@ msgstr ""
 "\n"
 "Despois, reinicie \"%s\"."
 
-#: ../mdkapplet:149
+#: ../mdkapplet:155
 #, c-format
 msgid "Enabled"
 msgstr "¿Habilitado"
 
-#: ../mdkapplet:162
+#: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
 msgstr "Erro ó actualizar o soporte"
 
-#: ../mdkapplet:197 ../mdkapplet:618
+#: ../mdkapplet:203 ../mdkapplet:633
 #, c-format
 msgid "Install updates"
 msgstr "Instala-las actualizacións"
 
-#: ../mdkapplet:198
+#: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
 msgstr ""
 
-#: ../mdkapplet:199
+#: ../mdkapplet:205
 #, c-format
 msgid "Check Updates"
 msgstr "Comprobar se hai Actualizacións"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:206
 #, c-format
 msgid "Configure Network"
 msgstr "Configura-la Rede"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:357
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Executando drakconnect\n"
 
-#: ../mdkapplet:362 ../mdkapplet:383
+#: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr ""
 
-#: ../mdkapplet:366
+#: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr ""
 
-#: ../mdkapplet:368
+#: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
 msgstr ""
 
-#: ../mdkapplet:370
+#: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr ""
 
-#: ../mdkapplet:372 ../mdkapplet:723
+#: ../mdkapplet:387 ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Non preguntarme a vindeira vez"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "Seguinte"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:415
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
 
-#: ../mdkapplet:402
+#: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr ""
 
-#: ../mdkapplet:403
+#: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 
-#: ../mdkapplet:406
+#: ../mdkapplet:421
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
 
-#: ../mdkapplet:432
+#: ../mdkapplet:447
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Executando MandrivaUpdate\n"
 
-#: ../mdkapplet:453
+#: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Procesando as novas actualizacións...\n"
 
-#: ../mdkapplet:539
+#: ../mdkapplet:554
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "O sistema está actualizado\n"
 
-#: ../mdkapplet:567
+#: ../mdkapplet:582
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Comprobando a Rede: parece que está deshabilitada\n"
 
-#: ../mdkapplet:609
+#: ../mdkapplet:624
 #, c-format
 msgid "Warning"
 msgstr "Advertencia"
 
-#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:627 ../mdkapplet:635 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr ""
 
-#: ../mdkapplet:622
+#: ../mdkapplet:637
 #, c-format
 msgid "Add media"
 msgstr ""
 
-#: ../mdkapplet:637
+#: ../mdkapplet:652
 #, c-format
 msgid "About..."
 msgstr "Acerca de..."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:656
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:642
+#: ../mdkapplet:657
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s de Mandriva"
 
-#: ../mdkapplet:645
+#: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online da acceso ós servicios web de Mandriva."
 
-#: ../mdkapplet:647
+#: ../mdkapplet:662
 #, c-format
 msgid "Online WebSite"
 msgstr "Sitio Web en Liña"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:652
+#: ../mdkapplet:667
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 
-#: ../mdkapplet:661
+#: ../mdkapplet:676
+#, fuzzy, c-format
+msgid "Updates Configuration"
+msgstr "Lendo a configuración\n"
+
+#: ../mdkapplet:678
 #, c-format
 msgid "Always launch on startup"
 msgstr "Executar sempre ó inicia-lo sistema"
 
-#: ../mdkapplet:663
+#: ../mdkapplet:680
 #, c-format
 msgid "Quit"
 msgstr "Pechar"
 
-#: ../mdkapplet:713 ../mdkapplet:718
+#: ../mdkapplet:730 ../mdkapplet:735
 #, c-format
 msgid "New medium available"
 msgstr ""
 
-#: ../mdkapplet:720
+#: ../mdkapplet:737
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet:721
+#: ../mdkapplet:738
 #, fuzzy, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr ""
@@ -785,9 +790,6 @@ msgstr ""
 
 #~ msgid "Ms."
 #~ msgstr "Srta."
-
-#~ msgid "Reading configuration\n"
-#~ msgstr "Lendo a configuración\n"
 
 #~ msgid ""
 #~ "This assistant will help you to upload your configuration\n"

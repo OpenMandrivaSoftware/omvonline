@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ja\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-09 07:34+0100\n"
+"POT-Creation-Date: 2009-03-04 15:30+0100\n"
 "PO-Revision-Date: 2008-12-10 00:30+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <cooker-i18n@mandrivalinux.org>\n"
@@ -71,17 +71,17 @@ msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 "サービスが有効になっていません。「Online ウェブサイト」を選択してください。"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:125 ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi データベースがロックされています"
 
-#: ../mdkapplet:132
+#: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "お使いのバージョンはサービスの対象外です (期限切れ/開発版)"
 
-#: ../mdkapplet:138
+#: ../mdkapplet:144
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -89,7 +89,7 @@ msgstr ""
 "メディアが見つかりません。RPM メディアマネージャでメディアを追加してくださ"
 "い。"
 
-#: ../mdkapplet:144
+#: ../mdkapplet:150
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -105,85 +105,85 @@ msgstr ""
 "\n"
 "その後、%s を再起動してください。"
 
-#: ../mdkapplet:149
+#: ../mdkapplet:155
 #, c-format
 msgid "Enabled"
 msgstr "有効"
 
-#: ../mdkapplet:162
+#: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
 msgstr "メディアの更新でエラー"
 
-#: ../mdkapplet:197 ../mdkapplet:618
+#: ../mdkapplet:203 ../mdkapplet:633
 #, c-format
 msgid "Install updates"
 msgstr "システムを更新"
 
-#: ../mdkapplet:198
+#: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
 msgstr "付加的なパッケージメディア"
 
-#: ../mdkapplet:199
+#: ../mdkapplet:205
 #, c-format
 msgid "Check Updates"
 msgstr "更新をチェック"
 
-#: ../mdkapplet:200
+#: ../mdkapplet:206
 #, c-format
 msgid "Configure Network"
 msgstr "ネットワークの設定"
 
-#: ../mdkapplet:201
+#: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
 msgstr "システムをアップグレード"
 
-#: ../mdkapplet:357
+#: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect を起動\n"
 
-#: ../mdkapplet:362 ../mdkapplet:383
+#: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "新バージョンの Mandriva Linux"
 
-#: ../mdkapplet:366
+#: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "新しいバージョンの Mandriva Linux がリリースされました。"
 
-#: ../mdkapplet:368
+#: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
 msgstr "この新しいバージョンの詳細情報"
 
-#: ../mdkapplet:370
+#: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "ディストリビューション %s にアップグレードしますか？"
 
-#: ../mdkapplet:372 ../mdkapplet:723
+#: ../mdkapplet:387 ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
 msgstr "次回から尋ねない"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
 msgstr "次へ"
 
-#: ../mdkapplet:373 ../mdkapplet:409 ../mdkapplet:724
+#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:415
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -192,17 +192,17 @@ msgstr ""
 "このアップグレードには高速な回線 (ケーブル、xDSL など) が必要です。完了するま"
 "でに数時間かかる場合があります。"
 
-#: ../mdkapplet:402
+#: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "推定で %s のデータをダウンロードします"
 
-#: ../mdkapplet:403
+#: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "開始する前に実行中のすべてのアプリケーションを終了してください。"
 
-#: ../mdkapplet:406
+#: ../mdkapplet:421
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -211,88 +211,93 @@ msgstr ""
 "ラップトップをお使いの場合は、電源を AC アダプタに切り替え、可能であれば Wi-"
 "Fi 接続よりイーサネット接続を優先してください。"
 
-#: ../mdkapplet:432
+#: ../mdkapplet:447
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate を起動\n"
 
-#: ../mdkapplet:453
+#: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "新しい更新を計算中...\n"
 
-#: ../mdkapplet:539
+#: ../mdkapplet:554
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "新しい更新はありません\n"
 
-#: ../mdkapplet:567
+#: ../mdkapplet:582
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "ネットワーク確認: 無効になっているようです\n"
 
-#: ../mdkapplet:609
+#: ../mdkapplet:624
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkapplet:612 ../mdkapplet:620 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:627 ../mdkapplet:635 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
 msgstr "詳細情報"
 
-#: ../mdkapplet:622
+#: ../mdkapplet:637
 #, c-format
 msgid "Add media"
 msgstr "メディアを追加"
 
-#: ../mdkapplet:637
+#: ../mdkapplet:652
 #, c-format
 msgid "About..."
 msgstr "情報..."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:656
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:642
+#: ../mdkapplet:657
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:645
+#: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online は Mandriva ウェブサービスへのアクセスを提供します。"
 
-#: ../mdkapplet:647
+#: ../mdkapplet:662
 #, c-format
 msgid "Online WebSite"
 msgstr "Online ウェブサイト"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:652
+#: ../mdkapplet:667
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 
-#: ../mdkapplet:661
+#: ../mdkapplet:676
+#, c-format
+msgid "Updates Configuration"
+msgstr ""
+
+#: ../mdkapplet:678
 #, c-format
 msgid "Always launch on startup"
 msgstr "起動時に常に開始する"
 
-#: ../mdkapplet:663
+#: ../mdkapplet:680
 #, c-format
 msgid "Quit"
 msgstr "終了"
 
-#: ../mdkapplet:713 ../mdkapplet:718
+#: ../mdkapplet:730 ../mdkapplet:735
 #, c-format
 msgid "New medium available"
 msgstr "新しいメディアが利用できます"
 
-#: ../mdkapplet:720
+#: ../mdkapplet:737
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -301,12 +306,12 @@ msgstr ""
 "%s ディストリビューションをお使いなので、特典として付加的なソフトウェアもご利"
 "用いただけます。"
 
-#: ../mdkapplet:721
+#: ../mdkapplet:738
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "この付加的なソフトウェア用のリポジトリをインストールしますか？"
