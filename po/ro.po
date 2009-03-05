@@ -1,50 +1,59 @@
-# translation of mdkonline.po to Romanian
-# Copyright (c) 1999-2008 Mandriva
+# Copyright (c) 1999-2009 Mandriva
 #
-# Vă rugăm să nu actualizați fișierul, cu excepția cazului în care sunteți
+# Vă rugăm să nu actualizaţi fișierul, cu excepția cazului în care sînteți
 # sigur de calitatea traducerii dumneavoastră, de gramatică și de ortografie.
-# Acestea din urmă sunt de prea multe ori aproximative.
-# Corectarea lor ulterioarră nu are nici un alt rezultat decât acela de
+# Acestea din urmă sînt de prea multe ori aproximative.
+# Corectarea lor ulterioară nu are nici un alt rezultat decît acela de
 # pierdere de timp pentru toata lumea.
 #
 # VĂ RUGĂM SĂ RESPECTAȚI SEMNELE DE PUNCTUAȚIE ALE LIMBII ROMÂNE!
 #
-# Nu suprimați spațiul care urmează unui semn de punctuație de sfârșit de
+# Nu suprimați spațiul care urmează unui semn de punctuație de sfîrșit de
 # frază; trebuie respectată versiunea originală. În acest caz, este foarte
-# probabil ca programul să afișeze un mesaj la sfârșit. Suprimând acel spațiu,
+# probabil ca programul să afișeze un mesaj la sfîrșit. Suprimînd acel spațiu,
 # cele două cuvintele vor fi afișate legat.
 #
 # Traduceți de manieră INTELIGENTĂ (de ce nu și prin comparație cu alte
-# traduceri ale acestui fișier în alte limbi) și nu cuvânt cu cuvânt. Unele
+# traduceri ale acestui fișier în alte limbi) și nu cuvînt cu cuvînt. Unele
 # astfel de traduceri nu au nici un sens în limba română.
 #
-# Vă mulțumim pentru înțelegere.
-# www.mandrivausers.ro
+# ATENȚIE LA FONTURILE UTILIZATE! Pentru a reda corect diacriticele folosiți
+# disponerea tastaturii românească standard, codarea de caractere UTF-8 și
+# asigurați-vă că fonturile utilizate sînt cu virgulițe, NU CU SEDILE!
+# Exemplu:
+#          font incorect (cu sedile): şŞ ţŢ
+#          font corect (cu virgule): șȘ țȚ
 #
-# Traducători:
-# Ovidiu Constantin <ovidiu.soft@xnet.ro>, 2002,2003.
-# Harald Ersch <hersch@romatsa.ro>,2002,2004.
-# Harald Ersch <harald@ersch.ro>, 2004.
-# Oancea Aurelian <aurelian@mandrakelinux.ro>, 2004.
-# Ovidiu Constantin <ovidiusoft@gmail.com>, 2004.
+# Pentru a vă asigura că folosiți fonturile corecte, vizitați:
+#          http://i18n.ro/Fonturi_romanesti/testare
+#
+# Vă mulțumim pentru înțelegere.
+#                                                       Echipa de traducători,
+#                                                       www.Mandrivausers.ro
+#
+# Traducători de-a lungul timpului:
+#
+# Ovidiu CONSTANTIN <ovidiu.soft@xnet.ro>, 2002, 2003
+# Harald ERSCH <hersch@romatsa.ro>, 2002, 2004
+# Harald ERSCH <harald@ersch.ro>, 2004
+# Aurelian OANCEA <aurelian@mandrakelinux.ro>, 2004
+# Ovidiu CONSTANTIN <ovidiusoft@gmail.com>, 2004
 # Cristian Ionuț PÎRÎU <piriu.cristian@rdslink.ro>, 2008
-# Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>, 2008
-# Cosmin Humeniuc <cosmin@mandrivausers.ro>, 2008
+# Cosmin HUMENIUC <cosmin@mandrivausers.ro>, 2008
+# Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>, 2008, 2009
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-05 15:18+0100\n"
-"PO-Revision-Date: 2008-12-15 14:48+0100\n"
-"Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
-"Language-Team: Mandrivausers.ro <cfrussen@yahoo.co.uk>\n"
+"POT-Creation-Date: 2009-03-04 15:30+0100\n"
+"PO-Revision-Date: 2009-03-05 11:20+0100\n"
+"Last-Translator: Florin Cătălin RUSSEN <frussen@yahoo.co.uk>\n"
+"Language-Team: Mandrivausers.ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1))\n"
+"Plural-Forms: nplurals=3;plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1))\n"
 "X-Poedit-Language: Romanian\n"
 "X-Poedit-Country: ROMANIA\n"
 
@@ -61,12 +70,8 @@ msgstr "Sistemul vă este la zi cu actualizările"
 
 #: ../mdkapplet:80
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Problemă de configurație a serviciului. Verificați jurnalele și trimiteți un "
-"mail la support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Problemă de configurație a serviciului. Verificați jurnalele și trimiteți un mail la support@mandrivaonline.com"
 
 #: ../mdkapplet:87
 #, c-format
@@ -76,17 +81,17 @@ msgstr "Așteptați, se caută pachetele disponibile..."
 #: ../mdkapplet:93
 #, c-format
 msgid "New updates are available for your system"
-msgstr "Sunt disponibile noi actualizări pentru sistemul dumneavoastră"
+msgstr "Noi actualizări vă sînt disponibile pentru sistem"
 
 #: ../mdkapplet:100
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "O nouă versiune a distribuţiei Mandriva Linux a fost lansată"
+msgstr "O nouă versiune a distribuției Mandriva Linux a fost lansată"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr "Un mediu de pachete adiţional este disponibil pentru distribuţia dvs."
+msgstr "Un mediu de pachete adițional vă este disponibil pentru distribuție."
 
 #: ../mdkapplet:113
 #, c-format
@@ -98,7 +103,8 @@ msgstr "Rețeaua nu funcționează. Configurați-vă rețeaua"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Serviciul nu este activat. Apăsați pe \"Site online\""
 
-#: ../mdkapplet:125 ../mdkapplet:132
+#: ../mdkapplet:125
+#: ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "baza de date urpmi este blocată"
@@ -106,17 +112,12 @@ msgstr "baza de date urpmi este blocată"
 #: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versiunea nu este suportată (versiunea este prea veche sau este versiune de "
-"dezvoltare)"
+msgstr "Versiunea nu este suportată (versiunea este prea veche sau este versiune de dezvoltare)"
 
 #: ../mdkapplet:144
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Nu s-au găsit medii. Trebuie adăugate medii prin 'Administrator Medii de "
-"Programe'. "
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Nu s-au găsit medii. Trebuiesc adăugate medii prin „Gestionarul de medii de programe”. "
 
 #: ../mdkapplet:150
 #, c-format
@@ -129,7 +130,7 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 "Aveți configurate mai multe medii de actualizare, dar toate\n"
-"sunt dezactivate. Ar trebui să activați cel puțin unul, pornind\n"
+"sînt dezactivate. Ar trebui să activați cel puțin unul, pornind\n"
 "Administratorul mediilor cu programe (în coloana \"%s\"\n"
 " activat).\n"
 "\n"
@@ -145,7 +146,8 @@ msgstr "Activat"
 msgid "Error updating media"
 msgstr "Eroare la actualizarea mediului"
 
-#: ../mdkapplet:203 ../mdkapplet:633
+#: ../mdkapplet:203
+#: ../mdkapplet:633
 #, c-format
 msgid "Install updates"
 msgstr "Instalare actualizări pentru sistem"
@@ -153,7 +155,7 @@ msgstr "Instalare actualizări pentru sistem"
 #: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
-msgstr "Adaugă mediu de pachete adiţional"
+msgstr "Adaugă mediu de pachete adițional"
 
 #: ../mdkapplet:205
 #, c-format
@@ -168,59 +170,62 @@ msgstr "Configurare rețea"
 #: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
-msgstr "Actualizarea sistemului"
+msgstr "Actualizare majoră a sistemului"
 
 #: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Se lansează drakconnect\n"
 
-#: ../mdkapplet:377 ../mdkapplet:398
+#: ../mdkapplet:377
+#: ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr "Versiune nouă a distribuţiei Mandriva Linux"
+msgstr "Versiune nouă a distribuției Mandriva Linux"
 
 #: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "O nouă versiune a distribuţiei Mandriva Linux a fost lansată."
+msgstr "O nouă versiune a distribuției Mandriva Linux a fost lansată."
 
 #: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
-msgstr "Mai multe informații despre această nouă versiune"
+msgstr "Informații suplimentare despre această nouă versiune"
 
 #: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Doriți să avansați la distribuția „%s”? "
 
-#: ../mdkapplet:387 ../mdkapplet:740
+#: ../mdkapplet:387
+#: ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
-msgstr "Nu se cere confirmarea data viitoare"
+msgstr "Nu se cere confirmare data viitoare"
 
-#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
+#: ../mdkapplet:388
+#: ../mdkapplet:424
+#: ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
-msgstr "Următorul"
+msgstr "Înainte"
 
-#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
-#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:388
+#: ../mdkapplet:424
+#: ../mdkapplet:741
+#: ../mdkapplet-restricted-helper:84
+#: ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
-msgstr "Renunță"
+msgstr "Anulează"
 
 #: ../mdkapplet:415
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
-"Această actualizare majoră necesită o conexiune la reţea rapidă (cablu, "
-"xDSL, ...) şi poate dura câteva ore."
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Această actualizare majoră necesită o conexiune la rețea rapidă (cablu, xDSL, ...) și poate dura cîteva ore."
 
 #: ../mdkapplet:417
 #, c-format
@@ -230,17 +235,12 @@ msgstr "Estimarea datelor de descărcat este de %s"
 #: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
-"Ar trebui să închideţi toate aplicaţiile lansate înainte de a continua."
+msgstr "Ar trebui să închideți toate aplicațiile lansate înainte de a continua."
 
 #: ../mdkapplet:421
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
-"Ar trebui să vă conectaţi portabilul la încărcător şi să optaţi pentru o "
-"conexiune ethernet în loc de wifi."
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Ar trebui să vă conectați portabilul la încărcător și să optați pentru o conexiune Ethernet în loc de WiFi."
 
 #: ../mdkapplet:447
 #, c-format
@@ -250,7 +250,7 @@ msgstr "Se lansează MandrivaUpdate\n"
 #: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
-msgstr "Se calculează actualizările noi...\n"
+msgstr "Se calculează actualizările...\n"
 
 #: ../mdkapplet:554
 #, c-format
@@ -267,10 +267,12 @@ msgstr "Verificare rețea: se pare că este dezactivată\n"
 msgid "Warning"
 msgstr "Avertisment"
 
-#: ../mdkapplet:627 ../mdkapplet:635 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:627
+#: ../mdkapplet:635
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr "Informaţii suplimentare"
+msgstr "Informații suplimentare"
 
 #: ../mdkapplet:637
 #, c-format
@@ -295,23 +297,31 @@ msgstr "Drepturi de autor (C) %s Mandriva"
 #: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online permite accesul la serviciile web Mandriva."
+msgstr "Mandriva Online permite accesul la serviciile Web Mandriva."
 
 #: ../mdkapplet:662
 #, c-format
 msgid "Online WebSite"
-msgstr "Pagină web"
+msgstr "Site online"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
 #: ../mdkapplet:667
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr "Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
+msgstr ""
+"Ovidiu CONSTANTIN <ovidiu.soft@xnet.ro>, 2002, 2003\n"
+"Harald ERSCH <hersch@romatsa.ro>, 2002, 2004\n"
+"Harald ERSCH <harald@ersch.ro>, 2004\n"
+"Aurelian OANCEA <aurelian@mandrakelinux.ro>, 2004\n"
+"Ovidiu CONSTANTIN <ovidiusoft@gmail.com>, 2004\n"
+"Cristian Ionuț PÎRÎU <piriu.cristian@rdslink.ro>, 2008\n"
+"Cosmin HUMENIUC <cosmin@mandrivausers.ro>, 2008\n"
+"Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>, 2008, 2009\n"
 
-#: ../mdkapplet:676 ../mdkapplet-config:54
+#: ../mdkapplet:676
 #, c-format
 msgid "Updates Configuration"
-msgstr ""
+msgstr "Configurare actualizări"
 
 #: ../mdkapplet:678
 #, c-format
@@ -321,21 +331,18 @@ msgstr "Lansează întotdeauna la pornire"
 #: ../mdkapplet:680
 #, c-format
 msgid "Quit"
-msgstr "Ieșire"
+msgstr "Terminare"
 
-#: ../mdkapplet:730 ../mdkapplet:735
+#: ../mdkapplet:730
+#: ../mdkapplet:735
 #, c-format
 msgid "New medium available"
 msgstr "Nou mediu disponibil"
 
 #: ../mdkapplet:737
 #, c-format
-msgid ""
-"You use '%s' distribution and therefore have privileged access to additional "
-"software."
-msgstr ""
-"Aveţi distribuţia '%s' şi de aceea aveţi un acces privilegiat la programe "
-"adiţionale."
+msgid "You use '%s' distribution and therefore have privileged access to additional software."
+msgstr "Aveți distribuția '%s' și de aceea aveți un acces privilegiat la programe adiționale."
 
 #: ../mdkapplet:738
 #, c-format
@@ -345,60 +352,47 @@ msgstr "Mandriva PowerPack"
 #: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Doriţi să instalaţi acest depozit de programe suplimentar?"
+msgstr "Doriți să instalați acest depozit de programe adiționale?"
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
-#: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
+#: ../mdkapplet-restricted-helper:57
+#: ../mdkapplet-restricted-helper:69
+#: ../mdkapplet-restricted-helper:145
 #: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr "Se adaugă un mediu de pachete adiţional"
-
-#: ../mdkapplet-config:55
-#, c-format
-msgid "Here you can configure the updates applet"
-msgstr ""
-
-#: ../mdkapplet-config:57
-#, c-format
-msgid "Update frequency (seconds)"
-msgstr ""
-
-#: ../mdkapplet-config:59
-#, c-format
-msgid "First check delay (seconds)"
-msgstr ""
+msgstr "Se adaugă un mediu de pachete adițional"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Introduceţi-vă identificatorul contului pentru a adăuga un mediu de pachete "
-"adiţional"
+msgstr "Introduceți-vă identificatorul contului pentru a adăuga un mediu de pachete adițional"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr "Mai multe informaţii despre contul dvs. de utilizator"
+msgstr "Informații suplimentare despre contul vostru de utilizator"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr "Mailul dvs."
+msgstr "Mailul vostru"
 
 #: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "Your password"
-msgstr "Parola dvs."
+msgstr "Parola voastră."
 
 #: ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Forgotten password"
 msgstr "Parolă uitată"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
-#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
+#: ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:163
+#: ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
@@ -407,14 +401,15 @@ msgstr "Eroare"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr "Parola şi mailul nu pot fi goale."
+msgstr "Parola și mailul nu pot fi vide."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
 msgid "An error occurred"
 msgstr "S-a produs o eroare"
 
-#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#: ../mdkapplet-restricted-helper:137
+#: ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
 msgstr "S-a adăugat cu succes mediul %s."
@@ -426,11 +421,8 @@ msgstr "OK"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Contul dvs. Mandriva nu are activat opţiunea de descărcare a versiunii "
-"Powerpack"
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Contul vostru Mandriva nu are activat opțiunea de descărcare a versiunii Powerpack"
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -444,17 +436,15 @@ msgstr "S-a produs o eroare la adăugarea mediului"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
-"Sistemul dvs nu dispune de spaţiu suficient pe %s pentru actualizarea majoră "
-"(%dMo < %dMo)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Sistemul nu vă dispune de spațiu suficient pe %s pentru o actualizare majoră (%dMo < %dMo)"
 
-#: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
+#: ../mdkapplet-upgrade-helper:124
+#: ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Installation failed"
-msgstr "Instalarea a eșuat"
+msgstr "Instalare eșuată"
 
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
@@ -484,7 +474,7 @@ msgstr "Trebuie să reporniți sistemul."
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Reboot"
-msgstr "Repornire sistem"
+msgstr "Redemarează"
 
 #: ../mdkapplet-upgrade-helper:175
 #, c-format
@@ -494,34 +484,33 @@ msgid ""
 "manager on another desktop, or are you currently installing\n"
 "packages as well?)."
 msgstr ""
-"Baza de date cu pachete este blocată. Vă rog să închideţi alte\n"
-"aplicaţii care lucrează cu baza de date (aveţi alt manager de\n"
-"pachete pe alt desktop, sau instalaţi alte pachete în acelaşi\n"
+"Baza de date cu pachete este blocată. Închideți celelalte\n"
+"aplicații care lucrează cu baza de date (aveți alt gestionar de\n"
+"pachete pe alt birou, sau instalați alte pachete în același\n"
 "timp?)."
 
 #: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Failure when adding medium"
-msgstr "Adăugare mediu eşuată"
+msgstr "Adăugare de mediu eșuată"
 
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr "Actualizare distribuție"
+msgstr "Actualizare majoră de distribuție"
 
 #: ../mdkupdate:59
 #, c-format
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate versiunea %s\n"
 "Drepturi de autor (C) %s Mandriva.\n"
-"Acest program este liber și poate fi redistribuit sub termenii GNU GPL.\n"
+"Acesta este un program liber și poate fi redistribuit sub termenii GNU GPL.\n"
 "\n"
 "Utilizare:\n"
 
@@ -558,12 +547,10 @@ msgstr "Nu se pot actualiza pachetele de pe mediul update_source.\n"
 #, fuzzy
 #~ msgid "You are using '%s' distribution."
 #~ msgstr "Doriți să avansați la distribuția „%s”? "
-
 #~ msgid "Do you want to upgrade?"
 #~ msgstr "Doriți să actualizați sistemul?"
-
 #~ msgid "Yes"
 #~ msgstr "Da"
-
 #~ msgid "No"
 #~ msgstr "Nu"
+
