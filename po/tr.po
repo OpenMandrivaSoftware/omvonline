@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 15:30+0100\n"
+"POT-Creation-Date: 2009-03-05 15:18+0100\n"
 "PO-Revision-Date: 2009-03-04 23:40+0200\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 "Language-Team: Turkish < cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -274,7 +274,7 @@ msgstr "Çevrimiçi Website"
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 
-#: ../mdkapplet:676
+#: ../mdkapplet:676 ../mdkapplet-config:54
 #, c-format
 msgid "Updates Configuration"
 msgstr "Güncelleme Ayarları"
@@ -313,11 +313,27 @@ msgstr "Mandriva PowerPack"
 msgid "Do you want to install this additional software repository?"
 msgstr "Bu ek paket veri kaynağını eklemek ister misiniz?"
 
-#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
+#: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
+#: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ek bir paket veri kaynağı ekleniyor"
+
+#: ../mdkapplet-config:55
+#, c-format
+msgid "Here you can configure the updates applet"
+msgstr ""
+
+#: ../mdkapplet-config:57
+#, c-format
+msgid "Update frequency (seconds)"
+msgstr ""
+
+#: ../mdkapplet-config:59
+#, c-format
+msgid "First check delay (seconds)"
+msgstr ""
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
