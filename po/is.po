@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
-# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2004, 2005, 2006, 2008.
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003, 2004, 2005, 2006, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-05 15:18+0100\n"
-"PO-Revision-Date: 2008-12-14 13:54+0000\n"
+"PO-Revision-Date: 2009-03-10 00:08+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Vandræði með þjónustustillingar, Vinsamlega athugið annála og sendið póst "
+"Vandræði með þjónustustillingar. Athugið annála og sendið póst "
 "til support@mandrivaonline.com"
 
 #: ../mdkapplet:87
@@ -45,7 +45,7 @@ msgstr "Augnablik, leita að tiltækum pökkum..."
 #: ../mdkapplet:93
 #, c-format
 msgid "New updates are available for your system"
-msgstr "Nýjar uppfærslur eru tiltækar fyrir kerfið þitt"
+msgstr "Nýjar uppfærslur eru til fyrir kerfið þitt"
 
 #: ../mdkapplet:100
 #, c-format
@@ -55,7 +55,7 @@ msgstr "Ný útgáfa af Mandriva Linux hefur verið sett í dreifingu"
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr "Auka pakkamiðill er tiltækur fyrir þína dreifingu."
+msgstr "Auka pakkamiðill er til fyrir þína dreifingu."
 
 #: ../mdkapplet:113
 #, c-format
@@ -75,12 +75,11 @@ msgstr "urpmi gagnagrunnur læstur"
 #: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Útgáfa ekki þjónustuð (of gömul útgáfa, eða tilraunaútgáfa)"
+msgstr "Útgáfa ekki studd (of gömul útgáfa, eða tilraunaútgáfa)"
 
 #: ../mdkapplet:144
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Enginn miðill fannst. Þú verður að bæta við einhverjum miðlum með hugbúnaðar-"
 "miðla-tólinu."
@@ -99,7 +98,7 @@ msgstr ""
 "óvirkir.  Þú verður að keyra Hugbúnaðar-miðla-tólið til að virkja\n"
 "a.m.k. einn þeirra. (krossa við í \"%s\" dálknum).\n"
 "\n"
-"Endurræstu síðan %s."
+"Endurræstu síðan \"%s\"."
 
 #: ../mdkapplet:155
 #, c-format
@@ -159,12 +158,12 @@ msgstr "Ítarlegri upplýsingar um þessa nýju útgáfu"
 #: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr "Viltu uppfæra '%s' dreifinguna?"
+msgstr "Viltu uppfæra í '%s' dreifinguna?"
 
 #: ../mdkapplet:387 ../mdkapplet:740
 #, c-format
 msgid "Do not ask me next time"
-msgstr "Ekki spyrja í næsta skipti"
+msgstr "Ekki spyrja aftur"
 
 #: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84
@@ -185,18 +184,18 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
-"Þessi uppfærsla þarfnast háhraða nettengingar (beintenging, xDSL,...)   og "
+"Þessi uppfærsla þarfnast háhraða nettengingar (beintenging, xDSL,...)  og "
 "getur tekið nokkra klukkutíma."
 
 #: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr "Áætlað er að þaðð þurfi að sækja %s"
+msgstr "Áætlað er að það þurfi að sækja %s"
 
 #: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr "Þú ættir að loæa öllum öðrum forritum áður en þú heldur áfram."
+msgstr "Þú ættir að loka öllum öðrum forritum áður en þú heldur áfram."
 
 #: ../mdkapplet:421
 #, c-format
@@ -260,7 +259,7 @@ msgstr "Höfundaréttur (C) %s Mandriva"
 #: ../mdkapplet:660
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online gefur aðgang að Mandriva vefþjónustu."
+msgstr "Mandriva Online veitir aðgang að Mandriva vefþjónustu."
 
 #: ../mdkapplet:662
 #, c-format
@@ -276,7 +275,7 @@ msgstr "Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 #: ../mdkapplet:676 ../mdkapplet-config:54
 #, c-format
 msgid "Updates Configuration"
-msgstr ""
+msgstr "Stillingar á uppfærslum"
 
 #: ../mdkapplet:678
 #, c-format
@@ -298,8 +297,7 @@ msgstr "Nýr miðill tiltækur"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
-"Þú notar '%s' dreifinguna og hefur því forgangs-aðgang að aukahugbúnaði."
+msgstr "Þú notar '%s' dreifinguna og hefur því forgangs-aðgang að aukahugbúnaði."
 
 #: ../mdkapplet:738
 #, c-format
@@ -309,7 +307,7 @@ msgstr "Mandriva PowerPack"
 #: ../mdkapplet:739
 #, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Vilt þú bæta við þessum auka pakkamiðli?"
+msgstr "Vilt þú bæta við þessum auka-pakkamiðli?"
 
 #: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
 #: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
@@ -321,23 +319,22 @@ msgstr "Bæti við aukalegum pakkamiðli"
 #: ../mdkapplet-config:55
 #, c-format
 msgid "Here you can configure the updates applet"
-msgstr ""
+msgstr "Hér getur þú stillt uppfærsluforritið"
 
 #: ../mdkapplet-config:57
 #, c-format
 msgid "Update frequency (seconds)"
-msgstr ""
+msgstr "Uppfærslutíðni (sekúndur)"
 
 #: ../mdkapplet-config:59
 #, c-format
 msgid "First check delay (seconds)"
-msgstr ""
+msgstr "Töf á fyrstu athugun (sekúndur)"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Vinsamlega fylltu inn auðkenni þitt til að hægt sé að bæta við pakkamiðli"
+msgstr "Fylltu inn auðkenni þitt svo hægt sé að bæta við pakkamiðli"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
@@ -389,9 +386,8 @@ msgstr "Í lagi"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Í Mandriva skráningunni þinni \"Powerpack download\" ekki virkt."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Í Mandriva skráningunni þinni er \"Powerpack download\" ekki virkt."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -405,8 +401,7 @@ msgstr "Villa kom upp þegar reynt var að bæta við miðli"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Kerfið þitt hefur ekki nægilegt laust pláss á %s til að hægt sé að uppfæra (%"
 "dMB < %dMB)"
@@ -493,7 +488,7 @@ msgstr "  --help\t\t- prenta þessa hjálp.\n"
 #: ../mdkupdate:65
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto\t\t- Mandriva Uppfærslur keyrt sjálvirkt.\n"
+msgstr "  --auto\t\t- Mandriva Uppfærslur keyrðar sjálfvirkt.\n"
 
 #: ../mdkupdate:66
 #, c-format
@@ -514,3 +509,4 @@ msgstr "  --debug\t\t\t- skrá niður allt sem gert er\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Gat ekki uppfært pakka frá uppfærslumiðli.\n"
+
