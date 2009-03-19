@@ -497,7 +497,7 @@ sub silentCheck() {
         }
         checker_exit('locked') if $will_not_update_media;
 
-        if (!run_program::run('urpmi.update', '--update', if_($root, "--urpmi-root=$root"))) {
+        if (!run_program::run('urpmi.update', (is_it_a_devel_distro() ? '-a' : '--update'), if_($root, "--urpmi-root=$root"))) {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
