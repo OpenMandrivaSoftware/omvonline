@@ -510,7 +510,7 @@ sub silentCheck() {
         require urpm::media;
         # this eats 52Mb of RAM on 64bit:
         urpm::media::configure($urpm, update => 1);
-        my @update_medias = grep { $_->{update} } @{$urpm->{media}};
+        my @update_medias = get_update_medias($urpm);
         if (!@update_medias) {
             checker_exit('no_update_medium');
         } elsif (!any { ! $_->{ignore} } @update_medias) {
