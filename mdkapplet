@@ -509,6 +509,7 @@ sub silentCheck() {
         require urpm::select;
         require urpm::media;
         # this eats 52Mb of RAM on 64bit:
+        # (hence we do it in the forked helper so that the applet doesn't eat too much RAM)
         urpm::media::configure($urpm, if_(!is_it_a_devel_distro(), update => 1));
         my @update_medias = get_update_medias($urpm);
         if (!@update_medias) {
