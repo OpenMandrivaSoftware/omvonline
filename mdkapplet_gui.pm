@@ -73,10 +73,12 @@ sub fill_n_run_portable_dialog {
     my ($w, $widgets) = @_;
 
     # use wizard button order (for both 2008.1 & 2009.0):
-    local $::isWizard = 1;
-    local $w->{pop_it} = 0;
-    local $::isInstall = 1;
-    gtkadd($w->{window}, gtknew('VBox', children_tight => $widgets));
+    {
+        local $::isWizard = 1;
+        local $w->{pop_it} = 0;
+        local $::isInstall = 1;
+        gtkadd($w->{window}, gtknew('VBox', children_tight => $widgets));
+    }
 
     $w->{ok}->grab_focus;
     $w->main;
