@@ -234,5 +234,5 @@ sub fork_gurpmi {
 }
 
 sub update_media() {
-    run_program::raw({ timeout => 'never' }, 'urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
+    run_program::run('urpmi.update', if_($root, '--urpmi-root', $root), '-a', '--nocheck');
 }
