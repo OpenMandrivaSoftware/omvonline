@@ -47,8 +47,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-04 15:30+0100\n"
-"PO-Revision-Date: 2009-03-08 18:21+0100\n"
+"POT-Creation-Date: 2009-03-05 15:18+0100\n"
+"PO-Revision-Date: 2009-03-21 21:41+0100\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Mandrivausers.ro\n"
 "MIME-Version: 1.0\n"
@@ -215,7 +215,7 @@ msgstr "Nu se cere confirmare data viitoare"
 #: ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "Next"
-msgstr "Înainte"
+msgstr "Înainte »"
 
 #: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:741
 #: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
@@ -227,7 +227,7 @@ msgstr "Anulează"
 #: ../mdkapplet:415
 #, c-format
 msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...) "
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
 "Această actualizare majoră necesită o conexiune la rețea rapidă (cablu, "
@@ -327,7 +327,7 @@ msgstr ""
 "Cosmin HUMENIUC <cosmin@mandrivausers.ro>, 2008\n"
 "Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>, 2008, 2009\n"
 
-#: ../mdkapplet:676
+#: ../mdkapplet:676 ../mdkapplet-config:54
 #, c-format
 msgid "Updates Configuration"
 msgstr "Configurare actualizări"
@@ -366,11 +366,27 @@ msgstr "Mandriva PowerPack"
 msgid "Do you want to install this additional software repository?"
 msgstr "Doriți să instalați acest depozit de programe adiționale?"
 
-#: ../mdkapplet-restricted-helper:57 ../mdkapplet-restricted-helper:69
-#: ../mdkapplet-restricted-helper:145 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
+#: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
+#: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Se adaugă un mediu de pachete adițional"
+
+#: ../mdkapplet-config:55
+#, c-format
+msgid "Here you can configure the updates applet"
+msgstr "Aici puteți configura mini-aplicația de actualizări"
+
+#: ../mdkapplet-config:57
+#, c-format
+msgid "Update frequency (seconds)"
+msgstr "Frecvența actualizărilor (secunde)"
+
+#: ../mdkapplet-config:59
+#, c-format
+msgid "First check delay (seconds)"
+msgstr "Perioadă pînă la prima verificare (secunde)"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
@@ -392,7 +408,7 @@ msgstr "Mailul vostru"
 #: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "Your password"
-msgstr "Parola voastră."
+msgstr "Parola voastră"
 
 #: ../mdkapplet-restricted-helper:82
 #, c-format
@@ -438,7 +454,7 @@ msgstr ""
 #: ../mdkapplet-restricted-helper:157
 #, c-format
 msgid "Close"
-msgstr "Închide"
+msgstr "X Închide"
 
 #: ../mdkapplet-restricted-helper:163
 #, c-format
@@ -487,7 +503,7 @@ msgstr "Trebuie să reporniți sistemul."
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Reboot"
-msgstr "Redemarează"
+msgstr "Repornește"
 
 #: ../mdkapplet-upgrade-helper:175
 #, c-format
