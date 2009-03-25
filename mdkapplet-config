@@ -46,6 +46,10 @@ sub configure() {
 
     # convert from ms to seconds:
     $config{FIRST_CHECK_DELAY} /= 1000;
+    # convert from seconds to minutes :
+    $config{FIRST_CHECK_DELAY} /= 60;
+    # convert from seconds to hours :
+    $config{UPDATE_FREQUENCY} /= 3600;
 
     my $res =
       fill_n_run_portable_dialog(
@@ -54,15 +58,21 @@ sub configure() {
               get_banner(N("Updates Configuration")),
               gtknew('Label_Left', text => N("Here you can configure the updates applet"), @common),
               gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
-                  [ N("Update frequency (seconds)"),
+                  [ N("Update frequency (hours)"),
                     gtknew('Entry', text_ref => \$config{UPDATE_FREQUENCY}) ],
-                  [ N("First check delay (seconds)"),
+                  [ N("First check delay (minutes)"),
                     gtknew('Entry',text_ref => \$config{FIRST_CHECK_DELAY}) ],
               ]),
               create_okcancel($w), #, N("Next"), N("Cancel")),
           ]);
 
     if ($res) {
+        # convert from seconds to minutes :
+        $config{FIRST_CHECK_DELAY} *= 60;
+
+        # convert from seconds to hours :
+        $config{UPDATE_FREQUENCY} *= 3600;
+
         # convert back into ms from seconds:
         $config{FIRST_CHECK_DELAY} *= 1000;
 
