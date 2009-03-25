@@ -51,6 +51,9 @@ sub configure() {
     # convert from seconds to hours :
     $config{UPDATE_FREQUENCY} /= 3600;
 
+    # sanity check:
+    $config{UPDATE_FREQUENCY} = 1 if $config{UPDATE_FREQUENCY} < 1;
+
     my $res =
       fill_n_run_portable_dialog(
           $w,
