@@ -13,15 +13,14 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 18:50+0100\n"
-"PO-Revision-Date: 2009-03-08 14:28+0200\n"
+"PO-Revision-Date: 2009-03-26 09:09+0200\n"
 "Last-Translator: Taras Boychuk <btr0001@ukr.net>\n"
 "Language-Team: ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -85,8 +84,7 @@ msgstr "Версія не підтримується (занадто стара 
 
 #: ../mdkapplet:144
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Носіїв не знайдено. Ви повинні додати носії з допомогою 'Software Media "
 "Manager'."
@@ -304,8 +302,7 @@ msgstr "Новий носій доступний"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
-"Ви використовуєте дистрибутив '%s', тому маєте доступ до додаткових програм."
+msgstr "Ви використовуєте дистрибутив '%s', тому маєте доступ до додаткових програм."
 
 #: ../mdkapplet:739
 #, c-format
@@ -330,14 +327,14 @@ msgid "Here you can configure the updates applet"
 msgstr "Тут можна налаштувати аплет поновлень"
 
 #: ../mdkapplet-config:61
-#, fuzzy, c-format
+#, c-format
 msgid "Update frequency (hours)"
-msgstr "Частота поновлення (секунди)"
+msgstr "Частота поновлення (години)"
 
 #: ../mdkapplet-config:63
-#, fuzzy, c-format
+#, c-format
 msgid "First check delay (minutes)"
-msgstr "Затримка першої перевірки (секунди)"
+msgstr "Затримка першої перевірки (хвилини)"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
@@ -394,10 +391,8 @@ msgstr "Гаразд"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Ваш рахунок на Mandriva не має активованої підписки на звантаження Powerpack."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Ваш рахунок на Mandriva не має активованої підписки на звантаження Powerpack."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -411,8 +406,7 @@ msgstr "При додаванні джерела сталася помилка"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "У Вашій системі залишилося недостатньо місця на %s для оновлення (%dMB < %"
 "dMB)"
@@ -521,3 +515,4 @@ msgstr "  --debug\t\t\t- створювати журнал\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"
+
