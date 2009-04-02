@@ -1,34 +1,35 @@
-# translation of mdkonline.po to Arabic
+# translation of mdkonline.po to
+#
 # Boujaj Mostapha Ibrahim <mboujaj@yahoo.de, 2002.
 # Mohammed Gamal <f2c2001@yahoo.com>, 2001.
 # Youcef Rabah Rahal <rahal@arabeyes.org>, 2004.
 # Ossama M. Khayat <okhayat@yahoo.com>, 2004, 2005.
-#
+# Yaser Ammar <linux.uae@gawab.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 18:50+0100\n"
-"PO-Revision-Date: 2005-02-24 23:27+0300\n"
-"Last-Translator: Ossama M. Khayat <okhayat@yahoo.com>\n"
-"Language-Team: Arabic <support@arabeyes.org>\n"
+"PO-Revision-Date: 2009-03-25 23:24+0400\n"
+"Last-Translator: Yaser Ammar <linux.uae@gawab.com>\n"
+"Language-Team:  Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && n<=10 ? 2 : "
-"3\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
-#, fuzzy, c-format
+#, c-format
 msgid "Will check updates at %s"
-msgstr "إفحص التّحديثات"
+msgstr "سيفحص وجود تحديثات عند %s"
 
 #: ../mdkapplet:74
 #, c-format
 msgid "Your system is up-to-date"
-msgstr "النّظام محدّث"
+msgstr "نظامك محدّث"
 
 #: ../mdkapplet:80
 #, c-format
@@ -36,13 +37,13 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"مشكلة في تهيئة الخدمة. رجاء تحقّق من السجلّ وأرسل إلى support@mandrivaonline."
-"net"
+"مشكلة في ضبط الخدمة. رجاء تحقّق من السجلّ وأرسل رسالة "
+"إلىsupport@mandrivaonline.com"
 
 #: ../mdkapplet:87
 #, c-format
 msgid "Please wait, finding available packages..."
-msgstr "اتنظر من فضلك، جاري ايجاد الحزم المتوفرة..."
+msgstr "اتنظر من فضلك، يجري البحث عن الحزم المتاحة..."
 
 #: ../mdkapplet:93
 #, c-format
@@ -52,42 +53,42 @@ msgstr "هناك تحديثات متوفّرة لنظامك"
 #: ../mdkapplet:100
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr ""
+msgstr "يتوفر إصدار جديد من توزيعة لينكس ماندريفا"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "يتوفر وسيط إضافي للحزم لتوزيعتك."
 
 #: ../mdkapplet:113
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "الشّبكة متوقّفة. رجاء هيّئ شبكتك"
+msgstr "الشّبكة متوقّفة. رجاء اضبط شبكتك"
 
 #: ../mdkapplet:119
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "الخدمة غير مُنشَّطة. رجاء اضغط على \"موقع الإنترنت\""
+msgstr "الخدمة غير مُنشَّطة. رجاء اضغط على \"Online Website\""
 
 #: ../mdkapplet:125 ../mdkapplet:132
-#, fuzzy, c-format
+#, c-format
 msgid "urpmi database locked"
-msgstr "تم اقفال قاعدة بيانات urpmi"
+msgstr "أقفلت قاعدة بيانات urpmi"
 
 #: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
-"هذه الإصدارة غير مدعومة (إما بسبب أنها قديماً جداً، أو أنها إصدارة تطويريّة)"
+"هذه الإصدارة غير مدعومة (إما بسبب أنها قديمة جداً، أو أنها إصدارة تطويريّة)"
 
 #: ../mdkapplet:144
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
+msgstr "لا توجد وسائط، تجب إضافة بعض الوسائط عبر 'مدير وسائط البرامج'."
 
 #: ../mdkapplet:150
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
 "all of them are currently disabled. You should run the Software\n"
@@ -96,20 +97,20 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
-"لديك على الأقل وسيط تحديث واحد تمت تهيئته، لكن\n"
-"جميعهم معطلون حالياً. يجب عليك تشغيل مدير وسائط\n"
-"البرامج لتمكين واحد على الأقل (قم بالتأشير عليها في عامود التمكين؟).\n"
-"ثم قم بإعادة تشغيل أداة %s."
+"لديك على الأقل وسيط تحديث واحد مضبوط، لكن\n"
+"جميعها معطلة حالياً. يجب عليك تشغيل مدير وسائط\n"
+"البرامج لتمكين واحد على الأقل (أشر عليها في عمود %s).\n"
+"ثم أعد تشغيل %s."
 
 #: ../mdkapplet:155
 #, c-format
 msgid "Enabled"
-msgstr "متاح؟"
+msgstr "مُفعَّل"
 
 #: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
-msgstr ""
+msgstr "خطأ في تحديث الوسيط"
 
 #: ../mdkapplet:203 ../mdkapplet:634
 #, c-format
@@ -119,52 +120,52 @@ msgstr "ثبّت التّحديثات"
 #: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "أضف وسيط حزم إضافي"
 
 #: ../mdkapplet:205
 #, c-format
 msgid "Check Updates"
-msgstr "إفحص التّحديثات"
+msgstr "التمس تحديثات"
 
 #: ../mdkapplet:206
 #, c-format
 msgid "Configure Network"
-msgstr "أعدّ الشّبكة"
+msgstr "اضبط الشّبكة"
 
 #: ../mdkapplet:207
 #, c-format
 msgid "Upgrade the system"
-msgstr ""
+msgstr "ترقية النظام"
 
 #: ../mdkapplet:372
 #, c-format
 msgid "Launching drakconnect\n"
-msgstr "يجري إطلاق دراكونكت (drakconnect)\n"
+msgstr "يُقدح drakconnect\n"
 
 #: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "إصدار جديد من توزيعة لينكس ماندريفا"
 
 #: ../mdkapplet:381
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr ""
+msgstr "أُطلق إصدار جديد من توزيعة لينكس ماندريفا."
 
 #: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "معلومات إضافية حول هذا الإصدار الجديد"
 
 #: ../mdkapplet:385
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr ""
+msgstr "هل تريد الترقية إلى التوزيعة '%s' ؟"
 
 #: ../mdkapplet:387 ../mdkapplet:741
 #, c-format
 msgid "Do not ask me next time"
-msgstr ""
+msgstr "لا تسألني في المرة القادمة"
 
 #: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:742
 #: ../mdkapplet-restricted-helper:84
@@ -177,7 +178,7 @@ msgstr "التالي"
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
-msgstr "إلغاء"
+msgstr "ألغِ"
 
 #: ../mdkapplet:415
 #, c-format
@@ -185,16 +186,18 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"هذه الترقية تتطلب اتصالا شبكيا عريض النطاق (اتصال الكبل، دي إس إل، ...) وقد "
+"يستغرق عدة ساعات ليكتمل"
 
 #: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "المقدار التقريبي للبيانات التي ستنزل هو %s"
 
 #: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "ينبغي أن تغلق كل التطبيقات الأخرى العاملة قبل المتابعة"
 
 #: ../mdkapplet:421
 #, c-format
@@ -202,16 +205,18 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"ينبغي أن توصل حاسوبك المحمول بتيار الكهرباء المتناوبة (AC)، ويفضل استخدام "
+"الاتصال السلكي (ethernet) بدل اللاسلكي (wifi) إن أمكن."
 
 #: ../mdkapplet:447
 #, c-format
 msgid "Launching MandrivaUpdate\n"
-msgstr "يجري إطلاق محدّث ماندريبا بريمج (MandrivaUpdate)\n"
+msgstr "محدّث ماندريفا (MandrivaUpdate) يُقدح\n"
 
 #: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
-msgstr "يجري حساب التّحديثات الجديدة...\n"
+msgstr "حساب التّحديثات الجديدة...\n"
 
 #: ../mdkapplet:555
 #, c-format
@@ -221,7 +226,7 @@ msgstr "النّظام محدّث\n"
 #: ../mdkapplet:583
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr "يجري فحص الشّبكة: تبدو معطّلة\n"
+msgstr "فحص الشّبكة: تبدو معطّلة\n"
 
 #: ../mdkapplet:625
 #, c-format
@@ -231,127 +236,132 @@ msgstr "تحذير"
 #: ../mdkapplet:628 ../mdkapplet:636 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "معلومات إضافية"
 
 #: ../mdkapplet:638
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "أضف وسائط"
 
 #: ../mdkapplet:653
 #, c-format
 msgid "About..."
-msgstr "حَوْل..."
+msgstr "عَن..."
 
 #: ../mdkapplet:657
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Online %s"
-msgstr "ماندريبا أُنلاين"
+msgstr "ماندريفا أونلاين %s"
 
 #: ../mdkapplet:658
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
-msgstr ""
+msgstr "حقوق النشر (C) %s لماندريفا"
 
 #: ../mdkapplet:661
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "ماندريفا أونلاين تقدم وصولا إلى خدمات ماندريفا على الشبكة"
 
 #: ../mdkapplet:663
 #, c-format
 msgid "Online WebSite"
-msgstr "موقع على الخطّ"
+msgstr "موقع ماندريفا على الإنترنت"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
 #: ../mdkapplet:668
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
+" Boujaj Mostapha Ibrahim <mboujaj@yahoo.de, 2002.\n"
+"Mohammed Gamal <f2c2001@yahoo.com>, 2001.\n"
+"Youcef Rabah Rahal <rahal@arabeyes.org>, 2004.\n"
+"Ossama M. Khayat <okhayat@yahoo.com>, 2004, 2005.\n"
+"Yaser Ammar <linux.uae@gawab.com>2009\n"
 
 #: ../mdkapplet:677 ../mdkapplet-config:58
-#, fuzzy, c-format
+#, c-format
 msgid "Updates Configuration"
-msgstr "جاري قراءة اعداداتك\n"
+msgstr "ضبط التحديثات"
 
 #: ../mdkapplet:679
 #, c-format
 msgid "Always launch on startup"
-msgstr "أطلق دوما عند البدأ"
+msgstr "اقدحه دومًا عند البدء"
 
 #: ../mdkapplet:681
 #, c-format
 msgid "Quit"
-msgstr "خروج"
+msgstr "اخرج"
 
 #: ../mdkapplet:731 ../mdkapplet:736
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "يتوفر وسط جديد"
 
 #: ../mdkapplet:738
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "أنت تستخدم توزيعة '%s' ولذلك يحق لك الوصول إلى برامج إضافية."
 
 #: ../mdkapplet:739
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva PowerPack"
-msgstr "ماندريبا أُنلاين"
+msgstr "ماندريفا بَور باك"
 
 #: ../mdkapplet:740
 #, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr ""
+msgstr "هل تريد تثبيت مستودع البرامج الإضافي هذا؟"
 
 #: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
 #: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
 #: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "إضافة وسيط حزم إضافي"
 
 #: ../mdkapplet-config:59
 #, c-format
 msgid "Here you can configure the updates applet"
-msgstr ""
+msgstr "بإمكانك هنا ضبط بريمج التحديثات"
 
 #: ../mdkapplet-config:61
-#, c-format
+#, fuzzy, c-format
 msgid "Update frequency (hours)"
-msgstr ""
+msgstr "تكرار التحديث (بالثواني)"
 
 #: ../mdkapplet-config:63
-#, c-format
+#, fuzzy, c-format
 msgid "First check delay (minutes)"
-msgstr ""
+msgstr "زمن أول فحص"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "فضلاً اكتب مُعرِّف حسابك لإضافة وسيط حزم إضافي"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "معلومات إضافية عن حسابك"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "بريدك الإلكتروني"
 
 #: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#, c-format
 msgid "Your password"
-msgstr "كلمة مرور خاطئة"
+msgstr "كلمة سرك"
 
 #: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#, c-format
 msgid "Forgotten password"
-msgstr "كلمة مرور خاطئة"
+msgstr "نسيت كلمة السر"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -364,7 +374,7 @@ msgstr "خطأ"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "كلمة السر والبريد الإلكتروني لا يمكن تركهما خاليين."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -374,7 +384,7 @@ msgstr "حدث خطأ"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "نجحت إضافة الوسائط %s."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -385,23 +395,23 @@ msgstr "موافق"
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgstr "حسابك في ماندريفا لا يتضمن اشتراك تنزيل بَور باك مفعلاً."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
 msgid "Close"
-msgstr "إغلق"
+msgstr "أغلق"
 
 #: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "فشل عند إضافة الوسيط"
+msgstr "حدث خطأ أثناء إضافة الوسيط"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgstr "لا توجد مساحة كافية بنظامك في %s للترقية (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -412,12 +422,12 @@ msgstr "فشل التّثبيت"
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "بإمكانك أن تجد سجلات التثبيت في '%s'"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
 msgid "Retry"
-msgstr ""
+msgstr "أعد المحاولة"
 
 #: ../mdkapplet-upgrade-helper:138
 #, c-format
@@ -427,17 +437,17 @@ msgstr "تهانينا"
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "نجحت الترقية إلى إصدار ماندريفا %s"
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "يجب أن تعيد النظام"
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Reboot"
-msgstr "إعادة التشغيل"
+msgstr "أعد الحاسوب"
 
 #: ../mdkapplet-upgrade-helper:175
 #, c-format
@@ -447,9 +457,9 @@ msgid ""
 "manager on another desktop, or are you currently installing\n"
 "packages as well?)."
 msgstr ""
-"قاعدة بيانات الحزم مقفلة. من فضلك إغلق التّطبيقات الأخرى\n"
-"المستعملة لقاعدة بيانات الحزم (هل لديك مديروسائط آخر على سطح مكتب آخر، أو هل "
-"أنت تثبّت حزما حاليا كذلك ؟)."
+"قاعدة بيانات الحزم مقفلة. من فضلك أغلق التّطبيقات الأخرى\n"
+"المستعملة لقاعدة بيانات الحزم (هل لديك مدير وسائط آخر على سطح\n"
+" مكتب آخر مثلاً، أو هل تثبّت حزمًا حاليًا كذلك؟)."
 
 #: ../mdkapplet-upgrade-helper:210
 #, c-format
@@ -459,7 +469,7 @@ msgstr "فشل عند إضافة الوسيط"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "ترقية التوزيعة"
 
 #: ../mdkupdate:59
 #, c-format
@@ -471,9 +481,9 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-" ماندريبا أبدايت)النسخةة %s\n"
-"جميع الحقوق محفوظة %s ماندريبا سوفت.\n"
-"هذا البرنامج حرّ و يمكن إعادة توزيعه تحت بنود ترخيص GNU GPL.\n"
+"إصدار مُحدِّث ماندريفا %s\n"
+"حقوق النشر (C) %s ماندريفا.\n"
+"هذا البرنامج حرّ و يمكن إعادة توزيعه تحت بنود الرخصة المُشاعة العامة GNU GPL.\n"
 "\n"
 "الاستعمال:\n"
 
@@ -485,444 +495,24 @@ msgstr "  --help\t\t- إظهار رسالة المساعدة هذه.\n"
 #: ../mdkupdate:65
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --auto\t\t- تشغيل ماندريبا  أبدايت تلقائيّاً.\n"
+msgstr "  --auto\t\t- تشغيل برنامج تحديث ماندريفا تلقائيّاً.\n"
 
 #: ../mdkupdate:66
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf\t\t\t- تشغيل مسطورات mnf معينة.\n"
 
 #: ../mdkupdate:67
-#, fuzzy, c-format
+#, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --auto         - تشغيل ماندريبا أبدايت تلقائيّاً.\n"
+msgstr "  --noX\t\t\t- الوضع النصي من برنامج تحديث ماندريفا.\n"
 
 #: ../mdkupdate:68
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- سجل ما يحدث\n"
 
 #: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr "لم يمكن تحديث الحزم من وسيط التحديث.\n"
-
-#~ msgid "Yes"
-#~ msgstr "نعم"
-
-#~ msgid "No"
-#~ msgstr "لا"
-
-#~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
-#~ msgstr "يبدو أنّ ماندريبا أُنلاين مثبّت من جديد،ياجريإعادة تحميل البريمج..."
-
-#~ msgid "Checking... Updates are available\n"
-#~ msgstr "يجري الفحص... التّحديثات متوفّرة\n"
-
-#, fuzzy
-#~ msgid "Failed to open urpmi database"
-#~ msgstr "تعذر فتح rpmdb"
-
-#~ msgid "Connecting to"
-#~ msgstr "الإتّصال بـ"
-
-#~ msgid "Mandriva Linux Updates Applet"
-#~ msgstr "بريمج تحديثات ماندريبا لينكس"
-
-#, fuzzy
-#~ msgid "Security error"
-#~ msgstr "تنبيهات أمنية:"
-
-#, fuzzy
-#~ msgid "Database error"
-#~ msgstr "خطأ في قاعدة البيانات"
-
-#, fuzzy
-#~ msgid "Registration error"
-#~ msgstr "نوع التسجيل"
-
-#, fuzzy
-#~ msgid "Some parameters are missing"
-#~ msgstr "اسم الطابعة البعيدة مفقود!"
-
-#, fuzzy
-#~ msgid "Password error"
-#~ msgstr "كلمة مرور %s"
-
-#, fuzzy
-#~ msgid "Login error"
-#~ msgstr "خطأ مجهول"
-
-#, fuzzy
-#~ msgid ""
-#~ "The email you provided is already in use\n"
-#~ "Please enter another one\n"
-#~ msgstr "الدّليل الوجهة مستعمل مسبقاً، اختر آخر من فضلك."
-
-#, fuzzy
-#~ msgid ""
-#~ "Email address box is empty\n"
-#~ "Please provide one"
-#~ msgstr "حقل الاسم فارغ فضلاً قم بتحديد اسم"
-
-#, fuzzy
-#~ msgid "Restriction Error"
-#~ msgstr "وصف:"
-
-#, fuzzy
-#~ msgid "Database access forbidden"
-#~ msgstr "خادم قواعد بيانات"
-
-#, fuzzy
-#~ msgid "Service error"
-#~ msgstr "خطأ في الكتابة\n"
-
-#, fuzzy
-#~ msgid "Password mismatch"
-#~ msgstr "كلمات المرور غير متطابقة."
-
-#, fuzzy
-#~ msgid "User Forbidden"
-#~ msgstr "تسجيل دخول المستخد:"
-
-#, fuzzy
-#~ msgid "Connection error"
-#~ msgstr "اسم الإتصال"
-
-#~ msgid "Please wait"
-#~ msgstr "من فضلك انتظر"
-
-#~ msgid "Preparing..."
-#~ msgstr "جاري التحضير..."
-
-#~ msgid "Installing packages ...\n"
-#~ msgstr "جاري تركيب الحزم...\n"
-
-#, fuzzy
-#~ msgid "New bundles are available for your system"
-#~ msgstr "هناك تحديثات متوفّرة لنظامك"
-
-#~ msgid "Service is not configured. Please click on \"Configure the service\""
-#~ msgstr "الخدمة غير مهيّئة. رجاء اضغط على \"تهيئة الخدمة\""
-
-#~ msgid "Configure the service"
-#~ msgstr "تهيئة الخدمة"
-
-#~ msgid "Check updates"
-#~ msgstr "إفحص التّحديثات"
-
-#~ msgid "Configure Now!"
-#~ msgstr "أعدّ الآن !"
-
-#~ msgid "Actions"
-#~ msgstr "الأفعال"
-
-#~ msgid "Configure"
-#~ msgstr "أعدّ"
-
-#~ msgid "See logs"
-#~ msgstr "شاهد السّجلّات"
-
-#~ msgid "Status"
-#~ msgstr "الحالة"
-
-#~ msgid "Network Connection: "
-#~ msgstr "وصلة الشّبكة: "
-
-#~ msgid "Up"
-#~ msgstr "أعلى"
-
-#~ msgid "Down"
-#~ msgstr "أسفل"
-
-#~ msgid "Last check: "
-#~ msgstr "آخر فحص: "
-
-#~ msgid "Machine name:"
-#~ msgstr "إسم الماكنة:"
-
-#~ msgid "Updates: "
-#~ msgstr "تحديثات: "
-
-#~ msgid "Development release not supported by service"
-#~ msgstr "إصدارة تطويريّة غير مدعومة من قبل الخدمة"
-
-#~ msgid "Too old release not supported by service"
-#~ msgstr "إصدارة قديمة جداً غير مدعومة من قبل الخدمة"
-
-#~ msgid "Unknown state"
-#~ msgstr "حالة مجهولة"
-
-#~ msgid "Online services disabled. Contact Mandriva Online site\n"
-#~ msgstr "الخدمات على الخطّ معطّلة. اتّصل بموقع ماندريبا أُنلاين\n"
-
-#~ msgid "Wrong Password.\n"
-#~ msgstr "كلمة مرور خاطئة.\n"
-
-#~ msgid "Wrong Action or host or login.\n"
-#~ msgstr "فعل أو مضيف أو إسم دخول خاطئ.\n"
-
-#~ msgid ""
-#~ "Something is wrong with your network settings (check your route, firewall "
-#~ "or proxy settings)\n"
-#~ msgstr ""
-#~ "هناك شيء خاطئ في إعدادات شبكتك (إفحص الطّريق، الجدار النّاري أو إعدادات "
-#~ "البروكسي الخاصّة بك)\n"
-
-#~ msgid ""
-#~ "Problem occured while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr "حدثت مشكلة أثناء الاتصال باخادم، الرجاء الاتصال بفريق الدعم"
-
-#~ msgid "Response from Mandriva Online server\n"
-#~ msgstr "الردّ من خادم ماندريبا أُنلاين\n"
-
-#~ msgid "No check"
-#~ msgstr "دون فحص"
-
-#~ msgid "Checking config file: Not present\n"
-#~ msgstr "يجري فحص ملفّ الإعداد: غير موجود\n"
-
-#~ msgid "Logs"
-#~ msgstr "السّجلّات"
-
-#~ msgid "Clear"
-#~ msgstr "إمحي"
-
-#, fuzzy
-#~ msgid ""
-#~ "mdonline version %s\n"
-#~ "Copyright (C) %s Mandriva.\n"
-#~ "This is free software and may be redistributed under the terms of the GNU "
-#~ "GPL.\n"
-#~ "\n"
-#~ "usage:\n"
-#~ msgstr ""
-#~ " ماندريبا أبدايت)النسخةة %s\n"
-#~ "جميع الحقوق محفوظة %s ماندريبا سوفت.\n"
-#~ "هذا البرنامج حرّ و يمكن إعادة توزيعه تحت بنود ترخيص GNU GPL.\n"
-#~ "\n"
-#~ "الاستعمال:\n"
-
-#~ msgid "I already have an account"
-#~ msgstr "لدي حساب مسبقاً"
-
-#~ msgid "I want to subscribe"
-#~ msgstr "أريد الاشتراك"
-
-#, fuzzy
-#~ msgid "Mrs."
-#~ msgstr "XMrIs"
-
-#~ msgid ""
-#~ "This assistant will help you to upload your configuration\n"
-#~ "(packages, hardware configuration) to a centralized database in\n"
-#~ "order to keep you informed about security updates and useful upgrades.\n"
-#~ msgstr ""
-#~ "سيُعينك هذا المساعد على تحميل تهيئتك\n"
-#~ "(الحزم، تهيئة العتاد) إلى قاعدة بيانات مركزية كي\n"
-#~ "يتسنى لك أن تعلم بالتحديثات الأمنية و الترقيات المفيدة.\n"
-
-#~ msgid "Account creation or authentication"
-#~ msgstr "إنشاء أو توثيق الحساب"
-
-#~ msgid "Enter your Mandriva Online login, password and machine name:"
-#~ msgstr "أدخل اسم الدخول الخاص بماندريبا أُنلاين، وكلمة المرور واسم الماكينة:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "عنوان البريد الخارج"
-
-#~ msgid "Country"
-#~ msgstr "الدولة"
-
-#~ msgid "Password:"
-#~ msgstr "كلمة المرور:"
-
-#, fuzzy
-#~ msgid "Machine description:"
-#~ msgstr "إسم الماكنة:"
-
-#, fuzzy
-#~ msgid "Machine name must be 1 to 40 alphanumerical characters"
-#~ msgstr "أماكن التركيب يجب أن تحتوي فقط على الحروف و/أو الآرقام"
-
-#~ msgid "Connecting to Mandriva Online website..."
-#~ msgstr "جاري الاتصال بموقع ماندريبا أُنلاين..."
-
-#~ msgid ""
-#~ "In order to benefit from Mandriva Online services,\n"
-#~ "we are about to upload your configuration.\n"
-#~ "\n"
-#~ "The Wizard will now send the following information to Mandriva:\n"
-#~ "\n"
-#~ "1) the list of packages you have installed on your system,\n"
-#~ "\n"
-#~ "2) your hardware configuration.\n"
-#~ "\n"
-#~ "If you feel uncomfortable by that idea, or do not want to benefit from "
-#~ "this service,\n"
-#~ "please press 'Cancel'. By pressing 'Next', you allow us to keep you "
-#~ "informed\n"
-#~ "about security updates and useful upgrades via personalized email "
-#~ "alerts.\n"
-#~ "Furthermore, you benefit from discounted paid support services on\n"
-#~ "www.mandrivaexpert.com."
-#~ msgstr ""
-#~ "للاستفادة من خدمات ماندريبا على الخطّ،\n"
-#~ "نحن على وشك تحميل تهيئتك.\n"
-#~ "\n"
-#~ "سيرسل هذا المعالج المعلومات التّالية إلى ماندريبا سوفت:\n"
-#~ "\n"
-#~ "1) قائمة الحزم التي قمت بتثبيتها على نظامك،\n"
-#~ "\n"
-#~ "2) تهيئة عتادك.\n"
-#~ "\n"
-#~ "إن لم تكن مرتاحا لهذه الفكرة، أو إن كنت لا تريد الاستفادة من هذه الخدمة،\n"
-#~ "اضغط على 'إلغاء'. بالضّغط على 'التّالي'، تسمح لنا بإبقائك على اطلاع\n"
-#~ "بالتّحديثات الأمنية و التّرقيات المفيدة عن طريق تنبيهات بريدية مخصّصة.\n"
-#~ "كذلك، تستفيد من خدمات دعم بسعر أقلّ على\n"
-#~ "www.mandrivaexpert.com."
-
-#~ msgid "Connection problem"
-#~ msgstr "مشكلة في الإتصال"
-
-#~ msgid "Problem occurs when uploading files, please try again"
-#~ msgstr "يحدث مشكل عند تحميل الملفّات، حاول مجدّدا من فضلك"
-
-#~ msgid "Create a Mandriva Online Account"
-#~ msgstr "إنشاء حساب في ماندريبا أُنلاين"
-
-#, fuzzy
-#~ msgid "Greeting:"
-#~ msgstr "أخضر"
-
-#~ msgid "First name:"
-#~ msgstr "الإسم:"
-
-#, fuzzy
-#~ msgid "Last name:"
-#~ msgstr "الإسم:"
-
-#~ msgid "Confirm Password:"
-#~ msgstr "أكّد كلمة المرور:"
-
-#~ msgid ""
-#~ "The passwords do not match\n"
-#~ " Please try again\n"
-#~ msgstr ""
-#~ "كلمات المرور غير متطابقة\n"
-#~ "كرّر المحاولة من فضلك\n"
-
-#, fuzzy
-#~ msgid "Please fill in each field"
-#~ msgstr "الرجاء تعبئة كل الحقول\n"
-
-#~ msgid "Not a valid mail address!\n"
-#~ msgstr "عنوان بريدي غير صالح !\n"
-
-#~ msgid ""
-#~ "Mandriva Online Account successfully created.\n"
-#~ "Please click \"Next\" to authenticate and upload your configuration\n"
-#~ msgstr ""
-#~ "تم إنشاء حساب ماندريبا أُنلاين بنجاح.\n"
-#~ "الرجاء الضغط على \"التالي\" للتوثيق وتحميل تهيئتك.\n"
-
-#~ msgid "Your upload was successful!"
-#~ msgstr "تم التحميل بنجاحك!"
-
-#~ msgid ""
-#~ "From now you will receive on security and updates \n"
-#~ "announcements thanks to Mandriva Online."
-#~ msgstr ""
-#~ "من الآن ستستلم اشعارات بالترقيات\n"
-#~ "و التحديثات الأمنية بفضل ماندريبا أنلاين."
-
-#~ msgid ""
-#~ "Mandriva Online offers you the ability to automate the updates.\n"
-#~ "A program will run regulary in your system waiting for new updates\n"
-#~ msgstr ""
-#~ "يُوفّر ماندريبا أنلاين القدرة على التحديث بشكل آلي.\n"
-#~ "\n"
-#~ "سيعمل برنامج بانتظام على نظامك منتظرا تحديثات جديدة\n"
-
-#~ msgid "Your Mandriva Online account has been successfully configured\n"
-#~ msgstr "تمت تهيئة حساب ماندريبا أُنلاين الخاص بك بنجاح\n"
-
-#~ msgid "Configuration uploaded successfully"
-#~ msgstr "تم تحميل التهيئة بنجاح"
-
-#~ msgid "Problem uploading configuration"
-#~ msgstr "حدث خطأ أثناء تحميل التهيئة"
-
-#~ msgid ""
-#~ "Cannot connect to Mandriva Online website: wrong login/password or router/"
-#~ "firewall bad settings"
-#~ msgstr ""
-#~ "لا يمكن الاتصال بموقع ماندريبا أُنلاين: اسم دخول أو كلمة مرور خاطئة أو "
-#~ "إعدادات مُوجّه أو جداري ناري سيئة"
-
-#~ msgid "  --applet\t\t- launch Mandriva Update.\n"
-#~ msgstr "  --applet\t\t- تشغيل ماندريبا  أبدايت.\n"
-
-#~ msgid "System is busy. Please wait ..."
-#~ msgstr "النّظام مشغول. رجاء الانتظار..."
-
-#~ msgid "Sending configuration..."
-#~ msgstr "يجري بعث الإعداد..."
-
-#~ msgid "No %s file found. Run mdkonline wizard first"
-#~ msgstr "لم يُعثر على أي ملف %s. الرجاء تشغيل مُرشد mdkonline أولاً"
-
-#~ msgid "Mandriva Update could not contact the site, we will try again."
-#~ msgstr "لم يتمكن Mandriva Update من الاتصال بالموقع، سنحاول مرة أخرى."
-
-#~ msgid "Login:"
-#~ msgstr "إسم الدّخول:"
-
-#~ msgid "or"
-#~ msgstr "أو"
-
-#~ msgid "wrong password:"
-#~ msgstr "كلمة مرور خاطئة:"
-
-#~ msgid ""
-#~ "Your login or password was wrong.\n"
-#~ " Either you'll have to type it again, or you'll need to create an account "
-#~ "on Mandriva Online.\n"
-#~ " In the latter case, go back to the first step to connect to Mandriva "
-#~ "Online.\n"
-#~ " Be aware that you must also provide a Machine name \n"
-#~ " (only alphabetical characters are admitted)"
-#~ msgstr ""
-#~ "إن اسم دخولك أو كلمة المرور خاطئة.\n"
-#~ " إما أن تدخلهما من جديد، أو أن تنشأ رصيدا عند ماندريبا أنلاين.\n"
-#~ " في الحالة الثانية أعد الإتصال بماندريبا أنلاين.\n"
-#~ " عليك أن تكتب إسم الماكينة أيضا \n"
-#~ " (تقبل فقط الحروف الأبجدية)"
-
-#~ msgid "Mail contact:"
-#~ msgstr "بريد الاتّصال:"
-
-#~ msgid "Please provide a login"
-#~ msgstr "أعط اسم الدّخول من فضلك"
-
-#~ msgid "Login and password should be less than 12 characters\n"
-#~ msgstr "اسم الدخول وكلمة المرور يجب أن تكون أقل من 12 حرفاً\n"
-
-#~ msgid "Special characters are not allowed\n"
-#~ msgstr "الأحرف الخاصة غير مسموح بها\n"
-
-#~ msgid "Email not valid\n"
-#~ msgstr "البريد الالكتروني غير صالح\n"
-
-#~ msgid "Account already exists\n"
-#~ msgstr "الحساب موجود مسبقاً\n"
-
-#~ msgid "Problem connecting to server \n"
-#~ msgstr "مشكلة في الإتصال بالخادم \n"
-
-#~ msgid ""
-#~ "Problem occurred while connecting to the server, please contact the "
-#~ "support team"
-#~ msgstr "حدثت مشكلة أثناء الاتصال باخادم، الرجاء الاتصال بفريق الدعم"
+msgstr "لا يمكن تحديث الحزم من وسيط التحديث.\n"
