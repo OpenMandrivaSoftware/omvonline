@@ -110,7 +110,8 @@ my %state = (
 		      colour => [ 'disconnect' ],
 		      changes => [ 'okay', 'busy', 'critical', 'error' ],
 		      menu => [ 'confNetwork' ],
-		      tt => [ N_("Network is down. Please configure your network") ]
+		      tt => [ N_("Network is down. Please configure your network") ],
+ 		      do_not_use_bubble => mdkonline::is_running('net_applet'),
 		     },
 	     disabled => {
 		      colour => [ 'disabled' ],
