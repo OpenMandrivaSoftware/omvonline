@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 18:50+0100\n"
-"PO-Revision-Date: 2009-03-28 21:03+0200\n"
-"Last-Translator: Anssi Hannula <anssi@mandriva.org>\n"
+"PO-Revision-Date: 2009-04-17 22:08+0300\n"
+"Last-Translator: Jani Välimaa <jani.valimaa@gmail.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "Tarkistetaan päivitykset kello %s"
 #: ../mdkapplet:74
 #, c-format
 msgid "Your system is up-to-date"
-msgstr "Järjestelmäsi on ajan tasalla"
+msgstr "Järjestelmä on ajantasalla"
 
 #: ../mdkapplet:80
 #, c-format
@@ -41,37 +41,38 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
-"Palvelun asetusongelma. Tarkista lokista ja lähetä viesti osoitteeseen: "
+"Palvelun asetusongelma. Tarkista lokit ja lähetä sähköpostia osoitteeseen: "
 "support@mandrivaonline.com"
 
 #: ../mdkapplet:87
 #, c-format
 msgid "Please wait, finding available packages..."
-msgstr "Odota, etsitään saatavilla olevia paketteja"
+msgstr "Odota, etsitään saatavilla olevia paketteja..."
 
 #: ../mdkapplet:93
 #, c-format
 msgid "New updates are available for your system"
-msgstr "Päivityksiä järjestelmällesi on saatavilla"
+msgstr "Järjestelmälle on saatavilla päivityksiä"
 
-#: ../mdkapplet:100, c-format
+#: ../mdkapplet:100
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Uusi versio Mandriva Linux -jakelusta on saatavilla"
+msgstr "Mandriva Linux -jakelusta on saatavilla uusi versio"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Käytettävälle jakelulle on saatavilla lisäpakettilähde."
 
 #: ../mdkapplet:113
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Verkko on alhaalla. Ole hyvä ja aseta verkkosi"
+msgstr "Verkko on alhaalla. Aseta verkko."
 
 #: ../mdkapplet:119
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr "Palvelua ei ole otettu käyttöön. Paina \"Online Webbisivusto\""
+msgstr "Palvelua ei ole otettu käyttöön. Paina \"Online-sivusto\""
 
 #: ../mdkapplet:125 ../mdkapplet:132
 #, c-format
@@ -81,15 +82,15 @@ msgstr "urpmi-tietokanta lukittu"
 #: ../mdkapplet:138
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Jakelu ei tuettu (liian vanha jakelu, tai kehitysjakelu)"
+msgstr "Jakelu ei ole tuettu (liian vanha tai kehitysversio)"
 
 #: ../mdkapplet:144
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
-"Lähteitä ei löydetty. Sinun pitää lisätä joitakin käyttäen "
-"'Ojelmistolähteiden hallinta'."
+"Lähteitä ei löytynyt. Lisää lähteitä rpmdraken Ohjelmistolähteiden "
+"hallinnalla."
 
 #: ../mdkapplet:150
 #, c-format
@@ -101,12 +102,12 @@ msgid ""
 "\n"
 "Then, restart \"%s\"."
 msgstr ""
-"Olet jo määrittänyt ainakin yhden päivityslähteen, mutta\n"
-"kaikki ovat tällä hetkellä pois käytöstä. Sinun pitäisi ottaa\n"
-"käyttöön ainakin yksi lähteistä Ohjelmistolähteiden hallinnassa\n"
-"(valitse sen \"%s\" sarakkeessa)\n"
+"Ainakin yksi päivityslähde on määritelty, mutta päivitys-\n"
+"lähteitä ei ole tällä hetkellä käytössä. Ainakin yksi\n"
+"päivityslähde tulisi ottaa käyttöön Ohjelmistolähteiden\n"
+"hallinnalla (valitse lähteen %s-valinta).\n"
 "\n"
-"Käynnistä tämän jälkeen \"%s\" uudelleen."
+"Tämän jälkeen käynnistä %s uudelleen."
 
 #: ../mdkapplet:155
 #, c-format
@@ -116,7 +117,7 @@ msgstr "Käytössä"
 #: ../mdkapplet:168
 #, c-format
 msgid "Error updating media"
-msgstr "Virhe lähteiden päivityksessä."
+msgstr "Virhe päivitettäessä lähteitä."
 
 #: ../mdkapplet:203 ../mdkapplet:634
 #, c-format
@@ -126,7 +127,7 @@ msgstr "Asenna päivitykset"
 #: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Lisää lisäpakettilähde"
 
 #: ../mdkapplet:205
 #, c-format
@@ -153,18 +154,20 @@ msgstr "Käynnistetään drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux -jakelun uusi versio"
 
-#: ../mdkapplet:381, c-format
+#: ../mdkapplet:381
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Uusi versio Mandriva Linux -jakelusta on saatavilla"
+msgstr "Mandriva Linux -jakelusta on saatavilla uusi versio."
 
 #: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
 msgstr "Lisätietoja uudesta versiosta"
 
-#: ../mdkapplet:385, c-format
+#: ../mdkapplet:385
+#, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr "Haluatko päivittää '%s' -jakeluun?"
+msgstr "Päivitetäänkö jakeluun %s?"
 
 #: ../mdkapplet:387 ../mdkapplet:741
 #, c-format
@@ -190,8 +193,8 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
-"Päivitys vaatii nopean verkkoyhteyden (kaapeli, xDSL, ...)  "
-"ja voi kestää muutamia tunteja."
+"Päivitys vaatii nopean verkkoyhteyden (kaapeli, xDSL, ...)  ja voi kestää "
+"muutamia tunteja."
 
 #: ../mdkapplet:417
 #, c-format
@@ -201,8 +204,7 @@ msgstr "Arvioitu ladattavan datan määrä: %s"
 #: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
-"Sinun tulisi sulkea kaikki muut käynnissä olevat ohjelmat ennen jatkamista."
+msgstr "Kaikki muut käynnissä olevat ohjelmat tulisi sulkea ennen jatkamista."
 
 #: ../mdkapplet:421
 #, c-format
@@ -210,8 +212,8 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
-"Sinun tulisi kytkeä kannettava verkkovirtaan ja käyttää ethernet-yhteyttä "
-"langattoman yhteyden sijaan, jos mahdollista."
+"Kannettava tulisi kytkeä verkkovirtaan ja käyttää WLAN-verkon sijaan "
+"lankaverkkoa, jos mahdollista."
 
 #: ../mdkapplet:447
 #, c-format
@@ -221,17 +223,17 @@ msgstr "Käynnistetään MandrivaUpdate\n"
 #: ../mdkapplet:468
 #, c-format
 msgid "Computing new updates...\n"
-msgstr "Lasketaan  uudet päivitykset...\n"
+msgstr "Etsitään uudet päivitykset...\n"
 
 #: ../mdkapplet:555
 #, c-format
 msgid "System is up-to-date\n"
-msgstr "Järjestelmä on ajan tasalla\n"
+msgstr "Järjestelmä on ajantasalla\n"
 
 #: ../mdkapplet:583
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr "Tarkistetaan verkko: Näyttää olevan poistettu käytöstä\n"
+msgstr "Tarkistetaan verkkoa: nähtävästi pois käytöstä\n"
 
 #: ../mdkapplet:625
 #, c-format
@@ -246,7 +248,7 @@ msgstr "Lisätietoja"
 #: ../mdkapplet:638
 #, c-format
 msgid "Add media"
-msgstr "Lisää media"
+msgstr "Lisää lähde"
 
 #: ../mdkapplet:653
 #, c-format
@@ -266,7 +268,7 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../mdkapplet:661
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online avaa pääsyn Mandrivan webbipalveluihin."
+msgstr "Mandriva Online avaa pääsyn Mandrivan Internet-palveluihin."
 
 #: ../mdkapplet:663
 #, c-format
@@ -283,14 +285,14 @@ msgstr ""
 "Anssi Hannula <anssi@mandriva.org>\n"
 
 #: ../mdkapplet:677 ../mdkapplet-config:58
-#, fuzzy, c-format
+#, c-format
 msgid "Updates Configuration"
 msgstr "Päivitysasetukset"
 
 #: ../mdkapplet:679
 #, c-format
 msgid "Always launch on startup"
-msgstr "Käynnistä aina käynnistyksen yhteydessä"
+msgstr "Käynnistä aina tietokoneen käynnistämisen yhteydessä"
 
 #: ../mdkapplet:681
 #, c-format
@@ -300,7 +302,7 @@ msgstr "Poistu"
 #: ../mdkapplet:731 ../mdkapplet:736
 #, c-format
 msgid "New medium available"
-msgstr "Uusi media saatavilla"
+msgstr "Uusi lähde saatavilla"
 
 #: ../mdkapplet:738
 #, c-format
@@ -308,61 +310,64 @@ msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
-"Käytät '%s' -jakelua ja siksi sinulla on oikeus päästä käsiksi "
-"lisäohjelmiin."
+"Käytät jakelua %s ja siksi sinulla on oikeus päästä käsiksi lisäohjelmiin."
 
 #: ../mdkapplet:739
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:740, c-format
+#: ../mdkapplet:740
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Haluatko asentaa tämän lisäohjelmalähteen?"
+msgstr "Asennetaanko lisäohjelmalähde?"
 
 #: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
 #: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
 #: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr "Lisätään lisäpakettimediaa"
+msgstr "Lisätään lisäpakettilähdettä"
 
-#: ../mdkapplet-config:59, c-format
+#: ../mdkapplet-config:59
+#, c-format
 msgid "Here you can configure the updates applet"
 msgstr "Päivityssovelman asetukset"
 
 #: ../mdkapplet-config:61
 #, c-format
 msgid "Update frequency (hours)"
-msgstr ""
+msgstr "Päivitysväli (tuntia)"
 
 #: ../mdkapplet-config:63
 #, c-format
 msgid "First check delay (minutes)"
-msgstr ""
+msgstr "Ensimmäinen tarkistuksen viive (minuuttia)"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr "Anna käyttäjätilisi lisäpakettimedian lisäämiseksi"
+msgstr "Anna käyttäjätilin tunnus lisäpakettilähteen lisäämiseksi"
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr "Lisätietoja käyttäjätilistäsi"
+msgstr "Lisätietoja käyttäjätilistä"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr "Sähköpostiosoitteesi"
+msgstr "Sähköpostiosoite"
 
-#: ../mdkapplet-restricted-helper:78, c-format
+#: ../mdkapplet-restricted-helper:78
+#, c-format
 msgid "Your password"
-msgstr "Salasanasi"
+msgstr "Salasana"
 
-#: ../mdkapplet-restricted-helper:82, c-format
+#: ../mdkapplet-restricted-helper:82
+#, c-format
 msgid "Forgotten password"
-msgstr "Unohdin salasanani"
+msgstr "Unohdin salasanan"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -385,32 +390,36 @@ msgstr "Ilmeni virhe"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr "Lisättiin media %s onnistuneesti."
+msgstr "Lisättiin lähde %s onnistuneesti."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Ok"
 msgstr "OK"
 
-#: ../mdkapplet-restricted-helper:151, c-format
+#: ../mdkapplet-restricted-helper:151
+#, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Mandriva-käyttäjätililläsi ei ole PowerPackin lataustilausta."
+msgstr "Mandriva-käyttäjätilillä ei ole PowerPackin lataustilausta."
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
 msgid "Close"
 msgstr "Sulje"
 
-#: ../mdkapplet-restricted-helper:163, c-format
+#: ../mdkapplet-restricted-helper:163
+#, c-format
 msgid "An error occurred while adding medium"
-msgstr "Virhe lisättäessä mediaa"
+msgstr "Virhe lisättäessä lähdettä"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
+"Levyllä %s ei ole tarpeeksi vapaata tilaa päivitykselle.\n"
+"Vapaana on %d Mt ja päivitys vaatii %d Mt."
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -418,9 +427,10 @@ msgstr ""
 msgid "Installation failed"
 msgstr "Asennus epäonnistui"
 
-#: ../mdkapplet-upgrade-helper:125, c-format
+#: ../mdkapplet-upgrade-helper:125
+#, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr "Asennuslokit löytyvät kohteesta '%s'"
+msgstr "Asennuslokit löytyvät hakemistosta %s"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -440,7 +450,7 @@ msgstr "Päivitys Mandriva %s -julkaisuun onnistui."
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr "Sinun täytyy käynnistää järjestelmä uudelleen."
+msgstr "Järjestelmä tulee käynnistää uudelleen."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -455,10 +465,10 @@ msgid ""
 "manager on another desktop, or are you currently installing\n"
 "packages as well?)."
 msgstr ""
-"Pakettitietokanta on lukittu. Sulje muut sovellukset\n"
-"jotka käyttävät pakettitietokantaa (onko sinulla toinen\n"
-"lähteidenhallintaohjelma toisella työpöydällä tai oletko\n"
-"juuri asentamassa paketteja?)."
+"Pakettitietokanta on lukittu. Muut pakettitietokantaa\n"
+"käyttävät sovellukset on suljettava (onko taustalla toinen\n"
+"Ohjelmistolähteiden hallinta toisella työpöydällä tai\n"
+"asennetaanko paketteja juuri nyt?)."
 
 #: ../mdkapplet-upgrade-helper:210
 #, c-format
@@ -468,7 +478,7 @@ msgstr "Virhe lisättäessä lähdettä"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Jakelun päivitys"
 
 #: ../mdkupdate:59
 #, c-format
@@ -480,7 +490,7 @@ msgid ""
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate version %s\n"
+"mdkupdate versio %s\n"
 "Copyright (C) %s Mandriva.\n"
 "Tämä on vapaata ohjelmistoa ja saadaan levittää uudelleen GNU GPL lisenssin "
 "alaisuudessa.\n"
@@ -490,7 +500,7 @@ msgstr ""
 #: ../mdkupdate:64
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
-msgstr "  --help\t\t- tulosta tämä apuviesti.\n"
+msgstr "  --help\t\t- tulosta tämä viesti.\n"
 
 #: ../mdkupdate:65
 #, c-format
