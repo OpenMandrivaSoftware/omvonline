@@ -280,6 +280,7 @@ sub get_distro_list() {
         # for curl exit code, which broke downloads:
         local $SIG{CHLD} = 'DEFAULT';
 
+        # old API:
         if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
             require mdkapplet_urpm;
             mdkapplet_urpm::ensure_valid_cachedir($urpm);
