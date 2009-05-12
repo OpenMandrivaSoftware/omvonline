@@ -724,7 +724,7 @@ sub is_restricted_media_configured {
 }
 
 sub really_prepare_add_restricted() {
-    $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-restricted-helper');
+    $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-restricted-helper', $product_id->{version});
 }
 
 sub prepare_add_restricted() {

@@ -42,11 +42,15 @@ use LWP::UserAgent;
 use HTTP::Request::Common;
 use HTTP::Request;
 
+my $version;
 foreach my $opt (@ARGV) {
     if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
         $::rpmdrake_options{$1}[0] = $2;
+    } else {
+        $version = $opt;
     }
 }
+$version or die "usage: mdkapplet-restricted-helper <distrib_version>\n";
 
 get_restricted_authentication();
 
@@ -167,7 +171,7 @@ sub adding_media_failed {
 sub actually_add_restricted_medium {
     my ($ref, $password, $arch) = @_;
     my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
-    my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/2009.0/";
+    my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/$version/";
     run_program::raw(@options, "Restricted $arch " . int(rand(100000)), "$uri$arch") or return 0;
     run_program::raw(@options, '--update', "Restricted Updates $arch " . int(rand(100000)), "${uri}updates/$arch");
 }
