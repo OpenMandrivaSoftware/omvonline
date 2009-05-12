@@ -97,7 +97,7 @@ sub get_restricted_authentication() {
             goto &get_restricted_authentication;
         }
     } else {
-        0;
+        ugtk2::exit(0);
     }
 }
 
