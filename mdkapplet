@@ -345,6 +345,8 @@ sub harvester {
         my $status = $? >> 8;
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
+            # make sure to not report new distro after distro upgrade:
+            undef $new_distro;
             $schedule_checks = 1;
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -464,8 +466,8 @@ sub checker_exit {
 sub silentCheck() {
     state $check_time;
     my $new_time = time();
-    undef $new_distro;
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
+        undef $new_distro;
         $check_time = $new_time;
         is_there_a_new_distributions();
     }
