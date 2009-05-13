@@ -1,4 +1,3 @@
-# translation of es.po to Español
 # spanish translation of Madrake Online (Mandriva Online-es.po).
 # Copyright (C) 2001 Mandriva S.A.
 #
@@ -8,19 +7,20 @@
 # Carlos L Pineda <clpinedac@hotmail.com>, 2004.
 # Jaime Crespo <505201@unizar.es>, 2004.
 # Pablo Saratxaga <pablo@mandriva.com>, 2005.
+# Andre Paulo Machado <andre.panm@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: es\n"
+"Project-Id-Version: mdkonline_es\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-25 18:50+0100\n"
-"PO-Revision-Date: 2008-08-25 17:16-0300\n"
-"Last-Translator: Fabián Mandelbaum <fmandelbaum@gmail.com>\n"
+"PO-Revision-Date: 2009-05-13 14:20-0300\n"
+"Last-Translator: Andre Paulo Machado <andre.panm@gmail.com>\n"
 "Language-Team: Español <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:65
@@ -53,14 +53,14 @@ msgid "New updates are available for your system"
 msgstr "Hay nuevas actualizaciones disponibles para su sistema"
 
 #: ../mdkapplet:100
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Se ha publicado una nueva distribución estable"
+msgstr "Fue lanzado una nueva versión de Mandriva Linux"
 
 #: ../mdkapplet:107
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Un soporte adicional de programas está disponible para su distribuición"
 
 #: ../mdkapplet:113
 #, c-format
@@ -84,8 +84,7 @@ msgstr "Versión no soportada (muy antigua o versión de desarrollo)"
 
 #: ../mdkapplet:144
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "No se encontró ningún soporte. Debe añadir uno con el \"Administrador de "
 "soportes de software\"."
@@ -126,7 +125,7 @@ msgstr "Instalar actualizaciones"
 #: ../mdkapplet:204
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Añadir soporte con Programas Adicionales"
 
 #: ../mdkapplet:205
 #, c-format
@@ -151,22 +150,22 @@ msgstr "Lanzando drakconnect\n"
 #: ../mdkapplet:377 ../mdkapplet:398
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Nueva versión de Mandriva Linux"
 
 #: ../mdkapplet:381
-#, fuzzy, c-format
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Se ha publicado una nueva distribución estable"
+msgstr "Una nueva versión de Mandriva Linux está disponible"
 
 #: ../mdkapplet:383
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Más informaciones acerca de esta nueva versión"
 
 #: ../mdkapplet:385
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr "¿Desea actualizar?"
+msgstr "¿Desea actualizar a la distribuición '%s'?"
 
 #: ../mdkapplet:387 ../mdkapplet:741
 #, c-format
@@ -191,24 +190,24 @@ msgstr "Cancelar"
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
-msgstr ""
+msgstr "Esta actualización necesita una conexión de banda ancha alta (cable, xDSL, ...) y puede esperar muchas horas para completar."
 
 #: ../mdkapplet:417
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "La descarga estimada será de %s"
 
 #: ../mdkapplet:418
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Debe terminar todas las demás aplicaciones en ejecución antes de proseguir."
 
 #: ../mdkapplet:421
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
-msgstr ""
+msgstr "Recomendamos que conecte el cabo de energia en su portátil y si es posible seleccione una red con cable, envés de inalámbrica."
 
 #: ../mdkapplet:447
 #, c-format
@@ -238,12 +237,12 @@ msgstr "Advertencia"
 #: ../mdkapplet:628 ../mdkapplet:636 ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Más Informaciones"
 
 #: ../mdkapplet:638
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Añadir soportes"
 
 #: ../mdkapplet:653
 #, c-format
@@ -277,9 +276,9 @@ msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Fabián Mandelbaum <fmandelbaum@gmail.com>\n"
 
 #: ../mdkapplet:677 ../mdkapplet-config:58
-#, fuzzy, c-format
+#, c-format
 msgid "Updates Configuration"
-msgstr "Leyendo la configuración\n"
+msgstr "Configuración de Actualizaciones"
 
 #: ../mdkapplet:679
 #, c-format
@@ -294,71 +293,71 @@ msgstr "Salir"
 #: ../mdkapplet:731 ../mdkapplet:736
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Nuevo soporte disponible"
 
 #: ../mdkapplet:738
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
+msgstr "Usted utiliza la distribuición '%s', entonces tiene acceso priviligiado para programas adicionales."
 
 #: ../mdkapplet:739
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva PowerPack"
-msgstr "Mandriva Online"
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:740
-#, fuzzy, c-format
+#, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "¿Desea actualizar?"
+msgstr "¿Desea añadir este soporte para acceder programas adicionales?"
 
 #: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
 #: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
 #: ../mdkapplet-restricted-helper:150
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Añadiendo un soporte de programas adicionales"
 
 #: ../mdkapplet-config:59
 #, c-format
 msgid "Here you can configure the updates applet"
-msgstr ""
+msgstr "Aquí se puede configurar el notificador de actualizaciones"
 
 #: ../mdkapplet-config:61
 #, c-format
 msgid "Update frequency (hours)"
-msgstr ""
+msgstr "Frecuencia de verificaciónes (hora)"
 
 #: ../mdkapplet-config:63
 #, c-format
 msgid "First check delay (minutes)"
-msgstr ""
+msgstr "Primera Verificación (minutos)"
 
 #: ../mdkapplet-restricted-helper:70
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Por favor provee la ID de su cuenta para añadir este soporte nuevo."
 
 #: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Más informaciones en su cuenta de usuario"
 
 #: ../mdkapplet-restricted-helper:77
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Su correo"
 
 #: ../mdkapplet-restricted-helper:78
-#, fuzzy, c-format
+#, c-format
 msgid "Your password"
-msgstr "Contraseña incorrecta"
+msgstr "Su contraseña"
 
 #: ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#, c-format
 msgid "Forgotten password"
-msgstr "Contraseña incorrecta"
+msgstr "No recuerdo mi contraseña"
 
 #: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
 #: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
@@ -371,7 +370,7 @@ msgstr "Error"
 #: ../mdkapplet-restricted-helper:92
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Contraseña y correo no pueden ser blancos."
 
 #: ../mdkapplet-restricted-helper:121
 #, c-format
@@ -381,7 +380,7 @@ msgstr "Ocurrió un error"
 #: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "El soporte %s añadido."
 
 #: ../mdkapplet-restricted-helper:138
 #, c-format
@@ -390,9 +389,8 @@ msgstr "Aceptar"
 
 #: ../mdkapplet-restricted-helper:151
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Su cuenta de Mandriva no tiene suscripción para descarga Powerpack "
 
 #: ../mdkapplet-restricted-helper:157
 #, c-format
@@ -400,15 +398,14 @@ msgid "Close"
 msgstr "Cerrar"
 
 #: ../mdkapplet-restricted-helper:163
-#, fuzzy, c-format
+#, c-format
 msgid "An error occurred while adding medium"
 msgstr "Fallo al añadir soporte"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Su sistema está sin espacio suficiente en %s para actualizar (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:209
@@ -419,7 +416,7 @@ msgstr "Falló la instalación"
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "Los registros de instalación son encontrados en '%s' "
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -429,17 +426,17 @@ msgstr "Reintentarlo"
 #: ../mdkapplet-upgrade-helper:138
 #, c-format
 msgid "Congratulations"
-msgstr "Felicidades"
+msgstr "Felicitaciones"
 
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Actualización para Mandriva %s terminada con éxito."
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Usted debe rearrancar su sistema."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -467,7 +464,7 @@ msgstr "Fallo al añadir soporte"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Actualización de la Distribuición"
 
 #: ../mdkupdate:59
 #, c-format
@@ -977,3 +974,4 @@ msgstr "Incapaz de actualizar paquetes desde el soporte update_source.\n"
 #~ msgstr ""
 #~ "No se pudo conectar con el sitio web de mandrivaonline: nombre de usuario/"
 #~ "contraseña incorrectos o configuración errónea del router/firewall"
+
