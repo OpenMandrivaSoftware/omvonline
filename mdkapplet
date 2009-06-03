@@ -148,6 +148,12 @@ my %state = (
 		      menu => [ 'check' ],
                 tt => [ N_("No medium found. You must add some media through 'Software Media Manager'.") ],
           },
+          no_enterprise_update_medium => {
+		      colour => [ 'noconf' ],
+		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
+		      menu => [ 'add_enterprise_update_medium' , 'check' ],
+		      tt => [ N("An additional package medium is available for your distribution.") ]
+          },
           no_enabled_medium => {
 		      colour => [ 'noconf' ],
 		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
@@ -202,11 +208,17 @@ my %comm_codes = (
         status => 'unconfigured_restricted_media',
         log => "Missing restricted media\n",
     },
+    no_enterprise_update_medium => {
+        code => 10,
+        status => 'no_enterprise_update_medium',
+        log => "Missing enterprise update media\n",
+    },
 );
 
 my %actions = (
 	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
 	       'add_restricted_media' => { name => N("Add additional package medium"), launch => \&prepare_add_restricted },
+	       'add_enterprise_update_medium' => { name => N("Add additional package medium"), launch => \&prepare_add_enterprise_update_media },
 	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
 	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
 	       'upgrade_distro' => { name => N("Upgrade the system"), launch => \&upgrade },
@@ -222,6 +234,7 @@ $icon->signal_connect(activate => sub {
                           my %actions = (
                               unconfigured_restricted_media => \&prepare_add_restricted,
                               no_update_medium => \&add_media,
+                              no_enterprise_update_medium => \&prepare_add_enterprise_update_media,
                               no_enabled_medium => \&add_media,
                               updates => \&installUpdates,
                               new_distribution => \&upgrade,
@@ -231,6 +244,7 @@ $icon->signal_connect(activate => sub {
                           if ($action eq 'new_distribution' && $sub_state eq 'updates') {
                               $action = 'updates';
                           }
+
                           $actions{$action}->() if ref $actions{$action};
 			  });
 foreach my $opt (@ARGV) {
@@ -525,7 +539,12 @@ sub silentCheck() {
         urpm::media::configure($urpm, if_(!is_it_a_devel_distro(), update => 1));
         my @update_medias = get_update_medias($urpm);
         if (!@update_medias) {
-            checker_exit('no_update_medium');
+	    get_product_id();
+	    if ($product_id->{type} eq 'Enterprise' && $product_id->{product} eq 'Server') {
+		checker_exit('no_enterprise_update_medium');
+	    } else {
+		checker_exit('no_update_medium');
+	    }
         } elsif (!any { ! $_->{ignore} } @update_medias) {
             checker_exit('no_enabled_medium');
         }
@@ -646,6 +665,8 @@ sub setState {
             $bubble->add_action('clicked', N("Install updates"), \&installUpdates);
         } elsif ($state eq 'unconfigured_restricted_media') {
             $bubble->add_action('clicked', N("More Information"), \&prepare_add_restricted);
+        } elsif ($state eq 'no_enterprise_update_medium') {
+            $bubble->add_action('clicked', N("More Information"), \&prepare_add_enterprise_update_media);
         } elsif (member($state, qw(no_enabled_medium no_update_medium))) {
             $bubble->add_action('clicked', N("Add media"), \&add_media);
         }
@@ -755,5 +776,31 @@ sub prepare_add_restricted() {
           ]);
     setVar('DO_NOT_ASK_FOR_RESTRICTED', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_RESTRICTED} = bool2text($warn_me);
+    $res ? really_prepare_add_restricted() : 0;
+}
+
+
+sub really_prepare_add_restricted() {
+    $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-enterprise-update-helper', join('', @$product_id{qw(type product version)}));
+}
+
+sub prepare_add_enterprise_update_media() {
+    my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_ENTERPRISE_UPDATE_MEDIA});
+    return if $warn_me;
+    my $w = new_portable_dialog(N("New medium available"));
+    my $res =
+      fill_n_run_portable_dialog(
+          $w,
+          [
+              get_banner(N("New medium available")),
+              gtknew('Label_Left', text => 
+                       N("You use '%s' distribution and therefore have privileged access to additional software.",
+                         N("Mandriva Linux Enterprise Server")) . "\n\n" .
+                           N("Do you want to install this additional software repository?"), @common),
+              gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
+              create_okcancel($w, N("Next"), N("Cancel")),
+          ]);
+    setVar('DO_NOT_ASK_FOR_ENTERPRISE_UPDATE_MEDIA', bool2text($warn_me));
+    $local_config{DO_NOT_ASK_FOR_ENTERPRISE_UPDATE_MEDIA} = bool2text($warn_me);
     $res ? really_prepare_add_restricted() : 0;
 }
