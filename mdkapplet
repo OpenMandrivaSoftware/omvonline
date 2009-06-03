@@ -296,9 +296,13 @@ sub get_distro_list() {
     };
 }
 
+sub get_product_id() {
+    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+}
+
 
 sub is_there_a_new_distributions() {
-    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+    get_product_id();
     return if $product_id->{product} =~ /Flash/;
 
     my @lines = get_distro_list();
@@ -718,7 +722,7 @@ sub get_enabled_restricted_media {
 
 sub is_restricted_media_configured {
     my ($urpm) = @_;
-    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+    get_product_id();
     return 1 if $product_id->{product} !~ /powerpack/i;
 
     my @restricted_media = get_enabled_restricted_media($urpm);
