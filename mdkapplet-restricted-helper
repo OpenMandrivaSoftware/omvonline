@@ -145,7 +145,7 @@ sub add_restricted_medium {
     }
 }
 
-sub no_rigths_dialog {
+sub no_rigths_dialog() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
 
     fill_n_run_portable_dialog(
