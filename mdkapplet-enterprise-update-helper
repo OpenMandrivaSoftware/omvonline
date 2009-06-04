@@ -50,7 +50,7 @@ foreach my $opt (@ARGV) {
         $version = $opt;
     }
 }
-$version or die "usage: mdkapplet-restricted-helper <distrib_version>\n";
+$version or die "usage: mdkapplet-enterprise-update-helper <distrib_version>\n";
 
 get_restricted_authentication();
 
