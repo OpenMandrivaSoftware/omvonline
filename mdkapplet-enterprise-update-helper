@@ -133,8 +133,8 @@ sub add_enterprise_update_medium {
           or adding_media_failed();
         if (!$error) {
             #interactive->vnew->ask_okcancel(N("Error"), N("An error occurred while adding medium"));
-            my $w = ugtk2->new(N("Successfully added media %s.", 'Restricted'), grab => 1);
-            $w->_ask_okcancel(N("Successfully added media %s.", 'Restricted'), N("Ok"), undef);
+            my $w = ugtk2->new(N("Successfully added media %s.", 'Update'), grab => 1);
+            $w->_ask_okcancel(N("Successfully added media %s.", 'Update'), N("Ok"), undef);
             ugtk2::main($w);
         }
     }
