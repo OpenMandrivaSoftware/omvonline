@@ -762,6 +762,7 @@ sub prepare_add_restricted() {
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED});
     return if $warn_me;
     my $w = new_portable_dialog(N("New medium available"));
+    N("Mandriva PowerPack");
     my $res =
       fill_n_run_portable_dialog(
           $w,
@@ -769,7 +770,7 @@ sub prepare_add_restricted() {
               get_banner(N("New medium available")),
               gtknew('Label_Left', text => 
                        N("You use '%s' distribution and therefore have privileged access to additional software.",
-                         N("Mandriva PowerPack")) . "\n\n" .
+                         translate($product_id->{product})) . "\n\n" .
                            N("Do you want to install this additional software repository?"), @common),
               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
               create_okcancel($w, N("Next"), N("Cancel")),
