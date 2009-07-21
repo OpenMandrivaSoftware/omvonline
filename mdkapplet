@@ -97,6 +97,12 @@ my %state = (
                  urgency => 'low',
                  tt => [ N("A new version of Mandriva Linux distribution has been released") ]
              },
+             no_more_supported => {
+                 colour => [ 'disabled' ],
+                 menu => [ 'upgrade_distro', 'check' ],
+                 urgency => 'low',
+                 tt => [ N("This distribution is no more supported. There will not any more updates. You should upgrade to a newer of Mandriva Linux distribution.") ]
+             },
              unconfigured_restricted_media => {
                  colour => [ 'bundle' ],
                  menu => [ 'add_restricted_media', 'check' ],
@@ -223,6 +229,7 @@ $icon->signal_connect(activate => sub {
                               no_enabled_medium => \&add_media,
                               updates => \&installUpdates,
                               new_distribution => \&upgrade,
+                              no_more_supported => \&upgrade,
                           );
                           my $action = $state_global;
                           # default to updates rather than distro upgrade:
@@ -371,7 +378,9 @@ sub harvester {
                       && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i) {
                     go2State('new_distribution');
                 } else {
-                    if ($sub_state eq 'locked') {
+                    if ($no_more_supported) {
+                        $sub_state = 'no_more_supported';
+                    } elsif ($sub_state eq 'locked') {
                         $locked_count++;
                         $sub_state = 'loop_locked' if $locked_count > 10;
                     } else {
@@ -650,7 +659,7 @@ sub setState {
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
-        if ($state eq 'new_distribution') {
+        if (member($state, qw(new_distribution no_more_supported))) {
             $bubble->add_action('clicked', N("More Information"), \&upgrade);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
