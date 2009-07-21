@@ -319,6 +319,9 @@ sub is_there_a_new_distributions() {
     get_product_id();
     return if $product_id->{product} =~ /Flash/;
 
+    # sanity check for cooker:
+    return if $product_id->{branch} eq 'Devel';
+
     my @lines = get_distro_list();
 
     if (my $err = $@) {
