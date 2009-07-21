@@ -52,7 +52,7 @@ my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 if ($::testing) {
-    $config{FIRST_CHECK_DELAY} =  3 * 1000; # 3seconds
+    $config{FIRST_CHECK_DELAY} =  1 * 1000; # 1 second
 } else {
     $config{FIRST_CHECK_DELAY} ||= 5 * 60 * 1000; # default to 5 minutes
 }
