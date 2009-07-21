@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-25 18:50+0100\n"
+"POT-Creation-Date: 2009-07-21 17:30+0200\n"
 "PO-Revision-Date: 2004-03-20 23:50+0300\n"
 "Last-Translator: Lilit Azizbekyan <l@freenet.am>\n"
 "Language-Team: hy <yes@hay.am>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:65
+#: ../mdkapplet:68
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Ստուգել նորացումները"
 
-#: ../mdkapplet:74
+#: ../mdkapplet:76
 #, fuzzy, c-format
 msgid "Your system is up-to-date"
 msgstr "Համակարգը զբաղված է: Սպասեք..."
 
-#: ../mdkapplet:80
+#: ../mdkapplet:81
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -39,48 +39,55 @@ msgstr ""
 msgid "Please wait, finding available packages..."
 msgstr ""
 
-#: ../mdkapplet:93
+#: ../mdkapplet:92
 #, fuzzy, c-format
 msgid "New updates are available for your system"
 msgstr "Ձեր համակարգի համար չկան առկա նորացումներ"
 
-#: ../mdkapplet:100
+#: ../mdkapplet:98
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr ""
 
-#: ../mdkapplet:107
+#: ../mdkapplet:104
+#, c-format
+msgid ""
+"This distribution is no more supported. There will not any more updates. You "
+"should upgrade to a newer of Mandriva Linux distribution."
+msgstr ""
+
+#: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr ""
 
-#: ../mdkapplet:113
+#: ../mdkapplet:115
 #, fuzzy, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Ցանցը անհասանելի է: Ստուգեք \"Ցանցի ձևակերպումը\""
 
-#: ../mdkapplet:119
+#: ../mdkapplet:121
 #, fuzzy, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Ծառայությունը մատչելի չէ: Հպեք \"ձևակերպել\""
 
-#: ../mdkapplet:125 ../mdkapplet:132
+#: ../mdkapplet:126 ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr ""
 
-#: ../mdkapplet:138
+#: ../mdkapplet:137
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 
-#: ../mdkapplet:144
+#: ../mdkapplet:142
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:150
+#: ../mdkapplet:152
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -91,298 +98,304 @@ msgid ""
 "Then, restart \"%s\"."
 msgstr ""
 
-#: ../mdkapplet:155
+#: ../mdkapplet:157
 #, c-format
 msgid "Enabled"
 msgstr ""
 
-#: ../mdkapplet:168
+#: ../mdkapplet:170
 #, c-format
 msgid "Error updating media"
 msgstr ""
 
-#: ../mdkapplet:203 ../mdkapplet:634
+#: ../mdkapplet:210 ../mdkapplet:672
 #, c-format
 msgid "Install updates"
 msgstr "Տեղադրել Նորացումները"
 
-#: ../mdkapplet:204
+#: ../mdkapplet:211 ../mdkapplet:212
 #, c-format
 msgid "Add additional package medium"
 msgstr ""
 
-#: ../mdkapplet:205
+#: ../mdkapplet:213
 #, c-format
 msgid "Check Updates"
 msgstr "Ստուգել Նորացումները"
 
-#: ../mdkapplet:206
+#: ../mdkapplet:214
 #, c-format
 msgid "Configure Network"
 msgstr "Ցանցի Ձևակերպում"
 
-#: ../mdkapplet:207
+#: ../mdkapplet:215
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:372
+#: ../mdkapplet:405
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr ""
 
-#: ../mdkapplet:377 ../mdkapplet:398
+#: ../mdkapplet:410 ../mdkapplet:431
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr ""
 
-#: ../mdkapplet:381
+#: ../mdkapplet:414
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr ""
 
-#: ../mdkapplet:383
+#: ../mdkapplet:416
 #, c-format
 msgid "More info about this new version"
 msgstr ""
 
-#: ../mdkapplet:385
+#: ../mdkapplet:418
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr ""
 
-#: ../mdkapplet:387 ../mdkapplet:741
+#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
 #, c-format
 msgid "Do not ask me next time"
 msgstr ""
 
-#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:742
-#: ../mdkapplet-restricted-helper:84
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
+#: ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr ""
 
-#: ../mdkapplet:388 ../mdkapplet:424 ../mdkapplet:742
-#: ../mdkapplet-restricted-helper:84 ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
+#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Հրաժարվել"
 
-#: ../mdkapplet:415
+#: ../mdkapplet:448
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
 
-#: ../mdkapplet:417
+#: ../mdkapplet:450
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr ""
 
-#: ../mdkapplet:418
+#: ../mdkapplet:451
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 
-#: ../mdkapplet:421
+#: ../mdkapplet:454
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
 
-#: ../mdkapplet:447
+#: ../mdkapplet:480
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr ""
 
-#: ../mdkapplet:468
+#: ../mdkapplet:501
 #, fuzzy, c-format
 msgid "Computing new updates...\n"
 msgstr "Ստուգել Նորացումները"
 
-#: ../mdkapplet:555
+#: ../mdkapplet:593
 #, fuzzy, c-format
 msgid "System is up-to-date\n"
 msgstr "Համակարգը զբաղված է: Սպասեք..."
 
-#: ../mdkapplet:583
+#: ../mdkapplet:621
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr ""
 
-#: ../mdkapplet:625
+#: ../mdkapplet:663
 #, c-format
 msgid "Warning"
 msgstr "Զգուշացում"
 
-#: ../mdkapplet:628 ../mdkapplet:636 ../mdkapplet-restricted-helper:155
+#: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
+#: ../mdkapplet-restricted-helper:159
 #, c-format
 msgid "More Information"
 msgstr ""
 
-#: ../mdkapplet:638
+#: ../mdkapplet:678
 #, c-format
 msgid "Add media"
 msgstr ""
 
-#: ../mdkapplet:653
+#: ../mdkapplet:693
 #, c-format
 msgid "About..."
 msgstr "Ծրագրի մասին.."
 
-#: ../mdkapplet:657
+#: ../mdkapplet:697
 #, fuzzy, c-format
 msgid "Mandriva Online %s"
 msgstr "Բարի գալուստ Mandriva Online"
 
-#: ../mdkapplet:658
+#: ../mdkapplet:698
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr ""
 
-#: ../mdkapplet:661
+#: ../mdkapplet:701
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 
-#: ../mdkapplet:663
+#: ../mdkapplet:703
 #, c-format
 msgid "Online WebSite"
 msgstr "Օնլայն ՎեբԷջ"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:668
+#: ../mdkapplet:708
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 
-#: ../mdkapplet:677 ../mdkapplet-config:58
+#: ../mdkapplet:717 ../mdkapplet-config:61
 #, fuzzy, c-format
 msgid "Updates Configuration"
 msgstr "Ուղարկել ձևակերպում"
 
-#: ../mdkapplet:679
+#: ../mdkapplet:719
 #, c-format
 msgid "Always launch on startup"
 msgstr ""
 
-#: ../mdkapplet:681
+#: ../mdkapplet:721
 #, c-format
 msgid "Quit"
 msgstr "Ելք"
 
-#: ../mdkapplet:731 ../mdkapplet:736
+#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
 #, fuzzy, c-format
 msgid "New medium available"
 msgstr "Առկա չեն"
 
-#: ../mdkapplet:738
+#: ../mdkapplet:773
+#, fuzzy, c-format
+msgid "Mandriva PowerPack"
+msgstr "Բարի գալուստ Mandriva Online"
+
+#: ../mdkapplet:774 ../mdkapplet:811
+#, c-format
+msgid "Mandriva Enterprise Server"
+msgstr ""
+
+#: ../mdkapplet:784 ../mdkapplet:810
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet:739
-#, fuzzy, c-format
-msgid "Mandriva PowerPack"
-msgstr "Բարի գալուստ Mandriva Online"
-
-#: ../mdkapplet:740
+#: ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr ""
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:57
-#: ../mdkapplet-restricted-helper:69 ../mdkapplet-restricted-helper:145
-#: ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-restricted-helper:154
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-config:59
+#: ../mdkapplet-config:62
 #, c-format
 msgid "Here you can configure the updates applet"
 msgstr ""
 
-#: ../mdkapplet-config:61
+#: ../mdkapplet-config:64
 #, c-format
 msgid "Update frequency (hours)"
 msgstr ""
 
-#: ../mdkapplet-config:63
+#: ../mdkapplet-config:66
 #, c-format
 msgid "First check delay (minutes)"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:70
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:77
+#: ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-restricted-helper:82
 #, fuzzy, c-format
 msgid "Your password"
 msgstr "Սխալ գաղտնաբառ է"
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-restricted-helper:86
 #, fuzzy, c-format
 msgid "Forgotten password"
 msgstr "Սխալ գաղտնաբառ է"
 
-#: ../mdkapplet-restricted-helper:92 ../mdkapplet-restricted-helper:121
-#: ../mdkapplet-restricted-helper:163 ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
 #: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
 #: ../mdkapplet-upgrade-helper:208
 #, c-format
 msgid "Error"
 msgstr "Սխալ"
 
-#: ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:121
+#: ../mdkapplet-restricted-helper:125
 #, c-format
 msgid "An error occurred"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:137 ../mdkapplet-restricted-helper:138
+#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
 #, c-format
 msgid "Successfully added media %s."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:138
+#: ../mdkapplet-restricted-helper:142
 #, c-format
 msgid "Ok"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:151
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:157
+#: ../mdkapplet-restricted-helper:161
 #, c-format
 msgid "Close"
 msgstr "Փակել"
 
-#: ../mdkapplet-restricted-helper:163
+#: ../mdkapplet-restricted-helper:167
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr ""
