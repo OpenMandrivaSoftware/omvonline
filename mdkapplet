@@ -353,6 +353,10 @@ sub is_there_a_new_distributions() {
 
 my ($mdv_update_pid, $checker_pid, $media_manager_pid, $locked_count);
 
+sub clean_distro_cache() {
+    undef $new_distro;
+ }
+
 # Signal management 
 sub harvester {
     my ($_signame, $_clean) = @_;
@@ -364,7 +368,7 @@ sub harvester {
         if ($mdv_update_pid && $mdv_update_pid == $childpid) {
             undef $mdv_update_pid;
             # make sure to not report new distro after distro upgrade:
-            undef $new_distro;
+            clean_distro_cache();
             $schedule_checks = 1;
         } elsif ($checker_pid && $checker_pid == $childpid) {
             undef $checker_pid;
@@ -485,7 +489,7 @@ sub silentCheck() {
     state $check_time;
     my $new_time = time();
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
-        undef $new_distro;
+        clean_distro_cache();
         $check_time = $new_time;
         is_there_a_new_distributions();
     }
