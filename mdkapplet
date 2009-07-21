@@ -338,7 +338,10 @@ sub is_there_a_new_distributions() {
     }
 
     $no_more_supported = !member($product_id->{version}, map { $_->{version} } @distros);
-    return if $no_more_supported;
+    if ($no_more_supported) {
+        $new_distro = $new_distribution;
+        return;
+    }
 
     if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
         $new_distro = $new_distribution;
@@ -374,13 +377,13 @@ sub harvester {
             if ($state) {
                 log::explanations($state->{log});
                 $sub_state = $state->{status};
-                if ($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
+                if ($no_more_supported) {
+                    go2State('no_more_supported');
+                } elsif ($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
                       && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i) {
                     go2State('new_distribution');
                 } else {
-                    if ($no_more_supported) {
-                        $sub_state = 'no_more_supported';
-                    } elsif ($sub_state eq 'locked') {
+                    if ($sub_state eq 'locked') {
                         $locked_count++;
                         $sub_state = 'loop_locked' if $locked_count > 10;
                     } else {
