@@ -807,7 +807,7 @@ sub prepare_add_enterprise_update_media() {
               get_banner(N("New medium available")),
               gtknew('Label_Left', text => 
                        N("You use '%s' distribution and therefore have privileged access to additional software.",
-                         N("Mandriva Enterprise Server")) . "\n\n" .
+                         N_("Mandriva Enterprise Server")) . "\n\n" .
                            N("Do you want to install this additional software repository?"), @common),
               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
               create_okcancel($w, N("Next"), N("Cancel")),
