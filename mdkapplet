@@ -241,7 +241,7 @@ foreach my $opt (@ARGV) {
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
-my $new_distro;
+my ($new_distro, $no_more_supported);
 my $product_id;
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
@@ -329,7 +329,9 @@ sub is_there_a_new_distributions() {
         $new_distro = $new_distribution;
         return 1;
     }
-    return if !member($product_id->{version}, map { $_->{version} } @distros);
+
+    $no_more_supported = !member($product_id->{version}, map { $_->{version} } @distros);
+    return if $no_more_supported;
 
     if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
         $new_distro = $new_distribution;
@@ -343,6 +345,7 @@ my ($mdv_update_pid, $checker_pid, $media_manager_pid, $locked_count);
 
 sub clean_distro_cache() {
     undef $new_distro;
+    undef $no_more_supported;
  }
 
 # Signal management 
