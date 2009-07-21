@@ -61,7 +61,6 @@ $config{DISTRO_CHECK_DELAY} ||= 60*60*24; # default : one day
 my %state = (
 	     delayed => {
 		      colour => [ 'busy' ],
-		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
  		      do_not_use_bubble => 1,
 		      tt => [
@@ -72,91 +71,77 @@ my %state = (
     
 	     okay => {
 		      colour => [ 'okay' ],
-		      changes => [ 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
  		      do_not_use_bubble => 1,
 		      tt => [ N_("Your system is up-to-date") ]
 		     },
  	     critical => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
 		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.com") ]
 		     },
 	     busy => {
 		      colour => [ 'busy' ], 
-		      changes => [ 'okay', 'critical', 'error', 'disconnected' ],
 		      menu => [],
  		      do_not_use_bubble => 1,
 		      tt => [ N_("Please wait, finding available packages...") ]
 		     },
 	     updates => {
 		      colour => [ 'error' ],
-		      changes => [ 'okay' ],
 		      menu => [ 'update', 'check' ],
 		      tt => [ N_("New updates are available for your system") ]
 		     },
              new_distribution => {
                  colour => [ 'bundle' ],
-                 changes => [ 'okay' ],
                  menu => [ 'upgrade_distro', 'check' ],
                  urgency => 'low',
                  tt => [ N("A new version of Mandriva Linux distribution has been released") ]
              },
              unconfigured_restricted_media => {
                  colour => [ 'bundle' ],
-                 changes => [ 'okay' ],
                  menu => [ 'add_restricted_media', 'check' ],
                  urgency => 'low',
                  tt => [ N("An additional package medium is available for your distribution.") ]
              },
 	     disconnected => {
 		      colour => [ 'disconnect' ],
-		      changes => [ 'okay', 'busy', 'critical', 'error' ],
 		      menu => [ 'confNetwork' ],
 		      tt => [ N_("Network is down. Please configure your network") ],
  		      do_not_use_bubble => mdkonline::is_running('net_applet'),
 		     },
 	     disabled => {
 		      colour => [ 'disabled' ],
-		      changes => [ 'okay', 'busy', 'critical', 'error' ],
 		      menu => [],
 		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
 		     },
           locked => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
                 tt => [ N_("urpmi database locked") ],
  		      do_not_use_bubble => 1,
           },
           loop_locked => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
                 tt => [ N_("urpmi database locked") ],
           },
 	     notsupported => {
 		      colour => [ 'disabled' ],
-		      changes => [ 'okay', 'busy', 'critical', 'error' ],
 		      menu => [],
 		      tt => [ N_("Release not supported (too old release, or development release)") ]
 		     },
           no_update_medium => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
                 tt => [ N_("No medium found. You must add some media through 'Software Media Manager'.") ],
           },
           no_enterprise_update_medium => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'add_enterprise_update_medium' , 'check' ],
 		      tt => [ N("An additional package medium is available for your distribution.") ]
           },
           no_enabled_medium => {
 		      colour => [ 'noconf' ],
-		      changes => [ 'okay', 'busy', 'critical', 'disconnected' ],
 		      menu => [ 'check' ],
                 tt => [ N("You already have at least one update medium configured, but
 all of them are currently disabled. You should run the Software
