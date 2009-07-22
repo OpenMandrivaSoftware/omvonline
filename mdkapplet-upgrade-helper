@@ -202,6 +202,7 @@ packages as well?)."))
 
     system('gurpmi.addmedia', '--silent-success', if_($root, "--urpmi-root=$root"), '--distrib', '--mirrorlist', '$MIRRORLIST') and do {
         log::explanations("adding media for new distribution failed");
+        rm_rf(get_stale_upgrade_filename());
         log::explanations("restoringing urpmi configuration from $file");
         cp_af($file, "$root/etc/urpmi/urpmi.cfg");
         update_media();
