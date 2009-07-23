@@ -118,7 +118,14 @@ sub add_restricted_medium {
 
     my $res =  get_from("https://my.mandriva.com/rest/authenticate", [ 'username', $email, 'password', $password,
                                                                        'return', 'userdata' ]);
-    my $ref = XML::Simple->new->XMLin($res->{_content});
+    my $ref = eval { XML::Simple->new->XMLin($res->{_content}) };
+    if (my $err = $@) {
+        warn ">> XML error: $err\n";
+        $ref = {
+            code => 1,
+            message => $err,
+        };
+    }
 
     if ($ref->{code} != 0) {
         my $in = interactive->vnew;
