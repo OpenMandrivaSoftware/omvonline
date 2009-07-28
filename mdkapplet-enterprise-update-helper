@@ -151,7 +151,7 @@ sub no_rigths_dialog() {
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
                   interactive::gtk::add_padding(
-                      new_link_button('https://my.mandriva.com/powerpack/', N("More Information")))
+                      new_link_button('http://www2.mandriva.com/linux/server/', N("More Information")))
               ]),
               create_okcancel($w, N("Close"), undef),
           ]);
