@@ -105,7 +105,7 @@ sub get_from {
     my ($link, $header) = @_;
     
     my $ua = LWP::UserAgent->new;
-    $ua->agent("mdkapplet (mdkonline-$mdkonlin::version)");
+    $ua->agent("mdkapplet (mdkonline-$mdkonline::version)");
     $ua->env_proxy;
 
     my $response = $ua->request(POST $link, $header);
