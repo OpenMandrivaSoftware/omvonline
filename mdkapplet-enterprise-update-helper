@@ -118,7 +118,7 @@ sub add_enterprise_update_medium {
 
     my $res =  get_from("https://my.mandriva.com/rest/authenticate", [ 'username', $email, 'password', $password,
                                                                        'return', 'userdata' ]);
-    my $ref = XML::Simple->new->XMLin($res->{_content});
+    my $ref = xml2perl($res);
 
     if ($ref->{code} != 0) {
         my $in = interactive->vnew;
