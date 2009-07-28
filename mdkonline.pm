@@ -30,7 +30,7 @@ use common;
 use ugtk2;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename);
+our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename xml2perl);
 
 our $version = 2.67;
 
@@ -79,5 +79,20 @@ sub is_running {
     }
     $found;
 }
+
+# callers need to require XML::Simple
+sub xml2perl {
+    my ($res) = @_;
+    my $ref = eval { XML::Simple->new->XMLin($res->{_content}) };
+    if (my $err = $@) {
+        warn ">> XML error: $err\n";
+        $ref = {
+            code => 1,
+            message => $err,
+        };
+    }
+    $ref;
+}
+
 
 1;
