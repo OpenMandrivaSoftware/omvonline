@@ -116,7 +116,7 @@ my $error;
 sub add_restricted_medium {
     my ($email, $password) = @_;
 
-    my $res =  get_from("https://my.mandriva.com/rest/authenticate2",
+    my $res =  get_from("https://my.mandriva.com/rest/authenticate",
                         [ 'username', $email, 'password', $password,
                           'return', 'userdata' ]);
     my $ref = xml2perl($res);
