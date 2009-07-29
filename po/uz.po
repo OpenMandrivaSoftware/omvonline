@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uz\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-21 17:30+0200\n"
+"POT-Creation-Date: 2009-07-29 12:00+0200\n"
 "PO-Revision-Date: 2004-06-27 23:53+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <kmashrab@uni-bremen.de>\n"
@@ -56,6 +56,11 @@ msgid ""
 "This distribution is no more supported. There will not any more updates. You "
 "should upgrade to a newer version of the %s distribution."
 msgstr ""
+
+#: ../mdkapplet:104
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Online"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -159,20 +164,20 @@ msgstr ""
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr ""
 
-#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Boshqa soʻralmasin"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "Keyingisi"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
-#: ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Bekor qilish"
@@ -227,7 +232,8 @@ msgid "Warning"
 msgstr "Diqqat"
 
 #: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
-#: ../mdkapplet-restricted-helper:159
+#: ../mdkapplet-enterprise-update-helper:155
+#: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
 msgstr ""
@@ -283,7 +289,7 @@ msgstr "Tizimga kirganda ishga tushirish"
 msgid "Quit"
 msgstr "Chiqish"
 
-#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
+#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, fuzzy, c-format
 msgid "New medium available"
 msgstr "Mavjud emas"
@@ -293,26 +299,29 @@ msgstr "Mavjud emas"
 msgid "Mandriva PowerPack"
 msgstr "Mandriva Online"
 
-#: ../mdkapplet:774 ../mdkapplet:811
+#: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
-#: ../mdkapplet:784 ../mdkapplet:810
+#: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr ""
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
-#: ../mdkapplet-restricted-helper:154
+#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-enterprise-update-helper:73
+#: ../mdkapplet-enterprise-update-helper:145
+#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
 msgstr ""
@@ -332,71 +341,80 @@ msgstr ""
 msgid "First check delay (minutes)"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
 #, fuzzy, c-format
 msgid "Your password"
 msgstr "Maxfiy so'z noto'g'ri"
 
-#: ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
 #, fuzzy, c-format
 msgid "Forgotten password"
 msgstr "Maxfiy so'z noto'g'ri"
 
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
-#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "Xato"
 
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-restricted-helper:126
 #, c-format
 msgid "An error occurred"
 msgstr "Xato ro'y berdi"
 
-#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:137
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Ok"
 msgstr "Ok"
 
-#: ../mdkapplet-restricted-helper:155
+#: ../mdkapplet-enterprise-update-helper:151
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr ""
 
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:157
+#: ../mdkapplet-restricted-helper:162
 #, c-format
 msgid "Close"
 msgstr "Yopish"
 
-#: ../mdkapplet-restricted-helper:167
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:168
 #, fuzzy, c-format
 msgid "An error occurred while adding medium"
 msgstr "Toʻplamni qoʻshish muvaffaqiyatsiz tugadi"
@@ -408,7 +426,7 @@ msgid ""
 msgstr ""
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
-#: ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
 msgstr "Oʻrnatish muvaffaqiyatsiz tugadi"
@@ -452,7 +470,7 @@ msgid ""
 "packages as well?)."
 msgstr ""
 
-#: ../mdkapplet-upgrade-helper:210
+#: ../mdkapplet-upgrade-helper:211
 #, c-format
 msgid "Failure when adding medium"
 msgstr "Toʻplamni qoʻshish muvaffaqiyatsiz tugadi"

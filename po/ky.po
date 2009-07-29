@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ky\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-21 17:30+0200\n"
+"POT-Creation-Date: 2009-07-29 12:00+0200\n"
 "PO-Revision-Date: 2009-03-28 20:11+0600\n"
 "Last-Translator: Ilyas Bakirov <just_ilyas@yahoo.com>\n"
 "Language-Team: Kyrgyz\n"
@@ -60,6 +60,11 @@ msgid ""
 "This distribution is no more supported. There will not any more updates. You "
 "should upgrade to a newer version of the %s distribution."
 msgstr ""
+
+#: ../mdkapplet:104
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -171,20 +176,20 @@ msgstr "Жаңы версия жөнүндө кошумча маалымат"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "'%s' дистрибутивине жаңылоону каалайсызбы?"
 
-#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Кийинки жолу башка менден сураба"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "Кийинки"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
-#: ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Айнуу"
@@ -243,7 +248,8 @@ msgid "Warning"
 msgstr "Эскертүү"
 
 #: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
-#: ../mdkapplet-restricted-helper:159
+#: ../mdkapplet-enterprise-update-helper:155
+#: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
 msgstr "Кошумча маалымат"
@@ -300,7 +306,7 @@ msgstr "Дайыма старт учурунда ишке киргизүү"
 msgid "Quit"
 msgstr "Чыгуу"
 
-#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
+#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, c-format
 msgid "New medium available"
 msgstr "Жаңы булак табылды"
@@ -310,12 +316,12 @@ msgstr "Жаңы булак табылды"
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:774 ../mdkapplet:811
+#: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
-#: ../mdkapplet:784 ../mdkapplet:810
+#: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -324,14 +330,17 @@ msgstr ""
 "Сиз '%s' дистрибутивин колдонуп жатасыз жана кошумча программаларды "
 "колдонууга укугуңуз бар."
 
-#: ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Сиз кошумча пакеттер булагын кошууну каалайсызбы?"
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
-#: ../mdkapplet-restricted-helper:154
+#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-enterprise-update-helper:73
+#: ../mdkapplet-enterprise-update-helper:145
+#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Кошумча пакеттер булагын кошуу"
@@ -351,71 +360,80 @@ msgstr "Жаңылоо жыштыгы (саат)"
 msgid "First check delay (minutes)"
 msgstr "Биринчи текшерүүнү кийинкиге калтыруу убакыты (минута)"
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Кошумча пакеттер булагын кошууда колдонуучү IDни киргизиңиз"
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr "Колдонуучу аты жөнүндө кошумча маалымат"
 
-#: ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr "Электрондук почта"
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Your password"
 msgstr "Сырсөз"
 
-#: ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
 #, c-format
 msgid "Forgotten password"
 msgstr "Унутулуп калган сырсөз"
 
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
-#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "Жаңылыштык"
 
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Сырсөз жана э-почта бош болбошу керек."
 
-#: ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-restricted-helper:126
 #, c-format
 msgid "An error occurred"
 msgstr "Жаңылыштык орун алды"
 
-#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:137
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr "%s булагы ийгиликтүү кошулду."
 
-#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Ok"
 msgstr "ОК"
 
-#: ../mdkapplet-restricted-helper:155
+#: ../mdkapplet-enterprise-update-helper:151
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Сиздин Mandriva колодонуучу аты Powerpack жүктөө катталышын камтыбайт."
 
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:157
+#: ../mdkapplet-restricted-helper:162
 #, c-format
 msgid "Close"
 msgstr "Жабуу"
 
-#: ../mdkapplet-restricted-helper:167
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:168
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Булакты кошууда ката чыкты"
@@ -429,7 +447,7 @@ msgstr ""
 "d МБ < %d МБ)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
-#: ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
 msgstr "Орнотуу ийгиликсиз аяктады"
@@ -478,7 +496,7 @@ msgstr ""
 "же учурда башка иш столунда пакеттерди орнотуп жаткан\n"
 "жоксузбу?)."
 
-#: ../mdkapplet-upgrade-helper:210
+#: ../mdkapplet-upgrade-helper:211
 #, c-format
 msgid "Failure when adding medium"
 msgstr "Булакты кошуу ийгиликсиздиги"

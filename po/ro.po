@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-ro\n"
 "Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
-"POT-Creation-Date: 2009-07-21 17:30+0200\n"
+"POT-Creation-Date: 2009-07-29 12:00+0200\n"
 "PO-Revision-Date: 2009-04-11 16:01+0100\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Mandrivausers.ro <cfrussen@yahoo.co.uk>\n"
@@ -99,6 +99,11 @@ msgid ""
 "This distribution is no more supported. There will not any more updates. You "
 "should upgrade to a newer version of the %s distribution."
 msgstr ""
+
+#: ../mdkapplet:104
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -212,20 +217,20 @@ msgstr "Informații suplimentare despre această nouă versiune"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Doriți să avansați la distribuția „%s”? "
 
-#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Nu se cere confirmare data viitoare"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "Înainte »"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
-#: ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Anulează"
@@ -285,7 +290,8 @@ msgid "Warning"
 msgstr "Avertisment"
 
 #: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
-#: ../mdkapplet-restricted-helper:159
+#: ../mdkapplet-enterprise-update-helper:155
+#: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
 msgstr "Informații suplimentare"
@@ -349,7 +355,7 @@ msgstr "Lansează întotdeauna la pornire"
 msgid "Quit"
 msgstr "Terminare"
 
-#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
+#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, c-format
 msgid "New medium available"
 msgstr "Nou mediu disponibil"
@@ -359,12 +365,12 @@ msgstr "Nou mediu disponibil"
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:774 ../mdkapplet:811
+#: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
-#: ../mdkapplet:784 ../mdkapplet:810
+#: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -373,14 +379,17 @@ msgstr ""
 "Aveți distribuția '%s' și de aceea aveți un acces privilegiat la programe "
 "adiționale."
 
-#: ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Doriți să instalați acest depozit de programe adiționale?"
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
-#: ../mdkapplet-restricted-helper:154
+#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-enterprise-update-helper:73
+#: ../mdkapplet-enterprise-update-helper:145
+#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Se adaugă un mediu de pachete adițional"
@@ -400,62 +409,69 @@ msgstr "Frecvența actualizărilor (ore)"
 msgid "First check delay (minutes)"
 msgstr "Perioadă pînă la prima verificare (minute)"
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 "Introduceți-vă identificatorul contului pentru a adăuga un mediu de pachete "
 "adițional"
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr "Informații suplimentare despre contul vostru de utilizator"
 
-#: ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr "Adresa voastră electroniă"
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Your password"
 msgstr "Parola voastră"
 
-#: ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
 #, c-format
 msgid "Forgotten password"
 msgstr "Parolă uitată"
 
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
-#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "Eroare"
 
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Parola și adresa electronică nu pot fi goale."
 
-#: ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-restricted-helper:126
 #, c-format
 msgid "An error occurred"
 msgstr "S-a produs o eroare"
 
-#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:137
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr "S-a adăugat cu succes mediul %s."
 
-#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Ok"
 msgstr "OK"
 
-#: ../mdkapplet-restricted-helper:155
+#: ../mdkapplet-enterprise-update-helper:151
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
@@ -463,12 +479,14 @@ msgstr ""
 "Contul vostru Mandriva nu are activat opțiunea de descărcare a versiunii "
 "Powerpack"
 
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:157
+#: ../mdkapplet-restricted-helper:162
 #, c-format
 msgid "Close"
 msgstr "X Închide"
 
-#: ../mdkapplet-restricted-helper:167
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:168
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "S-a produs o eroare la adăugarea mediului"
@@ -482,7 +500,7 @@ msgstr ""
 "(%dMo < %dMo)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
-#: ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
 msgstr "Instalare eșuată"
@@ -530,7 +548,7 @@ msgstr ""
 "pachete pe alt birou, sau instalați alte pachete în același\n"
 "timp?)."
 
-#: ../mdkapplet-upgrade-helper:210
+#: ../mdkapplet-upgrade-helper:211
 #, c-format
 msgid "Failure when adding medium"
 msgstr "Adăugare de mediu eșuată"

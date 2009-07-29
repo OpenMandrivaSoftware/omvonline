@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-21 17:30+0200\n"
+"POT-Creation-Date: 2009-07-29 12:00+0200\n"
 "PO-Revision-Date: 2009-03-26 12:55+0000\n"
 "Last-Translator: Pjetur G. Hjaltason <pjetur@pjetur.net>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -58,6 +58,11 @@ msgid ""
 "This distribution is no more supported. There will not any more updates. You "
 "should upgrade to a newer version of the %s distribution."
 msgstr ""
+
+#: ../mdkapplet:104
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -168,20 +173,20 @@ msgstr "Ítarlegri upplýsingar um þessa nýju útgáfu"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Viltu uppfæra í '%s' dreifinguna?"
 
-#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Ekki spyrja aftur"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "Næsta"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
-#: ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "Hætta við"
@@ -240,7 +245,8 @@ msgid "Warning"
 msgstr "Aðvörun"
 
 #: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
-#: ../mdkapplet-restricted-helper:159
+#: ../mdkapplet-enterprise-update-helper:155
+#: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
 msgstr "Ítarlegri upplýsingar"
@@ -296,7 +302,7 @@ msgstr "Ræsa alltaf þegar kveikt á vél"
 msgid "Quit"
 msgstr "Hætta"
 
-#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
+#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, c-format
 msgid "New medium available"
 msgstr "Nýr miðill tiltækur"
@@ -306,12 +312,12 @@ msgstr "Nýr miðill tiltækur"
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:774 ../mdkapplet:811
+#: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
-#: ../mdkapplet:784 ../mdkapplet:810
+#: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -319,14 +325,17 @@ msgid ""
 msgstr ""
 "Þú notar '%s' dreifinguna og hefur því forgangs-aðgang að aukahugbúnaði."
 
-#: ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Vilt þú bæta við þessum auka-pakkamiðli?"
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
-#: ../mdkapplet-restricted-helper:154
+#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-enterprise-update-helper:73
+#: ../mdkapplet-enterprise-update-helper:145
+#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Bæti við aukalegum pakkamiðli"
@@ -346,71 +355,80 @@ msgstr "Uppfærslutíðni (klukkustundir)"
 msgid "First check delay (minutes)"
 msgstr "Töf á fyrstu athugun (mínútur)"
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Fylltu inn auðkenni þitt svo hægt sé að bæta við pakkamiðli"
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr "Ítarlegri upplýsingar um skráningu þína"
 
-#: ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr "Netfangið þitt"
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Your password"
 msgstr "Lykilorðið þitt"
 
-#: ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
 #, c-format
 msgid "Forgotten password"
 msgstr "Gleymt lykilorð"
 
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
-#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "Villa"
 
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Lykilorð og netfang má ekki vera autt."
 
-#: ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-restricted-helper:126
 #, c-format
 msgid "An error occurred"
 msgstr "Villa kom upp"
 
-#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:137
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Tókst að bæta við miðli %s."
 
-#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Ok"
 msgstr "Í lagi"
 
-#: ../mdkapplet-restricted-helper:155
+#: ../mdkapplet-enterprise-update-helper:151
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Í Mandriva skráningunni þinni er \"Powerpack download\" ekki virkt."
 
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:157
+#: ../mdkapplet-restricted-helper:162
 #, c-format
 msgid "Close"
 msgstr "Loka"
 
-#: ../mdkapplet-restricted-helper:167
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:168
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Villa kom upp þegar reynt var að bæta við miðli"
@@ -424,7 +442,7 @@ msgstr ""
 "dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
-#: ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
 msgstr "Innsetning mistókst"
@@ -471,7 +489,7 @@ msgstr ""
 "sem eru að vinna með gagnagrunninn (Er annar pakkastjóri í\n"
 "gangi á skjáborðinu þínu, eða ertu að setja inn pakka annarstaðar?)."
 
-#: ../mdkapplet-upgrade-helper:210
+#: ../mdkapplet-upgrade-helper:211
 #, c-format
 msgid "Failure when adding medium"
 msgstr "Villa þegar miðli var bætt við"

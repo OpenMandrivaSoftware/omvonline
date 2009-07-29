@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-21 17:30+0200\n"
+"POT-Creation-Date: 2009-07-29 12:00+0200\n"
 "PO-Revision-Date: 2009-03-25 23:24+0400\n"
 "Last-Translator: Yaser Ammar <linux.uae@gawab.com>\n"
 "Language-Team:  Arabic <doc@arabeyes.org>\n"
@@ -61,6 +61,11 @@ msgid ""
 "This distribution is no more supported. There will not any more updates. You "
 "should upgrade to a newer version of the %s distribution."
 msgstr ""
+
+#: ../mdkapplet:104
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "ماندريفا أونلاين %s"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -169,20 +174,20 @@ msgstr "معلومات إضافية حول هذا الإصدار الجديد"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "هل تريد الترقية إلى التوزيعة '%s' ؟"
 
-#: ../mdkapplet:420 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "لا تسألني في المرة القادمة"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "التالي"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:788 ../mdkapplet:814
-#: ../mdkapplet-restricted-helper:88 ../mdkapplet-upgrade-helper:126
-#: ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "ألغِ"
@@ -241,7 +246,8 @@ msgid "Warning"
 msgstr "تحذير"
 
 #: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
-#: ../mdkapplet-restricted-helper:159
+#: ../mdkapplet-enterprise-update-helper:155
+#: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
 msgstr "معلومات إضافية"
@@ -302,7 +308,7 @@ msgstr "اقدحه دومًا عند البدء"
 msgid "Quit"
 msgstr "اخرج"
 
-#: ../mdkapplet:771 ../mdkapplet:782 ../mdkapplet:803 ../mdkapplet:808
+#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, c-format
 msgid "New medium available"
 msgstr "يتوفر وسط جديد"
@@ -312,26 +318,29 @@ msgstr "يتوفر وسط جديد"
 msgid "Mandriva PowerPack"
 msgstr "ماندريفا بَور باك"
 
-#: ../mdkapplet:774 ../mdkapplet:811
+#: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
-#: ../mdkapplet:784 ../mdkapplet:810
+#: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr "أنت تستخدم توزيعة '%s' ولذلك يحق لك الوصول إلى برامج إضافية."
 
-#: ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "هل تريد تثبيت مستودع البرامج الإضافي هذا؟"
 
-#: ../mdkapplet-config:42 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:149
-#: ../mdkapplet-restricted-helper:154
+#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-enterprise-update-helper:73
+#: ../mdkapplet-enterprise-update-helper:145
+#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "إضافة وسيط حزم إضافي"
@@ -351,71 +360,80 @@ msgstr "تكرار التحديث (بالثواني)"
 msgid "First check delay (minutes)"
 msgstr "زمن أول فحص"
 
-#: ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "فضلاً اكتب مُعرِّف حسابك لإضافة وسيط حزم إضافي"
 
-#: ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr "معلومات إضافية عن حسابك"
 
-#: ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr "بريدك الإلكتروني"
 
-#: ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Your password"
 msgstr "كلمة سرك"
 
-#: ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
 #, c-format
 msgid "Forgotten password"
 msgstr "نسيت كلمة السر"
 
-#: ../mdkapplet-restricted-helper:96 ../mdkapplet-restricted-helper:125
-#: ../mdkapplet-restricted-helper:167 ../mdkapplet-upgrade-helper:79
-#: ../mdkapplet-upgrade-helper:120 ../mdkapplet-upgrade-helper:172
-#: ../mdkapplet-upgrade-helper:208
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "خطأ"
 
-#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "كلمة السر والبريد الإلكتروني لا يمكن تركهما خاليين."
 
-#: ../mdkapplet-restricted-helper:125
+#: ../mdkapplet-enterprise-update-helper:126
+#: ../mdkapplet-restricted-helper:126
 #, c-format
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
-#: ../mdkapplet-restricted-helper:141 ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:137
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr "نجحت إضافة الوسائط %s."
 
-#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-enterprise-update-helper:138
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Ok"
 msgstr "موافق"
 
-#: ../mdkapplet-restricted-helper:155
+#: ../mdkapplet-enterprise-update-helper:151
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "حسابك في ماندريفا لا يتضمن اشتراك تنزيل بَور باك مفعلاً."
 
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:157
+#: ../mdkapplet-restricted-helper:162
 #, c-format
 msgid "Close"
 msgstr "أغلق"
 
-#: ../mdkapplet-restricted-helper:167
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:168
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "حدث خطأ أثناء إضافة الوسيط"
@@ -427,7 +445,7 @@ msgid ""
 msgstr "لا توجد مساحة كافية بنظامك في %s للترقية (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
-#: ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
 msgstr "فشل التّثبيت"
@@ -474,7 +492,7 @@ msgstr ""
 "المستعملة لقاعدة بيانات الحزم (هل لديك مدير وسائط آخر على سطح\n"
 " مكتب آخر مثلاً، أو هل تثبّت حزمًا حاليًا كذلك؟)."
 
-#: ../mdkapplet-upgrade-helper:210
+#: ../mdkapplet-upgrade-helper:211
 #, c-format
 msgid "Failure when adding medium"
 msgstr "فشل عند إضافة الوسيط"
