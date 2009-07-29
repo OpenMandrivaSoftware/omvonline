@@ -116,8 +116,9 @@ my $error;
 sub add_enterprise_update_medium {
     my ($email, $password) = @_;
 
-    my $res =  get_from("https://my.mandriva.com/rest/authenticate", [ 'username', $email, 'password', $password,
-                                                                       'return', 'userdata' ]);
+    my $res =  get_from("https://my.mandriva.com/rest/authenticate",
+                        [ 'username', $email, 'password', $password,
+                          'return', 'userdata' ]);
     my $ref = xml2perl($res);
 
     if ($ref->{code} != 0) {
