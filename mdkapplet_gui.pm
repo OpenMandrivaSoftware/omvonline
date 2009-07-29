@@ -77,7 +77,23 @@ sub fill_n_run_portable_dialog {
         local $::isWizard = 1;
         local $w->{pop_it} = 0;
         local $::isInstall = 1;
-        gtkadd($w->{window}, gtknew('VBox', children_tight => $widgets));
+        my %children;
+        if ($::isEmbedded) {
+            my (@children_tight, $child);
+            @children_tight = @$widgets;
+            $child = pop @children_tight;
+            %children = (
+                children => [
+                    (map { (0, $_) } @children_tight),
+                    1, gtknew('Label'),
+                    0, $child,
+                ]
+            );
+        } else {
+            %children = (children_tight => $widgets);
+        }
+
+        gtkadd($w->{window}, gtknew('VBox', %children));
     }
 
     $w->{ok}->grab_focus;

@@ -58,7 +58,7 @@ sub configure() {
       fill_n_run_portable_dialog(
           $w,
           [
-              get_banner(N("Updates Configuration")),
+              if_(!$::isEmbedded, get_banner(N("Updates Configuration"))),
               gtknew('Label_Left', text => N("Here you can configure the updates applet"), @common),
               gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
                   [ N("Update frequency (hours)"),
