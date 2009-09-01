@@ -280,7 +280,7 @@ sub get_distro_list() {
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
-    my $list = "http://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}";
+    my $list = "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}";
     log::explanations("trying distributions list from $list");
 
     eval {
@@ -297,7 +297,7 @@ sub get_distro_list() {
             mdkapplet_urpm::get_content($urpm, $list);
         } else {
             urpm::ensure_valid_cachedir($urpm);
-            urpm::download::get_content($urpm, $list);
+            urpm::download::get_content($urpm, $list, "strict-certificate-check" => 1);
         }
     };
 }
