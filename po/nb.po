@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-29 12:00+0200\n"
+"POT-Creation-Date: 2009-09-18 15:43+0200\n"
 "PO-Revision-Date: 2009-08-20 21:42+0200\n"
 "Last-Translator: Olav Dahlum <odahlum@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.org>\n"
@@ -61,11 +61,14 @@ msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "En ny versjon av Mandriva Linux har blitt lansert."
 
 #: ../mdkapplet:104
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"This distribution is no more supported. There will not any more updates. You "
-"should upgrade to a newer version of the %s distribution."
-msgstr "Denne versjonen er ikke lengre støttet. Det vil ikke komme flere oppdateringer. Du bør oppgradere til en nyere versjon av %s."
+"This version of the distribution is no longer supported. There will be no "
+"furether updates. You should upgrade to a newer version of the %s "
+"distribution."
+msgstr ""
+"Denne versjonen er ikke lengre støttet. Det vil ikke komme flere "
+"oppdateringer. Du bør oppgradere til en nyere versjon av %s."
 
 #: ../mdkapplet:104
 #, c-format
@@ -95,11 +98,13 @@ msgstr "urpmi-database låst"
 #: ../mdkapplet:137
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr ""
+"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:142
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fant inget medium. Du må legge til medium."
 
 #: ../mdkapplet:152
@@ -327,9 +332,7 @@ msgstr "Mandriva Enterprise Server"
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
-msgstr ""
-"Du benytter «%s» og har derfor tilgang til mer "
-"programvare."
+msgstr "Du benytter «%s» og har derfor tilgang til mer programvare."
 
 #: ../mdkapplet:785 ../mdkapplet:811
 #, c-format
@@ -356,7 +359,7 @@ msgstr "Her kan sette opp miniprogrammet for oppdateringer"
 msgid "Update frequency (hours)"
 msgstr "Oppdateringsfrekvens (timer)"
 
-#: ../mdkapplet-config:66
+#: ../mdkapplet-config:71
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "Førstesjekksforsinkelse (minutter)"
@@ -365,8 +368,7 @@ msgstr "Førstesjekksforsinkelse (minutter)"
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
-"Vær vennlig å skrive inn konto-IDen din for å legge til flere "
-"pakkebrønner"
+"Vær vennlig å skrive inn konto-IDen din for å legge til flere pakkebrønner"
 
 #: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
@@ -425,8 +427,10 @@ msgstr "OK"
 #: ../mdkapplet-enterprise-update-helper:151
 #: ../mdkapplet-restricted-helper:156
 #, c-format
-msgid "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+"Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
 
 #: ../mdkapplet-enterprise-update-helper:157
 #: ../mdkapplet-restricted-helper:162
@@ -442,7 +446,8 @@ msgstr "Feil under forsøk på å legge til medium"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Systemet ditt har ikke tilstrekkelig med ledig plass på %s for å oppgradere "
 "(%dMB <%dMB)"
@@ -518,8 +523,7 @@ msgid ""
 msgstr ""
 "mdkupdate versjon %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Dette er fri programvare og kan redistribueres under vilkårene til GNU "
-"GPL.\n"
+"Dette er fri programvare og kan redistribueres under vilkårene til GNU GPL.\n"
 "\n"
 "bruk:\n"
 
@@ -552,4 +556,3 @@ msgstr "  --debug\t\t\t– logg hva som blir gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikke oppdatere pakker fra oppdateringsmedium.\n"
-

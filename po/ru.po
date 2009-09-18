@@ -12,14 +12,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-29 12:00+0200\n"
+"POT-Creation-Date: 2009-09-18 15:43+0200\n"
 "PO-Revision-Date: 2009-08-10 22:23+0500\n"
 "Last-Translator: akdengi <kazancas@mandriva.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
+"\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
@@ -58,11 +59,15 @@ msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Выпущена новая версия дистрибутива Mandriva Linux"
 
 #: ../mdkapplet:104
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"This distribution is no more supported. There will not any more updates. You "
-"should upgrade to a newer version of the %s distribution."
-msgstr "Этот дистрибутив больше не поддерживается. Для него больше не будут выпускаться обновления. Вы можете обновить его на новую версию дистрибутива - %s."
+"This version of the distribution is no longer supported. There will be no "
+"furether updates. You should upgrade to a newer version of the %s "
+"distribution."
+msgstr ""
+"Этот дистрибутив больше не поддерживается. Для него больше не будут "
+"выпускаться обновления. Вы можете обновить его на новую версию дистрибутива "
+"- %s."
 
 #: ../mdkapplet:104
 #, c-format
@@ -96,7 +101,8 @@ msgstr "Версия не поддерживается (слишком стар�
 
 #: ../mdkapplet:142
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Источник не найден. Нужно добавить хотя бы один источник с помощью менеджера "
 "источников программ."
@@ -357,7 +363,7 @@ msgstr "Настройка аплета обновлений"
 msgid "Update frequency (hours)"
 msgstr "Частота обновлений (часы)"
 
-#: ../mdkapplet-config:66
+#: ../mdkapplet-config:71
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "Задержка перед первой проверкой (минуты)"
@@ -426,8 +432,10 @@ msgstr "ОК"
 #: ../mdkapplet-enterprise-update-helper:151
 #: ../mdkapplet-restricted-helper:156
 #, c-format
-msgid "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Для вашей учётной записи Mandriva не включена подписка на загрузку Powerpack."
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr ""
+"Для вашей учётной записи Mandriva не включена подписка на загрузку Powerpack."
 
 #: ../mdkapplet-enterprise-update-helper:157
 #: ../mdkapplet-restricted-helper:162
@@ -443,7 +451,8 @@ msgstr "При добавлении источника возникла ошиб
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "В системе осталось недостаточно свободного места на %s для обновления (%d МБ "
 "< %d МБ)"
@@ -553,4 +562,3 @@ msgstr "  --debug\t\t\t- заносить в журнал выполняемые
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не удаётся обновить пакеты из источника update_source.\n"
-
