@@ -66,7 +66,7 @@ localcopy: clean
 	svn export -q -rBASE . $(NAME)-$(VERSION)
 
 tar:
-	tar cfY ../$(PACKAGE)-$(VERSION).tar.lzma $(PACKAGE)-$(VERSION)
+	tar cfa ../$(PACKAGE)-$(VERSION).tar.lzma $(PACKAGE)-$(VERSION)
 	rm -rf $(PACKAGE)-$(VERSION)
 
 dist: cleandist localcopy tar
