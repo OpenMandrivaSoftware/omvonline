@@ -8,20 +8,21 @@
 # Taras Boychuk <btr1@mail.ru>, 2003, 2005.
 # Taras Boychuk <btr1@ukrpost.net>, 2004, 2005.
 # Taras Boychuk <btr0001@ukr.net>, 2008, 2009.
+# Yuri Chornoivan <yurchor@ukr.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-18 15:43+0200\n"
-"PO-Revision-Date: 2009-03-26 09:09+0200\n"
-"Last-Translator: Taras Boychuk <btr0001@ukr.net>\n"
-"Language-Team: ukrainian <translation@linux.org.ua>\n"
+"PO-Revision-Date: 2009-10-02 20:27+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <translation@linux.org.ua>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:68
@@ -65,21 +66,22 @@ msgid ""
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
+"Ця версія дистрибутива вже не підтримується. Подальших оновлень не буде. Вам "
+"слід оновити систему до версії %s."
 
-#: ../mdkapplet:104
-#, fuzzy, c-format
+#: ../mdkapplet:104, c-format
 msgid "Mandriva Linux"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Linux"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr "Для Вашого дистибутиву доступний додатковий носій з пакунками."
+msgstr "Для Вашого дистрибутива доступний додатковий носій з пакунками."
 
 #: ../mdkapplet:115
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr "Мережа вимкнена. Будь ласка, налаштуйте мережу"
+msgstr "Мережу вимкнено. Будь ласка, налаштуйте мережу"
 
 #: ../mdkapplet:121
 #, c-format
@@ -322,7 +324,7 @@ msgstr "Mandriva PowerPack"
 #: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
-msgstr ""
+msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
@@ -553,3 +555,4 @@ msgstr "  --debug\t\t\t- створювати журнал\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"
+
