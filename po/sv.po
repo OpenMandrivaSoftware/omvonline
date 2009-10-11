@@ -8,19 +8,19 @@
 # Mattias Dahlberg <voz@home.se>, 2002.
 # Kenneth Krekula <kenneth.krekula@kiruna.se>, 2004, 2005, 2007.
 # Lars Westergren <lars.westergren@home.se>, 2004, 2005.
-# Thomas Backlund <tmb@mandriva.org>, 2005, 2006, 2008.
+# Thomas Backlund <tmb@mandriva.org>, 2005, 2006, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-09-18 15:43+0200\n"
-"PO-Revision-Date: 2008-09-07 01:28+0300\n"
-"Last-Translator: Thomas Backlund <tmb@mandriva.org>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2009-10-11 19:08+0300\n"
+"Last-Translator: \n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
@@ -53,10 +53,9 @@ msgstr "Vänta, hittar tillgängliga paket..."
 msgid "New updates are available for your system"
 msgstr "Nya uppdateringar finns tillgängliga för ditt system"
 
-#: ../mdkapplet:98
-#, fuzzy, c-format
+#: ../mdkapplet:98, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "En ny stabil distribution har släppts"
+msgstr "En ny distribution av Mandriva Linux har släppts"
 
 #: ../mdkapplet:104
 #, c-format
@@ -65,16 +64,18 @@ msgid ""
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
+"Denna version av distributionen är inte längre stödd. Det kommer inte "
+"längre några uppdateringar. Du borde uppgradera till en du version av "
+"%s distributionen."
 
-#: ../mdkapplet:104
-#, fuzzy, c-format
+#: ../mdkapplet:104, c-format
 msgid "Mandriva Linux"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Linux"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Ett tilläggsmedium är tillgängligt för din distribution."
 
 #: ../mdkapplet:115
 #, c-format
@@ -139,7 +140,7 @@ msgstr "Installera uppdateringar"
 #: ../mdkapplet:211 ../mdkapplet:212
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "Ett tilläggsmedium"
 
 #: ../mdkapplet:213
 #, c-format
@@ -164,22 +165,20 @@ msgstr "Startar drakconnect\n"
 #: ../mdkapplet:410 ../mdkapplet:431
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Ny version av Mandriva Linux distribution"
 
-#: ../mdkapplet:414
-#, fuzzy, c-format
+#: ../mdkapplet:414, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "En ny stabil distribution har släppts"
+msgstr "En ny version av Mandriva Linux distributionen har släppts."
 
 #: ../mdkapplet:416
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Mera info om denna nya version"
 
-#: ../mdkapplet:418
-#, fuzzy, c-format
+#: ../mdkapplet:418, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr "Vill du uppgradera?"
+msgstr "Vill du uppgradera till '%s' distributionen?"
 
 #: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
 #, c-format
@@ -205,16 +204,18 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Denna uppgradering kräver en snabb nätförbindelse (kabel, xDSL, ...) "
+"och kan ta flera timmar innan det är färdigt."
 
 #: ../mdkapplet:450
 #, c-format
 msgid "Estimated download data will be %s"
-msgstr ""
+msgstr "Uppskattad nerladdad data kommer att vara %s"
 
 #: ../mdkapplet:451
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Du bör stänga alla andra applikationer förrän du fortsätter."
 
 #: ../mdkapplet:454
 #, c-format
@@ -222,6 +223,9 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"Du borde koppla din bärbara till väggströmen och fast nätanslutning i "
+"stället för "
+"trådlöst om det är tillgängligt."
 
 #: ../mdkapplet:480
 #, c-format
@@ -253,12 +257,12 @@ msgstr "Varning"
 #: ../mdkapplet-restricted-helper:160
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Mera information"
 
 #: ../mdkapplet:678
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Lägg till media"
 
 #: ../mdkapplet:693
 #, c-format
@@ -294,7 +298,7 @@ msgstr "Thomas Backlund <tmb@mandriva.org>\n"
 #: ../mdkapplet:717 ../mdkapplet-config:61
 #, c-format
 msgid "Updates Configuration"
-msgstr ""
+msgstr "Konfiguration av uppdateringar"
 
 #: ../mdkapplet:719
 #, c-format
@@ -309,17 +313,17 @@ msgstr "Avsluta"
 #: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
 #, c-format
 msgid "New medium available"
-msgstr ""
+msgstr "Nytt media tillgängligt"
 
 #: ../mdkapplet:773
 #, c-format
 msgid "Mandriva PowerPack"
-msgstr ""
+msgstr "Mandriva PowerPack"
 
 #: ../mdkapplet:774 ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
-msgstr ""
+msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet:783 ../mdkapplet:809
 #, c-format
@@ -327,11 +331,12 @@ msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
+"Du använder '%s' distributionen och har därför priviligerad åtkomst till "
+"tilläggs-programvara."
 
-#: ../mdkapplet:785 ../mdkapplet:811
-#, fuzzy, c-format
+#: ../mdkapplet:785 ../mdkapplet:811, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr "Vill du uppgradera?"
+msgstr "Vill du lägga till detta tilläggs-media ?"
 
 #: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
 #: ../mdkapplet-enterprise-update-helper:73
@@ -341,47 +346,45 @@ msgstr "Vill du uppgradera?"
 #: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Lägger till ett extra media med paket"
 
 #: ../mdkapplet-config:62
 #, c-format
 msgid "Here you can configure the updates applet"
-msgstr ""
+msgstr "Här kan du konfigurera uppdaterings-programmet"
 
 #: ../mdkapplet-config:64
 #, c-format
 msgid "Update frequency (hours)"
-msgstr ""
+msgstr "Uppdaterings-frekvens (timmar)"
 
 #: ../mdkapplet-config:71
 #, c-format
 msgid "First check delay (minutes)"
-msgstr ""
+msgstr "Fördröjning vid första kontroll (minuter)"
 
 #: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Vänligen fyll i ditt konto ID för att lägga till ett extra media"
 
 #: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Mera information om ditt användarkonto"
 
 #: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Din e-post"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
-#, fuzzy, c-format
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82, c-format
 msgid "Your password"
-msgstr "Felaktigt lösenord"
+msgstr "Ditt lösenord"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
-#, fuzzy, c-format
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86, c-format
 msgid "Forgotten password"
-msgstr "Felaktigt lösenord"
+msgstr "Glömt lösenord"
 
 #: ../mdkapplet-enterprise-update-helper:96
 #: ../mdkapplet-enterprise-update-helper:126
@@ -396,7 +399,7 @@ msgstr "Fel"
 #: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Lösenord och e-post kan inte vara tomma."
 
 #: ../mdkapplet-enterprise-update-helper:126
 #: ../mdkapplet-restricted-helper:126
@@ -409,7 +412,7 @@ msgstr "Ett fel inträffade"
 #: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "Tillägg av media %s lyckades."
 
 #: ../mdkapplet-enterprise-update-helper:138
 #: ../mdkapplet-restricted-helper:143
@@ -423,6 +426,7 @@ msgstr "Ok"
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr ""
+"Ditt Mandriva konto har ingen Powerpack nerladdingsprenumeration aktiverad."
 
 #: ../mdkapplet-enterprise-update-helper:157
 #: ../mdkapplet-restricted-helper:162
@@ -431,16 +435,17 @@ msgid "Close"
 msgstr "Stäng"
 
 #: ../mdkapplet-enterprise-update-helper:163
-#: ../mdkapplet-restricted-helper:168
-#, fuzzy, c-format
+#: ../mdkapplet-restricted-helper:168, c-format
 msgid "An error occurred while adding medium"
-msgstr "Fel vid tillägg av media"
+msgstr "Ett fel inträffade vid tillägg av media"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
+"Ditt system har inte tillräckligt med ledigt utrymme på %s för en "
+"uppgradering (%sMB <%dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:210
@@ -451,7 +456,7 @@ msgstr "Installationen misslyckades"
 #: ../mdkapplet-upgrade-helper:125
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "Installationsloggar kan hittas på '%s'"
 
 #: ../mdkapplet-upgrade-helper:126
 #, c-format
@@ -466,12 +471,12 @@ msgstr "Gratulerar"
 #: ../mdkapplet-upgrade-helper:142
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Uppgraderingen till Mandriva %s distributionen lyckades."
 
 #: ../mdkapplet-upgrade-helper:144
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Du måste starta om ditt system."
 
 #: ../mdkapplet-upgrade-helper:145
 #, c-format
@@ -498,7 +503,7 @@ msgstr "Fel vid tillägg av media"
 #: ../mdkonline.pm:66
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Uppgradering av distribution"
 
 #: ../mdkupdate:59
 #, c-format
