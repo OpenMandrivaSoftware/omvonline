@@ -246,7 +246,11 @@ foreach my $opt (@ARGV) {
     }
 }
 
-my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
+my $root;
+{
+    my $temp_urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+    $root = $temp_urpm->{root};
+}
 
 my ($new_distro, $no_more_supported);
 my $product_id;
