@@ -41,13 +41,16 @@ use Rpmdrake::open_db;
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($log_file);
 
-my $new_distro_version;
+my ($new_distro_version, $download_dir);
 foreach my $opt (@ARGV) {
     if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
         $::rpmdrake_options{$1}[0] = $2;
     } elsif ($opt =~ /--new_distro_version=(.*)/) {
         $new_distro_version = $1;
+    } elsif ($opt =~ /--download-all=(.*)/) {
+        $download_dir = $1;
     }
+
 }
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
@@ -85,6 +88,8 @@ sub check_available_free_space {
 
 sub run_gurpmi() {
     my @initial_args = ('--replacefiles', '--clean');
+    push @initial_args, "--download-all=$download_dir" if $download_dir;
+
     while ($refork_gurpmi) {
         
         my $ok = fork_gurpmi(@initial_args);
