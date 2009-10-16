@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 15:43+0200\n"
+"POT-Creation-Date: 2009-10-16 19:59+0200\n"
 "PO-Revision-Date: 2009-09-29 21:33+0200\n"
 "Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -61,8 +61,9 @@ msgid ""
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
-"Denne version af distributionen understøttes ikke mere. Der vil ikke komme flere "
-"opdateringer. Du bør opgradere til en nyere version af %s distributionen."
+"Denne version af distributionen understøttes ikke mere. Der vil ikke komme "
+"flere opdateringer. Du bør opgradere til en nyere version af %s "
+"distributionen."
 
 #: ../mdkapplet:104
 #, c-format
@@ -92,11 +93,13 @@ msgstr "urpmi-database låst"
 #: ../mdkapplet:137
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr "Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
+msgstr ""
+"Udgivelse ikke understøttet (for gammel udgivelse, eller udviklingsudgivelse)"
 
 #: ../mdkapplet:142
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Intet medie fundet. Du skal tilføje et medie via 'Administration af "
 "programmedier'."
@@ -162,7 +165,12 @@ msgstr "Begynder på drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Ny version af Mandriva Linux distributionen"
 
-#: ../mdkapplet:414
+#: ../mdkapplet:420
+#, c-format
+msgid "Browse"
+msgstr ""
+
+#: ../mdkapplet:429
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "En ny version af Mandriva Linux distributionen er blevet udgivet."
@@ -182,7 +190,22 @@ msgstr "Ønsker du at opgradere til '%s' distributionen?"
 msgid "Do not ask me next time"
 msgstr "Spørg ikke næste gang"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:436
+#, c-format
+msgid "Download all packages at once"
+msgstr ""
+
+#: ../mdkapplet:437
+#, c-format
+msgid "(Warning: You will need quite a lot of free space)"
+msgstr ""
+
+#: ../mdkapplet:443
+#, c-format
+msgid "Where to download packages:"
+msgstr ""
+
+#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
@@ -422,7 +445,8 @@ msgstr "O.k."
 #: ../mdkapplet-enterprise-update-helper:151
 #: ../mdkapplet-restricted-helper:156
 #, c-format
-msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgid ""
+"Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Din Mandriva-konto har ikke aktiveret Powerpack download abonnement."
 
 #: ../mdkapplet-enterprise-update-helper:157
@@ -439,8 +463,10 @@ msgstr "Der skete en fejl ved tilføjelse af medie"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "Dit system har ikke nok plads tilbage på %s til opgradering (%d MB < %d MB)"
+msgid ""
+"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr ""
+"Dit system har ikke nok plads tilbage på %s til opgradering (%d MB < %d MB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:210
@@ -546,4 +572,3 @@ msgstr "  --debug\t\t\t- log der laves\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Kan ikke opdatere pakker fra update_source-medium.\n"
-

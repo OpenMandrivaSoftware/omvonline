@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 15:43+0200\n"
+"POT-Creation-Date: 2009-10-16 19:59+0200\n"
 "PO-Revision-Date: 2009-09-22 23:07+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.3\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:68
@@ -56,15 +56,15 @@ msgstr "Pro váš systém jsou k dispozici nové aktualizace"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Byla vydána nová verze distribuce Mandriva Linux"
 
-#: ../mdkapplet:104, c-format
+#: ../mdkapplet:104
+#, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
 "Tato verze distribuce již není podporována. Nebudou již pro ni dostupné "
-"žádné "
-"další aktualizace. Měli byste povýšit na novější verzi distribuce %s."
+"žádné další aktualizace. Měli byste povýšit na novější verzi distribuce %s."
 
 #: ../mdkapplet:104
 #, c-format
@@ -165,7 +165,12 @@ msgstr "Spouští se drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nová verze distribuce Mandriva Linux"
 
-#: ../mdkapplet:414
+#: ../mdkapplet:420
+#, c-format
+msgid "Browse"
+msgstr ""
+
+#: ../mdkapplet:429
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Byla vydána nová verze distribuce Mandriva Linux."
@@ -185,7 +190,22 @@ msgstr "Chcete povýšit systém na distribuci „%s”?"
 msgid "Do not ask me next time"
 msgstr "Příště se už neptat"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:436
+#, c-format
+msgid "Download all packages at once"
+msgstr ""
+
+#: ../mdkapplet:437
+#, c-format
+msgid "(Warning: You will need quite a lot of free space)"
+msgstr ""
+
+#: ../mdkapplet:443
+#, c-format
+msgid "Where to download packages:"
+msgstr ""
+
+#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
@@ -557,4 +577,3 @@ msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
-

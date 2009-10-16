@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-sv\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 15:43+0200\n"
+"POT-Creation-Date: 2009-10-16 19:59+0200\n"
 "PO-Revision-Date: 2009-10-11 19:08+0300\n"
 "Last-Translator: \n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,8 @@ msgstr "Vänta, hittar tillgängliga paket..."
 msgid "New updates are available for your system"
 msgstr "Nya uppdateringar finns tillgängliga för ditt system"
 
-#: ../mdkapplet:98, c-format
+#: ../mdkapplet:98
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "En ny distribution av Mandriva Linux har släppts"
 
@@ -64,11 +65,12 @@ msgid ""
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
-"Denna version av distributionen är inte längre stödd. Det kommer inte "
-"längre några uppdateringar. Du borde uppgradera till en du version av "
-"%s distributionen."
+"Denna version av distributionen är inte längre stödd. Det kommer inte längre "
+"några uppdateringar. Du borde uppgradera till en du version av %s "
+"distributionen."
 
-#: ../mdkapplet:104, c-format
+#: ../mdkapplet:104
+#, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
@@ -167,7 +169,13 @@ msgstr "Startar drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Ny version av Mandriva Linux distribution"
 
-#: ../mdkapplet:414, c-format
+#: ../mdkapplet:420
+#, c-format
+msgid "Browse"
+msgstr ""
+
+#: ../mdkapplet:429
+#, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "En ny version av Mandriva Linux distributionen har släppts."
 
@@ -176,7 +184,8 @@ msgstr "En ny version av Mandriva Linux distributionen har släppts."
 msgid "More info about this new version"
 msgstr "Mera info om denna nya version"
 
-#: ../mdkapplet:418, c-format
+#: ../mdkapplet:418
+#, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Vill du uppgradera till '%s' distributionen?"
 
@@ -185,7 +194,22 @@ msgstr "Vill du uppgradera till '%s' distributionen?"
 msgid "Do not ask me next time"
 msgstr "Fråga inte nästa gång"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:436
+#, c-format
+msgid "Download all packages at once"
+msgstr ""
+
+#: ../mdkapplet:437
+#, c-format
+msgid "(Warning: You will need quite a lot of free space)"
+msgstr ""
+
+#: ../mdkapplet:443
+#, c-format
+msgid "Where to download packages:"
+msgstr ""
+
+#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
@@ -204,8 +228,8 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
-"Denna uppgradering kräver en snabb nätförbindelse (kabel, xDSL, ...) "
-"och kan ta flera timmar innan det är färdigt."
+"Denna uppgradering kräver en snabb nätförbindelse (kabel, xDSL, ...) och kan "
+"ta flera timmar innan det är färdigt."
 
 #: ../mdkapplet:450
 #, c-format
@@ -224,8 +248,7 @@ msgid ""
 "available."
 msgstr ""
 "Du borde koppla din bärbara till väggströmen och fast nätanslutning i "
-"stället för "
-"trådlöst om det är tillgängligt."
+"stället för trådlöst om det är tillgängligt."
 
 #: ../mdkapplet:480
 #, c-format
@@ -334,7 +357,8 @@ msgstr ""
 "Du använder '%s' distributionen och har därför priviligerad åtkomst till "
 "tilläggs-programvara."
 
-#: ../mdkapplet:785 ../mdkapplet:811, c-format
+#: ../mdkapplet:785 ../mdkapplet:811
+#, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Vill du lägga till detta tilläggs-media ?"
 
@@ -378,11 +402,13 @@ msgstr "Mera information om ditt användarkonto"
 msgid "Your email"
 msgstr "Din e-post"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82, c-format
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
+#, c-format
 msgid "Your password"
 msgstr "Ditt lösenord"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86, c-format
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
+#, c-format
 msgid "Forgotten password"
 msgstr "Glömt lösenord"
 
@@ -435,7 +461,8 @@ msgid "Close"
 msgstr "Stäng"
 
 #: ../mdkapplet-enterprise-update-helper:163
-#: ../mdkapplet-restricted-helper:168, c-format
+#: ../mdkapplet-restricted-helper:168
+#, c-format
 msgid "An error occurred while adding medium"
 msgstr "Ett fel inträffade vid tillägg av media"
 

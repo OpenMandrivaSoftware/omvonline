@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 15:43+0200\n"
+"POT-Creation-Date: 2009-10-16 19:59+0200\n"
 "PO-Revision-Date: 2009-09-19 12:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,8 @@ msgstr "Zure sistemarentzako eguneraketa berriak eskuragarri daude"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mandriva Linux banaketaren bertsio berri bat kaleratu da"
 
-#: ../mdkapplet:104, c-format
+#: ../mdkapplet:104
+#, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
 "further updates. You should upgrade to a newer version of the %s "
@@ -163,7 +164,12 @@ msgstr "drakconect abiarazten\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux banaketaren bertsio berria"
 
-#: ../mdkapplet:414
+#: ../mdkapplet:420
+#, c-format
+msgid "Browse"
+msgstr ""
+
+#: ../mdkapplet:429
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mandriva Linux banaketaren bertsio berri bat kaleratu da."
@@ -183,7 +189,22 @@ msgstr "'%s' banaketara bertsio berritu nahi duzu?"
 msgid "Do not ask me next time"
 msgstr "Ez galdetu berriz"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:436
+#, c-format
+msgid "Download all packages at once"
+msgstr ""
+
+#: ../mdkapplet:437
+#, c-format
+msgid "(Warning: You will need quite a lot of free space)"
+msgstr ""
+
+#: ../mdkapplet:443
+#, c-format
+msgid "Where to download packages:"
+msgstr ""
+
+#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
@@ -554,4 +575,3 @@ msgstr "  --debug\t\t\t- erregistratu egindako ekintzak\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Ezin dira update_source euskarritik paketeak eguneratu.\n"
-
