@@ -171,6 +171,7 @@ sub adding_media_failed {
 
 sub actually_add_restricted_medium {
     my ($ref, $password, $arch) = @_;
+    $password = uri_escape($password);
     my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
     my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/$version/";
     run_program::raw(@options, "Restricted $arch " . int(rand(100000)), "$uri$arch") or return 0;
