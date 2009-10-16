@@ -1,4 +1,4 @@
-# translation of it.po to Italian
+# translation of mdkonline.po to Italian
 # Italian translation of Mandriva Online.
 # Copyright (C) 2002,2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
@@ -7,18 +7,19 @@
 # Daniele Pighin <daniele@dcs.it>, 2003, 2004, 2005.
 # Andrea Celli <andrea.celli@libero.it>, 2007, 2008, 2009.
 # Marcello Anni <marcello.anni@alice.it>, 2009.
+# Moreno Manzini <moreno.mg@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: it\n"
+"Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-16 19:59+0200\n"
-"PO-Revision-Date: 2009-09-07 22:21+0200\n"
-"Last-Translator: Marcello Anni <marcello.anni@alice.it>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"POT-Creation-Date: 2009-09-18 15:43+0200\n"
+"PO-Revision-Date: 2009-10-16 11:44+0200\n"
+"Last-Translator: Moreno Manzini <moreno.mg@gmail.com>\n"
+"Language-Team: Italian <timl@freelist.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
@@ -57,14 +58,15 @@ msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "È stata rilasciata una nuova versione di Mandriva Linux"
 
 #: ../mdkapplet:104
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
-"Questa distribuzione non è più supportata. Non ci saranno più aggiornamenti. "
-"Dovresti aggiornare a una versione più recente della distribuzione %s."
+"Questa versione della distribuzione non è più supportata. Non ci saranno più "
+"aggiornamenti. Dovresti aggiornare a una versione più recente della "
+"distribuzione %s."
 
 #: ../mdkapplet:104
 #, c-format
@@ -98,8 +100,7 @@ msgstr "Versione non supportata (troppo vecchia o di sviluppo)"
 
 #: ../mdkapplet:142
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nessuna fonte trovata. Aggiungine qualcuna attraverso \"Gestione fonti "
 "software\"."
@@ -166,16 +167,10 @@ msgstr "Sto avviando drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nuova versione della distribuzione Mandriva Linux"
 
-#: ../mdkapplet:420
-#, c-format
-msgid "Browse"
-msgstr ""
-
-#: ../mdkapplet:429
+#: ../mdkapplet:414
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr ""
-"È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
+msgstr "È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
 
 #: ../mdkapplet:416
 #, c-format
@@ -192,22 +187,7 @@ msgstr "Vuoi aggiornare alla distribuzione \"%s\"?"
 msgid "Do not ask me next time"
 msgstr "Non chiederlo più"
 
-#: ../mdkapplet:436
-#, c-format
-msgid "Download all packages at once"
-msgstr ""
-
-#: ../mdkapplet:437
-#, c-format
-msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
-
-#: ../mdkapplet:443
-#, c-format
-msgid "Where to download packages:"
-msgstr ""
-
-#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
+#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
@@ -237,8 +217,7 @@ msgstr "Si stima che debbano essere scaricati %s di dati"
 #: ../mdkapplet:451
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
-"Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
+msgstr "Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
 
 #: ../mdkapplet:454
 #, c-format
@@ -450,10 +429,8 @@ msgstr "OK"
 #: ../mdkapplet-enterprise-update-helper:151
 #: ../mdkapplet-restricted-helper:156
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Il tuo account Mandriva non consente di scaricare i pacchetti di Powerpack."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Il tuo account Mandriva non consente di scaricare i pacchetti di Powerpack."
 
 #: ../mdkapplet-enterprise-update-helper:157
 #: ../mdkapplet-restricted-helper:162
@@ -469,10 +446,8 @@ msgstr "Si è verificato un errore mentre si aggiungeva la fonte"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
-"Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:210
@@ -578,3 +553,4 @@ msgstr "  --debug\t\t\t- mantiene un log delle azioni fatte\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossibile aggiornare i pacchetti dalla fonte update_source.\n"
+
