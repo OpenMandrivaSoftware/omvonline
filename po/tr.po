@@ -12,14 +12,17 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-16 19:59+0200\n"
-"PO-Revision-Date: 2009-09-26 01:03+0300\n"
-"Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.com>\n"
+"PO-Revision-Date: 2009-10-17 23:43+0200\n"
+"Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 "Language-Team: Turkish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 0.3\n"
+"X-Poedit-Language: Turkish\n"
+"X-Poedit-Country: TURKEY\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:68
@@ -34,12 +37,8 @@ msgstr "Sisteminiz güncel"
 
 #: ../mdkapplet:81
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Hizmet yapılandırma sorunu. Lütfen kayıtları kontrol edin ve "
-"support@manrakeonline.net adresine posta gönderin"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Hizmet yapılandırma sorunu. Lütfen kayıtları kontrol edin ve support@manrakeonline.net adresine posta gönderin"
 
 #: ../mdkapplet:87
 #, c-format
@@ -58,20 +57,16 @@ msgstr "Mandriva Linux' un yeni bir sürümü yayınlanmış"
 
 #: ../mdkapplet:104
 #, c-format
-msgid ""
-"This version of the distribution is no longer supported. There will be no "
-"further updates. You should upgrade to a newer version of the %s "
-"distribution."
-msgstr ""
-"Bu dağıtım artık desteklenmiyor. Daha fazla güncelleme yapılmayacak. %s "
-"dağıtımının daha yeni bir sürümüne yükseltme yapmalısınız."
+msgid "This version of the distribution is no longer supported. There will be no further updates. You should upgrade to a newer version of the %s distribution."
+msgstr "Bu dağıtım artık desteklenmiyor. Daha fazla güncelleme yapılmayacak. %s dağıtımının daha yeni bir sürümüne yükseltme yapmalısınız."
 
 #: ../mdkapplet:104
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:110 ../mdkapplet:147
+#: ../mdkapplet:110
+#: ../mdkapplet:147
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Dağıtımınız için ek bir paket veri kaynağı mevcut"
@@ -86,7 +81,8 @@ msgstr "Ağınız çalışmıyor. Lütfen ağ yapılandırmanızı kontrol edin"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Hizmet etkin değil. Lütfen \"Çevrimiçi Website\"bağlantısına tıklayın"
 
-#: ../mdkapplet:126 ../mdkapplet:132
+#: ../mdkapplet:126
+#: ../mdkapplet:132
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi veri tabanı kilitli "
@@ -98,11 +94,8 @@ msgstr "Sürüm Desteklenmiyor (Çok eski ya da deneme sürümü)"
 
 #: ../mdkapplet:142
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir "
-"yazılım ortamı ekleyin."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir yazılım ortamı ekleyin."
 
 #: ../mdkapplet:152
 #, c-format
@@ -131,12 +124,14 @@ msgstr "Etkin"
 msgid "Error updating media"
 msgstr "Kaynak güncelleme hatası"
 
-#: ../mdkapplet:210 ../mdkapplet:672
+#: ../mdkapplet:210
+#: ../mdkapplet:672
 #, c-format
 msgid "Install updates"
 msgstr "Güncellemeleri Kur"
 
-#: ../mdkapplet:211 ../mdkapplet:212
+#: ../mdkapplet:211
+#: ../mdkapplet:212
 #, c-format
 msgid "Add additional package medium"
 msgstr "Ek bir paket veri kaynağı ekle"
@@ -161,15 +156,16 @@ msgstr "Sistemi yükselt"
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect başlatılıyor\n"
 
-#: ../mdkapplet:410 ../mdkapplet:431
+#: ../mdkapplet:410
+#: ../mdkapplet:431
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr "Mandrvia Linux dağıtımının yeni sürümü"
+msgstr "Mandriva Linux dağıtımının yeni sürümü"
 
 #: ../mdkapplet:420
 #, c-format
 msgid "Browse"
-msgstr ""
+msgstr "Göz at"
 
 #: ../mdkapplet:429
 #, c-format
@@ -186,7 +182,9 @@ msgstr "Bu sürüm hakkında daha fazla bilgi"
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "'%s' dağıtımına yükseltmek ister misiniz?"
 
-#: ../mdkapplet:420 ../mdkapplet:786 ../mdkapplet:812
+#: ../mdkapplet:420
+#: ../mdkapplet:786
+#: ../mdkapplet:812
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Bir daha sorma"
@@ -194,38 +192,44 @@ msgstr "Bir daha sorma"
 #: ../mdkapplet:436
 #, c-format
 msgid "Download all packages at once"
-msgstr ""
+msgstr "Tüm paketleri tek seferde indir"
 
 #: ../mdkapplet:437
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
+msgstr "(Uyarı: Oldukça fazla boş alana gereksinimizi olacak)"
 
 #: ../mdkapplet:443
 #, c-format
 msgid "Where to download packages:"
-msgstr ""
+msgstr "Paketlerin indirileceği konum:"
 
-#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet:446
+#: ../mdkapplet:487
+#: ../mdkapplet:818
+#: ../mdkapplet:844
+#: ../mdkapplet-enterprise-update-helper:88
+#: ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
 msgstr "İleri"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
-#: ../mdkapplet-upgrade-helper:126 ../mdkapplet-upgrade-helper:145
+#: ../mdkapplet:421
+#: ../mdkapplet:457
+#: ../mdkapplet:787
+#: ../mdkapplet:813
+#: ../mdkapplet-enterprise-update-helper:88
+#: ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-upgrade-helper:126
+#: ../mdkapplet-upgrade-helper:145
 #, c-format
 msgid "Cancel"
 msgstr "İptal"
 
 #: ../mdkapplet:448
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
-"Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
 
 #: ../mdkapplet:450
 #, c-format
@@ -239,11 +243,8 @@ msgstr "Devam etmeden önce, çalışan tüm uygulamaları kapatmalısınız."
 
 #: ../mdkapplet:454
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
-"Dizüstü bilgisayarınızı doğrudan fişe takmalı ve mümkünse, kablosuz bağlantı  yerine ethernet bağlantısını tercih etmelisiniz."
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Dizüstü bilgisayarınızı doğrudan fişe takmalı ve mümkünse, kablosuz bağlantı  yerine ethernet bağlantısını tercih etmelisiniz."
 
 #: ../mdkapplet:480
 #, c-format
@@ -270,7 +271,9 @@ msgstr "Ağ Denetleniyor: etkinleştirilmemiş\n"
 msgid "Warning"
 msgstr "Uyarı"
 
-#: ../mdkapplet:666 ../mdkapplet:674 ../mdkapplet:676
+#: ../mdkapplet:666
+#: ../mdkapplet:674
+#: ../mdkapplet:676
 #: ../mdkapplet-enterprise-update-helper:155
 #: ../mdkapplet-restricted-helper:160
 #, c-format
@@ -313,7 +316,8 @@ msgstr "Çevrimiçi Website"
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 
-#: ../mdkapplet:717 ../mdkapplet-config:61
+#: ../mdkapplet:717
+#: ../mdkapplet-config:61
 #, c-format
 msgid "Updates Configuration"
 msgstr "Güncelleme Ayarları"
@@ -328,7 +332,10 @@ msgstr "Her zaman başlangıçta çalıştır"
 msgid "Quit"
 msgstr "Çıkış"
 
-#: ../mdkapplet:771 ../mdkapplet:781 ../mdkapplet:802 ../mdkapplet:807
+#: ../mdkapplet:771
+#: ../mdkapplet:781
+#: ../mdkapplet:802
+#: ../mdkapplet:807
 #, c-format
 msgid "New medium available"
 msgstr "Yeni veri kaynağı mevcut"
@@ -338,30 +345,32 @@ msgstr "Yeni veri kaynağı mevcut"
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkapplet:774 ../mdkapplet:810
+#: ../mdkapplet:774
+#: ../mdkapplet:810
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet:783 ../mdkapplet:809
+#: ../mdkapplet:783
+#: ../mdkapplet:809
 #, c-format
-msgid ""
-"You use '%s' distribution and therefore have privileged access to additional "
-"software."
-msgstr ""
-"'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz "
-"var."
+msgid "You use '%s' distribution and therefore have privileged access to additional software."
+msgstr "'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz var."
 
-#: ../mdkapplet:785 ../mdkapplet:811
+#: ../mdkapplet:785
+#: ../mdkapplet:811
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Bu ek paket veri kaynağını eklemek ister misiniz?"
 
-#: ../mdkapplet-config:42 ../mdkapplet-enterprise-update-helper:61
+#: ../mdkapplet-config:42
+#: ../mdkapplet-enterprise-update-helper:61
 #: ../mdkapplet-enterprise-update-helper:73
 #: ../mdkapplet-enterprise-update-helper:145
-#: ../mdkapplet-enterprise-update-helper:150 ../mdkapplet-restricted-helper:61
-#: ../mdkapplet-restricted-helper:73 ../mdkapplet-restricted-helper:150
+#: ../mdkapplet-enterprise-update-helper:150
+#: ../mdkapplet-restricted-helper:61
+#: ../mdkapplet-restricted-helper:73
+#: ../mdkapplet-restricted-helper:150
 #: ../mdkapplet-restricted-helper:155
 #, c-format
 msgid "Adding an additional package medium"
@@ -382,43 +391,52 @@ msgstr "Güncelleme sıklığı (saat)"
 msgid "First check delay (minutes)"
 msgstr "İlk denetleme gecikmesi (dakika)"
 
-#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:74
+#: ../mdkapplet-enterprise-update-helper:74
+#: ../mdkapplet-restricted-helper:74
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
+msgstr "Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
 
-#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:78
+#: ../mdkapplet-enterprise-update-helper:78
+#: ../mdkapplet-restricted-helper:78
 #, c-format
 msgid "More information on your user account"
 msgstr "Kullanıcı hesabınızla ilgili ayrıntılı bilgi"
 
-#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:81
+#: ../mdkapplet-enterprise-update-helper:81
+#: ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Your email"
 msgstr "E-posta adresiniz"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:82
+#: ../mdkapplet-enterprise-update-helper:82
+#: ../mdkapplet-restricted-helper:82
 #, c-format
 msgid "Your password"
 msgstr "Parolanız"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:86
+#: ../mdkapplet-enterprise-update-helper:86
+#: ../mdkapplet-restricted-helper:86
 #, c-format
 msgid "Forgotten password"
 msgstr "Unutulan parola"
 
 #: ../mdkapplet-enterprise-update-helper:96
 #: ../mdkapplet-enterprise-update-helper:126
-#: ../mdkapplet-enterprise-update-helper:163 ../mdkapplet-restricted-helper:96
-#: ../mdkapplet-restricted-helper:126 ../mdkapplet-restricted-helper:168
-#: ../mdkapplet-upgrade-helper:79 ../mdkapplet-upgrade-helper:120
-#: ../mdkapplet-upgrade-helper:172 ../mdkapplet-upgrade-helper:209
+#: ../mdkapplet-enterprise-update-helper:163
+#: ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-restricted-helper:126
+#: ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet-upgrade-helper:120
+#: ../mdkapplet-upgrade-helper:172
+#: ../mdkapplet-upgrade-helper:209
 #, c-format
 msgid "Error"
 msgstr "Hata"
 
-#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:96
+#: ../mdkapplet-enterprise-update-helper:96
+#: ../mdkapplet-restricted-helper:96
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Parola ve e-posta boş olamaz."
@@ -431,7 +449,8 @@ msgstr "Bir hata oluştu"
 
 #: ../mdkapplet-enterprise-update-helper:137
 #: ../mdkapplet-enterprise-update-helper:138
-#: ../mdkapplet-restricted-helper:142 ../mdkapplet-restricted-helper:143
+#: ../mdkapplet-restricted-helper:142
+#: ../mdkapplet-restricted-helper:143
 #, c-format
 msgid "Successfully added media %s."
 msgstr "%s veri kaynağı başarıyla eklendi."
@@ -445,8 +464,7 @@ msgstr "Tamam"
 #: ../mdkapplet-enterprise-update-helper:151
 #: ../mdkapplet-restricted-helper:156
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Mandriva hesabınız Powerpack üyeliği içermiyor."
 
 #: ../mdkapplet-enterprise-update-helper:157
@@ -463,13 +481,11 @@ msgstr "Veri kaynağı eklenirken hata oluştu"
 
 #: ../mdkapplet-upgrade-helper:76
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
-"Sisteminizin yükseltme için %s içinde yeteri kadar boş alanı yok. (%dMB < %"
-"dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Sisteminizin yükseltme için %s içinde yeteri kadar boş alanı yok. (%dMB < %dMB)"
 
-#: ../mdkapplet-upgrade-helper:124 ../mdkapplet-upgrade-helper:173
+#: ../mdkapplet-upgrade-helper:124
+#: ../mdkapplet-upgrade-helper:173
 #: ../mdkapplet-upgrade-helper:210
 #, c-format
 msgid "Installation failed"
@@ -533,8 +549,7 @@ msgstr "Dağıtım Yükseltmesi"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -576,138 +591,103 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 
 #~ msgid "You are using '%s' distribution."
 #~ msgstr "'%s' dağıtımını kullanıyorsunuz."
-
 #~ msgid "Do you want to upgrade?"
 #~ msgstr "Yükseltmek ister misniz?"
-
 #~ msgid "Yes"
 #~ msgstr "Evet"
-
 #~ msgid "No"
 #~ msgstr "Hayır"
-
 #~ msgid "Mandriva Online seems to be reinstalled, reloading applet ...."
 #~ msgstr ""
 #~ "Mandriva Online yenilenmiş gözüküyor. Programcık yeniden yükleniyor ...."
-
 #~ msgid "Checking... Updates are available\n"
 #~ msgstr "Denetleniyor.... Güncelleştirmeler mevcut.\n"
-
 #~ msgid "Packages are up to date"
 #~ msgstr "Paketler güncel"
-
 #~ msgid "Failed to open urpmi database"
 #~ msgstr "Urpmi veri tabanı açılamıyor"
-
 #~ msgid "Connecting to"
 #~ msgstr "Bağlanıyor"
-
 #~ msgid "Mandriva Linux Updates Applet"
 #~ msgstr "Mandriva Linux Güncelleme Uygulamacığı"
-
 #~ msgid "Security error"
 #~ msgstr "Güvenlik hatası"
-
 #~ msgid "Generic error (machine already registered)"
 #~ msgstr "Genel hata (makine zaten kayıtlı)"
-
 #~ msgid "Database error"
 #~ msgstr "Veritabanı Hatası"
-
 #~ msgid ""
 #~ "Server Database failed\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "Sunucu Veritabanı başarısız\n"
 #~ "Lütfen daha sonra tekrar deneyin"
-
 #~ msgid "Registration error"
 #~ msgstr "Kayıt Hatası"
-
 #~ msgid "Some parameters are missing"
 #~ msgstr "Bazı değişkenler eksik"
-
 #~ msgid "Password error"
 #~ msgstr "parola hatası"
-
 #~ msgid "Login error"
 #~ msgstr "giriş hatası"
-
 #~ msgid ""
 #~ "The email you provided is already in use\n"
 #~ "Please enter another one\n"
 #~ msgstr ""
 #~ "Vermiş olduğunuz E-Posta adresi kullanımda\n"
 #~ "Lütfen başka bir tane veriniz\n"
-
 #~ msgid "The email you provided is invalid or forbidden"
 #~ msgstr "Vermiş olduğunuz posta adresi geçersiz ya da yasaklı"
-
 #~ msgid ""
 #~ "Email address box is empty\n"
 #~ "Please provide one"
 #~ msgstr ""
 #~ "E-Posta alanı boş bırakılmış\n"
 #~ "Lütfen doldurunuz"
-
 #~ msgid "Restriction Error"
 #~ msgstr "Sınırlama Hatası"
-
 #~ msgid "Database access forbidden"
 #~ msgstr "Veritabanı Sunucusuna erişim yasaklı"
-
 #~ msgid "Service error"
 #~ msgstr "Hizmet hatası"
-
 #~ msgid ""
 #~ "Mandriva web services are currently unavailable\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "Mandriva web hizmetlerine şu anda erişilemez\n"
 #~ "Lütfen Daha sonra tekrar deneyin"
-
 #~ msgid "Password mismatch"
 #~ msgstr "Parolalar uyuşmuyor"
-
 #~ msgid ""
 #~ "Mandriva web services are under maintenance\n"
 #~ "Please Try again Later"
 #~ msgstr ""
 #~ "Mandriva web servisleri şu an için bakımda.\n"
 #~ "Daha sonra lütfen tekrar deneyiniz"
-
 #~ msgid "User Forbidden"
 #~ msgstr "Kullanıcı yasaklı"
-
 #~ msgid "User account forbidden by Mandriva web services"
 #~ msgstr "Kullanıcı hesabı Mandriva web servisleri tarafından yasaklanmıştır"
-
 #~ msgid "Connection error"
 #~ msgstr "Bağlantı hatası"
-
 #~ msgid "Mandriva web services not reachable"
 #~ msgstr "Mandriva web servislerine erişilemez"
-
 #~ msgid ""
 #~ "  --bundle file.bundle\t- parse and install package from .bundle metainfo "
 #~ "file.\n"
 #~ msgstr ""
 #~ "  --bundle file.bundle\t- paketi .bundle metaverisi dosyasından incele ve "
 #~ "kur.\n"
-
 #~ msgid ""
 #~ "You first need to install the system on your harddrive with the 'Live "
 #~ "Install' wizard."
 #~ msgstr ""
 #~ "Öncelikle sistem 'Canlı Kurma' sihirbazı ile sabit diskinize kurmanız "
 #~ "gereklidir."
-
 #~ msgid "Please wait"
 #~ msgstr "Lütfen bekleyin"
-
 #~ msgid "Preparing..."
 #~ msgstr "Hazırlanıyor..."
-
 #~ msgid ""
 #~ "Failed to authenticate to the bundle server:\n"
 #~ "\n"
@@ -716,7 +696,6 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 #~ "Yığın sunucusuna doğrulatma başarısız:\n"
 #~ "\n"
 #~ "%s"
-
 #~ msgid ""
 #~ "The version of the Mandriva Online client is too old.\n"
 #~ "\n"
@@ -727,9 +706,8 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 #~ "\n"
 #~ "Yeni bir sürüme yükseltmeniz gerekli. Yeni sürümü http://start.mandriva."
 #~ "com adresinden edinebilirsiniz"
-
 #~ msgid "This bundle is not well formated. Aborting."
 #~ msgstr "Bu yığın iyi biçimlenmemiş. İptal ediliyor."
-
 #~ msgid "Installing packages ...\n"
 #~ msgstr "Paketler kuruluyor...\n"
+
