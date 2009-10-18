@@ -1,4 +1,4 @@
-# translation of mdkonline.po to Italian
+# translation of it.po to Italian
 # Italian translation of Mandriva Online.
 # Copyright (C) 2002,2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
@@ -10,12 +10,12 @@
 # Moreno Manzini <moreno.mg@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-18 15:43+0200\n"
-"PO-Revision-Date: 2009-10-16 11:44+0200\n"
-"Last-Translator: Moreno Manzini <moreno.mg@gmail.com>\n"
-"Language-Team: Italian <timl@freelist.org>\n"
+"POT-Creation-Date: 2009-10-16 19:59+0200\n"
+"PO-Revision-Date: 2009-10-18 15:41+0200\n"
+"Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
+"Language-Team: Italian <timl@freelists.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -167,7 +167,12 @@ msgstr "Sto avviando drakconnect\n"
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nuova versione della distribuzione Mandriva Linux"
 
-#: ../mdkapplet:414
+#: ../mdkapplet:420
+#, c-format
+msgid "Browse"
+msgstr "Naviga"
+
+#: ../mdkapplet:429
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
@@ -187,7 +192,22 @@ msgstr "Vuoi aggiornare alla distribuzione \"%s\"?"
 msgid "Do not ask me next time"
 msgstr "Non chiederlo più"
 
-#: ../mdkapplet:421 ../mdkapplet:457 ../mdkapplet:787 ../mdkapplet:813
+#: ../mdkapplet:436
+#, c-format
+msgid "Download all packages at once"
+msgstr "Scarica subito tutti i pacchetti"
+
+#: ../mdkapplet:437
+#, c-format
+msgid "(Warning: You will need quite a lot of free space)"
+msgstr "(Attenzione: Ti servirà un bel po' di spazio libero)"
+
+#: ../mdkapplet:443
+#, c-format
+msgid "Where to download packages:"
+msgstr "Dove scaricare i pacchetti:"
+
+#: ../mdkapplet:446 ../mdkapplet:487 ../mdkapplet:818 ../mdkapplet:844
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Next"
