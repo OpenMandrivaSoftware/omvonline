@@ -302,7 +302,7 @@ sub get_distro_list() {
             mdkapplet_urpm::get_content($urpm, $list);
         } else {
             urpm::ensure_valid_cachedir($urpm);
-            urpm::download::get_content($urpm, $list, "strict-certificate-check" => 1);
+            urpm::download::get_content($urpm, $list);
         }
     };
 }
