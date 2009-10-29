@@ -342,9 +342,10 @@ sub is_there_a_new_distributions() {
         return 1;
     }
 
-    $no_more_supported = !member($product_id->{version}, map { $_->{version} } @distros);
+    my $current_distro = find { $_->{version} eq $product_id->{version} } @distros;
+    $no_more_supported = $current_distro->{obsoleted_by};
     if ($no_more_supported) {
-        $new_distro = $new_distribution;
+        $new_distro = find { $_->{version} eq $no_more_supported } @distros;
         return;
     }
 
