@@ -333,6 +333,9 @@ sub is_there_a_new_distributions() {
 
     my @distros = map { common::parse_LDAP_namespace_structure(chomp_($_)) } @lines;
 
+    # do not do anything if current distribution isn't listed on api.mdv.com:
+    return if !member($product_id->{version}, map { $_->{version} } @distros);
+
     # only compare first distro: if it's not the same as the currently installed one,
     # then it's the most recent release:
     my $new_distribution = $distros[0];
