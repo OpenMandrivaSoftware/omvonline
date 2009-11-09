@@ -285,7 +285,7 @@ sub get_distro_list() {
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
-    my $list = "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}";
+    my $list = "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}&version=$product_id->{version}";
     log::explanations("trying distributions list from $list");
 
     eval {
