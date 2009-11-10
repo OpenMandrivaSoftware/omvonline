@@ -440,7 +440,7 @@ sub confirm_upgrade() {
                gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
                         N("(Warning: You will need quite a lot of free space)"),
                       active_ref => \$download_all, sensitive_ref => \$browse,
-                      toggled => sub { $box->set_sensitive($download_all) },
+                      toggled => sub { $box and $box->set_sensitive($download_all) },
                   ),
                $box = gtknew('HBox', sensitive => $download_all,
                              children => [
