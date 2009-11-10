@@ -1,5 +1,5 @@
 PACKAGE = mdkonline
-VERSION:=2.77.8
+VERSION:=2.77.9
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
 NAME = mdkonline
