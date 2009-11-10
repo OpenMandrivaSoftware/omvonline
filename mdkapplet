@@ -386,18 +386,21 @@ sub harvester {
             if ($state) {
                 log::explanations($state->{log});
                 $sub_state = $state->{status};
-                if ($no_more_supported) {
+                if ($sub_state eq 'locked') {
+                    $locked_count++;
+                    $sub_state = 'loop_locked' if $locked_count > 10;
+                } else {
+                    $locked_count = 0;
+                }
+                # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
+                if (!member($sub_state, qw(okay))) {
+                    go2State($sub_state);
+                } elsif ($no_more_supported) {
                     go2State('no_more_supported');
                 } elsif ($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
                       && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i) {
                     go2State('new_distribution');
                 } else {
-                    if ($sub_state eq 'locked') {
-                        $locked_count++;
-                        $sub_state = 'loop_locked' if $locked_count > 10;
-                    } else {
-                        $locked_count = 0;
-                    }
                     go2State($sub_state);
                 }
             }
