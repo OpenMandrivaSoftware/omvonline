@@ -112,6 +112,11 @@ sub get_from {
     $response;
 }
 
+sub has_mes5_rights {
+    my ($ref) = @_;
+    $ref->{data}{groups}{'es5-prod'} || $ref->{data}{groups}{'es5-demo'};
+}
+
 my $error;
 sub add_enterprise_update_medium {
     my ($email, $password) = @_;
@@ -125,7 +130,7 @@ sub add_enterprise_update_medium {
         my $in = interactive->vnew;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
-    } elsif ($ref->{data}{'can-access-restricted-repositories'} ne 'YES') {
+    } elsif (!has_mes5_rights($ref)) {
         no_rigths_dialog();
     } else {
         $error = 0;
