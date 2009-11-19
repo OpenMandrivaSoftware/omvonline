@@ -51,7 +51,6 @@ foreach my $opt (@ARGV) {
     } elsif ($opt =~ /--download-all=(.*)/) {
         $download_dir = $1;
     }
-
 }
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
@@ -221,6 +220,7 @@ packages as well?)."))
 
     log::explanations("upgrading urpmi and rpmdrake");
     log::explanations("upgrading the whole system");
+
     # rerun gurpmi in case there was an issue (with eg: big transactions:
     $refork_gurpmi = 4;
     {
@@ -229,6 +229,7 @@ packages as well?)."))
         $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
         log::explanations("logging gurpmi message in '$log_file'");
     }
+
     # we cannot use installUpdates() as MandrivaUpdate needs the media
     # flaged as update (or else, we need to add a new option to MandrivaUpdate):
     run_gurpmi();
