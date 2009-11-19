@@ -578,7 +578,9 @@ sub silentCheck() {
         }
         checker_exit('locked') if $will_not_update_media;
 
-        if (!run_program::run('urpmi.update', (is_it_a_devel_distro2() ? '-a' : '--update'), if_($root, "--urpmi-root=$root"))) {
+        my $is_it_a_devel_distro = is_it_a_devel_distro();
+        my $media = $is_it_a_devel_distro ? '-a' : '--update';
+        if (!run_program::run('urpmi.update', $media, if_($root, "--urpmi-root=$root"))) {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
@@ -591,7 +593,7 @@ sub silentCheck() {
         require urpm::media;
         # this eats 52Mb of RAM on 64bit:
         # (hence we do it in the forked helper so that the applet doesn't eat too much RAM)
-        urpm::media::configure($urpm, if_(!is_it_a_devel_distro(), update => 1));
+        urpm::media::configure($urpm, if_(!$is_it_a_devel_distro, update => 1));
         my @update_medias = get_update_medias($urpm);
         if (!@update_medias) {
 	    get_product_id();
