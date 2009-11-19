@@ -552,7 +552,12 @@ sub silentCheck() {
         return if $checker_pid; # parent
 
         # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
-        my $_safe = before_leaving { POSIX::_exit(0) };
+        my $_safe = before_leaving {
+            my $err = $@;
+            log::explanations("mdkapplet check crashed: $err ");
+            warn "Error: $err\n" . common::backtrace();
+            POSIX::_exit(0);
+        };
 
         # be nice with other processes:
         setpriority(0, $$, 7);  # 0 is PRIO_PROCESS
@@ -573,7 +578,7 @@ sub silentCheck() {
         }
         checker_exit('locked') if $will_not_update_media;
 
-        if (!run_program::run('urpmi.update', (is_it_a_devel_distro() ? '-a' : '--update'), if_($root, "--urpmi-root=$root"))) {
+        if (!run_program::run('urpmi.update', (is_it_a_devel_distro2() ? '-a' : '--update'), if_($root, "--urpmi-root=$root"))) {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
