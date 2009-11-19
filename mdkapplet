@@ -289,6 +289,7 @@ sub get_distro_list() {
       join('&',
            "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
            "version=$product_id->{version}",
+           "mdkonline_version=$mdkonline::version",
        );
     log::explanations("trying distributions list from $list");
 
