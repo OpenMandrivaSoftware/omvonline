@@ -153,7 +153,7 @@ sub no_rigths_dialog() {
           $w,
           [
               get_banner(N("Adding an additional package medium")),
-              gtknew('Label_Left', text => N("Your Mandriva account does not have Powerpack download subscription enabled."),
+              gtknew('Label_Left', text => N("Your Mandriva account does not have %s download subscription enabled.", N("MES5")),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
                   interactive::gtk::add_padding(
