@@ -421,6 +421,12 @@ sub harvester {
 
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
+# only enable 'download all packages at once' on 2010.1 and further:
+sub is_download_all_enabled {
+    # prevent crashing on 2008.1 and 2009.0:
+    eval { is_it_a_devel_distro() } || !member($product_id->{version}, qw(2008.1 2009.0 2009.1));
+}
+
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
@@ -445,16 +451,18 @@ sub confirm_upgrade() {
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
-               gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
-                        N("(Warning: You will need quite a lot of free space)"),
-                      active_ref => \$download_all, sensitive_ref => \$browse,
-                      toggled => sub { $box and $box->set_sensitive($download_all) },
-                  ),
-               $box = gtknew('HBox', sensitive => $download_all,
-                             children => [
-                                 0, gtknew('Label_Left', text => N("Where to download packages:")),
-                                 1 , $browse,
-                             ]),
+               if_(is_download_all_enabled(),
+                   gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
+                            N("(Warning: You will need quite a lot of free space)"),
+                          active_ref => \$download_all, sensitive_ref => \$browse,
+                          toggled => sub { $box and $box->set_sensitive($download_all) },
+                      ),
+                   $box = gtknew('HBox', sensitive => $download_all,
+                                 children => [
+                                     0, gtknew('Label_Left', text => N("Where to download packages:")),
+                                     1 , $browse,
+                                 ]),
+               ),
                create_okcancel($w, N("Next"), N("Cancel")),
                                       ]);
 
