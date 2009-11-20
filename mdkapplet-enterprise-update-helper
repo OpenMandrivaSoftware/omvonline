@@ -131,7 +131,7 @@ sub add_enterprise_update_medium {
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_restricted_authentication;
     } elsif (!has_mes5_rights($ref)) {
-        no_rigths_dialog();
+        no_rights_dialog();
     } else {
         $error = 0;
         my $arch = urpm::cfg::get_arch();
@@ -146,7 +146,7 @@ sub add_enterprise_update_medium {
     }
 }
 
-sub no_rigths_dialog() {
+sub no_rights_dialog() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
 
     fill_n_run_portable_dialog(
