@@ -53,6 +53,9 @@ sub configure() {
 
     # sanity check:
     $config{UPDATE_FREQUENCY} = 1 if $config{UPDATE_FREQUENCY} < 1;
+    
+    my $_ww = eval { gtknew('HScale', digits => 5) };
+    my $is_hscale_unsupported = $@;
 
     my $res =
       fill_n_run_portable_dialog(
@@ -62,19 +65,21 @@ sub configure() {
               gtknew('Label_Left', text => N("Here you can configure the updates applet"), @common),
               gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
                   [ gtknew('Label', alignment => [ 0, 1 ], text => N("Update frequency (hours)")),
-                    gtknew('HScale',
+                    gtknew($is_hscale_unsupported ? ('Entry', text_ref => \$config{UPDATE_FREQUENCY})
+                      : ('HScale',
                         digits => 0,
                         lower => 1,
                         upper => 24,
                         step_increment => 1,
-                        value_ref => \$config{UPDATE_FREQUENCY}) ],
+                        value_ref => \$config{UPDATE_FREQUENCY})) ],
                   [ gtknew('Label', alignment => [ 0, 1 ], text => N("First check delay (minutes)")),
-                    gtknew('HScale',
+                    gtknew($is_hscale_unsupported ? ('Entry', text_ref => \$config{UPDATE_FREQUENCY})
+                      : ('HScale',
                         digits => 0,
                         lower => 5,
                         upper => 30,
                         step_increment => 1,
-                        value_ref => \$config{FIRST_CHECK_DELAY}) ]
+                        value_ref => \$config{FIRST_CHECK_DELAY})) ]
               ]),
               create_okcancel($w), #, N("Next"), N("Cancel")),
           ]);
