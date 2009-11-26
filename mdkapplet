@@ -416,7 +416,7 @@ sub harvester {
 sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
 
 # only enable 'download all packages at once' on 2010.1 and further:
-sub is_download_all_enabled {
+sub is_download_all_enabled() {
     # prevent crashing on 2008.1 and 2009.0:
     eval { is_it_a_devel_distro() } || !member($product_id->{version}, qw(2008.1 2009.0 2009.1));
 }
