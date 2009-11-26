@@ -246,7 +246,7 @@ foreach my $opt (@ARGV) {
     }
 }
 
-my ($root, $download_dir, $download_all);
+my ($download_dir, $download_all);
 {
     my $temp_urpm = Rpmdrake::open_db::fast_open_urpmi_db();
     $root = $temp_urpm->{root};
@@ -254,7 +254,6 @@ my ($root, $download_dir, $download_all);
 }
 
 my ($new_distro, $no_more_supported);
-my $product_id;
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
 
@@ -311,11 +310,6 @@ sub get_distro_list() {
         }
     };
 }
-
-sub get_product_id() {
-    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
-}
-
 
 sub is_there_a_new_distributions() {
     get_product_id();

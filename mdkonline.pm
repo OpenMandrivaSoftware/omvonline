@@ -30,8 +30,10 @@ use common;
 use ugtk2;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(fork_exec get_banner get_stale_upgrade_filename xml2perl);
+our @EXPORT = qw(fork_exec get_banner get_product_id get_stale_upgrade_filename xml2perl
+                 $product_id $root);
 
+our ($product_id, $root);
 our $version = 2.67;
 
 use log;
@@ -41,6 +43,10 @@ my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-r
 
 sub get_stale_upgrade_filename() {
     '/var/lib/urpmi/stale_upgrade_in_progress';
+}
+
+sub get_product_id() {
+    $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
 }
 
 sub get_release() {
