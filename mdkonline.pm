@@ -82,6 +82,10 @@ sub fork_exec {
 
 sub translate_product() {
     my %strings = (
+        Flash => N("Mandriva Flash"),
+        Free => N("Mandriva Free"),
+        Mini => N("Mandriva Mini"),
+        One => N("Mandriva One"),
         PowerPack => N("Mandriva PowerPack"),
         Server => N("Mandriva Enterprise Server"),
     );
