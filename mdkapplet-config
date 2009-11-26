@@ -33,6 +33,7 @@ use mdkonline;
 use mdkapplet_gui;
 use interactive;
 
+get_product_id();
 configure();
 
 ugtk2::exit(0);
@@ -53,9 +54,13 @@ sub configure() {
 
     # sanity check:
     $config{UPDATE_FREQUENCY} = 1 if $config{UPDATE_FREQUENCY} < 1;
+
+    # config file has negative options but GUI want positive options (HIG):
+    invbools_for_display(\%config);
     
     my $_ww = eval { gtknew('HScale', digits => 5) };
     my $is_hscale_unsupported = $@;
+    my $product = translate_product();
 
     my $res =
       fill_n_run_portable_dialog(
@@ -79,7 +84,24 @@ sub configure() {
                         lower => 5,
                         upper => 30,
                         step_increment => 1,
-                        value_ref => \$config{FIRST_CHECK_DELAY})) ]
+                        value_ref => \$config{FIRST_CHECK_DELAY})) ],
+                  [ gtknew('CheckButton',
+                           text => N("Check for newer \"%s\" releases", $product),
+                           active_ref => \$config{DO_NOT_ASK_FOR_DISTRO_UPGRADE},
+                       ),
+                ],
+                  [ gtknew('CheckButton',
+                           text => N("Check for missing \"%s\" media", N("Restricted")),
+                           active_ref => \$config{DO_NOT_ASK_FOR_RESTRICTED},
+                           sensitive => is_restricted_media_supported(),
+                       ),
+                ],
+                  [ gtknew('CheckButton',
+                           text => N("Check for missing \"%s\" media", N("Enterprise")),
+                           active_ref => \$config{DO_NOT_ASK_FOR_ENTERPRISE_UPDATE_MEDIA},
+                           sensitive => is_enterprise_media_supported(),
+                       ),
+                ],
               ]),
               create_okcancel($w), #, N("Next"), N("Cancel")),
           ]);
@@ -94,6 +116,16 @@ sub configure() {
         # convert back into ms from seconds:
         $config{FIRST_CHECK_DELAY} *= 1000;
 
+        # config file has negative options but GUI want positive options (HIG):
+        invbools_for_display(\%config);
+
         setVarsInSh($config_file, \%config);
+    }
+}
+
+sub invbools_for_display {
+    my ($config) = @_;
+    foreach (qw(DO_NOT_ASK_FOR_DISTRO_UPGRADE DO_NOT_ASK_FOR_RESTRICTED DO_NOT_ASK_FOR_ENTERPRISE_UPDATE_MEDIA)) {
+        invbool(\$config->{$_});
     }
 }
