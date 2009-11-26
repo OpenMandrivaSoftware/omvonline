@@ -41,6 +41,7 @@ use URI::Escape;
 use LWP::UserAgent;         
 use HTTP::Request::Common;
 use HTTP::Request;
+use interactive::gtk; 
 
 my $version;
 foreach my $opt (@ARGV) {
@@ -51,6 +52,12 @@ foreach my $opt (@ARGV) {
     }
 }
 $version or die "usage: mdkapplet-restricted-helper <distrib_version>\n";
+
+# make it work on 2008.1:
+eval { interactive::gtk::add_padding(Gtk2::Label->new) };
+if ($@) {
+    *interactive::gtk::add_padding = sub { $_[0] };
+}
 
 get_restricted_authentication();
 
@@ -64,7 +71,6 @@ sub get_restricted_authentication() {
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
     $w->{real_window}->signal_connect(destroy => sub { $password = $password_w->get_text });
-    require interactive::gtk;
 
     my $res =
       fill_n_run_portable_dialog(
