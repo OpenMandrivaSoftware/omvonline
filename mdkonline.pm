@@ -34,6 +34,8 @@ our @EXPORT = qw(fork_exec
                  get_banner
                  get_product_id
                  get_stale_upgrade_filename
+                 is_enterprise_media_supported
+                 is_restricted_media_supported
                  xml2perl
                  $product_id
                  $root);
@@ -57,6 +59,14 @@ sub get_product_id() {
 sub get_release() {
     my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
     ($r);
+}
+
+sub is_enterprise_media_supported() {
+    to_bool($product_id->{type} eq 'Enterprise' && $product_id->{product} eq 'Server');
+}
+
+sub is_restricted_media_supported() {
+    to_bool($product_id->{product} =~ /powerpack/i);
 }
 
 sub clean_confdir() {

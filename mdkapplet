@@ -607,7 +607,7 @@ sub silentCheck() {
 
         if (!@update_medias) {
 	    get_product_id();
-	    if ($product_id->{type} eq 'Enterprise' && $product_id->{product} eq 'Server') {
+	    if (is_enterprise_media_supported()) {
 		checker_exit('no_enterprise_update_medium');
 	    } else {
 		checker_exit('no_update_medium');
@@ -811,7 +811,7 @@ sub get_enabled_restricted_media {
 sub is_restricted_media_configured {
     my ($urpm) = @_;
     get_product_id();
-    return 1 if $product_id->{product} !~ /powerpack/i;
+    return 1 if !is_restricted_media_supported();
 
     my @restricted_media = get_enabled_restricted_media($urpm);
     my @names = map { $_->{name} } @restricted_media;
