@@ -30,8 +30,13 @@ use common;
 use ugtk2;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(fork_exec get_banner get_product_id get_stale_upgrade_filename xml2perl
-                 $product_id $root);
+our @EXPORT = qw(fork_exec
+                 get_banner
+                 get_product_id
+                 get_stale_upgrade_filename
+                 xml2perl
+                 $product_id
+                 $root);
 
 our ($product_id, $root);
 our $version = 2.67;
