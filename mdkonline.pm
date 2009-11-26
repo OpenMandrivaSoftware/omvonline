@@ -36,6 +36,7 @@ our @EXPORT = qw(fork_exec
                  get_stale_upgrade_filename
                  is_enterprise_media_supported
                  is_restricted_media_supported
+                 translate_product
                  xml2perl
                  $product_id
                  $root);
@@ -77,6 +78,15 @@ sub clean_confdir() {
 
 sub fork_exec {
     run_program::raw({ detach => 1 }, @_);
+}
+
+sub translate_product() {
+    my %strings = (
+        PowerPack => N("Mandriva PowerPack"),
+        Server => N("Mandriva Enterprise Server"),
+    );
+    my $product = $product_id->{product};
+    $strings{$product} || $product;
 }
 
 sub get_banner {
