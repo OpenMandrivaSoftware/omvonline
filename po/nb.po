@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-26 16:41+0100\n"
-"PO-Revision-Date: 2009-10-19 02:50+0200\n"
+"PO-Revision-Date: 2009-12-01 20:19+0100\n"
 "Last-Translator: Olav Dahlum <odahlum@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -98,13 +98,11 @@ msgstr "urpmi-database låst"
 #: ../mdkapplet:137
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:142
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fant inget medium. Du må legge til medium."
 
 #: ../mdkapplet:152
@@ -382,28 +380,27 @@ msgstr "Førstesjekksforsinkelse (minutter)"
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "Kontroller om det finnes nyere versjoner av «%s»"
 
 #: ../mdkapplet-config:94 ../mdkapplet-config:100
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "Kontroller for manglende media «%s»"
 
 #: ../mdkapplet-config:94
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Begrenset"
 
 #: ../mdkapplet-config:100
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "Bedrift"
 
 #: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:80
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Vær vennlig å skrive inn konto-IDen din for å legge til flere pakkebrønner"
+msgstr "Vær vennlig å skrive inn konto-IDen din for å legge til flere pakkebrønner"
 
 #: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:84
 #, c-format
@@ -479,15 +476,12 @@ msgstr "Feil under forsøk på å legge til medium"
 
 #: ../mdkapplet-restricted-helper:162
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Systemet ditt har ikke tilstrekkelig med ledig plass på %s for å oppgradere "
 "(%dMB <%dMB)"
@@ -547,24 +541,24 @@ msgid "Failure when adding medium"
 msgstr "Feil under forsøk på å legge til medium"
 
 #: ../mdkonline.pm:85
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Flash"
 
 #: ../mdkonline.pm:86
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Free"
 
 #: ../mdkonline.pm:87
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Mini"
 
 #: ../mdkonline.pm:88
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva One"
 
 #: ../mdkonline.pm:89
 #, c-format
@@ -621,3 +615,4 @@ msgstr "  --debug\t\t\t– logg hva som blir gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikke oppdatere pakker fra oppdateringsmedium.\n"
+
