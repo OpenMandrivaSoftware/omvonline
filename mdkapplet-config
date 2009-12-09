@@ -40,7 +40,7 @@ ugtk2::exit(0);
 
 
 sub configure() {
-    my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
+    my $w = ugtk2->new(N("Adding an additional package medium"), width => -1);
 
     my $config_file = '/etc/sysconfig/mdkapplet';
     my %config = getVarsFromSh($config_file);
@@ -76,6 +76,7 @@ sub configure() {
                         lower => 1,
                         upper => 24,
                         step_increment => 1,
+                        width => 100,
                         value_ref => \$config{UPDATE_FREQUENCY})) ],
                   [ gtknew('Label', alignment => [ 0, 1 ], text => N("First check delay (minutes)")),
                     gtknew($is_hscale_unsupported ? ('Entry', text_ref => \$config{UPDATE_FREQUENCY})
