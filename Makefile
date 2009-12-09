@@ -22,6 +22,8 @@ localedir = $(PREFIX)/usr/share/locale
 override CFLAGS += -DPACKAGE=\"$(NAME)\" -DLOCALEDIR=\"$(localedir)\"
 
 all:
+	(find -name '*.pm' -o -name mdkapplet\* -o -name mdkupdate -o -name mdvonline_agent.pl -type f) | xargs perl -pi -e 's/\s*use\s+(diagnostics|vars|strict).*//g'
+	exit 1
 	for d in $(SUBDIRS); do ( cd $$d ; make $@ ) ; done
 
 clean:
