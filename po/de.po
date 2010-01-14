@@ -10,18 +10,19 @@
 # Nicolas Bauer <rastafarii@mandrivauser.de>, 2007.
 # Oliver Burger <oliver@mandrivauser.de>, 2008, 2009.
 # Wolfgang Bornath <molch.b@gmail.com>, 2008.
+# Thorsten van Lil <i18n@mandrivauser.de>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-26 16:41+0100\n"
-"PO-Revision-Date: 2009-04-09 09:59+0200\n"
-"Last-Translator: Oliver Burger <oliver@mandrivauser.de>\n"
-"Language-Team: deutsch <cooker-i18n@mandrivalinux.org>\n"
+"PO-Revision-Date: 2010-01-14 23:16+0100\n"
+"Last-Translator: Thorsten van Lil <i18n@mandrivauser.de>\n"
+"Language-Team: German <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
@@ -60,17 +61,19 @@ msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Eine neue Version von Mandriva Linux ist erschienen"
 
 #: ../mdkapplet:104
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
+"Diese Version der Distribution wird nicht länger unterstützt. Es wird "
+"keine weiteren Updates geben. Sie sollten auf eine neuere Version der "
+"%s Distribution wechseln."
 
-#: ../mdkapplet:104
-#, fuzzy, c-format
+#: ../mdkapplet:104, c-format
 msgid "Mandriva Linux"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Linux"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
@@ -169,9 +172,9 @@ msgid "New version of Mandriva Linux distribution"
 msgstr "Neue Version der Mandriva Linux Distribution"
 
 #: ../mdkapplet:432
-#, c-format
+#, fuzzy, c-format
 msgid "Browse"
-msgstr ""
+msgstr "Durchsuchen"
 
 #: ../mdkapplet:441
 #, c-format
@@ -196,12 +199,12 @@ msgstr "Das nächste mal nicht mehr Nachfragen"
 #: ../mdkapplet:449
 #, c-format
 msgid "Download all packages at once"
-msgstr ""
+msgstr "Alle Pakete auf einmal herunterladen"
 
 #: ../mdkapplet:450
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
+msgstr "(Warnung: Es wird viel Speicherplatz benötigt)"
 
 #: ../mdkapplet:456
 #, c-format
@@ -321,10 +324,10 @@ msgstr ""
 "_: Nicolas Bauer & rastafarii@mandrivauser.de\n"
 "_: Oliver Burger & oliver@mandrivauser.de\n"
 
-#: ../mdkapplet:776 ../mdkapplet-config:69
-#, fuzzy, c-format
+#: ../mdkapplet:776 ../mdkapplet-config:69, c-format
+#, fuzzy
 msgid "Updates Configuration"
-msgstr "Aktualisiert die Konfiguration"
+msgstr "Konfiguration zur Aktualisierung"
 
 #: ../mdkapplet:778
 #, c-format
@@ -358,7 +361,7 @@ msgstr "Wollen Sie diese zusätzliche Softwarequelle einrichten?"
 #: ../mdkapplet:863 ../mdkonline.pm:90
 #, c-format
 msgid "Mandriva Enterprise Server"
-msgstr ""
+msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
 #: ../mdkapplet-enterprise-update-helper:73
@@ -380,20 +383,19 @@ msgstr "Hier können Sie das Aktualisierungs-Applet einrichten"
 msgid "Update frequency (hours)"
 msgstr "Aktualisierungs-Frequenz (Stunden)"
 
-#: ../mdkapplet-config:80
-#, fuzzy, c-format
+#: ../mdkapplet-config:80, c-format
 msgid "First check delay (minutes)"
 msgstr "Wartezeit vor der ersten Überprüfung (Minuten)"
 
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "Nach neueren \"%s\" Versionen suchen"
 
 #: ../mdkapplet-config:94 ../mdkapplet-config:100
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "Nach fehlenden \"%s\" Quellen suchen"
 
 #: ../mdkapplet-config:94
 #, c-format
@@ -552,25 +554,21 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Fehler beim Hinzufügen des Mediums"
 
-#: ../mdkonline.pm:85
-#, fuzzy, c-format
+#: ../mdkonline.pm:85, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:86
-#, fuzzy, c-format
+#: ../mdkonline.pm:86, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:87
-#, fuzzy, c-format
+#: ../mdkonline.pm:87, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:88
-#, fuzzy, c-format
+#: ../mdkonline.pm:88, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva One"
 
 #: ../mdkonline.pm:89
 #, c-format
@@ -628,3 +626,4 @@ msgstr " --debug\t\t\t- protokolliere was gemacht wird\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Aktualisieren der Pakete vom Update-Medium nicht möglich.\n"
+
