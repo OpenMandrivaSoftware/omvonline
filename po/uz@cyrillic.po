@@ -1,32 +1,32 @@
 # translation of Mandriva Online-uz.po to Uzbek
 # Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # Copyright (C) 2003 Mandriva.
-# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004.
 #
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004.
+# Nurali Abdurahmonov <mavnur@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-uz\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-26 16:41+0100\n"
-"PO-Revision-Date: 2004-06-27 23:53+0200\n"
-"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
-"Language-Team: Uzbek <kmashrab@uni-bremen.de>\n"
+"PO-Revision-Date: 2009-12-20 19:03+0500\n"
+"Last-Translator: Nurali Abdurahmonov <mavnur@gmail.com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.3\n"
+"X-Generator: Lokalize 1.0\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:68
-#, fuzzy, c-format
+#: ../mdkapplet:68, c-format
 msgid "Will check updates at %s"
-msgstr "Янгиланишларни текшириш"
+msgstr "Янгиланишларни текшириш %s да амалга оширилади"
 
 #: ../mdkapplet:76
 #, c-format
 msgid "Your system is up-to-date"
-msgstr ""
+msgstr "Тизим янгилашга муҳтоэ эмас"
 
 #: ../mdkapplet:81
 #, c-format
@@ -34,6 +34,8 @@ msgid ""
 "Service configuration problem. Please check logs and send mail to "
 "support@mandrivaonline.com"
 msgstr ""
+"Хизматни созлашда муаммо. Илтмос лог журналларини текширинг ва  "
+"support@mandrivaonline.com манзилига хат жўнатинг"
 
 #: ../mdkapplet:87
 #, c-format
@@ -43,12 +45,12 @@ msgstr "Мавжуд бўлган пакетлар қидирилмоқда, и�
 #: ../mdkapplet:92
 #, c-format
 msgid "New updates are available for your system"
-msgstr ""
+msgstr "Тизимингиз учун янгиланиш мавжуд"
 
 #: ../mdkapplet:98
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr ""
+msgstr "Mandriva Linux дистрибутивининг янги версияси чиқди"
 
 #: ../mdkapplet:104
 #, c-format
@@ -57,26 +59,28 @@ msgid ""
 "further updates. You should upgrade to a newer version of the %s "
 "distribution."
 msgstr ""
+"Ушбу версия бошқа қўллаб-қувватланмайди. Бу ушбу версия учун бошқа "
+"янгиланишлар чиқмаслигини англатади. Ушбу версияни, %s версияга "
+"алмаштиришингиз керак."
 
-#: ../mdkapplet:104
-#, fuzzy, c-format
+#: ../mdkapplet:104, c-format
 msgid "Mandriva Linux"
-msgstr "Mandriva Online"
+msgstr "Mandriva Linux"
 
 #: ../mdkapplet:110 ../mdkapplet:147
 #, c-format
 msgid "An additional package medium is available for your distribution."
-msgstr ""
+msgstr "Ушбу дистрибутив учун қўшимча пакетлар тўплами мавжуд."
 
 #: ../mdkapplet:115
 #, c-format
 msgid "Network is down. Please configure your network"
-msgstr ""
+msgstr "Тармоқ мавжуд эмас. Илтимос тармоқни созланг"
 
 #: ../mdkapplet:121
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
+msgstr "Хизмат активлаштирилмаган. Илтимос \"Online Website\"ни босинг"
 
 #: ../mdkapplet:126 ../mdkapplet:132
 #, c-format
@@ -87,12 +91,16 @@ msgstr "urpmi маълумот базаси қулфланган"
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
+"Ушбу версия қўллаб-қувватланмайди (жуда эски версия ёки ушбу версия устида "
+"ишланмоқда)"
 
 #: ../mdkapplet:142
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
+"Тўплам топилмади. 'Дастур тўплами бошқарувчиси' ёрдамида тўплам қўшишингиз "
+"керак."
 
 #: ../mdkapplet:152
 #, c-format
@@ -110,10 +118,9 @@ msgstr ""
 msgid "Enabled"
 msgstr "Ёқилган"
 
-#: ../mdkapplet:170
-#, fuzzy, c-format
+#: ../mdkapplet:170, c-format
 msgid "Error updating media"
-msgstr "Тўплам янгиланмоқда...\n"
+msgstr "Тўпламни янгилаб бўлмади"
 
 #: ../mdkapplet:210 ../mdkapplet:731
 #, c-format
@@ -123,7 +130,7 @@ msgstr "Янгиланишларни ўрнатиш"
 #: ../mdkapplet:211 ../mdkapplet:212
 #, c-format
 msgid "Add additional package medium"
-msgstr ""
+msgstr "ҚЎшимча пакетлар тўпламини қўшиш"
 
 #: ../mdkapplet:213
 #, c-format
@@ -138,37 +145,37 @@ msgstr "Тармоқни мослаш"
 #: ../mdkapplet:215
 #, c-format
 msgid "Upgrade the system"
-msgstr ""
+msgstr "Тизимни янгилаш"
 
 #: ../mdkapplet:416
 #, c-format
 msgid "Launching drakconnect\n"
-msgstr ""
+msgstr "drakconnect'ни ишга тушириш\n"
 
 #: ../mdkapplet:427 ../mdkapplet:475
 #, c-format
 msgid "New version of Mandriva Linux distribution"
-msgstr ""
+msgstr "Mandriva Linux дистрибутивининг янги версияси"
 
 #: ../mdkapplet:432
 #, c-format
 msgid "Browse"
-msgstr ""
+msgstr "Танлаш"
 
 #: ../mdkapplet:441
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr ""
+msgstr "Mandriva Linux дистрибутивининг янги версияси чиқди."
 
 #: ../mdkapplet:443
 #, c-format
 msgid "More info about this new version"
-msgstr ""
+msgstr "Ушбу янги версия ҳақида кенгроқ маълумот"
 
 #: ../mdkapplet:445
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
-msgstr ""
+msgstr "'%s' версияга янгилашни истайсизми?"
 
 #: ../mdkapplet:447 ../mdkapplet:839 ../mdkapplet:865
 #, c-format
@@ -178,17 +185,17 @@ msgstr "Бошқа сўралмасин"
 #: ../mdkapplet:449
 #, c-format
 msgid "Download all packages at once"
-msgstr ""
+msgstr "Бирдан барча пакетларни ёзиб олиш"
 
 #: ../mdkapplet:450
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
+msgstr "(Диққат: Сизга дискда яна кўпроқ керак)"
 
 #: ../mdkapplet:456
 #, c-format
 msgid "Where to download packages:"
-msgstr ""
+msgstr "Пакетлар қаерга ёзиб олинади:"
 
 #: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
 #: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
@@ -209,6 +216,8 @@ msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
+"Ушбу янгиланиш учун юқори тезликдаги интернет уланиши (кабелли, xDSL, ...) "
+"талаб қилинади ва янгиланишга бир неча соат кетиши мумкин."
 
 #: ../mdkapplet:494
 #, c-format
@@ -218,7 +227,7 @@ msgstr ""
 #: ../mdkapplet:495
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
+msgstr "Давом этишдан олдин барча ишлаб турган дастурларни ёпинг."
 
 #: ../mdkapplet:498
 #, c-format
@@ -226,26 +235,28 @@ msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
+"Ноутбукни доимий электр қувватига уланг ва wifi ўрнига симли уланишдан "
+"фойдаланинг."
 
 #: ../mdkapplet:525
 #, c-format
 msgid "Launching MandrivaUpdate\n"
-msgstr ""
+msgstr "MandrivaUpdate ишга туширилмоқда\n"
 
 #: ../mdkapplet:546
 #, c-format
 msgid "Computing new updates...\n"
-msgstr ""
+msgstr "Янги янгиланишлар ҳисобланмоқда...\n"
 
 #: ../mdkapplet:652
 #, c-format
 msgid "System is up-to-date\n"
-msgstr ""
+msgstr "Тизим янгилашга муҳтоэ эмас\n"
 
 #: ../mdkapplet:680
 #, c-format
 msgid "Checking Network: seems disabled\n"
-msgstr ""
+msgstr "Тармоқ текширилмоқда: ўчирилган кўринади\n"
 
 #: ../mdkapplet:722
 #, c-format
@@ -257,22 +268,21 @@ msgstr "Диққат"
 #: ../mdkapplet-restricted-helper:166
 #, c-format
 msgid "More Information"
-msgstr ""
+msgstr "Қўшимча маълумотлар"
 
 #: ../mdkapplet:737
 #, c-format
 msgid "Add media"
-msgstr ""
+msgstr "Тўплам қўшиш"
 
 #: ../mdkapplet:752
 #, c-format
 msgid "About..."
-msgstr "Ҳақида"
+msgstr "Дастур ҳақида..."
 
-#: ../mdkapplet:756
-#, fuzzy, c-format
+#: ../mdkapplet:756, c-format
 msgid "Mandriva Online %s"
-msgstr "Mandriva Online"
+msgstr "Mandriva Online %s"
 
 #: ../mdkapplet:757
 #, c-format
@@ -282,23 +292,22 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:760
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
+msgstr "Mandriva Online, Mandriva веб хизматларига уланиш имкониятини беради."
 
 #: ../mdkapplet:762
 #, c-format
 msgid "Online WebSite"
-msgstr ""
+msgstr "Online WebSite"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
 #: ../mdkapplet:767
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
+msgstr "Нурали Абдураҳмонов <mavnur@gmail.com>\n"
 
-#: ../mdkapplet:776 ../mdkapplet-config:69
-#, fuzzy, c-format
+#: ../mdkapplet:776 ../mdkapplet-config:69, c-format
 msgid "Updates Configuration"
-msgstr "Мосламалар жўнатилмоқда..."
+msgstr "Янгилаш мосламалари"
 
 #: ../mdkapplet:778
 #, c-format
@@ -310,10 +319,9 @@ msgstr "Тизимга кирганда ишга тушириш"
 msgid "Quit"
 msgstr "Чиқиш"
 
-#: ../mdkapplet:829 ../mdkapplet:834 ../mdkapplet:855 ../mdkapplet:860
-#, fuzzy, c-format
+#: ../mdkapplet:829 ../mdkapplet:834 ../mdkapplet:855 ../mdkapplet:860, c-format
 msgid "New medium available"
-msgstr "Мавжуд эмас"
+msgstr "Янги тўплам мавжуд"
 
 #: ../mdkapplet:836 ../mdkapplet:862
 #, c-format
@@ -321,16 +329,18 @@ msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
+"Сиз '%s' дистрибутивидан фойдаланяпсиз ва сизга қўшимча дастурларга рухсат "
+"бор."
 
 #: ../mdkapplet:838 ../mdkapplet:864
 #, c-format
 msgid "Do you want to install this additional software repository?"
-msgstr ""
+msgstr "Ушбу қўшимча дастурлар репозиторийсини ўрнатишни истайсизми?"
 
 #: ../mdkapplet:863 ../mdkonline.pm:90
 #, c-format
 msgid "Mandriva Enterprise Server"
-msgstr ""
+msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
 #: ../mdkapplet-enterprise-update-helper:73
@@ -340,22 +350,22 @@ msgstr ""
 #: ../mdkapplet-restricted-helper:161
 #, c-format
 msgid "Adding an additional package medium"
-msgstr ""
+msgstr "Қўшимча пакетлар тўпламини қўшиш"
 
 #: ../mdkapplet-config:70
 #, c-format
 msgid "Here you can configure the updates applet"
-msgstr ""
+msgstr "Бу ердан янгилаш аплетини созлашингиз мумкин"
 
 #: ../mdkapplet-config:72
 #, c-format
 msgid "Update frequency (hours)"
-msgstr ""
+msgstr "Янгилаш оралиғи (соатда)"
 
 #: ../mdkapplet-config:80
 #, c-format
 msgid "First check delay (minutes)"
-msgstr ""
+msgstr "Биринчи текшириш оралиғи (дақиқада)"
 
 #: ../mdkapplet-config:89
 #, c-format
@@ -370,37 +380,35 @@ msgstr ""
 #: ../mdkapplet-config:94
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Ҳимояланган"
 
 #: ../mdkapplet-config:100
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "Enterprise"
 
 #: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:80
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
+msgstr "Қўшимча пакетлар тўпламини қўшиш учун ўз ҳисобингиз логинини киритинг"
 
 #: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:84
 #, c-format
 msgid "More information on your user account"
-msgstr ""
+msgstr "Ҳисобнинг қўшимча маълумотлари"
 
 #: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:87
 #, c-format
 msgid "Your email"
-msgstr ""
+msgstr "Электрон почта"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
-#, fuzzy, c-format
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88, c-format
 msgid "Your password"
-msgstr "Махфий сўз нотўғри"
+msgstr "Махфий сўз"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:92
-#, fuzzy, c-format
+#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:92, c-format
 msgid "Forgotten password"
-msgstr "Махфий сўз нотўғри"
+msgstr "Махфий сўзни унутдингизми"
 
 #: ../mdkapplet-enterprise-update-helper:96
 #: ../mdkapplet-enterprise-update-helper:131
@@ -416,7 +424,7 @@ msgstr "Хато"
 #: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:102
 #, c-format
 msgid "Password and email cannot be empty."
-msgstr ""
+msgstr "Махфий сўз ва эл.почта бўш бўлиши мумкин эмас."
 
 #: ../mdkapplet-enterprise-update-helper:131
 #: ../mdkapplet-restricted-helper:132
@@ -429,7 +437,7 @@ msgstr "Хато рўй берди"
 #: ../mdkapplet-restricted-helper:148 ../mdkapplet-restricted-helper:149
 #, c-format
 msgid "Successfully added media %s."
-msgstr ""
+msgstr "%s тўплами муваффақиятли қўшилди."
 
 #: ../mdkapplet-enterprise-update-helper:143
 #: ../mdkapplet-restricted-helper:149
@@ -440,7 +448,7 @@ msgstr "Ок"
 #: ../mdkapplet-enterprise-update-helper:156
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
-msgstr ""
+msgstr "Сизнинг Mandriva ҳисобингизда %s ёзиб олиш ёқилмаган."
 
 #: ../mdkapplet-enterprise-update-helper:162
 #: ../mdkapplet-restricted-helper:168
@@ -449,8 +457,7 @@ msgid "Close"
 msgstr "Ёпиш"
 
 #: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:174
-#, fuzzy, c-format
+#: ../mdkapplet-restricted-helper:174, c-format
 msgid "An error occurred while adding medium"
 msgstr "Тўпламни қўшиш муваффақиятсиз тугади"
 
@@ -458,13 +465,13 @@ msgstr "Тўпламни қўшиш муваффақиятсиз тугади"
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
+msgstr "Сизнинг Mandriva ҳисобингизда Powerpack'ни ёзиб олиш ёқилмаган."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
 msgid ""
 "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
+msgstr "Тизимингизда янгиланишлар учун %s да етарли жой қолмаган (%dМб < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:129 ../mdkapplet-upgrade-helper:178
 #: ../mdkapplet-upgrade-helper:215
@@ -475,7 +482,7 @@ msgstr "Ўрнатиш муваффақиятсиз тугади"
 #: ../mdkapplet-upgrade-helper:130
 #, c-format
 msgid "Installation logs can be found in '%s'"
-msgstr ""
+msgstr "Ўрнатиш бўйича лог журналларини '%s' да топишингиз мумкин"
 
 #: ../mdkapplet-upgrade-helper:131
 #, c-format
@@ -485,17 +492,17 @@ msgstr "Қайтадан уриниш"
 #: ../mdkapplet-upgrade-helper:143
 #, c-format
 msgid "Congratulations"
-msgstr "Табриклаймиз!"
+msgstr "Табриклаймиз"
 
 #: ../mdkapplet-upgrade-helper:147
 #, c-format
 msgid "Upgrade to Mandriva %s release was successfull."
-msgstr ""
+msgstr "Mandriva %s релизига янгилаш муваффақиятли амалган оширилди."
 
 #: ../mdkapplet-upgrade-helper:149
 #, c-format
 msgid "You must restart your system."
-msgstr ""
+msgstr "Тизимни ўчириб-ёқишингиз керак."
 
 #: ../mdkapplet-upgrade-helper:150
 #, c-format
@@ -516,35 +523,30 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Тўпламни қўшиш муваффақиятсиз тугади"
 
-#: ../mdkonline.pm:85
-#, fuzzy, c-format
+#: ../mdkonline.pm:85, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online"
+msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:86
-#, fuzzy, c-format
+#: ../mdkonline.pm:86, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Online"
+msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:87
-#, fuzzy, c-format
+#: ../mdkonline.pm:87, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Online"
+msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:88
-#, fuzzy, c-format
+#: ../mdkonline.pm:88, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online"
+msgstr "Mandriva One"
 
-#: ../mdkonline.pm:89
-#, fuzzy, c-format
+#: ../mdkonline.pm:89, c-format
 msgid "Mandriva PowerPack"
-msgstr "Mandriva Online"
+msgstr "Mandriva PowerPack"
 
 #: ../mdkonline.pm:101
 #, c-format
 msgid "Distribution Upgrade"
-msgstr ""
+msgstr "Дистрибутивни янгилаш"
 
 #: ../mdkupdate:59
 #, c-format
@@ -567,30 +569,28 @@ msgstr ""
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- шу ёрдам хабарини кўрсатиш.\n"
 
-#: ../mdkupdate:65
-#, fuzzy, c-format
+#: ../mdkupdate:65, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
-msgstr "  --applet\t\t- Mandriva Update хизматини ишга тушириш.\n"
+msgstr "  --auto\t\t- Mandriva Update автоматик ишга тушади.\n"
 
 #: ../mdkupdate:66
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
-msgstr ""
+msgstr "  --mnf\t\t\t- mnf скриптини ишга тушириш.\n"
 
-#: ../mdkupdate:67
-#, fuzzy, c-format
+#: ../mdkupdate:67, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
-msgstr "  --applet       - Mandriva Update хизматини ишга тушириш.\n"
+msgstr "  --noX\t\t\t- Mandriva Update матн усули.\n"
 
 #: ../mdkupdate:68
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
-msgstr ""
+msgstr "  --debug\t\t\t- бажарилган ишлар бўйича лог журнали\n"
 
 #: ../mdkupdate:98
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
-msgstr ""
+msgstr "update_source тўпламидан пакетларни янгилаб бўлмади.\n"
 
 #~ msgid "Yes"
 #~ msgstr "Ҳа"
