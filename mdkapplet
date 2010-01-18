@@ -366,6 +366,11 @@ sub clean_distro_cache() {
     undef $no_more_supported;
  }
 
+sub is_false {
+    my ($s) = @_;
+    !text2bool($s) && $s != 1;
+}
+
 # Signal management 
 sub harvester {
     my ($_signame, $_clean) = @_;
@@ -396,8 +401,8 @@ sub harvester {
                     go2State($sub_state);
                 } elsif ($no_more_supported) {
                     go2State('no_more_supported');
-                } elsif ($new_distro && $config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i
-                      && $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} !~ /^true$/i) {
+                } elsif ($new_distro && is_false($config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})
+                      && is_false($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})) {
                     go2State('new_distribution');
                 } else {
                     go2State($sub_state);
