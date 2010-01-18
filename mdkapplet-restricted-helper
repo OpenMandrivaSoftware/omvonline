@@ -107,18 +107,6 @@ sub get_restricted_authentication() {
     }
 }
 
-sub get_from {
-    my ($link, $header) = @_;
-    
-    my $ua = LWP::UserAgent->new;
-    $ua->agent(sprintf('mdkapplet (mdkonline-%s; distribution: %s)',
-                       $mdkonline::version, $version));
-    $ua->env_proxy;
-
-    my $response = $ua->request(POST $link, $header);
-    $response;
-}
-
 my $error;
 sub add_restricted_medium {
     my ($email, $password) = @_;

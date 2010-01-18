@@ -101,17 +101,6 @@ sub get_restricted_authentication() {
     }
 }
 
-sub get_from {
-    my ($link, $header) = @_;
-    
-    my $ua = LWP::UserAgent->new;
-    $ua->agent("mdkapplet (mdkonline-$mdkonline::version)");
-    $ua->env_proxy;
-
-    my $response = $ua->request(POST $link, $header);
-    $response;
-}
-
 sub has_mes5_rights {
     my ($ref) = @_;
     $ref->{data}{groups}{'es5-prod'} || $ref->{data}{groups}{'es5-demo'};

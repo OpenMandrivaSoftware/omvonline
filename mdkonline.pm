@@ -32,6 +32,7 @@ use ugtk2;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(fork_exec
                  get_banner
+                 get_from
                  get_product_id
                  get_stale_upgrade_filename
                  is_enterprise_media_supported
@@ -113,6 +114,19 @@ sub is_running {
         }
     }
     $found;
+}
+
+
+sub get_from {
+    my ($link, $header) = @_;
+    
+    my $ua = LWP::UserAgent->new;
+    $ua->agent(sprintf('mdkapplet (mdkonline-%s; distribution: %s)',
+                       $mdkonline::version, $version));
+    $ua->env_proxy;
+
+    my $response = $ua->request(POST $link, $header);
+    $response;
 }
 
 # callers need to require XML::Simple
