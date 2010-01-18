@@ -125,7 +125,7 @@ sub get_from {
                        $mdkonline::version, $version));
     $ua->env_proxy;
 
-    my $response = $ua->request(POST $link, $header);
+    my $response = $ua->post($link, $header);
     $response;
 }
 
