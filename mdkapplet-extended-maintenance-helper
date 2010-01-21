@@ -120,7 +120,7 @@ sub add_extmaint_medium {
         my $in = interactive->vnew;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
         goto &get_extmaint_authentication;
-    } elsif ($ref->{data}{'can-access-restricted-repositories'} ne 'YES') {
+    } elsif (!ref($ref->{data}{groups}{'ext-maint-' . $version})) {
         no_rights_dialog();
     } else {
         $error = 0;
