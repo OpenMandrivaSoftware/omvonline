@@ -55,7 +55,7 @@ install: all
 	mkdir -p $(PREFIX)/etc/pam.d
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.update
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
-	for i in mdkapplet-config mdkapplet-enterprise-update-helper mdkapplet-restricted-helper mdkapplet-upgrade-helper; do \
+	for i in mdkapplet-config mdkapplet-enterprise-update-helper mdkapplet-restricted-helper mdkapplet-upgrade-helper mdkapplet-extended-maintenance-helper; do \
 		install -m755 $$i $(SBINDIR); \
 		ln -sf consolehelper $(PREFIX)/usr/bin/$$i; \
 	done
