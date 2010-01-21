@@ -233,7 +233,7 @@ $icon->signal_connect(activate => sub {
                               no_enabled_medium => \&add_media,
                               updates => \&installUpdates,
                               new_distribution => \&upgrade,
-                              no_more_supported => \&upgrade,
+                              no_more_supported => \&no_more_supported,
                           );
                           my $action = $state_global;
                           # default to updates rather than distro upgrade:
@@ -479,6 +479,91 @@ sub confirm_upgrade() {
         return 0;
     }
 }
+
+
+sub _get_obsolete_message() {
+    join("\n\n",
+         N("The version of Mandriva Linux installed on your system is no longer supported."),
+         N("In order to keep your system secure, you can:"),
+     );
+}
+      
+sub no_more_supported_choice() {
+    local $mygtk2::left_padding = 0;
+    my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
+    # FIXME: just tell radio buttons' children to wrap instead:
+    local $mdkapplet_gui::width = 580;
+    my $w = new_portable_dialog(N("Your distribution is no more supported"));
+    my ($b1, $b2, $b3);
+    my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
+
+    my @widgets = (
+        get_banner(),
+        gtknew('Label_Left', 
+               text => _get_obsolete_message() . "\n", @common),
+        if_($extended_maintenance_url,
+            $b1 = gtknew('RadioButton',
+                         text => N("Get long term support for your currently installed distribution"),
+                         toggled => sub {
+                             ($choice, $warn_me) = ('extended', undef) if $_[0]->get_active;
+                         },
+
+                     ),
+            gtknew('HSeparator'),
+        ),
+        if_($no_more_supported ne 'none',
+            $b2 = gtknew('RadioButton', child => gtknew('VButtonBox', layout => 'start', children_tight => [
+                gtknew('Label_Left',
+                       text => N("Do you want to upgrade to the '\%s' distribution?", 
+                                 $new_distro->{name} || $new_distro->{version}), @common),
+                new_link_button($new_distro->{url}, N("More info about this new version")),
+            ]),
+                         toggled => sub {
+                             ($choice, $warn_me) = ('upgrade', undef) if $_[0]->get_active;
+                         },
+                         if_($b1, group => $b1)),
+            gtknew('HSeparator'),
+        ),
+        $b3 = gtknew('RadioButton', text => N("Do not ask me next time"),
+                     toggled => sub {
+                         $choice = 'nothing' if $_[0]->get_active;
+                         $warn_me = $_[0]->get_active },
+                     group => $b1 || $b2),
+        create_okcancel($w, N("Next"), N("Cancel")),
+    );
+
+    #$_ and $_->set_border_width(8) foreach $b1, $b2, $b3;
+
+    my $res = fill_n_run_portable_dialog($w, \@widgets);
+
+    setVar('DO_NOT_ASK_FOR_NO_MORE_SUPPORTED', bool2text($warn_me));
+    $local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED} = bool2text($warn_me);
+    if ($res) {
+        return $choice;
+    } else {
+        return 0;
+    }
+}
+
+
+sub no_more_supported() {
+    return if $mdv_update_pid;
+    my $choice = no_more_supported_choice();
+    if ($choice eq 'upgrade') {
+        really_confirm_upgrade() and real_upgrade();
+    } elsif ($choice eq 'extended') {
+        get_extended_maintenance();
+    }
+}
+
+
+sub get_extended_maintenance() {
+    $mdv_update_pid = fork_exec('mdkapplet-extended-maintenance-helper', $product_id->{version},
+                                $extended_maintenance_url,
+                                if_($download_all, "--download-all=$download_dir"),
+                                if_($root, "--urpmi-root=$root"));
+}
+
 
 sub really_confirm_upgrade() {
     local $mygtk2::left_padding = 0;
@@ -738,7 +823,7 @@ sub setState {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
         if (member($state, qw(new_distribution no_more_supported))) {
-            $bubble->add_action('clicked', N("More Information"), \&upgrade);
+            $bubble->add_action('clicked', N("More Information"), \&no_more_supported);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
             }
