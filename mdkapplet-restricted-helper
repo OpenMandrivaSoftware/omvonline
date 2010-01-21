@@ -127,7 +127,7 @@ sub add_restricted_medium {
         my $arch = urpm::cfg::get_arch();
         actually_add_restricted_medium($ref, $password, $arch)
           or adding_media_failed();
-        # FIXME: is not enough if we ever support sparc64, ppc64 and the like:
+        # FIXME: is not enough if we (unlikely) ever support sparc64, ppc64 and the like:
         if ($arch eq 'x86_64') {
             actually_add_restricted_medium($ref, $password, 'i586')
               or adding_media_failed();
