@@ -134,8 +134,8 @@ sub add_extmaint_medium {
         }
         if (!$error) {
             #interactive->vnew->ask_okcancel(N("Error"), N("An error occurred while adding medium"));
-            my $w = ugtk2->new(N("Successfully added media %s.", 'Restricted'), grab => 1);
-            $w->_ask_okcancel(N("Successfully added media %s.", 'Restricted'), N("Ok"), undef);
+            my $w = ugtk2->new(N("Successfully added media %s.", 'Extended Maintenance'), grab => 1);
+            $w->_ask_okcancel(N("Successfully added media %s.", 'Extended Maintenance'), N("Ok"), undef);
             ugtk2::main($w);
         }
     }
@@ -148,11 +148,11 @@ sub no_rights_dialog() {
           $w,
           [
               get_banner(N("Adding an additional package medium")),
-              gtknew('Label_Left', text => N("Your Mandriva account does not have Powerpack download subscription enabled."),
+              gtknew('Label_Left', text => N("Your Mandriva account does not have Extended Maintenance subscription enabled."),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
                   interactive::gtk::add_padding(
-                      new_link_button('https://my.mandriva.com/powerpack/', N("More Information")))
+                      new_link_button('https://my.mandriva.com/', N("More Information")))
               ]),
               create_okcancel($w, N("Close"), undef),
           ]);
@@ -168,7 +168,6 @@ sub actually_add_extmaint_medium {
     my ($ref, $password, $arch) = @_;
     $password = uri_escape($password);
     my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
-    my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/rpm/comm/$version/";
-    run_program::raw(@options, "Restricted $arch " . int(rand(100000)), "$uri$arch") or return 0;
-    run_program::raw(@options, '--update', "Restricted Updates $arch " . int(rand(100000)), "${uri}updates/$arch");
+    my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/extended/$version/$arch";
+    run_program::raw(@options, '--update', "Extanded Maintenance $arch " . int(rand(100000)), "${uri}");
 }
