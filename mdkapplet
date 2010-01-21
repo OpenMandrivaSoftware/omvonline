@@ -253,7 +253,7 @@ my ($download_dir, $download_all);
     $download_dir = $temp_urpm->{cachedir};
 }
 
-my ($new_distro, $no_more_supported);
+my ($new_distro, $no_more_supported, $extended_maintenance_url, $extended_maintenance_end);
 get_product_id();
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
@@ -346,6 +346,7 @@ sub is_there_a_new_distributions() {
 
     my $current_apimdv_distro = find { $_->{version} eq $product_id->{version} } @distros;
     $no_more_supported = $current_apimdv_distro->{obsoleted_by};
+    ($extended_maintenance_url, $extended_maintenance_end) = @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end)};
     if ($no_more_supported) {
         $new_distro = find { $_->{version} eq $no_more_supported } @distros;
         return;
