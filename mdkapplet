@@ -636,7 +636,9 @@ sub silentCheck() {
             );
             my @requested_strict = map { scalar $_->fullname } @{$urpm->{depslist}}[keys %{$state->{selected}}];
 
-            if ($need_restart || @requested_strict) { # FIXME: log first found pkgs?
+            if ($need_restart || @requested_strict) {
+                # FIXME: log first found pkgs?
+                warn ">> need_restart=$need_restart, updates=" . join(', ', @requested_strict) . "\n";
                 checker_exit('updates');
             } else {
                 if (!text2bool($local_config{DO_NOT_ASK_FOR_RESTRICTED})) {
