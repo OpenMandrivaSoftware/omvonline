@@ -344,8 +344,8 @@ sub is_there_a_new_distributions() {
         return 1;
     }
 
-    my $current_distro = find { $_->{version} eq $product_id->{version} } @distros;
-    $no_more_supported = $current_distro->{obsoleted_by};
+    my $current_apimdv_distro = find { $_->{version} eq $product_id->{version} } @distros;
+    $no_more_supported = $current_apimdv_distro->{obsoleted_by};
     if ($no_more_supported) {
         $new_distro = find { $_->{version} eq $no_more_supported } @distros;
         return;
