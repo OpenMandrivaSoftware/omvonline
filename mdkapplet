@@ -41,7 +41,11 @@ use Rpmdrake::open_db;
 
 if (!find { $_ eq '--auto-update' } @ARGV) {
     if (my $pid = mdkonline::is_running('mdkapplet')) {
-        die "mdkapplet already running ($pid)\n";
+        if ($::testing) {
+            warn "mdkapplet already running ($pid)\n";
+        } else {
+            die "mdkapplet already running ($pid)\n";
+        }
     }
 }
 
