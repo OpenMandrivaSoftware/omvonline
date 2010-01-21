@@ -514,6 +514,10 @@ sub really_confirm_upgrade() {
 sub upgrade() {
     return if $mdv_update_pid;
     return if !confirm_upgrade();
+    real_upgrade();
+}
+
+sub real_upgrade() {
     $mdv_update_pid = fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
                                 if_($download_all, "--download-all=$download_dir"),
                                 if_($root, "--urpmi-root=$root"));
