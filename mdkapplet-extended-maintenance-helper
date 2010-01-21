@@ -51,7 +51,7 @@ foreach my $opt (@ARGV) {
         $version = $opt;
     }
 }
-$version or die "usage: mdkapplet-restricted-helper <distrib_version>\n";
+$version or die "usage: $0 <distrib_version>\n";
 
 # make it work on 2008.1:
 eval { interactive::gtk::add_padding(Gtk2::Label->new) };
@@ -59,12 +59,12 @@ if ($@) {
     *interactive::gtk::add_padding = sub { $_[0] };
 }
 
-get_restricted_authentication();
+get_extmaint_authentication();
 
 ugtk2::exit(0);
 
 
-sub get_restricted_authentication() {
+sub get_extmaint_authentication() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
     my ($password_w, $email_w, $password);
 
@@ -97,10 +97,10 @@ sub get_restricted_authentication() {
     my $email = $email_w->get_text;
     if ($res) {
         if ($email && $password) {
-            add_restricted_medium($email, $password);
+            add_extmaint_medium($email, $password);
         } else {
             interactive->vnew->ask_warn(N("Error"), N("Password and email cannot be empty."));
-            goto &get_restricted_authentication;
+            goto &get_extmaint_authentication;
         }
     } else {
         ugtk2::exit(0);
@@ -108,7 +108,7 @@ sub get_restricted_authentication() {
 }
 
 my $error;
-sub add_restricted_medium {
+sub add_extmaint_medium {
     my ($email, $password) = @_;
 
     my $res =  get_from("https://my.mandriva.com/rest/authenticate",
@@ -119,17 +119,17 @@ sub add_restricted_medium {
     if ($ref->{code} != 0) {
         my $in = interactive->vnew;
         $in->ask_warn(N("Error"), N("An error occurred") . "\n" . $ref->{message});
-        goto &get_restricted_authentication;
+        goto &get_extmaint_authentication;
     } elsif ($ref->{data}{'can-access-restricted-repositories'} ne 'YES') {
         no_rights_dialog();
     } else {
         $error = 0;
         my $arch = urpm::cfg::get_arch();
-        actually_add_restricted_medium($ref, $password, $arch)
+        actually_add_extmaint_medium($ref, $password, $arch)
           or adding_media_failed();
         # FIXME: is not enough if we ever support sparc64, ppc64 and the like:
         if ($arch eq 'x86_64') {
-            actually_add_restricted_medium($ref, $password, 'i586')
+            actually_add_extmaint_medium($ref, $password, 'i586')
               or adding_media_failed();
         }
         if (!$error) {
@@ -161,10 +161,10 @@ sub no_rights_dialog() {
 sub adding_media_failed {
     $error = 1;
     interactive->vnew->ask_warn(N("Error"), N("An error occurred while adding medium"));
-    goto &get_restricted_authentication;
+    goto &get_extmaint_authentication;
 }
 
-sub actually_add_restricted_medium {
+sub actually_add_extmaint_medium {
     my ($ref, $password, $arch) = @_;
     $password = uri_escape($password);
     my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
