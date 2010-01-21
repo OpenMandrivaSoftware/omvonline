@@ -76,7 +76,9 @@ sub get_extmaint_authentication() {
       fill_n_run_portable_dialog(
           $w,
           [
-              get_banner(N("Adding an additional package medium")),
+              if_(!$::isEmbedded,
+                  get_banner(N("Adding an additional package medium")),
+              ),
               gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
