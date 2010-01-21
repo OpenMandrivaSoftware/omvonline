@@ -79,7 +79,16 @@ sub get_extmaint_authentication() {
               if_(!$::isEmbedded,
                   get_banner(N("Adding an additional package medium")),
               ),
-              gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
+              gtknew('Label_Left', 
+                     text_markup =>
+                       join("\n\n",
+                            N("You choosed to get extended maintenance in order to keep getting updates for your system."),
+                            N("You can subscribe <b>right now</b> to get extended maintenance:"),
+                        ),
+                     @common),
+              new_link_button($url, N("Online subscription")),
+              gtknew('HSeparator'),
+              gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium once you have subscribed online"),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
                   interactive::gtk::add_padding(
