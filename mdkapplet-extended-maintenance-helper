@@ -43,15 +43,15 @@ use HTTP::Request::Common;
 use HTTP::Request;
 use interactive::gtk; 
 
-my $version;
 foreach my $opt (@ARGV) {
     if ($opt =~ /--(rpm-root|urpmi-root)=(.*)/) {
         $::rpmdrake_options{$1}[0] = $2;
-    } else {
-        $version = $opt;
+        undef $opt;
     }
 }
-$version or die "usage: $0 <distrib_version>\n";
+my ($version, $url) = @ARGV;
+
+$version or die "usage: $0 <distrib_version> <url>\n";
 
 # make it work on 2008.1:
 eval { interactive::gtk::add_padding(Gtk2::Label->new) };
