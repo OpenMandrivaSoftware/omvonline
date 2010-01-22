@@ -178,7 +178,7 @@ sub adding_media_failed {
 sub actually_add_extmaint_medium {
     my ($ref, $password, $arch) = @_;
     $password = uri_escape($password);
-    my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
+    my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always', '--update');
     my $uri = "https://" . uri_escape($ref->{data}{email}) . ":$password\@dl.mandriva.com/extended/$version/$arch";
-    run_program::raw(@options, '--update', "Extanded Maintenance $arch " . int(rand(100000)), ${uri});
+    run_program::raw(@options, "Extanded Maintenance $arch " . int(rand(100000)), ${uri});
 }
