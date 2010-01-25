@@ -53,7 +53,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 my $online_site = "http://www.mandrivalinux.com/";
 my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
-my %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
+%config = getVarsFromSh('/etc/sysconfig/mdkapplet');
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 if ($::testing) {
     $config{FIRST_CHECK_DELAY} =  1 * 1000; # 1 second
@@ -284,37 +284,6 @@ run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 Gtk2->main;
 
 ugtk2::exit(0);
-
-sub get_distro_list() {
-    #- contact the following URL to retrieve the list of released distributions.
-    my $type = lc($product_id->{type}); $type =~ s/\s//g;
-    my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
-    my $list = 
-      join('&',
-           "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
-           "version=$product_id->{version}",
-           "mdkonline_version=$mdkonline::version",
-       );
-    log::explanations("trying distributions list from $list");
-
-    eval {
-        my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
-
-        # prevent SIGCHILD handler's waitpid to interfere with urpmi waiting
-        # for curl exit code, which broke downloads:
-        local $SIG{CHLD} = 'DEFAULT';
-
-        # old API:
-        if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
-            require mdkapplet_urpm;
-            mdkapplet_urpm::ensure_valid_cachedir($urpm);
-            mdkapplet_urpm::get_content($urpm, $list);
-        } else {
-            urpm::ensure_valid_cachedir($urpm);
-            urpm::download::get_content($urpm, $list);
-        }
-    };
-}
 
 sub is_there_a_new_distributions() {
     return if $product_id->{product} =~ /Flash/;

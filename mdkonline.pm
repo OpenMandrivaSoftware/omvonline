@@ -32,6 +32,7 @@ use ugtk2;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(fork_exec
                  get_banner
+                 get_distro_list
                  get_from
                  get_product_id
                  get_stale_upgrade_filename
@@ -39,10 +40,11 @@ our @EXPORT = qw(fork_exec
                  is_restricted_media_supported
                  translate_product
                  xml2perl
+                 %config
                  $product_id
                  $root);
 
-our ($product_id, $root);
+our (%config, $product_id, $root);
 our $version = 2.67;
 
 use log;
@@ -69,6 +71,37 @@ sub is_enterprise_media_supported() {
 
 sub is_restricted_media_supported() {
     to_bool($product_id->{product} =~ /powerpack/i);
+}
+
+sub get_distro_list() {
+    #- contact the following URL to retrieve the list of released distributions.
+    my $type = lc($product_id->{type}); $type =~ s/\s//g;
+    my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
+    my $list = 
+      join('&',
+           "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
+           "version=$product_id->{version}",
+           "mdkonline_version=$mdkonline::version",
+       );
+    log::explanations("trying distributions list from $list");
+
+    eval {
+        my $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
+
+        # prevent SIGCHILD handler's waitpid to interfere with urpmi waiting
+        # for curl exit code, which broke downloads:
+        local $SIG{CHLD} = 'DEFAULT';
+
+        # old API:
+        if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
+            require mdkapplet_urpm;
+            mdkapplet_urpm::ensure_valid_cachedir($urpm);
+            mdkapplet_urpm::get_content($urpm, $list);
+        } else {
+            urpm::ensure_valid_cachedir($urpm);
+            urpm::download::get_content($urpm, $list);
+        }
+    };
 }
 
 sub clean_confdir() {
