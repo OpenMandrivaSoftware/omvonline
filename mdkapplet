@@ -317,7 +317,7 @@ sub is_there_a_new_distributions() {
         return 1;
     }
 
-    my $current_apimdv_distro = find { $_->{version} eq $product_id->{version} } @distros;
+    my $current_apimdv_distro = find_current_distro(@distros);
     $no_more_supported = $current_apimdv_distro->{obsoleted_by};
     ($extended_maintenance_url, $extended_maintenance_end) = @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end)};
     if ($no_more_supported) {

@@ -30,7 +30,8 @@ use common;
 use ugtk2;
 
 our @ISA = qw(Exporter);
-our @EXPORT = qw(fork_exec
+our @EXPORT = qw(find_current_distro
+                 fork_exec
                  get_banner
                  get_distro_list
                  get_from
@@ -71,6 +72,10 @@ sub is_enterprise_media_supported() {
 
 sub is_restricted_media_supported() {
     to_bool($product_id->{product} =~ /powerpack/i);
+}
+
+sub find_current_distro {
+    find { $_->{version} eq $product_id->{version} } @_;
 }
 
 sub get_distro_list() {
