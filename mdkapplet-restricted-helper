@@ -70,6 +70,7 @@ sub get_restricted_authentication() {
 
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
+    # WARNING: WON'T WORK IF EVER EMBEDDED
     $w->{real_window}->signal_connect(destroy => sub { $password = $password_w->get_text });
 
     my $res =
