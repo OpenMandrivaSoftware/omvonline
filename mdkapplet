@@ -366,9 +366,12 @@ sub is_there_a_new_distributions() {
 
 my ($mdv_update_pid, $checker_pid, $media_manager_pid, $locked_count);
 
+# FIXME: flushing a hash would be less error prone when adding new stuff:
 sub clean_distro_cache() {
     undef $new_distro;
     undef $no_more_supported;
+    undef $extended_maintenance_url;
+    undef $extended_maintenance_end;
  }
 
 sub is_false {
