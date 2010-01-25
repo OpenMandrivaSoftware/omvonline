@@ -33,6 +33,7 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(find_current_distro
                  fork_exec
                  get_banner
+                 get_distro_list_
                  get_distro_list
                  get_from
                  get_product_id
@@ -78,7 +79,7 @@ sub find_current_distro {
     find { $_->{version} eq $product_id->{version} } @_;
 }
 
-sub get_distro_list() {
+sub get_distro_list_() {
     #- contact the following URL to retrieve the list of released distributions.
     my $type = lc($product_id->{type}); $type =~ s/\s//g;
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
@@ -108,6 +109,25 @@ sub get_distro_list() {
         }
     };
 }
+
+sub get_distro_list() {
+    return if $product_id->{product} =~ /Flash/;
+
+    my @lines = get_distro_list_();
+
+    if (my $err = $@) {
+        log::explanations("failed to download distribution list:\n$err");
+        return; # not a fatal error
+    }
+    
+    if (!@lines) {
+        log::explanations("empty distribution list");
+        return;
+    }
+
+    map { common::parse_LDAP_namespace_structure(chomp_($_)) } @lines;
+}
+
 
 sub clean_confdir() {
     my $confdir = '/root/.MdkOnline';

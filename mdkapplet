@@ -286,24 +286,11 @@ Gtk2->main;
 ugtk2::exit(0);
 
 sub is_there_a_new_distributions() {
-    return if $product_id->{product} =~ /Flash/;
-
     # sanity check for cooker:
     return if $product_id->{branch} eq 'Devel';
 
-    my @lines = get_distro_list();
-
-    if (my $err = $@) {
-        log::explanations("failed to download distribution list:\n$err");
-        return; # not a fatal error
-    }
-    
-    if (!@lines) {
-        log::explanations("empty distribution list");
-        return;
-    }
-
-    my @distros = map { common::parse_LDAP_namespace_structure(chomp_($_)) } @lines;
+    my @distros = get_distro_list();
+    return if !@distros;
 
     # do not do anything if current distribution isn't listed on api.mdv.com:
     return if !member($product_id->{version}, map { $_->{version} } @distros);
