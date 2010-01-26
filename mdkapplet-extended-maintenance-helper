@@ -63,6 +63,14 @@ get_extmaint_authentication();
 
 ugtk2::exit(0);
 
+sub get_extended_maintenance_url() {
+    require Rpmdrake::open_db;
+    get_product_id();
+    my @distros = get_distro_list();
+    return if !@distros;
+    my $current_apimdv_distro = find_current_distro(@distros);
+    $current_apimdv_distro->{'extended-maintenance'};
+}
 
 sub get_extmaint_authentication() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
@@ -70,6 +78,13 @@ sub get_extmaint_authentication() {
 
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
+
+    my $url = eval { get_extended_maintenance_url() };
+    if (my $err = $@) {
+        interactive->vnew->ask_warn(N("Error"), N("Failure while retrieving distributions list:")
+                                      . "\n$err");
+        return;
+    }
 
     my $res =
       fill_n_run_portable_dialog(
