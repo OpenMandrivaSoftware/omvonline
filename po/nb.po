@@ -10,13 +10,13 @@
 # Per Øyvind Karlsen <peroyvind@linux-mandrake.com>, 2005.
 # Per Øyvind Karlsen <pkarlsen@mandriva.com>, 2005, 2006.
 # Per Øyvind Karlsen <peroyvind@mandriva.org>, 2007.
-# Olav Dahlum <odahlum@gmail.com>, 2009.
+# Olav Dahlum <odahlum@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: nb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-25 16:58+0100\n"
-"PO-Revision-Date: 2009-12-01 20:19+0100\n"
+"PO-Revision-Date: 2010-01-26 21:30+0100\n"
 "Last-Translator: Olav Dahlum <odahlum@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -98,13 +98,11 @@ msgstr "urpmi-database låst"
 #: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
+msgstr "Versjonen er ikke støttet (for gammel versjon, eller utviklingsversjon)"
 
 #: ../mdkapplet:146
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "Fant inget medium. Du må legge til medium."
 
 #: ../mdkapplet:156
@@ -224,26 +222,26 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: ../mdkapplet:445
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The version of Mandriva Linux installed on your system is no longer "
 "supported."
-msgstr "En ny versjon av Mandriva Linux har blitt lansert."
+msgstr "Den installerte versjonen av Mandriva Linux har mistet støtten for vedlikehold."
 
 #: ../mdkapplet:446
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "For å holde systemet sikkert, kan du:"
 
 #: ../mdkapplet:455
 #, c-format
 msgid "Your distribution is no more supported"
-msgstr ""
+msgstr "Distribusjonen har ikke støtte"
 
 #: ../mdkapplet:465
 #, c-format
 msgid "Get long term support for your currently installed distribution"
-msgstr ""
+msgstr "Få langtidsstøtte for den installerte distribusjonen"
 
 #: ../mdkapplet:546
 #, c-format
@@ -426,8 +424,7 @@ msgstr "Bedrift"
 #: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Vær vennlig å skrive inn konto-IDen din for å legge til flere pakkebrønner"
+msgstr "Vær vennlig å skrive inn konto-IDen din for å legge til flere pakkebrønner"
 
 #: ../mdkapplet-enterprise-update-helper:79 ../mdkapplet-restricted-helper:85
 #, c-format
@@ -503,15 +500,12 @@ msgstr "Feil under forsøk på å legge til medium"
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Mandriva-kontoen din har ikke abonnementsnedlasting av PowerPack påslått."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Systemet ditt har ikke tilstrekkelig med ledig plass på %s for å oppgradere "
 "(%dMB <%dMB)"
@@ -645,3 +639,4 @@ msgstr "  --debug\t\t\t– logg hva som blir gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikke oppdatere pakker fra oppdateringsmedium.\n"
+
