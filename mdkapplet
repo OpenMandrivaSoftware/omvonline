@@ -729,6 +729,10 @@ sub setLastTime() {
     setVar('LASTCHECK', $date);
 }
 
+sub is_it_2008_0() {
+  $product_id->{version} eq '2008.0';
+}
+
 sub has_network_connection_2008() {
     require network::network;
     require network::tools;
@@ -742,7 +746,7 @@ sub checkNetwork() {
     return if $checker_pid;
     require network::tools;
     # alternatively we could have used 2008.0's network::tools::connected()
-    my $has_network = $product_id->{version} eq '2008.0' ? has_network_connection_2008()
+    my $has_network = is_it_2008_0() ? has_network_connection_2008()
       : network::tools::has_network_connection();
     if (!$has_network) {
         # do not notify if already done:
