@@ -740,10 +740,6 @@ sub setLastTime() {
     setVar('LASTCHECK', $date);
 }
 
-sub is_it_2008_0() {
-  $product_id->{version} eq '2008.0';
-}
-
 sub has_network_connection_2008() {
     require network::network;
     require network::tools;

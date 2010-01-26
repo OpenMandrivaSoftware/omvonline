@@ -39,6 +39,7 @@ our @EXPORT = qw(find_current_distro
                  get_product_id
                  get_release
                  get_stale_upgrade_filename
+                 is_it_2008_0
                  is_enterprise_media_supported
                  is_restricted_media_supported
                  translate_product
@@ -66,6 +67,10 @@ sub get_product_id() {
 sub get_release() {
     my ($r) = cat_($release_file) =~ /release\s+(\S+)/;
     ($r);
+}
+
+sub is_it_2008_0() {
+  $product_id->{version} eq '2008.0';
 }
 
 sub is_enterprise_media_supported() {
