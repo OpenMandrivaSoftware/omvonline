@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline 0.15\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-26 16:41+0100\n"
+"POT-Creation-Date: 2010-01-25 16:58+0100\n"
 "PO-Revision-Date: 2009-10-01 16:32+0100\n"
 "Last-Translator: Rhoslyn Prys <rprys@yahoo.com>\n"
 "Language-Team: Meddal.com\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Poedit-Country: UK\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:68
+#: ../mdkapplet:72
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Gwirio diweddariadau ar %s"
 
-#: ../mdkapplet:76
+#: ../mdkapplet:80
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Mae'r system yn gyfredol"
 
-#: ../mdkapplet:81
+#: ../mdkapplet:85
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -38,22 +38,22 @@ msgstr ""
 "Problemau ffurfweddu'r gwasanaethwr. Gwiriwch gofnodion ac anfon e-byst at "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:87
+#: ../mdkapplet:91
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Arhoswch, canfod pecynnau sydd ar gael..."
 
-#: ../mdkapplet:92
+#: ../mdkapplet:96
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Mae diweddariadau newydd ar gael ar gyfer eich system"
 
-#: ../mdkapplet:98
+#: ../mdkapplet:102
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mae dosbarthiad newydd o Mandriva Linux wedi ei ryddhau"
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
@@ -63,38 +63,38 @@ msgstr ""
 "Nid yw'r dosbarthiad yn cael ei gynnal bellach. Ni fydd diweddariadau "
 "pellach. Dylech ddiweddaru i fersiwn mwy diweddar o ddosbarthiad %s."
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:110 ../mdkapplet:147
+#: ../mdkapplet:114 ../mdkapplet:151
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Mae cyfrwng pecynnau ychwanegol ar gael ar gyfer eich dosbarthiad."
 
-#: ../mdkapplet:115
+#: ../mdkapplet:119
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Nid yw'r rhwydwaith ar gael.  Ffurfweddwch eich rhwydwaith"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:125
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Nid yw'r gwasanaeth ar gael. Cliciwch \"Gwefan Ar-lein\""
 
-#: ../mdkapplet:126 ../mdkapplet:132
+#: ../mdkapplet:130 ../mdkapplet:136
 #, c-format
 msgid "urpmi database locked"
 msgstr "Cronfa ddata urpmi wedi cloi"
 
-#: ../mdkapplet:137
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Nid yw'r rhyddhad yn cael ei gynnal (mae'n rhy hen neu'n rhyddhad datblygu)"
 
-#: ../mdkapplet:142
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -102,7 +102,7 @@ msgstr ""
 "Heb ganfod cyfrwng. Rhaid ychwanegu cyfrwng drwy'r \"Rheolwr Cyfrwng "
 "Meddalwedd\""
 
-#: ../mdkapplet:152
+#: ../mdkapplet:156
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -119,105 +119,129 @@ msgstr ""
 "\n"
 "Yna ailgychwyn %s."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:161
 #, c-format
 msgid "Enabled"
 msgstr "Galluogwyd"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:174
 #, c-format
 msgid "Error updating media"
 msgstr "Gwall wrth diweddaru cyfrwng"
 
-#: ../mdkapplet:210 ../mdkapplet:731
+#: ../mdkapplet:214 ../mdkapplet:791
 #, c-format
 msgid "Install updates"
 msgstr "Gosod diweddariadau"
 
-#: ../mdkapplet:211 ../mdkapplet:212
+#: ../mdkapplet:215 ../mdkapplet:216
 #, c-format
 msgid "Add additional package medium"
 msgstr "Ychwanegu cyfrwng pecynnau ychwanegol"
 
-#: ../mdkapplet:213
+#: ../mdkapplet:217
 #, c-format
 msgid "Check Updates"
 msgstr "Gwirio Diweddariad"
 
-#: ../mdkapplet:214
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure Network"
 msgstr "Ffurfweddu'r Rhwydwaith"
 
-#: ../mdkapplet:215
+#: ../mdkapplet:219
 #, c-format
 msgid "Upgrade the system"
 msgstr "Diweddaru'r system"
 
-#: ../mdkapplet:416
+#: ../mdkapplet:385
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Cychwyn drakconnect\n"
 
-#: ../mdkapplet:427 ../mdkapplet:475
+#: ../mdkapplet:396 ../mdkapplet:529
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Fersiwn newydd o ddosbarthiad Mandriva Linux"
 
-#: ../mdkapplet:432
+#: ../mdkapplet:401
 #, c-format
 msgid "Browse"
 msgstr ""
 
-#: ../mdkapplet:441
+#: ../mdkapplet:410
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mae dosbarthiad newydd o Mandriva Linux wedi ei ryddhau."
 
-#: ../mdkapplet:443
+#: ../mdkapplet:412 ../mdkapplet:478
 #, c-format
 msgid "More info about this new version"
 msgstr "Mwy o wybodaeth am y fersiwn newydd"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:414 ../mdkapplet:476
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Hoffech chi ddiweddaru i ddosbarthiad '%s'??"
 
-#: ../mdkapplet:447 ../mdkapplet:839 ../mdkapplet:865
+#: ../mdkapplet:416 ../mdkapplet:486 ../mdkapplet:899 ../mdkapplet:925
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Peidio gofyn y tro nesaf"
 
-#: ../mdkapplet:449
+#: ../mdkapplet:418
 #, c-format
 msgid "Download all packages at once"
 msgstr ""
 
-#: ../mdkapplet:450
+#: ../mdkapplet:419
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr ""
 
-#: ../mdkapplet:456
+#: ../mdkapplet:425
 #, c-format
 msgid "Where to download packages:"
 msgstr ""
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95
 #, c-format
 msgid "Next"
 msgstr "Nesaf"
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
-#: ../mdkapplet-upgrade-helper:131 ../mdkapplet-upgrade-helper:150
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
+#: ../mdkapplet-upgrade-helper:150
 #, c-format
 msgid "Cancel"
 msgstr "Diddymu"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:445
+#, fuzzy, c-format
+msgid ""
+"The version of Mandriva Linux installed on your system is no longer "
+"supported."
+msgstr "Mae dosbarthiad newydd o Mandriva Linux wedi ei ryddhau."
+
+#: ../mdkapplet:446
+#, c-format
+msgid "In order to keep your system secure, you can:"
+msgstr ""
+
+#: ../mdkapplet:455
+#, c-format
+msgid "Your distribution is no more supported"
+msgstr ""
+
+#: ../mdkapplet:465
+#, c-format
+msgid "Get long term support for your currently installed distribution"
+msgstr ""
+
+#: ../mdkapplet:546
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -226,17 +250,17 @@ msgstr ""
 "Mae'r diweddariad yn gofyn am gysylltiad rhwydwaith band llydan cyflym "
 "(cebl, xDSL,...) a gall gymryd rhai oriau i'w gwblhau."
 
-#: ../mdkapplet:494
+#: ../mdkapplet:548
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Amcan o'r data i'w lwytho i lawr yw %s"
 
-#: ../mdkapplet:495
+#: ../mdkapplet:549
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Dylech gau pob rhaglen sy'n rhedeg cyn parhau."
 
-#: ../mdkapplet:498
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -245,95 +269,95 @@ msgstr ""
 "Dylech osod eich gliniadur ar gyflenwad trydan ac mae ethernet yn well na'r "
 "diwifr, os yn bosib."
 
-#: ../mdkapplet:525
+#: ../mdkapplet:583
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Cychwyn MandrivaUpdate\n"
 
-#: ../mdkapplet:546
+#: ../mdkapplet:604
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Cyfrifo diweddariadau newydd...\n"
 
-#: ../mdkapplet:652
+#: ../mdkapplet:712
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Mae'r system yn gyfredol\n"
 
-#: ../mdkapplet:680
+#: ../mdkapplet:740
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Gwirio'r Rhwydwaith: i weld wedi ei anablu\n"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:782
 #, c-format
 msgid "Warning"
 msgstr "Rhybudd"
 
-#: ../mdkapplet:725 ../mdkapplet:733 ../mdkapplet:735
-#: ../mdkapplet-enterprise-update-helper:160
-#: ../mdkapplet-restricted-helper:166
+#: ../mdkapplet:785 ../mdkapplet:793 ../mdkapplet:795
+#: ../mdkapplet-enterprise-update-helper:150
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid "More Information"
 msgstr "Rhagor o Wybodaeth"
 
-#: ../mdkapplet:737
+#: ../mdkapplet:797
 #, c-format
 msgid "Add media"
 msgstr "Ychwanegu cyfrwng"
 
-#: ../mdkapplet:752
+#: ../mdkapplet:812
 #, c-format
 msgid "About..."
 msgstr "Ynghylch..."
 
-#: ../mdkapplet:756
+#: ../mdkapplet:816
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:757
+#: ../mdkapplet:817
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Hawlfraint (C) %s  Mandriva"
 
-#: ../mdkapplet:760
+#: ../mdkapplet:820
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online yw gwasanaethau gwe Mandriva."
 
-#: ../mdkapplet:762
+#: ../mdkapplet:822
 #, c-format
 msgid "Online WebSite"
 msgstr "Gwefan Ar-lein"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:767
+#: ../mdkapplet:827
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "-:Rhoslyn Prys <post@meddal.com>\n"
 
-#: ../mdkapplet:776 ../mdkapplet-config:69
+#: ../mdkapplet:836 ../mdkapplet-config:69
 #, c-format
 msgid "Updates Configuration"
 msgstr "Ffurfweddiad Diweddaru"
 
-#: ../mdkapplet:778
+#: ../mdkapplet:838
 #, c-format
 msgid "Always launch on startup"
 msgstr "Cychwyn wrth gychwyn"
 
-#: ../mdkapplet:780
+#: ../mdkapplet:840
 #, c-format
 msgid "Quit"
 msgstr "Gadael"
 
-#: ../mdkapplet:829 ../mdkapplet:834 ../mdkapplet:855 ../mdkapplet:860
+#: ../mdkapplet:889 ../mdkapplet:894 ../mdkapplet:915 ../mdkapplet:920
 #, c-format
 msgid "New medium available"
 msgstr "Cyfrwng newydd ar gael"
 
-#: ../mdkapplet:836 ../mdkapplet:862
+#: ../mdkapplet:896 ../mdkapplet:922
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -342,22 +366,22 @@ msgstr ""
 "Rydych yn defnyddio dosbarthiad '%s' ac o ganlyniad mae gennych fynediad "
 "breintiedig i feddalwedd ychwanegol."
 
-#: ../mdkapplet:838 ../mdkapplet:864
+#: ../mdkapplet:898 ../mdkapplet:924
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Hoffech chi osod y storfa o feddalwedd ychwanegol?"
 
-#: ../mdkapplet:863 ../mdkonline.pm:90
+#: ../mdkapplet:923 ../mdkonline.pm:149
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
-#: ../mdkapplet-enterprise-update-helper:73
-#: ../mdkapplet-enterprise-update-helper:150
-#: ../mdkapplet-enterprise-update-helper:155 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:79 ../mdkapplet-restricted-helper:156
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:74
+#: ../mdkapplet-enterprise-update-helper:140
+#: ../mdkapplet-enterprise-update-helper:145 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet-restricted-helper:80 ../mdkapplet-restricted-helper:146
+#: ../mdkapplet-restricted-helper:151
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ychwanegu cyfrwng pecynnau ychwanegol"
@@ -372,109 +396,109 @@ msgstr "Yma mae modd ffurfweddu'r rhaglennig diweddaru"
 msgid "Update frequency (hours)"
 msgstr "Amlder diweddaru (awr)"
 
-#: ../mdkapplet-config:80
+#: ../mdkapplet-config:81
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "Oedi gwiriad cyntaf (munud)"
 
-#: ../mdkapplet-config:89
+#: ../mdkapplet-config:90
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr ""
 
-#: ../mdkapplet-config:94 ../mdkapplet-config:100
+#: ../mdkapplet-config:96 ../mdkapplet-config:102
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr ""
 
-#: ../mdkapplet-config:94
+#: ../mdkapplet-config:96
 #, c-format
 msgid "Restricted"
 msgstr ""
 
-#: ../mdkapplet-config:100
+#: ../mdkapplet-config:102
 #, c-format
 msgid "Enterprise"
 msgstr ""
 
-#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:80
+#: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Rhwoch enw eich cyfrif yn ogystal a'r cyfrwng pecyn ychwnegol"
 
-#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:84
+#: ../mdkapplet-enterprise-update-helper:79 ../mdkapplet-restricted-helper:85
 #, c-format
 msgid "More information on your user account"
 msgstr "Rhagor o wybodaeth am eich cyfrif defnyddiwr"
 
-#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:87
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Your email"
 msgstr "Eich e-bost"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-enterprise-update-helper:83 ../mdkapplet-restricted-helper:89
 #, c-format
 msgid "Your password"
 msgstr "Eich cyfrinair"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-enterprise-update-helper:87 ../mdkapplet-restricted-helper:93
 #, c-format
 msgid "Forgotten password"
 msgstr "Cyfrinair wedi ei anghofio"
 
-#: ../mdkapplet-enterprise-update-helper:96
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:102 ../mdkapplet-restricted-helper:132
-#: ../mdkapplet-restricted-helper:174 ../mdkapplet-upgrade-helper:82
+#: ../mdkapplet-enterprise-update-helper:97
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:103 ../mdkapplet-restricted-helper:122
+#: ../mdkapplet-restricted-helper:164 ../mdkapplet-upgrade-helper:82
 #: ../mdkapplet-upgrade-helper:125 ../mdkapplet-upgrade-helper:177
 #: ../mdkapplet-upgrade-helper:214
 #, c-format
 msgid "Error"
 msgstr "Gwall"
 
-#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-enterprise-update-helper:97 ../mdkapplet-restricted-helper:103
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Nid oes modd i'r cyfrinair a'r e-bost fod yn wag"
 
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-restricted-helper:132
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-restricted-helper:122
 #, c-format
 msgid "An error occurred"
 msgstr "Digwyddodd gwall"
 
-#: ../mdkapplet-enterprise-update-helper:142
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:148 ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:132
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:138 ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Wedi ychwanegu cyfrwng %s yn llwyddiannus."
 
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Ok"
 msgstr "Iawn"
 
-#: ../mdkapplet-enterprise-update-helper:156
+#: ../mdkapplet-enterprise-update-helper:146
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "Nid yw eich cyfrif Mandriva yn cynnwystanysgrifiad llwytho %s i lawr."
 
-#: ../mdkapplet-enterprise-update-helper:162
-#: ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-enterprise-update-helper:152
+#: ../mdkapplet-restricted-helper:158
 #, c-format
 msgid "Close"
 msgstr "Cau"
 
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:174
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:164
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Digwyddodd gwall wrth ychwanegu cyfrwng"
 
-#: ../mdkapplet-restricted-helper:162
+#: ../mdkapplet-restricted-helper:152
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
@@ -541,32 +565,32 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Methu ychwanegu cyfrwng"
 
-#: ../mdkonline.pm:85
+#: ../mdkonline.pm:144
 #, fuzzy, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:86
+#: ../mdkonline.pm:145
 #, fuzzy, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Linux"
 
-#: ../mdkonline.pm:87
+#: ../mdkonline.pm:146
 #, fuzzy, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Linux"
 
-#: ../mdkonline.pm:88
+#: ../mdkonline.pm:147
 #, fuzzy, c-format
 msgid "Mandriva One"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:89
+#: ../mdkonline.pm:148
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:101
+#: ../mdkonline.pm:160
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Diweddaru'r Dosbarthiad"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-26 16:41+0100\n"
+"POT-Creation-Date: 2010-01-25 16:58+0100\n"
 "PO-Revision-Date: 2009-11-26 16:15+0100\n"
 "Last-Translator: Yaser Ammar <linux.uae@gawab.com>\n"
 "Language-Team:  Arabic <doc@arabeyes.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:68
+#: ../mdkapplet:72
 #, c-format
 msgid "Will check updates at %s"
 msgstr "سيفحص وجود تحديثات عند %s"
 
-#: ../mdkapplet:76
+#: ../mdkapplet:80
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "نظامك محدّث"
 
-#: ../mdkapplet:81
+#: ../mdkapplet:85
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -40,22 +40,22 @@ msgstr ""
 "مشكلة في ضبط الخدمة. رجاء تحقّق من السجلّ وأرسل رسالة "
 "إلىsupport@mandrivaonline.com"
 
-#: ../mdkapplet:87
+#: ../mdkapplet:91
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "اتنظر من فضلك، يجري البحث عن الحزم المتاحة..."
 
-#: ../mdkapplet:92
+#: ../mdkapplet:96
 #, c-format
 msgid "New updates are available for your system"
 msgstr "هناك تحديثات متوفّرة لنظامك"
 
-#: ../mdkapplet:98
+#: ../mdkapplet:102
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "يتوفر إصدار جديد من توزيعة لينكس ماندريفا"
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
@@ -63,44 +63,44 @@ msgid ""
 "distribution."
 msgstr ""
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, fuzzy, c-format
 msgid "Mandriva Linux"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkapplet:110 ../mdkapplet:147
+#: ../mdkapplet:114 ../mdkapplet:151
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "يتوفر وسيط إضافي للحزم لتوزيعتك."
 
-#: ../mdkapplet:115
+#: ../mdkapplet:119
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "الشّبكة متوقّفة. رجاء اضبط شبكتك"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:125
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "الخدمة غير مُنشَّطة. رجاء اضغط على \"Online Website\""
 
-#: ../mdkapplet:126 ../mdkapplet:132
+#: ../mdkapplet:130 ../mdkapplet:136
 #, c-format
 msgid "urpmi database locked"
 msgstr "أقفلت قاعدة بيانات urpmi"
 
-#: ../mdkapplet:137
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "هذه الإصدارة غير مدعومة (إما بسبب أنها قديمة جداً، أو أنها إصدارة تطويريّة)"
 
-#: ../mdkapplet:142
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "لا توجد وسائط، تجب إضافة بعض الوسائط عبر 'مدير وسائط البرامج'."
 
-#: ../mdkapplet:152
+#: ../mdkapplet:156
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -115,105 +115,129 @@ msgstr ""
 "البرامج لتمكين واحد على الأقل (أشر عليها في عمود %s).\n"
 "ثم أعد تشغيل %s."
 
-#: ../mdkapplet:157
+#: ../mdkapplet:161
 #, c-format
 msgid "Enabled"
 msgstr "مُفعَّل"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:174
 #, c-format
 msgid "Error updating media"
 msgstr "خطأ في تحديث الوسيط"
 
-#: ../mdkapplet:210 ../mdkapplet:731
+#: ../mdkapplet:214 ../mdkapplet:791
 #, c-format
 msgid "Install updates"
 msgstr "ثبّت التّحديثات"
 
-#: ../mdkapplet:211 ../mdkapplet:212
+#: ../mdkapplet:215 ../mdkapplet:216
 #, c-format
 msgid "Add additional package medium"
 msgstr "أضف وسيط حزم إضافي"
 
-#: ../mdkapplet:213
+#: ../mdkapplet:217
 #, c-format
 msgid "Check Updates"
 msgstr "التمس تحديثات"
 
-#: ../mdkapplet:214
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure Network"
 msgstr "اضبط الشّبكة"
 
-#: ../mdkapplet:215
+#: ../mdkapplet:219
 #, c-format
 msgid "Upgrade the system"
 msgstr "ترقية النظام"
 
-#: ../mdkapplet:416
+#: ../mdkapplet:385
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "يُقدح drakconnect\n"
 
-#: ../mdkapplet:427 ../mdkapplet:475
+#: ../mdkapplet:396 ../mdkapplet:529
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "إصدار جديد من توزيعة لينكس ماندريفا"
 
-#: ../mdkapplet:432
+#: ../mdkapplet:401
 #, c-format
 msgid "Browse"
 msgstr ""
 
-#: ../mdkapplet:441
+#: ../mdkapplet:410
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "أُطلق إصدار جديد من توزيعة لينكس ماندريفا."
 
-#: ../mdkapplet:443
+#: ../mdkapplet:412 ../mdkapplet:478
 #, c-format
 msgid "More info about this new version"
 msgstr "معلومات إضافية حول هذا الإصدار الجديد"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:414 ../mdkapplet:476
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "هل تريد الترقية إلى التوزيعة '%s' ؟"
 
-#: ../mdkapplet:447 ../mdkapplet:839 ../mdkapplet:865
+#: ../mdkapplet:416 ../mdkapplet:486 ../mdkapplet:899 ../mdkapplet:925
 #, c-format
 msgid "Do not ask me next time"
 msgstr "لا تسألني في المرة القادمة"
 
-#: ../mdkapplet:449
+#: ../mdkapplet:418
 #, c-format
 msgid "Download all packages at once"
 msgstr ""
 
-#: ../mdkapplet:450
+#: ../mdkapplet:419
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr ""
 
-#: ../mdkapplet:456
+#: ../mdkapplet:425
 #, c-format
 msgid "Where to download packages:"
 msgstr ""
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95
 #, c-format
 msgid "Next"
 msgstr "التالي"
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
-#: ../mdkapplet-upgrade-helper:131 ../mdkapplet-upgrade-helper:150
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
+#: ../mdkapplet-upgrade-helper:150
 #, c-format
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:445
+#, fuzzy, c-format
+msgid ""
+"The version of Mandriva Linux installed on your system is no longer "
+"supported."
+msgstr "أُطلق إصدار جديد من توزيعة لينكس ماندريفا."
+
+#: ../mdkapplet:446
+#, c-format
+msgid "In order to keep your system secure, you can:"
+msgstr ""
+
+#: ../mdkapplet:455
+#, c-format
+msgid "Your distribution is no more supported"
+msgstr ""
+
+#: ../mdkapplet:465
+#, c-format
+msgid "Get long term support for your currently installed distribution"
+msgstr ""
+
+#: ../mdkapplet:546
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -222,17 +246,17 @@ msgstr ""
 "هذه الترقية تتطلب اتصالا شبكيا عريض النطاق (اتصال الكبل، دي إس إل، ...) وقد "
 "يستغرق عدة ساعات ليكتمل"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:548
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "المقدار التقريبي للبيانات التي ستنزل هو %s"
 
-#: ../mdkapplet:495
+#: ../mdkapplet:549
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "ينبغي أن تغلق كل التطبيقات الأخرى العاملة قبل المتابعة"
 
-#: ../mdkapplet:498
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -241,70 +265,70 @@ msgstr ""
 "ينبغي أن توصل حاسوبك المحمول بتيار الكهرباء المتناوبة (AC)، ويفضل استخدام "
 "الاتصال السلكي (ethernet) بدل اللاسلكي (wifi) إن أمكن."
 
-#: ../mdkapplet:525
+#: ../mdkapplet:583
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "محدّث ماندريفا (MandrivaUpdate) يُقدح\n"
 
-#: ../mdkapplet:546
+#: ../mdkapplet:604
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "حساب التّحديثات الجديدة...\n"
 
-#: ../mdkapplet:652
+#: ../mdkapplet:712
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "النّظام محدّث\n"
 
-#: ../mdkapplet:680
+#: ../mdkapplet:740
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "فحص الشّبكة: تبدو معطّلة\n"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:782
 #, c-format
 msgid "Warning"
 msgstr "تحذير"
 
-#: ../mdkapplet:725 ../mdkapplet:733 ../mdkapplet:735
-#: ../mdkapplet-enterprise-update-helper:160
-#: ../mdkapplet-restricted-helper:166
+#: ../mdkapplet:785 ../mdkapplet:793 ../mdkapplet:795
+#: ../mdkapplet-enterprise-update-helper:150
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid "More Information"
 msgstr "معلومات إضافية"
 
-#: ../mdkapplet:737
+#: ../mdkapplet:797
 #, c-format
 msgid "Add media"
 msgstr "أضف وسائط"
 
-#: ../mdkapplet:752
+#: ../mdkapplet:812
 #, c-format
 msgid "About..."
 msgstr "عَن..."
 
-#: ../mdkapplet:756
+#: ../mdkapplet:816
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkapplet:757
+#: ../mdkapplet:817
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "حقوق النشر (C) %s لماندريفا"
 
-#: ../mdkapplet:760
+#: ../mdkapplet:820
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "ماندريفا أونلاين تقدم وصولا إلى خدمات ماندريفا على الشبكة"
 
-#: ../mdkapplet:762
+#: ../mdkapplet:822
 #, c-format
 msgid "Online WebSite"
 msgstr "موقع ماندريفا على الإنترنت"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:767
+#: ../mdkapplet:827
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
@@ -314,49 +338,49 @@ msgstr ""
 "Ossama M. Khayat <okhayat@yahoo.com>, 2004, 2005.\n"
 "Yaser Ammar <linux.uae@gawab.com>2009\n"
 
-#: ../mdkapplet:776 ../mdkapplet-config:69
+#: ../mdkapplet:836 ../mdkapplet-config:69
 #, c-format
 msgid "Updates Configuration"
 msgstr "ضبط التحديثات"
 
-#: ../mdkapplet:778
+#: ../mdkapplet:838
 #, c-format
 msgid "Always launch on startup"
 msgstr "اقدحه دومًا عند البدء"
 
-#: ../mdkapplet:780
+#: ../mdkapplet:840
 #, c-format
 msgid "Quit"
 msgstr "اخرج"
 
-#: ../mdkapplet:829 ../mdkapplet:834 ../mdkapplet:855 ../mdkapplet:860
+#: ../mdkapplet:889 ../mdkapplet:894 ../mdkapplet:915 ../mdkapplet:920
 #, c-format
 msgid "New medium available"
 msgstr "يتوفر وسط جديد"
 
-#: ../mdkapplet:836 ../mdkapplet:862
+#: ../mdkapplet:896 ../mdkapplet:922
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr "أنت تستخدم توزيعة '%s' ولذلك يحق لك الوصول إلى برامج إضافية."
 
-#: ../mdkapplet:838 ../mdkapplet:864
+#: ../mdkapplet:898 ../mdkapplet:924
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "هل تريد تثبيت مستودع البرامج الإضافي هذا؟"
 
-#: ../mdkapplet:863 ../mdkonline.pm:90
+#: ../mdkapplet:923 ../mdkonline.pm:149
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
-#: ../mdkapplet-enterprise-update-helper:73
-#: ../mdkapplet-enterprise-update-helper:150
-#: ../mdkapplet-enterprise-update-helper:155 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:79 ../mdkapplet-restricted-helper:156
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:74
+#: ../mdkapplet-enterprise-update-helper:140
+#: ../mdkapplet-enterprise-update-helper:145 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet-restricted-helper:80 ../mdkapplet-restricted-helper:146
+#: ../mdkapplet-restricted-helper:151
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "إضافة وسيط حزم إضافي"
@@ -371,109 +395,109 @@ msgstr "بإمكانك هنا ضبط بريمج التحديثات"
 msgid "Update frequency (hours)"
 msgstr "تكرار التحديث (بالثواني)"
 
-#: ../mdkapplet-config:80
+#: ../mdkapplet-config:81
 #, fuzzy, c-format
 msgid "First check delay (minutes)"
 msgstr "زمن أول فحص"
 
-#: ../mdkapplet-config:89
+#: ../mdkapplet-config:90
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr ""
 
-#: ../mdkapplet-config:94 ../mdkapplet-config:100
+#: ../mdkapplet-config:96 ../mdkapplet-config:102
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr ""
 
-#: ../mdkapplet-config:94
+#: ../mdkapplet-config:96
 #, c-format
 msgid "Restricted"
 msgstr ""
 
-#: ../mdkapplet-config:100
+#: ../mdkapplet-config:102
 #, c-format
 msgid "Enterprise"
 msgstr ""
 
-#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:80
+#: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "فضلاً اكتب مُعرِّف حسابك لإضافة وسيط حزم إضافي"
 
-#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:84
+#: ../mdkapplet-enterprise-update-helper:79 ../mdkapplet-restricted-helper:85
 #, c-format
 msgid "More information on your user account"
 msgstr "معلومات إضافية عن حسابك"
 
-#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:87
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Your email"
 msgstr "بريدك الإلكتروني"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-enterprise-update-helper:83 ../mdkapplet-restricted-helper:89
 #, c-format
 msgid "Your password"
 msgstr "كلمة سرك"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-enterprise-update-helper:87 ../mdkapplet-restricted-helper:93
 #, c-format
 msgid "Forgotten password"
 msgstr "نسيت كلمة السر"
 
-#: ../mdkapplet-enterprise-update-helper:96
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:102 ../mdkapplet-restricted-helper:132
-#: ../mdkapplet-restricted-helper:174 ../mdkapplet-upgrade-helper:82
+#: ../mdkapplet-enterprise-update-helper:97
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:103 ../mdkapplet-restricted-helper:122
+#: ../mdkapplet-restricted-helper:164 ../mdkapplet-upgrade-helper:82
 #: ../mdkapplet-upgrade-helper:125 ../mdkapplet-upgrade-helper:177
 #: ../mdkapplet-upgrade-helper:214
 #, c-format
 msgid "Error"
 msgstr "خطأ"
 
-#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-enterprise-update-helper:97 ../mdkapplet-restricted-helper:103
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "كلمة السر والبريد الإلكتروني لا يمكن تركهما خاليين."
 
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-restricted-helper:132
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-restricted-helper:122
 #, c-format
 msgid "An error occurred"
 msgstr "حدث خطأ"
 
-#: ../mdkapplet-enterprise-update-helper:142
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:148 ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:132
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:138 ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Successfully added media %s."
 msgstr "نجحت إضافة الوسائط %s."
 
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Ok"
 msgstr "موافق"
 
-#: ../mdkapplet-enterprise-update-helper:156
+#: ../mdkapplet-enterprise-update-helper:146
 #, fuzzy, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "حسابك في ماندريفا لا يتضمن اشتراك تنزيل بَور باك مفعلاً."
 
-#: ../mdkapplet-enterprise-update-helper:162
-#: ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-enterprise-update-helper:152
+#: ../mdkapplet-restricted-helper:158
 #, c-format
 msgid "Close"
 msgstr "أغلق"
 
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:174
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:164
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "حدث خطأ أثناء إضافة الوسيط"
 
-#: ../mdkapplet-restricted-helper:162
+#: ../mdkapplet-restricted-helper:152
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
@@ -538,32 +562,32 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "فشل عند إضافة الوسيط"
 
-#: ../mdkonline.pm:85
+#: ../mdkonline.pm:144
 #, fuzzy, c-format
 msgid "Mandriva Flash"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkonline.pm:86
+#: ../mdkonline.pm:145
 #, fuzzy, c-format
 msgid "Mandriva Free"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkonline.pm:87
+#: ../mdkonline.pm:146
 #, fuzzy, c-format
 msgid "Mandriva Mini"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkonline.pm:88
+#: ../mdkonline.pm:147
 #, fuzzy, c-format
 msgid "Mandriva One"
 msgstr "ماندريفا أونلاين %s"
 
-#: ../mdkonline.pm:89
+#: ../mdkonline.pm:148
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "ماندريفا بَور باك"
 
-#: ../mdkonline.pm:101
+#: ../mdkonline.pm:160
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "ترقية التوزيعة"

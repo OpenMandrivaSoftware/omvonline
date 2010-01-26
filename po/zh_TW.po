@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-26 16:41+0100\n"
+"POT-Creation-Date: 2010-01-25 16:58+0100\n"
 "PO-Revision-Date: 2008-11-25 14:53+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:68
+#: ../mdkapplet:72
 #, c-format
 msgid "Will check updates at %s"
 msgstr "將於 %s 檢查更新"
 
-#: ../mdkapplet:76
+#: ../mdkapplet:80
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "您的系統處於最新的狀態"
 
-#: ../mdkapplet:81
+#: ../mdkapplet:85
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -41,22 +41,22 @@ msgid ""
 msgstr ""
 "服務設定發生問題，請檢查錯誤紀錄並寄封電子郵件至 support@mandrivaonline.com"
 
-#: ../mdkapplet:87
+#: ../mdkapplet:91
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "請稍候，正在尋找可用的套件..."
 
-#: ../mdkapplet:92
+#: ../mdkapplet:96
 #, c-format
 msgid "New updates are available for your system"
 msgstr "有適用於您系統的更新"
 
-#: ../mdkapplet:98
+#: ../mdkapplet:102
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mandriva Linux 的新版本已經釋出了"
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, c-format
 msgid ""
 "This version of the distribution is no longer supported. There will be no "
@@ -64,43 +64,43 @@ msgid ""
 "distribution."
 msgstr ""
 
-#: ../mdkapplet:104
+#: ../mdkapplet:108
 #, fuzzy, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:110 ../mdkapplet:147
+#: ../mdkapplet:114 ../mdkapplet:151
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "有可供您發行版使用之額外的套件媒介。"
 
-#: ../mdkapplet:115
+#: ../mdkapplet:119
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "網路沒有啟動，請設定您的網路連線"
 
-#: ../mdkapplet:121
+#: ../mdkapplet:125
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "服務沒有啟動。請點選「線上網站」"
 
-#: ../mdkapplet:126 ../mdkapplet:132
+#: ../mdkapplet:130 ../mdkapplet:136
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi 資料庫被鎖住了"
 
-#: ../mdkapplet:137
+#: ../mdkapplet:141
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支援 (您使用的版本過舊或是開發中版本)"
 
-#: ../mdkapplet:142
+#: ../mdkapplet:146
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "找不到媒體。您必須經由「套件媒體管理員」新增一些媒體。"
 
-#: ../mdkapplet:152
+#: ../mdkapplet:156
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -115,105 +115,129 @@ msgstr ""
 "\n"
 "完成後，請重新啟動 %s。"
 
-#: ../mdkapplet:157
+#: ../mdkapplet:161
 #, c-format
 msgid "Enabled"
 msgstr "是否啟用？"
 
-#: ../mdkapplet:170
+#: ../mdkapplet:174
 #, c-format
 msgid "Error updating media"
 msgstr "更新媒體時發生錯誤"
 
-#: ../mdkapplet:210 ../mdkapplet:731
+#: ../mdkapplet:214 ../mdkapplet:791
 #, c-format
 msgid "Install updates"
 msgstr "安裝更新"
 
-#: ../mdkapplet:211 ../mdkapplet:212
+#: ../mdkapplet:215 ../mdkapplet:216
 #, c-format
 msgid "Add additional package medium"
 msgstr "新增額外的套件媒介"
 
-#: ../mdkapplet:213
+#: ../mdkapplet:217
 #, c-format
 msgid "Check Updates"
 msgstr "檢查更新"
 
-#: ../mdkapplet:214
+#: ../mdkapplet:218
 #, c-format
 msgid "Configure Network"
 msgstr "設定網路連線"
 
-#: ../mdkapplet:215
+#: ../mdkapplet:219
 #, c-format
 msgid "Upgrade the system"
 msgstr "升級系統"
 
-#: ../mdkapplet:416
+#: ../mdkapplet:385
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "啟動 drakconnect 連線程式\n"
 
-#: ../mdkapplet:427 ../mdkapplet:475
+#: ../mdkapplet:396 ../mdkapplet:529
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux 有新版本"
 
-#: ../mdkapplet:432
+#: ../mdkapplet:401
 #, c-format
 msgid "Browse"
 msgstr ""
 
-#: ../mdkapplet:441
+#: ../mdkapplet:410
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mandriva Linux 的新版本已經釋出了。"
 
-#: ../mdkapplet:443
+#: ../mdkapplet:412 ../mdkapplet:478
 #, c-format
 msgid "More info about this new version"
 msgstr "更多關於新版本的資訊"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:414 ../mdkapplet:476
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "您想要升級到 '%s' 發行版嗎？"
 
-#: ../mdkapplet:447 ../mdkapplet:839 ../mdkapplet:865
+#: ../mdkapplet:416 ../mdkapplet:486 ../mdkapplet:899 ../mdkapplet:925
 #, c-format
 msgid "Do not ask me next time"
 msgstr "下一次不用詢問我"
 
-#: ../mdkapplet:449
+#: ../mdkapplet:418
 #, c-format
 msgid "Download all packages at once"
 msgstr ""
 
-#: ../mdkapplet:450
+#: ../mdkapplet:419
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr ""
 
-#: ../mdkapplet:456
+#: ../mdkapplet:425
 #, c-format
 msgid "Where to download packages:"
 msgstr ""
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95
 #, c-format
 msgid "Next"
 msgstr "下一步"
 
-#: ../mdkapplet:460 ../mdkapplet:501 ../mdkapplet:840 ../mdkapplet:866
-#: ../mdkapplet-enterprise-update-helper:88 ../mdkapplet-restricted-helper:94
-#: ../mdkapplet-upgrade-helper:131 ../mdkapplet-upgrade-helper:150
+#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
+#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
+#: ../mdkapplet-upgrade-helper:150
 #, c-format
 msgid "Cancel"
 msgstr "取消"
 
-#: ../mdkapplet:492
+#: ../mdkapplet:445
+#, fuzzy, c-format
+msgid ""
+"The version of Mandriva Linux installed on your system is no longer "
+"supported."
+msgstr "Mandriva Linux 的新版本已經釋出了。"
+
+#: ../mdkapplet:446
+#, c-format
+msgid "In order to keep your system secure, you can:"
+msgstr ""
+
+#: ../mdkapplet:455
+#, c-format
+msgid "Your distribution is no more supported"
+msgstr ""
+
+#: ../mdkapplet:465
+#, c-format
+msgid "Get long term support for your currently installed distribution"
+msgstr ""
+
+#: ../mdkapplet:546
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -221,17 +245,17 @@ msgid ""
 msgstr ""
 "這個更新需要寬頻網路聯結 (cable、xDSL、...) 而且可能需要數小時才能完成，"
 
-#: ../mdkapplet:494
+#: ../mdkapplet:548
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "預計下載的資料為 %s"
 
-#: ../mdkapplet:495
+#: ../mdkapplet:549
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "您應該在繼續之前先關閉所有其他的應用程式。"
 
-#: ../mdkapplet:498
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -240,119 +264,119 @@ msgstr ""
 "您應該將您的筆記型電腦接上 AC 電源，如果可以的話，乙太網路也會優於無線網路連"
 "線。"
 
-#: ../mdkapplet:525
+#: ../mdkapplet:583
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "啟動 MandrivaUpdate\n"
 
-#: ../mdkapplet:546
+#: ../mdkapplet:604
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "計算新的更新...\n"
 
-#: ../mdkapplet:652
+#: ../mdkapplet:712
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "系統已經在最新狀態了\n"
 
-#: ../mdkapplet:680
+#: ../mdkapplet:740
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "檢查網路狀態中：似乎已停用\n"
 
-#: ../mdkapplet:722
+#: ../mdkapplet:782
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkapplet:725 ../mdkapplet:733 ../mdkapplet:735
-#: ../mdkapplet-enterprise-update-helper:160
-#: ../mdkapplet-restricted-helper:166
+#: ../mdkapplet:785 ../mdkapplet:793 ../mdkapplet:795
+#: ../mdkapplet-enterprise-update-helper:150
+#: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid "More Information"
 msgstr "更多資訊"
 
-#: ../mdkapplet:737
+#: ../mdkapplet:797
 #, c-format
 msgid "Add media"
 msgstr "新增媒體"
 
-#: ../mdkapplet:752
+#: ../mdkapplet:812
 #, c-format
 msgid "About..."
 msgstr "關於..."
 
-#: ../mdkapplet:756
+#: ../mdkapplet:816
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:757
+#: ../mdkapplet:817
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s by Mandriva"
 
-#: ../mdkapplet:760
+#: ../mdkapplet:820
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online 將引導您連結到 Mandriva 網頁服務。"
 
-#: ../mdkapplet:762
+#: ../mdkapplet:822
 #, c-format
 msgid "Online WebSite"
 msgstr "線上網站"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:767
+#: ../mdkapplet:827
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Shiva Huang <shivahuang@gmail.com>\n"
 "You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 
-#: ../mdkapplet:776 ../mdkapplet-config:69
+#: ../mdkapplet:836 ../mdkapplet-config:69
 #, c-format
 msgid "Updates Configuration"
 msgstr "更新組態設定"
 
-#: ../mdkapplet:778
+#: ../mdkapplet:838
 #, c-format
 msgid "Always launch on startup"
 msgstr "總是在啟動時執行"
 
-#: ../mdkapplet:780
+#: ../mdkapplet:840
 #, c-format
 msgid "Quit"
 msgstr "結束"
 
-#: ../mdkapplet:829 ../mdkapplet:834 ../mdkapplet:855 ../mdkapplet:860
+#: ../mdkapplet:889 ../mdkapplet:894 ../mdkapplet:915 ../mdkapplet:920
 #, c-format
 msgid "New medium available"
 msgstr "有可用的新媒介"
 
-#: ../mdkapplet:836 ../mdkapplet:862
+#: ../mdkapplet:896 ../mdkapplet:922
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr "您使用 '%s' 套件，因此可以取得額外的軟體。"
 
-#: ../mdkapplet:838 ../mdkapplet:864
+#: ../mdkapplet:898 ../mdkapplet:924
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "您要安裝此額外的套件庫嗎？"
 
-#: ../mdkapplet:863 ../mdkonline.pm:90
+#: ../mdkapplet:923 ../mdkonline.pm:149
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
-#: ../mdkapplet-enterprise-update-helper:73
-#: ../mdkapplet-enterprise-update-helper:150
-#: ../mdkapplet-enterprise-update-helper:155 ../mdkapplet-restricted-helper:68
-#: ../mdkapplet-restricted-helper:79 ../mdkapplet-restricted-helper:156
-#: ../mdkapplet-restricted-helper:161
+#: ../mdkapplet-enterprise-update-helper:74
+#: ../mdkapplet-enterprise-update-helper:140
+#: ../mdkapplet-enterprise-update-helper:145 ../mdkapplet-restricted-helper:68
+#: ../mdkapplet-restricted-helper:80 ../mdkapplet-restricted-helper:146
+#: ../mdkapplet-restricted-helper:151
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "新增一個額外的套件媒介"
@@ -367,109 +391,109 @@ msgstr "您可以在此設定系統列中的更新通知程式"
 msgid "Update frequency (hours)"
 msgstr "更新頻率（小時）"
 
-#: ../mdkapplet-config:80
+#: ../mdkapplet-config:81
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "第一次檢查延遲（分）"
 
-#: ../mdkapplet-config:89
+#: ../mdkapplet-config:90
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr ""
 
-#: ../mdkapplet-config:94 ../mdkapplet-config:100
+#: ../mdkapplet-config:96 ../mdkapplet-config:102
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr ""
 
-#: ../mdkapplet-config:94
+#: ../mdkapplet-config:96
 #, c-format
 msgid "Restricted"
 msgstr ""
 
-#: ../mdkapplet-config:100
+#: ../mdkapplet-config:102
 #, c-format
 msgid "Enterprise"
 msgstr ""
 
-#: ../mdkapplet-enterprise-update-helper:74 ../mdkapplet-restricted-helper:80
+#: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "請輸入您的帳號 ID 以新增額外的套件媒介"
 
-#: ../mdkapplet-enterprise-update-helper:78 ../mdkapplet-restricted-helper:84
+#: ../mdkapplet-enterprise-update-helper:79 ../mdkapplet-restricted-helper:85
 #, c-format
 msgid "More information on your user account"
 msgstr "關於您使用者帳號的更多資訊"
 
-#: ../mdkapplet-enterprise-update-helper:81 ../mdkapplet-restricted-helper:87
+#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
 #, c-format
 msgid "Your email"
 msgstr "您的電子郵件"
 
-#: ../mdkapplet-enterprise-update-helper:82 ../mdkapplet-restricted-helper:88
+#: ../mdkapplet-enterprise-update-helper:83 ../mdkapplet-restricted-helper:89
 #, c-format
 msgid "Your password"
 msgstr "您的密碼"
 
-#: ../mdkapplet-enterprise-update-helper:86 ../mdkapplet-restricted-helper:92
+#: ../mdkapplet-enterprise-update-helper:87 ../mdkapplet-restricted-helper:93
 #, c-format
 msgid "Forgotten password"
 msgstr "忘記密碼"
 
-#: ../mdkapplet-enterprise-update-helper:96
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:102 ../mdkapplet-restricted-helper:132
-#: ../mdkapplet-restricted-helper:174 ../mdkapplet-upgrade-helper:82
+#: ../mdkapplet-enterprise-update-helper:97
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:103 ../mdkapplet-restricted-helper:122
+#: ../mdkapplet-restricted-helper:164 ../mdkapplet-upgrade-helper:82
 #: ../mdkapplet-upgrade-helper:125 ../mdkapplet-upgrade-helper:177
 #: ../mdkapplet-upgrade-helper:214
 #, c-format
 msgid "Error"
 msgstr "錯誤"
 
-#: ../mdkapplet-enterprise-update-helper:96 ../mdkapplet-restricted-helper:102
+#: ../mdkapplet-enterprise-update-helper:97 ../mdkapplet-restricted-helper:103
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "密碼及電子郵件信箱欄位不能是空白的。"
 
-#: ../mdkapplet-enterprise-update-helper:131
-#: ../mdkapplet-restricted-helper:132
+#: ../mdkapplet-enterprise-update-helper:121
+#: ../mdkapplet-restricted-helper:122
 #, c-format
 msgid "An error occurred"
 msgstr "發生一個錯誤"
 
-#: ../mdkapplet-enterprise-update-helper:142
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:148 ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:132
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:138 ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Successfully added media %s."
 msgstr "成功加入媒體來源 %s。"
 
-#: ../mdkapplet-enterprise-update-helper:143
-#: ../mdkapplet-restricted-helper:149
+#: ../mdkapplet-enterprise-update-helper:133
+#: ../mdkapplet-restricted-helper:139
 #, c-format
 msgid "Ok"
 msgstr "確定"
 
-#: ../mdkapplet-enterprise-update-helper:156
+#: ../mdkapplet-enterprise-update-helper:146
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "您的 Mandriva 帳號並沒有下載 %s 的權限。"
 
-#: ../mdkapplet-enterprise-update-helper:162
-#: ../mdkapplet-restricted-helper:168
+#: ../mdkapplet-enterprise-update-helper:152
+#: ../mdkapplet-restricted-helper:158
 #, c-format
 msgid "Close"
 msgstr "關閉"
 
-#: ../mdkapplet-enterprise-update-helper:168
-#: ../mdkapplet-restricted-helper:174
+#: ../mdkapplet-enterprise-update-helper:158
+#: ../mdkapplet-restricted-helper:164
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "新增媒體時發生錯誤"
 
-#: ../mdkapplet-restricted-helper:162
+#: ../mdkapplet-restricted-helper:152
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
@@ -533,32 +557,32 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "新增媒體時發生錯誤"
 
-#: ../mdkonline.pm:85
+#: ../mdkonline.pm:144
 #, fuzzy, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:86
+#: ../mdkonline.pm:145
 #, fuzzy, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:87
+#: ../mdkonline.pm:146
 #, fuzzy, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:88
+#: ../mdkonline.pm:147
 #, fuzzy, c-format
 msgid "Mandriva One"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:89
+#: ../mdkonline.pm:148
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:101
+#: ../mdkonline.pm:160
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "升級發行版本"
