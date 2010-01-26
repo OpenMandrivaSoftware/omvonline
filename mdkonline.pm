@@ -37,6 +37,7 @@ our @EXPORT = qw(find_current_distro
                  get_distro_list
                  get_from
                  get_product_id
+                 get_release
                  get_stale_upgrade_filename
                  is_enterprise_media_supported
                  is_restricted_media_supported
