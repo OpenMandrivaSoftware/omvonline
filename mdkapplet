@@ -518,7 +518,6 @@ sub no_more_supported() {
 
 sub get_extended_maintenance() {
     $mdv_update_pid = fork_exec('mdkapplet-extended-maintenance-helper', $product_id->{version},
-                                $extended_maintenance_url,
                                 if_($download_all, "--download-all=$download_dir"),
                                 if_($root, "--urpmi-root=$root"));
 }

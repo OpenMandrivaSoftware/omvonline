@@ -49,9 +49,9 @@ foreach my $opt (@ARGV) {
         undef $opt;
     }
 }
-my ($version, $url) = @ARGV;
+my ($version) = @ARGV;
 
-$version or die "usage: $0 <distrib_version> <url>\n";
+$version or die "usage: $0 <distrib_version>\n";
 
 # make it work on 2008.1:
 eval { interactive::gtk::add_padding(Gtk2::Label->new) };
