@@ -589,6 +589,14 @@ sub checker_exit {
     POSIX::_exit($comm_codes{$state}{code});
 }
 
+sub update_backport_media {
+    my ($urpm) = @_;
+    # update inactive backport media:
+    my @inactive_backport_media = Rpmdrake::open_db::get_inactive_backport_media($urpm);
+    log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
+    run_program::run('urpmi.update', if_($root, "--urpmi-root=$root"), $_) foreach @inactive_backport_media;
+}
+
 sub silentCheck() {
     my $check_time if 0;
     my $new_time = time();
@@ -644,10 +652,7 @@ sub silentCheck() {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
-        # update inactive backport media:
-        my @inactive_backport_media = Rpmdrake::open_db::get_inactive_backport_media($urpm);
-        log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
-        run_program::run('urpmi.update', if_($root, "--urpmi-root=$root"), $_) foreach @inactive_backport_media;
+        update_backport_media($urpm);
         
         require urpm::select;
         require urpm::media;
