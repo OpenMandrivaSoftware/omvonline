@@ -652,7 +652,9 @@ sub silentCheck() {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
-        update_backport_media($urpm);
+        if (!is_it_2008_0()) {
+            update_backport_media($urpm);
+        }
         
         require urpm::select;
         require urpm::media;
