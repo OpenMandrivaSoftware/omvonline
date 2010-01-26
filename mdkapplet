@@ -729,6 +729,15 @@ sub setLastTime() {
     setVar('LASTCHECK', $date);
 }
 
+sub has_network_connection_2008() {
+    require network::network;
+    require network::tools;
+    my $net = {};
+    network::network::read_net_conf($net);
+    my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($net);
+    to_bool($gw_address);
+}
+
 sub checkNetwork() {
     return if $checker_pid;
     require network::tools;
