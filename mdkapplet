@@ -381,7 +381,10 @@ sub harvester {
     return @pids;
 }
 
-sub configNetwork() { log::explanations(N_("Launching drakconnect\n")); fork_exec("/usr/sbin/drakconnect") }
+sub configNetwork() {
+    log::explanations(N_("Launching drakconnect\n"));
+    fork_exec("/usr/sbin/drakconnect");
+}
 
 # only enable 'download all packages at once' on 2010.1 and further:
 sub is_download_all_enabled() {
