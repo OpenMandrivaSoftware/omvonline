@@ -74,10 +74,12 @@ sub is_it_2008_0() {
 }
 
 sub is_enterprise_media_supported() {
+    return if is_it_2008_0();
     to_bool($product_id->{type} eq 'Enterprise' && $product_id->{product} eq 'Server');
 }
 
 sub is_restricted_media_supported() {
+    return if is_it_2008_0();
     to_bool($product_id->{product} =~ /powerpack/i);
 }
 
