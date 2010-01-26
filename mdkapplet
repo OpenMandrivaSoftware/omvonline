@@ -741,7 +741,10 @@ sub has_network_connection_2008() {
 sub checkNetwork() {
     return if $checker_pid;
     require network::tools;
-    if (!network::tools::has_network_connection()) {
+    # alternatively we could have used 2008.0's network::tools::connected()
+    my $has_network = $product_id->{version} eq '2008.0' ? has_network_connection_2008()
+      : network::tools::has_network_connection();
+    if (!$has_network) {
         # do not notify if already done:
         return if member($state_global, qw(disconnected));
 	log::explanations(N_("Checking Network: seems disabled\n"));
