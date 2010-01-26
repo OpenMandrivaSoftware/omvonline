@@ -286,7 +286,8 @@ ugtk2::exit(0);
 
 sub is_there_a_new_distributions() {
     # sanity check for cooker:
-    return if $product_id->{branch} eq 'Devel';
+    # (2008.0 wrongly reports 'Devel' instead of 'Official'):
+    return if $product_id->{branch} eq 'Devel' && !is_it_2008_0();
 
     my @distros = get_distro_list();
     return if !@distros;
