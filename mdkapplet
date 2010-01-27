@@ -444,10 +444,14 @@ sub confirm_upgrade() {
 }
 
 
+sub get_obsolete_message_() {
+    N("This Mandriva Linux system maintenance has ended. It means it will not receive any new software update.");
+}
+
 sub get_obsolete_message() {
     join("\n\n",
-         N("This Mandriva Linux system maintenance has ended. It means it will not receive any new software update."),
-         N("In order to keep your system secure, you can:"),
+         get_obsolete_message_(),
+          N("In order to keep your system secure, you can:"),
      );
 }
       
