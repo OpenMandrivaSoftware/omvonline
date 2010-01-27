@@ -597,8 +597,11 @@ sub update_backport_media {
     my ($urpm) = @_;
     # update inactive backport media:
     my @inactive_backport_media = Rpmdrake::open_db::get_inactive_backport_media($urpm);
-    log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media)) if @inactive_backport_media;
-    run_program::run('urpmi.update', if_($root, "--urpmi-root=$root"), $_) foreach @inactive_backport_media;
+    return if !@inactive_backport_media;
+    log::explanations("updating inactive backport media " . join(', ', @inactive_backport_media));
+    foreach (@inactive_backport_media) {
+        run_program::run('urpmi.update', if_($root, "--urpmi-root=$root"), $_);
+    }
 }
 
 sub silentCheck() {
