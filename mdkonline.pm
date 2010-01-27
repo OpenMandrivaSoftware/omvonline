@@ -43,7 +43,7 @@ our @EXPORT = qw(find_current_distro
                  is_enterprise_media_supported
                  is_extmaint_supported
                  is_restricted_media_supported
-                 read_config
+                 read_sys_config
                  translate_product
                  xml2perl
                  %config
@@ -59,7 +59,7 @@ use log;
 our $config_file = '/etc/sysconfig/mdkapplet';
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
-sub read_config() {
+sub read_sys_config() {
     %config = getVarsFromSh($config_file);
 }
 

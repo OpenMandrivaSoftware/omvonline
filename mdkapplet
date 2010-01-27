@@ -52,7 +52,7 @@ if (!find { $_ eq '--auto-update' } @ARGV) {
 my $online_site = "http://www.mandrivalinux.com/";
 my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
-read_config();
+read_sys_config();
 $config{UPDATE_FREQUENCY} ||= 3*60*60; # default to 3hours
 if ($::testing) {
     $config{FIRST_CHECK_DELAY} =  1 * 1000; # 1 second

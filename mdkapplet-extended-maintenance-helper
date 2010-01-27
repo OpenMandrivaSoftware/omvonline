@@ -58,7 +58,7 @@ if ($@) {
     *interactive::gtk::add_padding = sub { $_[0] };
 }
 
-read_config();
+read_sys_config();
 get_extmaint_authentication();
 
 ugtk2::exit(0);
