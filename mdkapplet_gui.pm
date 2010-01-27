@@ -54,7 +54,8 @@ our $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
-our %local_config = getVarsFromSh($localfile);
+our %local_config;
+read_local_config();
 
 our $width = 500;
 our @common = (
@@ -108,6 +109,10 @@ sub new_link_button {
                             run_program::raw({ detach => 1, setuid => get_parent_uid() }, 'www-browser', $url);
                         });
     $link;
+}
+
+sub read_local_config() {
+    %local_config = getVarsFromSh($localfile);
 }
 
 sub setVar {
