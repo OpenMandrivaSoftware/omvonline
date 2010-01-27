@@ -77,6 +77,12 @@ sub get_extmaint_authentication() {
 
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
+    # when not embedded:
+    my $password_restrieved;
+    $w->{real_window}->signal_connect(destroy => sub {
+                                          $password = $password_w->get_text;
+                                          $password_restrieved = 1;
+                                      });
 
     my $url = eval { get_extended_maintenance_url() };
     if (my $err = $@) {
@@ -119,7 +125,8 @@ sub get_extmaint_authentication() {
           ]);
 
     my $email = $email_w->get_text;
-    $password = $password_w->get_text;
+    # when embedded:
+    $password = $password_w->get_text if !$password_restrieved;
     if ($res) {
         if ($email && $password) {
             add_extmaint_medium($email, $password);
