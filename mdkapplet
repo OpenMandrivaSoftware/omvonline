@@ -444,7 +444,7 @@ sub confirm_upgrade() {
 }
 
 
-sub _get_obsolete_message() {
+sub get_obsolete_message() {
     join("\n\n",
          N("This Mandriva Linux system maintenance has ended. It means it will not receive any new software update."),
          N("In order to keep your system secure, you can:"),
@@ -482,7 +482,7 @@ sub no_more_supported_choice() {
     my @widgets = (
         get_banner(),
         gtknew('Label_Left', 
-               text => _get_obsolete_message() . "\n", @common),
+               text => get_obsolete_message() . "\n", @common),
         if_($extended_maintenance_url,
             $b1 = gtknew('RadioButton',
                          text => N("Get long term support for your currently installed distribution"),
