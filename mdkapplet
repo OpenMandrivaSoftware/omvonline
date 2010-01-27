@@ -456,7 +456,7 @@ sub get_obsolete_message() {
 }
       
 sub refresh_no_more_supported_msg() {
-    my $basic_msg = N("This version of the distribution is no longer supported. There will be no further updates.");
+    my $basic_msg = get_obsolete_message_();
     my $distro = N("Mandriva Linux");
     my $msg;
 
