@@ -172,7 +172,7 @@ sub get_banner {
 }
 
 sub get_urpmi_options() {
-    ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
+    ({ sensitive_arguments => 1 }, 'urpmi.addmedia', if_(!is_it_2008_0(), '--xml-info', 'always'));
 }
 
 sub is_running {
