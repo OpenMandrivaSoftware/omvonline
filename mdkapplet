@@ -106,6 +106,12 @@ my %state = (
                  urgency => 'low',
                  tt => []
              },
+             extended_support_is_enabled => {
+                 colour => [ 'okay' ],
+                 menu => [ 'check' ],
+                 urgency => 'low',
+                 tt => []
+             },
              unconfigured_restricted_media => {
                  colour => [ 'bundle' ],
                  menu => [ 'add_restricted_media', 'check' ],
@@ -364,8 +370,14 @@ sub harvester {
                 # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
                 if (!member($sub_state, qw(okay))) {
                     go2State($sub_state);
-                } elsif ($no_more_supported) {
+                } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})) {
                     go2State('no_more_supported');
+                } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
+                            && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED})) {
+                    $state{extended_support_is_enabled}{tt}[0] =
+                      N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
+                    go2State('extended_support_is_enabled');
+                    setVar('EXTENDED_SUPPORT_SPLASHED', bool2yesno(1));
                 } elsif ($new_distro && is_false($config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})
                       && is_false($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})) {
                     go2State('new_distribution');
