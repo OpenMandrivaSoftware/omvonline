@@ -59,6 +59,7 @@ if ($@) {
     *interactive::gtk::add_padding = sub { $_[0] };
 }
 
+read_config();
 get_extmaint_authentication();
 
 ugtk2::exit(0);
@@ -183,6 +184,8 @@ sub add_extmaint_medium {
               or adding_media_failed();
         }
         if (!$error) {
+            $config{EXTENDED_SUPPORT} = bool2yesno(1);
+            setVarsInSh($config_file, \%config);
             #interactive->vnew->ask_okcancel(N("Error"), N("An error occurred while adding medium"));
             my $w = ugtk2->new(N("Successfully added media %s.", 'Extended Maintenance'), grab => 1);
             $w->_ask_okcancel(N("Successfully added media %s.", 'Extended Maintenance'), N("Ok"), undef);
