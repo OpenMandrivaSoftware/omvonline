@@ -102,7 +102,8 @@ sub get_extmaint_authentication() {
               gtknew('Label_Left', 
                      text_markup =>
                        join("\n\n",
-                            N("You choosed to get extended maintenance in order to keep getting updates for your system."),
+                            N("Mandriva provides 12 months of desktop updates (%s) and 18 months of base updates (%s) for distributions.", $desktop_update_end, $basic_update_end),
+                            N("Extended maintenance is now available to get 18 months of additional updates (%s).", $extended_maintenance_end),
                             N("You can subscribe <b>right now</b> to get extended maintenance:"),
                         ),
                      @common),
