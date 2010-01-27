@@ -865,7 +865,6 @@ sub setState {
     $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
     $menu;
-
 }
 
 sub setAutoStart {
