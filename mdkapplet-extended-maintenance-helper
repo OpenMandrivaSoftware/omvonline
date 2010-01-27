@@ -53,7 +53,7 @@ my ($version) = @ARGV;
 
 $version or die "usage: $0 <distrib_version>\n";
 
-# make it work on 2008.1:
+# make it work on 2008.X:
 eval { interactive::gtk::add_padding(Gtk2::Label->new) };
 if ($@) {
     *interactive::gtk::add_padding = sub { $_[0] };
