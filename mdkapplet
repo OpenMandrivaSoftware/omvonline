@@ -489,7 +489,7 @@ sub no_more_supported_choice() {
                text => get_obsolete_message() . "\n", @common),
         if_($extended_maintenance_url,
             $b1 = gtknew('RadioButton',
-                         text => N("Get long term support for your currently installed distribution"),
+                         text => N("Purchase a maintenance extension for this version (%s) and keep it running until.", $product_id->{version}),
                          toggled => sub {
                              ($choice, $warn_me) = ('extended', undef) if $_[0]->get_active;
                          },
@@ -519,6 +519,9 @@ sub no_more_supported_choice() {
     );
 
     #$_ and $_->set_border_width(8) foreach $b1, $b2, $b3;
+
+    # explicitely wrap too long message:
+    $b1->child->set_line_wrap(1);
 
     my $res = fill_n_run_portable_dialog($w, \@widgets);
 
