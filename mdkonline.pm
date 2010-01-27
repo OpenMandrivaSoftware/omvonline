@@ -47,6 +47,7 @@ our @EXPORT = qw(find_current_distro
                  translate_product
                  xml2perl
                  %config
+                 $config_file
                  $product_id
                  $root);
 
@@ -55,10 +56,11 @@ our $version = 2.67;
 
 use log;
 
+our $config_file = '/etc/sysconfig/mdkapplet';
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
 sub read_config() {
-    %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
+    %config = getVarsFromSh($config_file);
 }
 
 sub get_stale_upgrade_filename() {

@@ -42,7 +42,6 @@ ugtk2::exit(0);
 sub configure() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => -1);
 
-    my $config_file = '/etc/sysconfig/mdkapplet';
     my %config = getVarsFromSh($config_file);
 
     # convert from ms to seconds:
