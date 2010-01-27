@@ -25,6 +25,7 @@ use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use standalone; # for explanations
 use common;
 use run_program;
+use DateTime;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -71,6 +72,17 @@ sub get_extended_maintenance_data() {
     @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end desktop-update-end basic-update-end)};
 }
 
+sub iso8601_date_to_locale {
+    my ($date) = @_;
+    return $date if $date !~ /(\d\d\d\d)-?(\d\d)-?(\d\d)/;
+    my $dt = DateTime->new(year => $1, month => $2, day => $3);
+    my $date1 = $dt->strftime("%x");
+    # will fail on some locales (eg: br_FR, ...):
+    eval { $dt->set_locale($ENV{LC_TIME}) };
+    my $date2 = $dt->strftime("%x");
+    $date2 || $date1;
+}
+
 sub get_extmaint_authentication() {
     my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
     my ($password_w, $email_w, $password);
@@ -102,8 +114,12 @@ sub get_extmaint_authentication() {
               gtknew('Label_Left', 
                      text_markup =>
                        join("\n\n",
-                            N("Mandriva provides 12 months of desktop updates (%s) and 18 months of base updates (%s) for distributions.", $desktop_update_end, $basic_update_end),
-                            N("Extended maintenance is now available to get 18 months of additional updates (%s).", $extended_maintenance_end),
+                            #-PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
+                            N("Mandriva provides 12 months of desktop updates (up to the %s) and 18 months of base updates (up to the %s) for distributions.",
+                              iso8601_date_to_locale($desktop_update_end),
+                              iso8601_date_to_locale($basic_update_end)),
+                            N("Extended maintenance is now available to get 18 months of additional updates (up to the %s).",
+                              iso8601_date_to_locale($extended_maintenance_end)),
                             N("You can subscribe <b>right now</b> to get extended maintenance:"),
                         ),
                      @common),
