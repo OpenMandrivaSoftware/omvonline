@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-01-27 18:22+0100\n"
-"PO-Revision-Date: 2010-01-27 17:48+0200\n"
+"PO-Revision-Date: 2010-01-27 19:57+0200\n"
 "Last-Translator: Jani Välimaa <wally@mandriva.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -151,6 +151,8 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Perusylläpito jakelulle on päättynyt. Kiitos ylläpitolaajennuksen tilauksesta, "
+"järjestelmä tulee pysymään ajantasalla %s asti."
 
 #: ../mdkapplet:399
 #, c-format
@@ -190,7 +192,7 @@ msgstr "Älä kysy seuraavalla kerralla"
 #: ../mdkapplet:434
 #, c-format
 msgid "Download all packages at once"
-msgstr "Lataa kaikki paketit yhdellä latauksella"
+msgstr "Lataa kaikki paketit kerralla"
 
 #: ../mdkapplet:435
 #, c-format
@@ -200,7 +202,7 @@ msgstr "(Varoitus: Tarvitaan aika paljon vapaata levytilaa)"
 #: ../mdkapplet:441
 #, c-format
 msgid "Where to download packages:"
-msgstr "Mihin ladataan paketit:"
+msgstr "Minne paketit ladataan:"
 
 #: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
 #: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
@@ -223,6 +225,8 @@ msgid ""
 "This Mandriva Linux system maintenance has ended. It means it will not "
 "receive any new software update."
 msgstr ""
+"Tämän Mandriva Linux -järjestelmän ylläpito on loppunut. "
+"Uusia ohjelmistopäivityksiä ei enää ilmesty."
 
 #: ../mdkapplet:466
 #, c-format
@@ -237,21 +241,21 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:478
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Ylläpitolaajennus tulisi hankkia."
 
 #: ../mdkapplet:480
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Käytössä olevaa versiota jakelusta ei enää tueta ja sille ei ole enää "
-"saatavilla päivityksiä. Järjestelmä tulisi päivittää uudempaan %sin versioon."
+"Sinun tulisi hankkia ylläpitolaajennus tai päivittää uudempaan "
+"%sin versioon."
 
 #: ../mdkapplet:484
-#, fuzzy, c-format
+#, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "Päivitetäänkö jakeluun %s?"
+msgstr "Järjestelmä tulisi päivittää uudempaan %sin versioon."
 
 #: ../mdkapplet:494
 #, c-format
@@ -264,6 +268,8 @@ msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until."
 msgstr ""
+"Hanki ylläpitolaajennus asennettuun versioon (%s) ja pidä se käytössä "
+"asti."
 
 #: ../mdkapplet:588
 #, c-format
@@ -390,7 +396,7 @@ msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
-"Käytät jakelua %s ja siksi sinulla on oikeus päästä käsiksi lisäohjelmiin."
+"Käytössä on %s ja siksi myös oikeus päästä käsiksi lisäohjelmiin."
 
 #: ../mdkapplet:964 ../mdkapplet:990
 #, c-format
@@ -530,7 +536,8 @@ msgstr "Virhe lisättäessä lähdettä"
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Mandriva-käyttäjätilillä ei ole PowerPackin lataustilausta."
+msgstr ""
+"Mandriva-käyttäjätilillä ei ole PowerPackin lataustilausta."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
