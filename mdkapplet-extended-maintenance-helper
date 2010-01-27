@@ -62,13 +62,13 @@ get_extmaint_authentication();
 
 ugtk2::exit(0);
 
-sub get_extended_maintenance_url() {
+sub get_extended_maintenance_data() {
     require Rpmdrake::open_db;
     get_product_id();
     my @distros = get_distro_list();
     return if !@distros;
     my $current_apimdv_distro = find_current_distro(@distros);
-    $current_apimdv_distro->{'extended-maintenance'};
+    @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end desktop-update-end basic-update-end)};
 }
 
 sub get_extmaint_authentication() {
@@ -84,7 +84,8 @@ sub get_extmaint_authentication() {
                                           $password_restrieved = 1;
                                       });
 
-    my $url = eval { get_extended_maintenance_url() };
+    my ($url, $extended_maintenance_end, $desktop_update_end, $basic_update_end) =
+      eval { get_extended_maintenance_data() };
     if (my $err = $@) {
         interactive->vnew->ask_warn(N("Error"), N("Failure while retrieving distributions list:")
                                       . "\n$err");
