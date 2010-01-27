@@ -25,7 +25,6 @@ use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use standalone; # for explanations
 use common;
 use run_program;
-use DateTime;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -71,17 +70,6 @@ sub get_extended_maintenance_data() {
     return if !@distros;
     my $current_apimdv_distro = find_current_distro(@distros);
     @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end desktop-update-end basic-update-end)};
-}
-
-sub iso8601_date_to_locale {
-    my ($date) = @_;
-    return $date if $date !~ /(\d\d\d\d)-?(\d\d)-?(\d\d)/;
-    my $dt = DateTime->new(year => $1, month => $2, day => $3);
-    my $date1 = $dt->strftime("%x");
-    # will fail on some locales (eg: br_FR, ...):
-    eval { $dt->set_locale($ENV{LC_TIME}) };
-    my $date2 = $dt->strftime("%x");
-    $date2 || $date1;
 }
 
 sub get_extmaint_authentication() {

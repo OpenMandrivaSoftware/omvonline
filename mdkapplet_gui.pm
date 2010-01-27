@@ -25,7 +25,7 @@ package mdkapplet_gui;
 use strict;
 use lib qw(/usr/lib/libDrakX);
 use common;
-
+use DateTime;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(
@@ -35,6 +35,7 @@ our @EXPORT = qw(
                     $localfile
                     $width
                     fill_n_run_portable_dialog
+                    iso8601_date_to_locale
                     new_link_button
                     new_portable_dialog
                     setVar
@@ -121,4 +122,15 @@ sub setVar {
     $s{$var} = $st;
     setVarsInSh($localfile, \%s);
     read_local_config();
+}
+
+sub iso8601_date_to_locale {
+    my ($date) = @_;
+    return $date if $date !~ /(\d\d\d\d)-?(\d\d)-?(\d\d)/;
+    my $dt = DateTime->new(year => $1, month => $2, day => $3);
+    my $date1 = $dt->strftime("%x");
+    # will fail on some locales (eg: br_FR, ...):
+    eval { $dt->set_locale($ENV{LC_TIME}) };
+    my $date2 = $dt->strftime("%x");
+    $date2 || $date1;
 }
