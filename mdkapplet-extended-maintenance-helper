@@ -90,7 +90,7 @@ sub get_extmaint_authentication() {
           $w,
           [
               if_(!$::isEmbedded,
-                  get_banner(N("Adding an additional package medium")),
+                  get_banner(N("Extended Maintenance")),
               ),
               gtknew('Label_Left', 
                      text_markup =>
@@ -172,7 +172,7 @@ sub no_rights_dialog() {
     fill_n_run_portable_dialog(
           $w,
           [
-              if_(!$::isEmbedded, get_banner(N("Adding an additional package medium"))),
+              if_(!$::isEmbedded, get_banner(N("Extended Maintenance"))),
               gtknew('Label_Left', text => N("Your Mandriva account does not have Extended Maintenance subscription enabled."),
                      @common),
               gtknew('HButtonBox', layout => 'start', children_tight => [
