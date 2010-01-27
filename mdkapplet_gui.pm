@@ -120,4 +120,5 @@ sub setVar {
     my %s = getVarsFromSh($localfile);
     $s{$var} = $st;
     setVarsInSh($localfile, \%s);
+    read_local_config();
 }
