@@ -3,7 +3,7 @@ package mdkapplet_gui;
 ################################################################################
 # Mandriva Online                                                              # 
 #                                                                              #
-# Copyright (C) 2003-2008 Mandriva                                             #
+# Copyright (C) 2003-2010 Mandriva                                             #
 #                                                                              #
 # Daouda Lo                                                                    #
 # Thierry Vignaud <tvignaud at mandriva dot com>                               #
