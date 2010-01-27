@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-25 16:58+0100\n"
+"POT-Creation-Date: 2010-01-27 18:22+0100\n"
 "PO-Revision-Date: 2006-09-13 20:38+0200\n"
 "Last-Translator: Vedran Ljubovic <vljubovic@smartnet.ba>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
@@ -23,17 +23,17 @@ msgstr ""
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:72
+#: ../mdkapplet:71
 #, fuzzy, c-format
 msgid "Will check updates at %s"
 msgstr "Provjeri ispravke"
 
-#: ../mdkapplet:80
+#: ../mdkapplet:79
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Vaš sistem je up-to-date"
 
-#: ../mdkapplet:85
+#: ../mdkapplet:84
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -42,67 +42,54 @@ msgstr ""
 "Problem kod podešavanja servisa. Provjerite logove i pošaljite mail za "
 "support@mandrivaonline.com"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:90
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Molim sačekajte, tražim dostupne pakete..."
 
-#: ../mdkapplet:96
+#: ../mdkapplet:95
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Nove ispravke su dostupne za vaš sistem"
 
-#: ../mdkapplet:102
+#: ../mdkapplet:101
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr ""
 
-#: ../mdkapplet:108
-#, c-format
-msgid ""
-"This version of the distribution is no longer supported. There will be no "
-"further updates. You should upgrade to a newer version of the %s "
-"distribution."
-msgstr ""
-
-#: ../mdkapplet:108
-#, fuzzy, c-format
-msgid "Mandriva Linux"
-msgstr "Mandriva Online %s"
-
-#: ../mdkapplet:114 ../mdkapplet:151
+#: ../mdkapplet:119 ../mdkapplet:156
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr ""
 
-#: ../mdkapplet:119
+#: ../mdkapplet:124
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Mreža ne radi. Podesite vašu mrežu"
 
-#: ../mdkapplet:125
+#: ../mdkapplet:130
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Servis nije aktiviran. Kliknite na \"Online web stranica\""
 
-#: ../mdkapplet:130 ../mdkapplet:136
+#: ../mdkapplet:135 ../mdkapplet:141
 #, fuzzy, c-format
 msgid "urpmi database locked"
 msgstr "urpmi baza podataka je zaključana"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:146
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr ""
 "Izdanje nije podržano (prestaro izdanje ili je riječ o izdanju u razvoju)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:151
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 
-#: ../mdkapplet:156
+#: ../mdkapplet:161
 #, fuzzy, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -118,253 +105,285 @@ msgstr ""
 "\n"
 "Zatim, restartujte %s."
 
-#: ../mdkapplet:161
+#: ../mdkapplet:166
 #, c-format
 msgid "Enabled"
 msgstr "Uključeno"
 
-#: ../mdkapplet:174
+#: ../mdkapplet:179
 #, fuzzy, c-format
 msgid "Error updating media"
 msgstr "Ažuriram medije...\n"
 
-#: ../mdkapplet:214 ../mdkapplet:791
+#: ../mdkapplet:219 ../mdkapplet:880
 #, c-format
 msgid "Install updates"
 msgstr "Instaliraj ispravke"
 
-#: ../mdkapplet:215 ../mdkapplet:216
+#: ../mdkapplet:220 ../mdkapplet:221
 #, c-format
 msgid "Add additional package medium"
 msgstr ""
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 #, c-format
 msgid "Check Updates"
 msgstr "Provjeri da li ima ispravki"
 
-#: ../mdkapplet:218
+#: ../mdkapplet:223
 #, c-format
 msgid "Configure Network"
 msgstr "Podesi mrežu"
 
-#: ../mdkapplet:219
+#: ../mdkapplet:224
 #, c-format
 msgid "Upgrade the system"
 msgstr ""
 
-#: ../mdkapplet:385
+#: ../mdkapplet:378
+#, c-format
+msgid ""
+"Basic maintenance for this distribution has expired. Thanks to your "
+"subscription to extended maintenance, your system will be kept up to date "
+"until %s"
+msgstr ""
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Pokrećem drakconnect\n"
 
-#: ../mdkapplet:396 ../mdkapplet:529
+#: ../mdkapplet:412 ../mdkapplet:571
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr ""
 
-#: ../mdkapplet:401
+#: ../mdkapplet:417
 #, c-format
 msgid "Browse"
 msgstr ""
 
-#: ../mdkapplet:410
+#: ../mdkapplet:426
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr ""
 
-#: ../mdkapplet:412 ../mdkapplet:478
+#: ../mdkapplet:428 ../mdkapplet:517
 #, c-format
 msgid "More info about this new version"
 msgstr ""
 
-#: ../mdkapplet:414 ../mdkapplet:476
+#: ../mdkapplet:430 ../mdkapplet:515
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr ""
 
-#: ../mdkapplet:416 ../mdkapplet:486 ../mdkapplet:899 ../mdkapplet:925
+#: ../mdkapplet:432 ../mdkapplet:525 ../mdkapplet:965 ../mdkapplet:991
 #, c-format
 msgid "Do not ask me next time"
 msgstr ""
 
-#: ../mdkapplet:418
+#: ../mdkapplet:434
 #, c-format
 msgid "Download all packages at once"
 msgstr ""
 
-#: ../mdkapplet:419
+#: ../mdkapplet:435
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr ""
 
-#: ../mdkapplet:425
+#: ../mdkapplet:441
 #, c-format
 msgid "Where to download packages:"
 msgstr ""
 
-#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
-#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
+#: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
 #: ../mdkapplet-restricted-helper:95
 #, c-format
 msgid "Next"
 msgstr "Dalje"
 
-#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
-#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
+#: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
 #: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
 #: ../mdkapplet-upgrade-helper:150
 #, c-format
 msgid "Cancel"
 msgstr "Odustani"
 
-#: ../mdkapplet:445
+#: ../mdkapplet:460
 #, c-format
 msgid ""
-"The version of Mandriva Linux installed on your system is no longer "
-"supported."
+"This Mandriva Linux system maintenance has ended. It means it will not "
+"receive any new software update."
 msgstr ""
 
-#: ../mdkapplet:446
+#: ../mdkapplet:466
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr ""
 
-#: ../mdkapplet:455
+#: ../mdkapplet:472
+#, fuzzy, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Online %s"
+
+#: ../mdkapplet:478
+#, c-format
+msgid "You should get extended maintenance."
+msgstr ""
+
+#: ../mdkapplet:480
+#, c-format
+msgid ""
+"You should either get extended maintenance or upgrade to a newer version of "
+"the %s distribution."
+msgstr ""
+
+#: ../mdkapplet:484
+#, c-format
+msgid "You should upgrade to a newer version of the %s distribution."
+msgstr ""
+
+#: ../mdkapplet:494
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr ""
 
-#: ../mdkapplet:465
+#: ../mdkapplet:504
 #, c-format
-msgid "Get long term support for your currently installed distribution"
+msgid ""
+"Purchase a maintenance extension for this version (%s) and keep it running "
+"until."
 msgstr ""
 
-#: ../mdkapplet:546
+#: ../mdkapplet:588
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr ""
 
-#: ../mdkapplet:548
+#: ../mdkapplet:590
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr ""
 
-#: ../mdkapplet:549
+#: ../mdkapplet:591
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 
-#: ../mdkapplet:552
+#: ../mdkapplet:594
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr ""
 
-#: ../mdkapplet:583
+#: ../mdkapplet:626
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Pokrećem MandrivaUpdate\n"
 
-#: ../mdkapplet:604
+#: ../mdkapplet:658
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Izračunavam nove ispravke...\n"
 
-#: ../mdkapplet:712
+#: ../mdkapplet:765
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistem je up-to-date\n"
 
-#: ../mdkapplet:740
+#: ../mdkapplet:805
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Provjeravam mrežu: čini se da je isključena\n"
 
-#: ../mdkapplet:782
+#: ../mdkapplet:832
+#, c-format
+msgid "Mandriva Online %s"
+msgstr "Mandriva Online %s"
+
+#: ../mdkapplet:833
+#, c-format
+msgid "Copyright (C) %s by Mandriva"
+msgstr "Autorska prava (C) %s Mandriva"
+
+#: ../mdkapplet:836
+#, c-format
+msgid "Mandriva Online gives access to Mandriva web services."
+msgstr "Mandriva Online vam omogućuje pristup Mandriva web uslugama."
+
+#: ../mdkapplet:838
+#, c-format
+msgid "Online WebSite"
+msgstr "Online web stranica"
+
+#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
+#: ../mdkapplet:843
+#, c-format
+msgid "_: Translator(s) name(s) & email(s)\n"
+msgstr ""
+
+#: ../mdkapplet:871
 #, c-format
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: ../mdkapplet:785 ../mdkapplet:793 ../mdkapplet:795
+#: ../mdkapplet:874 ../mdkapplet:882 ../mdkapplet:884
 #: ../mdkapplet-enterprise-update-helper:150
 #: ../mdkapplet-restricted-helper:156
 #, c-format
 msgid "More Information"
 msgstr ""
 
-#: ../mdkapplet:797
+#: ../mdkapplet:886
 #, c-format
 msgid "Add media"
 msgstr ""
 
-#: ../mdkapplet:812
+#: ../mdkapplet:901
 #, c-format
 msgid "About..."
 msgstr "O programu..."
 
-#: ../mdkapplet:816
-#, c-format
-msgid "Mandriva Online %s"
-msgstr "Mandriva Online %s"
-
-#: ../mdkapplet:817
-#, c-format
-msgid "Copyright (C) %s by Mandriva"
-msgstr "Autorska prava (C) %s Mandriva"
-
-#: ../mdkapplet:820
-#, c-format
-msgid "Mandriva Online gives access to Mandriva web services."
-msgstr "Mandriva Online vam omogućuje pristup Mandriva web uslugama."
-
-#: ../mdkapplet:822
-#, c-format
-msgid "Online WebSite"
-msgstr "Online web stranica"
-
-#. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:827
-#, c-format
-msgid "_: Translator(s) name(s) & email(s)\n"
-msgstr ""
-
-#: ../mdkapplet:836 ../mdkapplet-config:69
+#: ../mdkapplet:903 ../mdkapplet-config:68
 #, fuzzy, c-format
 msgid "Updates Configuration"
 msgstr "Čitam konfiguraciju\n"
 
-#: ../mdkapplet:838
+#: ../mdkapplet:905
 #, c-format
 msgid "Always launch on startup"
 msgstr "Uvijek pokreni na početku"
 
-#: ../mdkapplet:840
+#: ../mdkapplet:907
 #, c-format
 msgid "Quit"
 msgstr "Završi"
 
-#: ../mdkapplet:889 ../mdkapplet:894 ../mdkapplet:915 ../mdkapplet:920
+#: ../mdkapplet:955 ../mdkapplet:960 ../mdkapplet:981 ../mdkapplet:986
 #, c-format
 msgid "New medium available"
 msgstr ""
 
-#: ../mdkapplet:896 ../mdkapplet:922
+#: ../mdkapplet:962 ../mdkapplet:988
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr ""
 
-#: ../mdkapplet:898 ../mdkapplet:924
+#: ../mdkapplet:964 ../mdkapplet:990
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr ""
 
-#: ../mdkapplet:923 ../mdkonline.pm:149
+#: ../mdkapplet:989 ../mdkonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr ""
@@ -379,37 +398,37 @@ msgstr ""
 msgid "Adding an additional package medium"
 msgstr ""
 
-#: ../mdkapplet-config:70
+#: ../mdkapplet-config:69
 #, c-format
 msgid "Here you can configure the updates applet"
 msgstr ""
 
-#: ../mdkapplet-config:72
+#: ../mdkapplet-config:71
 #, c-format
 msgid "Update frequency (hours)"
 msgstr ""
 
-#: ../mdkapplet-config:81
+#: ../mdkapplet-config:80
 #, c-format
 msgid "First check delay (minutes)"
 msgstr ""
 
-#: ../mdkapplet-config:90
+#: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr ""
 
-#: ../mdkapplet-config:96 ../mdkapplet-config:102
+#: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr ""
 
-#: ../mdkapplet-config:96
+#: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
 msgstr ""
 
-#: ../mdkapplet-config:102
+#: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
 msgstr ""
@@ -556,32 +575,32 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Neuspjeh u dodavanju medija"
 
-#: ../mdkonline.pm:144
+#: ../mdkonline.pm:163
 #, fuzzy, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:145
+#: ../mdkonline.pm:164
 #, fuzzy, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:146
+#: ../mdkonline.pm:165
 #, fuzzy, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:147
+#: ../mdkonline.pm:166
 #, fuzzy, c-format
 msgid "Mandriva One"
 msgstr "Mandriva Online %s"
 
-#: ../mdkonline.pm:148
+#: ../mdkonline.pm:167
 #, fuzzy, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva Online"
 
-#: ../mdkonline.pm:160
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Distribution Upgrade"
 msgstr ""

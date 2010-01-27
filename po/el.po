@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-25 16:58+0100\n"
+"POT-Creation-Date: 2010-01-27 18:22+0100\n"
 "PO-Revision-Date: 2010-01-26 18:43+0100\n"
 "Last-Translator: Glentadakis Dimitrios\n"
 "Language-Team: Greek <translators_team@mandrivalinux.gr>\n"
@@ -25,17 +25,17 @@ msgstr ""
 
 # αναφέρεται στην ώρα
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:72
+#: ../mdkapplet:71
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Θα γίνει έλεγχος ενημερώσεων στις %s"
 
-#: ../mdkapplet:80
+#: ../mdkapplet:79
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Το σύστημα σας είναι ενημερωμένο "
 
-#: ../mdkapplet:85
+#: ../mdkapplet:84
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -44,65 +44,49 @@ msgstr ""
 "Πρόβλημα υπηρεσίας ρυθμίσεων. Παρακαλώ ελέγξτε τις καταγραφές και στείλτε "
 "μήνυμα στο support@mandrivaonline.com"
 
-#: ../mdkapplet:91
+#: ../mdkapplet:90
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Παρακαλώ περιμένετε, αναζητούνται τα διαθέσιμα πακέτα..."
 
-#: ../mdkapplet:96
+#: ../mdkapplet:95
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Υπάρχουν νέες ενημερώσεις για το σύστημά σας"
 
-#: ../mdkapplet:102
+#: ../mdkapplet:101
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Μια νέα έκδοση της διανομής Mandriva Linux είναι διαθέσιμη"
 
-#: ../mdkapplet:108
-#, c-format
-msgid ""
-"This version of the distribution is no longer supported. There will be no "
-"further updates. You should upgrade to a newer version of the %s "
-"distribution."
-msgstr ""
-"Αυτή η έκδοση της διανομής δεν υποστηρίζεται πλέον. Δεν θα υπάρξουν νέες "
-"ενημερώσεις. Θα πρέπει να κάνετε αναβάθμιση σε μια νεότερη έκδοση της "
-"διανομής %s."
-
-#: ../mdkapplet:108
-#, c-format
-msgid "Mandriva Linux"
-msgstr "Mandriva Linux"
-
-#: ../mdkapplet:114 ../mdkapplet:151
+#: ../mdkapplet:119 ../mdkapplet:156
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Ένα πρόσθετο μέσο πακέτων είναι διαθέσιμο για την διανομή σας."
 
-#: ../mdkapplet:119
+#: ../mdkapplet:124
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Το δίκτυο δεν λειτουργεί.Παρακαλώ διαμορφώστε το δίκτυο σας "
 
-#: ../mdkapplet:125
+#: ../mdkapplet:130
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr ""
 "Η υπηρεσία δεν είναι ενεργοποιημένη. Παρακαλώ κάντε κλικ στην «Ιστοσελίδα "
 "Mandriva Online» "
 
-#: ../mdkapplet:130 ../mdkapplet:136
+#: ../mdkapplet:135 ../mdkapplet:141
 #, c-format
 msgid "urpmi database locked"
 msgstr "η βάση δεδομένων urpmi είναι κλειδωμένη"
 
-#: ../mdkapplet:141
+#: ../mdkapplet:146
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Η έκδοση δεν υποστηρίζεται ( πολύ παλιά έκδοση ή έκδοση σε ανάπτυξη)"
 
-#: ../mdkapplet:146
+#: ../mdkapplet:151
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -110,7 +94,7 @@ msgstr ""
 "Δε βρέθηκε κάποιο μέσο. Πρέπει να προσθέσεις κάποια μέσα, χρησιμοποιώντας το "
 "«Διαχειριστή Μέσων Λογισμικού»."
 
-#: ../mdkapplet:156
+#: ../mdkapplet:161
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -127,131 +111,164 @@ msgstr ""
 "\n"
 "Έπειτα, εκκινήστε ξανά το «%s»."
 
-#: ../mdkapplet:161
+#: ../mdkapplet:166
 #, c-format
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
 
-#: ../mdkapplet:174
+#: ../mdkapplet:179
 #, c-format
 msgid "Error updating media"
 msgstr "Σφάλμα στην ενημέρωση των μέσων"
 
-#: ../mdkapplet:214 ../mdkapplet:791
+#: ../mdkapplet:219 ../mdkapplet:880
 #, c-format
 msgid "Install updates"
 msgstr "Εγκατάσταση ενημερώσεων"
 
-#: ../mdkapplet:215 ../mdkapplet:216
+#: ../mdkapplet:220 ../mdkapplet:221
 #, c-format
 msgid "Add additional package medium"
 msgstr "Προσθήκη νέου μέσου πακέτων"
 
-#: ../mdkapplet:217
+#: ../mdkapplet:222
 #, c-format
 msgid "Check Updates"
 msgstr "Έλεγχος ενημερώσεων"
 
-#: ../mdkapplet:218
+#: ../mdkapplet:223
 #, c-format
 msgid "Configure Network"
 msgstr "Ρύθμιση δικτύου"
 
-#: ../mdkapplet:219
+#: ../mdkapplet:224
 #, c-format
 msgid "Upgrade the system"
 msgstr "Αναβάθμιση του συστήματος"
 
-#: ../mdkapplet:385
+#: ../mdkapplet:378
+#, c-format
+msgid ""
+"Basic maintenance for this distribution has expired. Thanks to your "
+"subscription to extended maintenance, your system will be kept up to date "
+"until %s"
+msgstr ""
+
+#: ../mdkapplet:399
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Εκτέλεση drakconnect\n"
 
-#: ../mdkapplet:396 ../mdkapplet:529
+#: ../mdkapplet:412 ../mdkapplet:571
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Νέα έκδοση της διανομής Mandriva Linux"
 
-#: ../mdkapplet:401
+#: ../mdkapplet:417
 #, c-format
 msgid "Browse"
 msgstr "Περιήγηση"
 
-#: ../mdkapplet:410
+#: ../mdkapplet:426
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Μια νέα έκδοση της διανομής Mandriva Linux είναι διαθέσιμη."
 
-#: ../mdkapplet:412 ../mdkapplet:478
+#: ../mdkapplet:428 ../mdkapplet:517
 #, c-format
 msgid "More info about this new version"
 msgstr "Περισσότερες πληροφορίες για την νέα έκδοση"
 
-#: ../mdkapplet:414 ../mdkapplet:476
+#: ../mdkapplet:430 ../mdkapplet:515
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Θέλετε να κάνετε αναβάθμιση στην νέα διανομή «%s» ;"
 
-#: ../mdkapplet:416 ../mdkapplet:486 ../mdkapplet:899 ../mdkapplet:925
+#: ../mdkapplet:432 ../mdkapplet:525 ../mdkapplet:965 ../mdkapplet:991
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Μη με ρωτήσεις την επόμενη φορά"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:434
 #, c-format
 msgid "Download all packages at once"
 msgstr "Άμεση λήψη όλων των πακέτων"
 
-#: ../mdkapplet:419
+#: ../mdkapplet:435
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Προσοχή: Θα χρειαστείτε αρκετό ελεύθερο χώρο)"
 
-#: ../mdkapplet:425
+#: ../mdkapplet:441
 #, c-format
 msgid "Where to download packages:"
 msgstr "Προορισμός λήψης των πακέτων:"
 
-#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
-#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
+#: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
 #: ../mdkapplet-restricted-helper:95
 #, c-format
 msgid "Next"
 msgstr "Επόμενο"
 
-#: ../mdkapplet:429 ../mdkapplet:491 ../mdkapplet:555 ../mdkapplet:900
-#: ../mdkapplet:926 ../mdkapplet-enterprise-update-helper:89
+#: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
+#: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
 #: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
 #: ../mdkapplet-upgrade-helper:150
 #, c-format
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: ../mdkapplet:445, c-format
+#: ../mdkapplet:460
+#, c-format
 msgid ""
-"The version of Mandriva Linux installed on your system is no longer "
-"supported."
+"This Mandriva Linux system maintenance has ended. It means it will not "
+"receive any new software update."
 msgstr ""
-"Η έκδοση Mandriva Linux που έχετε εγκατεστημένη δεν υποστηρίζεται πλέον."
 
-#: ../mdkapplet:446
+#: ../mdkapplet:466
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "Για να διατηρηθεί το σύστημα σας ασφαλές, μπορείτε να:"
 
-#: ../mdkapplet:455
+#: ../mdkapplet:472
+#, c-format
+msgid "Mandriva Linux"
+msgstr "Mandriva Linux"
+
+#: ../mdkapplet:478
+#, c-format
+msgid "You should get extended maintenance."
+msgstr ""
+
+#: ../mdkapplet:480
+#, fuzzy, c-format
+msgid ""
+"You should either get extended maintenance or upgrade to a newer version of "
+"the %s distribution."
+msgstr ""
+"Αυτή η έκδοση της διανομής δεν υποστηρίζεται πλέον. Δεν θα υπάρξουν νέες "
+"ενημερώσεις. Θα πρέπει να κάνετε αναβάθμιση σε μια νεότερη έκδοση της "
+"διανομής %s."
+
+#: ../mdkapplet:484
+#, fuzzy, c-format
+msgid "You should upgrade to a newer version of the %s distribution."
+msgstr "Θέλετε να κάνετε αναβάθμιση στην νέα διανομή «%s» ;"
+
+#: ../mdkapplet:494
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Η διανομή σας δεν υποστηρίζεται πλέον"
 
-#: ../mdkapplet:465
+#: ../mdkapplet:504
 #, c-format
-msgid "Get long term support for your currently installed distribution"
+msgid ""
+"Purchase a maintenance extension for this version (%s) and keep it running "
+"until."
 msgstr ""
-"Αποκτήστε μεγάλης διάρκειας υποστήριξη για την τρέχουσα εγκατεστημένη "
-"διανομή σας."
 
-#: ../mdkapplet:546
+#: ../mdkapplet:588
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -260,18 +277,18 @@ msgstr ""
 "Η αναβάθμιση απαιτεί υψηλό εύρος σύνδεσης (cable, xDSL, ...) και μπορεί να "
 "χρειαστεί μερικές ώρες για να ολοκληρωθεί."
 
-#: ../mdkapplet:548
+#: ../mdkapplet:590
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Το εκτιμώμενο μέγεθος των δεδομένων προς λήψη είναι %s "
 
-#: ../mdkapplet:549
+#: ../mdkapplet:591
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 "Θα πρέπει να κλείσετε όλες τις άλλες εκτελούμενες εφαρμογές πριν συνεχίσετε."
 
-#: ../mdkapplet:552
+#: ../mdkapplet:594
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -280,98 +297,98 @@ msgstr ""
 "Θα πρέπει να συνδέσετε τον φορητό σας υπολογιστή στον φορτιστή AC και να "
 "προτιμήσετε ethernet σύνδεση αντί για wifi, αν είναι διαθέσιμη."
 
-#: ../mdkapplet:583
+#: ../mdkapplet:626
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr " Εκτέλεση μικροεφαρμογής MandrivaUpdate\n"
 
-#: ../mdkapplet:604
+#: ../mdkapplet:658
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Επεξεργασία νέων αναβαθμίσεων...\n"
 
-#: ../mdkapplet:712
+#: ../mdkapplet:765
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Το σύστημα είναι ενημερωμένο\n"
 
-#: ../mdkapplet:740
+#: ../mdkapplet:805
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Έλεγχος δικτύου: φαίνεται απενεργοποιημένο\n"
 
-#: ../mdkapplet:782
-#, c-format
-msgid "Warning"
-msgstr "Προσοχή"
-
-#: ../mdkapplet:785 ../mdkapplet:793 ../mdkapplet:795
-#: ../mdkapplet-enterprise-update-helper:150
-#: ../mdkapplet-restricted-helper:156
-#, c-format
-msgid "More Information"
-msgstr "Περισσότερες πληροφορίες"
-
-#: ../mdkapplet:797
-#, c-format
-msgid "Add media"
-msgstr "Προσθήκη μέσου"
-
-#: ../mdkapplet:812
-#, c-format
-msgid "About..."
-msgstr "Σχετικά..."
-
-#: ../mdkapplet:816
+#: ../mdkapplet:832
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:817
+#: ../mdkapplet:833
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C)%s by mandriva"
 
-#: ../mdkapplet:820
+#: ../mdkapplet:836
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 "Η Mandriva Online παρέχει πρόσβαση στις διαδικτυακές υπηρεσίες της Mandriva."
 
-#: ../mdkapplet:822
+#: ../mdkapplet:838
 #, c-format
 msgid "Online WebSite"
 msgstr "Online Δικτυακός τόπος"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:827
+#: ../mdkapplet:843
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Nikos Papadopoulos <231036448@freemail.gr>\n"
 "Glentadakis Dimitrios <dglent@gmail.com>\n"
 
-#: ../mdkapplet:836 ../mdkapplet-config:69
+#: ../mdkapplet:871
+#, c-format
+msgid "Warning"
+msgstr "Προσοχή"
+
+#: ../mdkapplet:874 ../mdkapplet:882 ../mdkapplet:884
+#: ../mdkapplet-enterprise-update-helper:150
+#: ../mdkapplet-restricted-helper:156
+#, c-format
+msgid "More Information"
+msgstr "Περισσότερες πληροφορίες"
+
+#: ../mdkapplet:886
+#, c-format
+msgid "Add media"
+msgstr "Προσθήκη μέσου"
+
+#: ../mdkapplet:901
+#, c-format
+msgid "About..."
+msgstr "Σχετικά..."
+
+#: ../mdkapplet:903 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Ρύθμιση Ενημερώσεων"
 
-#: ../mdkapplet:838
+#: ../mdkapplet:905
 #, c-format
 msgid "Always launch on startup"
 msgstr "Να εκτελείται πάντοτε στην εκκίνηση"
 
-#: ../mdkapplet:840
+#: ../mdkapplet:907
 #, c-format
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: ../mdkapplet:889 ../mdkapplet:894 ../mdkapplet:915 ../mdkapplet:920
+#: ../mdkapplet:955 ../mdkapplet:960 ../mdkapplet:981 ../mdkapplet:986
 #, c-format
 msgid "New medium available"
 msgstr "Νέο μέσο διαθέσιμο"
 
-#: ../mdkapplet:896 ../mdkapplet:922
+#: ../mdkapplet:962 ../mdkapplet:988
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -380,12 +397,12 @@ msgstr ""
 "Χρησιμοποιείτε την διανομή «%s» και και επωφελείστε επομένως από μια "
 "προνομιούχο πρόσβαση σε πρόσθετα πακέτα."
 
-#: ../mdkapplet:898 ../mdkapplet:924
+#: ../mdkapplet:964 ../mdkapplet:990
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Θέλετε να εγκαταστήσετε αυτό το νέο αποθετήριο λογισμικού ;"
 
-#: ../mdkapplet:923 ../mdkonline.pm:149
+#: ../mdkapplet:989 ../mdkonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
@@ -400,37 +417,37 @@ msgstr "Mandriva Enterprise Server"
 msgid "Adding an additional package medium"
 msgstr "Προσθήκη ενός νέου μέσου πακέτων"
 
-#: ../mdkapplet-config:70
+#: ../mdkapplet-config:69
 #, c-format
 msgid "Here you can configure the updates applet"
 msgstr "Εδώ μπορείτε να ρυθμίσετε την εφαρμογή ενημερώσεων"
 
-#: ../mdkapplet-config:72
+#: ../mdkapplet-config:71
 #, c-format
 msgid "Update frequency (hours)"
 msgstr "Συχνότητα ενημερώσεων (ώρες)"
 
-#: ../mdkapplet-config:81
+#: ../mdkapplet-config:80
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "Χρονική αναμονή πρώτης ενημέρωσης (λεπτά)"
 
-#: ../mdkapplet-config:90
+#: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr "Έλεγχος για νέες εκδόσεις «%s»"
 
-#: ../mdkapplet-config:96 ../mdkapplet-config:102
+#: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "Έλεγχος αν λείπουν τα μέσα «%s»"
 
-#: ../mdkapplet-config:96
+#: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
 msgstr "Με περιορισμούς"
 
-#: ../mdkapplet-config:102
+#: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
 msgstr "Enterprise"
@@ -586,32 +603,32 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Αποτυχία κατά την προσθήκη μέσου"
 
-#: ../mdkonline.pm:144
+#: ../mdkonline.pm:163
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:145
+#: ../mdkonline.pm:164
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:146
+#: ../mdkonline.pm:165
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:147
+#: ../mdkonline.pm:166
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:148
+#: ../mdkonline.pm:167
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:160
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Αναβάθμιση διανομής"
@@ -662,6 +679,17 @@ msgstr "  --debug\t\t\t- καταγραφή γενόμενων\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Αδύνατη η ενημέρωση των πακέτων από το μέσο update_source.\n"
+
+#~ msgid ""
+#~ "The version of Mandriva Linux installed on your system is no longer "
+#~ "supported."
+#~ msgstr ""
+#~ "Η έκδοση Mandriva Linux που έχετε εγκατεστημένη δεν υποστηρίζεται πλέον."
+
+#~ msgid "Get long term support for your currently installed distribution"
+#~ msgstr ""
+#~ "Αποκτήστε μεγάλης διάρκειας υποστήριξη για την τρέχουσα εγκατεστημένη "
+#~ "διανομή σας."
 
 #~ msgid "MES5"
 #~ msgstr "MES5"
