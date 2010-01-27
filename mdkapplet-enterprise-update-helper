@@ -162,7 +162,7 @@ sub adding_media_failed {
 sub actually_add_enterprise_update_medium {
     my ($ref, $password, $arch) = @_;
     $password = uri_escape($password);
-    my @options = ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
+    my @options = get_urpmi_options();
     my $email = uri_escape($ref->{data}{email});
     my $uri = "https://$email:$password\@download.mandriva.com/$version/rpms/$arch/";
     run_program::raw(@options, '--update', '--distrib', $uri);

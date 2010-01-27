@@ -39,6 +39,7 @@ our @EXPORT = qw(find_current_distro
                  get_product_id
                  get_release
                  get_stale_upgrade_filename
+                 get_urpmi_options
                  is_it_2008_0
                  is_enterprise_media_supported
                  is_restricted_media_supported
@@ -168,6 +169,10 @@ sub get_banner_icon() {
 sub get_banner {
     my ($o_title) = @_;
     Gtk2::Banner->new(get_banner_icon(), $o_title || N("Distribution Upgrade"));
+}
+
+sub get_urpmi_options() {
+    ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
 }
 
 sub is_running {
