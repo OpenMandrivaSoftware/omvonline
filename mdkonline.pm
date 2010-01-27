@@ -33,7 +33,6 @@ our @ISA = qw(Exporter);
 our @EXPORT = qw(find_current_distro
                  fork_exec
                  get_banner
-                 get_distro_list_
                  get_distro_list
                  get_from
                  get_product_id
