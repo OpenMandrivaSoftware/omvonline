@@ -160,13 +160,14 @@ sub translate_product() {
     $strings{$product} || $product;
 }
 
+sub get_banner_icon() {
+    find { -e $_ } 
+      qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png);
+}
+
 sub get_banner {
     my ($o_title) = @_;
-    Gtk2::Banner->new(
-        (find { -e $_ } 
-           qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png)),
-        $o_title || N("Distribution Upgrade")
-    );
+    Gtk2::Banner->new(get_banner_icon(), $o_title || N("Distribution Upgrade"));
 }
 
 sub is_running {
