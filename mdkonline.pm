@@ -43,6 +43,7 @@ our @EXPORT = qw(find_current_distro
                  is_enterprise_media_supported
                  is_extmaint_supported
                  is_restricted_media_supported
+                 read_config
                  translate_product
                  xml2perl
                  %config
@@ -56,6 +57,9 @@ use log;
 
 my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
+sub read_config() {
+    %config = getVarsFromSh('/etc/sysconfig/mdkapplet');
+}
 
 sub get_stale_upgrade_filename() {
     '/var/lib/urpmi/stale_upgrade_in_progress';
