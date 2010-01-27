@@ -455,7 +455,7 @@ sub no_more_supported_choice() {
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
     # FIXME: just tell radio buttons' children to wrap instead:
     local $mdkapplet_gui::width = 580;
-    my $w = new_portable_dialog(N("Your distribution is no longer supported supported"));
+    my $w = new_portable_dialog(N("Your distribution is no longer supported"));
     my ($b1, $b2, $b3);
     my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
 
