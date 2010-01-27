@@ -63,14 +63,30 @@ install: all
 cleandist:
 	rm -rf $(PACKAGE)-$(VERSION) ../$(PACKAGE)-$(VERSION).tar.bz2
 
-localcopy: clean
+
+dis: dist
+dist:
+	@make cleandist
+	rm -rf ../$(NAME)-$(VERSION).tar*
+	@if [ -e ".svn" ]; then \
+		$(MAKE) dist-svn; \
+	elif [ -e ".git" ]; then \
+		$(MAKE) dist-git; \
+	else \
+		echo "Unknown SCM (not SVN nor GIT)";\
+		exit 1; \
+	fi;
+	$(info $(NAME)-$(VERSION).tar.lzma is ready)
+
+dist-svn:
+	rm -rf $(NAME)-$(VERSION)
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-
-tar:
 	tar cfa ../$(PACKAGE)-$(VERSION).tar.lzma $(PACKAGE)-$(VERSION)
-	rm -rf $(PACKAGE)-$(VERSION)
+	rm -rf $(NAME)-$(VERSION)
 
-dist: cleandist localcopy tar
+
+dist-git:
+	 @git archive --prefix=$(NAME)-$(VERSION)/ HEAD | lzma >../$(NAME)-$(VERSION).tar.lzma;
 
 log:changelog
 
