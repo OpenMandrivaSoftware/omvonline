@@ -41,6 +41,7 @@ our @EXPORT = qw(find_current_distro
                  get_urpmi_options
                  is_it_2008_0
                  is_enterprise_media_supported
+                 is_extmaint_supported
                  is_restricted_media_supported
                  translate_product
                  xml2perl
@@ -71,6 +72,10 @@ sub get_release() {
 
 sub is_it_2008_0() {
   $product_id->{version} eq '2008.0';
+}
+
+sub is_extmaint_supported() {
+    $product_id->{support} eq 'extended'
 }
 
 sub is_enterprise_media_supported() {

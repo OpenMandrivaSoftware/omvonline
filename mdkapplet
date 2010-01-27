@@ -461,7 +461,7 @@ sub refresh_no_more_supported_msg() {
     my $msg;
 
     # is extended maintenance available?
-    if ($extended_maintenance_url) {
+    if (is_extmaint_supported()) {
         if ($no_more_supported eq 'none') {
             $msg = N("You should get extended maintenance.");
         } else {
@@ -481,13 +481,13 @@ sub no_more_supported_choice() {
     local $mdkapplet_gui::width = 580;
     my $w = new_portable_dialog(N("Your distribution is no longer supported"));
     my ($b1, $b2, $b3);
-    my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
+    my $choice = is_extmaint_supported() ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
 
     my @widgets = (
         get_banner(),
         gtknew('Label_Left', 
                text => get_obsolete_message() . "\n", @common),
-        if_($extended_maintenance_url,
+        if_(is_extmaint_supported(),
             $b1 = gtknew('RadioButton',
                          text => N("Purchase a maintenance extension for this version (%s) and keep it running until.", $product_id->{version}),
                          toggled => sub {
