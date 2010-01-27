@@ -104,7 +104,7 @@ my %state = (
                  colour => [ 'disabled' ],
                  menu => [ 'upgrade_distro', 'check' ],
                  urgency => 'low',
-                 tt => [ N("This version of the distribution is no longer supported. There will be no further updates. You should upgrade to a newer version of the %s distribution.", N("Mandriva Linux")) ]
+                 tt => []
              },
              unconfigured_restricted_media => {
                  colour => [ 'bundle' ],
@@ -307,6 +307,7 @@ sub is_there_a_new_distributions() {
     my $current_apimdv_distro = find_current_distro(@distros);
     $no_more_supported = $current_apimdv_distro->{obsoleted_by};
     ($extended_maintenance_url, $extended_maintenance_end) = @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end)};
+    refresh_no_more_supported_msg();
     if ($no_more_supported) {
         $new_distro = find { $_->{version} eq $no_more_supported } @distros;
         return;
@@ -450,6 +451,25 @@ sub _get_obsolete_message() {
      );
 }
       
+sub refresh_no_more_supported_msg() {
+    my $basic_msg = N("This version of the distribution is no longer supported. There will be no further updates.");
+    my $distro = N("Mandriva Linux");
+    my $msg;
+
+    # is extended maintenance available?
+    if ($extended_maintenance_url) {
+        if ($no_more_supported eq 'none') {
+            $msg = N("You should get extended maintenance.");
+        } else {
+            $msg = N("You should either get extended maintenance or upgrade to a newer version of the %s distribution.",
+                 $distro);
+        }
+    } else {
+        $msg = N("You should upgrade to a newer version of the %s distribution.", $distro);
+    }
+    $state{no_more_supported}{tt}[0] = join(' ', $basic_msg, $msg);
+}
+
 sub no_more_supported_choice() {
     local $mygtk2::left_padding = 0;
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
