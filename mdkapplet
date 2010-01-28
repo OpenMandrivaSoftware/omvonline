@@ -311,7 +311,7 @@ sub is_there_a_new_distributions() {
     }
 
     my $current_apimdv_distro = find_current_distro(@distros);
-    $no_more_supported = $current_apimdv_distro->{obsoleted_by};
+    $no_more_supported = $current_apimdv_distro->{obsoleted_by} if !is_extmaint_supported();
     ($extended_maintenance_url, $extended_maintenance_end) = @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end)};
     refresh_no_more_supported_msg();
     if ($no_more_supported) {
@@ -373,7 +373,8 @@ sub harvester {
                 } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})) {
                     go2State('no_more_supported');
                 } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
-                            && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED})) {
+                            && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED}
+                               && !is_extmaint_supported())) {
                     $state{extended_support_is_enabled}{tt}[0] =
                       N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
                     go2State('extended_support_is_enabled');
