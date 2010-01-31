@@ -1,11 +1,11 @@
 # Translation of mdkonline to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2009.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2005, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "POT-Creation-Date: 2010-01-27 18:22+0100\n"
-"PO-Revision-Date: 2009-10-17 13:22+0200\n"
+"PO-Revision-Date: 2010-01-31 11:34+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgstr "Det finst nye oppdateringar for systemet ditt."
 #: ../mdkapplet:101
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
-msgstr "Ein ny versjon av distribusjon Mandriva Linux er no ute."
+msgstr "Ein ny versjon av Mandriva Linux er no ute."
 
 #: ../mdkapplet:119 ../mdkapplet:156
 #, c-format
@@ -139,6 +139,8 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Grunnleggjande vedlikehald for denne distribusjonen er ikkje støtta. Sidan "
+"du abonnerer på utvida vedlikehald, får du likevel oppdateringar fram til %s."
 
 #: ../mdkapplet:399
 #, c-format
@@ -158,7 +160,7 @@ msgstr "Bla gjennom"
 #: ../mdkapplet:426
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr "Ein ny versjon av distribusjon Mandriva Linux er no ute."
+msgstr "Ein ny versjon av Mandriva Linux er no ute."
 
 #: ../mdkapplet:428 ../mdkapplet:517
 #, c-format
@@ -173,7 +175,7 @@ msgstr "Ønskjer du å oppgradera til «%s»?"
 #: ../mdkapplet:432 ../mdkapplet:525 ../mdkapplet:965 ../mdkapplet:991
 #, c-format
 msgid "Do not ask me next time"
-msgstr "Spør ikkje neste gong"
+msgstr "Spør ikkje igjen"
 
 #: ../mdkapplet:434
 #, c-format
@@ -188,7 +190,7 @@ msgstr "(Åtvaring: Du treng då mykje ledig diskplass.)"
 #: ../mdkapplet:441
 #, c-format
 msgid "Where to download packages:"
-msgstr "Kor pakkane skal lastast ned til:"
+msgstr "Lagra pakkane i mappa:"
 
 #: ../mdkapplet:445 ../mdkapplet:530 ../mdkapplet:597 ../mdkapplet:966
 #: ../mdkapplet:992 ../mdkapplet-enterprise-update-helper:89
@@ -211,11 +213,13 @@ msgid ""
 "This Mandriva Linux system maintenance has ended. It means it will not "
 "receive any new software update."
 msgstr ""
+"Vedlikehald for dette Mandriva Linux-systemet er ikkje lenger støtta. Dette "
+"medfører at du i framtida ikkje får nye programvareoppdateringar."
 
 #: ../mdkapplet:466
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "For å halda systemet sikkert, kan du:"
 
 #: ../mdkapplet:472
 #, c-format
@@ -225,27 +229,26 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:478
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Du bør skaffa utvida vedlikehald."
 
 #: ../mdkapplet:480
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Denne versjonen er ikkje lenger støtta, og det vil ikkje komma nokon "
-"tryggleiksoppdateringar til han framover. Du bør derfor oppgradera til ein "
-"ny versjon av %s."
+"Du bør anten skaffa utvida vedlikehald, eller oppgradera til ein ny versjon "
+"av %s."
 
 #: ../mdkapplet:484
-#, fuzzy, c-format
+#, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "Ønskjer du å oppgradera til «%s»?"
+msgstr "Du bør oppgradera til ein ny versjon av %s."
 
 #: ../mdkapplet:494
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "Distribusjonen er ikkje lenger støtta"
 
 #: ../mdkapplet:504
 #, c-format
@@ -253,6 +256,8 @@ msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until."
 msgstr ""
+"Kjøp ei vedlikehaldsutviding for denne versjonen (%s) for å få oppdateringar "
+"fram til "
 
 #: ../mdkapplet:588
 #, c-format
@@ -416,22 +421,22 @@ msgstr "Pause før første sjekk (minutt)"
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "Sjå etter ei ny utgåve av «%s»"
 
 #: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "Sjå etter «%s»-medium som manglar"
 
 #: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Avgrensa"
 
 #: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "Bedrift"
 
 #: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
@@ -581,24 +586,24 @@ msgid "Failure when adding medium"
 msgstr "Klarte ikkje leggja til nytt medium"
 
 #: ../mdkonline.pm:163
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Flash"
 
 #: ../mdkonline.pm:164
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Free"
 
 #: ../mdkonline.pm:165
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Mini"
 
 #: ../mdkonline.pm:166
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva One"
 
 #: ../mdkonline.pm:167
 #, c-format
@@ -656,12 +661,6 @@ msgstr "  --debug\t\t\t– Logg over kva som vert gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "The version of Mandriva Linux installed on your system is no longer "
-#~ "supported."
-#~ msgstr "Ein ny versjon av distribusjon Mandriva Linux er no ute."
 
 #, fuzzy
 #~| msgid "Do you want to upgrade to the '%s' distribution?"
