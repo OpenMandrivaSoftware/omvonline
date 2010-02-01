@@ -126,6 +126,7 @@ sub setVar {
 sub iso8601_date_to_locale {
     my ($date) = @_;
     return $date if $date !~ /(\d\d\d\d)-?(\d\d)-?(\d\d)/;
-    strftime("%x", 0, 0, 0, $3, $2, $1-1900);
+    require POSIX;
+    POSIX::strftime("%x", 0, 0, 0, $3, $2, $1-1900);
 }
 
