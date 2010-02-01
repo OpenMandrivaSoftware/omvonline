@@ -104,10 +104,10 @@ sub get_extmaint_authentication() {
                      text_markup =>
                        join("\n\n",
                             #-PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
-                            N("Mandriva provides 12 months of desktop updates (up to the %s) and 18 months of base updates (up to the %s) for distributions.",
+                            N("Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions.",
                               iso8601_date_to_locale($desktop_update_end),
                               iso8601_date_to_locale($basic_update_end)),
-                            N("Extended maintenance is now available to get 18 months of additional updates (up to the %s).",
+                            N("Extended maintenance is now available to get 18 months of additional updates (until %s).",
                               iso8601_date_to_locale($extended_maintenance_end)),
                             N("You can subscribe <b>right now</b> to get extended maintenance:"),
                         ),
