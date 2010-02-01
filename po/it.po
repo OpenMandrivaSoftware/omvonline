@@ -1,21 +1,21 @@
 # translation of it.po to Italian
 # Italian translation of Mandriva Online.
-# Copyright (C) 2002,2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Copyright (C) 2002,2003, 2004, 2005, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
 #
 # Simone Riccio <s.riccio@aeb-informatica.it>, 2002.
 # Roberto Rosselli Del Turco <rosselli@ling.unipi.it>, 2002.
 # Daniele Pighin <daniele@dcs.it>, 2003, 2004, 2005.
-# Andrea Celli <andrea.celli@libero.it>, 2007, 2008, 2009.
 # Marcello Anni <marcello.anni@alice.it>, 2009.
 # Moreno Manzini <moreno.mg@gmail.com>, 2009.
+# Andrea Celli <andrea.celli@libero.it>, 2007, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: it\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-01 15:19+0100\n"
-"PO-Revision-Date: 2009-10-18 15:41+0200\n"
+"PO-Revision-Date: 2010-02-01 22:38+0100\n"
 "Last-Translator: Andrea Celli <andrea.celli@libero.it>\n"
-"Language-Team: Italian <timl@freelists.org>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,8 +84,7 @@ msgstr "Versione non supportata (troppo vecchia o di sviluppo)"
 
 #: ../mdkapplet:151
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Nessuna fonte trovata. Aggiungine qualcuna attraverso \"Gestione fonti "
 "software\"."
@@ -149,6 +148,10 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Il periodo iniziale di manutenzione per questa distribuzione è terminato. Ti "
+"ringraziamo per aver "
+"suttoscritto l'estensione della manutenzione. Il tuo sistema verrà tenuto "
+"aggiornato fino al %s"
 
 #: ../mdkapplet:400
 #, c-format
@@ -168,8 +171,7 @@ msgstr "Naviga"
 #: ../mdkapplet:427
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
-msgstr ""
-"È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
+msgstr "È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
 
 #: ../mdkapplet:429 ../mdkapplet:518
 #, c-format
@@ -224,11 +226,14 @@ msgid ""
 "This Mandriva Linux system maintenance has ended. It means it will not "
 "receive any new software update."
 msgstr ""
+"La manutenzione di questo sistema Mandriva Linux è terminata. Ciò significa "
+"che non riceverai più "
+"i nuovi aggiornamenti del software."
 
 #: ../mdkapplet:467
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "Per mantenere sicuro il sistema, puoi:"
 
 #: ../mdkapplet:473
 #, c-format
@@ -238,27 +243,25 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:479
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Dovresti sottoscrivere il programma di manutenzione estesa."
 
-#: ../mdkapplet:481
-#, fuzzy, c-format
+#: ../mdkapplet:481, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Questa versione della distribuzione non è più supportata. Non ci saranno più "
-"aggiornamenti. Dovresti aggiornare a una versione più recente della "
+" Dovresti  sottoscrivere il programma di manutenzione estesa o aggiornare il "
+"sistema ad una versione più recente della "
 "distribuzione %s."
 
-#: ../mdkapplet:485
-#, fuzzy, c-format
+#: ../mdkapplet:485, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "Vuoi aggiornare alla distribuzione \"%s\"?"
+msgstr "Dovresti aggiornare ad una versione più recente della distribuzione %s."
 
 #: ../mdkapplet:495
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "Questa distribuzione non è più mantenuta."
 
 #: ../mdkapplet:505
 #, c-format
@@ -266,6 +269,8 @@ msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until."
 msgstr ""
+"Acquista un'estensione della manutenzione per questa release  (%s) per "
+"mantenerla in funzione. "
 
 #: ../mdkapplet:589
 #, c-format
@@ -284,8 +289,7 @@ msgstr "Si stima che debbano essere scaricati %s di dati"
 #: ../mdkapplet:592
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
-"Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
+msgstr "Prima di proseguire dovresti chiudere tutte le altre applicazioni attive."
 
 #: ../mdkapplet:595
 #, c-format
@@ -434,22 +438,22 @@ msgstr "Ritardo dal primo controllo (minuti)"
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "Controlla se esistono release più recenti di  \"%s\" ."
 
 #: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "Verifica presenza delle fonti  \"%s\""
 
 #: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Limitato"
 
 #: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "Aziendale"
 
 #: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
@@ -538,8 +542,7 @@ msgstr "Il tuo account Mandriva non consente di scaricare i pacchetti di %s."
 
 #: ../mdkapplet-enterprise-update-helper:152
 #: ../mdkapplet-extended-maintenance-helper:198
-#: ../mdkapplet-restricted-helper:158
-#, c-format
+#: ../mdkapplet-restricted-helper:158, c-format
 msgid "Close"
 msgstr "Chiudi"
 
@@ -553,21 +556,23 @@ msgstr "Si è verificato un errore mentre si aggiungeva la fonte"
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Problemi nel recuperare l'elenco delle distribuzioni:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
-msgstr ""
+msgstr "Manutenzione estesa"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva fornisce 12 mesi di aggiornamenti per il desktop (fino al %s) e 18 "
+"mesi di aggiornamenti base (fino al %s) per le proprie distributioni."
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
@@ -575,46 +580,41 @@ msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"È ora disponibile un supporto esteso che garantisce altri 18 mesi di "
+"aggiornamenti (fino al %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr ""
+msgstr "Puoi richiedere <b>subito</b> la manutenzione estesa:"
 
-#: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:115, c-format
 msgid "Online subscription"
-msgstr "Sito online"
+msgstr "Adesione online"
 
-#: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:117, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
 msgstr ""
 "Scrivi l'identificativo (ID) del tuo account per aggiungere una nuova fonte "
-"di pacchetti"
+"di pacchetti dopo che l'adesione online sarà completata."
 
-#: ../mdkapplet-extended-maintenance-helper:192
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:192, c-format
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "Il tuo account Mandriva non consente di scaricare i pacchetti di %s."
+msgstr "Il tuo account Mandriva non consente di aderire alla manutenzione estesa."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"Il tuo account Mandriva non consente di scaricare i pacchetti di Powerpack."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "Il tuo account Mandriva non consente di scaricare i pacchetti di Powerpack."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr ""
-"Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgstr "Non c'è abbastanza spazio libero su %s per l'aggiornamento (%dMB < %dMB)"
 
 #: ../mdkapplet-upgrade-helper:129 ../mdkapplet-upgrade-helper:178
 #: ../mdkapplet-upgrade-helper:215
@@ -669,25 +669,21 @@ msgstr ""
 msgid "Failure when adding medium"
 msgstr "Errore nell'aggiunta della fonte"
 
-#: ../mdkonline.pm:163
-#, fuzzy, c-format
+#: ../mdkonline.pm:163, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:164
-#, fuzzy, c-format
+#: ../mdkonline.pm:164, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:165
-#, fuzzy, c-format
+#: ../mdkonline.pm:165, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:166
-#, fuzzy, c-format
+#: ../mdkonline.pm:166, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva One"
 
 #: ../mdkonline.pm:167
 #, c-format
@@ -746,9 +742,3 @@ msgstr "  --debug\t\t\t- mantiene un log delle azioni fatte\n"
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Impossibile aggiornare i pacchetti dalla fonte update_source.\n"
 
-#, fuzzy
-#~ msgid ""
-#~ "The version of Mandriva Linux installed on your system is no longer "
-#~ "supported."
-#~ msgstr ""
-#~ "È stata rilasciata una nuova versione della distribuzione Mandriva Linux."
