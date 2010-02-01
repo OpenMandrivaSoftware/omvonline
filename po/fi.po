@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-01 15:19+0100\n"
-"PO-Revision-Date: 2010-01-27 19:57+0200\n"
+"PO-Revision-Date: 2010-02-01 22:11+0200\n"
 "Last-Translator: Jani Välimaa <wally@mandriva.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
@@ -557,13 +557,13 @@ msgstr "Virhe lisättäessä lähdettä"
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Virhe noudettaessa listaa jakeluista:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
-#, fuzzy, c-format
+#, c-format
 msgid "Extended Maintenance"
-msgstr "Ylläpitolaajennus tulisi hankkia."
+msgstr "Ylläpitolaajennus"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -572,6 +572,8 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva toimittaa 12 kuukauden ajan päivityksiä työpöytäsovelluksiin (%s "
+"asti) ja 18 kuukauden ajan jakelun peruspaketteihin (%s asti)."
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
@@ -579,36 +581,40 @@ msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"Nyt on myös saatavilla ylläpitolaajennus, joka tarjoaa 18 kuukauden ajan "
+"lisäpäivityksiä (%s asti)."
 
 #: ../mdkapplet-extended-maintenance-helper:112
-#, fuzzy, c-format
+#, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "Ylläpitolaajennus tulisi hankkia."
+msgstr "Voit tilata ylläpitolaajennuksen <b>heti</b>:"
 
 #: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#, c-format
 msgid "Online subscription"
-msgstr "Online-sivusto"
+msgstr "Online-tilaus"
 
 #: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
-msgstr "Anna käyttäjätilin tunnus lisäpakettilähteen lisäämiseksi"
+msgstr ""
+"Täytä Mandriva-tunnuksen tiedot, jotta lisäpakettilähde voidaan lisätä "
+"Online-tilauksen jälkeen."
 
 #: ../mdkapplet-extended-maintenance-helper:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "Mandriva-käyttäjätilillä ei ole %sin lataustilausta."
+msgstr "Mandriva-käyttäjätililltä ei löydy tilattua ylläpitolaajennusta."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "Mandriva-käyttäjätilillä ei ole PowerPackin lataustilausta."
+msgstr "Mandriva-käyttäjätililtä ei löydy PowerPackin lataustilausta."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
