@@ -49,6 +49,7 @@ foreach my $opt (@ARGV) {
     }
 }
 my ($version) = @ARGV;
+my $email;
 
 $version or die "usage: $0 <distrib_version>\n";
 
@@ -121,7 +122,7 @@ sub get_extmaint_authentication() {
                       new_link_button('https://my.mandriva.com/info', N("More information on your user account")))
               ]),
               gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
-                  [ N("Your email"), $email_w = gtknew('Entry') ],
+                  [ N("Your email"), $email_w = gtknew('Entry', text => $email) ],
                   [ N("Your password"), $password_w ],
               ]),
               gtknew('HButtonBox', layout => 'start', children_tight => [
@@ -131,7 +132,7 @@ sub get_extmaint_authentication() {
               create_okcancel($w, N("Next"), N("Cancel")),
           ]);
 
-    my $email = $email_w->get_text;
+    $email = $email_w->get_text;
     # when embedded:
     $password = $password_w->get_text if !$password_restrieved;
     if ($res) {
