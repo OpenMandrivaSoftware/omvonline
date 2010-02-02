@@ -1,5 +1,7 @@
 - mdkapplet
   o actually honor DO_NOT_ASK_FOR_NO_MORE_SUPPORTED
+  o do not backport the "live upgrade" feature on 2008.0 since it's
+    unsupported/untested (missing urpmi support)
   o restore old behaviour when detecting a new distro
   o make link button usable in no more supported dialog
 

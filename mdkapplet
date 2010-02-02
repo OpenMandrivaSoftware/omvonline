@@ -319,6 +319,9 @@ sub is_there_a_new_distributions() {
         return;
     }
 
+    # the "live upgrade" is not available on 2008.0:
+    return if is_it_2008_0();
+
     if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
         $new_distro = $new_distribution;
         log::explanations(sprintf("new '%s' distribution was released on %s", $new_distro->{version}, $new_distro->{release_date}));
