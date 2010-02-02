@@ -342,6 +342,41 @@ sub is_false {
     !text2bool($s) && $s != 1;
 }
 
+sub process_state {
+    my ($state) = @_;
+    log::explanations($state->{log});
+    $sub_state = $state->{status};
+
+    if ($sub_state eq 'locked') {
+        $locked_count++;
+        $sub_state = 'loop_locked' if $locked_count > 10;
+    } else {
+        $locked_count = 0;
+    }
+
+    my $no_more_supported = $no_more_supported &&
+      !text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
+
+    # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
+    if (!member($sub_state, qw(okay))) {
+        go2State($sub_state);
+    } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})) {
+        go2State('no_more_supported');
+    } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
+               && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED}
+                               && !is_extmaint_supported())) {
+        $state{extended_support_is_enabled}{tt}[0] =
+          N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
+        go2State('extended_support_is_enabled');
+        setVar('EXTENDED_SUPPORT_SPLASHED', bool2yesno(1));
+    } elsif ($new_distro && is_false($config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})
+               && is_false($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})) {
+        go2State('new_distribution');
+    } else {
+        go2State($sub_state);
+    }
+}
+
 # Signal management 
 sub harvester {
     my ($_signame, $_clean) = @_;
@@ -359,34 +394,7 @@ sub harvester {
             undef $checker_pid;
             my ($state) = grep { $_->{code} eq $status } values %comm_codes;
             if ($state) {
-                log::explanations($state->{log});
-                $sub_state = $state->{status};
-                if ($sub_state eq 'locked') {
-                    $locked_count++;
-                    $sub_state = 'loop_locked' if $locked_count > 10;
-                } else {
-                    $locked_count = 0;
-                }
-                my $no_more_supported = $no_more_supported &&
-                  !text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
-                # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
-                if (!member($sub_state, qw(okay))) {
-                    go2State($sub_state);
-                } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})) {
-                    go2State('no_more_supported');
-                } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
-                            && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED}
-                               && !is_extmaint_supported())) {
-                    $state{extended_support_is_enabled}{tt}[0] =
-                      N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
-                    go2State('extended_support_is_enabled');
-                    setVar('EXTENDED_SUPPORT_SPLASHED', bool2yesno(1));
-                } elsif ($new_distro && is_false($config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})
-                      && is_false($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})) {
-                    go2State('new_distribution');
-                } else {
-                    go2State($sub_state);
-                }
+                process_state($state);
             }
         } elsif ($media_manager_pid && $media_manager_pid == $childpid) {
             undef $media_manager_pid;
