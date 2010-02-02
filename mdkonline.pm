@@ -52,7 +52,7 @@ our @EXPORT = qw(find_current_distro
                  $root);
 
 our (%config, $product_id, $root);
-our $version = 2.67;
+our $version = 1;
 
 use log;
 
