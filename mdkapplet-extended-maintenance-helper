@@ -94,10 +94,7 @@ sub get_extmaint_authentication() {
         return;
     }
 
-    my $res =
-      fill_n_run_portable_dialog(
-          $w,
-          [
+    my @widgets = (
               if_(!$::isEmbedded,
                   get_banner(N("Extended Maintenance")),
               ),
@@ -130,7 +127,8 @@ sub get_extmaint_authentication() {
                       new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password")))
               ]),
               create_okcancel($w, N("Next"), N("Cancel")),
-          ]);
+          );
+    my $res = fill_n_run_portable_dialog($w, \@widgets);
 
     $email = $email_w->get_text;
     # when embedded:
