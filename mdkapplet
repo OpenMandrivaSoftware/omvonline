@@ -367,6 +367,8 @@ sub harvester {
                 } else {
                     $locked_count = 0;
                 }
+                my $no_more_supported = $no_more_supported &&
+                  !text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
                 # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
                 if (!member($sub_state, qw(okay))) {
                     go2State($sub_state);
