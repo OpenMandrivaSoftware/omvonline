@@ -441,8 +441,9 @@ sub confirm_upgrade() {
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
-               if_(is_download_all_enabled(),
-                   gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
+               # active_ref option is missing on 2008.0:
+               (is_download_all_enabled() ?
+                   (gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
                             N("(Warning: You will need quite a lot of free space)"),
                           active_ref => \$download_all, sensitive_ref => \$browse,
                           toggled => sub { $box and $box->set_sensitive($download_all) },
@@ -452,7 +453,7 @@ sub confirm_upgrade() {
                                      0, gtknew('Label_Left', text => N("Where to download packages:")),
                                      1 , $browse,
                                  ]),
-               ),
+               ) : ()),
                create_okcancel($w, N("Next"), N("Cancel")),
                                       ]);
 
