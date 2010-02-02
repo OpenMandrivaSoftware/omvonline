@@ -414,7 +414,7 @@ sub configNetwork() {
 # only enable 'download all packages at once' on 2010.1 and further:
 sub is_download_all_enabled() {
     # prevent crashing on 2008.1 and 2009.0:
-    eval { is_it_a_devel_distro() } || !member($product_id->{version}, qw(2008.1 2009.0 2009.1));
+    eval { is_it_a_devel_distro() } || !member($product_id->{version}, qw(2008.0 2008.1 2009.0 2009.1));
 }
 
 sub confirm_upgrade() {
