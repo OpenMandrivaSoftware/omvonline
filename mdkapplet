@@ -544,7 +544,11 @@ sub no_more_supported_choice() {
     #$_ and $_->set_border_width(8) foreach $b1, $b2, $b3;
 
     # explicitely wrap too long message:
-    $_ and $_->child->set_line_wrap(1) foreach $b1, $b2;
+    foreach ($b1, $b2) {
+        next if !$_;
+        $_->child->set_line_wrap(1);
+        $_->child->set_size_request($width-50, -1);
+    }
 
     my $res = fill_n_run_portable_dialog($w, \@widgets);
 
