@@ -885,7 +885,12 @@ sub setState {
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
         my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
                                                         '/usr/share/icons/mdkonline.png', $icon);
-        if (member($state, qw(new_distribution no_more_supported))) {
+        if ($state eq 'new_distribution') {
+            $bubble->add_action('clicked', N("More Information"), \&upgrade);
+            if ($sub_state eq 'updates') {
+                push @arr, 'update';
+            }
+        } elsif ($state eq 'no_more_supported') {
             $bubble->add_action('clicked', N("More Information"), \&no_more_supported);
             if ($sub_state eq 'updates') {
                 push @arr, 'update';
