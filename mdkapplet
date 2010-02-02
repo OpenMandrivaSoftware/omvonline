@@ -521,16 +521,16 @@ sub no_more_supported_choice() {
             gtknew('HSeparator'),
         ),
         if_($no_more_supported ne 'none',
-            $b2 = gtknew('RadioButton', child => gtknew('VButtonBox', layout => 'start', children_tight => [
-                gtknew('Label_Left',
-                       text => N("Do you want to upgrade to the '\%s' distribution?", 
-                                 $new_distro->{name} || $new_distro->{version}), @common),
+            gtknew('VBox', children_tight => [
+                $b2 = gtknew('RadioButton',
+                             text => N("Do you want to upgrade to the '\%s' distribution?", 
+                                       $new_distro->{name} || $new_distro->{version}),
+                             toggled => sub {
+                                 ($choice, $warn_me) = ('upgrade', undef) if $_[0]->get_active;
+                             },
+                             if_($b1, group => $b1)),
                 new_link_button($new_distro->{url}, N("More info about this new version")),
             ]),
-                         toggled => sub {
-                             ($choice, $warn_me) = ('upgrade', undef) if $_[0]->get_active;
-                         },
-                         if_($b1, group => $b1)),
             gtknew('HSeparator'),
         ),
         $b3 = gtknew('RadioButton', text => N("Do not ask me next time"),
