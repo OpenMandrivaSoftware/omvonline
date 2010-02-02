@@ -79,12 +79,6 @@ sub get_extmaint_authentication() {
 
     $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
-    # when not embedded:
-    my $password_restrieved;
-    $w->{real_window}->signal_connect(destroy => sub {
-                                          $password = $password_w->get_text;
-                                          $password_restrieved = 1;
-                                      });
 
     my ($url, $extended_maintenance_end, $desktop_update_end, $basic_update_end) =
       eval { get_extended_maintenance_data() };
@@ -93,6 +87,11 @@ sub get_extmaint_authentication() {
                                       . "\n$err");
         return;
     }
+
+    $w->{ok_clicked} = sub {
+        $password = $password_w->get_text;
+        Gtk2->main_quit;
+    };
 
     my @widgets = (
               if_(!$::isEmbedded,
@@ -128,12 +127,13 @@ sub get_extmaint_authentication() {
               ]),
               create_okcancel($w, N("Next"), N("Cancel")),
           );
-    my $res = fill_n_run_portable_dialog($w, \@widgets);
+
+    fill_n_run_portable_dialog($w, \@widgets);
 
     $email = $email_w->get_text;
-    # when embedded:
-    $password = $password_w->get_text if !$password_restrieved;
-    if ($res) {
+
+    # means OK handler got run:
+    if ($password) {
         if ($email && $password) {
             add_extmaint_medium($email, $password);
         } else {
