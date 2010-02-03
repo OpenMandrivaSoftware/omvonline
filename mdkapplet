@@ -363,7 +363,8 @@ sub process_state {
     # busy critical delayed disabled disconnected locked loop_locked new_distribution no_enabled_medium no_enterprise_update_medium no_more_supported no_update_medium notsupported okay unconfigured_restricted_media update
     if (!member($sub_state, qw(okay))) {
         go2State($sub_state);
-    } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})) {
+    } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})
+               && !text2bool($local_config{EXTENDED_SUPPORT_OFFERED})) {
         go2State('no_more_supported');
     } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
                && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED}
@@ -560,6 +561,7 @@ sub no_more_supported_choice() {
 
     my $res = fill_n_run_portable_dialog($w, \@widgets);
 
+    setVar('EXTENDED_SUPPORT_OFFERED', bool2yesno(1));
     setVar('DO_NOT_ASK_FOR_NO_MORE_SUPPORTED', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED} = bool2text($warn_me);
     if ($res) {
