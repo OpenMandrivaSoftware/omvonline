@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-el\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-03 18:40+0100\n"
-"PO-Revision-Date: 2010-01-30 09:52+0100\n"
+"PO-Revision-Date: 2010-02-03 19:29+0100\n"
 "Last-Translator: Glentadakis Dimitrios\n"
 "Language-Team: Greek <translators_team@mandrivalinux.gr>\n"
 "MIME-Version: 1.0\n"
@@ -267,14 +267,13 @@ msgstr "Θα πρέπει να αναβαθμίσετε σε μια νεότερ
 msgid "Your distribution is no longer supported"
 msgstr "Η διανομή σας δεν υποστηρίζεται πλέον"
 
-#: ../mdkapplet:505
-#, fuzzy, c-format
+#: ../mdkapplet:505, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
 msgstr ""
-"Αγοράστε μια επέκταση συντήρησης για τη συγκεκριμένη έκδοση (% s) και "
-"συνεχίστε την λειτουργία της."
+"Αγοράστε μια επέκταση συντήρησης για τη συγκεκριμένη έκδοση (%s) και "
+"συνεχίστε την λειτουργία της μέχρι το %s."
 
 #: ../mdkapplet:589
 #, c-format
@@ -566,13 +565,12 @@ msgstr "Παρουσιάστηκε σφάλμα κατά την προσθήκη
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Η ανάκτηση της λίστας των διανομών απέτυχε:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
-#: ../mdkapplet-extended-maintenance-helper:191
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:191, c-format
 msgid "Extended Maintenance"
-msgstr "Θα πρέπει να αποκτήσετε εκτεταμένη συντήρηση."
+msgstr "Εκτεταμένη συντήρηση"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -581,6 +579,8 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Η Mandriva παρέχει 12 μήνες ενημερώσεις για την επιφάνεια εργασίας (μέχρι "
+"τις %s) και 18 μήνες βασικές ενημερώσεις (μέχρι τις %s) για τις διανομές."
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
@@ -588,38 +588,39 @@ msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"Η εκτεταμένη συντήρηση είναι πλέον διαθέσιμη για να αποκτήσετε 18 μήνες "
+"πρόσθετες ενημερώσεις (μέχρι τις %s)."
 
-#: ../mdkapplet-extended-maintenance-helper:112
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:112, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "Θα πρέπει να αποκτήσετε εκτεταμένη συντήρηση."
+msgstr ""
+"Μπορείτε να εγγραφείτε <b>τώρα αμέσως</b> για να αποκτήσετε εκτεταμένη "
+"συντήρηση:"
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "Lifetime policy"
-msgstr ""
+msgstr "Πολιτική χρόνου ζωής"
 
-#: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:115, c-format
 msgid "Online subscription"
-msgstr "Περιγραφή μηχανήματος:"
+msgstr "Εγγραφή στο διαδίκτυο"
 
-#: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:117, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
 msgstr ""
 "Παρακαλώ συμπληρώστε τα στοιχεία του λογαριασμού σας για να προσθέσετε ένα "
-"νέο μέσο πακέτων."
+"νέο μέσο πακέτων αφού ολοκληρώσετε την εγγραφή σας στο διαδίκτυο"
 
-#: ../mdkapplet-extended-maintenance-helper:192
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:192, c-format
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
 msgstr ""
-"Ο λογαριασμός σας Mandriva δεν έχει συνδρομή στην υπηρεσία λήψης του %s."
+"Ο λογαριασμός σας Mandriva δεν έχει συνδρομή στην υπηρεσία εκτεταμένης "
+"συντήρησης."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
