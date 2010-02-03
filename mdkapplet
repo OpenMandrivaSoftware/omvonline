@@ -516,7 +516,10 @@ sub no_more_supported_choice() {
                text => get_obsolete_message() . "\n", @common),
         if_($extended_maintenance_url,
             $b1 = gtknew('RadioButton',
-                         text => N("Purchase a maintenance extension for this version (%s) and keep it running until.", $product_id->{version}),
+                         text => N("Purchase a maintenance extension for this version (%s) and keep it running until %s.",
+                                   $product_id->{version},
+                                   iso8601_date_to_locale($extended_maintenance_end)),
+                         
                          toggled => sub {
                              ($choice, $warn_me) = ('extended', undef) if $_[0]->get_active;
                          },
