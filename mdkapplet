@@ -511,7 +511,7 @@ sub no_more_supported_choice() {
     my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
 
     my @widgets = (
-        get_banner(),
+        get_banner(N("Extended Maintenance")),
         gtknew('Label_Left', 
                text => get_obsolete_message() . "\n", @common),
         if_($extended_maintenance_url,
