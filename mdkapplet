@@ -409,6 +409,7 @@ sub harvester {
     return @pids;
 }
 
+# FIXME: we can run many drakconnect when network is down:
 sub configNetwork() {
     log::explanations(N_("Launching drakconnect\n"));
     fork_exec("/usr/sbin/drakconnect");
@@ -569,8 +570,10 @@ sub no_more_supported_choice() {
 }
 
 
+my $no_more_supported_wip;
 sub no_more_supported() {
-    return if $mdv_update_pid;
+    return if $mdv_update_pid || $no_more_supported_wip;
+    $no_more_supported_wip = 1;
     my $choice = no_more_supported_choice();
     if ($choice eq 'upgrade') {
         really_confirm_upgrade() and real_upgrade();
@@ -579,6 +582,7 @@ sub no_more_supported() {
     } elsif ($choice eq 'nothing') {
         $icon->set_visible(0);
     }
+    undef $no_more_supported_wip;
 }
 
 
