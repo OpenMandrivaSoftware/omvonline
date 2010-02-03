@@ -573,6 +573,8 @@ sub no_more_supported() {
         really_confirm_upgrade() and real_upgrade();
     } elsif ($choice eq 'extended') {
         get_extended_maintenance();
+    } elsif ($choice eq 'nothing') {
+        $icon->set_visible(0);
     }
 }
 
