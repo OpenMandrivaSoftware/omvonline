@@ -231,7 +231,7 @@ $icon->signal_connect(popup_menu => sub {
                           $menu and $menu->popup(undef, undef, undef, undef, $button, $time);
                       });
 $icon->signal_connect(activate => sub {
-                          my %actions = (
+                          my %click_actions = (
                               unconfigured_restricted_media => \&prepare_add_restricted,
                               no_update_medium => \&add_media,
                               no_enterprise_update_medium => \&prepare_add_enterprise_update_media,
@@ -246,7 +246,7 @@ $icon->signal_connect(activate => sub {
                               $action = 'updates';
                           }
 
-                          $actions{$action}->() if ref $actions{$action};
+                          $click_actions{$action}->() if ref $click_actions{$action};
 			  });
 foreach my $opt (@ARGV) {
     if ($opt eq '--force' || $opt eq '-f') { setAutoStart('TRUE') }
