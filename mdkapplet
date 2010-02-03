@@ -216,11 +216,11 @@ my %comm_codes = (
 );
 
 my %actions = (
-	       'update' => { name => N("Install updates"), launch => sub { installUpdates() } },
+	       'update' => { name => N("Install updates"), launch => \&installUpdates },
 	       'add_restricted_media' => { name => N("Add additional package medium"), launch => \&prepare_add_restricted },
 	       'add_enterprise_update_medium' => { name => N("Add additional package medium"), launch => \&prepare_add_enterprise_update_media },
 	       'check' => { name => N("Check Updates"), launch => \&checkUpdates },
-	       'confNetwork' => { name => N("Configure Network"), launch => sub { configNetwork() } },
+	       'confNetwork' => { name => N("Configure Network"), launch => \&configNetwork },
 	       'upgrade_distro' => { name => N("Upgrade the system"), launch => \&upgrade },
 	      );
 
