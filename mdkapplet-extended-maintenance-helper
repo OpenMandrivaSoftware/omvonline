@@ -109,6 +109,7 @@ sub get_extmaint_authentication() {
                             N("You can subscribe <b>right now</b> to get extended maintenance:"),
                         ),
                      @common),
+              new_link_button('http://www2.mandriva.com/support/lifecycle/', N("Lifetime policy")),
               new_link_button($url, N("Online subscription")),
               gtknew('HSeparator'),
               gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium once you have subscribed online"),
