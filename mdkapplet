@@ -549,7 +549,7 @@ sub no_more_supported_choice() {
 
     # explicitely wrap too long message:
     foreach ($b1, $b2) {
-        next if !$_;
+        next if !$_ || !$_->child;
         $_->child->set_line_wrap(1);
         $_->child->set_size_request($width-50, -1);
     }
