@@ -366,9 +366,8 @@ sub process_state {
     } elsif ($no_more_supported && !text2bool($config{EXTENDED_SUPPORT})
                && !text2bool($local_config{EXTENDED_SUPPORT_OFFERED})) {
         go2State('no_more_supported');
-    } elsif ($no_more_supported && text2bool($config{EXTENDED_SUPPORT})
-               && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED})
-                               && !is_extmaint_supported()) {
+    } elsif (text2bool($config{EXTENDED_SUPPORT}) && is_extmaint_supported()
+               && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED})) {
         $state{extended_support_is_enabled}{tt}[0] =
           N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
         go2State('extended_support_is_enabled');
