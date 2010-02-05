@@ -263,6 +263,8 @@ my ($download_dir, $download_all);
 }
 
 my ($new_distro, $no_more_supported, $extended_maintenance_url, $extended_maintenance_end);
+my ($current_apimdv_distro);
+
 get_product_id();
 
 shouldStart() or die "$localfile should be set to TRUE: please use --force or -f option to launch applet\n";
@@ -310,7 +312,7 @@ sub is_there_a_new_distributions() {
         return 1;
     }
 
-    my $current_apimdv_distro = find_current_distro(@distros);
+    $current_apimdv_distro = find_current_distro(@distros);
     $no_more_supported = $current_apimdv_distro->{obsoleted_by} if !is_extmaint_supported();
     ($extended_maintenance_url, $extended_maintenance_end) = @$current_apimdv_distro{qw(extended-maintenance extended-maintenance-end)};
     refresh_no_more_supported_msg();
