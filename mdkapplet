@@ -292,6 +292,14 @@ Gtk2->main;
 
 ugtk2::exit(0);
 
+sub is_extended_support_not_ended {
+    return if !is_extmaint_supported();
+    require POSIX;
+    my $d = POSIX::strftime("%G%m%d", localtime(time()));
+    $d < $extended_maintenance_end;
+}
+
+
 sub is_there_a_new_distributions() {
     # sanity check for cooker:
     # (2008.0 wrongly reports 'Devel' instead of 'Official'):
@@ -318,11 +326,14 @@ sub is_there_a_new_distributions() {
     refresh_no_more_supported_msg();
     if ($no_more_supported) {
         $new_distro = find { $_->{version} eq $no_more_supported } @distros;
-        return;
+        return if is_extended_support_not_ended();
     }
 
     # the "live upgrade" is not available on 2008.0:
     return if is_it_2008_0();
+
+    # no if we're using the extended maintenance:
+    return if is_extended_support_not_ended();
 
     if ($new_distribution && $new_distribution->{version} ne $product_id->{version}) {
         $new_distro = $new_distribution;
