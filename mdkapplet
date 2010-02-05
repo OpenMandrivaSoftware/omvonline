@@ -145,6 +145,11 @@ my %state = (
 		      menu => [],
 		      tt => [ N_("Release not supported (too old release, or development release)") ]
 		     },
+          end_of_extended_support => {
+              colour => [ 'disabled' ],
+              menu => [],
+              tt => [ get_obsolete_message_() ]
+          },
           no_update_medium => {
 		      colour => [ 'noconf' ],
 		      menu => [ 'check' ],
@@ -385,6 +390,9 @@ sub process_state {
           N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
         go2State('extended_support_is_enabled');
         setVar('EXTENDED_SUPPORT_SPLASHED', bool2yesno(1));
+        # FIXME: just drop this state once upgrade from 2009.0 has been tested:
+    } elsif (is_extmaint_supported() && !is_extended_support_not_ended()) {
+        go2State('end_of_extended_support');
     } elsif ($new_distro && is_false($config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})
                && is_false($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE})) {
         go2State('new_distribution');
