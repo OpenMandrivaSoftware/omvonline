@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "POT-Creation-Date: 2010-02-03 18:40+0100\n"
-"PO-Revision-Date: 2010-01-31 11:34+0100\n"
+"PO-Revision-Date: 2010-02-07 16:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 #: ../mdkapplet:71
 #, c-format
 msgid "Will check updates at %s"
-msgstr "Vil sjå etter oppdateringar %ss"
+msgstr "Vil sjå etter oppdateringar %s"
 
 #: ../mdkapplet:79
 #, c-format
@@ -110,7 +110,7 @@ msgstr "Feil ved oppdatering av medie"
 #: ../mdkapplet:219 ../mdkapplet:881
 #, c-format
 msgid "Install updates"
-msgstr "Installer oppdateringar"
+msgstr "Installer oppdateringane"
 
 #: ../mdkapplet:220 ../mdkapplet:221
 #, c-format
@@ -212,10 +212,11 @@ msgstr "Avbryt"
 #: ../mdkapplet:461
 #, c-format
 msgid ""
-"Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
+"Maintenance for this Mandriva Linux version has ended. No more updates will "
+"be delivered for this system."
 msgstr ""
-"Vedlikehald for dette Mandriva Linux-systemet er ikkje lenger støtta. Dette "
-"medfører at du i framtida ikkje får nye programvareoppdateringar."
+"Vedlikehaldsplanen for denne utgåva av Mandriva Linux er no over. Du vil "
+"ikkje få nokon nye oppdateringar framover."
 
 #: ../mdkapplet:467
 #, c-format
@@ -252,13 +253,13 @@ msgid "Your distribution is no longer supported"
 msgstr "Distribusjonen er ikkje lenger støtta"
 
 #: ../mdkapplet:505
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
 msgstr ""
 "Kjøp ei vedlikehaldsutviding for denne versjonen (%s) for å få oppdateringar "
-"fram til "
+"fram til %s."
 
 #: ../mdkapplet:589
 #, c-format
@@ -390,6 +391,7 @@ msgstr ""
 msgid "Do you want to install this additional software repository?"
 msgstr "Vil du leggja til dette nye programvarelageret?"
 
+# skip-rule: server
 #: ../mdkapplet:990 ../mdkonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
@@ -544,13 +546,13 @@ msgstr "Klarte ikkje leggja til nytt medium."
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Feil ved henting av distribusjonslista:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
-#, fuzzy, c-format
+#, c-format
 msgid "Extended Maintenance"
-msgstr "Du bør skaffa utvida vedlikehald."
+msgstr "Utvida vedlikehald"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -559,6 +561,8 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva tilbyr 12 månader med generelle oppdateringar (fram til %s) og 18 "
+"månader med grunnoppdateringar (fram til %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
@@ -566,37 +570,40 @@ msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"Utvida vedlikehald er no tilgjengeleg, og gjev 18 månader meir med "
+"oppdateringar (fram til %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:112
-#, fuzzy, c-format
+#, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "Du bør skaffa utvida vedlikehald."
+msgstr ""
+"Du kan starta eit abonnement på utvida vedlikehald <b>med ein gong</b>:"
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "Lifetime policy"
-msgstr ""
+msgstr "Levetidspraksis"
 
 #: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#, c-format
 msgid "Online subscription"
-msgstr "Heimeside"
+msgstr "Abonnement"
 
 #: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
 msgstr ""
 "Skriv inn e-postadressa og passord til kontoen din for å leggja til det nye "
-"pakkemediet."
+"pakkemediet når du har starta abonnementet."
 
 #: ../mdkapplet-extended-maintenance-helper:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "Mandriva-kontoen din har ikkje eit nedlastingsabonnement for %s."
+msgstr "Mandriva-kontoen din har ikkje eit abonnement på utvida vedlikehald."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
@@ -742,6 +749,13 @@ msgstr "  --debug\t\t\t– Logg over kva som vert gjort.\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Klarte ikkje oppdatera pakkar frå oppdateringsmedium.\n"
+
+#~ msgid ""
+#~ "This Mandriva Linux system maintenance has ended. It means it will not "
+#~ "receive any new software update."
+#~ msgstr ""
+#~ "Vedlikehald for dette Mandriva Linux-systemet er ikkje lenger støtta. "
+#~ "Dette medfører at du i framtida ikkje får nye programvareoppdateringar."
 
 #, fuzzy
 #~| msgid "Do you want to upgrade to the '%s' distribution?"
