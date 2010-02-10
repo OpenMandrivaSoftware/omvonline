@@ -549,7 +549,7 @@ sub no_more_supported_choice() {
                      ),
             gtknew('HSeparator'),
         ),
-        if_($no_more_supported ne 'none',
+        ($no_more_supported ne 'none' ? (
             gtknew('VBox', children_tight => [
                 $b2 = gtknew('RadioButton',
                              text => N("Do you want to upgrade to the '\%s' distribution?", 
@@ -561,7 +561,7 @@ sub no_more_supported_choice() {
                 new_link_button($new_distro->{url}, N("More info about this new version")),
             ]),
             gtknew('HSeparator'),
-        ),
+        ) : ()),
         $b3 = gtknew('RadioButton', text => N("Do not ask me next time"),
                      toggled => sub {
                          $choice = 'nothing' if $_[0]->get_active;
