@@ -144,7 +144,7 @@ sub get_distro_list() {
         return;
     }
 
-    map { common::parse_LDAP_namespace_structure(chomp_($_)) } @lines;
+    map { common::parse_LDAP_namespace_structure(chomp_($_)) } grep { /^[^#]/ } @lines;
 }
 
 
