@@ -25,6 +25,7 @@ msgstr ""
 "\n"
 "\n"
 "X-Generator: KBabel 1.11.4\n"
+"X-Language: ru_RU\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:71
@@ -152,6 +153,8 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Базовая поддержка для этого дистрибутива завершена. Подписавшись на "
+"расширенную поддержку вы сможете получать обновления до %s"
 
 #: ../mdkapplet:400
 #, c-format
@@ -224,13 +227,17 @@ msgstr "Отмена"
 #: ../mdkapplet:461
 #, c-format
 msgid ""
-"Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
+"Maintenance for this Mandriva Linux version has ended. No more updates will "
+"be delivered for this system."
 msgstr ""
+"Поддержка этого дистрибутива завершена. Для него больше не будет выпускаться "
+"никаких обновлений."
 
 #: ../mdkapplet:467
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr ""
+"Для того чтобы продолжать держать вашу систему в безопасности, вы должны:"
 
 #: ../mdkapplet:473
 #, c-format
@@ -240,27 +247,26 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:479
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Вы должны заказать расширенную поддержку."
 
 #: ../mdkapplet:481
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Эта версия дистрибутива больше не поддерживается. Для нее больше не будут "
-"выпускаться обновления. Вы можете обновить ее на новую версию дистрибутива - "
-"%s."
+"Вы должны или заказать расширеную поддержку или обновиться до более новой "
+"версии дистрибутива  %s."
 
 #: ../mdkapplet:485
-#, fuzzy, c-format
+#, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "Выполнить обновление до версии «%s»?"
+msgstr "Вы должны обновиться до новой версии дистрибутива: %s."
 
 #: ../mdkapplet:495
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "Ваш дистрибутив больше не поддерживается."
 
 #: ../mdkapplet:505
 #, c-format
@@ -268,6 +274,8 @@ msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
 msgstr ""
+"Купите расширенную поддержку для этой версии (%s) и продолжайте ее "
+"использовать до %s."
 
 #: ../mdkapplet:589
 #, c-format
@@ -437,22 +445,22 @@ msgstr "Задержка перед первой проверкой (минут�
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "Проверить на наличие нового релиза \"%s\""
 
 #: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "Проверить на наличие пропущенных источников \"%s\""
 
 #: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Ограниченные"
 
 #: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "Enterprise"
 
 #: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
@@ -556,13 +564,13 @@ msgstr "При добавлении источника возникла ошиб
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Сбой при получении списка дистрибутивов:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
-msgstr ""
+msgstr "Расширенная поддержка"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -571,6 +579,8 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva предоставляет для вашего дистрибутива 12 месяцев обновлений ПО (до "
+"%s) и 18 месяцев базовых обновлений (до %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
@@ -578,37 +588,40 @@ msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"Расширенная поддержка дает вам дополнительно 18 месяцев обновлений (до %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr ""
+msgstr "Вы можете подписаться на расширенную поддержку <b>прямо сейчас</b>:"
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "Lifetime policy"
-msgstr ""
+msgstr "Политика обновлений ПО"
 
 #: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#, c-format
 msgid "Online subscription"
-msgstr "Открыть веб-сайт"
+msgstr "Онлайн подписка"
 
 #: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
 msgstr ""
-"Для добавления дополнительного источника пакетов ведите логин своей учётной "
-"записи"
+"Для добавления дополнительного источника пакетов при онлайн подписке введите "
+"ID своей учётной записи"
 
 #: ../mdkapplet-extended-maintenance-helper:192
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "Для вашей учётной записи Mandriva не включена подписка на загрузку %s."
+msgstr ""
+"Для вашей учётной записи Mandriva не включена подписка на Расширенную "
+"поддержку."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
@@ -680,24 +693,24 @@ msgid "Failure when adding medium"
 msgstr "Не удалось добавить источник"
 
 #: ../mdkonline.pm:163
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Flash"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva Flash"
 
 #: ../mdkonline.pm:164
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Free"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Free"
 
 #: ../mdkonline.pm:165
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Mini"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Mini"
 
 #: ../mdkonline.pm:166
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva One"
-msgstr "Mandriva Online %s"
+msgstr "Mandriva One"
 
 #: ../mdkonline.pm:167
 #, c-format
@@ -756,7 +769,6 @@ msgstr "  --debug\t\t\t- заносить в журнал выполняемые
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Не удаётся обновить пакеты из источника update_source.\n"
 
-#, fuzzy
 #~ msgid ""
 #~ "The version of Mandriva Linux installed on your system is no longer "
 #~ "supported."
