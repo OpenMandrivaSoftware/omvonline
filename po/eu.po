@@ -2,16 +2,16 @@
 # EUSKARA: Mandriva Linux translation.
 # Copyright (C) 2001 Mandriva S.A.
 #
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005, 2006, 2008, 2009.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2001-2002,2003, 2004, 2005, 2006, 2008, 2009, 2010.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-03 18:40+0100\n"
-"PO-Revision-Date: 2009-11-28 10:33+0100\n"
+"PO-Revision-Date: 2010-03-06 23:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language-Team: Basque <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,13 +76,11 @@ msgstr "urpmi datubasea blokeatuta"
 #: ../mdkapplet:146
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
+msgstr "Bertsio hau ez dago sostengaturik (bertsio zaharregia, edo garapen bertsioa)"
 
 #: ../mdkapplet:151
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Ez da euskarririk aurkitu. Euskarriren bat erantsi behar duzu 'Software "
 "Euskarri Kudeatzailea' bitartez."
@@ -146,6 +144,8 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Banaketa honentzako oinarrizko mantenua amaitu da. Mantenu "
+" hedatuan duzun harpidetzari esker, zure sistema %s arte eguneratuko da."
 
 #: ../mdkapplet:400
 #, c-format
@@ -219,11 +219,13 @@ msgstr "Utzi"
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
 msgstr ""
+"Mandriva Linux bertsio honentzako mantenua amaitu da. Ez dira sistema honentzako eguneraketa gehiago "
+"hornituko."
 
 #: ../mdkapplet:467
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "Zure sistema seguru mantentzeko, egin dezakezu:"
 
 #: ../mdkapplet:473
 #, c-format
@@ -233,26 +235,24 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:479
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Mantenu hedatua hartu beharko zenuke."
 
-#: ../mdkapplet:481
-#, fuzzy, c-format
+#: ../mdkapplet:481, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Banaketaren bertsio honen euskarria amaitu da. Ez da eguneraketa gehiago "
-"izango. %s banaketaren bertsio berriago batera berritu beharko zenuke."
+"Mantenu hedatua hartu edo %s banaketaren bertsio berriago batera berritu "
+"beharko zenuke."
 
-#: ../mdkapplet:485
-#, fuzzy, c-format
+#: ../mdkapplet:485, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "'%s' banaketara bertsio berritu nahi duzu?"
+msgstr "%s banaketaren bertsio berriago batera berritu beharko zenuke."
 
 #: ../mdkapplet:495
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "Zure banaketak ez du aurrerantzean euskarririk izango"
 
 #: ../mdkapplet:505
 #, c-format
@@ -546,13 +546,13 @@ msgstr "Akatsa gertatu da euskarria eransterakoan"
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Akatsa banaketen zerrenda eskuratzerakoan:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
-msgstr ""
+msgstr "Mantenu hedatua"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -579,10 +579,9 @@ msgstr ""
 msgid "Lifetime policy"
 msgstr ""
 
-#: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#: ../mdkapplet-extended-maintenance-helper:115, c-format
 msgid "Online subscription"
-msgstr "Lerroko Webgunea"
+msgstr "Lerroko harpidetza"
 
 #: ../mdkapplet-extended-maintenance-helper:117
 #, fuzzy, c-format
@@ -600,14 +599,12 @@ msgstr "Zure Mandriva kontuak ez dauka %s jaisteko harpidetza gaituta."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
 msgstr "Zure Mandriva kontuak ez dauka Powerpack jaisteko harpidetza gaituta."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Zure sistemak ez dauka %s-n behar adina leku aske bertsio berritzeko (%dMB < "
 "%dMB)"
