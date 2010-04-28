@@ -8,7 +8,7 @@
 # Nicolas Bauer <webmaster@mandrakeusers.de>, 2005.
 # Frank Koester <frank@dueppel13.de>, 2005.
 # Nicolas Bauer <rastafarii@mandrivauser.de>, 2007.
-# Oliver Burger <oliver@mandrivauser.de>, 2008, 2009.
+# Oliver Burger <oliver@mandrivauser.de>, 2008, 2009, 2010.
 # Wolfgang Bornath <molch.b@gmail.com>, 2008.
 # Thorsten van Lil <i18n@mandrivauser.de>, 2010.
 msgid ""
@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-02-03 18:40+0100\n"
-"PO-Revision-Date: 2010-01-14 23:16+0100\n"
-"Last-Translator: Thorsten van Lil <i18n@mandrivauser.de>\n"
+"PO-Revision-Date: 2010-04-28 08:22+0200\n"
+"Last-Translator: Oliver Burger <oliver@mandrivauser.de>\n"
 "Language-Team: German <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,13 +83,11 @@ msgstr "urpmi Datenbank ist gesperrt"
 #: ../mdkapplet:146
 #, c-format
 msgid "Release not supported (too old release, or development release)"
-msgstr ""
-"Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
+msgstr "Version wird nicht unterstützt (zu alte Version, oder Entwicklungsversion)"
 
 #: ../mdkapplet:151
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
 msgstr ""
 "Kein Medium gefunden. Sie müssen einige Medien mit dem 'Software Medien "
 "Manager' hinzufügen"
@@ -147,12 +145,14 @@ msgid "Upgrade the system"
 msgstr "Das System aktualisieren"
 
 #: ../mdkapplet:379
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"Die normale Wartung für diese Version ist ausgelaufen. Danke für Ihre Registrieung für erweiterte "
+"Wartung, Ihr System wird bis zum %s aktuell gehalten"
 
 #: ../mdkapplet:400
 #, c-format
@@ -202,7 +202,7 @@ msgstr "(Warnung: Es wird viel Speicherplatz benötigt)"
 #: ../mdkapplet:442
 #, c-format
 msgid "Where to download packages:"
-msgstr ""
+msgstr "Wo man Pakete herunterladen kann:"
 
 #: ../mdkapplet:446 ../mdkapplet:531 ../mdkapplet:598 ../mdkapplet:967
 #: ../mdkapplet:993 ../mdkapplet-enterprise-update-helper:89
@@ -226,11 +226,13 @@ msgstr "Abbrechen"
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
 msgstr ""
+"Die Wartungsdauer für diese Mandriva-Ausgabe ist beendet. Für dieses System werden keine "
+"Aktualisierungen mehr geliefert."
 
 #: ../mdkapplet:467
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "Um Ih System sicher zu erhalten, können Sie:"
 
 #: ../mdkapplet:473
 #, c-format
@@ -238,9 +240,9 @@ msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
 #: ../mdkapplet:479
-#, c-format
+#, fuzzy, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "Sie sollte sich für die erweiterte Wartung registrieren."
 
 #: ../mdkapplet:481
 #, fuzzy, c-format
@@ -248,26 +250,25 @@ msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr ""
-"Diese Version der Distribution wird nicht länger unterstützt. Es wird keine "
-"weiteren Updates geben. Sie sollten auf eine neuere Version der %s "
+"Sie sollten sich entweder für erweiterte Wartung registrieren oder auf eine neuere Version der %s "
 "Distribution wechseln."
 
 #: ../mdkapplet:485
-#, fuzzy, c-format
+#, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
-msgstr "Wollen Sie auf '%s'-Distribution aktualisieren?"
+msgstr "Sie sollten auf eine neuere Version der %s Distribution aktualisieren."
 
 #: ../mdkapplet:495
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "Ihre Distribution wird nicht länger unterstützt"
 
 #: ../mdkapplet:505
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
-msgstr ""
+msgstr "Kaufen Sie eine Wartungserweiterung für  diese Version (%s) und nutzen Sie sie weiter bis zum %s."
 
 #: ../mdkapplet:589
 #, c-format
@@ -331,8 +332,7 @@ msgstr "Copyright (C) %s by Mandriva"
 #: ../mdkapplet:837
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
+msgstr "Durch Mandriva Online erhalten Sie Zugriff auf Internetangebote von Mandriva"
 
 #: ../mdkapplet:839
 #, c-format
@@ -371,9 +371,9 @@ msgid "About..."
 msgstr "Über..."
 
 #: ../mdkapplet:904 ../mdkapplet-config:68
-#, fuzzy, c-format
+#, c-format
 msgid "Updates Configuration"
-msgstr "Konfiguration zur Aktualisierung"
+msgstr "Konfiguration der Aktualisierungen"
 
 #: ../mdkapplet:906
 #, c-format
@@ -449,7 +449,7 @@ msgstr "Nach fehlenden \"%s\" Quellen suchen"
 #: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "Beschränkt"
 
 #: ../mdkapplet-config:101
 #, c-format
@@ -558,13 +558,13 @@ msgstr "Fehler beim Hinzufügen eines Mediums"
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "Holen der Distributionslisten fehlgeschlagen:"
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
-msgstr ""
+msgstr "Erweiterte Wartung"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -573,31 +573,34 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva bietet 12 Monate Desktop-Aktualisierungen (bis zum %s) und 18 Monate Basis-Aktualisierungen "
+"(bis zum %s) für seine Distributionen."
 
 #: ../mdkapplet-extended-maintenance-helper:110
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr ""
+"Erweiterte Wartung ist nun verfügbar, um 18 Monate zusätzliche Aktualisierungen (bis zum %s) zu erhalten."
 
 #: ../mdkapplet-extended-maintenance-helper:112
-#, c-format
+#, fuzzy, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr ""
+msgstr "Sie können sich <b>jetzt</b> registrieren, um die erweiterte Wartung zu erhalten:"
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "Lifetime policy"
-msgstr ""
+msgstr "Lebenszeit-Richtlinie"
 
 #: ../mdkapplet-extended-maintenance-helper:115
-#, fuzzy, c-format
+#, c-format
 msgid "Online subscription"
-msgstr "Online Webseite"
+msgstr "Online Registrierung"
 
 #: ../mdkapplet-extended-maintenance-helper:117
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
@@ -610,19 +613,16 @@ msgstr ""
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "In Ihrem Mandriva Account ist kein %s Download-Abonnement aktiviert."
+msgstr "In Ihrem Mandriva Account ist kein Wartungs-Registrierung aktiviert."
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr ""
-"In Ihrem Mandriva Account ist kein Powerpack Download-Abonnement aktiviert."
+msgid "Your Mandriva account does not have Powerpack download subscription enabled."
+msgstr "In Ihrem Mandriva Account ist kein Powerpack Download-Abonnement aktiviert."
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
+msgid "Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
 msgstr ""
 "Auf Ihrem System befindet sich nicht genug freier Speicherplatz in %s für "
 "die Aktualisierung (%dMB < %dMB)"
