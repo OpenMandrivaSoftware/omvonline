@@ -7,6 +7,10 @@ MDKUPDATE = mdkupdate
 MDKAPPLET = mdkapplet
 SUBDIRS = po
 
+MANDRIVA_VERSION = $(shell awk 'BEGIN { RS=","; FS="=" } $$1 == "version" { print $$2 }' /etc/product.id)
+EXTENDED_VERSIONS = 2008.0 2009.0 2010.0
+EXTENDED_HELPER = $(if $(filter $(EXTENDED_VERSIONS),$(MANDRIVA_VERSION)),mdkapplet-extended-maintenance-helper)
+
 PREFIX = /
 DATADIR = $(PREFIX)/usr/share
 ICONSDIR = $(DATADIR)/icons
@@ -55,7 +59,7 @@ install: all
 	mkdir -p $(PREFIX)/etc/pam.d
 	install -m644 pam.d_urpmi.update $(PREFIX)/etc/pam.d/urpmi.update
 	ln -sf consolehelper $(PREFIX)/usr/bin/urpmi.update
-	for i in mdkapplet-config mdkapplet-enterprise-update-helper mdkapplet-restricted-helper mdkapplet-upgrade-helper mdkapplet-extended-maintenance-helper; do \
+	for i in mdkapplet-config mdkapplet-enterprise-update-helper mdkapplet-restricted-helper mdkapplet-upgrade-helper $(EXTENDED_HELPER); do \
 		install -m755 $$i $(SBINDIR); \
 		ln -sf consolehelper $(PREFIX)/usr/bin/$$i; \
 	done
