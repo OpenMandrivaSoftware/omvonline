@@ -66,13 +66,14 @@ ugtk2::exit(0);
 my $email;
 
 sub get_restricted_authentication() {
-    my $w = ugtk2->new(N("Adding an additional package medium"), width => $width + 20);
-    my ($password_w, $email_w, $password);
+    my $w = ugtk2->new(N("Adding an additional package medium"), 
+		       width => $width + 20);
+    my $password_w = gtknew('Entry');
+    my $email_w = gtknew('Entry', text => $email);
+    my $password;
     my $clicked;
 
-    $password_w = gtknew('Entry');
     $password_w->set_visibility(0);
-    $email_w = gtknew('Entry', text => $email);
 
     $w->{ok_clicked} = sub { 
         $password = $password_w->get_text;
@@ -82,23 +83,36 @@ sub get_restricted_authentication() {
     };
 
     my @widgets = (
-              get_banner(N("Adding an additional package medium")),
-              gtknew('Label_Left', text => N("Please fill in your account ID to add an additional package medium"),
-                     @common),
-              gtknew('HButtonBox', layout => 'start', children_tight => [
-                  interactive::gtk::add_padding(
-                      new_link_button('https://my.mandriva.com/info', N("More information on your user account")))
-              ]),
-              gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
-                  [ N("Your email"), $email_w ],
-                  [ N("Your password"), $password_w ],
-              ]),
-              gtknew('HButtonBox', layout => 'start', children_tight => [
-                  interactive::gtk::add_padding(
-                      new_link_button('https://my.mandriva.com/reset/password/', N("Forgotten password")))
-              ]),
-              create_okcancel($w, N("Next"), N("Cancel")),
-          );
+	get_banner(N("Adding an additional package medium")),
+	gtknew('Label_Left', 
+	       text => N("Please fill in your account ID to add an " .
+			 "additional package medium"),
+	       @common),
+	gtknew('HButtonBox', 
+	       layout => 'start', 
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       new_link_button('https://my.mandriva.com/info', 
+				       N("More information on your user " . 
+					 "account"))
+		   )
+	       ]),
+	gtknew('Table', 
+	       col_spacings => 5, 
+	       row_spacings => 5, 
+	       children => [ [ N("Your email"), $email_w ],
+			     [ N("Your password"), $password_w ] ]),
+	gtknew('HButtonBox', 
+	       layout => 'start', 
+	       children_tight => [ 
+		   interactive::gtk::add_padding(
+		       new_link_button('https://my.mandriva.com/reset' . 
+				       '/password/', 
+				       N("Forgotten password"))
+		   )
+	       ]),
+	create_okcancel($w, N("Next"), N("Cancel")),
+    );
 
     fill_n_run_portable_dialog($w, \@widgets);
 
@@ -106,8 +120,12 @@ sub get_restricted_authentication() {
         $clicked = 0;
         if ($mail && $password) {
             add_restricted_medium($email, $password);
-        } else {
-            interactive->vnew->ask_warn(N("Error"), N("Password and email cannot be empty."));
+        } 
+	else {
+            interactive->vnew->ask_warn(
+		N("Error"), 
+		N("Password and email cannot be empty.")
+	    );
             goto &get_restricted_authentication;
         }
     }
