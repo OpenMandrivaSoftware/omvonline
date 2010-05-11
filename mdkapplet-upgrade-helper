@@ -226,7 +226,9 @@ packages as well?)."))
     {
         # force PATH:
         local $ENV{TMPDIR} = undef;
-        $log_file = chomp_(`mktemp -u -p $ENV{HOME}/ gurpmi_upgrade_to_2009.0_XXXXXXXX`) . '.log';
+	my $log_template = 
+	    "gurpmi_upgrade_to_${new_distro_version}_XXXXXXXX.log";
+        $log_file = chomp_(`mktemp -u --tmpdir=$ENV{HOME}/ $log_template`);
         log::explanations("logging gurpmi message in '$log_file'");
     }
 
