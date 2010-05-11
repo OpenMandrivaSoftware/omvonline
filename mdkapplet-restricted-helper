@@ -118,7 +118,7 @@ sub get_restricted_authentication() {
 
     if ($clicked) {
         $clicked = 0;
-        if ($mail && $password) {
+        if ($email && $password) {
             add_restricted_medium($email, $password);
         } 
 	else {
