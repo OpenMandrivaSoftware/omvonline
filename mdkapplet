@@ -1004,7 +1004,9 @@ sub is_restricted_media_configured {
 }
 
 sub really_prepare_add_restricted() {
-    $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-restricted-helper', $product_id->{version});
+    $mdv_update_pid = run_program::raw({ detach => 1 }, 
+				       'mdkapplet-add-media-helper', 
+				       $product_id->{version});
 }
 
 sub prepare_add_restricted() {
@@ -1030,7 +1032,11 @@ sub prepare_add_restricted() {
 
 
 sub really_prepare_add_enterprise() {
-    $mdv_update_pid = run_program::raw({ detach => 1 }, 'mdkapplet-enterprise-update-helper', join('', @$product_id{qw(type product version)}));
+    $mdv_update_pid = run_program::raw(
+	{ detach => 1 },
+	'mdkapplet-add-media-helper',
+	join('', @$product_id{qw(type product version)})
+	);
 }
 
 sub prepare_add_enterprise_update_media() {
