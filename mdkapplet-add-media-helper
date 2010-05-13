@@ -1,0 +1,235 @@
+#!/usr/bin/perl
+###########################################################################
+# Copyright (C) 2010 Mandriva
+#
+# Thierry Vignaud <tvignaud@mandriva.com>
+# João Victor Duarte Martins <jvictor@mandriva.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License Version 2 as
+# published by the Free Software Foundation.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330,
+# Boston, MA 02111-1307, USA.
+###########################################################################
+
+use strict;
+use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
+use standalone;	# for explanations
+use common;
+use run_program;
+use interactive;
+use interactive::gtk;
+use mygtk2 qw(gtknew);	# only gtknew, any other stuff would break ugtk2
+use ugtk2 qw(:all);
+use mdkonline qw($product_id);
+use mdkapplet_gui;
+use urpm::cfg;
+
+use XML::Simple;
+use URI::Escape;
+use LWP::UserAgent;
+use HTTP::Request::Common;
+use HTTP::Request;
+
+BEGIN { unshift @::textdomains, 'mdkonline' }
+
+# %product is keyed by product id and it contains the data to add
+# restricted media for each product.
+my %product = (
+    powerpack => { 
+	info_url => 'https://my.mandriva.com/powerpack/',
+	has_rights => sub {
+	    my $profile = shift @_;
+	    $profile->{data}{'can-access-restricted-repositories'} eq 'YES';
+	},
+	media_name => 'Restricted',
+	add_medium => \&add_medium_powerpack 
+	    
+    },
+    server => { 
+	info_url => 'http://www2.mandriva.com/linux/server/',
+	has_rights => sub {
+	    my $profile = shift @_;
+	    $profile->{data}{groups}{'es5-prod'} or
+		$profile->{data}{groups}{'es5-demo'};
+	},
+	media_name => 'Update',
+	add_medium => \&add_medium_enterprise
+    },
+    );
+
+# Distribution upgrade version and product
+my $up_version;
+my $up_product;
+
+# Dialogs title and banner text
+my $title = N("Adding an additional package medium");
+
+
+# ######################################################################
+# Main Program
+
+{
+    # Parsing command line arguments.
+    my $usage =
+	"Usage: $0 [OPTION]... VERSION\n" .
+	"Add package medias for VERSION (of current product by default).\n" .
+	"\n" .
+	"  --rpm-root=PATH          Use PATH as root for rpm\n" .
+	"  --urpmi-root=PATH        Use PATH as root for rpm and urpmi\n" .
+	"  --product=NAME           Upgrade to VERSION of product named NAME\n";
+
+
+    foreach (@ARGV) {
+	if (/^--(rpm-root|urpmi-root)=(.+)/) {
+	    $::rpmdrake_options{$1}[0] = $2;
+	}
+	elsif (/^--product=(.+)/) {
+	    $up_product = lc $1;
+	}
+	elsif (/^([^-]{2}.+)/) {
+	    $up_version = $1;
+	}
+	else {
+	    die $usage;
+	}
+    }
+    $up_version or die $usage;
+
+    # FIXME Couldn't that be automatic called when mdkonline.pm is used?
+    $product_id or mdkonline::get_product_id();
+
+    # Product id data should be used in lowercase.
+    $up_product = lc $product_id->{product} unless $up_product;
+
+    # Sanitizes product command line argument.
+    unless (exists $product{$up_product}) {
+	my $available = join ", ", map { "'$_'" } keys %product;
+	$available =~ s/(.+), ([^,]+)/$1 and $2/;
+	die N("Supported products are %s, '%s' is not on the list.\n",
+	      $available, 
+	      $up_product);
+    }
+
+    run_authentication_dialog();
+}
+
+sub run_authentication_dialog {
+    my $description = N("Please fill in your account ID to add an " .
+			"additional package medium");
+    mdkapplet_gui::run_ask_credentials_dialog($title, 
+					      $description, 
+					      \&add_restricted_medium);
+    ugtk2::exit(0);
+}
+
+sub run_no_rights_dialog() {
+    my $w = mdkapplet_gui::new_portable_dialog($title);
+    my @widgets = (
+	mdkonline::get_banner($title),
+	gtknew('Label_Left',
+	       text => N("Your Mandriva account does not have %s " .
+			 "download subscription enabled.",
+			 mdkonline::translate_product()),
+	       @mdkapplet_gui::common),
+	gtknew('HButtonBox',
+	       layout => 'start',
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       mdkapplet_gui::new_link_button(
+			   $product{$up_product}->{info_url},
+			   N("More Information")
+		       )
+		   )
+	       ]),
+	create_okcancel($w, N("Close"), undef)
+	);
+    mdkapplet_gui::fill_n_run_portable_dialog($w, \@widgets);
+}
+
+sub add_restricted_medium {
+    my ($email, $passwd) = @_;
+    my $product = $product{$up_product};
+    my $my_profile = mdkonline::xml2perl(
+	mdkonline::get_from("https://my.mandriva.com/rest/authenticate",
+			    [ 'username', $email, 
+			      'password', $passwd, 
+			      'return', 'userdata' ]
+	));
+    if ($my_profile->{code} != 0) {
+        my $in = interactive->vnew;
+        $in->ask_warn(N("Error"), 
+		      N("An error occurred") . "\n" . $my_profile->{message});
+        goto &run_authentication_dialog;
+    } 
+    elsif (!$product->{has_rights}->($my_profile)) {
+        run_no_rights_dialog();
+    } 
+    else {
+	add_medium_for_product($product, $email, $passwd);
+    }
+}
+
+sub add_medium_for_product {
+    my ($product, $email, $passwd) = @_;
+
+    my $error = 0;
+    my $arch = urpm::cfg::get_arch();
+    my @archs = ($arch, if_($arch eq 'x86_64', 'i586'));
+
+    for $arch (@archs) {
+	unless ($product->{add_medium}->($email, $passwd, $up_version, $arch)) {
+	    $error = 1;
+	    interactive->vnew->ask_warn(
+		N("Error"), 
+		N("An error occurred while adding medium")
+		);
+	    goto &run_authentication_dialog;
+	}
+    }
+
+    unless ($error) {
+	my $w = ugtk2->new(N("Successfully added media!"),
+			   grab => 1);
+	$w->_ask_okcancel(N("Successfully added media %s.",
+			    $product->{media_name}),
+			  N("Ok"),
+			  undef);
+	ugtk2::main($w);
+    }
+}
+
+sub add_medium_enterprise {
+    my ($email, $password, $version, $arch) = @_;
+    my $uri = sprintf("https://%s:%s\@download.mandriva.com/%s/rpms/%s/",
+		      uri_escape($email),
+		      uri_escape($password),
+		      $version,
+		      $arch);
+    my @options = mdkonline::get_urpmi_options();
+    run_program::raw(@options, '--update', '--distrib', $uri);
+}
+
+sub add_medium_powerpack {
+    my ($email, $password, $version, $arch) = @_;
+    my $uri = sprintf("https://%s:%s\@dl.mandriva.com/rpm/comm/%s/",
+		      uri_escape($email),
+		      uri_escape($password),
+		      $version);
+    my @options = mdkonline::get_urpmi_options();
+    run_program::raw(@options,
+		     "Restricted $arch " . int(rand(100000)),
+		     "$uri$arch") or return 0;
+    run_program::raw(@options,
+		     '--update',
+		     "Restricted Updates $arch " . int(rand(100000)),
+		     "${uri}updates/$arch");
+}

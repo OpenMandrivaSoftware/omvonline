@@ -23,6 +23,7 @@ package mdkapplet_gui;
 ################################################################################
 
 use strict;
+use feature 'state';
 use lib qw(/usr/lib/libDrakX);
 use common;
 
@@ -40,9 +41,13 @@ our @EXPORT = qw(
                     setVar
             );
 
+our @EXPORT_OK = qw(run_ask_credentials_dialog);
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
+use mdkonline qw();	# you don't want to polute the namespace
+use interactive;
+use interactive::gtk;
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
@@ -53,6 +58,12 @@ our $localfile = "$localdir/mdkonline";
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
+
+# make it work on 2008.X:
+eval { interactive::gtk::add_padding(Gtk2::Label->new) };
+if ($@) {
+    *interactive::gtk::add_padding = sub { $_[0] };
+}
 
 our %local_config;
 read_local_config();
@@ -130,3 +141,71 @@ sub iso8601_date_to_locale {
     POSIX::strftime("%x", 0, 0, 0, $3, $2-1, $1-1900);
 }
 
+sub run_ask_credentials_dialog {
+    my ($title, $description, $callback) = @_;
+
+    my $w = new_portable_dialog($title);
+    my $password_text;
+    state $email_text;
+    my $password_w = gtknew('Entry');
+    my $email_w = gtknew('Entry', text => $email_text);
+    my $ok_clicked;
+
+    $password_w->set_visibility(0);
+
+    $w->{ok_clicked} = sub { 
+	$password_text = $password_w->get_text;
+	$email_text = $email_w->get_text;
+	$ok_clicked = 1;
+	Gtk2->main_quit;
+    };
+
+    my @widgets = (
+	mdkonline::get_banner($title),
+	gtknew('Label_Left',
+	       text => $description,
+	       @common),
+	gtknew('HButtonBox',
+	       layout => 'start',
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       new_link_button(
+			   'https://my.mandriva.com/info',
+			   N("More information on your user account")
+		       )
+		   )
+	       ]),
+	gtknew('Table',
+	       col_spacings => 5,
+	       row_spacings => 5,
+	       children => [ [ N("Your email"), $email_w ],
+			     [ N("Your password"), $password_w ] ]),
+	gtknew('HButtonBox',
+	       layout => 'start',
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       new_link_button(
+			   'https://my.mandriva.com/reset/password/',
+			   N("Forgotten password")
+		       )
+		   )
+	       ]),
+	ugtk2::create_okcancel($w, N("Next"), N("Cancel")),
+	);
+
+    fill_n_run_portable_dialog($w, \@widgets);
+
+    if ($ok_clicked) {
+	$ok_clicked = 0;
+	if ($email_text && $password_text) {
+	    $callback->($email_text, $password_text);
+	}
+	else {
+	    interactive->vnew->ask_warn(
+		N("Error"), 
+		N("Password and email cannot be empty.")
+		);
+	    goto &authentication_dialog;
+	}
+    }
+}
