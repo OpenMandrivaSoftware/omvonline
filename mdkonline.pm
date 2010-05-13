@@ -50,6 +50,7 @@ our @EXPORT = qw(find_current_distro
                  $config_file
                  $product_id
                  $root);
+our @EXPORT_OK = qw(get_my_mdv_profile);
 
 our (%config, $product_id, $root);
 our $version = 1;
@@ -209,6 +210,13 @@ sub get_from {
 
     my $response = $ua->post($link, $header);
     $response;
+}
+
+sub get_my_mdv_profile {
+    my ($email, $password) = @_;
+    xml2perl(mdkonline::get_from('https://my.mandriva.com/rest/authenticate',
+				 [ 'username', $email, 'password', $password, 
+				   'return', 'userdata' ]));
 }
 
 # callers need to require XML::Simple

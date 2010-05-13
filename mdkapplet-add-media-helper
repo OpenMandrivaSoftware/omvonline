@@ -127,7 +127,7 @@ sub run_authentication_dialog {
 			"additional package medium");
     mdkapplet_gui::run_ask_credentials_dialog($title, 
 					      $description, 
-					      \&add_restricted_medium);
+					      \&authenticate_callback);
     ugtk2::exit(0);
 }
 
@@ -155,22 +155,18 @@ sub run_no_rights_dialog() {
     mdkapplet_gui::fill_n_run_portable_dialog($w, \@widgets);
 }
 
-sub add_restricted_medium {
+sub authenticate_callback {
     my ($email, $passwd) = @_;
     my $product = $product{$up_product};
-    my $my_profile = mdkonline::xml2perl(
-	mdkonline::get_from("https://my.mandriva.com/rest/authenticate",
-			    [ 'username', $email, 
-			      'password', $passwd, 
-			      'return', 'userdata' ]
-	));
-    if ($my_profile->{code} != 0) {
+    my $profile = mdkonline::get_my_mdv_profile();
+
+    if ($profile->{code} != 0) {
         my $in = interactive->vnew;
         $in->ask_warn(N("Error"), 
-		      N("An error occurred") . "\n" . $my_profile->{message});
+		      N("An error occurred") . "\n" . $profile->{message});
         goto &run_authentication_dialog;
     } 
-    elsif (!$product->{has_rights}->($my_profile)) {
+    elsif (!$product->{has_rights}->($profile)) {
         run_no_rights_dialog();
     } 
     else {
