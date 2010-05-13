@@ -158,7 +158,7 @@ sub run_no_rights_dialog() {
 sub authenticate_callback {
     my ($email, $passwd) = @_;
     my $product = $product{$up_product};
-    my $profile = mdkonline::get_my_mdv_profile();
+    my $profile = mdkonline::get_my_mdv_profile($email, $passwd);
 
     if ($profile->{code} != 0) {
         my $in = interactive->vnew;
