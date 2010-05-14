@@ -34,7 +34,6 @@ use mdkapplet_gui;
 use urpm::cfg;
 
 use XML::Simple;
-use URI::Escape;
 use LWP::UserAgent;
 use HTTP::Request::Common;
 use HTTP::Request;
@@ -51,7 +50,7 @@ my %product = (
 	    $profile->{data}{'can-access-restricted-repositories'} eq 'YES';
 	},
 	media_name => 'Restricted',
-	add_medium => \&add_medium_powerpack 
+        add_medium => \&mdkonline::add_medium_powerpack 
 	    
     },
     server => { 
@@ -62,7 +61,7 @@ my %product = (
 		$profile->{data}{groups}{'es5-demo'};
 	},
 	media_name => 'Update',
-	add_medium => \&add_medium_enterprise
+        add_medium => \&mdkonline::add_medium_enterprise
     },
     );
 
@@ -201,31 +200,4 @@ sub add_medium_for_product {
 			  undef);
 	ugtk2::main($w);
     }
-}
-
-sub add_medium_enterprise {
-    my ($email, $password, $version, $arch) = @_;
-    my $uri = sprintf("https://%s:%s\@download.mandriva.com/%s/rpms/%s/",
-		      uri_escape($email),
-		      uri_escape($password),
-		      $version,
-		      $arch);
-    my @options = mdkonline::get_urpmi_options();
-    run_program::raw(@options, '--update', '--distrib', $uri);
-}
-
-sub add_medium_powerpack {
-    my ($email, $password, $version, $arch) = @_;
-    my $uri = sprintf("https://%s:%s\@dl.mandriva.com/rpm/comm/%s/",
-		      uri_escape($email),
-		      uri_escape($password),
-		      $version);
-    my @options = mdkonline::get_urpmi_options();
-    run_program::raw(@options,
-		     "Restricted $arch " . int(rand(100000)),
-		     "$uri$arch") or return 0;
-    run_program::raw(@options,
-		     '--update',
-		     "Restricted Updates $arch " . int(rand(100000)),
-		     "${uri}updates/$arch");
 }

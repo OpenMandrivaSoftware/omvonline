@@ -29,6 +29,8 @@ use lib qw(/usr/lib/libDrakX);
 use common;
 use ugtk2;
 
+use URI::Escape;
+
 our @ISA = qw(Exporter);
 our @EXPORT = qw(find_current_distro
                  fork_exec
@@ -50,7 +52,11 @@ our @EXPORT = qw(find_current_distro
                  $config_file
                  $product_id
                  $root);
-our @EXPORT_OK = qw(get_my_mdv_profile);
+our @EXPORT_OK = qw(
+    get_my_mdv_profile
+    add_medium_powerpack
+    add_medium_powerpack
+);
 
 our (%config, $product_id, $root);
 our $version = 1;
@@ -184,6 +190,36 @@ sub get_banner {
 
 sub get_urpmi_options() {
     ({ sensitive_arguments => 1 }, 'urpmi.addmedia', if_(!is_it_2008_0(), '--xml-info', 'always'));
+}
+
+sub add_medium_enterprise {
+    my ($email, $password, $version, $arch) = @_;
+    my $uri = sprintf("https://%s:%s\@download.mandriva.com/%s/rpms/%s/",
+                      uri_escape($email),
+                      uri_escape($password),
+                      $version,
+                      $arch);
+    my @options = get_urpmi_options();
+    run_program::raw(@options, '--update', '--distrib', $uri);
+}
+
+sub add_medium_powerpack {
+    my ($email, $password, $version, $arch) = @_;
+    my $uri = sprintf("https://%s:%s\@dl.mandriva.com/rpm/comm/%s/",
+                      uri_escape($email),
+                      uri_escape($password),
+                      $version);
+    my @options = get_urpmi_options();
+
+    # add release and updates media...
+    run_program::raw(@options,
+                     "Restricted $arch " . int(rand(100000)),
+                     "$uri$arch") 
+        or return 0;
+    run_program::raw(@options,
+                     '--update',
+                     "Restrictend Updates $arch " . int(rand(100000)),
+                     "${uri}updates/$arch");
 }
 
 sub is_running {
