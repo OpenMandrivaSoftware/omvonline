@@ -205,7 +205,7 @@ sub run_ask_credentials_dialog {
 		N("Error"), 
 		N("Password and email cannot be empty.")
 		);
-	    goto &authentication_dialog;
+	    goto &run_ask_credentials_dialog;
 	}
     }
 }
