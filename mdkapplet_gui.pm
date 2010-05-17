@@ -44,6 +44,7 @@ our @EXPORT = qw(
 our @EXPORT_OK = qw(
     run_ask_credentials_dialog
     run_no_rights_dialog
+    open_ask_powerpack_dialog
 );
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
@@ -231,4 +232,38 @@ sub run_no_rights_dialog {
 	create_okcancel($w, N("Close"), undef)
 	);
     fill_n_run_portable_dialog($w, \@widgets);
+}
+
+sub open_ask_powerpack_dialog {
+
+    my $title = N('Would you like Powerpack?');
+    my $w = new_portable_dialog($title);
+    my @widgets = (
+	mdkonline::get_banner($title),
+	gtknew('Label_Left',
+	       text => N("Since you don't have Powerpack rights " . 
+                         "you may visit mandriva store now and " .
+                         "get Powerpack subscription."),
+	       @common),
+	gtknew('HButtonBox',
+	       layout => 'start',
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       new_link_button(
+			   'http://store.mandriva.com/',
+			   N("Get Powerpack subscription!")
+		       )
+		   )
+	       ]),
+	gtknew('Label_Left',
+	       text => N('Continue to use your new Powerpack ' .
+                         'account information to upgrade, or ' .
+                         'Cancel and upgrade to the Free Edition.'),
+	       @common),
+	ugtk2::create_okcancel($w, 
+                               N("Continue and Authenticate!"), 
+                               N("Cancel, upgrade to Free Edition")),
+	);
+    
+    return fill_n_run_portable_dialog($w, \@widgets);
 }
