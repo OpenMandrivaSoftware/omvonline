@@ -41,7 +41,10 @@ our @EXPORT = qw(
                     setVar
             );
 
-our @EXPORT_OK = qw(run_ask_credentials_dialog);
+our @EXPORT_OK = qw(
+    run_ask_credentials_dialog
+    run_no_rights_dialog
+);
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
@@ -208,4 +211,24 @@ sub run_ask_credentials_dialog {
 	    goto &run_ask_credentials_dialog;
 	}
     }
+}
+
+sub run_no_rights_dialog {
+    my ($title, $info, $info_url) = @_;
+    my $w = new_portable_dialog($title);
+    my @widgets = (
+	mdkonline::get_banner($title),
+	gtknew('Label_Left',
+	       text => $info,
+	       @mdkapplet_gui::common),
+	gtknew('HButtonBox',
+	       layout => 'start',
+	       children_tight => [
+		   interactive::gtk::add_padding(
+		       new_link_button($info_url, N("More Information"))
+		   )
+	       ]),
+	create_okcancel($w, N("Close"), undef)
+	);
+    fill_n_run_portable_dialog($w, \@widgets);
 }

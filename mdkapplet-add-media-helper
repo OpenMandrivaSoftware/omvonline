@@ -130,30 +130,6 @@ sub run_authentication_dialog {
     ugtk2::exit(0);
 }
 
-sub run_no_rights_dialog() {
-    my $w = mdkapplet_gui::new_portable_dialog($title);
-    my @widgets = (
-	mdkonline::get_banner($title),
-	gtknew('Label_Left',
-	       text => N("Your Mandriva account does not have %s " .
-			 "download subscription enabled.",
-			 mdkonline::translate_product()),
-	       @mdkapplet_gui::common),
-	gtknew('HButtonBox',
-	       layout => 'start',
-	       children_tight => [
-		   interactive::gtk::add_padding(
-		       mdkapplet_gui::new_link_button(
-			   $product{$up_product}->{info_url},
-			   N("More Information")
-		       )
-		   )
-	       ]),
-	create_okcancel($w, N("Close"), undef)
-	);
-    mdkapplet_gui::fill_n_run_portable_dialog($w, \@widgets);
-}
-
 sub authenticate_callback {
     my ($email, $passwd) = @_;
     my $product = $product{$up_product};
@@ -166,7 +142,13 @@ sub authenticate_callback {
         goto &run_authentication_dialog;
     } 
     elsif (!$product->{has_rights}->($profile)) {
-        run_no_rights_dialog();
+        mdkapplet_gui::run_no_rights_dialog(
+            $title, 
+            N("Your Mandriva account does not have %s download " .
+              "subscription enabled.", 
+              mdkonline::translate_product($up_product)),
+            $product{$up_product}->{info_url}
+            );
     } 
     else {
 	add_medium_for_product($product, $email, $passwd);

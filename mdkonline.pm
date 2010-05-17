@@ -165,16 +165,17 @@ sub fork_exec {
     run_program::raw({ detach => 1 }, @_);
 }
 
-sub translate_product() {
+sub translate_product {
+    my ($product) = @_;
     my %strings = (
-        Flash => N("Mandriva Flash"),
-        Free => N("Mandriva Free"),
-        Mini => N("Mandriva Mini"),
-        One => N("Mandriva One"),
-        PowerPack => N("Mandriva PowerPack"),
-        Server => N("Mandriva Enterprise Server"),
+        flash => N("Mandriva Flash"),
+        free => N("Mandriva Free"),
+        mini => N("Mandriva Mini"),
+        one => N("Mandriva One"),
+        powerPack => N("Mandriva PowerPack"),
+        server => N("Mandriva Enterprise Server"),
     );
-    my $product = $product_id->{product};
+    $product or $product = lc $product_id->{product};
     $strings{$product} || $product;
 }
 
