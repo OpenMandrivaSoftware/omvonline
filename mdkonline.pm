@@ -29,6 +29,7 @@ use lib qw(/usr/lib/libDrakX);
 use common;
 use ugtk2;
 
+use LWP::UserAgent;
 use URI::Escape;
 
 our @ISA = qw(Exporter);
