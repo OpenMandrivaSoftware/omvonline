@@ -37,6 +37,7 @@ use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use Rpmdrake::open_db;
 use lang;
+use mdkapplet_gui qw(run_ask_credentials_dialog);
 
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
@@ -155,6 +156,99 @@ sub upgrade_distro_congratulations() {
     any::reboot() if $answer && !$::testing;
 }
 
+# Returns: undef if failed to authenticate, ($email, $passwd) otherwise
+sub powerpack_auth_callback {
+    my ($email, $passwd) = @_;
+    my $profile = mdkonline::get_my_mdv_profile($email, $passwd);
+    
+    # Checking for profile retrieving errors...
+    if ($profile->{code} != 0) {
+        my $in = interactive->vnew;
+        $in->ask_warn(N('Error'), 
+                      N('An error occurred') . "\n" . $profile->{message});
+        goto &try_to_add_powerpack_media;
+    } 
+
+    # Checking rights to powerpack media...
+    #
+    # level 2 => mandriva group
+    # level 6 => powerpack subscriber group
+    # data.families => acces to especific version if matches
+    #                  powerpack-VERSION
+    #
+    my $level = $profile->{data}{club}{level};
+    if ($level == 2 or $level == 6) {
+        return ($email, $passwd);
+    }
+    elsif ($profile->{data}{families} 
+               =~ /powerpack-$new_distro_version/i) {
+        return ($email, $passwd);
+    }
+    else {
+        mdkapplet_gui::run_no_rights_dialog(
+            N('Powerpack Media Configuration'),
+            N('You current Mandriva account does not have Powerpack ' .
+              'subscription enabled.'),
+            'https://my.mandriva.com/powerpack/',
+            );
+        return undef;
+    }
+}
+
+sub try_to_add_powerpack_media {
+    my $is_powerpack = mdkonline::is_restricted_media_supported();
+    my @auth_info;
+
+    if ($is_powerpack) {
+        # Verifying rights of current powerpack users...
+        my $title = N('Powerpack Media Configuration');
+        my $description = N('Please fill your My.Mandriva account info ' .
+                            'to add additional package media for ' .
+                            'Powerpack.');
+
+        # If no rights @auth_info == undef...
+        @auth_info = run_ask_credentials_dialog(
+            $title,
+            $description,
+            \&powerpack_auth_callback
+            );
+    }
+
+    while (@auth_info or mdkapplet_gui::open_ask_powerpack_dialog()) {
+        if (@auth_info) {
+            # Adding powerpack restricted media...
+            my ($email, $passwd) = @auth_info;
+            unless (mkdonline::add_medium_powerpack(
+                        $email, 
+                        $passwd, 
+                        $new_distro_version, 
+                        urpm::cfg::get_arch()
+                    )) {
+                ugtk2::ask_warn(N('Error'),
+                                N('Installation failed'),
+                                N('Failed to add powerpack restricted ' .
+                                  'medium'),
+                    );
+                next;
+            }
+            # Media was added, update it and move along...
+            update_media();
+            last;
+        }
+        else {
+            # Get the new authentication info from user...
+            my $title = N('Powerpack Media Configuration');
+            my $description = N('Please fill your new My.Mandriva ' .
+                                'account info.');
+            my @auth_info = run_ask_credentials_dialog(
+                $title,
+                $description,
+                \&powerpack_auth_callback
+                );
+        }
+    }
+}
+
 sub upgrade() {
     my $xid = gtkroot()->XWINDOW;
     
@@ -197,6 +291,10 @@ packages as well?)."))
         delete $urpm->{global_config}{downloader};
         urpm::media::write_config($urpm);
     }
+
+    log::explanations(
+        "checking if restricted (powerpack) media is to be addded");
+    try_to_add_powerpack_media();
 
     log::explanations("adding urpmi media for new distribution");
 
