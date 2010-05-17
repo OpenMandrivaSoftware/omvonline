@@ -33,10 +33,6 @@ use mdkonline qw($product_id);
 use mdkapplet_gui;
 use urpm::cfg;
 
-use XML::Simple;
-use HTTP::Request::Common;
-use HTTP::Request;
-
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
 # %product is keyed by product id and it contains the data to add

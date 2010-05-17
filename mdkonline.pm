@@ -31,6 +31,9 @@ use ugtk2;
 
 use LWP::UserAgent;
 use URI::Escape;
+use XML::Simple;
+use HTTP::Request::Common;
+use HTTP::Request;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(find_current_distro
@@ -252,9 +255,9 @@ sub get_from {
 
 sub get_my_mdv_profile {
     my ($email, $password) = @_;
-    xml2perl(mdkonline::get_from('https://my.mandriva.com/rest/authenticate',
-				 [ 'username', $email, 'password', $password, 
-				   'return', 'userdata' ]));
+    xml2perl(get_from('https://my.mandriva.com/rest/authenticate',
+                      [ 'username', $email, 'password', $password, 
+                        'return', 'userdata' ]));
 }
 
 # callers need to require XML::Simple
