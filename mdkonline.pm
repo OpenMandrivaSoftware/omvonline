@@ -223,7 +223,7 @@ sub add_medium_powerpack {
         or return 0;
     run_program::raw(@options,
                      '--update',
-                     "Restrictend Updates $arch " . int(rand(100000)),
+                     "Restricted Updates $arch " . int(rand(100000)),
                      "${uri}updates/$arch");
 }
 
