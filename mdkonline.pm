@@ -92,7 +92,7 @@ sub is_it_2008_0() {
 }
 
 sub is_extmaint_supported() {
-    $product_id->{support} eq 'extended'
+    $product_id->{support} eq 'extended';
 }
 
 sub is_enterprise_media_supported() {
@@ -179,7 +179,7 @@ sub translate_product {
         powerPack => N("Mandriva PowerPack"),
         server => N("Mandriva Enterprise Server"),
     );
-    $product or $product = lc $product_id->{product};
+    $product ||= lc $product_id->{product};
     $strings{$product} || $product;
 }
 
@@ -199,7 +199,7 @@ sub get_urpmi_options() {
 
 sub add_medium_enterprise {
     my ($email, $password, $version, $arch) = @_;
-    my $uri = sprintf("https://%s:%s\@download.mandriva.com/%s/rpms/%s/",
+    my $uri = sprintf("https://%s:%s@download.mandriva.com/%s/rpms/%s/",
                       uri_escape($email),
                       uri_escape($password),
                       $version,
@@ -210,7 +210,7 @@ sub add_medium_enterprise {
 
 sub add_medium_powerpack {
     my ($email, $password, $version, $arch) = @_;
-    my $uri = sprintf("https://%s:%s\@dl.mandriva.com/rpm/comm/%s/",
+    my $uri = sprintf("https://%s:%s@dl.mandriva.com/rpm/comm/%s/",
                       uri_escape($email),
                       uri_escape($password),
                       $version);

@@ -236,14 +236,12 @@ sub run_no_rights_dialog {
 
 sub open_ask_powerpack_dialog {
 
-    my $title = N('Would you like Powerpack?');
+    my $title = N("Would you like Powerpack?");
     my $w = new_portable_dialog($title);
     my @widgets = (
 	mdkonline::get_banner($title),
 	gtknew('Label_Left',
-	       text => N("Since you don't have Powerpack rights " . 
-                         "you may visit mandriva store now and " .
-                         "get Powerpack subscription."),
+	       text => N("Since you don't have Powerpack rights you may visit mandriva store now and get Powerpack subscription."),
 	       @common),
 	gtknew('HButtonBox',
 	       layout => 'start',
@@ -256,9 +254,7 @@ sub open_ask_powerpack_dialog {
 		   )
 	       ]),
 	gtknew('Label_Left',
-	       text => N('Continue to use your new Powerpack ' .
-                         'account information to upgrade, or ' .
-                         'Cancel and upgrade to the Free Edition.'),
+	       text => N("Continue to use your new Powerpack account information to upgrade, or Cancel and upgrade to the Free Edition."),
 	       @common),
 	ugtk2::create_okcancel($w, 
                                N("Continue and Authenticate!"), 

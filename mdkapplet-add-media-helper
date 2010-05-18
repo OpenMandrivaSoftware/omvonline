@@ -117,8 +117,7 @@ my $title = N("Adding an additional package medium");
 }
 
 sub run_authentication_dialog {
-    my $description = N("Please fill in your account ID to add an " .
-			"additional package medium");
+    my $description = N("Please fill in your account ID to add an additional package medium");
     mdkapplet_gui::run_ask_credentials_dialog($title, 
 					      $description, 
 					      \&authenticate_callback);
@@ -139,8 +138,7 @@ sub authenticate_callback {
     elsif (!$product->{has_rights}->($profile)) {
         mdkapplet_gui::run_no_rights_dialog(
             $title, 
-            N("Your Mandriva account does not have %s download " .
-              "subscription enabled.", 
+            N("Your Mandriva account does not have %s download subscription enabled.", 
               mdkonline::translate_product($up_product)),
             $product{$up_product}->{info_url}
             );
