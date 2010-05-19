@@ -166,7 +166,7 @@ sub powerpack_auth_callback {
         my $in = interactive->vnew;
         $in->ask_warn(N('Error'), 
                       N('An error occurred') . "\n" . $profile->{message});
-        goto &try_to_add_powerpack_media;
+        return;
     } 
 
     # Checking rights to powerpack media...
@@ -191,7 +191,7 @@ sub powerpack_auth_callback {
               'subscription enabled.'),
             'https://my.mandriva.com/powerpack/',
             );
-        return undef;
+        return;
     }
 }
 
