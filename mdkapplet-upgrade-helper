@@ -218,7 +218,7 @@ sub try_to_add_powerpack_media {
         if (@auth_info) {
             # Adding powerpack restricted media...
             my ($email, $passwd) = @auth_info;
-            unless (mkdonline::add_medium_powerpack(
+            unless (mdkonline::add_medium_powerpack(
                         $email, 
                         $passwd, 
                         $new_distro_version, 
@@ -240,7 +240,7 @@ sub try_to_add_powerpack_media {
             my $title = N('Powerpack Media Configuration');
             my $description = N('Please fill your new My.Mandriva ' .
                                 'account info.');
-            my @auth_info = run_ask_credentials_dialog(
+            @auth_info = run_ask_credentials_dialog(
                 $title,
                 $description,
                 \&powerpack_auth_callback

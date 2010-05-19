@@ -59,7 +59,7 @@ our @EXPORT = qw(find_current_distro
 our @EXPORT_OK = qw(
     get_my_mdv_profile
     add_medium_powerpack
-    add_medium_powerpack
+    add_medium_enterprise
 );
 
 our (%config, $product_id, $root);
