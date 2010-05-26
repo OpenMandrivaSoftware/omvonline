@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zh_CN\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-02-03 18:40+0100\n"
+"POT-Creation-Date: 2010-05-26 19:01-0300\n"
 "PO-Revision-Date: 2008-03-29 21:34+0800\n"
 "Last-Translator: 汤诗语 <shiyu@mandriva.org>\n"
 "Language-Team: Mandriva Linux i18n Team <cooker-i18n@mandrivalinux.org>\n"
@@ -49,7 +49,7 @@ msgstr "您的系统现有可用的更新"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mandriva Linux 发行版已经发布了新版本"
 
-#: ../mdkapplet:119 ../mdkapplet:156
+#: ../mdkapplet:119 ../mdkapplet:161
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "您的发行版有额外的软件包介质可用。"
@@ -74,13 +74,13 @@ msgstr "urpmi 数据库已锁定"
 msgid "Release not supported (too old release, or development release)"
 msgstr "版本不支持(太旧，或者为开发版本)"
 
-#: ../mdkapplet:151
+#: ../mdkapplet:156
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
 msgstr "未找到介质。您必须通过“软件介质管理器”添加介质。"
 
-#: ../mdkapplet:161
+#: ../mdkapplet:166
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -96,42 +96,42 @@ msgstr ""
 "\n"
 "然后，重新启动 %s。"
 
-#: ../mdkapplet:166
+#: ../mdkapplet:171
 #, c-format
 msgid "Enabled"
 msgstr "启用"
 
-#: ../mdkapplet:179
+#: ../mdkapplet:184
 #, c-format
 msgid "Error updating media"
 msgstr "更新介质出错"
 
-#: ../mdkapplet:219 ../mdkapplet:881
+#: ../mdkapplet:224 ../mdkapplet:938
 #, c-format
 msgid "Install updates"
 msgstr "安装更新"
 
-#: ../mdkapplet:220 ../mdkapplet:221
+#: ../mdkapplet:225 ../mdkapplet:226
 #, c-format
 msgid "Add additional package medium"
 msgstr "添加额外的软件包介质"
 
-#: ../mdkapplet:222
+#: ../mdkapplet:227
 #, c-format
 msgid "Check Updates"
 msgstr "检查更新"
 
-#: ../mdkapplet:223
+#: ../mdkapplet:228
 #, c-format
 msgid "Configure Network"
 msgstr "配置网络"
 
-#: ../mdkapplet:224
+#: ../mdkapplet:229
 #, c-format
 msgid "Upgrade the system"
 msgstr "升级系统"
 
-#: ../mdkapplet:379
+#: ../mdkapplet:393
 #, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
@@ -140,260 +140,310 @@ msgid ""
 msgstr ""
 "此发行版的基本维护已经过期。感谢您购买延保服务，您的系统将持续更新至 %s"
 
-#: ../mdkapplet:400
+#: ../mdkapplet:438
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "调用 Mandriva 网络中心\n"
 
-#: ../mdkapplet:413 ../mdkapplet:572
+#: ../mdkapplet:451 ../mdkapplet:624
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "新版本的 Mandriva Linux 发行版"
 
-#: ../mdkapplet:418
+#: ../mdkapplet:456
 #, c-format
 msgid "Browse"
 msgstr "浏览"
 
-#: ../mdkapplet:427
+#: ../mdkapplet:465
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mandriva Linux 发行版已经发布了新版本。"
 
-#: ../mdkapplet:429 ../mdkapplet:518
+#: ../mdkapplet:467 ../mdkapplet:564
 #, c-format
 msgid "More info about this new version"
 msgstr "关于此版本的更多信息"
 
-#: ../mdkapplet:431 ../mdkapplet:516
+#: ../mdkapplet:469 ../mdkapplet:558
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "您是否想要升级到“%s”发行版?"
 
-#: ../mdkapplet:433 ../mdkapplet:526 ../mdkapplet:966 ../mdkapplet:992
+#: ../mdkapplet:471 ../mdkapplet:568 ../mdkapplet:1025 ../mdkapplet:1055
 #, c-format
 msgid "Do not ask me next time"
 msgstr "下次不要再询问"
 
-#: ../mdkapplet:435
+#: ../mdkapplet:474
 #, c-format
 msgid "Download all packages at once"
 msgstr "立即下载全部软件包"
 
-#: ../mdkapplet:436
+#: ../mdkapplet:475
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(警告：您需要大量剩余空间)"
 
-#: ../mdkapplet:442
+#: ../mdkapplet:481
 #, c-format
 msgid "Where to download packages:"
 msgstr "从何处下载软件包:"
 
-#: ../mdkapplet:446 ../mdkapplet:531 ../mdkapplet:598 ../mdkapplet:967
-#: ../mdkapplet:993 ../mdkapplet-enterprise-update-helper:89
-#: ../mdkapplet-extended-maintenance-helper:131
-#: ../mdkapplet-restricted-helper:95
+#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
+#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
+#: ../mdkapplet_gui.pm:197
 #, c-format
 msgid "Next"
 msgstr "下一步"
 
-#: ../mdkapplet:446 ../mdkapplet:531 ../mdkapplet:598 ../mdkapplet:967
-#: ../mdkapplet:993 ../mdkapplet-enterprise-update-helper:89
-#: ../mdkapplet-extended-maintenance-helper:131
-#: ../mdkapplet-restricted-helper:95 ../mdkapplet-upgrade-helper:131
-#: ../mdkapplet-upgrade-helper:150
+#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
+#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
+#: ../mdkapplet_gui.pm:197
 #, c-format
 msgid "Cancel"
 msgstr "取消"
 
-#: ../mdkapplet:461
+#: ../mdkapplet:500
 #, c-format
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
 "be delivered for this system."
 msgstr "此版本的 Mandriva Linux 维护已经结束。此系统不会发放任何更新。"
 
-#: ../mdkapplet:467
+#: ../mdkapplet:506
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "为了保持您的系统安全，您可以:"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:512
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:479
+#: ../mdkapplet:518
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "您应该购买延保服务。"
 
-#: ../mdkapplet:481
+#: ../mdkapplet:520
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
 msgstr "您应该购买延保服务，或者升级到 %s 发行版的新版本。"
 
-#: ../mdkapplet:485
+#: ../mdkapplet:524
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "您与该升级到 %s 发行版的新版本。"
 
-#: ../mdkapplet:495
+#: ../mdkapplet:534
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "您的版本已经不再支持"
 
-#: ../mdkapplet:505
+#: ../mdkapplet:539 ../mdkapplet-extended-maintenance-helper:98
+#: ../mdkapplet-extended-maintenance-helper:191
+#, c-format
+msgid "Extended Maintenance"
+msgstr "延保服务"
+
+#: ../mdkapplet:544
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
 msgstr "购买此版本(%s)的延保服务可持续更新至 %s。"
 
-#: ../mdkapplet:589
+#: ../mdkapplet:641
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
 "and may take several hours to complete."
 msgstr "本升级需要宽带连接，可能需要几小时才能完成。"
 
-#: ../mdkapplet:591
+#: ../mdkapplet:643
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "估计将下载数据为 %s"
 
-#: ../mdkapplet:592
+#: ../mdkapplet:644
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "在继续之前，您应该关闭正在运行的其它应用程序。"
 
-#: ../mdkapplet:595
+#: ../mdkapplet:647
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
 "available."
 msgstr "如果可能的话，您应该将您的笔记本转为用电源供电，并且使用高速有线连接。"
 
-#: ../mdkapplet:627
+#: ../mdkapplet:679
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "调用 MandrivaUpdate\n"
 
-#: ../mdkapplet:659
+#: ../mdkapplet:711
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "正在检查更新...\n"
 
-#: ../mdkapplet:766
+#: ../mdkapplet:818
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "系统已为最新\n"
 
-#: ../mdkapplet:806
+#: ../mdkapplet:858
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "检查网络：似乎已禁用\n"
 
-#: ../mdkapplet:833
+#: ../mdkapplet:885
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:834
+#: ../mdkapplet:886
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "版权 (C) %s Mandriva"
 
-#: ../mdkapplet:837
+#: ../mdkapplet:889
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online 可让您访问 Mandriva 的 Web 服务。"
 
-#: ../mdkapplet:839
+#: ../mdkapplet:891
 #, c-format
 msgid "Online WebSite"
 msgstr "在线网站"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:844
+#: ../mdkapplet:896
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "汤诗语 <shiyu@mandriva.org>\n"
 
-#: ../mdkapplet:872
+#: ../mdkapplet:924
 #, c-format
 msgid "Warning"
 msgstr "警告"
 
-#: ../mdkapplet:875 ../mdkapplet:883 ../mdkapplet:885
-#: ../mdkapplet-enterprise-update-helper:150
-#: ../mdkapplet-extended-maintenance-helper:196
-#: ../mdkapplet-restricted-helper:156
+#: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
+#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:229
 #, c-format
 msgid "More Information"
 msgstr "更多信息"
 
-#: ../mdkapplet:887
+#: ../mdkapplet:944
 #, c-format
 msgid "Add media"
 msgstr "添加介质"
 
-#: ../mdkapplet:902
+#: ../mdkapplet:959
 #, c-format
 msgid "About..."
 msgstr "关于..."
 
-#: ../mdkapplet:904 ../mdkapplet-config:68
+#: ../mdkapplet:961 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "更新配置"
 
-#: ../mdkapplet:906
+#: ../mdkapplet:963
 #, c-format
 msgid "Always launch on startup"
 msgstr "在启动时自动调用"
 
-#: ../mdkapplet:908
+#: ../mdkapplet:965
 #, c-format
 msgid "Quit"
 msgstr "退出"
 
-#: ../mdkapplet:956 ../mdkapplet:961 ../mdkapplet:982 ../mdkapplet:987
+#: ../mdkapplet:1015 ../mdkapplet:1020 ../mdkapplet:1045 ../mdkapplet:1050
 #, c-format
 msgid "New medium available"
 msgstr "有新介质"
 
-#: ../mdkapplet:963 ../mdkapplet:989
+#: ../mdkapplet:1022 ../mdkapplet:1052
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
 "software."
 msgstr "您正在使用“%s”发行版，所以有权访问额外的软件。"
 
-#: ../mdkapplet:965 ../mdkapplet:991
+#: ../mdkapplet:1024 ../mdkapplet:1054
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "您是否想要安装这一额外的软件仓库?"
 
-#: ../mdkapplet:990 ../mdkonline.pm:168
+#: ../mdkapplet:1053 ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva 企业服务器"
 
-#: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
-#: ../mdkapplet-enterprise-update-helper:74
-#: ../mdkapplet-enterprise-update-helper:140
-#: ../mdkapplet-enterprise-update-helper:145
-#: ../mdkapplet-extended-maintenance-helper:76
+#: ../mdkapplet-add-media-helper:68 ../mdkapplet-config:43
+#: ../mdkapplet-extended-maintenance-helper:77
 #: ../mdkapplet-extended-maintenance-helper:186
-#: ../mdkapplet-restricted-helper:68 ../mdkapplet-restricted-helper:80
-#: ../mdkapplet-restricted-helper:146 ../mdkapplet-restricted-helper:151
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "添加额外的软件包介质"
+
+#: ../mdkapplet-add-media-helper:111
+#, c-format
+msgid "Supported products are %s, '%s' is not on the list.\n"
+msgstr ""
+
+#: ../mdkapplet-add-media-helper:120
+#, c-format
+msgid "Please fill in your account ID to add an additional package medium"
+msgstr "请填入您的账户 ID，以便添加额外的软件包介质"
+
+#: ../mdkapplet-add-media-helper:134 ../mdkapplet-add-media-helper:162
+#: ../mdkapplet-extended-maintenance-helper:86
+#: ../mdkapplet-extended-maintenance-helper:141
+#: ../mdkapplet-extended-maintenance-helper:160
+#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:209
+#, c-format
+msgid "Error"
+msgstr "错误"
+
+#: ../mdkapplet-add-media-helper:135
+#: ../mdkapplet-extended-maintenance-helper:160
+#, c-format
+msgid "An error occurred"
+msgstr "发生了错误"
+
+#: ../mdkapplet-add-media-helper:141
+#, c-format
+msgid "Your Mandriva account does not have %s download subscription enabled."
+msgstr "您的 Mandriva 账户没有启用 %s 下载订阅服务。"
+
+#: ../mdkapplet-add-media-helper:163
+#: ../mdkapplet-extended-maintenance-helper:204
+#, c-format
+msgid "An error occurred while adding medium"
+msgstr "添加介质时发生了错误"
+
+#: ../mdkapplet-add-media-helper:170
+#, fuzzy, c-format
+msgid "Successfully added media!"
+msgstr "成功添加了介质 %s。"
+
+#: ../mdkapplet-add-media-helper:172
+#: ../mdkapplet-extended-maintenance-helper:178
+#: ../mdkapplet-extended-maintenance-helper:179
+#, c-format
+msgid "Successfully added media %s."
+msgstr "成功添加了介质 %s。"
+
+#: ../mdkapplet-add-media-helper:174
+#: ../mdkapplet-extended-maintenance-helper:179
+#, c-format
+msgid "Ok"
+msgstr "确定"
 
 #: ../mdkapplet-config:69
 #, c-format
@@ -430,116 +480,13 @@ msgstr "限制"
 msgid "Enterprise"
 msgstr "企业"
 
-#: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
-#, c-format
-msgid "Please fill in your account ID to add an additional package medium"
-msgstr "请填入您的账户 ID，以便添加额外的软件包介质"
-
-#: ../mdkapplet-enterprise-update-helper:79
-#: ../mdkapplet-extended-maintenance-helper:121
-#: ../mdkapplet-restricted-helper:85
-#, c-format
-msgid "More information on your user account"
-msgstr "关于您用户账户的更多信息"
-
-#: ../mdkapplet-enterprise-update-helper:82
-#: ../mdkapplet-extended-maintenance-helper:124
-#: ../mdkapplet-restricted-helper:88
-#, c-format
-msgid "Your email"
-msgstr "您的电子邮件"
-
-#: ../mdkapplet-enterprise-update-helper:83
-#: ../mdkapplet-extended-maintenance-helper:125
-#: ../mdkapplet-restricted-helper:89
-#, c-format
-msgid "Your password"
-msgstr "您的密码"
-
-#: ../mdkapplet-enterprise-update-helper:87
-#: ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet-restricted-helper:93
-#, c-format
-msgid "Forgotten password"
-msgstr "忘记密码"
-
-#: ../mdkapplet-enterprise-update-helper:97
-#: ../mdkapplet-enterprise-update-helper:121
-#: ../mdkapplet-enterprise-update-helper:158
-#: ../mdkapplet-extended-maintenance-helper:91
-#: ../mdkapplet-extended-maintenance-helper:141
-#: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204
-#: ../mdkapplet-restricted-helper:103 ../mdkapplet-restricted-helper:122
-#: ../mdkapplet-restricted-helper:164 ../mdkapplet-upgrade-helper:82
-#: ../mdkapplet-upgrade-helper:125 ../mdkapplet-upgrade-helper:177
-#: ../mdkapplet-upgrade-helper:214
-#, c-format
-msgid "Error"
-msgstr "错误"
-
-#: ../mdkapplet-enterprise-update-helper:97
-#: ../mdkapplet-extended-maintenance-helper:141
-#: ../mdkapplet-restricted-helper:103
-#, c-format
-msgid "Password and email cannot be empty."
-msgstr "密码和电子邮件不能为空。"
-
-#: ../mdkapplet-enterprise-update-helper:121
-#: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-restricted-helper:122
-#, c-format
-msgid "An error occurred"
-msgstr "发生了错误"
-
-#: ../mdkapplet-enterprise-update-helper:132
-#: ../mdkapplet-enterprise-update-helper:133
-#: ../mdkapplet-extended-maintenance-helper:178
-#: ../mdkapplet-extended-maintenance-helper:179
-#: ../mdkapplet-restricted-helper:138 ../mdkapplet-restricted-helper:139
-#, c-format
-msgid "Successfully added media %s."
-msgstr "成功添加了介质 %s。"
-
-#: ../mdkapplet-enterprise-update-helper:133
-#: ../mdkapplet-extended-maintenance-helper:179
-#: ../mdkapplet-restricted-helper:139
-#, c-format
-msgid "Ok"
-msgstr "确定"
-
-#: ../mdkapplet-enterprise-update-helper:146
-#, c-format
-msgid "Your Mandriva account does not have %s download subscription enabled."
-msgstr "您的 Mandriva 账户没有启用 %s 下载订阅服务。"
-
-#: ../mdkapplet-enterprise-update-helper:152
-#: ../mdkapplet-extended-maintenance-helper:198
-#: ../mdkapplet-restricted-helper:158
-#, c-format
-msgid "Close"
-msgstr "关闭"
-
-#: ../mdkapplet-enterprise-update-helper:158
-#: ../mdkapplet-extended-maintenance-helper:204
-#: ../mdkapplet-restricted-helper:164
-#, c-format
-msgid "An error occurred while adding medium"
-msgstr "添加介质时发生了错误"
-
-#: ../mdkapplet-extended-maintenance-helper:91
+#: ../mdkapplet-extended-maintenance-helper:86
 #, c-format
 msgid "Failure while retrieving distributions list:"
 msgstr "获取发行版列失败:"
 
-#: ../mdkapplet-extended-maintenance-helper:101
-#: ../mdkapplet-extended-maintenance-helper:191
-#, c-format
-msgid "Extended Maintenance"
-msgstr "延保服务"
-
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
-#: ../mdkapplet-extended-maintenance-helper:107
+#: ../mdkapplet-extended-maintenance-helper:104
 #, c-format
 msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
@@ -548,14 +495,14 @@ msgstr ""
 "Mandriva 为桌面提供了十二个月的更新(直至 %s)，为基本系统提供了十八个月的更新"
 "(直至 %s)。"
 
-#: ../mdkapplet-extended-maintenance-helper:110
+#: ../mdkapplet-extended-maintenance-helper:107
 #, c-format
 msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
 msgstr "而延保服务可另外再获取十八个月的更新(直至 %s)。"
 
-#: ../mdkapplet-extended-maintenance-helper:112
+#: ../mdkapplet-extended-maintenance-helper:109
 #, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
 msgstr "您可以<b>立即</b>订阅延保服务："
@@ -565,17 +512,42 @@ msgstr "您可以<b>立即</b>订阅延保服务："
 msgid "Lifetime policy"
 msgstr "生命周期策略"
 
-#: ../mdkapplet-extended-maintenance-helper:115
+#: ../mdkapplet-extended-maintenance-helper:113
 #, c-format
 msgid "Online subscription"
 msgstr "在线订阅"
 
-#: ../mdkapplet-extended-maintenance-helper:117
+#: ../mdkapplet-extended-maintenance-helper:115
 #, c-format
 msgid ""
 "Please fill in your account ID to add an additional package medium once you "
 "have subscribed online"
 msgstr "在您在线订阅之后，请填入您的账户 ID，以便添加额外的软件包介质"
+
+#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:178
+#, c-format
+msgid "More information on your user account"
+msgstr "关于您用户账户的更多信息"
+
+#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:185
+#, c-format
+msgid "Your email"
+msgstr "您的电子邮件"
+
+#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:186
+#, c-format
+msgid "Your password"
+msgstr "您的密码"
+
+#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:193
+#, c-format
+msgid "Forgotten password"
+msgstr "忘记密码"
+
+#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:210
+#, c-format
+msgid "Password and email cannot be empty."
+msgstr "密码和电子邮件不能为空。"
 
 #: ../mdkapplet-extended-maintenance-helper:192
 #, c-format
@@ -584,96 +556,71 @@ msgid ""
 "enabled."
 msgstr "您的 Mandriva 账户没有启用延保服务。"
 
-#: ../mdkapplet-restricted-helper:152
+#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:232
 #, c-format
-msgid ""
-"Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "您的 Mandriva 账户没有启用 Powerpack 下载订阅服务。"
+msgid "Close"
+msgstr "关闭"
 
-#: ../mdkapplet-upgrade-helper:79
+#: ../mdkapplet_gui.pm:239
 #, c-format
-msgid ""
-"Your system does not have enough space left in %s for upgrade (%dMB < %dMB)"
-msgstr "您系统中的 %s 没有足够的空间进行升级(%dMB < %dMB)"
-
-#: ../mdkapplet-upgrade-helper:129 ../mdkapplet-upgrade-helper:178
-#: ../mdkapplet-upgrade-helper:215
-#, c-format
-msgid "Installation failed"
-msgstr "安装失败"
-
-#: ../mdkapplet-upgrade-helper:130
-#, c-format
-msgid "Installation logs can be found in '%s'"
-msgstr "安装日志可以在“%s”找到"
-
-#: ../mdkapplet-upgrade-helper:131
-#, c-format
-msgid "Retry"
-msgstr "重试"
-
-#: ../mdkapplet-upgrade-helper:143
-#, c-format
-msgid "Congratulations"
-msgstr "恭喜"
-
-#: ../mdkapplet-upgrade-helper:147
-#, c-format
-msgid "Upgrade to Mandriva %s release was successfull."
-msgstr "升级到 Mandriva %s 版本成功。"
-
-#: ../mdkapplet-upgrade-helper:149
-#, c-format
-msgid "You must restart your system."
-msgstr "您必须重新启动您的系统。"
-
-#: ../mdkapplet-upgrade-helper:150
-#, c-format
-msgid "Reboot"
-msgstr "重新启动"
-
-#: ../mdkapplet-upgrade-helper:180
-#, c-format
-msgid ""
-"Packages database is locked. Please close other applications\n"
-"working with packages database (do you have another media\n"
-"manager on another desktop, or are you currently installing\n"
-"packages as well?)."
+msgid "Would you like Powerpack?"
 msgstr ""
-"软件包数据库已锁定。请关闭其它使用软件包数据库的应用程序(您是否有其它介质管理"
-"器或其它桌面，或者您正在安装软件包？)。"
 
-#: ../mdkapplet-upgrade-helper:216
+#: ../mdkapplet_gui.pm:244
 #, c-format
-msgid "Failure when adding medium"
-msgstr "添加介质失败"
+msgid ""
+"Since you don't have Powerpack rights you may visit mandriva store now and "
+"get Powerpack subscription."
+msgstr ""
 
-#: ../mdkonline.pm:163
+#: ../mdkapplet_gui.pm:252
+#, fuzzy, c-format
+msgid "Get Powerpack subscription!"
+msgstr "在线订阅"
+
+#: ../mdkapplet_gui.pm:257
+#, c-format
+msgid ""
+"Continue to use your new Powerpack account information to upgrade, or Cancel "
+"and upgrade to the Free Edition."
+msgstr ""
+
+#: ../mdkapplet_gui.pm:260
+#, c-format
+msgid "Continue and Authenticate!"
+msgstr ""
+
+#: ../mdkapplet_gui.pm:261
+#, c-format
+msgid "Cancel, upgrade to Free Edition"
+msgstr ""
+
+#: ../mdkonline.pm:175
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:164
+#: ../mdkonline.pm:176
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:165
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:166
+#: ../mdkonline.pm:178
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:167
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:181
+#: ../mdkonline.pm:193
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "发行版升级"
@@ -723,3 +670,46 @@ msgstr "  --debug\t\t\t- 记录所执行的操作\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "无法从 update_source 介质更新软件包。\n"
+
+#~ msgid ""
+#~ "Your Mandriva account does not have Powerpack download subscription "
+#~ "enabled."
+#~ msgstr "您的 Mandriva 账户没有启用 Powerpack 下载订阅服务。"
+
+#~ msgid ""
+#~ "Your system does not have enough space left in %s for upgrade (%dMB < %"
+#~ "dMB)"
+#~ msgstr "您系统中的 %s 没有足够的空间进行升级(%dMB < %dMB)"
+
+#~ msgid "Installation failed"
+#~ msgstr "安装失败"
+
+#~ msgid "Installation logs can be found in '%s'"
+#~ msgstr "安装日志可以在“%s”找到"
+
+#~ msgid "Retry"
+#~ msgstr "重试"
+
+#~ msgid "Congratulations"
+#~ msgstr "恭喜"
+
+#~ msgid "Upgrade to Mandriva %s release was successfull."
+#~ msgstr "升级到 Mandriva %s 版本成功。"
+
+#~ msgid "You must restart your system."
+#~ msgstr "您必须重新启动您的系统。"
+
+#~ msgid "Reboot"
+#~ msgstr "重新启动"
+
+#~ msgid ""
+#~ "Packages database is locked. Please close other applications\n"
+#~ "working with packages database (do you have another media\n"
+#~ "manager on another desktop, or are you currently installing\n"
+#~ "packages as well?)."
+#~ msgstr ""
+#~ "软件包数据库已锁定。请关闭其它使用软件包数据库的应用程序(您是否有其它介质"
+#~ "管理器或其它桌面，或者您正在安装软件包？)。"
+
+#~ msgid "Failure when adding medium"
+#~ msgstr "添加介质失败"
