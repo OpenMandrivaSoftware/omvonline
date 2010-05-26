@@ -144,6 +144,7 @@ msgid ""
 "subscription to extended maintenance, your system will be kept up to date "
 "until %s"
 msgstr ""
+"本發行版的基本維護已經結束。感謝您訂購了延伸維護，您的系統將持續更新至 %s"
 
 #: ../mdkapplet:400
 #, c-format
@@ -158,7 +159,7 @@ msgstr "Mandriva Linux 有新版本"
 #: ../mdkapplet:418
 #, c-format
 msgid "Browse"
-msgstr ""
+msgstr "瀏覽"
 
 #: ../mdkapplet:427
 #, c-format
@@ -183,17 +184,17 @@ msgstr "下一次不用詢問我"
 #: ../mdkapplet:435
 #, c-format
 msgid "Download all packages at once"
-msgstr ""
+msgstr "一次下載全部套件"
 
 #: ../mdkapplet:436
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
+msgstr "(警告：您會需要非常大的可用空間)"
 
 #: ../mdkapplet:442
 #, c-format
 msgid "Where to download packages:"
-msgstr ""
+msgstr "從哪裡下載套件："
 
 #: ../mdkapplet:446 ../mdkapplet:531 ../mdkapplet:598 ../mdkapplet:967
 #: ../mdkapplet:993 ../mdkapplet-enterprise-update-helper:89
@@ -217,12 +218,12 @@ msgstr "取消"
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
 "be delivered for this system."
-msgstr ""
+msgstr "這個 Mandriva Linux 版本的維護已經結束了。不會有更新再提供給這個系統。"
 
 #: ../mdkapplet:467
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
+msgstr "為了保持您系統的安全，您可以："
 
 #: ../mdkapplet:473
 #, c-format
@@ -232,14 +233,14 @@ msgstr "Mandriva Linux"
 #: ../mdkapplet:479
 #, c-format
 msgid "You should get extended maintenance."
-msgstr ""
+msgstr "您應該取得延伸維護。"
 
 #: ../mdkapplet:481
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
 "the %s distribution."
-msgstr ""
+msgstr "您應該取得延伸維護或升級到新的 %s 發行版版本。"
 
 #: ../mdkapplet:485
 #, c-format
@@ -249,14 +250,14 @@ msgstr "您應該升級到更新的 %s 發行版"
 #: ../mdkapplet:495
 #, c-format
 msgid "Your distribution is no longer supported"
-msgstr ""
+msgstr "您的發行版已經不被支援了"
 
 #: ../mdkapplet:505
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
 "until %s."
-msgstr ""
+msgstr "購買這個版本 (%s) 的延伸維護並一直使用它直到 %s。"
 
 #: ../mdkapplet:589
 #, c-format
@@ -391,7 +392,7 @@ msgstr "您要安裝此額外的套件庫嗎？"
 #: ../mdkapplet:990 ../mdkonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
-msgstr ""
+msgstr "Mandriva Enterprise Server"
 
 #: ../mdkapplet-config:43 ../mdkapplet-enterprise-update-helper:61
 #: ../mdkapplet-enterprise-update-helper:74
@@ -423,22 +424,22 @@ msgstr "第一次檢查延遲（分）"
 #: ../mdkapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
-msgstr ""
+msgstr "檢查更新的 \"%s\" 釋出版本"
 
 #: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
-msgstr ""
+msgstr "檢查遺失的 \"%s\" 媒體"
 
 #: ../mdkapplet-config:95
 #, c-format
 msgid "Restricted"
-msgstr ""
+msgstr "限制的"
 
 #: ../mdkapplet-config:101
 #, c-format
 msgid "Enterprise"
-msgstr ""
+msgstr "企業"
 
 #: ../mdkapplet-enterprise-update-helper:75 ../mdkapplet-restricted-helper:81
 #, c-format
@@ -540,13 +541,13 @@ msgstr "新增媒體時發生錯誤"
 #: ../mdkapplet-extended-maintenance-helper:91
 #, c-format
 msgid "Failure while retrieving distributions list:"
-msgstr ""
+msgstr "取得發行版本清單時失敗："
 
 #: ../mdkapplet-extended-maintenance-helper:101
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
-msgstr ""
+msgstr "延伸維護"
 
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:107
@@ -555,23 +556,25 @@ msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
 "base updates (up to the %s) for distributions."
 msgstr ""
+"Mandriva 提供發行版本 12 個月的桌面更新 (直到 %s) 與 18 個月的基礎更新 (直到 "
+"%s)。"
 
 #: ../mdkapplet-extended-maintenance-helper:110
 #, c-format
 msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
 "(until %s)."
-msgstr ""
+msgstr "現在有延伸維護可以取得 18 個月的額外更新 (直到 %s)。"
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "您可以<b>立即</b>訂購以獲得延長維護："
+msgstr "您可以<b>立即</b>訂購以獲得延伸維護："
 
 #: ../mdkapplet-extended-maintenance-helper:112
 #, c-format
 msgid "Lifetime policy"
-msgstr ""
+msgstr "生命週期政策"
 
 #: ../mdkapplet-extended-maintenance-helper:115
 #, c-format
@@ -590,13 +593,13 @@ msgstr "如果您有訂購線上服務，請輸入您的帳號 ID 以新增額�
 msgid ""
 "Your Mandriva account does not have Extended Maintenance subscription "
 "enabled."
-msgstr "您的 Mandriva 帳號並沒有訂購延長維護"
+msgstr "您的 Mandriva 帳號並沒有訂購延伸維護"
 
 #: ../mdkapplet-restricted-helper:152
 #, c-format
 msgid ""
 "Your Mandriva account does not have Powerpack download subscription enabled."
-msgstr "您的 Mandriva 帳號並沒有訂購 Powerpack 下載服務。"
+msgstr "您的 Mandriva 帳號並沒有下載 Powerpack 下載服務。"
 
 #: ../mdkapplet-upgrade-helper:79
 #, c-format
