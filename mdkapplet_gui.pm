@@ -42,6 +42,7 @@ our @EXPORT = qw(
             );
 
 our @EXPORT_OK = qw(
+    $powerpack_ad
     run_ask_credentials_dialog
     run_no_rights_dialog
     open_ask_powerpack_dialog
@@ -79,6 +80,35 @@ our @common = (
     # workaround infamous 6 years old gnome bug #101968:
     width => $width - 50,
 );
+
+# List of widgets advertising Powerpack
+our $powerpack_ad = [
+    gtknew('Label_Left',
+           text => N('Mandriva Powerpack brings you the best of Linux ' . 
+                     'experience for desktop: stability and efficiency ' .
+                     'of open source solutions together with exclusive ' .
+                     'softwares and Mandriva official support.'),
+           @common),
+    gtknew('HButtonBox',
+           layout => 'center',
+           children_tight => [
+               new_link_button(
+                   'http://www2.mandriva.com/linux/features/',
+                   N("Mandriva Linux Features")
+               )
+           ]),
+    gtknew('Label_Left',
+           text => 'You can order now access for Powerpack',
+    ),
+    gtknew('HButtonBox',
+           layout => 'center',
+           children_tight => [
+               new_link_button(
+                   'http://store.mandriva.com/pwp/',
+                   N("Online subscription")
+               )
+           ]),
+];
 
 sub new_portable_dialog {
     my ($title) = @_;
@@ -145,8 +175,12 @@ sub iso8601_date_to_locale {
     POSIX::strftime("%x", 0, 0, 0, $3, $2-1, $1-1900);
 }
 
+# %options keys:
+#
+# 'top_extra': reference to a list of widgets to shown on top of dialog.
+#
 sub run_ask_credentials_dialog {
-    my ($title, $description, $callback) = @_;
+    my ($title, $description, $callback, %options) = @_;
 
     my $w = new_portable_dialog($title);
     my $password_text;
@@ -166,6 +200,10 @@ sub run_ask_credentials_dialog {
 
     my @widgets = (
 	mdkonline::get_banner($title),
+        if_($options{top_extra},
+            @{ $options{top_extra} },
+            gtknew('HSeparator'),
+        ),
 	gtknew('Label_Left',
 	       text => $description,
 	       @common),
@@ -234,32 +272,40 @@ sub run_no_rights_dialog {
     fill_n_run_portable_dialog($w, \@widgets);
 }
 
+# Returns a string of user's choice: 'powerpack' or 'free'.
 sub open_ask_powerpack_dialog {
+    my ($product, $new_version) = @_;
 
-    my $title = N("Would you like Powerpack?");
+    # Setup radio buttons...
+
+    my %radio_str = (
+        free => N("Upgrade to Mandriva Linux Free %s", $new_version),
+        powerpack => N("Upgrade to Mandriva Powerpack %s", $new_version),
+    );
+    my @radio_order = $product !~ /powerpack|flash/i 
+                          ? ('free', 'powerpack') : ('powerpack', 'free');
+    my @radios = gtkradio('', map { $radio_str{$_} } @radio_order);
+
+
+    # Setup dialog widgets...
+
+    my $title = N("Choose your upgrade version");
     my $w = new_portable_dialog($title);
     my @widgets = (
-	mdkonline::get_banner($title),
-	gtknew('Label_Left',
-	       text => N("Since you don't have Powerpack rights you may visit mandriva store now and get Powerpack subscription."),
-	       @common),
-	gtknew('HButtonBox',
-	       layout => 'start',
-	       children_tight => [
-		   interactive::gtk::add_padding(
-		       new_link_button(
-			   'http://store.mandriva.com/',
-			   N("Get Powerpack subscription!")
-		       )
-		   )
-	       ]),
-	gtknew('Label_Left',
-	       text => N("Continue to use your new Powerpack account information to upgrade, or Cancel and upgrade to the Free Edition."),
-	       @common),
+	mdkonline::get_banner($product =~ /powerpack/i
+                                  ? N("Your Powerpack access has ended") 
+                                  : $title),
+        gtknew('Label_Left',
+               text => N("You can now") . "\n",
+               @common),
+        @radios,
 	ugtk2::create_okcancel($w, 
-                               N("Continue and Authenticate!"), 
-                               N("Cancel, upgrade to Free Edition")),
-	);
+                               N("Next"), 
+                               N("Cancel, don't upgrade now")),
+    );
     
-    return fill_n_run_portable_dialog($w, \@widgets);
+    fill_n_run_portable_dialog($w, \@widgets) or return undef;
+    for (my $i = 0; $i < @radios; $i++) {
+        return $radio_order[$i] if $radios[$i]->get_active();
+    }
 }
