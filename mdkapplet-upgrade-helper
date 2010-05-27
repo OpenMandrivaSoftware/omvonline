@@ -39,6 +39,11 @@ use Rpmdrake::open_db;
 use lang;
 use mdkapplet_gui qw(run_ask_credentials_dialog);
 
+######################################################################
+# REMOVE THIS
+use lib qw(.);
+######################################################################
+
 
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($log_file);
@@ -156,7 +161,7 @@ sub upgrade_distro_congratulations() {
     any::reboot() if $answer && !$::testing;
 }
 
-# Returns: undef if failed to authenticate, ($email, $passwd) otherwise
+# Returns: undef if failed to authenticate, [$email, $passwd] otherwise
 sub powerpack_auth_callback {
     my ($email, $passwd) = @_;
     my $profile = mdkonline::get_my_mdv_profile($email, $passwd);
@@ -178,11 +183,11 @@ sub powerpack_auth_callback {
     #
     my $level = $profile->{data}{club}{level};
     if ($level == 2 or $level == 6) {
-        return ($email, $passwd);
+        return [$email, $passwd];
     }
     elsif ($profile->{data}{families} 
                =~ /powerpack-$new_distro_version/i) {
-        return ($email, $passwd);
+        return [$email, $passwd];
     }
     else {
         mdkapplet_gui::run_no_rights_dialog(
@@ -197,56 +202,50 @@ sub powerpack_auth_callback {
 
 sub try_to_add_powerpack_media {
     my $is_powerpack = mdkonline::is_restricted_media_supported();
-    my @auth_info;
+    my $auth_info;
+
+    # Validating current product for offering powerpack medias...
 
     if ($is_powerpack) {
         # Verifying rights of current powerpack users...
         my $title = N('Powerpack Media Configuration');
-        my $description = N('Please fill your My.Mandriva account info ' .
-                            'to add additional package media for ' .
-                            'Powerpack.');
+        my $description = N('Please fill your My.Mandriva login and ' .
+                            'password to add additional package media '.
+                            'for Powerpack.');
 
-        # If no rights @auth_info == undef...
-        @auth_info = run_ask_credentials_dialog(
+        # If no rights @auth_info == ()...
+        $auth_info = run_ask_credentials_dialog(
             $title,
             $description,
-            \&powerpack_auth_callback
-            );
+            \&powerpack_auth_callback,
+        );
+    }
+    elsif ($product_id->{product} !~ /flash|free|one/i) {
+        return;    # don't offer pwp for any other product
     }
 
-    while (@auth_info or mdkapplet_gui::open_ask_powerpack_dialog()) {
-        if (@auth_info) {
-            # Adding powerpack restricted media...
-            my ($email, $passwd) = @auth_info;
-            unless (mdkonline::add_medium_powerpack(
-                        $email, 
-                        $passwd, 
-                        $new_distro_version, 
-                        urpm::cfg::get_arch()
-                    )) {
-                ugtk2::ask_warn(N('Error'),
-                                N('Installation failed'),
-                                N('Failed to add powerpack restricted ' .
-                                  'medium'),
-                    );
-                next;
-            }
-            # Media was added, update it and move along...
-            update_media();
-            last;
-        }
-        else {
-            # Get the new authentication info from user...
-            my $title = N('Powerpack Media Configuration');
-            my $description = N('Please fill your new My.Mandriva ' .
-                                'account info.');
-            @auth_info = run_ask_credentials_dialog(
-                $title,
-                $description,
-                \&powerpack_auth_callback
-                );
-        }
+    my $choice;    # will be 'powerpack', 'free' or undef
+    while ($auth_info 
+               or ($choice = mdkapplet_gui::open_ask_powerpack_dialog(
+                                $product_id->{product},
+                                $new_distro_version)) eq 'powerpack') {
+        $auth_info and return $auth_info;
+
+        # Get the new authentication info from user...
+        my $title = N('Powerpack Media Configuration');
+        my $description = N('Please fill your account ID to add ' .
+                            'Powerpack %s version packages media once ' .
+                            'you have subscribed online',
+                            $new_distro_version);
+        $auth_info = run_ask_credentials_dialog(
+            $title,
+            $description,
+            \&powerpack_auth_callback,
+            top_extra => $mdkapplet_gui::powerpack_ad,
+        );       
     }
+    defined $choice or exit 0;    # means user has canceled upgrade
+    return;
 }
 
 sub upgrade() {
@@ -282,6 +281,11 @@ packages as well?)."))
 
     touch(get_stale_upgrade_filename());
 
+    log::explanations(
+        "checking if restricted (powerpack) media is to be addded");
+    # add_pwp_auth != undef, means user asked for pwp with good credentials
+    my $add_pwp_auth = try_to_add_powerpack_media();
+
     log::explanations("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
@@ -291,10 +295,6 @@ packages as well?)."))
         delete $urpm->{global_config}{downloader};
         urpm::media::write_config($urpm);
     }
-
-    log::explanations(
-        "checking if restricted (powerpack) media is to be addded");
-    try_to_add_powerpack_media();
 
     log::explanations("adding urpmi media for new distribution");
 
@@ -315,6 +315,33 @@ packages as well?)."))
                     );
         exit(2);
     };
+
+    if ($add_pwp_auth) {
+        log::explanations("adding restricted (powerpack) media");
+
+        my ($email, $passwd) = @$add_pwp_auth;
+        unless (mdkonline::add_medium_powerpack(
+                    $email, 
+                    $passwd, 
+                    $new_distro_version, 
+                    urpm::cfg::get_arch()
+                )) {
+            # FIXME Don't replicate code like this!
+            log::explanations("adding media for new distribution failed");
+            rm_rf(get_stale_upgrade_filename());
+            log::explanations("restoringing urpmi configuration from $file");
+            cp_af($file, "$root/etc/urpmi/urpmi.cfg");
+            update_media();
+            ugtk2::ask_warn(N('Error'),
+                            N('Installation failed'),
+                            N('Failed to add powerpack restricted ' .
+                              'medium'),
+                );
+            exit(2);            
+        }
+        # Media was added, update it and move along...
+        update_media();
+    }
 
     log::explanations("upgrading urpmi and rpmdrake");
     log::explanations("upgrading the whole system");
