@@ -32,6 +32,7 @@ use ugtk2 qw(:all);
 use mdkonline qw($product_id);
 use mdkapplet_gui;
 use urpm::cfg;
+use utf8;
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
