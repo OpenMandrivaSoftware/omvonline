@@ -20,6 +20,8 @@
 # Boston, MA 02111-1307, USA.
 ###########################################################################
 
+BEGIN { unshift @::textdomains, 'mdkonline' }
+
 use strict;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use standalone;	# for explanations
@@ -33,8 +35,6 @@ use mdkonline qw($product_id);
 use mdkapplet_gui;
 use urpm::cfg;
 use utf8;
-
-BEGIN { unshift @::textdomains, 'mdkonline' }
 
 # %product is keyed by product id and it contains the data to add
 # restricted media for each product.
