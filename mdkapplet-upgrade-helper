@@ -227,8 +227,8 @@ sub try_to_add_powerpack_media {
     my $choice;    # will be 'powerpack', 'free' or undef
     while ($auth_info 
                or ($choice = mdkapplet_gui::open_ask_powerpack_dialog(
-                                $product_id->{product},
-                                $new_distro_version)) eq 'powerpack') {
+                                 $product_id->{product},
+                                 $new_distro_version))) {
         $auth_info and return $auth_info;
 
         # Get the new authentication info from user...

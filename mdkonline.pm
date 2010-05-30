@@ -57,6 +57,7 @@ our @EXPORT = qw(find_current_distro
                  $product_id
                  $root);
 our @EXPORT_OK = qw(
+    get_product_info
     get_my_mdv_profile
     add_medium_powerpack
     add_medium_enterprise
@@ -181,6 +182,26 @@ sub translate_product {
     );
     $product ||= lc $product_id->{product};
     $strings{$product} || $product;
+}
+
+# TODO Move all product.id handling to a separate module
+# (MDV::ProductId?)
+sub get_product_info {
+    my ($product) = @_;
+    my %info = (
+        powerpack => {
+            name => N("Mandriva PowerPack"),
+            description => N("The Mandriva Linux distribution with even " .
+                             "more softwares and official support."),
+        },
+        free => {
+            name => N("Mandiva Free"),
+            description => N("The 100%% Open Source distribution freely " .
+                             "available."),
+        },
+    );
+    $product ||= lc $product_id->{product};
+    return $info{$product};
 }
 
 sub get_banner_icon() {

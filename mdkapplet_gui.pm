@@ -274,38 +274,48 @@ sub run_no_rights_dialog {
 
 # Returns a string of user's choice: 'powerpack' or 'free'.
 sub open_ask_powerpack_dialog {
-    my ($product, $new_version) = @_;
+    my ($current_product, $new_version) = @_;
 
-    # Setup radio buttons...
+    # Setup powerpack offering radio buttons...
 
-    my %radio_str = (
-        free => N("Upgrade to Mandriva Linux Free %s", $new_version),
-        powerpack => N("Upgrade to Mandriva Powerpack %s", $new_version),
-    );
-    my @radio_order = $product !~ /powerpack|flash/i 
-                          ? ('free', 'powerpack') : ('powerpack', 'free');
-    my @radios = gtkradio('', map { $radio_str{$_} } @radio_order);
-
+    my @radio_widgets;
+    my $rbutton;
+    # pwp/flash users will be offered powerpack by default
+    my $want_powerpack = $current_product =~ /powerpack|flash/i;
+    for my $product ($want_powerpack
+                         ? ('powerpack', 'free') : ('free', 'powerpack')) {
+        my $info = mdkonline::get_product_info($product);
+        $rbutton 
+            = Gtk2::RadioButton->new_with_label($rbutton
+                                                    ? $rbutton->get_group
+                                                    : undef,
+                                                $info->{name});
+        $rbutton->signal_connect('toggled', 
+                                 sub {
+                                     my ($button, $is_pwp) = @_;
+                                     $want_powerpack = $is_pwp 
+                                         unless not $button->get_active();
+                                 }, 
+                                 $product eq 'powerpack');
+        push @radio_widgets, [ $rbutton, $info->{description} ];
+    }
 
     # Setup dialog widgets...
 
     my $title = N("Choose your upgrade version");
     my $w = new_portable_dialog($title);
-    my @widgets = (
-	mdkonline::get_banner($product =~ /powerpack/i
-                                  ? N("Your Powerpack access has ended") 
-                                  : $title),
-        gtknew('Label_Left',
-               text => N("You can now") . "\n",
-               @common),
-        @radios,
-	ugtk2::create_okcancel($w, 
-                               N("Next"), 
-                               N("Cancel, don't upgrade now")),
-    );
+    my @widgets 
+        = (mdkonline::get_banner($current_product =~ /powerpack/i
+                                     ? N("Your Powerpack access has ended")
+                                     : $title),
+           gtknew('Label_Left',
+                  text => N("%s is now available, you can upgrade to:", 
+                            $new_version),
+                  @common),
+           gtknew('Table', children => \@radio_widgets, row_spacings => 10),
+           ugtk2::create_okcancel($w, N("Next"), N("Cancel")),
+        );
     
     fill_n_run_portable_dialog($w, \@widgets) or return undef;
-    for (my $i = 0; $i < @radios; $i++) {
-        return $radio_order[$i] if $radios[$i]->get_active();
-    }
+    return $want_powerpack;
 }
