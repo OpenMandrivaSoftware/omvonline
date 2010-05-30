@@ -7,21 +7,22 @@
 # Esa Linna <denzo@mbnet.fi>, 2004.
 # Thomas Backlund <tmb@mandrake.org>, 2002, 2003, 2004, 2005.
 # Thomas Backlund <tmb@mandriva.org>, 2005, 2006, 2008, 2009.
-# Jani Välimaa <wally@mandriva.org>, 2009, 2010.
 # Anssi Hannula <anssi@mandriva.org>, 2009.
+# Jani Välimaa <wally@mandriva.org>, 2009, 2010.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-fi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-26 19:01-0300\n"
-"PO-Revision-Date: 2010-03-20 10:27+0200\n"
+"PO-Revision-Date: 2010-05-30 21:14+0300\n"
 "Last-Translator: Jani Välimaa <wally@mandriva.org>\n"
 "Language-Team: Finnish <cooker-i18n@mandrivalinux.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:71
@@ -419,7 +420,7 @@ msgstr "Lisätään lisäpakettilähdettä"
 #: ../mdkapplet-add-media-helper:111
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
-msgstr ""
+msgstr "Tuetut tuotteet ovat %s, %s ei löydy listalta.\n"
 
 #: ../mdkapplet-add-media-helper:120
 #, c-format
@@ -453,9 +454,9 @@ msgid "An error occurred while adding medium"
 msgstr "Virhe lisättäessä lähdettä"
 
 #: ../mdkapplet-add-media-helper:170
-#, fuzzy, c-format
+#, c-format
 msgid "Successfully added media!"
-msgstr "Lisättiin lähde %s onnistuneesti."
+msgstr "Lisättiin lähde onnistuneesti!"
 
 #: ../mdkapplet-add-media-helper:172
 #: ../mdkapplet-extended-maintenance-helper:178
@@ -595,7 +596,7 @@ msgstr "Sulje"
 #: ../mdkapplet_gui.pm:239
 #, c-format
 msgid "Would you like Powerpack?"
-msgstr ""
+msgstr "Haluatko Powerpackin?"
 
 #: ../mdkapplet_gui.pm:244
 #, c-format
@@ -603,11 +604,13 @@ msgid ""
 "Since you don't have Powerpack rights you may visit mandriva store now and "
 "get Powerpack subscription."
 msgstr ""
+"Koska sinulla ei ole oikeuksia Powerpackiin, voit vierailla Mandrivan "
+"nettikaupassa ja hankkia Powerpackin."
 
 #: ../mdkapplet_gui.pm:252
-#, fuzzy, c-format
+#, c-format
 msgid "Get Powerpack subscription!"
-msgstr "Online-tilaus"
+msgstr "Hanki Powerpack!"
 
 #: ../mdkapplet_gui.pm:257
 #, c-format
@@ -615,16 +618,18 @@ msgid ""
 "Continue to use your new Powerpack account information to upgrade, or Cancel "
 "and upgrade to the Free Edition."
 msgstr ""
+"Jatka käyttämällä uuden Powerpack-tilin tietoja päivittämiseen tai Peruuta "
+"ja päivitä Free-versioon."
 
 #: ../mdkapplet_gui.pm:260
 #, c-format
 msgid "Continue and Authenticate!"
-msgstr ""
+msgstr "Jatka ja tunnistaudu!"
 
 #: ../mdkapplet_gui.pm:261
 #, c-format
 msgid "Cancel, upgrade to Free Edition"
-msgstr ""
+msgstr "Peruuta ja päivitä Free-versioon"
 
 #: ../mdkonline.pm:175
 #, c-format
