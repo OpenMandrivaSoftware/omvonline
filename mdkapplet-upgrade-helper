@@ -39,12 +39,6 @@ use Rpmdrake::open_db;
 use lang;
 use mdkapplet_gui qw(run_ask_credentials_dialog);
 
-######################################################################
-# REMOVE THIS
-use lib qw(.);
-######################################################################
-
-
 ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
 my ($log_file);
 
