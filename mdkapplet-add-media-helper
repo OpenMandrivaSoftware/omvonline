@@ -103,7 +103,7 @@ my $title = N("Adding an additional package medium");
     $product_id or mdkonline::get_product_id();
 
     # Product id data should be used in lowercase.
-    $up_product = lc $product_id->{product} unless $up_product;
+    $up_product ||= lc $product_id->{product};
 
     # Sanitizes product command line argument.
     unless (exists $product{$up_product}) {
@@ -141,7 +141,7 @@ sub authenticate_callback {
             $title, 
             N("Your Mandriva account does not have %s download subscription enabled.", 
               mdkonline::translate_product($up_product)),
-            $product{$up_product}->{info_url}
+            $product{$up_product}{info_url}
             );
     } 
     else {
@@ -153,10 +153,10 @@ sub add_medium_for_product {
     my ($product, $email, $passwd) = @_;
 
     my $error = 0;
-    my $arch = urpm::cfg::get_arch();
-    my @archs = ($arch, if_($arch eq 'x86_64', 'i586'));
+    my $current_arch = urpm::cfg::get_arch();
+    my @archs = ($current_arch, if_($current_arch eq 'x86_64', 'i586'));
 
-    for $arch (@archs) {
+    foreach my $arch (@archs) {
 	unless ($product->{add_medium}->($email, $passwd, $up_version, $arch)) {
 	    $error = 1;
 	    interactive->vnew->ask_warn(

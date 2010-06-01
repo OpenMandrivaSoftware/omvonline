@@ -191,13 +191,11 @@ sub get_product_info {
     my %info = (
         powerpack => {
             name => N("Mandriva PowerPack"),
-            description => N("The Mandriva Linux distribution with even " .
-                             "more softwares and official support."),
+            description => N("The Mandriva Linux distribution with even more softwares and official support."),
         },
         free => {
             name => N("Mandiva Free"),
-            description => N("The 100%% Open Source distribution freely " .
-                             "available."),
+            description => N("The 100%% Open Source distribution freely available."),
         },
     );
     $product ||= lc $product_id->{product};

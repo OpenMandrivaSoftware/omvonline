@@ -84,10 +84,7 @@ our @common = (
 # List of widgets advertising Powerpack
 our $powerpack_ad = [
     gtknew('Label_Left',
-           text => N('Mandriva Powerpack brings you the best of Linux ' . 
-                     'experience for desktop: stability and efficiency ' .
-                     'of open source solutions together with exclusive ' .
-                     'softwares and Mandriva official support.'),
+           text => N("Mandriva Powerpack brings you the best of Linux experience for desktop: stability and efficiency of open source solutions together with exclusive softwares and Mandriva official support."),
            @common),
     gtknew('HButtonBox',
            layout => 'center',
