@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-26 19:01-0300\n"
+"POT-Creation-Date: 2010-06-01 14:55-0300\n"
 "PO-Revision-Date: 2010-06-01 13:19+0300\n"
 "Last-Translator: Тарас Бойчук <boychuk_t@ndpi.ukrnafta.com>\n"
 "Language-Team: Ukrainian <kde-i18n-doc@kde.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:71
@@ -207,14 +207,14 @@ msgstr "Тека, куди слід звантажити пакунки:"
 
 #: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
 #: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:197
+#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Далі"
 
 #: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
 #: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:197
+#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Скасувати"
@@ -356,7 +356,7 @@ msgid "Warning"
 msgstr "Попередження"
 
 #: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:229
+#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "Детальніша інформація"
@@ -404,67 +404,67 @@ msgstr ""
 msgid "Do you want to install this additional software repository?"
 msgstr "Ви хочете додати це додаткове сховище програмного забезпечення?"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:180
+#: ../mdkapplet:1053 ../mdkonline.pm:181
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:68 ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
 #: ../mdkapplet-extended-maintenance-helper:77
 #: ../mdkapplet-extended-maintenance-helper:186
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Додається додатковий носій з пакунками"
 
-#: ../mdkapplet-add-media-helper:111
+#: ../mdkapplet-add-media-helper:112
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "Продуктами, що підтримуються, і є %s, '%s' немає в списку.\n"
 
-#: ../mdkapplet-add-media-helper:120
+#: ../mdkapplet-add-media-helper:121
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Будь ласка, заповніть свій рахунок, щоб додати носій з пакунками"
 
-#: ../mdkapplet-add-media-helper:134 ../mdkapplet-add-media-helper:162
+#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
 #: ../mdkapplet-extended-maintenance-helper:86
 #: ../mdkapplet-extended-maintenance-helper:141
 #: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:209
+#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Помилка"
 
-#: ../mdkapplet-add-media-helper:135
+#: ../mdkapplet-add-media-helper:136
 #: ../mdkapplet-extended-maintenance-helper:160
 #, c-format
 msgid "An error occurred"
 msgstr "Сталася помилка"
 
-#: ../mdkapplet-add-media-helper:141
+#: ../mdkapplet-add-media-helper:142
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "Ваш рахунок на Mandriva не має активованої підписки на звантаження %s."
 
-#: ../mdkapplet-add-media-helper:163
+#: ../mdkapplet-add-media-helper:164
 #: ../mdkapplet-extended-maintenance-helper:204
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "При додаванні джерела сталася помилка"
 
-#: ../mdkapplet-add-media-helper:170
+#: ../mdkapplet-add-media-helper:171
 #, c-format
 msgid "Successfully added media!"
 msgstr "Джерело успішно додано."
 
-#: ../mdkapplet-add-media-helper:172
+#: ../mdkapplet-add-media-helper:173
 #: ../mdkapplet-extended-maintenance-helper:178
 #: ../mdkapplet-extended-maintenance-helper:179
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Джерело %s успішно додано."
 
-#: ../mdkapplet-add-media-helper:174
+#: ../mdkapplet-add-media-helper:175
 #: ../mdkapplet-extended-maintenance-helper:179
 #, c-format
 msgid "Ok"
@@ -540,7 +540,7 @@ msgstr ""
 msgid "Lifetime policy"
 msgstr "Правила зміни версій"
 
-#: ../mdkapplet-extended-maintenance-helper:113
+#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
 #, c-format
 msgid "Online subscription"
 msgstr "Мережева передплата"
@@ -554,27 +554,27 @@ msgstr ""
 "Будь ласка, вкажіть ідентифікатор свого облікового запису, щоб додати носій "
 "з пакунками, після завершення оформлення мережевої передплати"
 
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:178
+#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
 #, c-format
 msgid "More information on your user account"
 msgstr "Додаткова інформація про рахунок"
 
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:185
+#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
 #, c-format
 msgid "Your email"
 msgstr "Електронна пошта"
 
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:186
+#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
 #, c-format
 msgid "Your password"
 msgstr "Пароль"
 
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:193
+#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
 #, c-format
 msgid "Forgotten password"
 msgstr "Забутий пароль"
 
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:210
+#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Пароль і поштова адреса не можуть бути порожніми."
@@ -588,75 +588,82 @@ msgstr ""
 "У вашому обліковому записі Mandriva не увімкнено передплати на додатковий "
 "супровід."
 
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:232
+#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
 #, c-format
 msgid "Close"
 msgstr "Закрити"
 
-#: ../mdkapplet_gui.pm:239
-#, c-format
-msgid "Would you like Powerpack?"
-msgstr "Ви б хотіли Powerpack?"
-
-#: ../mdkapplet_gui.pm:244
+#: ../mdkapplet_gui.pm:87
 #, c-format
 msgid ""
-"Since you don't have Powerpack rights you may visit mandriva store now and "
-"get Powerpack subscription."
+"Mandriva Powerpack brings you the best of Linux experience for desktop: "
+"stability and efficiency of open source solutions together with exclusive "
+"softwares and Mandriva official support."
 msgstr ""
-"Оскільки Ви не маєте прав на Powerpack, потрібно зайти в магазин Мандріви "
-"і передплатити Powerpack."
 
-#: ../mdkapplet_gui.pm:252
-#, c-format
-msgid "Get Powerpack subscription!"
-msgstr "Передплатити Powerpack!"
+#: ../mdkapplet_gui.pm:94
+#, fuzzy, c-format
+msgid "Mandriva Linux Features"
+msgstr "Mandriva Linux"
 
-#: ../mdkapplet_gui.pm:257
+#: ../mdkapplet_gui.pm:302
 #, c-format
-msgid ""
-"Continue to use your new Powerpack account information to upgrade, or Cancel "
-"and upgrade to the Free Edition."
+msgid "Choose your upgrade version"
 msgstr ""
-"Продовжуйте, щоб використовувати свій новий рахунок Powerpack, або "
-"скасуйте і оновіться до Free Edition."
 
-#: ../mdkapplet_gui.pm:260
+#: ../mdkapplet_gui.pm:306
 #, c-format
-msgid "Continue and Authenticate!"
-msgstr "Продовжуйте і реєструйтеся!"
+msgid "Your Powerpack access has ended"
+msgstr ""
 
-#: ../mdkapplet_gui.pm:261
+#: ../mdkapplet_gui.pm:309
 #, c-format
-msgid "Cancel, upgrade to Free Edition"
-msgstr "Скасувати, оновитися до Free Edition"
+msgid "%s is now available, you can upgrade to:"
+msgstr ""
 
-#: ../mdkonline.pm:175
+#: ../mdkonline.pm:176
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:176
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:177
+#: ../mdkonline.pm:178
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180 ../mdkonline.pm:193
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:193
+#: ../mdkonline.pm:194
+#, c-format
+msgid ""
+"The Mandriva Linux distribution with even more softwares and official "
+"support."
+msgstr ""
+
+#: ../mdkonline.pm:197
+#, fuzzy, c-format
+msgid "Mandiva Free"
+msgstr "Mandriva Free"
+
+#: ../mdkonline.pm:198
+#, c-format
+msgid "The 100%% Open Source distribution freely available."
+msgstr ""
+
+#: ../mdkonline.pm:212
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Оновлення дистрибутиву"
@@ -707,6 +714,32 @@ msgstr "  --debug\t\t\t- створювати журнал\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"
+
+#~ msgid "Would you like Powerpack?"
+#~ msgstr "Ви б хотіли Powerpack?"
+
+#~ msgid ""
+#~ "Since you don't have Powerpack rights you may visit mandriva store now "
+#~ "and get Powerpack subscription."
+#~ msgstr ""
+#~ "Оскільки Ви не маєте прав на Powerpack, потрібно зайти в магазин Мандріви "
+#~ "і передплатити Powerpack."
+
+#~ msgid "Get Powerpack subscription!"
+#~ msgstr "Передплатити Powerpack!"
+
+#~ msgid ""
+#~ "Continue to use your new Powerpack account information to upgrade, or "
+#~ "Cancel and upgrade to the Free Edition."
+#~ msgstr ""
+#~ "Продовжуйте, щоб використовувати свій новий рахунок Powerpack, або "
+#~ "скасуйте і оновіться до Free Edition."
+
+#~ msgid "Continue and Authenticate!"
+#~ msgstr "Продовжуйте і реєструйтеся!"
+
+#~ msgid "Cancel, upgrade to Free Edition"
+#~ msgstr "Скасувати, оновитися до Free Edition"
 
 #~ msgid ""
 #~ "Your Mandriva account does not have Powerpack download subscription "

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline-zh_TW\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-26 19:01-0300\n"
+"POT-Creation-Date: 2010-06-01 14:55-0300\n"
 "PO-Revision-Date: 2008-11-25 14:53+0800\n"
 "Last-Translator: Shiva Huang <shivahuang@gmail.com>\n"
 "Language-Team: Chinese Traditional <zh@li.org>\n"
@@ -198,14 +198,14 @@ msgstr "從哪裡下載套件："
 
 #: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
 #: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:197
+#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "下一步"
 
 #: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
 #: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:197
+#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "取消"
@@ -343,7 +343,7 @@ msgid "Warning"
 msgstr "警告"
 
 #: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:229
+#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "更多資訊"
@@ -390,67 +390,67 @@ msgstr "您使用 '%s' 套件，因此可以取得額外的軟體。"
 msgid "Do you want to install this additional software repository?"
 msgstr "您要安裝此額外的套件庫嗎？"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:180
+#: ../mdkapplet:1053 ../mdkonline.pm:181
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:68 ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
 #: ../mdkapplet-extended-maintenance-helper:77
 #: ../mdkapplet-extended-maintenance-helper:186
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "新增一個額外的套件媒介"
 
-#: ../mdkapplet-add-media-helper:111
+#: ../mdkapplet-add-media-helper:112
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "支援的產品為 %s，'%s' 並不在這個清單中。\n"
 
-#: ../mdkapplet-add-media-helper:120
+#: ../mdkapplet-add-media-helper:121
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "請輸入您的帳號 ID 以新增額外的套件媒介"
 
-#: ../mdkapplet-add-media-helper:134 ../mdkapplet-add-media-helper:162
+#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
 #: ../mdkapplet-extended-maintenance-helper:86
 #: ../mdkapplet-extended-maintenance-helper:141
 #: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:209
+#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "錯誤"
 
-#: ../mdkapplet-add-media-helper:135
+#: ../mdkapplet-add-media-helper:136
 #: ../mdkapplet-extended-maintenance-helper:160
 #, c-format
 msgid "An error occurred"
 msgstr "發生一個錯誤"
 
-#: ../mdkapplet-add-media-helper:141
+#: ../mdkapplet-add-media-helper:142
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "您的 Mandriva 帳號並沒有下載 %s 的權限。"
 
-#: ../mdkapplet-add-media-helper:163
+#: ../mdkapplet-add-media-helper:164
 #: ../mdkapplet-extended-maintenance-helper:204
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "新增媒體來源時發生錯誤"
 
-#: ../mdkapplet-add-media-helper:170
+#: ../mdkapplet-add-media-helper:171
 #, c-format
 msgid "Successfully added media!"
 msgstr "成功加入媒體來源！"
 
-#: ../mdkapplet-add-media-helper:172
+#: ../mdkapplet-add-media-helper:173
 #: ../mdkapplet-extended-maintenance-helper:178
 #: ../mdkapplet-extended-maintenance-helper:179
 #, c-format
 msgid "Successfully added media %s."
 msgstr "成功加入媒體來源 %s。"
 
-#: ../mdkapplet-add-media-helper:174
+#: ../mdkapplet-add-media-helper:175
 #: ../mdkapplet-extended-maintenance-helper:179
 #, c-format
 msgid "Ok"
@@ -523,7 +523,7 @@ msgstr "您可以<b>立即</b>訂購以獲得延伸維護："
 msgid "Lifetime policy"
 msgstr "生命週期政策"
 
-#: ../mdkapplet-extended-maintenance-helper:113
+#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
 #, c-format
 msgid "Online subscription"
 msgstr "線上訂購"
@@ -535,27 +535,27 @@ msgid ""
 "have subscribed online"
 msgstr "如果您有訂購線上服務，請輸入您的帳號 ID 以新增額外的套件媒介"
 
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:178
+#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
 #, c-format
 msgid "More information on your user account"
 msgstr "關於您使用者帳號的更多資訊"
 
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:185
+#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
 #, c-format
 msgid "Your email"
 msgstr "您的電子郵件"
 
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:186
+#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
 #, c-format
 msgid "Your password"
 msgstr "您的密碼"
 
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:193
+#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
 #, c-format
 msgid "Forgotten password"
 msgstr "忘記密碼"
 
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:210
+#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "密碼及電子郵件信箱欄位不能是空白的。"
@@ -567,73 +567,82 @@ msgid ""
 "enabled."
 msgstr "您的 Mandriva 帳號並沒有訂購延伸維護"
 
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:232
+#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
 #, c-format
 msgid "Close"
 msgstr "關閉"
 
-#: ../mdkapplet_gui.pm:239
-#, c-format
-msgid "Would you like Powerpack?"
-msgstr "您想要 Powerpack 嗎？"
-
-#: ../mdkapplet_gui.pm:244
+#: ../mdkapplet_gui.pm:87
 #, c-format
 msgid ""
-"Since you don't have Powerpack rights you may visit mandriva store now and "
-"get Powerpack subscription."
+"Mandriva Powerpack brings you the best of Linux experience for desktop: "
+"stability and efficiency of open source solutions together with exclusive "
+"softwares and Mandriva official support."
 msgstr ""
-"由於您並沒有 Powerpack 的會員資格，您可以立即參觀 Mandriva Store 並訂購。"
 
-#: ../mdkapplet_gui.pm:252
-#, c-format
-msgid "Get Powerpack subscription!"
-msgstr "訂購 Powerpack！"
+#: ../mdkapplet_gui.pm:94
+#, fuzzy, c-format
+msgid "Mandriva Linux Features"
+msgstr "Mandriva Linux"
 
-#: ../mdkapplet_gui.pm:257
+#: ../mdkapplet_gui.pm:302
 #, c-format
-msgid ""
-"Continue to use your new Powerpack account information to upgrade, or Cancel "
-"and upgrade to the Free Edition."
+msgid "Choose your upgrade version"
 msgstr ""
-"選擇繼續以使用您的 Powerpack 帳號資訊來升級，或者選擇取消以升級到 Free Edition。"
 
-#: ../mdkapplet_gui.pm:260
+#: ../mdkapplet_gui.pm:306
 #, c-format
-msgid "Continue and Authenticate!"
-msgstr "繼續並認證！"
+msgid "Your Powerpack access has ended"
+msgstr ""
 
-#: ../mdkapplet_gui.pm:261
+#: ../mdkapplet_gui.pm:309
 #, c-format
-msgid "Cancel, upgrade to Free Edition"
-msgstr "取消，升級到 Free Edition"
+msgid "%s is now available, you can upgrade to:"
+msgstr ""
 
-#: ../mdkonline.pm:175
+#: ../mdkonline.pm:176
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:176
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:177
+#: ../mdkonline.pm:178
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180 ../mdkonline.pm:193
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:193
+#: ../mdkonline.pm:194
+#, c-format
+msgid ""
+"The Mandriva Linux distribution with even more softwares and official "
+"support."
+msgstr ""
+
+#: ../mdkonline.pm:197
+#, fuzzy, c-format
+msgid "Mandiva Free"
+msgstr "Mandriva Free"
+
+#: ../mdkonline.pm:198
+#, c-format
+msgid "The 100%% Open Source distribution freely available."
+msgstr ""
+
+#: ../mdkonline.pm:212
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "升級發行版本"
@@ -683,6 +692,31 @@ msgstr "  --debug\t\t\t- 紀錄做了那些事情\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "無法由 update_source 媒體更新套件。\n"
+
+#~ msgid "Would you like Powerpack?"
+#~ msgstr "您想要 Powerpack 嗎？"
+
+#~ msgid ""
+#~ "Since you don't have Powerpack rights you may visit mandriva store now "
+#~ "and get Powerpack subscription."
+#~ msgstr ""
+#~ "由於您並沒有 Powerpack 的會員資格，您可以立即參觀 Mandriva Store 並訂購。"
+
+#~ msgid "Get Powerpack subscription!"
+#~ msgstr "訂購 Powerpack！"
+
+#~ msgid ""
+#~ "Continue to use your new Powerpack account information to upgrade, or "
+#~ "Cancel and upgrade to the Free Edition."
+#~ msgstr ""
+#~ "選擇繼續以使用您的 Powerpack 帳號資訊來升級，或者選擇取消以升級到 Free "
+#~ "Edition。"
+
+#~ msgid "Continue and Authenticate!"
+#~ msgstr "繼續並認證！"
+
+#~ msgid "Cancel, upgrade to Free Edition"
+#~ msgstr "取消，升級到 Free Edition"
 
 #~ msgid ""
 #~ "Your Mandriva account does not have Powerpack download subscription "
