@@ -194,7 +194,7 @@ sub get_product_info {
             description => N("The Mandriva Linux distribution with even more softwares and official support."),
         },
         free => {
-            name => N("Mandiva Free"),
+            name => N("Mandriva Free"),
             description => N("The 100%% Open Source distribution freely available."),
         },
     );
