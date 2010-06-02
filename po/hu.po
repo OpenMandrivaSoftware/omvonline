@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mdkonline-2010.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-01 14:55-0300\n"
-"PO-Revision-Date: 2010-06-01 18:16+0100\n"
+"PO-Revision-Date: 2010-06-02 10:39+0100\n"
 "Last-Translator: Gergely Lónyai <aleph@mandriva.org>\n"
 "Language-Team: Hungarian <aleph@mandriva.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,12 +34,8 @@ msgstr "A rendszer naprakész"
 
 #: ../mdkapplet:84
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Szolgáltatásbeállítási probléma; ellenőrizze a naplókat és küldjön levelet a "
-"következő címre: support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Szolgáltatásbeállítási probléma; ellenőrizze a naplókat és küldjön levelet a következő címre: support@mandrivaonline.com"
 
 #: ../mdkapplet:90
 #, c-format
@@ -56,7 +52,8 @@ msgstr "Új frissítések érhetők el az Ön rendszeréhez"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "A Mandriva Linux disztribúciónak új verziója jelent meg"
 
-#: ../mdkapplet:119 ../mdkapplet:161
+#: ../mdkapplet:119
+#: ../mdkapplet:161
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Egyéb csomagforrás érhető el az ön disztribúciójához."
@@ -69,10 +66,10 @@ msgstr "A hálózat nem aktív. Állítsa be a hálózatot."
 #: ../mdkapplet:130
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
-msgstr ""
-"A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
+msgstr "A szolgáltatás nincs aktiválva. Kattintson az \"Online weboldal\" funkcióra."
 
-#: ../mdkapplet:135 ../mdkapplet:141
+#: ../mdkapplet:135
+#: ../mdkapplet:141
 #, c-format
 msgid "urpmi database locked"
 msgstr "A(z) \"urpmi\" adatbázis zárolt"
@@ -84,11 +81,8 @@ msgstr "Nem támogatott verzió (túl régi, vagy fejlesztői verzió)"
 
 #: ../mdkapplet:156
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Adatforrás nem található. Fel kell venni egy vagy több adatforrást a "
-"szoftverforrás-kezelővel."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Adatforrás nem található. Fel kell venni egy vagy több adatforrást a szoftverforrás-kezelővel."
 
 #: ../mdkapplet:166
 #, c-format
@@ -119,12 +113,14 @@ msgstr "Hiba az adatforrás frissítésekor"
 
 # "Rendszerfrissítések telepítése" volt a 8.2-ben,
 #  ebből az utolsó 2 betű nem fért ki
-#: ../mdkapplet:224 ../mdkapplet:938
+#: ../mdkapplet:224
+#: ../mdkapplet:938
 #, c-format
 msgid "Install updates"
 msgstr "Frissítések telepítése"
 
-#: ../mdkapplet:225 ../mdkapplet:226
+#: ../mdkapplet:225
+#: ../mdkapplet:226
 #, c-format
 msgid "Add additional package medium"
 msgstr "Egyéb csomagforrás hozzáadása"
@@ -146,21 +142,16 @@ msgstr "A rendszer frissítése"
 
 #: ../mdkapplet:393
 #, c-format
-msgid ""
-"Basic maintenance for this distribution has expired. Thanks to your "
-"subscription to extended maintenance, your system will be kept up to date "
-"until %s"
-msgstr ""
-"A disztribúció alap karbantartási ciklusa lejárt. Köszönjük, hogy "
-"előfizetett a kiterjesztett karbantartásra, így a rendszere naprakész marad %"
-"s-ig."
+msgid "Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s"
+msgstr "A disztribúció alap karbantartási ciklusa lejárt. Köszönjük, hogy előfizetett a kiterjesztett karbantartásra, így a rendszere naprakész marad %s-ig."
 
 #: ../mdkapplet:438
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "A DrakConnect indítása\n"
 
-#: ../mdkapplet:451 ../mdkapplet:624
+#: ../mdkapplet:451
+#: ../mdkapplet:624
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux disztribúció új verziója"
@@ -175,17 +166,22 @@ msgstr "Böngészés"
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "A Mandriva Linux disztribúciónak új verziója jelent meg."
 
-#: ../mdkapplet:467 ../mdkapplet:564
+#: ../mdkapplet:467
+#: ../mdkapplet:564
 #, c-format
 msgid "More info about this new version"
 msgstr "Több információ az új verzióról"
 
-#: ../mdkapplet:469 ../mdkapplet:558
+#: ../mdkapplet:469
+#: ../mdkapplet:558
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Tényleg frissíteni akar a '%s' disztribúcióra?"
 
-#: ../mdkapplet:471 ../mdkapplet:568 ../mdkapplet:1025 ../mdkapplet:1055
+#: ../mdkapplet:471
+#: ../mdkapplet:568
+#: ../mdkapplet:1025
+#: ../mdkapplet:1055
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Legközelebb ne kérdezze meg"
@@ -205,34 +201,39 @@ msgstr "(Figyelem: Fel kell szabadítania egy helyet)"
 msgid "Where to download packages:"
 msgstr "A csomagok letöltési helye:"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:485
+#: ../mdkapplet:573
+#: ../mdkapplet:650
+#: ../mdkapplet:1026
+#: ../mdkapplet:1056
+#: ../mdkapplet-extended-maintenance-helper:129
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Következő"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:485
+#: ../mdkapplet:573
+#: ../mdkapplet:650
+#: ../mdkapplet:1026
+#: ../mdkapplet:1056
+#: ../mdkapplet-extended-maintenance-helper:129
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Mégsem"
 
 #: ../mdkapplet:500
 #, c-format
-msgid ""
-"Maintenance for this Mandriva Linux version has ended. No more updates will "
-"be delivered for this system."
-msgstr ""
-"Ennek a Mandriva Linuxnak a karbantartási ideje lejárt, nem fog többé "
-"frissítés megjelenni hozzá."
+msgid "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
+msgstr "Ennek a Mandriva Linuxnak a karbantartási ideje lejárt, nem fog többé frissítés megjelenni hozzá."
 
 #: ../mdkapplet:506
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
-"Ahhoz, hogy a rendszerét biztonságban tartsa, az alábbi dolgokat teheti:"
+msgstr "Ahhoz, hogy a rendszerét biztonságban tartsa, az alábbi dolgokat teheti:"
 
 #: ../mdkapplet:512
 #, c-format
@@ -246,12 +247,8 @@ msgstr "Beszerezhet kiterjesztett karbantartást."
 
 #: ../mdkapplet:520
 #, c-format
-msgid ""
-"You should either get extended maintenance or upgrade to a newer version of "
-"the %s distribution."
-msgstr ""
-"Szükségessé vált, hogy előfizessen a rendszer kiterjesztett karbantartására, "
-"vagy frissítsen az újabb, %s disztribúcióra."
+msgid "You should either get extended maintenance or upgrade to a newer version of the %s distribution."
+msgstr "Szükségessé vált, hogy előfizessen a rendszer kiterjesztett karbantartására, vagy frissítsen az újabb, %s disztribúcióra."
 
 #: ../mdkapplet:524
 #, c-format
@@ -263,7 +260,8 @@ msgstr "Szükségessé vált, hogy az újabb, %s disztribúcióra frissítsen."
 msgid "Your distribution is no longer supported"
 msgstr "Ez a disztribúció többé nem támogatott"
 
-#: ../mdkapplet:539 ../mdkapplet-extended-maintenance-helper:98
+#: ../mdkapplet:539
+#: ../mdkapplet-extended-maintenance-helper:98
 #: ../mdkapplet-extended-maintenance-helper:191
 #, c-format
 msgid "Extended Maintenance"
@@ -271,21 +269,13 @@ msgstr "Kiterjesztett karbantartás"
 
 #: ../mdkapplet:544
 #, c-format
-msgid ""
-"Purchase a maintenance extension for this version (%s) and keep it running "
-"until %s."
-msgstr ""
-"Fizessen elő kiterjesztett karbantartásra, amivel ez a verzió (%s) %s-ig "
-"naprakész marad."
+msgid "Purchase a maintenance extension for this version (%s) and keep it running until %s."
+msgstr "Fizessen elő kiterjesztett karbantartásra, amivel ez a verzió (%s) %s-ig naprakész marad."
 
 #: ../mdkapplet:641
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
-"Ehhez a frissítéshez nagy sávszélességű kapcsolat (Kábel, xDSL,...) "
-"szükséges és több órát is igénybe vehet a teljesítése."
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Ehhez a frissítéshez nagy sávszélességű kapcsolat (Kábel, xDSL,...) szükséges és több órát is igénybe vehet a teljesítése."
 
 #: ../mdkapplet:643
 #, c-format
@@ -299,12 +289,8 @@ msgstr "Érdemes a többi nyitott alkalmazásokat bezárni folytatás előtt."
 
 #: ../mdkapplet:647
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
-"Rakja hálózati áramellátásra a laptopot és ha lehet váltson vezetékes "
-"hálózati kapcsolatra wifi helyett."
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Rakja hálózati áramellátásra a laptopot és ha lehet váltson vezetékes hálózati kapcsolatra wifi helyett."
 
 #: ../mdkapplet:679
 #, c-format
@@ -339,8 +325,7 @@ msgstr "Copyright (C) %s, Mandriva"
 #: ../mdkapplet:889
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
-msgstr ""
-"A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
+msgstr "A Mandriva Online hozzáférést biztosít a Mandriva webes szolgáltatásaihoz."
 
 #: ../mdkapplet:891
 #, c-format
@@ -358,8 +343,12 @@ msgstr "_: Lónyai Gergely <aleph@mandriva.org>\n"
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
+#: ../mdkapplet:927
+#: ../mdkapplet:932
+#: ../mdkapplet:940
+#: ../mdkapplet:942
+#: ../mdkapplet-extended-maintenance-helper:196
+#: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "További információk"
@@ -374,7 +363,8 @@ msgstr "Adathordozó felvétele"
 msgid "About..."
 msgstr "Névjegy..."
 
-#: ../mdkapplet:961 ../mdkapplet-config:68
+#: ../mdkapplet:961
+#: ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Frissítési beállítások"
@@ -389,30 +379,34 @@ msgstr "Minden rendszerindításnál induljon el"
 msgid "Quit"
 msgstr "Kilépés"
 
-#: ../mdkapplet:1015 ../mdkapplet:1020 ../mdkapplet:1045 ../mdkapplet:1050
+#: ../mdkapplet:1015
+#: ../mdkapplet:1020
+#: ../mdkapplet:1045
+#: ../mdkapplet:1050
 #, c-format
 msgid "New medium available"
 msgstr "Új, elérhető adathordozó"
 
-#: ../mdkapplet:1022 ../mdkapplet:1052
+#: ../mdkapplet:1022
+#: ../mdkapplet:1052
 #, c-format
-msgid ""
-"You use '%s' distribution and therefore have privileged access to additional "
-"software."
-msgstr ""
-"Ön a '%s' disztribúciót használja, és további szoftverekhez van hozzáférése."
+msgid "You use '%s' distribution and therefore have privileged access to additional software."
+msgstr "Ön a '%s' disztribúciót használja, és további szoftverekhez van hozzáférése."
 
-#: ../mdkapplet:1024 ../mdkapplet:1054
+#: ../mdkapplet:1024
+#: ../mdkapplet:1054
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Szeretné a további szoftvereket tartalmazó csomagforrást használni?"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:181
+#: ../mdkapplet:1053
+#: ../mdkonline.pm:181
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:69
+#: ../mdkapplet-config:43
 #: ../mdkapplet-extended-maintenance-helper:77
 #: ../mdkapplet-extended-maintenance-helper:186
 #, c-format
@@ -429,11 +423,13 @@ msgstr "A támogatott termékek között - %s - nincs a '%s'.\n"
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Kérem töltse ki a hozzáférés adatait az egyéb adatforrás hozzáadásához"
 
-#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
+#: ../mdkapplet-add-media-helper:135
+#: ../mdkapplet-add-media-helper:163
 #: ../mdkapplet-extended-maintenance-helper:86
 #: ../mdkapplet-extended-maintenance-helper:141
 #: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-extended-maintenance-helper:204
+#: ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Hiba"
@@ -447,8 +443,7 @@ msgstr "Hiba lépett fel"
 #: ../mdkapplet-add-media-helper:142
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
-msgstr ""
-"A te Mandriva hozzáféréseddel nincs lehetőséged a %s letöltéseket használni."
+msgstr "A te Mandriva hozzáféréseddel nincs lehetőséged a %s letöltéseket használni."
 
 #: ../mdkapplet-add-media-helper:164
 #: ../mdkapplet-extended-maintenance-helper:204
@@ -494,7 +489,8 @@ msgstr "Első ellenőrzés előtti várakozás (perc)"
 msgid "Check for newer \"%s\" releases"
 msgstr "Az új \"%s\" kiadás ellenőrzése"
 
-#: ../mdkapplet-config:95 ../mdkapplet-config:101
+#: ../mdkapplet-config:95
+#: ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "A hiányzó \"%s\" média ellenőrzése"
@@ -517,22 +513,13 @@ msgstr "Hiba a disztribúciólista beszerzésében:"
 #. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
 #: ../mdkapplet-extended-maintenance-helper:104
 #, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"A Mandriva minden disztibúción 12 hónap frissítést biztosít a munkaasztali "
-"alkalmazások számára (maradt %s) és 18 hónapot a rendszerszintű "
-"alkalmazásokhoz (maradt %s)."
+msgid "Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions."
+msgstr "A Mandriva minden disztibúción 12 hónap frissítést biztosít a munkaasztali alkalmazások számára (maradt %s) és 18 hónapot a rendszerszintű alkalmazásokhoz (maradt %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:107
 #, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"A Kiterjesztett karbantartással további 18 hónap frissítés érhető el (maradt "
-"%s)."
+msgid "Extended maintenance is now available to get 18 months of additional updates (until %s)."
+msgstr "A Kiterjesztett karbantartással további 18 hónap frissítés érhető el (maradt %s)."
 
 #: ../mdkapplet-extended-maintenance-helper:109
 #, c-format
@@ -544,85 +531,82 @@ msgstr "<b>Ajánlott</b> előfizetnie az alábbi kiterjesztett karbantartásra:"
 msgid "Lifetime policy"
 msgstr "Tervezett életciklus"
 
-#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
+#: ../mdkapplet-extended-maintenance-helper:113
+#: ../mdkapplet_gui.pm:105
 #, c-format
 msgid "Online subscription"
 msgstr "Online előfizetés"
 
 #: ../mdkapplet-extended-maintenance-helper:115
 #, c-format
-msgid ""
-"Please fill in your account ID to add an additional package medium once you "
-"have subscribed online"
-msgstr ""
-"Kérem töltse ki a hozzáférés adatait azon egyéb adatforrás hozzáadásához, "
-"amire online előfizetett"
+msgid "Please fill in your account ID to add an additional package medium once you have subscribed online"
+msgstr "Kérem töltse ki a hozzáférés adatait azon egyéb adatforrás hozzáadásához, amire online előfizetett"
 
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
+#: ../mdkapplet-extended-maintenance-helper:119
+#: ../mdkapplet_gui.pm:213
 #, c-format
 msgid "More information on your user account"
 msgstr "Több információ a felhasználói hozzáféréséről"
 
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
+#: ../mdkapplet-extended-maintenance-helper:122
+#: ../mdkapplet_gui.pm:220
 #, c-format
 msgid "Your email"
 msgstr "Az emailje"
 
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
+#: ../mdkapplet-extended-maintenance-helper:123
+#: ../mdkapplet_gui.pm:221
 #, c-format
 msgid "Your password"
 msgstr "A jelszava"
 
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
+#: ../mdkapplet-extended-maintenance-helper:127
+#: ../mdkapplet_gui.pm:228
 #, c-format
 msgid "Forgotten password"
 msgstr "Elfelejtett jelszó"
 
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
+#: ../mdkapplet-extended-maintenance-helper:141
+#: ../mdkapplet_gui.pm:245
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Mind a jelszót, mind az emailt meg kell adni."
 
 #: ../mdkapplet-extended-maintenance-helper:192
 #, c-format
-msgid ""
-"Your Mandriva account does not have Extended Maintenance subscription "
-"enabled."
-msgstr ""
-"A Mandriva hozzáféréséhez nem fizetett elő Kiterjesztett karbantartásra."
+msgid "Your Mandriva account does not have Extended Maintenance subscription enabled."
+msgstr "A Mandriva hozzáféréséhez nem fizetett elő Kiterjesztett karbantartásra."
 
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
+#: ../mdkapplet-extended-maintenance-helper:198
+#: ../mdkapplet_gui.pm:267
 #, c-format
 msgid "Close"
 msgstr "Bezárás"
 
 #: ../mdkapplet_gui.pm:87
 #, c-format
-msgid ""
-"Mandriva Powerpack brings you the best of Linux experience for desktop: "
-"stability and efficiency of open source solutions together with exclusive "
-"softwares and Mandriva official support."
-msgstr ""
+msgid "Mandriva Powerpack brings you the best of Linux experience for desktop: stability and efficiency of open source solutions together with exclusive softwares and Mandriva official support."
+msgstr "A Mandriva Powerpack adja önnek a legjobb Linux élményt: stabilitás és eredményesség a nyílt forrású megoldásoknak köszönhetően, exkluzív szoftverek és a Mandriva hivatalos támogatása."
 
 #: ../mdkapplet_gui.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Linux Features"
-msgstr "Mandriva Linux"
+msgstr "Mandriva Linux jellemzői"
 
 #: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Choose your upgrade version"
-msgstr ""
+msgstr "Kérem válasszon frissítéshez verziót"
 
 #: ../mdkapplet_gui.pm:306
 #, c-format
 msgid "Your Powerpack access has ended"
-msgstr ""
+msgstr "A Powerpack hozzáférése lejárt"
 
 #: ../mdkapplet_gui.pm:309
 #, c-format
 msgid "%s is now available, you can upgrade to:"
-msgstr ""
+msgstr "%s már elérhető, és tud rá frissíteni:"
 
 #: ../mdkonline.pm:176
 #, c-format
@@ -644,27 +628,26 @@ msgstr "Mandriva Mini"
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:180 ../mdkonline.pm:193
+#: ../mdkonline.pm:180
+#: ../mdkonline.pm:193
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
 #: ../mdkonline.pm:194
 #, c-format
-msgid ""
-"The Mandriva Linux distribution with even more softwares and official "
-"support."
-msgstr ""
+msgid "The Mandriva Linux distribution with even more softwares and official support."
+msgstr "A Mandriva Linux disztribúció most még több szoftverrel és hivatalos támogatással."
 
 #: ../mdkonline.pm:197
-#, fuzzy, c-format
+#, c-format
 msgid "Mandiva Free"
-msgstr "Mandriva Free"
+msgstr "Mandiva Free"
 
 #: ../mdkonline.pm:198
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
-msgstr ""
+msgstr "A 100%%-ig Szabad Forrású disztribúció ingyen elérhető."
 
 #: ../mdkonline.pm:212
 #, c-format
@@ -676,8 +659,7 @@ msgstr "Disztribúció frissítése"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
