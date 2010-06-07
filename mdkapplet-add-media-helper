@@ -59,6 +59,21 @@ my %product = (
 	media_name => 'Update',
         add_medium => \&mdkonline::add_medium_enterprise
     },
+    extended => {
+        info_url => 'https://my.mandriva.com/',
+        has_rights => sub {
+            my ($profile, $version) = @_;
+            return ! ref $profile->{data}{groups}{'ext-maint-' . $version};
+        },
+        media_name => 'Extended Maintenance',
+        add_medium => \&mdkonline::add_medium_extended,
+        success_callback => sub {
+            mdkonline::read_sys_config();
+            $mdkonline::config{EXTENDED_SUPPORT} = bool2yesno(1);
+            mdkonline::setVarsInSh($mdkonline::config_file, 
+                                   \%mdkonline::config);
+        }
+    }
     );
 
 # Distribution upgrade version and product
@@ -68,6 +83,7 @@ my $up_product;
 # Dialogs title and banner text
 my $title = N("Adding an additional package medium");
 
+my $current_apimdv_distro;
 
 # ######################################################################
 # Main Program
@@ -115,14 +131,56 @@ my $title = N("Adding an additional package medium");
     }
 
     run_authentication_dialog();
+    ugtk2::exit(0);
 }
 
 sub run_authentication_dialog {
     my $description = N("Please fill in your account ID to add an additional package medium");
+    my $extra_info = undef;    # extra widgets for the dialog
+
+    if ($up_product eq 'extended') {
+
+        # Setup extra_info widgets for extended product...
+        my ($url, $extmaint_end, $desktop_update_end, $basic_update_end)
+            = get_extended_maintenance_data();
+        if (my $err = $@) {
+            interactive->vnew->ask_warn(
+                N("Error"), 
+                N("Failure while retrieving distributions list:") . "\n$err"
+            );
+            return;
+        }
+        $extra_info
+            = [ gtknew('Label_Left', 
+                       text_markup =>
+                       join("\n\n",
+                            #-PO: Here '%s' will be a localized date (eg:
+                            #     "2009/11/28" in english but "28/11/2009"
+                            #     for brazil or "28 Nov. "2009" for
+                            #     french:
+                            N("Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions.",
+                              mdkapplet_gui::iso8601_date_to_locale(
+                                  $desktop_update_end),
+                              mdkapplet_gui::iso8601_date_to_locale(
+                                  $basic_update_end)
+                            ),
+                            N("Extended maintenance is now available to get 18 months of additional updates (until %s).",
+                              mdkapplet_gui::iso8601_date_to_locale(
+                                  $extmaint_end)),
+                            N("You can subscribe <b>right now</b> to get extended maintenance:"),
+                       ),
+                       @common),
+                new_link_button('http://www2.mandriva.com/support/lifecycle/', 
+                                N("Lifetime policy")),
+                new_link_button($url, N("Online subscription"))
+              ];
+    }
+
     mdkapplet_gui::run_ask_credentials_dialog($title, 
 					      $description, 
-					      \&authenticate_callback);
-    ugtk2::exit(0);
+					      \&authenticate_callback,
+                                              top_extra => $extra_info);
+    return;
 }
 
 sub authenticate_callback {
@@ -154,10 +212,14 @@ sub add_medium_for_product {
 
     my $error = 0;
     my $current_arch = urpm::cfg::get_arch();
+    # FIXME: This is not enough if we ever support more 64 archs
+    # (sparc64, ppc64 and the like):
     my @archs = ($current_arch, if_($current_arch eq 'x86_64', 'i586'));
 
     foreach my $arch (@archs) {
 	unless ($product->{add_medium}->($email, $passwd, $up_version, $arch)) {
+            # FIXME: Backup original media setup so on error previous
+            # added media in this loop can be removed?
 	    $error = 1;
 	    interactive->vnew->ask_warn(
 		N("Error"), 
@@ -168,6 +230,7 @@ sub add_medium_for_product {
     }
 
     unless ($error) {
+        $product->{success_callback} and $product->{success_callback}->();
 	my $w = ugtk2->new(N("Successfully added media!"),
 			   grab => 1);
 	$w->_ask_okcancel(N("Successfully added media %s.",
@@ -176,4 +239,17 @@ sub add_medium_for_product {
 			  undef);
 	ugtk2::main($w);
     }
+}
+
+sub get_extended_maintenance_data() {
+    if (not $current_apimdv_distro) {
+        require Rpmdrake::open_db;
+        my @distros = mdkonline::get_distro_list();
+        return if !@distros;
+        $current_apimdv_distro = mdkonline::find_current_distro(@distros);
+    }
+    return @$current_apimdv_distro{ qw(extended-maintenance 
+                                       extended-maintenance-end
+                                       desktop-update-end
+                                       basic-update-end) };
 }

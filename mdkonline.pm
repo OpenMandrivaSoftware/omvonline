@@ -61,6 +61,7 @@ our @EXPORT_OK = qw(
     get_my_mdv_profile
     add_medium_powerpack
     add_medium_enterprise
+    add_medium_extended
 );
 
 our (%config, $product_id, $root);
@@ -244,6 +245,19 @@ sub add_medium_powerpack {
                      '--update',
                      "Restricted Updates $arch " . int(rand(100000)),
                      "${uri}updates/$arch");
+}
+
+sub add_medium_extended {
+    my ($email, $password, $version, $arch) = @_;
+    my $uri = sprintf("https://%s:%s\@dl.mandriva.com/extended/%s/%s",
+                      uri_escape($email),
+                      uri_escape($password),
+                      $version,
+                      $arch);
+    my @options = (get_urpmi_options(), '--update');
+    run_program::raw(@options, 
+                     "Extended Maintenance $arch " . int(rand(100000)), 
+                     ${uri});
 }
 
 sub is_running {
