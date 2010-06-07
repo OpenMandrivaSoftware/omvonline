@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-02 08:50-0300\n"
+"POT-Creation-Date: 2010-06-07 16:23-0300\n"
 "PO-Revision-Date: 2010-06-02 21:35+0200\n"
 "Last-Translator: Michal Bukovjan <bukm@centrum.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:71
@@ -115,7 +115,7 @@ msgstr "Povolen"
 msgid "Error updating media"
 msgstr "Chyba při aktualizaci zdroje"
 
-#: ../mdkapplet:224 ../mdkapplet:938
+#: ../mdkapplet:224 ../mdkapplet:946
 #, c-format
 msgid "Install updates"
 msgstr "Instalovat aktualizace"
@@ -140,7 +140,7 @@ msgstr "Nastavit síť"
 msgid "Upgrade the system"
 msgstr "Povýšit systém"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:394
 #, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
@@ -150,71 +150,74 @@ msgstr ""
 "Základní podpora této distribuce vypršela. Díky vašemu objednání rozšířené "
 "podpory bude váš systém udržován aktuální do %s"
 
-#: ../mdkapplet:438
+#: ../mdkapplet:439
+#, c-format
+msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
+msgstr ""
+
+#: ../mdkapplet:446
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Spouští se drakconnect\n"
 
-#: ../mdkapplet:451 ../mdkapplet:624
+#: ../mdkapplet:459 ../mdkapplet:632
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nová verze distribuce Mandriva Linux"
 
-#: ../mdkapplet:456
+#: ../mdkapplet:464
 #, c-format
 msgid "Browse"
 msgstr "Prohlížet"
 
-#: ../mdkapplet:465
+#: ../mdkapplet:473
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Byla vydána nová verze distribuce Mandriva Linux."
 
-#: ../mdkapplet:467 ../mdkapplet:564
+#: ../mdkapplet:475 ../mdkapplet:572
 #, c-format
 msgid "More info about this new version"
 msgstr "Více informací o této nové verzi"
 
-#: ../mdkapplet:469 ../mdkapplet:558
+#: ../mdkapplet:477 ../mdkapplet:566
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Chcete povýšit systém na distribuci „%s”?"
 
-#: ../mdkapplet:471 ../mdkapplet:568 ../mdkapplet:1025 ../mdkapplet:1055
+#: ../mdkapplet:479 ../mdkapplet:576 ../mdkapplet:1033 ../mdkapplet:1063
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Příště se už neptat"
 
-#: ../mdkapplet:474
+#: ../mdkapplet:482
 #, c-format
 msgid "Download all packages at once"
 msgstr "Stáhnout všechny balíčky najednou"
 
-#: ../mdkapplet:475
+#: ../mdkapplet:483
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Varování: Budete potřebovat hodně volného místa)"
 
-#: ../mdkapplet:481
+#: ../mdkapplet:489
 #, c-format
 msgid "Where to download packages:"
 msgstr "Kam stáhnout balíčky:"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Další"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: ../mdkapplet:500
+#: ../mdkapplet:508
 #, c-format
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
@@ -223,22 +226,22 @@ msgstr ""
 "Podpora tohoto systému Mandriva Linux skončila. To znamená, že již nebudou k "
 "dispozici žádné nové aktualizace softwaru."
 
-#: ../mdkapplet:506
+#: ../mdkapplet:514
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "Pokud chcete udržet svůj systém bezpečný, můžete:"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:520
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:518
+#: ../mdkapplet:526
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "Měli byste pořídit rozšířenou podporu."
 
-#: ../mdkapplet:520
+#: ../mdkapplet:528
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
@@ -247,23 +250,22 @@ msgstr ""
 "Buď byste měli pořídit rozšířenou podporu nebo povýšit na novější verzi "
 "distribuce %s."
 
-#: ../mdkapplet:524
+#: ../mdkapplet:532
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "Měli byste povýšit na novější verzi distribuce %s."
 
-#: ../mdkapplet:534
+#: ../mdkapplet:542
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Vaše distribuce již není nadále podporována"
 
-#: ../mdkapplet:539 ../mdkapplet-extended-maintenance-helper:98
-#: ../mdkapplet-extended-maintenance-helper:191
+#: ../mdkapplet:547
 #, c-format
 msgid "Extended Maintenance"
 msgstr "Rozšířená podpora"
 
-#: ../mdkapplet:544
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
@@ -272,7 +274,7 @@ msgstr ""
 "Pořiďte si rozšířenou podporu pro tuto verzi (%s) a zachovejte svůj systém v "
 "provozu do %s."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:649
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -281,18 +283,18 @@ msgstr ""
 "Toto povýšení vyžaduje širokopásmové síťové připojení (kabelové, xDSL, …) a "
 "celkem může trvat několik hodin."
 
-#: ../mdkapplet:643
+#: ../mdkapplet:651
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Odhadovaná velikost stažených dat bude %s"
 
-#: ../mdkapplet:644
+#: ../mdkapplet:652
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 "Před pokračováním by měly být ukončeny všechny ostatní běžící aplikace."
 
-#: ../mdkapplet:647
+#: ../mdkapplet:655
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -301,97 +303,97 @@ msgstr ""
 "Váš přenosný počítač by měl být v režimu napájení ze sítě a pokud je "
 "dostupné, mělo by být upřednostněno pevné síťové připojení před bezdrátovým."
 
-#: ../mdkapplet:679
+#: ../mdkapplet:687
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Spouští se MandrivaUpdate\n"
 
-#: ../mdkapplet:711
+#: ../mdkapplet:719
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Vyhledávám nové aktualizace…\n"
 
-#: ../mdkapplet:818
+#: ../mdkapplet:826
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Systém je aktuální\n"
 
-#: ../mdkapplet:858
+#: ../mdkapplet:866
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Kontroluji síť: zdá se nedostupná\n"
 
-#: ../mdkapplet:885
+#: ../mdkapplet:893
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:886
+#: ../mdkapplet:894
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright ©%s by Mandriva"
 
-#: ../mdkapplet:889
+#: ../mdkapplet:897
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr ""
 "Mandriva Online umožňuje přístup k webovým službám společnosti Mandriva."
 
-#: ../mdkapplet:891
+#: ../mdkapplet:899
 #, c-format
 msgid "Online WebSite"
 msgstr "Online webové stránky"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:896
+#: ../mdkapplet:904
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
 "Michal Bukovjan <bukm@centrum.cz>\n"
 "Vlastimil Ott <vlastimil@e-ott.info>\n"
 
-#: ../mdkapplet:924
+#: ../mdkapplet:932
 #, c-format
 msgid "Warning"
 msgstr "Varování"
 
-#: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
+#: ../mdkapplet:935 ../mdkapplet:940 ../mdkapplet:948 ../mdkapplet:950
+#: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "Více informací"
 
-#: ../mdkapplet:944
+#: ../mdkapplet:952
 #, c-format
 msgid "Add media"
 msgstr "Přidat zdroj"
 
-#: ../mdkapplet:959
+#: ../mdkapplet:967
 #, c-format
 msgid "About..."
 msgstr "O aplikaci…"
 
-#: ../mdkapplet:961 ../mdkapplet-config:68
+#: ../mdkapplet:969 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Nastavení aktualizací"
 
-#: ../mdkapplet:963
+#: ../mdkapplet:971
 #, c-format
 msgid "Always launch on startup"
 msgstr "Vždy spustit při startu"
 
-#: ../mdkapplet:965
+#: ../mdkapplet:973
 #, c-format
 msgid "Quit"
 msgstr "Konec"
 
-#: ../mdkapplet:1015 ../mdkapplet:1020 ../mdkapplet:1045 ../mdkapplet:1050
+#: ../mdkapplet:1023 ../mdkapplet:1028 ../mdkapplet:1053 ../mdkapplet:1058
 #, c-format
 msgid "New medium available"
 msgstr "Dostupný nový zdroj"
 
-#: ../mdkapplet:1022 ../mdkapplet:1052
+#: ../mdkapplet:1030 ../mdkapplet:1060
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -400,73 +402,102 @@ msgstr ""
 "Používáte distribuci „%s” a máte tudíž privilegovaný přístup k dalšímu "
 "software."
 
-#: ../mdkapplet:1024 ../mdkapplet:1054
+#: ../mdkapplet:1032 ../mdkapplet:1062
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Chcete nainstalovat tento dodatečný zdroj software?"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:181
+#: ../mdkapplet:1061 ../mdkonline.pm:182
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
-#: ../mdkapplet-extended-maintenance-helper:77
-#: ../mdkapplet-extended-maintenance-helper:186
+#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Přidávám dodatečný zdroj balíčků"
 
-#: ../mdkapplet-add-media-helper:112
+#: ../mdkapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "Podporované produkty jsou %s, „%s” není na seznamu.\n"
 
-#: ../mdkapplet-add-media-helper:121
+#: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Pro přidání dodatečného zdroje balíčků prosím vyplňte ID vašeho účtu"
 
-#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
-#: ../mdkapplet-extended-maintenance-helper:86
-#: ../mdkapplet-extended-maintenance-helper:141
-#: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-add-media-helper:148 ../mdkapplet-add-media-helper:193
+#: ../mdkapplet-add-media-helper:225 ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Chyba"
 
-#: ../mdkapplet-add-media-helper:136
-#: ../mdkapplet-extended-maintenance-helper:160
+#: ../mdkapplet-add-media-helper:149
+#, c-format
+msgid "Failure while retrieving distributions list:"
+msgstr "Selhalo získávání seznamu distribucí:"
+
+#. -PO: Here '%s' will be a localized date (eg:
+#: ../mdkapplet-add-media-helper:161
+#, c-format
+msgid ""
+"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
+"base updates (up to the %s) for distributions."
+msgstr ""
+"Společnost Mandriva poskytuje u distribucí 12 měsíců aktualizací pro "
+"desktopy (do %s) a 18 měsíců základních aktualizací (až do %s)."
+
+#: ../mdkapplet-add-media-helper:167
+#, c-format
+msgid ""
+"Extended maintenance is now available to get 18 months of additional updates "
+"(until %s)."
+msgstr ""
+"Nyní je k dispozici rozšířená podpora, která zahrnuje 18 měsíců dodatečných "
+"aktualizací (do %s)."
+
+#: ../mdkapplet-add-media-helper:170
+#, c-format
+msgid "You can subscribe <b>right now</b> to get extended maintenance:"
+msgstr "Pořídit rozšířenou podporu můžete <b>právě teď</b>:"
+
+#: ../mdkapplet-add-media-helper:174
+#, c-format
+msgid "Lifetime policy"
+msgstr "Politika životnosti"
+
+#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:105
+#, c-format
+msgid "Online subscription"
+msgstr "Online předplatné"
+
+#: ../mdkapplet-add-media-helper:194
 #, c-format
 msgid "An error occurred"
 msgstr "Vyskytla se chyba"
 
-#: ../mdkapplet-add-media-helper:142
+#: ../mdkapplet-add-media-helper:200
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "Váš účet Mandriva nemá aktivní předplacené stažení verze %s."
 
-#: ../mdkapplet-add-media-helper:164
-#: ../mdkapplet-extended-maintenance-helper:204
+#: ../mdkapplet-add-media-helper:226
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Během přidávání zdroje nastala chyba"
 
-#: ../mdkapplet-add-media-helper:171
+#: ../mdkapplet-add-media-helper:234
 #, c-format
 msgid "Successfully added media!"
 msgstr "Zdroj byl úspěšně přidán!"
 
-#: ../mdkapplet-add-media-helper:173
-#: ../mdkapplet-extended-maintenance-helper:178
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:236
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Zdroj %s byl úspěšně přidán."
 
-#: ../mdkapplet-add-media-helper:175
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:238
 #, c-format
 msgid "Ok"
 msgstr "Ok"
@@ -506,91 +537,6 @@ msgstr "Omezený"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: ../mdkapplet-extended-maintenance-helper:86
-#, c-format
-msgid "Failure while retrieving distributions list:"
-msgstr "Selhalo získávání seznamu distribucí:"
-
-#. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
-#: ../mdkapplet-extended-maintenance-helper:104
-#, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"Společnost Mandriva poskytuje u distribucí 12 měsíců aktualizací pro "
-"desktopy (do %s) a 18 měsíců základních aktualizací (až do %s)."
-
-#: ../mdkapplet-extended-maintenance-helper:107
-#, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"Nyní je k dispozici rozšířená podpora, která zahrnuje 18 měsíců dodatečných "
-"aktualizací (do %s)."
-
-#: ../mdkapplet-extended-maintenance-helper:109
-#, c-format
-msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "Pořídit rozšířenou podporu můžete <b>právě teď</b>:"
-
-#: ../mdkapplet-extended-maintenance-helper:112
-#, c-format
-msgid "Lifetime policy"
-msgstr "Politika životnosti"
-
-#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
-#, c-format
-msgid "Online subscription"
-msgstr "Online předplatné"
-
-#: ../mdkapplet-extended-maintenance-helper:115
-#, c-format
-msgid ""
-"Please fill in your account ID to add an additional package medium once you "
-"have subscribed online"
-msgstr ""
-"Poté, co jste se zaregistrovali online, vyplňte prosím ID vašeho účtu a "
-"přidejte dodatečný zdroj balíčků"
-
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
-#, c-format
-msgid "More information on your user account"
-msgstr "Více informací o vašem uživatelském účtu"
-
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
-#, c-format
-msgid "Your email"
-msgstr "Váš email"
-
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
-#, c-format
-msgid "Your password"
-msgstr "Vaše heslo"
-
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
-#, c-format
-msgid "Forgotten password"
-msgstr "Zapomenuté heslo"
-
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
-#, c-format
-msgid "Password and email cannot be empty."
-msgstr "Heslo a email nesmí být prázdné."
-
-#: ../mdkapplet-extended-maintenance-helper:192
-#, c-format
-msgid ""
-"Your Mandriva account does not have Extended Maintenance subscription "
-"enabled."
-msgstr "Váš účet Mandriva nemá aktivní předplacenou rozšířenou podporu."
-
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
-#, c-format
-msgid "Close"
-msgstr "Zavřít"
-
 #: ../mdkapplet_gui.pm:87
 #, c-format
 msgid ""
@@ -600,13 +546,42 @@ msgid ""
 msgstr ""
 "Mandriva Powerpack vám přináší tu nejlepší zkušenost s Linuxem na desktopu: "
 "stabilitu a efektivitu řešení s otevřenými zdroji spolu s exkluzivním "
-"softwarem "
-"a oficiální podporou společnosti Mandriva."
+"softwarem a oficiální podporou společnosti Mandriva."
 
 #: ../mdkapplet_gui.pm:94
 #, c-format
 msgid "Mandriva Linux Features"
 msgstr "Vlastnosti Mandriva Linuxu"
+
+#: ../mdkapplet_gui.pm:213
+#, c-format
+msgid "More information on your user account"
+msgstr "Více informací o vašem uživatelském účtu"
+
+#: ../mdkapplet_gui.pm:220
+#, c-format
+msgid "Your email"
+msgstr "Váš email"
+
+#: ../mdkapplet_gui.pm:221
+#, c-format
+msgid "Your password"
+msgstr "Vaše heslo"
+
+#: ../mdkapplet_gui.pm:228
+#, c-format
+msgid "Forgotten password"
+msgstr "Zapomenuté heslo"
+
+#: ../mdkapplet_gui.pm:245
+#, c-format
+msgid "Password and email cannot be empty."
+msgstr "Heslo a email nesmí být prázdné."
+
+#: ../mdkapplet_gui.pm:267
+#, c-format
+msgid "Close"
+msgstr "Zavřít"
 
 #: ../mdkapplet_gui.pm:302
 #, c-format
@@ -623,46 +598,44 @@ msgstr "Váš přístup k distribuci Powerpack skončil"
 msgid "%s is now available, you can upgrade to:"
 msgstr "Nyní je k dispozici %s, můžete povýšit na:"
 
-#: ../mdkonline.pm:176
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:177 ../mdkonline.pm:197
+#: ../mdkonline.pm:178 ../mdkonline.pm:198
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:180 ../mdkonline.pm:193
+#: ../mdkonline.pm:181 ../mdkonline.pm:194
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:194
+#: ../mdkonline.pm:195
 #, c-format
 msgid ""
 "The Mandriva Linux distribution with even more softwares and official "
 "support."
-msgstr ""
-"Distribuce Mandriva Linux s dalším softwarem a oficiální "
-"podporou."
+msgstr "Distribuce Mandriva Linux s dalším softwarem a oficiální podporou."
 
-#: ../mdkonline.pm:198
+#: ../mdkonline.pm:199
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
 msgstr "Volně dostupná distribuce se 100%% otevřenými zdrojovými kódy."
 
-#: ../mdkonline.pm:212
+#: ../mdkonline.pm:213
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Povýšení distribuce"
@@ -713,6 +686,18 @@ msgstr "  --debug\t\t\t- zaznamenávat co se děje\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nelze aktualizovat balíčky ze zdroje update_source.\n"
+
+#~ msgid ""
+#~ "Please fill in your account ID to add an additional package medium once "
+#~ "you have subscribed online"
+#~ msgstr ""
+#~ "Poté, co jste se zaregistrovali online, vyplňte prosím ID vašeho účtu a "
+#~ "přidejte dodatečný zdroj balíčků"
+
+#~ msgid ""
+#~ "Your Mandriva account does not have Extended Maintenance subscription "
+#~ "enabled."
+#~ msgstr "Váš účet Mandriva nemá aktivní předplacenou rozšířenou podporu."
 
 #, fuzzy
 #~ msgid "Mandiva Free"

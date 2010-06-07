@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-02 08:50-0300\n"
+"POT-Creation-Date: 2010-06-07 16:23-0300\n"
 "PO-Revision-Date: 2010-06-02 07:31+0200\n"
 "Last-Translator: Marek Laane <bald@starman.ee>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -112,7 +112,7 @@ msgstr "Lubatud"
 msgid "Error updating media"
 msgstr "Viga andmekandja uuendamisel"
 
-#: ../mdkapplet:224 ../mdkapplet:938
+#: ../mdkapplet:224 ../mdkapplet:946
 #, c-format
 msgid "Install updates"
 msgstr "Uuenduste paigaldamine"
@@ -137,7 +137,7 @@ msgstr "Võrgu seadistamine"
 msgid "Upgrade the system"
 msgstr "Uuenda süsteemi"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:394
 #, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
@@ -147,71 +147,74 @@ msgstr ""
 "Selle distributsiooni põhihooldusperiood on läbi. Kuna olete tellinud "
 "hooldusperioodi pikendamise, hoitakse Teie süsteemi uuendatuna kuni %s"
 
-#: ../mdkapplet:438
+#: ../mdkapplet:439
+#, c-format
+msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
+msgstr ""
+
+#: ../mdkapplet:446
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnecti käivitamine\n"
 
-#: ../mdkapplet:451 ../mdkapplet:624
+#: ../mdkapplet:459 ../mdkapplet:632
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linuxi distributsiooni uus versioon"
 
-#: ../mdkapplet:456
+#: ../mdkapplet:464
 #, c-format
 msgid "Browse"
 msgstr "Sirvi"
 
-#: ../mdkapplet:465
+#: ../mdkapplet:473
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Ilmunud on Mandriva Linuxi distributsiooni uus versioon."
 
-#: ../mdkapplet:467 ../mdkapplet:564
+#: ../mdkapplet:475 ../mdkapplet:572
 #, c-format
 msgid "More info about this new version"
 msgstr "Rohkem teavet uue versiooni kohta"
 
-#: ../mdkapplet:469 ../mdkapplet:558
+#: ../mdkapplet:477 ../mdkapplet:566
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Kas soovite uuendada ja paigaldada '%s'?"
 
-#: ../mdkapplet:471 ../mdkapplet:568 ../mdkapplet:1025 ../mdkapplet:1055
+#: ../mdkapplet:479 ../mdkapplet:576 ../mdkapplet:1033 ../mdkapplet:1063
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Rohkem ei küsita"
 
-#: ../mdkapplet:474
+#: ../mdkapplet:482
 #, c-format
 msgid "Download all packages at once"
 msgstr "Kõigi pakettide korraga allalaadimine"
 
-#: ../mdkapplet:475
+#: ../mdkapplet:483
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Hoiatus: see vajab päris palju vaba ruumi)"
 
-#: ../mdkapplet:481
+#: ../mdkapplet:489
 #, c-format
 msgid "Where to download packages:"
 msgstr "Pakettide allalaadimise koht:"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Edasi"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Loobu"
 
-#: ../mdkapplet:500
+#: ../mdkapplet:508
 #, c-format
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
@@ -220,22 +223,22 @@ msgstr ""
 "Selle Mandriva Linuxi süsteemi hooldusperiood on läbi. See tähendab, et Te "
 "ei saa enam tarkvara uuendusi."
 
-#: ../mdkapplet:506
+#: ../mdkapplet:514
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "Hoidmaks süsteemi turvalisena, võite"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:520
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:518
+#: ../mdkapplet:526
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "Te võite hooldusperioodi pikendada."
 
-#: ../mdkapplet:520
+#: ../mdkapplet:528
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
@@ -244,23 +247,22 @@ msgstr ""
 "Te võite hooldusperioodi pikendada või siis uuendada %si distributsiooni "
 "uuema versiooni peale."
 
-#: ../mdkapplet:524
+#: ../mdkapplet:532
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "Te võite uuendada %si distributsiooni uuema versiooni peale.?"
 
-#: ../mdkapplet:534
+#: ../mdkapplet:542
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Teie distributsioon ei ole enam toetatud"
 
-#: ../mdkapplet:539 ../mdkapplet-extended-maintenance-helper:98
-#: ../mdkapplet-extended-maintenance-helper:191
+#: ../mdkapplet:547
 #, c-format
 msgid "Extended Maintenance"
 msgstr "Hooldusperioodi pikendamine"
 
-#: ../mdkapplet:544
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
@@ -269,7 +271,7 @@ msgstr ""
 "Osta selle versiooni hooldusperioodi pikendamise (%s) ja hoida oma süsteemi "
 "töös kuni %s."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:649
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -278,17 +280,17 @@ msgstr ""
 "See uuendus nõuab suure läbilaskevõimega võrguühendust (kaabel, xDSL...) ja "
 "võib vajada lõpetamiseks mitu tundi."
 
-#: ../mdkapplet:643
+#: ../mdkapplet:651
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Tõmmatavaid andmeid on hinnanguliselt %s"
 
-#: ../mdkapplet:644
+#: ../mdkapplet:652
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Enne jätkamist tuleks sulgeda kõik teised töötavad rakendused."
 
-#: ../mdkapplet:647
+#: ../mdkapplet:655
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -297,94 +299,94 @@ msgstr ""
 "Sülearvuti oleks mõttekas panna seinatoitele ning võimaluse korral tasuks "
 "WiFi-le eelistada Ethernet-ühendust."
 
-#: ../mdkapplet:679
+#: ../mdkapplet:687
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "MandrivaUpdate'i käivitamine\n"
 
-#: ../mdkapplet:711
+#: ../mdkapplet:719
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Uuenduste kontrollimine...\n"
 
-#: ../mdkapplet:818
+#: ../mdkapplet:826
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Midagi pole uuendada\n"
 
-#: ../mdkapplet:858
+#: ../mdkapplet:866
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Võrgu kontroll: paistab, et võrk ei tööta\n"
 
-#: ../mdkapplet:885
+#: ../mdkapplet:893
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:886
+#: ../mdkapplet:894
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Autoriõigus (C) %s: Mandriva"
 
-#: ../mdkapplet:889
+#: ../mdkapplet:897
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online võimaldab kasutada Mandriva veebiteenuseid."
 
-#: ../mdkapplet:891
+#: ../mdkapplet:899
 #, c-format
 msgid "Online WebSite"
 msgstr "Veebilehekülg"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:896
+#: ../mdkapplet:904
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Marek Laane <bald@smail.ee>\n"
 
-#: ../mdkapplet:924
+#: ../mdkapplet:932
 #, c-format
 msgid "Warning"
 msgstr "Hoiatus"
 
-#: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
+#: ../mdkapplet:935 ../mdkapplet:940 ../mdkapplet:948 ../mdkapplet:950
+#: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "Rohkem teavet"
 
-#: ../mdkapplet:944
+#: ../mdkapplet:952
 #, c-format
 msgid "Add media"
 msgstr "Lisa andmekandjad"
 
-#: ../mdkapplet:959
+#: ../mdkapplet:967
 #, c-format
 msgid "About..."
 msgstr "Info..."
 
-#: ../mdkapplet:961 ../mdkapplet-config:68
+#: ../mdkapplet:969 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Uuendamise seadistamine"
 
-#: ../mdkapplet:963
+#: ../mdkapplet:971
 #, c-format
 msgid "Always launch on startup"
 msgstr "Käivitatakse alati käivitumisel"
 
-#: ../mdkapplet:965
+#: ../mdkapplet:973
 #, c-format
 msgid "Quit"
 msgstr "Välju"
 
-#: ../mdkapplet:1015 ../mdkapplet:1020 ../mdkapplet:1045 ../mdkapplet:1050
+#: ../mdkapplet:1023 ../mdkapplet:1028 ../mdkapplet:1053 ../mdkapplet:1058
 #, c-format
 msgid "New medium available"
 msgstr "Saadaval on uus andmekandja"
 
-#: ../mdkapplet:1022 ../mdkapplet:1052
+#: ../mdkapplet:1030 ../mdkapplet:1060
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -393,73 +395,102 @@ msgstr ""
 "Te kasutate distributsiooni '%s' ja saate seepärast võimaluse paigaldada "
 "lisatarkvara."
 
-#: ../mdkapplet:1024 ../mdkapplet:1054
+#: ../mdkapplet:1032 ../mdkapplet:1062
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Kas soovite lisada täiendava andmekandja?"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:181
+#: ../mdkapplet:1061 ../mdkonline.pm:182
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
-#: ../mdkapplet-extended-maintenance-helper:77
-#: ../mdkapplet-extended-maintenance-helper:186
+#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Täiendava andmekandja lisamine"
 
-#: ../mdkapplet-add-media-helper:112
+#: ../mdkapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "Toetatud tooted on %s, '%s' pole nimekirjas.\n"
 
-#: ../mdkapplet-add-media-helper:121
+#: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Palun sisestage täiendava andmekandja lisamiseks oma konto ID"
 
-#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
-#: ../mdkapplet-extended-maintenance-helper:86
-#: ../mdkapplet-extended-maintenance-helper:141
-#: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-add-media-helper:148 ../mdkapplet-add-media-helper:193
+#: ../mdkapplet-add-media-helper:225 ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Viga"
 
-#: ../mdkapplet-add-media-helper:136
-#: ../mdkapplet-extended-maintenance-helper:160
+#: ../mdkapplet-add-media-helper:149
+#, c-format
+msgid "Failure while retrieving distributions list:"
+msgstr "Distributsiooni nimekirja hankimine nurjus:"
+
+#. -PO: Here '%s' will be a localized date (eg:
+#: ../mdkapplet-add-media-helper:161
+#, c-format
+msgid ""
+"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
+"base updates (up to the %s) for distributions."
+msgstr ""
+"Mandriva pakub uuendusi töölauale 12 kuud (kuni %s) ja baassüsteemile 18 "
+"kuud (kuni %s)."
+
+#: ../mdkapplet-add-media-helper:167
+#, c-format
+msgid ""
+"Extended maintenance is now available to get 18 months of additional updates "
+"(until %s)."
+msgstr ""
+"Nüüd on olemas võimalus ka hankida hooldusperioodi pikendamine 18 kuu võrra "
+"(kuni %s)."
+
+#: ../mdkapplet-add-media-helper:170
+#, c-format
+msgid "You can subscribe <b>right now</b> to get extended maintenance:"
+msgstr "Te võite hooldusperioodi pikendamise <b>otsekohe tellida</b>:"
+
+#: ../mdkapplet-add-media-helper:174
+#, c-format
+msgid "Lifetime policy"
+msgstr "Hooldusperioodi reeglid"
+
+#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:105
+#, c-format
+msgid "Online subscription"
+msgstr "Internetitellimus"
+
+#: ../mdkapplet-add-media-helper:194
 #, c-format
 msgid "An error occurred"
 msgstr "Tekkis viga"
 
-#: ../mdkapplet-add-media-helper:142
+#: ../mdkapplet-add-media-helper:200
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "Teie Mandriva kontol ei ole %s allalaadimine tellitud."
 
-#: ../mdkapplet-add-media-helper:164
-#: ../mdkapplet-extended-maintenance-helper:204
+#: ../mdkapplet-add-media-helper:226
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "Tekkis viga andmekandja lisamisel"
 
-#: ../mdkapplet-add-media-helper:171
+#: ../mdkapplet-add-media-helper:234
 #, c-format
 msgid "Successfully added media!"
 msgstr "Andmekandja lisati edukalt!"
 
-#: ../mdkapplet-add-media-helper:173
-#: ../mdkapplet-extended-maintenance-helper:178
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:236
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Andmekandja %s lisati edukalt."
 
-#: ../mdkapplet-add-media-helper:175
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:238
 #, c-format
 msgid "Ok"
 msgstr "Olgu"
@@ -499,91 +530,6 @@ msgstr "Piiratud"
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: ../mdkapplet-extended-maintenance-helper:86
-#, c-format
-msgid "Failure while retrieving distributions list:"
-msgstr "Distributsiooni nimekirja hankimine nurjus:"
-
-#. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
-#: ../mdkapplet-extended-maintenance-helper:104
-#, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"Mandriva pakub uuendusi töölauale 12 kuud (kuni %s) ja baassüsteemile 18 "
-"kuud (kuni %s)."
-
-#: ../mdkapplet-extended-maintenance-helper:107
-#, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"Nüüd on olemas võimalus ka hankida hooldusperioodi pikendamine 18 kuu võrra "
-"(kuni %s)."
-
-#: ../mdkapplet-extended-maintenance-helper:109
-#, c-format
-msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr "Te võite hooldusperioodi pikendamise <b>otsekohe tellida</b>:"
-
-#: ../mdkapplet-extended-maintenance-helper:112
-#, c-format
-msgid "Lifetime policy"
-msgstr "Hooldusperioodi reeglid"
-
-#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
-#, c-format
-msgid "Online subscription"
-msgstr "Internetitellimus"
-
-#: ../mdkapplet-extended-maintenance-helper:115
-#, c-format
-msgid ""
-"Please fill in your account ID to add an additional package medium once you "
-"have subscribed online"
-msgstr ""
-"Palun sisestage oma konto ID täiendava andmekandja lisamiseks, kui olete "
-"otsustanud internetitellimuse kasuks"
-
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
-#, c-format
-msgid "More information on your user account"
-msgstr "Rohkem teavet Teie kasutajakonto kohta"
-
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
-#, c-format
-msgid "Your email"
-msgstr "Teie e-posti aadress"
-
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
-#, c-format
-msgid "Your password"
-msgstr "Teie parool"
-
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
-#, c-format
-msgid "Forgotten password"
-msgstr "Olen parooli unustanud"
-
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
-#, c-format
-msgid "Password and email cannot be empty."
-msgstr "Parool ja e-posti aadress tuleb kindlasti anda."
-
-#: ../mdkapplet-extended-maintenance-helper:192
-#, c-format
-msgid ""
-"Your Mandriva account does not have Extended Maintenance subscription "
-"enabled."
-msgstr "Teie Mandriva kontol ei ole hooldusperioodi pikendamine tellitud."
-
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
-#, c-format
-msgid "Close"
-msgstr "Sulge"
-
 #: ../mdkapplet_gui.pm:87
 #, c-format
 msgid ""
@@ -600,6 +546,36 @@ msgstr ""
 msgid "Mandriva Linux Features"
 msgstr "Mandriva Linuxi omadused"
 
+#: ../mdkapplet_gui.pm:213
+#, c-format
+msgid "More information on your user account"
+msgstr "Rohkem teavet Teie kasutajakonto kohta"
+
+#: ../mdkapplet_gui.pm:220
+#, c-format
+msgid "Your email"
+msgstr "Teie e-posti aadress"
+
+#: ../mdkapplet_gui.pm:221
+#, c-format
+msgid "Your password"
+msgstr "Teie parool"
+
+#: ../mdkapplet_gui.pm:228
+#, c-format
+msgid "Forgotten password"
+msgstr "Olen parooli unustanud"
+
+#: ../mdkapplet_gui.pm:245
+#, c-format
+msgid "Password and email cannot be empty."
+msgstr "Parool ja e-posti aadress tuleb kindlasti anda."
+
+#: ../mdkapplet_gui.pm:267
+#, c-format
+msgid "Close"
+msgstr "Sulge"
+
 #: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Choose your upgrade version"
@@ -615,44 +591,44 @@ msgstr "Teie Powerpacki kasutamisõigus on lõppenud"
 msgid "%s is now available, you can upgrade to:"
 msgstr "%s on nüüd saadaval, Te võite valida:"
 
-#: ../mdkonline.pm:176
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:177 ../mdkonline.pm:197
+#: ../mdkonline.pm:178 ../mdkonline.pm:198
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:180 ../mdkonline.pm:193
+#: ../mdkonline.pm:181 ../mdkonline.pm:194
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:194
+#: ../mdkonline.pm:195
 #, c-format
 msgid ""
 "The Mandriva Linux distribution with even more softwares and official "
 "support."
 msgstr "Mandriva Linux veel rohkema tarkvaraga ja ametliku tugiteenusega."
 
-#: ../mdkonline.pm:198
+#: ../mdkonline.pm:199
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
 msgstr "100%% avatud lähtekoodiga ning vabalt ja tasuta saadaval."
 
-#: ../mdkonline.pm:212
+#: ../mdkonline.pm:213
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Distributsiooni uuendamine"
@@ -703,6 +679,18 @@ msgstr "  --debug\t\t\t- toimingud logitakse\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Pakettide uuendamine update_source andmekandjalt nurjus.\n"
+
+#~ msgid ""
+#~ "Please fill in your account ID to add an additional package medium once "
+#~ "you have subscribed online"
+#~ msgstr ""
+#~ "Palun sisestage oma konto ID täiendava andmekandja lisamiseks, kui olete "
+#~ "otsustanud internetitellimuse kasuks"
+
+#~ msgid ""
+#~ "Your Mandriva account does not have Extended Maintenance subscription "
+#~ "enabled."
+#~ msgstr "Teie Mandriva kontol ei ole hooldusperioodi pikendamine tellitud."
 
 #~ msgid "Mandiva Free"
 #~ msgstr "Mandriva Free"

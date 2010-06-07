@@ -46,7 +46,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
-"POT-Creation-Date: 2010-06-02 08:50-0300\n"
+"POT-Creation-Date: 2010-06-07 16:23-0300\n"
 "PO-Revision-Date: 2010-06-02 23:28+0100\n"
 "Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
 "Language-Team: Romanian <cooker-i18n@mandrivalinux.org>\n"
@@ -156,7 +156,7 @@ msgstr "Activat"
 msgid "Error updating media"
 msgstr "Eroare la actualizarea mediului"
 
-#: ../mdkapplet:224 ../mdkapplet:938
+#: ../mdkapplet:224 ../mdkapplet:946
 #, c-format
 msgid "Install updates"
 msgstr "Instalare actualizări"
@@ -181,7 +181,7 @@ msgstr "Configurare rețea"
 msgid "Upgrade the system"
 msgstr "Actualizare majoră a sistemului"
 
-#: ../mdkapplet:393
+#: ../mdkapplet:394
 #, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
@@ -192,71 +192,74 @@ msgstr ""
 "abonamentului vostru la mentenanța extinsă, sistemul va continua să fie "
 "actualizat pînă-n data de %s"
 
-#: ../mdkapplet:438
+#: ../mdkapplet:439
+#, c-format
+msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
+msgstr ""
+
+#: ../mdkapplet:446
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Se lansează drakconnect\n"
 
-#: ../mdkapplet:451 ../mdkapplet:624
+#: ../mdkapplet:459 ../mdkapplet:632
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Versiune nouă a distribuției Mandriva Linux"
 
-#: ../mdkapplet:456
+#: ../mdkapplet:464
 #, c-format
 msgid "Browse"
 msgstr "Navigare"
 
-#: ../mdkapplet:465
+#: ../mdkapplet:473
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "O nouă versiune a distribuției Mandriva Linux a fost lansată."
 
-#: ../mdkapplet:467 ../mdkapplet:564
+#: ../mdkapplet:475 ../mdkapplet:572
 #, c-format
 msgid "More info about this new version"
 msgstr "Informații suplimentare despre această nouă versiune"
 
-#: ../mdkapplet:469 ../mdkapplet:558
+#: ../mdkapplet:477 ../mdkapplet:566
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Doriți să avansați la distribuția „%s”? "
 
-#: ../mdkapplet:471 ../mdkapplet:568 ../mdkapplet:1025 ../mdkapplet:1055
+#: ../mdkapplet:479 ../mdkapplet:576 ../mdkapplet:1033 ../mdkapplet:1063
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Nu se cere confirmare data viitoare"
 
-#: ../mdkapplet:474
+#: ../mdkapplet:482
 #, c-format
 msgid "Download all packages at once"
 msgstr "Descarcă toate pachetele odată"
 
-#: ../mdkapplet:475
+#: ../mdkapplet:483
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Avertisment: Veți avea nevoie de destul spațiu liber)"
 
-#: ../mdkapplet:481
+#: ../mdkapplet:489
 #, c-format
 msgid "Where to download packages:"
 msgstr "Unde se descarcă pachetele:"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Înainte"
 
-#: ../mdkapplet:485 ../mdkapplet:573 ../mdkapplet:650 ../mdkapplet:1026
-#: ../mdkapplet:1056 ../mdkapplet-extended-maintenance-helper:129
-#: ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
+#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Anulează"
 
-#: ../mdkapplet:500
+#: ../mdkapplet:508
 #, c-format
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
@@ -265,22 +268,22 @@ msgstr ""
 "Mentenanța acestei versiuni de Mandriva Linux s-a sfîrșit. Nu se vor mai "
 "produce actualizări pentru acest sistem."
 
-#: ../mdkapplet:506
+#: ../mdkapplet:514
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "Pentru a vă păstra sistemul securizat, puteți:"
 
-#: ../mdkapplet:512
+#: ../mdkapplet:520
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:518
+#: ../mdkapplet:526
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "Ar trebui să achiziționați o mentenanță extinsă."
 
-#: ../mdkapplet:520
+#: ../mdkapplet:528
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
@@ -289,23 +292,22 @@ msgstr ""
 "Ar trebui să achiziționați o mentenanță extinsă sau să avansați la o "
 "versiune mai recentă a distribuției %s."
 
-#: ../mdkapplet:524
+#: ../mdkapplet:532
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "Ar trebui să avansați la o versiune mai recentă a distribuției %s. "
 
-#: ../mdkapplet:534
+#: ../mdkapplet:542
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Distribuția voastră nu mai este suportată"
 
-#: ../mdkapplet:539 ../mdkapplet-extended-maintenance-helper:98
-#: ../mdkapplet-extended-maintenance-helper:191
+#: ../mdkapplet:547
 #, c-format
 msgid "Extended Maintenance"
 msgstr "Mentenanță extinsă"
 
-#: ../mdkapplet:544
+#: ../mdkapplet:552
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
@@ -314,7 +316,7 @@ msgstr ""
 "Achiziționați o mentenanță extinsă pentru această versiune (%s) și "
 "continuați s-o utilizați pînă în %s."
 
-#: ../mdkapplet:641
+#: ../mdkapplet:649
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -323,18 +325,18 @@ msgstr ""
 "Această actualizare majoră necesită o conexiune rapidă (cablu, xDSL, ...) și "
 "poate dura cîteva ore pînă la finalizare."
 
-#: ../mdkapplet:643
+#: ../mdkapplet:651
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Estimarea datelor de descărcat este de %s"
 
-#: ../mdkapplet:644
+#: ../mdkapplet:652
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr ""
 "Ar trebui să închideți toate aplicațiile lansate înainte de a continua."
 
-#: ../mdkapplet:647
+#: ../mdkapplet:655
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -343,48 +345,48 @@ msgstr ""
 "Ar trebui să vă conectați portabilul la încărcător și să optați pentru o "
 "conexiune Ethernet în loc de WiFi."
 
-#: ../mdkapplet:679
+#: ../mdkapplet:687
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Se lansează MandrivaUpdate\n"
 
-#: ../mdkapplet:711
+#: ../mdkapplet:719
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Se calculează actualizările...\n"
 
-#: ../mdkapplet:818
+#: ../mdkapplet:826
 #, c-format
 msgid "System is up-to-date\n"
 msgstr "Sistemul este la zi cu actualizările\n"
 
-#: ../mdkapplet:858
+#: ../mdkapplet:866
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Verificarea rețelei: se pare că este dezactivată\n"
 
-#: ../mdkapplet:885
+#: ../mdkapplet:893
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:886
+#: ../mdkapplet:894
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Drepturi de autor (C) %s Mandriva"
 
-#: ../mdkapplet:889
+#: ../mdkapplet:897
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online permite accesul la serviciile web Mandriva."
 
-#: ../mdkapplet:891
+#: ../mdkapplet:899
 #, c-format
 msgid "Online WebSite"
 msgstr "Sit online"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:896
+#: ../mdkapplet:904
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr ""
@@ -397,48 +399,48 @@ msgstr ""
 "Cosmin HUMENIUC <cosmin@mandrivausers.ro>, 2008\n"
 "Cătălin Florin RUSSEN <cfrussen@yahoo.co.uk>, 2008, 2009, 2010\n"
 
-#: ../mdkapplet:924
+#: ../mdkapplet:932
 #, c-format
 msgid "Warning"
 msgstr "Avertisment"
 
-#: ../mdkapplet:927 ../mdkapplet:932 ../mdkapplet:940 ../mdkapplet:942
-#: ../mdkapplet-extended-maintenance-helper:196 ../mdkapplet_gui.pm:264
+#: ../mdkapplet:935 ../mdkapplet:940 ../mdkapplet:948 ../mdkapplet:950
+#: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
 msgstr "Informații suplimentare"
 
-#: ../mdkapplet:944
+#: ../mdkapplet:952
 #, c-format
 msgid "Add media"
 msgstr "Adaugă un mediu"
 
-#: ../mdkapplet:959
+#: ../mdkapplet:967
 #, c-format
 msgid "About..."
 msgstr "Despre..."
 
-#: ../mdkapplet:961 ../mdkapplet-config:68
+#: ../mdkapplet:969 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Configurare actualizări"
 
-#: ../mdkapplet:963
+#: ../mdkapplet:971
 #, c-format
 msgid "Always launch on startup"
 msgstr "Lansează întotdeauna la pornire"
 
-#: ../mdkapplet:965
+#: ../mdkapplet:973
 #, c-format
 msgid "Quit"
 msgstr "Terminare"
 
-#: ../mdkapplet:1015 ../mdkapplet:1020 ../mdkapplet:1045 ../mdkapplet:1050
+#: ../mdkapplet:1023 ../mdkapplet:1028 ../mdkapplet:1053 ../mdkapplet:1058
 #, c-format
 msgid "New medium available"
 msgstr "Nou mediu disponibil"
 
-#: ../mdkapplet:1022 ../mdkapplet:1052
+#: ../mdkapplet:1030 ../mdkapplet:1060
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -447,76 +449,106 @@ msgstr ""
 "Utilizați distribuția „%s” și de aceea aveți un acces privilegiat la "
 "programe adiționale."
 
-#: ../mdkapplet:1024 ../mdkapplet:1054
+#: ../mdkapplet:1032 ../mdkapplet:1062
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Doriți să instalați acest depozit de programe adiționale?"
 
-#: ../mdkapplet:1053 ../mdkonline.pm:181
+#: ../mdkapplet:1061 ../mdkonline.pm:182
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:69 ../mdkapplet-config:43
-#: ../mdkapplet-extended-maintenance-helper:77
-#: ../mdkapplet-extended-maintenance-helper:186
+#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Se adaugă un mediu de pachete adițional"
 
-#: ../mdkapplet-add-media-helper:112
+#: ../mdkapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "Produsele suportate sînt %s, „%s” nu este pe listă.\n"
 
-#: ../mdkapplet-add-media-helper:121
+#: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr ""
 "Introduceți identificatorul contului vostru pentru a adăuga un mediu de "
 "pachete adițional"
 
-#: ../mdkapplet-add-media-helper:135 ../mdkapplet-add-media-helper:163
-#: ../mdkapplet-extended-maintenance-helper:86
-#: ../mdkapplet-extended-maintenance-helper:141
-#: ../mdkapplet-extended-maintenance-helper:160
-#: ../mdkapplet-extended-maintenance-helper:204 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-add-media-helper:148 ../mdkapplet-add-media-helper:193
+#: ../mdkapplet-add-media-helper:225 ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Eroare"
 
-#: ../mdkapplet-add-media-helper:136
-#: ../mdkapplet-extended-maintenance-helper:160
+#: ../mdkapplet-add-media-helper:149
+#, c-format
+msgid "Failure while retrieving distributions list:"
+msgstr "Eroare la preloarea listei de distribuții:"
+
+#. -PO: Here '%s' will be a localized date (eg:
+#: ../mdkapplet-add-media-helper:161
+#, c-format
+msgid ""
+"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
+"base updates (up to the %s) for distributions."
+msgstr ""
+"Mandriva oferă 12 luni de actualizări pentru mediul de birou (pînă în %s) și "
+"18 luni de actualizări de bază (pînă în %s) pentru distribuții."
+
+#: ../mdkapplet-add-media-helper:167
+#, c-format
+msgid ""
+"Extended maintenance is now available to get 18 months of additional updates "
+"(until %s)."
+msgstr ""
+"Mentenanța extinsă este acum disponibilă pentru a profita de 18 luni "
+"suplimentare de actualizări (pînă în %s)."
+
+#: ../mdkapplet-add-media-helper:170
+#, c-format
+msgid "You can subscribe <b>right now</b> to get extended maintenance:"
+msgstr ""
+"Vă puteți abona <b>chiar acum</b> pentru a achiziționa mentenanță extinsă:"
+
+#: ../mdkapplet-add-media-helper:174
+#, c-format
+msgid "Lifetime policy"
+msgstr "Politica duratei de viață"
+
+#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:105
+#, c-format
+msgid "Online subscription"
+msgstr "Abonare în direct"
+
+#: ../mdkapplet-add-media-helper:194
 #, c-format
 msgid "An error occurred"
 msgstr "S-a produs o eroare"
 
-#: ../mdkapplet-add-media-helper:142
+#: ../mdkapplet-add-media-helper:200
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr ""
 "Contul vostru Mandriva nu are activat opțiunea de descărcare a versiunii %s."
 
-#: ../mdkapplet-add-media-helper:164
-#: ../mdkapplet-extended-maintenance-helper:204
+#: ../mdkapplet-add-media-helper:226
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "S-a produs o eroare la adăugarea mediului"
 
-#: ../mdkapplet-add-media-helper:171
+#: ../mdkapplet-add-media-helper:234
 #, c-format
 msgid "Successfully added media!"
 msgstr "Mediu adăugat cu succes!"
 
-#: ../mdkapplet-add-media-helper:173
-#: ../mdkapplet-extended-maintenance-helper:178
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:236
 #, c-format
 msgid "Successfully added media %s."
 msgstr "S-a adăugat cu succes mediul %s."
 
-#: ../mdkapplet-add-media-helper:175
-#: ../mdkapplet-extended-maintenance-helper:179
+#: ../mdkapplet-add-media-helper:238
 #, c-format
 msgid "Ok"
 msgstr "Ok"
@@ -556,92 +588,6 @@ msgstr "Restrticționat"
 msgid "Enterprise"
 msgstr "Antrepriză"
 
-#: ../mdkapplet-extended-maintenance-helper:86
-#, c-format
-msgid "Failure while retrieving distributions list:"
-msgstr "Eroare la preloarea listei de distribuții:"
-
-#. -PO: Here '%s' will be a localized date (eg: "2009/11/28" in english but "28/11/2009" for brazil or "28 Nov. "2009" for french:
-#: ../mdkapplet-extended-maintenance-helper:104
-#, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"Mandriva oferă 12 luni de actualizări pentru mediul de birou (pînă în %s) și "
-"18 luni de actualizări de bază (pînă în %s) pentru distribuții."
-
-#: ../mdkapplet-extended-maintenance-helper:107
-#, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"Mentenanța extinsă este acum disponibilă pentru a profita de 18 luni "
-"suplimentare de actualizări (pînă în %s)."
-
-#: ../mdkapplet-extended-maintenance-helper:109
-#, c-format
-msgid "You can subscribe <b>right now</b> to get extended maintenance:"
-msgstr ""
-"Vă puteți abona <b>chiar acum</b> pentru a achiziționa mentenanță extinsă:"
-
-#: ../mdkapplet-extended-maintenance-helper:112
-#, c-format
-msgid "Lifetime policy"
-msgstr "Politica duratei de viață"
-
-#: ../mdkapplet-extended-maintenance-helper:113 ../mdkapplet_gui.pm:105
-#, c-format
-msgid "Online subscription"
-msgstr "Abonare în direct"
-
-#: ../mdkapplet-extended-maintenance-helper:115
-#, c-format
-msgid ""
-"Please fill in your account ID to add an additional package medium once you "
-"have subscribed online"
-msgstr ""
-"Introduceți identificatorul contului vostru pentru a adăuga un mediu de "
-"pachete adițional odată ce v-ați abonat"
-
-#: ../mdkapplet-extended-maintenance-helper:119 ../mdkapplet_gui.pm:213
-#, c-format
-msgid "More information on your user account"
-msgstr "Informații suplimentare despre contul vostru de utilizator"
-
-#: ../mdkapplet-extended-maintenance-helper:122 ../mdkapplet_gui.pm:220
-#, c-format
-msgid "Your email"
-msgstr "Adresa voastră electroniă"
-
-#: ../mdkapplet-extended-maintenance-helper:123 ../mdkapplet_gui.pm:221
-#, c-format
-msgid "Your password"
-msgstr "Parola voastră"
-
-#: ../mdkapplet-extended-maintenance-helper:127 ../mdkapplet_gui.pm:228
-#, c-format
-msgid "Forgotten password"
-msgstr "Parolă uitată"
-
-#: ../mdkapplet-extended-maintenance-helper:141 ../mdkapplet_gui.pm:245
-#, c-format
-msgid "Password and email cannot be empty."
-msgstr "Parola și adresa electronică nu pot fi goale."
-
-#: ../mdkapplet-extended-maintenance-helper:192
-#, c-format
-msgid ""
-"Your Mandriva account does not have Extended Maintenance subscription "
-"enabled."
-msgstr "Contul vostru Mandriva nu are activat opțiunea de mentenanță extinsă."
-
-#: ../mdkapplet-extended-maintenance-helper:198 ../mdkapplet_gui.pm:267
-#, c-format
-msgid "Close"
-msgstr "Închide"
-
 #: ../mdkapplet_gui.pm:87
 #, c-format
 msgid ""
@@ -658,6 +604,36 @@ msgstr ""
 msgid "Mandriva Linux Features"
 msgstr "Funcționalitățile Mandriva Linux"
 
+#: ../mdkapplet_gui.pm:213
+#, c-format
+msgid "More information on your user account"
+msgstr "Informații suplimentare despre contul vostru de utilizator"
+
+#: ../mdkapplet_gui.pm:220
+#, c-format
+msgid "Your email"
+msgstr "Adresa voastră electroniă"
+
+#: ../mdkapplet_gui.pm:221
+#, c-format
+msgid "Your password"
+msgstr "Parola voastră"
+
+#: ../mdkapplet_gui.pm:228
+#, c-format
+msgid "Forgotten password"
+msgstr "Parolă uitată"
+
+#: ../mdkapplet_gui.pm:245
+#, c-format
+msgid "Password and email cannot be empty."
+msgstr "Parola și adresa electronică nu pot fi goale."
+
+#: ../mdkapplet_gui.pm:267
+#, c-format
+msgid "Close"
+msgstr "Închide"
+
 #: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Choose your upgrade version"
@@ -673,32 +649,32 @@ msgstr "Accesul vostru Powerpack s-a terminat"
 msgid "%s is now available, you can upgrade to:"
 msgstr "%s este acum disponibilă, puteți avansa la:"
 
-#: ../mdkonline.pm:176
+#: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:177 ../mdkonline.pm:197
+#: ../mdkonline.pm:178 ../mdkonline.pm:198
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:178
+#: ../mdkonline.pm:179
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:180 ../mdkonline.pm:193
+#: ../mdkonline.pm:181 ../mdkonline.pm:194
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:194
+#: ../mdkonline.pm:195
 #, c-format
 msgid ""
 "The Mandriva Linux distribution with even more softwares and official "
@@ -706,12 +682,12 @@ msgid ""
 msgstr ""
 "Distribuția Mandriva Linux cu mult mai multe programe și suport oficial."
 
-#: ../mdkonline.pm:198
+#: ../mdkonline.pm:199
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
 msgstr "Distribuția 100%% cu sursă deschisă disponibilă gratuit."
 
-#: ../mdkonline.pm:212
+#: ../mdkonline.pm:213
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Actualizare majoră de distribuție"
@@ -761,6 +737,19 @@ msgstr "  --debug\t\t\t- înregistrează activitatea în jurnal\n"
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Nu se pot actualiza pachetele de pe mediul update_source.\n"
+
+#~ msgid ""
+#~ "Please fill in your account ID to add an additional package medium once "
+#~ "you have subscribed online"
+#~ msgstr ""
+#~ "Introduceți identificatorul contului vostru pentru a adăuga un mediu de "
+#~ "pachete adițional odată ce v-ați abonat"
+
+#~ msgid ""
+#~ "Your Mandriva account does not have Extended Maintenance subscription "
+#~ "enabled."
+#~ msgstr ""
+#~ "Contul vostru Mandriva nu are activat opțiunea de mentenanță extinsă."
 
 #, fuzzy
 #~ msgid "Mandiva Free"
