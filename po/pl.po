@@ -15,15 +15,14 @@ msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-07 16:23-0300\n"
-"PO-Revision-Date: 2010-05-28 07:58+0100\n"
+"PO-Revision-Date: 2010-06-08 08:58+0100\n"
 "Last-Translator: Marek Walczak <kubdat@poczta.fm>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
 #: ../mdkapplet:71
@@ -38,12 +37,8 @@ msgstr "Oprogramowanie systemu jest aktualne"
 
 #: ../mdkapplet:84
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Problem z konfiguracją usługi. Sprawdź logi i wyślij e-mail'a pod adres "
-"support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Problem z konfiguracją usługi. Sprawdź logi i wyślij e-mail'a pod adres support@mandrivaonline.com"
 
 #: ../mdkapplet:90
 #, c-format
@@ -60,7 +55,8 @@ msgstr "Dostępne są nowe aktualizacje dla Twojego systemu"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Udostępniono nową wersję dystrybucji Mandriva Linux"
 
-#: ../mdkapplet:119 ../mdkapplet:161
+#: ../mdkapplet:119
+#: ../mdkapplet:161
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Dodatkowy nośnik z pakietami jest dostępny dla Twojej dystrybucji."
@@ -75,7 +71,8 @@ msgstr "Sieć jest wyłączona. Skonfiguruj sieć"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Usługa jest nieaktywna. Kliknij na Witryna internetowa\""
 
-#: ../mdkapplet:135 ../mdkapplet:141
+#: ../mdkapplet:135
+#: ../mdkapplet:141
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi baza danych zablokowana"
@@ -87,10 +84,8 @@ msgstr "Nieobsługiwane wydanie (za stare, lub wydanie rozwojowe)"
 
 #: ../mdkapplet:156
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Nie odnaleziono nośnika. Dodaj nośnik w 'Menedżerze Nośników Oprogramowania'."
 
 #: ../mdkapplet:166
 #, c-format
@@ -119,12 +114,14 @@ msgstr "Włączone"
 msgid "Error updating media"
 msgstr "Błąd w trakcie aktualizowania nośnika"
 
-#: ../mdkapplet:224 ../mdkapplet:946
+#: ../mdkapplet:224
+#: ../mdkapplet:946
 #, c-format
 msgid "Install updates"
 msgstr "Zainstaluj aktualizacje"
 
-#: ../mdkapplet:225 ../mdkapplet:226
+#: ../mdkapplet:225
+#: ../mdkapplet:226
 #, c-format
 msgid "Add additional package medium"
 msgstr "Dodaj dodatkowy nośnik z pakietami"
@@ -146,25 +143,21 @@ msgstr "Zaktualizuj system do nowej wersji"
 
 #: ../mdkapplet:394
 #, c-format
-msgid ""
-"Basic maintenance for this distribution has expired. Thanks to your "
-"subscription to extended maintenance, your system will be kept up to date "
-"until %s"
-msgstr ""
-"Podstawowe wsparcie dla tej dystrybucji wygasło. Dziękujemy za Twój "
-"abonament rozszerzonego wsparcia, system będzie uaktualniany do dnia %s"
+msgid "Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s"
+msgstr "Podstawowe wsparcie dla tej dystrybucji wygasło. Dziękujemy za Twój abonament rozszerzonego wsparcia, system będzie uaktualniany do dnia %s"
 
 #: ../mdkapplet:439
 #, c-format
 msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
-msgstr ""
+msgstr "Otrzymano SIGHUP (prawdopodobnie zakończyła się aktualizacja), ponowne uruchomienie apletu."
 
 #: ../mdkapplet:446
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Uruchamianie programu drakconnect\n"
 
-#: ../mdkapplet:459 ../mdkapplet:632
+#: ../mdkapplet:459
+#: ../mdkapplet:632
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Nowa wersja dystrybucji Mandriva Linux"
@@ -179,17 +172,22 @@ msgstr "Przeglądaj"
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Udostępniono nową wersję dystrybucji Mandriva Linux."
 
-#: ../mdkapplet:475 ../mdkapplet:572
+#: ../mdkapplet:475
+#: ../mdkapplet:572
 #, c-format
 msgid "More info about this new version"
 msgstr "Więcej informacji na temat nowej wersji"
 
-#: ../mdkapplet:477 ../mdkapplet:566
+#: ../mdkapplet:477
+#: ../mdkapplet:566
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Czy chcesz zaktualizować system do wersji %s?"
 
-#: ../mdkapplet:479 ../mdkapplet:576 ../mdkapplet:1033 ../mdkapplet:1063
+#: ../mdkapplet:479
+#: ../mdkapplet:576
+#: ../mdkapplet:1033
+#: ../mdkapplet:1063
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Nie pytaj mnie ponownie"
@@ -209,26 +207,32 @@ msgstr "(Ostrzeżenie: Będziesz potrzebował sporo wolnego miejsca)"
 msgid "Where to download packages:"
 msgstr "Gdzie można pobrać pakiety:"
 
-#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
-#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493
+#: ../mdkapplet:581
+#: ../mdkapplet:658
+#: ../mdkapplet:1034
+#: ../mdkapplet:1064
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Dalej"
 
-#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
-#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493
+#: ../mdkapplet:581
+#: ../mdkapplet:658
+#: ../mdkapplet:1034
+#: ../mdkapplet:1064
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Anuluj"
 
 #: ../mdkapplet:508
 #, c-format
-msgid ""
-"Maintenance for this Mandriva Linux version has ended. No more updates will "
-"be delivered for this system."
-msgstr ""
-"Wsparcie dla tej wersji Mandriva Linux wygasło. Aktualizacje dla tego "
-"systemu nie będą dostarczane."
+msgid "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
+msgstr "Wsparcie dla tej wersji Mandriva Linux wygasło. Aktualizacje dla tego systemu nie będą dostarczane."
 
 #: ../mdkapplet:514
 #, c-format
@@ -247,12 +251,8 @@ msgstr "Powinieneś otrzymać rozszerzone wsparcie."
 
 #: ../mdkapplet:528
 #, c-format
-msgid ""
-"You should either get extended maintenance or upgrade to a newer version of "
-"the %s distribution."
-msgstr ""
-"Powinieneś przedłużyć abonament rozszerzonego wsparcia lub dokonać "
-"aktualizacji do nowszej wersji %s dystrybucji."
+msgid "You should either get extended maintenance or upgrade to a newer version of the %s distribution."
+msgstr "Powinieneś przedłużyć abonament rozszerzonego wsparcia lub dokonać aktualizacji do nowszej wersji %s dystrybucji."
 
 #: ../mdkapplet:532
 #, c-format
@@ -271,19 +271,13 @@ msgstr "Rozszerzone Wsparcie"
 
 #: ../mdkapplet:552
 #, c-format
-msgid ""
-"Purchase a maintenance extension for this version (%s) and keep it running "
-"until %s."
+msgid "Purchase a maintenance extension for this version (%s) and keep it running until %s."
 msgstr "Wykup rozszerzone wsparcie dla tej wersji (%s) otrzymasz je do %s."
 
 #: ../mdkapplet:649
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
-"Aktualizacja wymaga łącza internetowego o wysokiej przepustowości (kablówka, "
-"xDSL, ...) i może potrwać kilka godzin."
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Aktualizacja wymaga łącza internetowego o wysokiej przepustowości (kablówka, xDSL, ...) i może potrwać kilka godzin."
 
 #: ../mdkapplet:651
 #, c-format
@@ -293,18 +287,12 @@ msgstr "Przewidywana ilość danych do pobrania to %s"
 #: ../mdkapplet:652
 #, c-format
 msgid "You should close all other running applications before continuing."
-msgstr ""
-"Przed kontynuowaniem instalacji zaleca się zamknięcie wszystkich "
-"uruchomionych programów."
+msgstr "Przed kontynuowaniem instalacji zaleca się zamknięcie wszystkich uruchomionych programów."
 
 #: ../mdkapplet:655
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
-"Podłącz notebooka do zasilania oraz połącz się z internetem z wykorzystaniem "
-"połączenia kablowego zamiast bezprzewodowego, np. wifi."
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Podłącz notebooka do zasilania oraz połącz się z internetem z wykorzystaniem połączenia kablowego zamiast bezprzewodowego, np. wifi."
 
 #: ../mdkapplet:687
 #, c-format
@@ -357,7 +345,10 @@ msgstr "Marek Walczak <kubdat@poczta.pl>\n"
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: ../mdkapplet:935 ../mdkapplet:940 ../mdkapplet:948 ../mdkapplet:950
+#: ../mdkapplet:935
+#: ../mdkapplet:940
+#: ../mdkapplet:948
+#: ../mdkapplet:950
 #: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
@@ -373,7 +364,8 @@ msgstr "Dodaj nośnik"
 msgid "About..."
 msgstr "O programie..."
 
-#: ../mdkapplet:969 ../mdkapplet-config:68
+#: ../mdkapplet:969
+#: ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Konfiguracja aktualizacji"
@@ -388,31 +380,34 @@ msgstr "Uruchamiaj przy starcie"
 msgid "Quit"
 msgstr "Zakończ"
 
-#: ../mdkapplet:1023 ../mdkapplet:1028 ../mdkapplet:1053 ../mdkapplet:1058
+#: ../mdkapplet:1023
+#: ../mdkapplet:1028
+#: ../mdkapplet:1053
+#: ../mdkapplet:1058
 #, c-format
 msgid "New medium available"
 msgstr "Udostępniono nowy nośnik"
 
-#: ../mdkapplet:1030 ../mdkapplet:1060
+#: ../mdkapplet:1030
+#: ../mdkapplet:1060
 #, c-format
-msgid ""
-"You use '%s' distribution and therefore have privileged access to additional "
-"software."
-msgstr ""
-"Używasz dystrybucji %s i w związku z tym masz uprzywilejowany dostęp do "
-"dodatkowego oprogramowania."
+msgid "You use '%s' distribution and therefore have privileged access to additional software."
+msgstr "Używasz dystrybucji %s i w związku z tym masz uprzywilejowany dostęp do dodatkowego oprogramowania."
 
-#: ../mdkapplet:1032 ../mdkapplet:1062
+#: ../mdkapplet:1032
+#: ../mdkapplet:1062
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Czy chcesz zainstalować dodatkowy nośnik z pakietami?"
 
-#: ../mdkapplet:1061 ../mdkonline.pm:182
+#: ../mdkapplet:1061
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:84
+#: ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Dodawanie dodatkowego nośnika z pakietami"
@@ -420,15 +415,17 @@ msgstr "Dodawanie dodatkowego nośnika z pakietami"
 #: ../mdkapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
-msgstr ""
+msgstr "Produktów %s, '%s' nie ma na liście wsparcia.\n"
 
 #: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Wprowadź ID Twojego konta, aby dodać dodatkowy nośnik z pakietami"
 
-#: ../mdkapplet-add-media-helper:148 ../mdkapplet-add-media-helper:193
-#: ../mdkapplet-add-media-helper:225 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-add-media-helper:148
+#: ../mdkapplet-add-media-helper:193
+#: ../mdkapplet-add-media-helper:225
+#: ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Błąd"
@@ -441,21 +438,13 @@ msgstr "Nieudane pobranie listy dystrybucji:"
 #. -PO: Here '%s' will be a localized date (eg:
 #: ../mdkapplet-add-media-helper:161
 #, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"Mandriva przez 12 miesięcy dostarcza aktualizacje (aż do %s) i 18 miesięcy "
-"aktualizuje bazę (aż do %s) dla dystrybucji."
+msgid "Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions."
+msgstr "Mandriva przez 12 miesięcy dostarcza aktualizacje (aż do %s) i 18 miesięcy aktualizuje bazę (aż do %s) dla dystrybucji."
 
 #: ../mdkapplet-add-media-helper:167
 #, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"Rozszerzone wsparcie jest dostępne, przez 18 miesięcy dostaniesz dodatkowe "
-"aktualizacje (aż do %s)."
+msgid "Extended maintenance is now available to get 18 months of additional updates (until %s)."
+msgstr "Rozszerzone wsparcie jest dostępne, przez 18 miesięcy dostaniesz dodatkowe aktualizacje (aż do %s)."
 
 #: ../mdkapplet-add-media-helper:170
 #, c-format
@@ -467,7 +456,8 @@ msgstr "Subskrybuj <b>teraz</b> by otrzymać rozszerzone wsparcie:"
 msgid "Lifetime policy"
 msgstr "Polityka czasu ważności"
 
-#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:105
+#: ../mdkapplet-add-media-helper:175
+#: ../mdkapplet_gui.pm:105
 #, c-format
 msgid "Online subscription"
 msgstr "Subskrypcja online"
@@ -480,9 +470,7 @@ msgstr "Wystąpił błąd"
 #: ../mdkapplet-add-media-helper:200
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
-msgstr ""
-"Na Twoim koncie w systemie Mandrivy nie ma informacji na temat subskrypcji %"
-"s'a."
+msgstr "Na Twoim koncie w systemie Mandrivy nie ma informacji na temat subskrypcji %s'a."
 
 #: ../mdkapplet-add-media-helper:226
 #, c-format
@@ -524,7 +512,8 @@ msgstr "Opóźnienie pierwszego sprawdzenia (minuty)"
 msgid "Check for newer \"%s\" releases"
 msgstr "Sprawdź czy są nowsze \"%s\" edycje"
 
-#: ../mdkapplet-config:95 ../mdkapplet-config:101
+#: ../mdkapplet-config:95
+#: ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "Sprawdź czy nie brakuje \"%s\"  nośników"
@@ -541,16 +530,13 @@ msgstr "Enterprise"
 
 #: ../mdkapplet_gui.pm:87
 #, c-format
-msgid ""
-"Mandriva Powerpack brings you the best of Linux experience for desktop: "
-"stability and efficiency of open source solutions together with exclusive "
-"softwares and Mandriva official support."
-msgstr ""
+msgid "Mandriva Powerpack brings you the best of Linux experience for desktop: stability and efficiency of open source solutions together with exclusive softwares and Mandriva official support."
+msgstr "Mandriva Powerpack dostarcza najlepsze rozwiązania Linuksa dla komputerów: stabilniejsze i wydajniejsze rozwiązanie open source na zasadach wyłączności oraz oficjalne wsparcie Mandrivy."
 
 #: ../mdkapplet_gui.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Linux Features"
-msgstr "Mandriva Linux"
+msgstr "Możliwości Mandriva Linux"
 
 #: ../mdkapplet_gui.pm:213
 #, c-format
@@ -585,24 +571,25 @@ msgstr "Zamknij"
 #: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Choose your upgrade version"
-msgstr ""
+msgstr "Wybierz aktualną wersję"
 
 #: ../mdkapplet_gui.pm:306
 #, c-format
 msgid "Your Powerpack access has ended"
-msgstr ""
+msgstr "Twój dostęp do Powerpack zakończył się"
 
 #: ../mdkapplet_gui.pm:309
 #, c-format
 msgid "%s is now available, you can upgrade to:"
-msgstr ""
+msgstr "% jest teraz dostępna, możesz uaktualnić do:"
 
 #: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:178 ../mdkonline.pm:198
+#: ../mdkonline.pm:178
+#: ../mdkonline.pm:198
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
@@ -617,22 +604,21 @@ msgstr "Mandriva Mini"
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:194
+#: ../mdkonline.pm:181
+#: ../mdkonline.pm:194
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
 #: ../mdkonline.pm:195
 #, c-format
-msgid ""
-"The Mandriva Linux distribution with even more softwares and official "
-"support."
-msgstr ""
+msgid "The Mandriva Linux distribution with even more softwares and official support."
+msgstr "Dystrybucja Mandriva Linux z najbogatszym oprogramowaniem i oficjalnym wsparciem."
 
 #: ../mdkonline.pm:199
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
-msgstr ""
+msgstr "Ogólnodostępna 100%% dystrybucja Open Source."
 
 #: ../mdkonline.pm:213
 #, c-format
@@ -644,8 +630,7 @@ msgstr "Aktualizacja dystrybucji"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
