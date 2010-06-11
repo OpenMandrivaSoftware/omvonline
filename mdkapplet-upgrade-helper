@@ -90,6 +90,8 @@ sub run_gurpmi() {
     my @initial_args = ('--replacefiles', '--clean');
     push @initial_args, "--download-all=$download_dir" if $download_dir;
 
+    my $succeeded_win = create_upgrade_succeeded_window();
+    my $failed_win = create_upgrade_failed_window();
     while ($refork_gurpmi) {
         
         my $ok = fork_gurpmi(@initial_args);
@@ -104,9 +106,10 @@ sub run_gurpmi() {
 
         if (!$refork_gurpmi) {
             if (!$ok) {
-                upgrade_failed();
+                $failed_win->main && upgrade();
             } else {
-                upgrade_distro_congratulations();
+                rm_rf(get_stale_upgrade_filename());
+                $succeeded_win->main && !$::testing && any::reboot();
             }
         }
     }
@@ -120,7 +123,7 @@ my @common = (
     width => $width - 50,
 );
 
-sub upgrade_failed() {
+sub get_upgrade_failed_window() {
     local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Error"));
     gtkadd($w->{window},
@@ -132,13 +135,10 @@ sub upgrade_failed() {
            ]),
        );
     $w->{ok}->grab_focus;
-    my $answer = $w->main;
-    upgrade() if $answer;
+    return $w;
 }
 
-sub upgrade_distro_congratulations() {
-    rm_rf(get_stale_upgrade_filename());
-
+sub get_upgrade_succeeded_window() {
     local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Congratulations"));
     gtkadd($w->{window},
@@ -151,8 +151,7 @@ sub upgrade_distro_congratulations() {
            ]),
        );
     $w->{ok}->grab_focus;
-    my $answer = $w->main;
-    any::reboot() if $answer && !$::testing;
+    return $w;
 }
 
 # Returns: undef if failed to authenticate, [$email, $passwd] otherwise
