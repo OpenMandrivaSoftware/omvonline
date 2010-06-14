@@ -13,17 +13,13 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-06-07 16:23-0300\n"
-"PO-Revision-Date: 2009-10-20 08:31+0500\n"
-"Last-Translator: akdengi <kazancas@mandriva.ru>\n"
+"PO-Revision-Date: 2010-06-14 19:16+0300\n"
+"Last-Translator: Alexander Kazancev <kazancas@mandriva.ru>\n"
 "Language-Team: Russian <gnu@mx.ru>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n!=1);\n"
-"\n"
-"\n"
-"\n"
-"\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: KBabel 1.11.4\n"
 "X-Language: ru_RU\n"
 
@@ -40,12 +36,8 @@ msgstr "Система не нуждается в обновлении"
 
 #: ../mdkapplet:84
 #, c-format
-msgid ""
-"Service configuration problem. Please check logs and send mail to "
-"support@mandrivaonline.com"
-msgstr ""
-"Проблема настройки службы. Проверьте журнал и отправьте письмо на "
-"support@mandrivaonline.com"
+msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
+msgstr "Проблема настройки службы. Проверьте журнал и отправьте письмо на support@mandrivaonline.com"
 
 #: ../mdkapplet:90
 #, c-format
@@ -62,7 +54,8 @@ msgstr "Для системы доступны новые обновления"
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Выпущена новая версия дистрибутива Mandriva Linux"
 
-#: ../mdkapplet:119 ../mdkapplet:161
+#: ../mdkapplet:119
+#: ../mdkapplet:161
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Для данного дистрибутива доступен дополнительный источник пакетов."
@@ -77,7 +70,8 @@ msgstr "Сеть недоступна. Настройте сеть"
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Служба не включена. Выберите команду «Открыть веб-сайт»"
 
-#: ../mdkapplet:135 ../mdkapplet:141
+#: ../mdkapplet:135
+#: ../mdkapplet:141
 #, c-format
 msgid "urpmi database locked"
 msgstr "База данных urpmi заблокирована"
@@ -89,11 +83,8 @@ msgstr "Версия не поддерживается (слишком стар�
 
 #: ../mdkapplet:156
 #, c-format
-msgid ""
-"No medium found. You must add some media through 'Software Media Manager'."
-msgstr ""
-"Источник не найден. Нужно добавить хотя бы один источник с помощью менеджера "
-"источников программ."
+msgid "No medium found. You must add some media through 'Software Media Manager'."
+msgstr "Источник не найден. Нужно добавить хотя бы один источник с помощью менеджера источников программ."
 
 #: ../mdkapplet:166
 #, c-format
@@ -121,12 +112,14 @@ msgstr "Включён"
 msgid "Error updating media"
 msgstr "Не удалось обновить источник"
 
-#: ../mdkapplet:224 ../mdkapplet:946
+#: ../mdkapplet:224
+#: ../mdkapplet:946
 #, c-format
 msgid "Install updates"
 msgstr "Установить обновления"
 
-#: ../mdkapplet:225 ../mdkapplet:226
+#: ../mdkapplet:225
+#: ../mdkapplet:226
 #, c-format
 msgid "Add additional package medium"
 msgstr "Добавить дополнительный источник пакетов"
@@ -148,25 +141,21 @@ msgstr "Обновление системы"
 
 #: ../mdkapplet:394
 #, c-format
-msgid ""
-"Basic maintenance for this distribution has expired. Thanks to your "
-"subscription to extended maintenance, your system will be kept up to date "
-"until %s"
-msgstr ""
-"Базовая поддержка для этого дистрибутива завершена. Подписавшись на "
-"расширенную поддержку вы сможете получать обновления до %s"
+msgid "Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s"
+msgstr "Базовая поддержка для этого дистрибутива завершена. Подписавшись на расширенную поддержку вы сможете получать обновления до %s"
 
 #: ../mdkapplet:439
 #, c-format
 msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
-msgstr ""
+msgstr "Получен сигнал SIGHUP (скорее всего обновление закончено), перезапускаем аплет."
 
 #: ../mdkapplet:446
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Запуск drakconnect\n"
 
-#: ../mdkapplet:459 ../mdkapplet:632
+#: ../mdkapplet:459
+#: ../mdkapplet:632
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Новая версия дистрибутива Mandriva Linux"
@@ -181,17 +170,22 @@ msgstr "Обзор"
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Выпущена новая версия дистрибутива Mandriva Linux."
 
-#: ../mdkapplet:475 ../mdkapplet:572
+#: ../mdkapplet:475
+#: ../mdkapplet:572
 #, c-format
 msgid "More info about this new version"
 msgstr "Подробная информация об этой новой версии"
 
-#: ../mdkapplet:477 ../mdkapplet:566
+#: ../mdkapplet:477
+#: ../mdkapplet:566
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Выполнить обновление до версии «%s»?"
 
-#: ../mdkapplet:479 ../mdkapplet:576 ../mdkapplet:1033 ../mdkapplet:1063
+#: ../mdkapplet:479
+#: ../mdkapplet:576
+#: ../mdkapplet:1033
+#: ../mdkapplet:1063
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Не спрашивать в следующий раз"
@@ -204,40 +198,44 @@ msgstr "Скачать все пакеты одновременно"
 #: ../mdkapplet:483
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
-msgstr ""
-"(Предупреждение: Вам потребуется достаточно много свободного места на диске)"
+msgstr "(Предупреждение: Вам потребуется достаточно много свободного места на диске)"
 
 #: ../mdkapplet:489
 #, c-format
 msgid "Where to download packages:"
 msgstr "Куда скачиваются пакеты:"
 
-#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
-#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493
+#: ../mdkapplet:581
+#: ../mdkapplet:658
+#: ../mdkapplet:1034
+#: ../mdkapplet:1064
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Next"
 msgstr "Далее"
 
-#: ../mdkapplet:493 ../mdkapplet:581 ../mdkapplet:658 ../mdkapplet:1034
-#: ../mdkapplet:1064 ../mdkapplet_gui.pm:232 ../mdkapplet_gui.pm:313
+#: ../mdkapplet:493
+#: ../mdkapplet:581
+#: ../mdkapplet:658
+#: ../mdkapplet:1034
+#: ../mdkapplet:1064
+#: ../mdkapplet_gui.pm:232
+#: ../mdkapplet_gui.pm:313
 #, c-format
 msgid "Cancel"
 msgstr "Отмена"
 
 #: ../mdkapplet:508
 #, c-format
-msgid ""
-"Maintenance for this Mandriva Linux version has ended. No more updates will "
-"be delivered for this system."
-msgstr ""
-"Поддержка этого дистрибутива завершена. Для него больше не будет выпускаться "
-"никаких обновлений."
+msgid "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
+msgstr "Поддержка этого дистрибутива завершена. Для него больше не будет выпускаться никаких обновлений."
 
 #: ../mdkapplet:514
 #, c-format
 msgid "In order to keep your system secure, you can:"
-msgstr ""
-"Для того чтобы продолжать держать вашу систему в безопасности, вы должны:"
+msgstr "Для того чтобы продолжать держать вашу систему в безопасности, вы должны:"
 
 #: ../mdkapplet:520
 #, c-format
@@ -251,12 +249,8 @@ msgstr "Вы должны заказать расширенную поддерж
 
 #: ../mdkapplet:528
 #, c-format
-msgid ""
-"You should either get extended maintenance or upgrade to a newer version of "
-"the %s distribution."
-msgstr ""
-"Вы должны или заказать расширеную поддержку или обновиться до более новой "
-"версии дистрибутива  %s."
+msgid "You should either get extended maintenance or upgrade to a newer version of the %s distribution."
+msgstr "Вы должны или заказать расширеную поддержку или обновиться до более новой версии дистрибутива  %s."
 
 #: ../mdkapplet:532
 #, c-format
@@ -275,21 +269,13 @@ msgstr "Расширенная поддержка"
 
 #: ../mdkapplet:552
 #, c-format
-msgid ""
-"Purchase a maintenance extension for this version (%s) and keep it running "
-"until %s."
-msgstr ""
-"Купите расширенную поддержку для этой версии (%s) и продолжайте ее "
-"использовать до %s."
+msgid "Purchase a maintenance extension for this version (%s) and keep it running until %s."
+msgstr "Купите расширенную поддержку для этой версии (%s) и продолжайте ее использовать до %s."
 
 #: ../mdkapplet:649
 #, c-format
-msgid ""
-"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
-"and may take several hours to complete."
-msgstr ""
-"Для данного обновления требуется высокоскоростное подключение к Интернету "
-"(кабельное, xDSL и т.п.), и это может занять продолжительное время."
+msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
+msgstr "Для данного обновления требуется высокоскоростное подключение к Интернету (кабельное, xDSL и т.п.), и это может занять продолжительное время."
 
 #: ../mdkapplet:651
 #, c-format
@@ -303,12 +289,8 @@ msgstr "Сначала необходимо закрыть все запущен
 
 #: ../mdkapplet:655
 #, c-format
-msgid ""
-"You should put your laptop on AC and favor ethernet connection over wifi, if "
-"available."
-msgstr ""
-"Ноутбук следует подключить к источнику постоянного тока и по возможности "
-"использовать проводное подключение вместо беспроводного."
+msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
+msgstr "Ноутбук следует подключить к источнику постоянного тока и по возможности использовать проводное подключение вместо беспроводного."
 
 #: ../mdkapplet:687
 #, c-format
@@ -363,7 +345,10 @@ msgstr ""
 msgid "Warning"
 msgstr "Внимание"
 
-#: ../mdkapplet:935 ../mdkapplet:940 ../mdkapplet:948 ../mdkapplet:950
+#: ../mdkapplet:935
+#: ../mdkapplet:940
+#: ../mdkapplet:948
+#: ../mdkapplet:950
 #: ../mdkapplet_gui.pm:264
 #, c-format
 msgid "More Information"
@@ -379,7 +364,8 @@ msgstr "Добавление источника"
 msgid "About..."
 msgstr "О программе..."
 
-#: ../mdkapplet:969 ../mdkapplet-config:68
+#: ../mdkapplet:969
+#: ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Настройка обновлений"
@@ -394,31 +380,34 @@ msgstr "Всегда запускать при старте"
 msgid "Quit"
 msgstr "Выход"
 
-#: ../mdkapplet:1023 ../mdkapplet:1028 ../mdkapplet:1053 ../mdkapplet:1058
+#: ../mdkapplet:1023
+#: ../mdkapplet:1028
+#: ../mdkapplet:1053
+#: ../mdkapplet:1058
 #, c-format
 msgid "New medium available"
 msgstr "Доступен новый источник"
 
-#: ../mdkapplet:1030 ../mdkapplet:1060
+#: ../mdkapplet:1030
+#: ../mdkapplet:1060
 #, c-format
-msgid ""
-"You use '%s' distribution and therefore have privileged access to additional "
-"software."
-msgstr ""
-"Вы используете дистрибутив «%s», поэтому у вас есть доступ к дополнительным "
-"программам."
+msgid "You use '%s' distribution and therefore have privileged access to additional software."
+msgstr "Вы используете дистрибутив «%s», поэтому у вас есть доступ к дополнительным программам."
 
-#: ../mdkapplet:1032 ../mdkapplet:1062
+#: ../mdkapplet:1032
+#: ../mdkapplet:1062
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Установить этот дополнительный источник пакетов?"
 
-#: ../mdkapplet:1061 ../mdkonline.pm:182
+#: ../mdkapplet:1061
+#: ../mdkonline.pm:182
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:84
+#: ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Добавление дополнительного источника пакетов"
@@ -426,17 +415,17 @@ msgstr "Добавление дополнительного источника �
 #: ../mdkapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
-msgstr ""
+msgstr "Поддерживаемые продукты это %s, '%s' нет в этом списке.\n"
 
 #: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr ""
-"Для добавления дополнительного источника пакетов ведите логин своей учётной "
-"записи"
+msgstr "Для добавления дополнительного источника пакетов ведите логин своей учётной записи"
 
-#: ../mdkapplet-add-media-helper:148 ../mdkapplet-add-media-helper:193
-#: ../mdkapplet-add-media-helper:225 ../mdkapplet_gui.pm:244
+#: ../mdkapplet-add-media-helper:148
+#: ../mdkapplet-add-media-helper:193
+#: ../mdkapplet-add-media-helper:225
+#: ../mdkapplet_gui.pm:244
 #, c-format
 msgid "Error"
 msgstr "Ошибка"
@@ -449,20 +438,13 @@ msgstr "Сбой при получении списка дистрибутиво
 #. -PO: Here '%s' will be a localized date (eg:
 #: ../mdkapplet-add-media-helper:161
 #, c-format
-msgid ""
-"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
-"base updates (up to the %s) for distributions."
-msgstr ""
-"Mandriva предоставляет для вашего дистрибутива 12 месяцев обновлений ПО (до %"
-"s) и 18 месяцев базовых обновлений (до %s)."
+msgid "Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions."
+msgstr "Mandriva предоставляет для вашего дистрибутива 12 месяцев обновлений ПО (до %s) и 18 месяцев базовых обновлений (до %s)."
 
 #: ../mdkapplet-add-media-helper:167
 #, c-format
-msgid ""
-"Extended maintenance is now available to get 18 months of additional updates "
-"(until %s)."
-msgstr ""
-"Расширенная поддержка дает вам дополнительно 18 месяцев обновлений (до %s)."
+msgid "Extended maintenance is now available to get 18 months of additional updates (until %s)."
+msgstr "Расширенная поддержка дает вам дополнительно 18 месяцев обновлений (до %s)."
 
 #: ../mdkapplet-add-media-helper:170
 #, c-format
@@ -474,7 +456,8 @@ msgstr "Вы можете подписаться на расширенную п�
 msgid "Lifetime policy"
 msgstr "Политика обновлений ПО"
 
-#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:105
+#: ../mdkapplet-add-media-helper:175
+#: ../mdkapplet_gui.pm:105
 #, c-format
 msgid "Online subscription"
 msgstr "Онлайн подписка"
@@ -495,9 +478,9 @@ msgid "An error occurred while adding medium"
 msgstr "При добавлении источника возникла ошибка"
 
 #: ../mdkapplet-add-media-helper:234
-#, fuzzy, c-format
+#, c-format
 msgid "Successfully added media!"
-msgstr "Источник «%s» успешно добавлен."
+msgstr "Источник успешно добавлен!"
 
 #: ../mdkapplet-add-media-helper:236
 #, c-format
@@ -529,7 +512,8 @@ msgstr "Задержка перед первой проверкой (минут�
 msgid "Check for newer \"%s\" releases"
 msgstr "Проверить на наличие нового релиза \"%s\""
 
-#: ../mdkapplet-config:95 ../mdkapplet-config:101
+#: ../mdkapplet-config:95
+#: ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "Проверить на наличие пропущенных источников \"%s\""
@@ -546,16 +530,13 @@ msgstr "Enterprise"
 
 #: ../mdkapplet_gui.pm:87
 #, c-format
-msgid ""
-"Mandriva Powerpack brings you the best of Linux experience for desktop: "
-"stability and efficiency of open source solutions together with exclusive "
-"softwares and Mandriva official support."
-msgstr ""
+msgid "Mandriva Powerpack brings you the best of Linux experience for desktop: stability and efficiency of open source solutions together with exclusive softwares and Mandriva official support."
+msgstr "Mandriva Powerpack привнесет лучшее из Linux на ваш ПК: стабильность и эффективность решений с открытым исходным кодом вместе с эксклюзивным ПО и официальной поддержкой Mandriva."
 
 #: ../mdkapplet_gui.pm:94
-#, fuzzy, c-format
+#, c-format
 msgid "Mandriva Linux Features"
-msgstr "Mandriva Linux"
+msgstr "Особенности Mandriva Linux"
 
 #: ../mdkapplet_gui.pm:213
 #, c-format
@@ -590,24 +571,25 @@ msgstr "Закрыть"
 #: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Choose your upgrade version"
-msgstr ""
+msgstr "Выберите версию для обновления"
 
 #: ../mdkapplet_gui.pm:306
 #, c-format
 msgid "Your Powerpack access has ended"
-msgstr ""
+msgstr "Ваша подписка Powerpack закончилась"
 
 #: ../mdkapplet_gui.pm:309
 #, c-format
 msgid "%s is now available, you can upgrade to:"
-msgstr ""
+msgstr "Уже доступен %s и вы можете обновиться:"
 
 #: ../mdkonline.pm:177
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:178 ../mdkonline.pm:198
+#: ../mdkonline.pm:178
+#: ../mdkonline.pm:198
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
@@ -622,22 +604,21 @@ msgstr "Mandriva Mini"
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:181 ../mdkonline.pm:194
+#: ../mdkonline.pm:181
+#: ../mdkonline.pm:194
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
 #: ../mdkonline.pm:195
 #, c-format
-msgid ""
-"The Mandriva Linux distribution with even more softwares and official "
-"support."
-msgstr ""
+msgid "The Mandriva Linux distribution with even more softwares and official support."
+msgstr "Дистрибутив Mandriva Linux с еще большим количеством программ и официальной поддержкой."
 
 #: ../mdkonline.pm:199
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
-msgstr ""
+msgstr "Доступен 100%% свободный дистрибутив."
 
 #: ../mdkonline.pm:213
 #, c-format
@@ -649,15 +630,13 @@ msgstr "Обновление дистрибутива"
 msgid ""
 "mdkupdate version %s\n"
 "Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU "
-"GPL.\n"
+"This is free software and may be redistributed under the terms of the GNU GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
 "mdkupdate версия %s\n"
 "Copyright (C) %s Mandriva.\n"
-"Это открытое программное обеспечение и может распространяться согласно "
-"условиям GNU GPL.\n"
+"Это открытое программное обеспечение и может распространяться согласно условиям GNU GPL.\n"
 "\n"
 "использование:\n"
 
