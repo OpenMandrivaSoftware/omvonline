@@ -196,7 +196,7 @@ sub run_ask_credentials_dialog {
     };
 
     my @widgets = (
-	mdkonline::get_banner($title),
+	if_(!$::isEmbedded, mdkonline::get_banner($title)),
         if_($options{top_extra},
             @{ $options{top_extra} },
             gtknew('HSeparator'),
