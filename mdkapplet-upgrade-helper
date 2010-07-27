@@ -90,8 +90,11 @@ sub run_gurpmi() {
     my @initial_args = ('--replacefiles', '--clean');
     push @initial_args, "--download-all=$download_dir" if $download_dir;
 
+    # Windows are created before upgrading packages, to guarantee that
+    # any possible related GTK upgrade won't affect us...
     my $succeeded_win = create_upgrade_succeeded_window();
     my $failed_win = create_upgrade_failed_window();
+
     while ($refork_gurpmi) {
         
         my $ok = fork_gurpmi(@initial_args);
@@ -110,6 +113,8 @@ sub run_gurpmi() {
             } else {
                 rm_rf(get_stale_upgrade_filename());
                 $succeeded_win->main && !$::testing && any::reboot();
+                my $mdkapp_pid = common::is_running('mdkapplet');
+                defined($mdkapp_pid) && kill('HUP', $mdkapp_pid);
             }
         }
     }
@@ -123,7 +128,7 @@ my @common = (
     width => $width - 50,
 );
 
-sub get_upgrade_failed_window() {
+sub create_upgrade_failed_window() {
     local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Error"));
     gtkadd($w->{window},
@@ -138,7 +143,7 @@ sub get_upgrade_failed_window() {
     return $w;
 }
 
-sub get_upgrade_succeeded_window() {
+sub create_upgrade_succeeded_window() {
     local $mygtk2::left_padding = 0;
     my $w = ugtk2->new(N("Congratulations"));
     gtkadd($w->{window},

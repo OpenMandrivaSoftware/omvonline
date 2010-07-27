@@ -289,6 +289,7 @@ Glib::Timeout->add_seconds($config{FIRST_CHECK_DELAY}/1000, sub {
 $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
 $SIG{CHLD} = \&harvester;
+$SIG{HUP} = \&restart_applet;
 
 run_program::raw({ detach => 1 }, 'ionice', '-p', $$, '-n7');
 
@@ -431,6 +432,13 @@ sub harvester {
     } while $childpid > 0;
     Glib::Timeout->add(200, sub { silentCheck(); 0 }) if $schedule_checks;
     return @pids;
+}
+
+sub restart_applet {
+    local $SIG{CHLD} = 'DEFAULT';
+    log::explanations(N("Received SIGHUP (probably an upgrade has finished), restarting applet."));
+    { redo if wait() > 0 }
+    exec($0, '--auto-update');
 }
 
 # FIXME: we can run many drakconnect when network is down:
@@ -612,10 +620,10 @@ sub no_more_supported() {
 
 
 sub get_extended_maintenance() {
-    $mdv_update_pid = fork_exec('mdkapplet-extended-maintenance-helper', $product_id->{version},
-                                if_($::testing, '--testing'),
-                                if_($download_all, "--download-all=$download_dir"),
-                                if_($root, "--urpmi-root=$root"));
+    $mdv_update_pid = fork_exec('mdkapplet-add-media-helper', 
+                                if_($root, "--urpmi-root=$root"),
+                                '--product=extended',
+                                $product_id->{version});
 }
 
 
