@@ -621,6 +621,7 @@ sub no_more_supported() {
 
 sub get_extended_maintenance() {
     $mdv_update_pid = fork_exec('mdkapplet-add-media-helper', 
+                                if_($::testing, '--testing'),
                                 if_($root, "--urpmi-root=$root"),
                                 '--product=extended',
                                 $product_id->{version});
