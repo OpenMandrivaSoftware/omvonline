@@ -686,7 +686,8 @@ sub add_media() {
 sub installUpdates() {
     return if $mdv_update_pid;
     log::explanations(N_("Launching MandrivaUpdate\n"));
-    $mdv_update_pid = fork_exec('MandrivaUpdate', '--no-media-update', '--no-confirmation', '--no-splash',
+    my $program = find { -x "/usr/bin/$_" } qw(MageiaUpdate MandrivaUpdate);
+    $mdv_update_pid = fork_exec($program, '--no-media-update', '--no-confirmation', '--no-splash',
                                 if_($root, "--urpmi-root=$root"));
     silentCheck(); gtkflush();
 }
