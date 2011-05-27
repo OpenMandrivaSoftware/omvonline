@@ -78,17 +78,17 @@ dist:
 		echo "Unknown SCM (not SVN nor GIT)";\
 		exit 1; \
 	fi;
-	$(info $(NAME)-$(VERSION).tar.lzma is ready)
+	$(info $(NAME)-$(VERSION).tar.xz is ready)
 
 dist-svn:
 	rm -rf $(NAME)-$(VERSION)
 	svn export -q -rBASE . $(NAME)-$(VERSION)
-	tar cfa ../$(PACKAGE)-$(VERSION).tar.lzma $(PACKAGE)-$(VERSION)
+	tar cfa ../$(PACKAGE)-$(VERSION).tar.xz $(PACKAGE)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 
 dist-git:
-	 @git archive --prefix=$(NAME)-$(VERSION)/ HEAD | lzma >../$(NAME)-$(VERSION).tar.lzma;
+	 @git archive --prefix=$(NAME)-$(VERSION)/ HEAD | xz >../$(NAME)-$(VERSION).tar.xz;
 
 log:changelog
 
