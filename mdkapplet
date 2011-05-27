@@ -930,8 +930,8 @@ sub setState {
     gtkflush(); # so that bubbles are displayed on right icon
 
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
-        my $bubble = Gtk2::Notify->new_with_status_icon(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
-                                                        '/usr/share/icons/mdkonline.png', $icon);
+        my $bubble = Gtk2::Notify->new(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
+                                                        '/usr/share/icons/mdkonline.png');
         if ($state eq 'new_distribution') {
             $bubble->add_action('clicked', N("More Information"), \&upgrade);
             if ($sub_state eq 'updates') {
