@@ -351,7 +351,7 @@ packages as well?)."))
         local $ENV{TMPDIR} = undef;
 	my $log_template = 
 	    "gurpmi_upgrade_to_${new_distro_version}_XXXXXXXX";
-        $log_file = chomp_(`mktemp -u --tmpdir=$ENV{HOME}/ --suffix=.log $log_template`);
+        $log_file = chomp_(`mktemp -u --tmpdir=$ENV{HOME}/.MdkOnline/ --suffix=.log $log_template`);
         log::explanations("logging gurpmi message in '$log_file'");
     }
 
