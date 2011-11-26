@@ -27,6 +27,7 @@ use lib qw(/usr/lib/libDrakX);
 use standalone; # for explanations
 use common;
 use run_program;
+use feature 'state';
 
 BEGIN { unshift @::textdomains, 'mdkonline' }
 
@@ -709,7 +710,7 @@ sub update_backport_media {
 }
 
 sub silentCheck() {
-    my $check_time if 0;
+    state $check_time;
     my $new_time = time();
     if (!$check_time || $new_time - $check_time > $config{DISTRO_CHECK_DELAY}) {
         clean_distro_cache();
@@ -915,7 +916,7 @@ sub about_dialog() {
 sub setState {
     my ($state) = @_;
     my $checkme;
-    my $previous_state if 0;
+    state $previous_state;
     my @arr = @{$state{$state}{menu}};
     my $tmp = eval { gtkcreate_pixbuf($state{$state}{colour}[0]) };
     $icon->set_from_pixbuf($tmp) if $tmp;
