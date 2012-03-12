@@ -308,7 +308,7 @@ sub is_extended_support_not_ended {
 
 
 sub is_there_a_new_distributions() {
-    # sanity check for cooker:
+    # sanity check for cooker/cauldron:
     return if $product_id->{branch} eq 'Devel';
     # some OEM Philco systems have no specific updates repo
     # so we can only blacklist them here directly
