@@ -45,7 +45,6 @@ our @EXPORT = qw(find_current_distro
                  get_release
                  get_stale_upgrade_filename
                  get_urpmi_options
-                 is_it_2008_0
                  is_enterprise_media_supported
                  is_extmaint_supported
                  is_restricted_media_supported
@@ -89,21 +88,15 @@ sub get_release() {
     ($r);
 }
 
-sub is_it_2008_0() {
-  $product_id->{version} eq '2008.0';
-}
-
 sub is_extmaint_supported() {
     $product_id->{support} eq 'extended';
 }
 
 sub is_enterprise_media_supported() {
-    return if is_it_2008_0();
     to_bool($product_id->{type} eq 'Enterprise' && $product_id->{product} eq 'Server');
 }
 
 sub is_restricted_media_supported() {
-    return if is_it_2008_0();
     to_bool($product_id->{product} =~ /powerpack/i);
 }
 
@@ -130,15 +123,8 @@ sub get_distro_list_() {
         # for curl exit code, which broke downloads:
         local $SIG{CHLD} = 'DEFAULT';
 
-        # old API:
-        if (member($product_id->{version}, qw(2007.1 2008.0 2008.1))) {
-            require mdkapplet_urpm;
-            mdkapplet_urpm::ensure_valid_cachedir($urpm);
-            mdkapplet_urpm::get_content($urpm, $list);
-        } else {
-            urpm::ensure_valid_cachedir($urpm);
-            urpm::download::get_content($urpm, $list);
-        }
+        urpm::ensure_valid_cachedir($urpm);
+        urpm::download::get_content($urpm, $list);
     };
 }
 
@@ -214,7 +200,7 @@ sub get_banner {
 }
 
 sub get_urpmi_options() {
-    ({ sensitive_arguments => 1 }, 'urpmi.addmedia', if_(!is_it_2008_0(), '--xml-info', 'always'));
+    ({ sensitive_arguments => 1 }, 'urpmi.addmedia', '--xml-info', 'always');
 }
 
 sub add_medium_enterprise {

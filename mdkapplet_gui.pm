@@ -64,11 +64,7 @@ our $localfile = "$localdir/mdkonline";
 mkdir_p($localdir) if !-d $localdir;
 -e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
 
-# make it work on 2008.X:
-eval { interactive::gtk::add_padding(Gtk2::Label->new) };
-if ($@) {
-    *interactive::gtk::add_padding = sub { $_[0] };
-}
+interactive::gtk::add_padding(Gtk2::Label->new);
 
 our %local_config;
 read_local_config();

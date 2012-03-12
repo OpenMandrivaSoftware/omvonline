@@ -309,8 +309,7 @@ sub is_extended_support_not_ended {
 
 sub is_there_a_new_distributions() {
     # sanity check for cooker:
-    # (2008.0 wrongly reports 'Devel' instead of 'Official'):
-    return if $product_id->{branch} eq 'Devel' && !is_it_2008_0();
+    return if $product_id->{branch} eq 'Devel';
     # some OEM Philco systems have no specific updates repo
     # so we can only blacklist them here directly
     return if cat_("/etc/oem-release") =~ /philco/i;
@@ -338,9 +337,6 @@ sub is_there_a_new_distributions() {
         $new_distro = find { $_->{version} eq $no_more_supported } @distros;
         return if is_extended_support_not_ended();
     }
-
-    # the "live upgrade" is not available on 2008.0:
-    return if is_it_2008_0();
 
     # no if we're using the extended maintenance:
     return if is_extended_support_not_ended();
@@ -450,8 +446,7 @@ sub configNetwork() {
 
 # only enable 'download all packages at once' on 2010.1 and further:
 sub is_download_all_enabled() {
-    # prevent crashing on 2008.1 and 2009.0:
-    eval { is_it_a_devel_distro() } || !member($product_id->{version}, qw(2008.0 2008.1 2009.0 2009.1));
+    is_it_a_devel_distro();
 }
 
 sub confirm_upgrade() {
@@ -478,7 +473,6 @@ sub confirm_upgrade() {
                gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
-               # active_ref option is missing on 2008.0:
                (is_download_all_enabled() ?
                    (gtknew('CheckButton', text => N("Download all packages at once") . "\n" .
                             N("(Warning: You will need quite a lot of free space)"),
@@ -756,17 +750,14 @@ sub silentCheck() {
         }
         checker_exit('locked') if $will_not_update_media;
 
-        # prevent crashing on 2008.1 and 2009.0:
-        my $is_it_a_devel_distro = eval { is_it_a_devel_distro() };
+        my $is_it_a_devel_distro = is_it_a_devel_distro();
 
         my $media = $is_it_a_devel_distro ? '-a' : '--update';
         if (!run_program::run('urpmi.update', $media, if_($root, "--urpmi-root=$root"))) {
             checker_exit('error_updating') if $will_not_update_media;
         }
 
-        if (!is_it_2008_0()) {
-            update_backport_media($urpm);
-        }
+        update_backport_media($urpm);
         
         require urpm::select;
         require urpm::media;
@@ -774,8 +765,7 @@ sub silentCheck() {
         # (hence we do it in the forked helper so that the applet doesn't eat too much RAM)
         urpm::media::configure($urpm, if_(!$is_it_a_devel_distro, update => 1));
 
-        # prevent crashing on 2008.1 and 2009.0:
-        my @update_medias = eval { get_update_medias($urpm) };
+        my @update_medias = get_update_medias($urpm);
         if ($@) {
             @update_medias = grep { $_->{update} } @{$urpm->{media}};
         }
@@ -848,22 +838,11 @@ sub setLastTime() {
     setVar('LASTCHECK', $date);
 }
 
-sub has_network_connection_2008() {
-    require network::network;
-    require network::tools;
-    my $net = {};
-    network::network::read_net_conf($net);
-    my ($_gw_intf, $_is_up, $gw_address, $_dns_server) = network::tools::get_internet_connection($net);
-    to_bool($gw_address);
-}
-
 sub checkNetwork() {
     return if $checker_pid;
     require network::tools;
-    # alternatively we could have used 2008.0's network::tools::connected()
-    my $has_network = is_it_2008_0() ? has_network_connection_2008()
-      : network::tools::has_network_connection();
-    if (!$has_network) {
+    
+    if (!network::tools::has_network_connection()) {
         # do not notify if already done:
         return if member($state_global, qw(disconnected));
 	log::explanations(N_("Checking Network: seems disabled\n"));
