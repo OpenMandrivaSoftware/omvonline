@@ -535,7 +535,7 @@ sub no_more_supported_choice() {
     # FIXME: just tell radio buttons' children to wrap instead:
     local $mdkapplet_gui::width = 580;
     my $w = new_portable_dialog(N("Your distribution is no longer supported"));
-    my ($b1, $b2, $b3);
+    my ($b1, $b2);
     my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
 
     my @widgets = (
@@ -568,7 +568,7 @@ sub no_more_supported_choice() {
             ]),
             gtknew('HSeparator'),
         ) : ()),
-        $b3 = gtknew('RadioButton', text => N("Do not ask me next time"),
+        gtknew('RadioButton', text => N("Do not ask me next time"),
                      toggled => sub {
                          $choice = 'nothing' if $_[0]->get_active;
                          $warn_me = $_[0]->get_active },
