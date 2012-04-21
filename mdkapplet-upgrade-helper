@@ -287,6 +287,9 @@ packages as well?)."))
     log::explanations("removing all existing urpmi media for upgrade");
     run_program::run('urpmi.removemedia', if_($root, '--urpmi-root', $root), '-a');
 
+    #- clear the mirror cache before upgrading:
+    eval { rm_rf("$::prefix/var/cache/urpmi/mirrors.cache") };
+
     $urpm = Rpmdrake::open_db::fast_open_urpmi_db();
     if ($urpm->{global_config}{downloader}) {
         log::explanations("disabling custom downloader in order to use aria2");
