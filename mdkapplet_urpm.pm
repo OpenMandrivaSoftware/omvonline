@@ -5,15 +5,11 @@ package mdkapplet_urpm;
 use MDK::Common;
 use urpm::download;
 
-sub userdir_prefix {
-    my ($_urpm) = @_;
-    '/tmp/.urpmi-';
-}
 sub userdir {
     my ($urpm) = @_;
     $< or return;
 
-    my $dir = ($urpm->{urpmi_root} || '') . userdir_prefix($urpm) . $<;
+    my $dir = ($urpm->{urpmi_root} || '') . urpm::userdir_prefix($urpm) . $<;
     mkdir $dir, 0755; # try to create it
 
     -d $dir && ! -l $dir or $urpm->{fatal}(1, sprintf("fail to create directory %s", $dir));
