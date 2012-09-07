@@ -816,9 +816,6 @@ sub silentCheck() {
     }
 }
 
-sub okState() { log::explanations(N_("System is up-to-date\n")); go2State('okay') }
-
-
 sub setup_cyclic_check() {
     $network_timeout = Glib::Timeout->add(2000, sub { checkNetwork(); 1 });
     $timeout = Glib::Timeout->add_seconds($config{UPDATE_FREQUENCY}, sub {
