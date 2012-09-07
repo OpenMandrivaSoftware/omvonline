@@ -460,6 +460,10 @@ sub confirm_upgrade() {
         Gtk2::FileChooserButton->new(N("Browse"), 'select-folder'),
         'current-folder-changed' => sub {
             $temp_dir = $_[0]->get_current_folder;
+            my $ok = 1;
+            require urpm;
+            urpm::check_cache_dir({ fatal => sub { $ok = 0 } }, $temp_dir);
+            $ok or ask_warn(N("Error"), N("You must choose a directory owned by the super administrator!"));
         });
     $browse->set_current_folder($download_dir);
 
@@ -491,6 +495,10 @@ sub confirm_upgrade() {
     setVar('DO_NOT_ASK_FOR_DISTRO_UPGRADE', bool2text($warn_me));
     $local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE} = bool2text($warn_me);
     if ($res) {
+        require urpm;
+        my $ok = 1;
+        urpm::check_cache_dir({ fatal => sub { $ok = 0 } }, $temp_dir);
+        $ok or goto &confirm_upgrade;
         $download_dir = $temp_dir;
         really_confirm_upgrade();
     } else {
