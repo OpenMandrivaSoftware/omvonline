@@ -49,6 +49,7 @@ my $logfile = '/var/tmp/mdkupdate.log';
 
 my $CLIENT_VERSION = "4";
 my $YEARS = "2002-2006";
+my $MGA_YEARS = "2010-2012";
 
 #for compatibilities with former versions
 mkdir_p($confdir) if !-d $confdir;
@@ -57,10 +58,12 @@ mkdir_p($confdir) if !-d $confdir;
 
 sub usage() {
     print STDERR N("mdkupdate version %s
-Copyright (C) %s Mandriva.
+%s
 This is free software and may be redistributed under the terms of the GNU GPL.
 
 usage:
+", $CLIENT_VERSION,
+N("Copyright (C) %s %s", $YEARS, 'Mandriva') . N("Copyright (C) %s %s", $MGA_YEARS, 'Mageia')) . N("  --help		- print this help message.
 ", $CLIENT_VERSION, $YEARS) . N("  --help		- print this help message.
 ") . N("  --auto		- Mandriva Update launched automatically.
 ") . N("  --mnf			- launch mnf specific scripts.
