@@ -774,9 +774,6 @@ sub silentCheck() {
         urpm::media::configure($urpm, if_(!$is_it_a_devel_distro, update => 1));
 
         my @update_medias = get_update_medias($urpm);
-        if ($@) {
-            @update_medias = grep { $_->{update} } @{$urpm->{media}};
-        }
 
         if (!@update_medias) {
 	    if (is_enterprise_media_supported()) {
