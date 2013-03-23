@@ -37,6 +37,7 @@ use lib qw(/usr/lib/libDrakX/drakfirsttime);
 use mdkonline;
 use mdkapplet_gui;
 use Gtk2::Notify '-init', 'mdkapplet';
+use Net::DBus qw(:typing);
 use Rpmdrake::open_db;
 
 if (!find { $_ eq '--auto-update' } @ARGV) {
@@ -286,6 +287,9 @@ Glib::Timeout->add_seconds($config{FIRST_CHECK_DELAY}/1000, sub {
                        0;
                    });
 
+sub gnome_shell_exit_overview() {
+    eval { Net::DBus->session->get_service('org.gnome.Shell')->get_object('/org/gnome/Shell', 'org.freedesktop.DBus.Properties')->Set('org.gnome.Shell', 'OverviewActive', dbus_boolean(0)); };
+}
 
 $SIG{USR1} = 'IGNORE';
 $SIG{USR2} = 'IGNORE';
@@ -609,6 +613,7 @@ sub no_more_supported_choice() {
 my $no_more_supported_wip;
 sub no_more_supported() {
     return if $mdv_update_pid || $no_more_supported_wip;
+    gnome_shell_exit_overview();
     $no_more_supported_wip = 1;
     my $choice = no_more_supported_choice();
     if ($choice eq 'upgrade') {
@@ -669,6 +674,7 @@ sub really_confirm_upgrade() {
 
 sub upgrade() {
     return if $mdv_update_pid;
+    gnome_shell_exit_overview();
     return if !confirm_upgrade();
     real_upgrade();
 }
@@ -683,12 +689,14 @@ sub real_upgrade() {
 sub add_media() {
     return if $media_manager_pid;
     log::explanations("Launching 'Software Media Manager'");
+    gnome_shell_exit_overview();
     $media_manager_pid = fork_exec('/usr/sbin/edit-urpm-sources.pl', '--no-splash', if_($root, "--urpmi-root=$root"));
 }
 
 sub installUpdates() {
     return if $mdv_update_pid;
     log::explanations(N_("Launching MandrivaUpdate\n"));
+    gnome_shell_exit_overview();
     my $program = find { -x "/usr/bin/$_" } qw(MageiaUpdate MandrivaUpdate);
     $mdv_update_pid = fork_exec($program, '--no-media-update', '--no-confirmation', '--no-splash',
                                 if_($root, "--urpmi-root=$root"));
