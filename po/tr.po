@@ -11,10 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mdkonline\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-07 16:23-0300\n"
+"POT-Creation-Date: 2013-03-31 17:25+0200\n"
 "PO-Revision-Date: 2010-06-08 18:48+0200\n"
 "Last-Translator: Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 "Language-Team: Turkish <cooker-i18n@mandrivalinux.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,69 +26,74 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:71
+#: ../mdkapplet:75
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Güncellemeler %s itibarî ile kontrol edilecek"
 
-#: ../mdkapplet:79
+#: ../mdkapplet:83
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Sisteminiz güncel"
 
-#: ../mdkapplet:84
+#: ../mdkapplet:88
 #, c-format
-msgid "Service configuration problem. Please check logs and send mail to support@mandrivaonline.com"
-msgstr "Hizmet yapılandırma sorunu. Lütfen kayıtları denetleyin ve support@mandrivaonline.com adresine e-posta gönderin"
+msgid ""
+"Service configuration problem. Please check logs and send mail to "
+"support@mandrivaonline.com"
+msgstr ""
+"Hizmet yapılandırma sorunu. Lütfen kayıtları denetleyin ve "
+"support@mandrivaonline.com adresine e-posta gönderin"
 
-#: ../mdkapplet:90
+#: ../mdkapplet:94
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Lütfen bekleyin, güncellemeler denetleniyor..."
 
-#: ../mdkapplet:95
+#: ../mdkapplet:99
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Sisteminiz için yeni güncellemeler mevcut"
 
-#: ../mdkapplet:101
+#: ../mdkapplet:105
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Mandriva Linux' un yeni bir sürümü yayınlanmış"
 
-#: ../mdkapplet:119
-#: ../mdkapplet:161
+#: ../mdkapplet:123 ../mdkapplet:165
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Dağıtımınız için ek bir paket veri kaynağı mevcut"
 
-#: ../mdkapplet:124
+#: ../mdkapplet:128
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Ağınız çalışmıyor. Lütfen ağ yapılandırmanızı kontrol edin"
 
-#: ../mdkapplet:130
+#: ../mdkapplet:134
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Hizmet etkin değil. Lütfen \"Çevrimiçi Website\"bağlantısına tıklayın"
 
-#: ../mdkapplet:135
-#: ../mdkapplet:141
+#: ../mdkapplet:139 ../mdkapplet:145
 #, c-format
 msgid "urpmi database locked"
 msgstr "urpmi veri tabanı kilitli "
 
-#: ../mdkapplet:146
+#: ../mdkapplet:150
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Sürüm Desteklenmiyor (Çok eski ya da deneme sürümü)"
 
-#: ../mdkapplet:156
+#: ../mdkapplet:160
 #, c-format
-msgid "No medium found. You must add some media through 'Software Media Manager'."
-msgstr "Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir yazılım ortamı ekleyin."
+msgid ""
+"No medium found. You must add some media through 'Software Media Manager'."
+msgstr ""
+"Yazılım ortamı bulunamadı. 'Yazılım Ortam Yöneticisi' nden geçerli bir "
+"yazılım ortamı ekleyin."
 
-#: ../mdkapplet:166
+#: ../mdkapplet:170
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -104,310 +110,318 @@ msgstr ""
 "\n"
 "Sonra, \"%s\" yeniden başlatın."
 
-#: ../mdkapplet:171
+#: ../mdkapplet:175
 #, c-format
 msgid "Enabled"
 msgstr "Etkin"
 
-#: ../mdkapplet:184
+#: ../mdkapplet:188
 #, c-format
 msgid "Error updating media"
 msgstr "Kaynak güncelleme hatası"
 
-#: ../mdkapplet:224
-#: ../mdkapplet:946
+#: ../mdkapplet:228 ../mdkapplet:940
 #, c-format
 msgid "Install updates"
 msgstr "Güncellemeleri Kur"
 
-#: ../mdkapplet:225
-#: ../mdkapplet:226
+#: ../mdkapplet:229 ../mdkapplet:230
 #, c-format
 msgid "Add additional package medium"
 msgstr "Ek bir paket veri kaynağı ekle"
 
-#: ../mdkapplet:227
+#: ../mdkapplet:231
 #, c-format
 msgid "Check Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: ../mdkapplet:228
+#: ../mdkapplet:232
 #, c-format
 msgid "Configure Network"
 msgstr "Ağı Yapılandır"
 
-#: ../mdkapplet:229
+#: ../mdkapplet:233
 #, c-format
 msgid "Upgrade the system"
 msgstr "Sistemi yükselt"
 
-#: ../mdkapplet:394
+#: ../mdkapplet:397
 #, c-format
-msgid "Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s"
-msgstr "Bu dağıtım için temel bakım sona erdi. Genişletilmiş bakım kaydı yaptırdığınız için teşekkürler. Sisteminiz %s tarihine kadar güncel tutulacak."
+msgid ""
+"Basic maintenance for this distribution has expired. Thanks to your "
+"subscription to extended maintenance, your system will be kept up to date "
+"until %s"
+msgstr ""
+"Bu dağıtım için temel bakım sona erdi. Genişletilmiş bakım kaydı "
+"yaptırdığınız için teşekkürler. Sisteminiz %s tarihine kadar güncel "
+"tutulacak."
 
-#: ../mdkapplet:439
+#: ../mdkapplet:442
 #, c-format
 msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
-msgstr "Bir SIGHUP iletisi alındı. Muhtemelen bir yükseltme işlemi tamamlanmış. Programcık yeniden başlatılıyor"
+msgstr ""
+"Bir SIGHUP iletisi alındı. Muhtemelen bir yükseltme işlemi tamamlanmış. "
+"Programcık yeniden başlatılıyor"
 
-#: ../mdkapplet:446
+#: ../mdkapplet:449
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Drakconnect başlatılıyor\n"
 
-#: ../mdkapplet:459
-#: ../mdkapplet:632
+#: ../mdkapplet:461 ../mdkapplet:643
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Mandriva Linux dağıtımının yeni sürümü"
 
-#: ../mdkapplet:464
+#: ../mdkapplet:466
 #, c-format
 msgid "Browse"
 msgstr "Göz at"
 
-#: ../mdkapplet:473
+#: ../mdkapplet:472 ../mdkapplet-add-media-helper:148
+#: ../mdkapplet-add-media-helper:193 ../mdkapplet-add-media-helper:225
+#: ../mdkapplet_gui.pm:240
+#, c-format
+msgid "Error"
+msgstr "Hata"
+
+#: ../mdkapplet:472
+#, c-format
+msgid "You must choose a directory owned by the super administrator!"
+msgstr ""
+
+#: ../mdkapplet:479
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Mandriva Linux' un yeni bir sürümü yayınlanmış"
 
-#: ../mdkapplet:475
-#: ../mdkapplet:572
+#: ../mdkapplet:481 ../mdkapplet:581
 #, c-format
 msgid "More info about this new version"
 msgstr "Bu sürüm hakkında daha fazla bilgi"
 
-#: ../mdkapplet:477
-#: ../mdkapplet:566
+#: ../mdkapplet:483 ../mdkapplet:575
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "'%s' dağıtımına yükseltmek ister misiniz?"
 
-#: ../mdkapplet:479
-#: ../mdkapplet:576
-#: ../mdkapplet:1033
-#: ../mdkapplet:1063
+#: ../mdkapplet:485 ../mdkapplet:585 ../mdkapplet:1027 ../mdkapplet:1057
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Bir daha sorma"
 
-#: ../mdkapplet:482
+#: ../mdkapplet:487
 #, c-format
 msgid "Download all packages at once"
 msgstr "Tüm paketleri tek seferde indir"
 
-#: ../mdkapplet:483
+#: ../mdkapplet:488
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Uyarı: Oldukça fazla boş alana gereksinimizi olacak)"
 
-#: ../mdkapplet:489
+#: ../mdkapplet:494
 #, c-format
 msgid "Where to download packages:"
 msgstr "Paketlerin indirileceği konum:"
 
-#: ../mdkapplet:493
-#: ../mdkapplet:581
-#: ../mdkapplet:658
-#: ../mdkapplet:1034
-#: ../mdkapplet:1064
-#: ../mdkapplet_gui.pm:232
-#: ../mdkapplet_gui.pm:313
+#: ../mdkapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
+#: ../mdkapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
 #, c-format
 msgid "Next"
 msgstr "İleri"
 
-#: ../mdkapplet:493
-#: ../mdkapplet:581
-#: ../mdkapplet:658
-#: ../mdkapplet:1034
-#: ../mdkapplet:1064
-#: ../mdkapplet_gui.pm:232
-#: ../mdkapplet_gui.pm:313
+#: ../mdkapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
+#: ../mdkapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
 #, c-format
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../mdkapplet:508
+#: ../mdkapplet:517
 #, c-format
-msgid "Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."
-msgstr "Bu Mandriva Linux sürümü için bakım süreci sona erdi. Bu sistem için daha fazla güncelleme yapılmayacak."
+msgid ""
+"Maintenance for this Mandriva Linux version has ended. No more updates will "
+"be delivered for this system."
+msgstr ""
+"Bu Mandriva Linux sürümü için bakım süreci sona erdi. Bu sistem için daha "
+"fazla güncelleme yapılmayacak."
 
-#: ../mdkapplet:514
+#: ../mdkapplet:523
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "Sisteminizi güvenli tutabilmek için yapabilecekleriniz:"
 
-#: ../mdkapplet:520
+#: ../mdkapplet:529
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:526
+#: ../mdkapplet:535
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "Genişletilmiş bakım edinmelisiniz."
 
-#: ../mdkapplet:528
+#: ../mdkapplet:537
 #, c-format
-msgid "You should either get extended maintenance or upgrade to a newer version of the %s distribution."
-msgstr "Genişletilmiş bakım almalı veya %s dağıtımının daha yeni bir sürümüne yükseltme yapmalısınız."
+msgid ""
+"You should either get extended maintenance or upgrade to a newer version of "
+"the %s distribution."
+msgstr ""
+"Genişletilmiş bakım almalı veya %s dağıtımının daha yeni bir sürümüne "
+"yükseltme yapmalısınız."
 
-#: ../mdkapplet:532
+#: ../mdkapplet:541
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "'%s' dağıtımının daha yeni bir sürümüne yükseltmelisiniz."
 
-#: ../mdkapplet:542
+#: ../mdkapplet:551
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Dağıtımınız artık desteklenmemektedir."
 
-#: ../mdkapplet:547
+#: ../mdkapplet:556
 #, c-format
 msgid "Extended Maintenance"
 msgstr "Genişletilmiş Bakım"
 
-#: ../mdkapplet:552
+#: ../mdkapplet:561
 #, c-format
-msgid "Purchase a maintenance extension for this version (%s) and keep it running until %s."
-msgstr "Bu sürüm (%s)  için bir bakım eklentisi satın alın ve %s tarihine kadar güncel kalsın."
+msgid ""
+"Purchase a maintenance extension for this version (%s) and keep it running "
+"until %s."
+msgstr ""
+"Bu sürüm (%s)  için bir bakım eklentisi satın alın ve %s tarihine kadar "
+"güncel kalsın."
 
-#: ../mdkapplet:649
+#: ../mdkapplet:660
 #, c-format
-msgid "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."
-msgstr "Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
+msgid ""
+"This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
+"and may take several hours to complete."
+msgstr ""
+"Bu yükseltme yüksek hızda ağ bağlantısı (kablo, xDSL v.b.) gerektirir ve  birkaç saat sürebilir."
 
-#: ../mdkapplet:651
+#: ../mdkapplet:662
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "İndirilecek yaklaşık veri miktarı %s"
 
-#: ../mdkapplet:652
+#: ../mdkapplet:663
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Devam etmeden önce, çalışan tüm uygulamaları kapatmalısınız."
 
-#: ../mdkapplet:655
+#: ../mdkapplet:666
 #, c-format
-msgid "You should put your laptop on AC and favor ethernet connection over wifi, if available."
-msgstr "Dizüstü bilgisayarınızı doğrudan fişe takmalı ve mümkünse, kablosuz bağlantı  yerine ethernet bağlantısını tercih etmelisiniz."
+msgid ""
+"You should put your laptop on AC and favor ethernet connection over wifi, if "
+"available."
+msgstr ""
+"Dizüstü bilgisayarınızı doğrudan fişe takmalı ve mümkünse, kablosuz bağlantı  yerine ethernet bağlantısını tercih etmelisiniz."
 
-#: ../mdkapplet:687
+#: ../mdkapplet:700
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Mandriva Güncelleme Başlatılıyor.\n"
 
-#: ../mdkapplet:719
+#: ../mdkapplet:734
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Yeni güncellemeler hesaplanıyor...\n"
 
-#: ../mdkapplet:826
-#, c-format
-msgid "System is up-to-date\n"
-msgstr "Sisteminiz güncel \n"
-
-#: ../mdkapplet:866
+#: ../mdkapplet:860
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Ağ Denetleniyor: etkinleştirilmemiş\n"
 
-#: ../mdkapplet:893
+#: ../mdkapplet:887
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:894
+#: ../mdkapplet:888
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Copyright (C) %s bir Mandriva ürünüdür"
 
-#: ../mdkapplet:897
+#: ../mdkapplet:891
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online, Mandriva web hizmetlerine erişim sağlar."
 
-#: ../mdkapplet:899
+#: ../mdkapplet:893
 #, c-format
 msgid "Online WebSite"
 msgstr "Çevrimiçi Website"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:904
+#: ../mdkapplet:898
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Atilla ÖNTAŞ <atilla_ontas@mandriva.org>\n"
 
-#: ../mdkapplet:932
+#: ../mdkapplet:926
 #, c-format
 msgid "Warning"
 msgstr "Uyarı"
 
-#: ../mdkapplet:935
-#: ../mdkapplet:940
-#: ../mdkapplet:948
-#: ../mdkapplet:950
-#: ../mdkapplet_gui.pm:264
+#: ../mdkapplet:929 ../mdkapplet:934 ../mdkapplet:942 ../mdkapplet:944
+#: ../mdkapplet_gui.pm:260
 #, c-format
 msgid "More Information"
 msgstr "Daha Fazla Bilgi"
 
-#: ../mdkapplet:952
+#: ../mdkapplet:946
 #, c-format
 msgid "Add media"
 msgstr "Kurulum kaynağı ekle"
 
-#: ../mdkapplet:967
+#: ../mdkapplet:961
 #, c-format
 msgid "About..."
 msgstr "Hakkında..."
 
-#: ../mdkapplet:969
-#: ../mdkapplet-config:68
+#: ../mdkapplet:963 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Güncelleme Ayarları"
 
-#: ../mdkapplet:971
+#: ../mdkapplet:965
 #, c-format
 msgid "Always launch on startup"
 msgstr "Her zaman başlangıçta çalıştır"
 
-#: ../mdkapplet:973
+#: ../mdkapplet:967
 #, c-format
 msgid "Quit"
 msgstr "Çıkış"
 
-#: ../mdkapplet:1023
-#: ../mdkapplet:1028
-#: ../mdkapplet:1053
-#: ../mdkapplet:1058
+#: ../mdkapplet:1017 ../mdkapplet:1022 ../mdkapplet:1047 ../mdkapplet:1052
 #, c-format
 msgid "New medium available"
 msgstr "Yeni veri kaynağı mevcut"
 
-#: ../mdkapplet:1030
-#: ../mdkapplet:1060
+#: ../mdkapplet:1024 ../mdkapplet:1054
 #, c-format
-msgid "You use '%s' distribution and therefore have privileged access to additional software."
-msgstr "'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz var."
+msgid ""
+"You use '%s' distribution and therefore have privileged access to additional "
+"software."
+msgstr ""
+"'%s' dağıtımını kullanıyorsunuz ve bu sebeple ek yazılımlara erişim izniniz "
+"var."
 
-#: ../mdkapplet:1032
-#: ../mdkapplet:1062
+#: ../mdkapplet:1026 ../mdkapplet:1056
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Bu ek paket veri kaynağını eklemek ister misiniz?"
 
-#: ../mdkapplet:1061
-#: ../mdkonline.pm:182
+#: ../mdkapplet:1055 ../mdkonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:84
-#: ../mdkapplet-config:43
+#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Ek bir paket veri kaynağı ekleniyor"
@@ -420,15 +434,8 @@ msgstr "Desteklenen dağıtımlar %s, '%s' listede bulunmuyor.\n"
 #: ../mdkapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
-msgstr "Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
-
-#: ../mdkapplet-add-media-helper:148
-#: ../mdkapplet-add-media-helper:193
-#: ../mdkapplet-add-media-helper:225
-#: ../mdkapplet_gui.pm:244
-#, c-format
-msgid "Error"
-msgstr "Hata"
+msgstr ""
+"Lütfen ek bir paket veri kaynağı ekleyebilmek için hesap kimliğinizi doldurun"
 
 #: ../mdkapplet-add-media-helper:149
 #, c-format
@@ -438,13 +445,22 @@ msgstr "Dağıtım listesi alınırken hata oluştu:"
 #. -PO: Here '%s' will be a localized date (eg:
 #: ../mdkapplet-add-media-helper:161
 #, c-format
-msgid "Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions."
-msgstr "Mandriva, her sürüm için 12 ay süreyle masaüstü güncellemeleri (%s tarihine kadar) ve 18 ay süreyle temel sistem güncellemeleri ( %s tarihine kadar) sunar."
+msgid ""
+"Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
+"base updates (up to the %s) for distributions."
+msgstr ""
+"Mandriva, her sürüm için 12 ay süreyle masaüstü güncellemeleri (%s tarihine "
+"kadar) ve 18 ay süreyle temel sistem güncellemeleri ( %s tarihine kadar) "
+"sunar."
 
 #: ../mdkapplet-add-media-helper:167
 #, c-format
-msgid "Extended maintenance is now available to get 18 months of additional updates (until %s)."
-msgstr "18 ay boyunca ek güncelemeleri (%s tarihine kadar) edinebilmeniz için genişletilmiş bakım mümkün. "
+msgid ""
+"Extended maintenance is now available to get 18 months of additional updates "
+"(until %s)."
+msgstr ""
+"18 ay boyunca ek güncelemeleri (%s tarihine kadar) edinebilmeniz için "
+"genişletilmiş bakım mümkün. "
 
 #: ../mdkapplet-add-media-helper:170
 #, c-format
@@ -456,8 +472,7 @@ msgstr "Genişletilmiş bakım almak için <b>şu anda</b> kayıt olabilirsiniz:
 msgid "Lifetime policy"
 msgstr "Yaşam politikası"
 
-#: ../mdkapplet-add-media-helper:175
-#: ../mdkapplet_gui.pm:105
+#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:101
 #, c-format
 msgid "Online subscription"
 msgstr "Çevrimiçi Kayıt"
@@ -512,8 +527,7 @@ msgstr "İlk denetleme gecikmesi (dakika)"
 msgid "Check for newer \"%s\" releases"
 msgstr "Yeni  \"%s\" sürümlerini denetle"
 
-#: ../mdkapplet-config:95
-#: ../mdkapplet-config:101
+#: ../mdkapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "Kayıp \"%s\" yazılım kaynağını denetle"
@@ -528,109 +542,116 @@ msgstr "Kısıtlı"
 msgid "Enterprise"
 msgstr "Kuruluş"
 
-#: ../mdkapplet_gui.pm:87
+#: ../mdkapplet_gui.pm:83
 #, c-format
-msgid "Mandriva Powerpack brings you the best of Linux experience for desktop: stability and efficiency of open source solutions together with exclusive softwares and Mandriva official support."
-msgstr "Mandriva Powerpack size bir masaüstünün en iyi Linux deneyimini sunar: açık kaynaklı çözümlerin verimi ve kararlılığı ile birlikte seçkin yazılımlar ve Mandriva resmi desteği."
+msgid ""
+"Mandriva Powerpack brings you the best of Linux experience for desktop: "
+"stability and efficiency of open source solutions together with exclusive "
+"softwares and Mandriva official support."
+msgstr ""
+"Mandriva Powerpack size bir masaüstünün en iyi Linux deneyimini sunar: açık "
+"kaynaklı çözümlerin verimi ve kararlılığı ile birlikte seçkin yazılımlar ve "
+"Mandriva resmi desteği."
 
-#: ../mdkapplet_gui.pm:94
+#: ../mdkapplet_gui.pm:90
 #, c-format
 msgid "Mandriva Linux Features"
 msgstr "Mandriva Linux Özellikleri"
 
-#: ../mdkapplet_gui.pm:213
+#: ../mdkapplet_gui.pm:209
 #, c-format
 msgid "More information on your user account"
 msgstr "Kullanıcı hesabınızla ilgili ayrıntılı bilgi"
 
-#: ../mdkapplet_gui.pm:220
+#: ../mdkapplet_gui.pm:216
 #, c-format
 msgid "Your email"
 msgstr "E-posta adresiniz"
 
-#: ../mdkapplet_gui.pm:221
+#: ../mdkapplet_gui.pm:217
 #, c-format
 msgid "Your password"
 msgstr "Parolanız"
 
-#: ../mdkapplet_gui.pm:228
+#: ../mdkapplet_gui.pm:224
 #, c-format
 msgid "Forgotten password"
 msgstr "Unutulan parola"
 
-#: ../mdkapplet_gui.pm:245
+#: ../mdkapplet_gui.pm:241
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Parola ve e-posta boş olamaz."
 
-#: ../mdkapplet_gui.pm:267
+#: ../mdkapplet_gui.pm:263
 #, c-format
 msgid "Close"
 msgstr "Kapat"
 
-#: ../mdkapplet_gui.pm:302
+#: ../mdkapplet_gui.pm:298
 #, c-format
 msgid "Choose your upgrade version"
 msgstr "Yükseltme sürümünüzü seçin"
 
-#: ../mdkapplet_gui.pm:306
+#: ../mdkapplet_gui.pm:302
 #, c-format
 msgid "Your Powerpack access has ended"
 msgstr "Powerpack erişiminiz sona erdi"
 
-#: ../mdkapplet_gui.pm:309
+#: ../mdkapplet_gui.pm:305
 #, c-format
 msgid "%s is now available, you can upgrade to:"
 msgstr "%s erişilebilir durumda. Yükseltme yapabilirsiniz:"
 
-#: ../mdkonline.pm:177
+#: ../mdkonline.pm:163
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:178
-#: ../mdkonline.pm:198
+#: ../mdkonline.pm:164 ../mdkonline.pm:184
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:179
+#: ../mdkonline.pm:165
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:180
+#: ../mdkonline.pm:166
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:181
-#: ../mdkonline.pm:194
+#: ../mdkonline.pm:167 ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:195
+#: ../mdkonline.pm:181
 #, c-format
-msgid "The Mandriva Linux distribution with even more softwares and official support."
+msgid ""
+"The Mandriva Linux distribution with even more softwares and official "
+"support."
 msgstr "Çok daha fazla yazılım ve resmi destek sunan Mandriva Linux dağıtımı."
 
-#: ../mdkonline.pm:199
+#: ../mdkonline.pm:185
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
 msgstr "Özgürce ulaşılabilen 100%% Açık Kaynaklı dağıtım."
 
-#: ../mdkonline.pm:213
+#: ../mdkonline.pm:199
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Dağıtım Yükseltmesi"
 
-#: ../mdkupdate:59
-#, c-format
+#: ../mdkupdate:60
+#, fuzzy, c-format
 msgid ""
 "mdkupdate version %s\n"
-"Copyright (C) %s Mandriva.\n"
-"This is free software and may be redistributed under the terms of the GNU GPL.\n"
+"%s\n"
+"This is free software and may be redistributed under the terms of the GNU "
+"GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
@@ -640,35 +661,43 @@ msgstr ""
 "\n"
 "kullanımı:\n"
 
-#: ../mdkupdate:64
+#: ../mdkupdate:66
+#, fuzzy, c-format
+msgid "Copyright (C) %s %s"
+msgstr "Copyright (C) %s bir Mandriva ürünüdür"
+
+#: ../mdkupdate:66 ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- bu yardım mesajını görüntüler.\n"
 
-#: ../mdkupdate:65
+#: ../mdkupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr " --auto\t\t- Mandriva Güncelleme'yi otomatik çalıştır.\n"
 
-#: ../mdkupdate:66
+#: ../mdkupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- mnf'ye özgü betikleri çalıştır.\n"
 
-#: ../mdkupdate:67
+#: ../mdkupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- Mandriva Güncelleme'nin metin sürümü.\n"
 
-#: ../mdkupdate:68
+#: ../mdkupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- kayıt tut\n"
 
-#: ../mdkupdate:98
+#: ../mdkupdate:101
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
+
+#~ msgid "System is up-to-date\n"
+#~ msgstr "Sisteminiz güncel \n"
 
 #~ msgid ""
 #~ "Please fill in your account ID to add an additional package medium once "
@@ -718,8 +747,8 @@ msgstr "update_source yazılım kaynağından paketler güncellenemiyor.\n"
 #~ msgstr "Mandriva hesabınız Powerpack üyeliği içermiyor."
 
 #~ msgid ""
-#~ "Your system does not have enough space left in %s for upgrade (%dMB < %"
-#~ "dMB)"
+#~ "Your system does not have enough space left in %s for upgrade (%dMB < "
+#~ "%dMB)"
 #~ msgstr ""
 #~ "Sisteminizin yükseltme için %s içinde yeteri kadar boş alanı yok. (%dMB < "
 #~ "%dMB)"
