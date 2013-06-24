@@ -1,5 +1,5 @@
 PACKAGE = omvonline
-VERSION:=2.78
+VERSION:=2.78.1
 SVNROOT = svn+ssh://svn.mandriva.com/svn/soft/$(PACKAGE)
 
 NAME = omvonline
