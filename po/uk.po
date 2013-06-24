@@ -1,4 +1,4 @@
-# translation of mdkonline.po to ukrainian
+# translation of omvonline.po to ukrainian
 # $Id$
 # Ukrainian translation for MDKOnline
 # Copyright (C) 2003, 2004, 2005, 2008, 2009 Free Software Foundation, Inc.
@@ -12,7 +12,7 @@
 # Тарас Бойчук <boychuk_t@ndpi.ukrnafta.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: mdkonline\n"
+"Project-Id-Version: omvonline\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-31 17:25+0200\n"
 "PO-Revision-Date: 2010-06-08 08:06+0300\n"
@@ -27,17 +27,17 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. -PO: here %s will be replaced by the local time (eg: "Will check updates at 14:03:50"
-#: ../mdkapplet:75
+#: ../omvapplet:75
 #, c-format
 msgid "Will check updates at %s"
 msgstr "Перевірить поновлення о %s"
 
-#: ../mdkapplet:83
+#: ../omvapplet:83
 #, c-format
 msgid "Your system is up-to-date"
 msgstr "Система поновлена"
 
-#: ../mdkapplet:88
+#: ../omvapplet:88
 #, c-format
 msgid ""
 "Service configuration problem. Please check logs and send mail to "
@@ -46,47 +46,47 @@ msgstr ""
 "Проблема з налаштуванням служб. Будь ласка, перевірте журнал і відправте "
 "лист на support@mandrivaonline.com"
 
-#: ../mdkapplet:94
+#: ../omvapplet:94
 #, c-format
 msgid "Please wait, finding available packages..."
 msgstr "Будь ласка, зачекайте, шукаю доступні пакунки..."
 
-#: ../mdkapplet:99
+#: ../omvapplet:99
 #, c-format
 msgid "New updates are available for your system"
 msgstr "Є нові поновлення для Вашої системи"
 
-#: ../mdkapplet:105
+#: ../omvapplet:105
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released"
 msgstr "Вийшла нова збірка Мандріва Лінакс"
 
-#: ../mdkapplet:123 ../mdkapplet:165
+#: ../omvapplet:123 ../mdkapplet:165
 #, c-format
 msgid "An additional package medium is available for your distribution."
 msgstr "Для Вашого дистрибутива доступний додатковий носій з пакунками."
 
-#: ../mdkapplet:128
+#: ../omvapplet:128
 #, c-format
 msgid "Network is down. Please configure your network"
 msgstr "Мережу вимкнено. Будь ласка, налаштуйте мережу"
 
-#: ../mdkapplet:134
+#: ../omvapplet:134
 #, c-format
 msgid "Service is not activated. Please click on \"Online Website\""
 msgstr "Служба не ввімкнена. Натисніть на \"Online Website\""
 
-#: ../mdkapplet:139 ../mdkapplet:145
+#: ../omvapplet:139 ../mdkapplet:145
 #, c-format
 msgid "urpmi database locked"
 msgstr "база даних urpmi заблокована "
 
-#: ../mdkapplet:150
+#: ../omvapplet:150
 #, c-format
 msgid "Release not supported (too old release, or development release)"
 msgstr "Версія не підтримується (занадто стара або в розробці)"
 
-#: ../mdkapplet:160
+#: ../omvapplet:160
 #, c-format
 msgid ""
 "No medium found. You must add some media through 'Software Media Manager'."
@@ -94,7 +94,7 @@ msgstr ""
 "Носіїв не знайдено. Ви повинні додати носії з допомогою 'Software Media "
 "Manager'."
 
-#: ../mdkapplet:170
+#: ../omvapplet:170
 #, c-format
 msgid ""
 "You already have at least one update medium configured, but\n"
@@ -110,42 +110,42 @@ msgstr ""
 "\n"
 "Після цього перезапустіть \"%s\"."
 
-#: ../mdkapplet:175
+#: ../omvapplet:175
 #, c-format
 msgid "Enabled"
 msgstr "Доступний"
 
-#: ../mdkapplet:188
+#: ../omvapplet:188
 #, c-format
 msgid "Error updating media"
 msgstr "Помилка оновлення носія"
 
-#: ../mdkapplet:228 ../mdkapplet:940
+#: ../omvapplet:228 ../mdkapplet:940
 #, c-format
 msgid "Install updates"
 msgstr "Встановити поновлення"
 
-#: ../mdkapplet:229 ../mdkapplet:230
+#: ../omvapplet:229 ../mdkapplet:230
 #, c-format
 msgid "Add additional package medium"
 msgstr "Додати додатковий носій з пакунками"
 
-#: ../mdkapplet:231
+#: ../omvapplet:231
 #, c-format
 msgid "Check Updates"
 msgstr "Перевірити поновлення"
 
-#: ../mdkapplet:232
+#: ../omvapplet:232
 #, c-format
 msgid "Configure Network"
 msgstr "Налаштувати мережу"
 
-#: ../mdkapplet:233
+#: ../omvapplet:233
 #, c-format
 msgid "Upgrade the system"
 msgstr "Оновити систему"
 
-#: ../mdkapplet:397
+#: ../omvapplet:397
 #, c-format
 msgid ""
 "Basic maintenance for this distribution has expired. Thanks to your "
@@ -156,87 +156,87 @@ msgstr ""
 "оформлено передплату на додатковий супровід, ваш дистрибутив "
 "підтримуватиметься у актуальному стані до %s"
 
-#: ../mdkapplet:442
+#: ../omvapplet:442
 #, c-format
 msgid "Received SIGHUP (probably an upgrade has finished), restarting applet."
 msgstr ""
 "Отримано SIGHUP (можливо, оновлення завершено), аплет перезапускається."
 
-#: ../mdkapplet:449
+#: ../omvapplet:449
 #, c-format
 msgid "Launching drakconnect\n"
 msgstr "Запускається drakconnect\n"
 
-#: ../mdkapplet:461 ../mdkapplet:643
+#: ../omvapplet:461 ../mdkapplet:643
 #, c-format
 msgid "New version of Mandriva Linux distribution"
 msgstr "Нова версія збірки Мандріва Лінакс"
 
-#: ../mdkapplet:466
+#: ../omvapplet:466
 #, c-format
 msgid "Browse"
 msgstr "Навігація"
 
-#: ../mdkapplet:472 ../mdkapplet-add-media-helper:148
-#: ../mdkapplet-add-media-helper:193 ../mdkapplet-add-media-helper:225
-#: ../mdkapplet_gui.pm:240
+#: ../omvapplet:472 ../mdkapplet-add-media-helper:148
+#: ../omvapplet-add-media-helper:193 ../mdkapplet-add-media-helper:225
+#: ../omvapplet_gui.pm:240
 #, c-format
 msgid "Error"
 msgstr "Помилка"
 
-#: ../mdkapplet:472
+#: ../omvapplet:472
 #, c-format
 msgid "You must choose a directory owned by the super administrator!"
 msgstr ""
 
-#: ../mdkapplet:479
+#: ../omvapplet:479
 #, c-format
 msgid "A new version of Mandriva Linux distribution has been released."
 msgstr "Вийшла нова збірка Мандріва Лінакс."
 
-#: ../mdkapplet:481 ../mdkapplet:581
+#: ../omvapplet:481 ../mdkapplet:581
 #, c-format
 msgid "More info about this new version"
 msgstr "Додаткова інформація про нову версію"
 
-#: ../mdkapplet:483 ../mdkapplet:575
+#: ../omvapplet:483 ../mdkapplet:575
 #, c-format
 msgid "Do you want to upgrade to the '%s' distribution?"
 msgstr "Ви хочете поновити систему до %s?"
 
-#: ../mdkapplet:485 ../mdkapplet:585 ../mdkapplet:1027 ../mdkapplet:1057
+#: ../omvapplet:485 ../mdkapplet:585 ../mdkapplet:1027 ../mdkapplet:1057
 #, c-format
 msgid "Do not ask me next time"
 msgstr "Не запитувати наступного разу"
 
-#: ../mdkapplet:487
+#: ../omvapplet:487
 #, c-format
 msgid "Download all packages at once"
 msgstr "Звантажити всі пакунки одразу"
 
-#: ../mdkapplet:488
+#: ../omvapplet:488
 #, c-format
 msgid "(Warning: You will need quite a lot of free space)"
 msgstr "(Попередження: вам знадобиться досить багато вільного місця на диску)"
 
-#: ../mdkapplet:494
+#: ../omvapplet:494
 #, c-format
 msgid "Where to download packages:"
 msgstr "Тека, куди слід звантажити пакунки:"
 
-#: ../mdkapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
-#: ../mdkapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
+#: ../omvapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
+#: ../omvapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
 #, c-format
 msgid "Next"
 msgstr "Далі"
 
-#: ../mdkapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
-#: ../mdkapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
+#: ../omvapplet:498 ../mdkapplet:590 ../mdkapplet:669 ../mdkapplet:1028
+#: ../omvapplet:1058 ../mdkapplet_gui.pm:228 ../mdkapplet_gui.pm:309
 #, c-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../mdkapplet:517
+#: ../omvapplet:517
 #, c-format
 msgid ""
 "Maintenance for this Mandriva Linux version has ended. No more updates will "
@@ -245,22 +245,22 @@ msgstr ""
 "Термін супроводу цієї версії Mandriva Linux вичерпано. Оновлень для цієї "
 "системи більше не буде."
 
-#: ../mdkapplet:523
+#: ../omvapplet:523
 #, c-format
 msgid "In order to keep your system secure, you can:"
 msgstr "З метою підтримання безпеки системи ви можете:"
 
-#: ../mdkapplet:529
+#: ../omvapplet:529
 #, c-format
 msgid "Mandriva Linux"
 msgstr "Mandriva Linux"
 
-#: ../mdkapplet:535
+#: ../omvapplet:535
 #, c-format
 msgid "You should get extended maintenance."
 msgstr "Вам слід оформити передплату на додатковий супровід."
 
-#: ../mdkapplet:537
+#: ../omvapplet:537
 #, c-format
 msgid ""
 "You should either get extended maintenance or upgrade to a newer version of "
@@ -269,22 +269,22 @@ msgstr ""
 "Ця версія дистрибутива вже не підтримується. Подальших оновлень не буде. Вам "
 "слід оновити систему до версії %s."
 
-#: ../mdkapplet:541
+#: ../omvapplet:541
 #, c-format
 msgid "You should upgrade to a newer version of the %s distribution."
 msgstr "Вам слід встановити новішу версію дистрибутива %s."
 
-#: ../mdkapplet:551
+#: ../omvapplet:551
 #, c-format
 msgid "Your distribution is no longer supported"
 msgstr "Ваш дистрибутив вже не підтримується"
 
-#: ../mdkapplet:556
+#: ../omvapplet:556
 #, c-format
 msgid "Extended Maintenance"
 msgstr "Додатковий супровід"
 
-#: ../mdkapplet:561
+#: ../omvapplet:561
 #, c-format
 msgid ""
 "Purchase a maintenance extension for this version (%s) and keep it running "
@@ -292,7 +292,7 @@ msgid ""
 msgstr ""
 "Придбати додатковий супровід для цієї версії (%s) і користуватися нею до %s."
 
-#: ../mdkapplet:660
+#: ../omvapplet:660
 #, c-format
 msgid ""
 "This upgrade requires high bandwidth network connection (cable, xDSL, ...)  "
@@ -301,17 +301,17 @@ msgstr ""
 "Це оновлення вимагає швидкісного з'єднання з мережею (cable, xDSL, ...) і "
 "може тривати кілька годин до завершення."
 
-#: ../mdkapplet:662
+#: ../omvapplet:662
 #, c-format
 msgid "Estimated download data will be %s"
 msgstr "Приблизний час звантаження становить %s"
 
-#: ../mdkapplet:663
+#: ../omvapplet:663
 #, c-format
 msgid "You should close all other running applications before continuing."
 msgstr "Вам потрібно закрити всі програми перед тим, як продовжувати."
 
-#: ../mdkapplet:666
+#: ../omvapplet:666
 #, c-format
 msgid ""
 "You should put your laptop on AC and favor ethernet connection over wifi, if "
@@ -320,89 +320,89 @@ msgstr ""
 "Вам потрібно увімкнути лептоп в електричну мережу і віддати перевагу "
 "з'єднанню через ethernet, ніж через wifi."
 
-#: ../mdkapplet:700
+#: ../omvapplet:700
 #, c-format
 msgid "Launching MandrivaUpdate\n"
 msgstr "Запускається MandrivaUpdate\n"
 
-#: ../mdkapplet:734
+#: ../omvapplet:734
 #, c-format
 msgid "Computing new updates...\n"
 msgstr "Перевіряються нові поновлення...\n"
 
-#: ../mdkapplet:860
+#: ../omvapplet:860
 #, c-format
 msgid "Checking Network: seems disabled\n"
 msgstr "Перевірка мережі: здається, вимкнена\n"
 
-#: ../mdkapplet:887
+#: ../omvapplet:887
 #, c-format
 msgid "Mandriva Online %s"
 msgstr "Mandriva Online %s"
 
-#: ../mdkapplet:888
+#: ../omvapplet:888
 #, c-format
 msgid "Copyright (C) %s by Mandriva"
 msgstr "Права застережено (C) %s Мандрівою"
 
-#: ../mdkapplet:891
+#: ../omvapplet:891
 #, c-format
 msgid "Mandriva Online gives access to Mandriva web services."
 msgstr "Mandriva Online надає доступ до веб-послуг Мандріви."
 
-#: ../mdkapplet:893
+#: ../omvapplet:893
 #, c-format
 msgid "Online WebSite"
 msgstr "Online WebSite"
 
 #. -PO: put here name(s) and email(s) of translator(s) (eg: "John Smith <jsmith@nowhere.com>")
-#: ../mdkapplet:898
+#: ../omvapplet:898
 #, c-format
 msgid "_: Translator(s) name(s) & email(s)\n"
 msgstr "Taras Boychuk <btr0001@ukr.net>\n"
 
-#: ../mdkapplet:926
+#: ../omvapplet:926
 #, c-format
 msgid "Warning"
 msgstr "Попередження"
 
-#: ../mdkapplet:929 ../mdkapplet:934 ../mdkapplet:942 ../mdkapplet:944
-#: ../mdkapplet_gui.pm:260
+#: ../omvapplet:929 ../mdkapplet:934 ../mdkapplet:942 ../mdkapplet:944
+#: ../omvapplet_gui.pm:260
 #, c-format
 msgid "More Information"
 msgstr "Детальніша інформація"
 
-#: ../mdkapplet:946
+#: ../omvapplet:946
 #, c-format
 msgid "Add media"
 msgstr "Додати джерело"
 
-#: ../mdkapplet:961
+#: ../omvapplet:961
 #, c-format
 msgid "About..."
 msgstr "Про..."
 
-#: ../mdkapplet:963 ../mdkapplet-config:68
+#: ../omvapplet:963 ../mdkapplet-config:68
 #, c-format
 msgid "Updates Configuration"
 msgstr "Налаштування поновлень"
 
-#: ../mdkapplet:965
+#: ../omvapplet:965
 #, c-format
 msgid "Always launch on startup"
 msgstr "Завжди виконувати при завантаженні"
 
-#: ../mdkapplet:967
+#: ../omvapplet:967
 #, c-format
 msgid "Quit"
 msgstr "Вийти"
 
-#: ../mdkapplet:1017 ../mdkapplet:1022 ../mdkapplet:1047 ../mdkapplet:1052
+#: ../omvapplet:1017 ../mdkapplet:1022 ../mdkapplet:1047 ../mdkapplet:1052
 #, c-format
 msgid "New medium available"
 msgstr "Новий носій доступний"
 
-#: ../mdkapplet:1024 ../mdkapplet:1054
+#: ../omvapplet:1024 ../mdkapplet:1054
 #, c-format
 msgid ""
 "You use '%s' distribution and therefore have privileged access to additional "
@@ -410,38 +410,38 @@ msgid ""
 msgstr ""
 "Ви використовуєте дистрибутив '%s', тому маєте доступ до додаткових програм."
 
-#: ../mdkapplet:1026 ../mdkapplet:1056
+#: ../omvapplet:1026 ../mdkapplet:1056
 #, c-format
 msgid "Do you want to install this additional software repository?"
 msgstr "Ви хочете додати це додаткове сховище програмного забезпечення?"
 
-#: ../mdkapplet:1055 ../mdkonline.pm:168
+#: ../omvapplet:1055 ../omvonline.pm:168
 #, c-format
 msgid "Mandriva Enterprise Server"
 msgstr "Mandriva Enterprise Server"
 
-#: ../mdkapplet-add-media-helper:84 ../mdkapplet-config:43
+#: ../omvapplet-add-media-helper:84 ../mdkapplet-config:43
 #, c-format
 msgid "Adding an additional package medium"
 msgstr "Додається додатковий носій з пакунками"
 
-#: ../mdkapplet-add-media-helper:128
+#: ../omvapplet-add-media-helper:128
 #, c-format
 msgid "Supported products are %s, '%s' is not on the list.\n"
 msgstr "Продуктами, що підтримуються, і є %s, '%s' немає в списку.\n"
 
-#: ../mdkapplet-add-media-helper:138
+#: ../omvapplet-add-media-helper:138
 #, c-format
 msgid "Please fill in your account ID to add an additional package medium"
 msgstr "Будь ласка, заповніть свій рахунок, щоб додати носій з пакунками"
 
-#: ../mdkapplet-add-media-helper:149
+#: ../omvapplet-add-media-helper:149
 #, c-format
 msgid "Failure while retrieving distributions list:"
 msgstr "Не вдалося отримати список дистрибутивів:"
 
 #. -PO: Here '%s' will be a localized date (eg:
-#: ../mdkapplet-add-media-helper:161
+#: ../omvapplet-add-media-helper:161
 #, c-format
 msgid ""
 "Mandriva provides 12 months of desktop updates (until %s) and 18 months of "
@@ -450,7 +450,7 @@ msgstr ""
 "У Mandriva передбачено 12 місяців оновлень стільничного дистрибутива (до %s) "
 "і 18 місяців базових оновлень (до %s)."
 
-#: ../mdkapplet-add-media-helper:167
+#: ../omvapplet-add-media-helper:167
 #, c-format
 msgid ""
 "Extended maintenance is now available to get 18 months of additional updates "
@@ -459,88 +459,88 @@ msgstr ""
 "Доступний додатковий супровід для отримання 18 місяців додаткових оновлень "
 "(до %s)."
 
-#: ../mdkapplet-add-media-helper:170
+#: ../omvapplet-add-media-helper:170
 #, c-format
 msgid "You can subscribe <b>right now</b> to get extended maintenance:"
 msgstr ""
 "Ви можете оформити передплату <b>зараз</b>, щоб отримати додатковий супровід:"
 
-#: ../mdkapplet-add-media-helper:174
+#: ../omvapplet-add-media-helper:174
 #, c-format
 msgid "Lifetime policy"
 msgstr "Правила зміни версій"
 
-#: ../mdkapplet-add-media-helper:175 ../mdkapplet_gui.pm:101
+#: ../omvapplet-add-media-helper:175 ../mdkapplet_gui.pm:101
 #, c-format
 msgid "Online subscription"
 msgstr "Мережева передплата"
 
-#: ../mdkapplet-add-media-helper:194
+#: ../omvapplet-add-media-helper:194
 #, c-format
 msgid "An error occurred"
 msgstr "Сталася помилка"
 
-#: ../mdkapplet-add-media-helper:200
+#: ../omvapplet-add-media-helper:200
 #, c-format
 msgid "Your Mandriva account does not have %s download subscription enabled."
 msgstr "Ваш рахунок на Mandriva не має активованої підписки на звантаження %s."
 
-#: ../mdkapplet-add-media-helper:226
+#: ../omvapplet-add-media-helper:226
 #, c-format
 msgid "An error occurred while adding medium"
 msgstr "При додаванні джерела сталася помилка"
 
-#: ../mdkapplet-add-media-helper:234
+#: ../omvapplet-add-media-helper:234
 #, c-format
 msgid "Successfully added media!"
 msgstr "Джерело успішно додано."
 
-#: ../mdkapplet-add-media-helper:236
+#: ../omvapplet-add-media-helper:236
 #, c-format
 msgid "Successfully added media %s."
 msgstr "Джерело %s успішно додано."
 
-#: ../mdkapplet-add-media-helper:238
+#: ../omvapplet-add-media-helper:238
 #, c-format
 msgid "Ok"
 msgstr "Гаразд"
 
-#: ../mdkapplet-config:69
+#: ../omvapplet-config:69
 #, c-format
 msgid "Here you can configure the updates applet"
 msgstr "Тут можна налаштувати аплет поновлень"
 
-#: ../mdkapplet-config:71
+#: ../omvapplet-config:71
 #, c-format
 msgid "Update frequency (hours)"
 msgstr "Частота поновлення (години)"
 
-#: ../mdkapplet-config:80
+#: ../omvapplet-config:80
 #, c-format
 msgid "First check delay (minutes)"
 msgstr "Затримка першої перевірки (хвилини)"
 
-#: ../mdkapplet-config:89
+#: ../omvapplet-config:89
 #, c-format
 msgid "Check for newer \"%s\" releases"
 msgstr "Виконати пошук новіших випусків «%s»"
 
-#: ../mdkapplet-config:95 ../mdkapplet-config:101
+#: ../omvapplet-config:95 ../mdkapplet-config:101
 #, c-format
 msgid "Check for missing \"%s\" media"
 msgstr "Виконати пошук носія «%s», якого не вистачає"
 
-#: ../mdkapplet-config:95
+#: ../omvapplet-config:95
 #, c-format
 msgid "Restricted"
 msgstr "Restricted"
 
-#: ../mdkapplet-config:101
+#: ../omvapplet-config:101
 #, c-format
 msgid "Enterprise"
 msgstr "Enterprise"
 
-#: ../mdkapplet_gui.pm:83
+#: ../omvapplet_gui.pm:83
 #, c-format
 msgid ""
 "Mandriva Powerpack brings you the best of Linux experience for desktop: "
@@ -551,82 +551,82 @@ msgstr ""
 "комп’ютерів: стабільність і ефективність рішень з відкритим кодом поруч з "
 "комерційними програмами і офіційною підтримкою Mandriva."
 
-#: ../mdkapplet_gui.pm:90
+#: ../omvapplet_gui.pm:90
 #, c-format
 msgid "Mandriva Linux Features"
 msgstr "Можливості Мандріва лінакс"
 
-#: ../mdkapplet_gui.pm:209
+#: ../omvapplet_gui.pm:209
 #, c-format
 msgid "More information on your user account"
 msgstr "Додаткова інформація про рахунок"
 
-#: ../mdkapplet_gui.pm:216
+#: ../omvapplet_gui.pm:216
 #, c-format
 msgid "Your email"
 msgstr "Електронна пошта"
 
-#: ../mdkapplet_gui.pm:217
+#: ../omvapplet_gui.pm:217
 #, c-format
 msgid "Your password"
 msgstr "Пароль"
 
-#: ../mdkapplet_gui.pm:224
+#: ../omvapplet_gui.pm:224
 #, c-format
 msgid "Forgotten password"
 msgstr "Забутий пароль"
 
-#: ../mdkapplet_gui.pm:241
+#: ../omvapplet_gui.pm:241
 #, c-format
 msgid "Password and email cannot be empty."
 msgstr "Пароль і поштова адреса не можуть бути порожніми."
 
-#: ../mdkapplet_gui.pm:263
+#: ../omvapplet_gui.pm:263
 #, c-format
 msgid "Close"
 msgstr "Закрити"
 
-#: ../mdkapplet_gui.pm:298
+#: ../omvapplet_gui.pm:298
 #, c-format
 msgid "Choose your upgrade version"
 msgstr "Виберіть версію для оновлення"
 
-#: ../mdkapplet_gui.pm:302
+#: ../omvapplet_gui.pm:302
 #, c-format
 msgid "Your Powerpack access has ended"
 msgstr "Ваша передплата Powerpack завершилася"
 
-#: ../mdkapplet_gui.pm:305
+#: ../omvapplet_gui.pm:305
 #, c-format
 msgid "%s is now available, you can upgrade to:"
 msgstr "зараз доступний %s, Ви можете оновитися до:"
 
-#: ../mdkonline.pm:163
+#: ../omvonline.pm:163
 #, c-format
 msgid "Mandriva Flash"
 msgstr "Mandriva Flash"
 
-#: ../mdkonline.pm:164 ../mdkonline.pm:184
+#: ../omvonline.pm:164 ../mdkonline.pm:184
 #, c-format
 msgid "Mandriva Free"
 msgstr "Mandriva Free"
 
-#: ../mdkonline.pm:165
+#: ../omvonline.pm:165
 #, c-format
 msgid "Mandriva Mini"
 msgstr "Mandriva Mini"
 
-#: ../mdkonline.pm:166
+#: ../omvonline.pm:166
 #, c-format
 msgid "Mandriva One"
 msgstr "Mandriva One"
 
-#: ../mdkonline.pm:167 ../mdkonline.pm:180
+#: ../omvonline.pm:167 ../mdkonline.pm:180
 #, c-format
 msgid "Mandriva PowerPack"
 msgstr "Mandriva PowerPack"
 
-#: ../mdkonline.pm:181
+#: ../omvonline.pm:181
 #, c-format
 msgid ""
 "The Mandriva Linux distribution with even more softwares and official "
@@ -635,64 +635,64 @@ msgstr ""
 "Збірка Мандріва лінакс з ще більшою кількістю програм  і офіційною "
 "підтримкою."
 
-#: ../mdkonline.pm:185
+#: ../omvonline.pm:185
 #, c-format
 msgid "The 100%% Open Source distribution freely available."
 msgstr "Збірка із 100%% доступних вільно програм з відкритим кодом."
 
-#: ../mdkonline.pm:199
+#: ../omvonline.pm:199
 #, c-format
 msgid "Distribution Upgrade"
 msgstr "Оновлення дистрибутиву"
 
-#: ../mdkupdate:60
+#: ../omvupdate:60
 #, fuzzy, c-format
 msgid ""
-"mdkupdate version %s\n"
+"omvupdate version %s\n"
 "%s\n"
 "This is free software and may be redistributed under the terms of the GNU "
 "GPL.\n"
 "\n"
 "usage:\n"
 msgstr ""
-"mdkupdate версія %s\n"
+"omvupdate версія %s\n"
 "Copyright (C) %s Mandriva.\n"
 "Це відкрите програмне забезпечення і може розповсюджуватися за умов GNU "
 "GPL.\n"
 "\n"
 "використання:\n"
 
-#: ../mdkupdate:66
+#: ../omvupdate:66
 #, fuzzy, c-format
 msgid "Copyright (C) %s %s"
 msgstr "Права застережено (C) %s Мандрівою"
 
-#: ../mdkupdate:66 ../mdkupdate:67
+#: ../omvupdate:66 ../mdkupdate:67
 #, c-format
 msgid "  --help\t\t- print this help message.\n"
 msgstr "  --help\t\t- вивести цю довідку.\n"
 
-#: ../mdkupdate:68
+#: ../omvupdate:68
 #, c-format
 msgid "  --auto\t\t- Mandriva Update launched automatically.\n"
 msgstr "  --auto\t\t- Mandriva Update виконується автоматично.\n"
 
-#: ../mdkupdate:69
+#: ../omvupdate:69
 #, c-format
 msgid "  --mnf\t\t\t- launch mnf specific scripts.\n"
 msgstr "  --mnf\t\t\t- виконати специфічний mnf-скрипт.\n"
 
-#: ../mdkupdate:70
+#: ../omvupdate:70
 #, c-format
 msgid "  --noX\t\t\t- text mode version of Mandriva Update.\n"
 msgstr "  --noX\t\t\t- версія Mandriva Update в текстовому режимі.\n"
 
-#: ../mdkupdate:71
+#: ../omvupdate:71
 #, c-format
 msgid "  --debug\t\t\t- log what is done\n"
 msgstr "  --debug\t\t\t- створювати журнал\n"
 
-#: ../mdkupdate:101
+#: ../omvupdate:101
 #, c-format
 msgid "Unable to update packages from update_source medium.\n"
 msgstr "Неможливо поновити пакунки з джерела update_source.\n"

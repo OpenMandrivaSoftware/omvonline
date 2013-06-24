@@ -1,7 +1,7 @@
 # Installation directories
 localedir = $(PREFIX)/usr/share/locale
 
-PGOAL = mdkonline
+PGOAL = omvonline
 
 PL_FILES = $(shell cat POTFILES.in | sed 's,^,../,' )
 POFILES = $(shell ls *.po)
