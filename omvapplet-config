@@ -25,12 +25,12 @@ use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use standalone; # for explanations
 use common;
 
-BEGIN { unshift @::textdomains, 'mdkonline' }
+BEGIN { unshift @::textdomains, 'omvonline' }
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
-use mdkonline;
-use mdkapplet_gui;
+use omvonline;
+use omvapplet_gui;
 use interactive;
 
 get_product_id();
@@ -40,7 +40,7 @@ ugtk2::exit(0);
 
 
 sub configure() {
-    my $w = ugtk2->new(N("Adding an additional package medium"), width => -1);
+    my $w = ugtk2->new(N("Configure Updates"), width => -1);
 
     my %config = getVarsFromSh($config_file);
 
@@ -65,8 +65,7 @@ sub configure() {
       fill_n_run_portable_dialog(
           $w,
           [
-              if_(!$::isEmbedded, get_banner(N("Updates Configuration"))),
-              gtknew('Label_Left', text => N("Here you can configure the updates applet"), @common),
+              if_(!$::isEmbedded, get_banner(N("Update Configuration"))),
               gtknew('Table', col_spacings => 5, row_spacings => 5, children => [
                   [ gtknew('Label', alignment => [ 0, 1 ], text => N("Update frequency (hours)")),
                     gtknew($is_hscale_unsupported ? ('Entry', text_ref => \$config{UPDATE_FREQUENCY})

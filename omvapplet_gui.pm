@@ -1,4 +1,4 @@
-package mdkapplet_gui;
+package omvapplet_gui;
 
 ################################################################################
 # Mandriva Online                                                              # 
@@ -50,19 +50,19 @@ our @EXPORT_OK = qw(
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
-use mdkonline qw();	# you don't want to polute the namespace
+use omvonline qw();	# you don't want to polute the namespace
 use interactive;
 use interactive::gtk;
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
 
-ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
+ugtk2::add_icon_path("/usr/share/omvonline/pixmaps/");
 
-our $localdir = "$ENV{HOME}/.MdkOnline";
-our $localfile = "$localdir/mdkonline";
+our $localdir = "$ENV{HOME}/.OmvOnline";
+our $localfile = "$localdir/omvonline";
 
 #compatibility
 mkdir_p($localdir) if !-d $localdir;
--e "$ENV{HOME}/.mdkonline" and system("mv", "$ENV{HOME}/.mdkonline", $localfile);
+-e "$ENV{HOME}/.omvonline" and system("mv", "$ENV{HOME}/.omvonline", $localfile);
 
 interactive::gtk::add_padding(Gtk2::Label->new);
 
@@ -192,7 +192,7 @@ sub run_ask_credentials_dialog {
     };
 
     my @widgets = (
-	if_(!$::isEmbedded, mdkonline::get_banner($title)),
+	if_(!$::isEmbedded, omvonline::get_banner($title)),
         if_($options{top_extra},
             @{ $options{top_extra} },
             gtknew('HSeparator'),
@@ -249,10 +249,10 @@ sub run_no_rights_dialog {
     my ($title, $info, $info_url) = @_;
     my $w = new_portable_dialog($title);
     my @widgets = (
-	mdkonline::get_banner($title),
+	omvonline::get_banner($title),
 	gtknew('Label_Left',
 	       text => $info,
-	       @mdkapplet_gui::common),
+	       @omvapplet_gui::common),
 	gtknew('HButtonBox',
 	       layout => 'start',
 	       children_tight => [
@@ -277,7 +277,7 @@ sub open_ask_powerpack_dialog {
     my $want_powerpack = $current_product =~ /powerpack|flash/i;
     for my $product ($want_powerpack
                          ? ('powerpack', 'free') : ('free', 'powerpack')) {
-        my $info = mdkonline::get_product_info($product);
+        my $info = omvonline::get_product_info($product);
         $rbutton 
             = Gtk2::RadioButton->new_with_label($rbutton
                                                     ? $rbutton->get_group
@@ -298,7 +298,7 @@ sub open_ask_powerpack_dialog {
     my $title = N("Choose your upgrade version");
     my $w = new_portable_dialog($title);
     my @widgets 
-        = (mdkonline::get_banner($current_product =~ /powerpack/i
+        = (omvonline::get_banner($current_product =~ /powerpack/i
                                      ? N("Your Powerpack access has ended")
                                      : $title),
            gtknew('Label_Left',

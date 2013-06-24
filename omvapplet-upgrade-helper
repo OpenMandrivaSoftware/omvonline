@@ -29,17 +29,17 @@ BEGIN { require_root_capability() }
 use run_program;
 use feature 'state';
 
-BEGIN { unshift @::textdomains, 'mdkonline' }
+BEGIN { unshift @::textdomains, 'omvonline' }
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
-use mdkonline;
+use omvonline;
 use Rpmdrake::open_db;
 use lang;
-use mdkapplet_gui qw(run_ask_credentials_dialog);
+use omvapplet_gui qw(run_ask_credentials_dialog);
 
-ugtk2::add_icon_path("/usr/share/mdkonline/pixmaps/");
+ugtk2::add_icon_path("/usr/share/omvonline/pixmaps/");
 my ($log_file);
 
 my ($new_distro_version, $download_dir);
@@ -113,7 +113,7 @@ sub run_gurpmi() {
             } else {
                 rm_rf(get_stale_upgrade_filename());
                 $succeeded_win->main && !$::testing && any::reboot();
-                my $mdkapp_pid = common::is_running('mdkapplet');
+                my $mdkapp_pid = common::is_running('omvapplet');
                 defined($mdkapp_pid) && kill('HUP', $mdkapp_pid);
             }
         }
@@ -149,10 +149,10 @@ sub create_upgrade_succeeded_window() {
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
-               gtknew('Label_Left', text => N("Upgrade to Mandriva %s release was successfull.", $new_distro_version),
+               gtknew('Label_Left', text => N("The upgrade to OpenMandriva LX %s was successful.", $new_distro_version),
                       @common),
                gtknew('Label_Left', text => N("You must restart your system."), @common),
-               create_okcancel($w, N("Reboot"), N("Cancel")),
+               create_okcancel($w, N("Reboot Now"), N("Reboot Later")),
            ]),
        );
     $w->{ok}->grab_focus;
@@ -162,7 +162,7 @@ sub create_upgrade_succeeded_window() {
 # Returns: undef if failed to authenticate, [$email, $passwd] otherwise
 sub powerpack_auth_callback {
     my ($email, $passwd) = @_;
-    my $profile = mdkonline::get_my_mdv_profile($email, $passwd);
+    my $profile = omvonline::get_my_mdv_profile($email, $passwd);
     
     # Checking for profile retrieving errors...
     if ($profile->{code} != 0) {
@@ -188,9 +188,9 @@ sub powerpack_auth_callback {
         return [$email, $passwd];
     }
     else {
-        mdkapplet_gui::run_no_rights_dialog(
+        omvapplet_gui::run_no_rights_dialog(
             N('Powerpack Media Configuration'),
-            N('You current Mandriva account does not have Powerpack ' .
+            N('You current OpenMandriva account does not have Powerpack ' .
               'subscription enabled.'),
             'https://my.mandriva.com/powerpack/',
             );
@@ -199,7 +199,7 @@ sub powerpack_auth_callback {
 }
 
 sub try_to_add_powerpack_media {
-    my $is_powerpack = mdkonline::is_restricted_media_supported();
+    my $is_powerpack = omvonline::is_restricted_media_supported();
     my $auth_info;
 
     # Validating current product for offering powerpack medias...
@@ -207,7 +207,7 @@ sub try_to_add_powerpack_media {
     if ($is_powerpack) {
         # Verifying rights of current powerpack users...
         my $title = N('Powerpack Media Configuration');
-        my $description = N('Please fill your My.Mandriva login and ' .
+        my $description = N('Please fill your OpenMandriva login and ' .
                             'password to add additional package media '.
                             'for Powerpack.');
 
@@ -224,7 +224,7 @@ sub try_to_add_powerpack_media {
 
     my $choice;    # will be 'powerpack', 'free' or undef
     while ($auth_info 
-               or ($choice = mdkapplet_gui::open_ask_powerpack_dialog(
+               or ($choice = omvapplet_gui::open_ask_powerpack_dialog(
                                  $product_id->{product},
                                  $new_distro_version))) {
         $auth_info and return $auth_info;
@@ -252,7 +252,7 @@ sub upgrade() {
     run_program::raw({ detach => 1 }, 'xdg-screensaver', 'suspend', $xid);
     my $_w = before_leaving { run_program::raw({ detach => 1 }, 'xdg-screensaver', 'resume', $xid) };
    
-    my $file = "$ENV{HOME}/.MdkOnline/urpmi.cfg.backup." . int(rand 100000);
+    my $file = "$ENV{HOME}/.OmvOnline/urpmi.cfg.backup." . int(rand 100000);
     log::explanations("backuping urpmi configuration in $file");
     cp_af("$root/etc/urpmi/urpmi.cfg", $file);
 
@@ -299,7 +299,7 @@ packages as well?)."))
 
     log::explanations("adding urpmi media for new distribution");
 
-    $ENV{URPMI_ADDMEDIA_REASON} = join(',', 'reason=upgrade', 'upgrade_by=mdkapplet', "upgrade_from=$product_id->{version}");
+    $ENV{URPMI_ADDMEDIA_REASON} = join(',', 'reason=upgrade', 'upgrade_by=omvapplet', "upgrade_from=$product_id->{version}");
     # the following modifies $MIRRORLIST expansion in urpm/mirrors.pm,
     # it must be set for gurpmi.addmedia, but also for gurpmi
     $ENV{URPMI_ADDMEDIA_PRODUCT_VERSION} = $new_distro_version;
@@ -321,7 +321,7 @@ packages as well?)."))
         log::explanations("adding restricted (powerpack) media");
 
         my ($email, $passwd) = @$add_pwp_auth;
-        unless (mdkonline::add_medium_powerpack(
+        unless (omvonline::add_medium_powerpack(
                     $email, 
                     $passwd, 
                     $new_distro_version, 
@@ -354,7 +354,7 @@ packages as well?)."))
         local $ENV{TMPDIR} = undef;
 	my $log_template = 
 	    "gurpmi_upgrade_to_${new_distro_version}_XXXXXXXX";
-        $log_file = chomp_(`mktemp -u --tmpdir=$ENV{HOME}/.MdkOnline/ --suffix=.log $log_template`);
+        $log_file = chomp_(`mktemp -u --tmpdir=$ENV{HOME}/.OmvOnline/ --suffix=.log $log_template`);
         log::explanations("logging gurpmi message in '$log_file'");
     }
 

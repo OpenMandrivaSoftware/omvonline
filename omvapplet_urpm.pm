@@ -1,4 +1,4 @@
-package mdkapplet_urpm;
+package omvapplet_urpm;
 
 # taken from urpmi:
 

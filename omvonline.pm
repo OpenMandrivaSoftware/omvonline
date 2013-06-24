@@ -21,7 +21,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.   #
 ################################################################################
 
-package mdkonline;
+package omvonline;
 
 use strict;
 
@@ -68,8 +68,8 @@ our $version = 1;
 
 use log;
 
-our $config_file = '/etc/sysconfig/mdkapplet';
-my $release_file = find { -f $_ } '/etc/mandriva-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
+our $config_file = '/etc/sysconfig/omvapplet';
+my $release_file = find { -f $_ } '/etc/system-release', '/etc/mandrakelinux-release', '/etc/mandrake-release', '/etc/redhat-release';
 
 sub read_sys_config() {
     %config = getVarsFromSh($config_file);
@@ -112,7 +112,7 @@ sub get_distro_list_() {
       join('&',
            "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
            "version=$product_id->{version}",
-           "mdkonline_version=$mdkonline::version",
+           "mdkonline_version=$omvonline::version",
        );
     log::explanations("trying distributions list from $list");
 
@@ -148,7 +148,7 @@ sub get_distro_list() {
 
 
 sub clean_confdir() {
-    my $confdir = '/root/.MdkOnline';
+    my $confdir = '/root/.OmvOnline';
     system "/bin/rm", "-f", "$confdir/*log.bz2", "$confdir/*log.bz2.uue", "$confdir/*.dif $confdir/rpm_qa_installed_before", "$confdir/rpm_qa_installed_after";
 }
 
@@ -160,12 +160,13 @@ sub fork_exec {
 sub translate_product {
     my ($product) = @_;
     my %strings = (
-        flash => N("Mandriva Flash"),
-        free => N("Mandriva Free"),
-        mini => N("Mandriva Mini"),
-        one => N("Mandriva One"),
-        powerPack => N("Mandriva PowerPack"),
-        server => N("Mandriva Enterprise Server"),
+        flash => N("OpenMandriva Flash"),
+        free => N("OpenMandriva Free"),
+        ee => N("OpenMandriva EE"),
+        mini => N("OpenMandriva Mini"),
+        one => N("OpenMandriva One"),
+        powerPack => N("OpenMandriva PowerPack"),
+        server => N("OpenMandriva Enterprise Server"),
     );
     $product ||= lc $product_id->{product};
     $strings{$product} || $product;
@@ -181,7 +182,7 @@ sub get_product_info {
             description => N("The Mandriva Linux distribution with even more softwares and official support."),
         },
         free => {
-            name => N("Mandriva Free"),
+            name => N("OpenMandriva Free"),
             description => N("The 100%% Open Source distribution freely available."),
         },
     );
@@ -191,7 +192,7 @@ sub get_product_info {
 
 sub get_banner_icon() {
     find { -e $_ } 
-      qw(/usr/share/mcc/themes/default/rpmdrake-mdk.png /usr/share/icons/large/mdkonline.png);
+      qw(/usr/share/mcc/themes/default/rpmdrake-omv.png /usr/share/icons/large/omvonline.png);
 }
 
 sub get_banner {
@@ -264,8 +265,8 @@ sub get_from {
     my ($link, $header) = @_;
     
     my $ua = LWP::UserAgent->new;
-    $ua->agent(sprintf('mdkapplet (mdkonline-%s; distribution: %s)',
-                       $mdkonline::version, $version));
+    $ua->agent(sprintf('omvapplet (omvonline-%s; distribution: %s)',
+                       $omvonline::version, $version));
     $ua->env_proxy;
 
     my $response = $ua->post($link, $header);

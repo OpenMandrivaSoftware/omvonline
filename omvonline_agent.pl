@@ -26,7 +26,7 @@ use strict;
 use POSIX;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
 use common;
-use mdkonline;
+use omvonline;
 use Switch;
 use Data::Dumper;
 use Error qw(:try);
@@ -41,24 +41,24 @@ logconfig(
     '-driver' => Log::Agent::Driver::File->make(
         '-prefix'  => $0,
         '-showpid' => 1,
-        '-file'    => 'mdvonline.log',
+        '-file'    => 'omvonline.log',
     ),
     #-caller => [ -display => '($sub/$line)', -postfix => 1 ],
     '-priority' => [ '-display' => '[$priority]' ],
 );
 
 logsay "==================";
-mdkonline::is_running('mdvonline_agent') and die "mdvonline_agent already running\n";
+omvonline::is_running('omvonline_agent') and die "omvonline_agent already running\n";
 require_root_capability();
 
-my %conf = mdkonline::get_configuration();
+my %conf = omvonline::get_configuration();
 print Dumper(%conf);
 
 ! defined %conf and logwarn "no configuration set", exit 0;
 
 logsay "checking for tasks";
 print Dumper(%conf);
-my $answer = mdkonline::soap_get_task($conf{HOST_ID}, $conf{HOST_KEY});
+my $answer = omvonline::soap_get_task($conf{HOST_ID}, $conf{HOST_KEY});
 
 print Dumper($answer);
 
@@ -68,7 +68,7 @@ if ($answer->{code} == 0) {
 	}
 	else {
 		logsay "got something";
-		mdkonline::run_and_return_task($answer->{data});
+		omvonline::run_and_return_task($answer->{data});
 	}
 	exit 1;
 }

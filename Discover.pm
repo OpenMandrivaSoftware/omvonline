@@ -1,7 +1,7 @@
 package Discover; # $Id$
 
 ################################################################################
-# Part of Mandriva Online                                                      #
+# Part of OpenMandriva Online                                                      #
 # Online service discovery library:                                            #
 # - autodetects nameservers and domains,                                       #
 # - and checks for DNS-declared Online service,                                #
@@ -67,7 +67,7 @@ sub commify_series {
 sub search {
 	my $this = shift;
 	
-	logsay "searching for a locally declared Mandriva Online service";
+	logsay "searching for a locally declared OpenMandriva Online service";
 
 	my $resolv      = Config::Auto::parse('/etc/resolv.conf');
 	my $servicetype = '_mdvonline._http._tcp.bonjour.';

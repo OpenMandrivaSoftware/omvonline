@@ -20,7 +20,7 @@
 # Boston, MA 02111-1307, USA.
 ###########################################################################
 
-BEGIN { unshift @::textdomains, 'mdkonline' }
+BEGIN { unshift @::textdomains, 'omvonline' }
 
 use strict;
 use lib qw(/usr/lib/libDrakX /usr/lib/libDrakX/drakfirsttime);
@@ -31,8 +31,8 @@ use interactive;
 use interactive::gtk;
 use mygtk2 qw(gtknew);	# only gtknew, any other stuff would break ugtk2
 use ugtk2 qw(:all);
-use mdkonline qw($product_id);
-use mdkapplet_gui;
+use omvonline qw($product_id);
+use omvapplet_gui;
 use urpm::cfg;
 use utf8;
 
@@ -40,38 +40,38 @@ use utf8;
 # restricted media for each product.
 my %product = (
     powerpack => { 
-	info_url => 'https://my.mandriva.com/powerpack/',
+	info_url => 'http://www.openmandriva.org/',
 	has_rights => sub {
 	    my $profile = shift @_;
 	    $profile->{data}{'can-access-restricted-repositories'} eq 'YES';
 	},
 	media_name => 'Restricted',
-        add_medium => \&mdkonline::add_medium_powerpack 
+        add_medium => \&omvonline::add_medium_powerpack 
 	    
     },
     server => { 
-	info_url => 'http://www2.mandriva.com/linux/server/',
+	info_url => 'http://www.openmandriva.org/',
 	has_rights => sub {
 	    my $profile = shift @_;
 	    $profile->{data}{groups}{'es5-prod'} or
 		$profile->{data}{groups}{'es5-demo'};
 	},
 	media_name => 'Update',
-        add_medium => \&mdkonline::add_medium_enterprise
+        add_medium => \&omvonline::add_medium_enterprise
     },
     extended => {
-        info_url => 'https://my.mandriva.com/',
+        info_url => 'http://www.openmandriva.org/',
         has_rights => sub {
             my ($profile, $version) = @_;
             return ! ref $profile->{data}{groups}{'ext-maint-' . $version};
         },
         media_name => 'Extended Maintenance',
-        add_medium => \&mdkonline::add_medium_extended,
+        add_medium => \&omvonline::add_medium_extended,
         success_callback => sub {
-            mdkonline::read_sys_config();
-            $mdkonline::config{EXTENDED_SUPPORT} = bool2yesno(1);
-            mdkonline::setVarsInSh($mdkonline::config_file, 
-                                   \%mdkonline::config);
+            omvonline::read_sys_config();
+            $omvonline::config{EXTENDED_SUPPORT} = bool2yesno(1);
+            omvonline::setVarsInSh($omvonline::config_file, 
+                                   \%omvonline::config);
         }
     }
     );
@@ -116,7 +116,7 @@ my $current_apimdv_distro;
     $up_version or die $usage;
 
     # FIXME Couldn't that be automatic called when mdkonline.pm is used?
-    $product_id or mdkonline::get_product_id();
+    $product_id or omvonline::get_product_id();
 
     # Product id data should be used in lowercase.
     $up_product ||= lc $product_id->{product};
@@ -158,25 +158,25 @@ sub run_authentication_dialog {
                             #     "2009/11/28" in english but "28/11/2009"
                             #     for brazil or "28 Nov. "2009" for
                             #     french:
-                            N("Mandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions.",
-                              mdkapplet_gui::iso8601_date_to_locale(
+                            N("OpenMandriva provides 12 months of desktop updates (until %s) and 18 months of base updates (up to the %s) for distributions.",
+                              omvapplet_gui::iso8601_date_to_locale(
                                   $desktop_update_end),
-                              mdkapplet_gui::iso8601_date_to_locale(
+                              omvapplet_gui::iso8601_date_to_locale(
                                   $basic_update_end)
                             ),
                             N("Extended maintenance is now available to get 18 months of additional updates (until %s).",
-                              mdkapplet_gui::iso8601_date_to_locale(
+                              omvapplet_gui::iso8601_date_to_locale(
                                   $extmaint_end)),
                             N("You can subscribe <b>right now</b> to get extended maintenance:"),
                        ),
                        @common),
-                new_link_button('http://www2.mandriva.com/support/lifecycle/', 
+                new_link_button('http://www.openmandriva.org', 
                                 N("Lifetime policy")),
                 new_link_button($url, N("Online subscription"))
               ];
     }
 
-    mdkapplet_gui::run_ask_credentials_dialog($title, 
+    omvapplet_gui::run_ask_credentials_dialog($title, 
 					      $description, 
 					      \&authenticate_callback,
                                               top_extra => $extra_info);
@@ -186,7 +186,7 @@ sub run_authentication_dialog {
 sub authenticate_callback {
     my ($email, $passwd) = @_;
     my $product = $product{$up_product};
-    my $profile = mdkonline::get_my_mdv_profile($email, $passwd);
+    my $profile = omvonline::get_my_omv_profile($email, $passwd);
 
     if ($profile->{code} != 0) {
         my $in = interactive->vnew;
@@ -195,10 +195,10 @@ sub authenticate_callback {
         goto &run_authentication_dialog;
     } 
     elsif (!$product->{has_rights}->($profile)) {
-        mdkapplet_gui::run_no_rights_dialog(
+        omvapplet_gui::run_no_rights_dialog(
             $title, 
-            N("Your Mandriva account does not have %s download subscription enabled.", 
-              mdkonline::translate_product($up_product)),
+            N("Your OpenMandriva account does not have %s download subscription enabled.", 
+              omvonline::translate_product($up_product)),
             $product{$up_product}{info_url}
             );
     } 
@@ -244,9 +244,9 @@ sub add_medium_for_product {
 sub get_extended_maintenance_data() {
     if (not $current_apimdv_distro) {
         require Rpmdrake::open_db;
-        my @distros = mdkonline::get_distro_list();
+        my @distros = omvonline::get_distro_list();
         return if !@distros;
-        $current_apimdv_distro = mdkonline::find_current_distro(@distros);
+        $current_apimdv_distro = omvonline::find_current_distro(@distros);
     }
     return @$current_apimdv_distro{ qw(extended-maintenance 
                                        extended-maintenance-end

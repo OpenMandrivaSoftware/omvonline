@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 ################################################################################
-# Mandriva Online                                                              # 
+# OpenMandriva Online                                                              # 
 #                                                                              #
 # Copyright (C) 2003-2010 Mandriva                                             #
 #                                                                              #
@@ -29,29 +29,29 @@ use common;
 use run_program;
 use feature 'state';
 
-BEGIN { unshift @::textdomains, 'mdkonline' }
+BEGIN { unshift @::textdomains, 'omvonline' }
 
 use mygtk2 qw(gtknew); #- do not import gtkadd which conflicts with ugtk2 version
 use ugtk2 qw(:all);
 use lib qw(/usr/lib/libDrakX/drakfirsttime);
-use mdkonline;
-use mdkapplet_gui;
-use Gtk2::Notify '-init', 'mdkapplet';
+use omvonline;
+use omvapplet_gui;
+use Gtk2::Notify '-init', 'omvapplet';
 use Net::DBus qw(:typing);
 use Rpmdrake::open_db;
 
 if (!find { $_ eq '--auto-update' } @ARGV) {
-    if (my $pid = mdkonline::is_running('mdkapplet')) {
+    if (my $pid = omvonline::is_running('omvapplet')) {
         if ($::testing) {
-            warn "mdkapplet already running ($pid)\n";
+            warn "omvapplet already running ($pid)\n";
         } else {
-            die "mdkapplet already running ($pid)\n";
+            die "omvapplet already running ($pid)\n";
         }
     }
 }
 
 
-my $online_site = "http://www.mandrivalinux.com/";
+my $online_site = "http://www.openmandriva.org/";
 my ($menu, $timeout, $network_timeout, $state_global, $sub_state);
 
 read_sys_config();
@@ -83,24 +83,24 @@ my %state = (
  	     critical => {
 		      colour => [ 'noconf' ],
 		      menu => [ 'check' ],
-		      tt => [ N_("Service configuration problem. Please check logs and send mail to support\@mandrivaonline.com") ]
+		      tt => [ N_("Service configuration problem. Please check logs and file a bug at http://issues.openmandriva.org/.") ]
 		     },
 	     busy => {
 		      colour => [ 'busy' ], 
 		      menu => [],
  		      do_not_use_bubble => 1,
-		      tt => [ N_("Please wait, finding available packages...") ]
+		      tt => [ N_("Checking for updates...") ]
 		     },
 	     updates => {
 		      colour => [ 'error' ],
 		      menu => [ 'update', 'check' ],
-		      tt => [ N_("New updates are available for your system") ]
+		      tt => [ N_("New updates are available for your system.") ]
 		     },
              new_distribution => {
                  colour => [ 'bundle' ],
                  menu => [ 'upgrade_distro', 'check' ],
                  urgency => 'low',
-                 tt => [ N("A new version of Mandriva Linux distribution has been released") ]
+                 tt => [ N("A new version of OpenMandriva LX is available for your system.") ]
              },
              no_more_supported => {
                  colour => [ 'disabled' ],
@@ -123,24 +123,24 @@ my %state = (
 	     disconnected => {
 		      colour => [ 'disconnect' ],
 		      menu => [ 'confNetwork' ],
-		      tt => [ N_("Network is down. Please configure your network") ],
- 		      do_not_use_bubble => mdkonline::is_running('net_applet'),
+		      tt => [ N_("The network seems to be down. Couldn't check for updates...") ],
+ 		      do_not_use_bubble => omvonline::is_running('net_applet'),
 		     },
 	     disabled => {
 		      colour => [ 'disabled' ],
 		      menu => [],
-		      tt => [ N_("Service is not activated. Please click on \"Online Website\"") ]
+		      tt => [ N_("The update service is disabled.") ]
 		     },
           locked => {
 		      colour => [ 'noconf' ],
 		      menu => [ 'check' ],
-                tt => [ N_("urpmi database locked") ],
+                tt => [ N_("Another application is using the package management system.") ],
  		      do_not_use_bubble => 1,
           },
           loop_locked => {
 		      colour => [ 'noconf' ],
 		      menu => [ 'check' ],
-                tt => [ N_("urpmi database locked") ],
+                tt => [ N_("Another application is using the package management system.") ],
           },
 	     notsupported => {
 		      colour => [ 'disabled' ],
@@ -170,7 +170,7 @@ all of them are currently disabled. You should run the Software
 Media Manager to enable at least one (check it in the \"%s\"
 column).
 
-Then, restart \"%s\".", N("Enabled"), 'mdkapplet') ],
+Then, restart \"%s\".", N("Enabled"), 'omvapplet') ],
           },
 	    );
 
@@ -178,7 +178,7 @@ my %comm_codes = (
     locked => {
         code => 2,
         status => 'locked',
-        log => "urpmi database locked, skipping updating urpmi database",
+        log => "Another application is using the package management system, skipping updating urpmi database",
     },
     error_updating => {
         code => 3,
@@ -392,7 +392,7 @@ sub process_state {
                && is_extmaint_supported()
                && !text2bool($local_config{EXTENDED_SUPPORT_SPLASHED})) {
         $state{extended_support_is_enabled}{tt}[0] =
-          N("Basic maintenance for this distribution has expired. Thanks to your subscription to extended maintenance, your system will be kept up to date until %s", iso8601_date_to_locale($extended_maintenance_end));
+          N("End of life has been reached. Security updates will extend until %s.", iso8601_date_to_locale($extended_maintenance_end));
         go2State('extended_support_is_enabled');
         setVar('EXTENDED_SUPPORT_SPLASHED', bool2yesno(1));
         # FIXME: just drop this state once upgrade from 2009.0 has been tested:
@@ -456,7 +456,7 @@ sub is_download_all_enabled() {
 sub confirm_upgrade() {
     local $mygtk2::left_padding = 0;
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_DISTRO_UPGRADE});
-    my $w = new_portable_dialog(N("New version of Mandriva Linux distribution"));
+    my $w = new_portable_dialog(N("New version of OpenMandriva LX"));
     my ($temp_dir, $box);
     
     my $browse;
@@ -467,18 +467,18 @@ sub confirm_upgrade() {
             my $ok = 1;
             require urpm;
             urpm::check_cache_dir({ fatal => sub { $ok = 0 } }, $temp_dir);
-            $ok or ask_warn(N("Error"), N("You must choose a directory owned by the super administrator!"));
+            $ok or ask_warn(N("Error"), N("You must choose a directory owned by the root administrator!"));
         });
     $browse->set_current_folder($download_dir);
 
     my $res = fill_n_run_portable_dialog($w,
                                       [
                get_banner(),
-               gtknew('Label_Left', text => N("A new version of Mandriva Linux distribution has been released."), @common),
+               gtknew('Label_Left', text => N("A new version of OpenMandriva LX has been released."), @common),
                gtknew('HButtonBox', layout => 'start', children_tight => [
                    new_link_button($new_distro->{url}, N("More info about this new version")),
                ]),
-               gtknew('Label_Left', text => N("Do you want to upgrade to the '\%s' distribution?", 
+               gtknew('Label_Left', text => N("Do you want to upgrade to '\%s'?", 
                                               $new_distro->{name} || $new_distro->{version}), @common),
                gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
                (is_download_all_enabled() ?
@@ -512,7 +512,7 @@ sub confirm_upgrade() {
 
 
 sub get_obsolete_message_() {
-    N("Maintenance for this Mandriva Linux version has ended. No more updates will be delivered for this system."),
+    N("This OpenMandriva LX version has reached end of life. No more updates will be delivered for this system.\nIt is strongly recommended you upgrade for security updates!"),
 }
 
 sub get_obsolete_message() {
@@ -524,7 +524,7 @@ sub get_obsolete_message() {
       
 sub refresh_no_more_supported_msg() {
     my $basic_msg = get_obsolete_message_();
-    my $distro = N("Mandriva Linux");
+    my $distro = N("OpenMandriva LX");
     my $msg;
 
     # is extended maintenance available?
@@ -536,7 +536,7 @@ sub refresh_no_more_supported_msg() {
                  $distro);
         }
     } else {
-        $msg = N("You should upgrade to a newer version of the %s distribution.", $distro);
+        $msg = N("You should upgrade to a newer version of %s.", $distro);
     }
     $state{no_more_supported}{tt}[0] = join(' ', $basic_msg, $msg);
 }
@@ -546,7 +546,7 @@ sub no_more_supported_choice() {
     my $warn_me = text2bool($local_config{DO_NOT_ASK_FOR_NO_MORE_SUPPORTED});
     # FIXME: just tell radio buttons' children to wrap instead:
     local $mdkapplet_gui::width = 580;
-    my $w = new_portable_dialog(N("Your distribution is no longer supported"));
+    my $w = new_portable_dialog(N("OpenMandriva LX is no longer supported"));
     my ($b1, $b2);
     my $choice = $extended_maintenance_url ? 'extended' : ($no_more_supported ne 'none' ? 'upgrade' : undef);
 
@@ -570,7 +570,7 @@ sub no_more_supported_choice() {
         ($no_more_supported ne 'none' ? (
             gtknew('VBox', children_tight => [
                 $b2 = gtknew('RadioButton',
-                             text => N("Do you want to upgrade to the '\%s' distribution?", 
+                             text => N("Do you want to upgrade to '\%s'?", 
                                        $new_distro->{name} || $new_distro->{version}),
                              toggled => sub {
                                  ($choice, $warn_me) = ('upgrade', undef) if $_[0]->get_active;
@@ -628,7 +628,7 @@ sub no_more_supported() {
 
 
 sub get_extended_maintenance() {
-    $mdv_update_pid = fork_exec('mdkapplet-add-media-helper', 
+    $mdv_update_pid = fork_exec('omvapplet-add-media-helper', 
                                 if_($::testing, '--testing'),
                                 if_($root, "--urpmi-root=$root"),
                                 '--product=extended',
@@ -638,7 +638,7 @@ sub get_extended_maintenance() {
 
 sub really_confirm_upgrade() {
     local $mygtk2::left_padding = 0;
-    my $w = ugtk2->new(N("New version of Mandriva Linux distribution"), width => $width + 20);
+    my $w = ugtk2->new(N("New version of OpenMandriva LX"), width => $width + 20);
 
     # estimated package size:
     my $c;
@@ -655,7 +655,7 @@ sub really_confirm_upgrade() {
     gtkadd($w->{window},
            gtknew('VBox', children_tight => [
                get_banner(),
-               gtknew('Label_Left', text => N("This upgrade requires high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."),
+               gtknew('Label_Left', text => N("This upgrade requires a high bandwidth network connection (cable, xDSL, ...)  and may take several hours to complete."),
                       @common),
                gtknew('Label_Left', text => N("Estimated download data will be %s", $c), @common),
                gtknew('Label_Left', text => N("You should close all other running applications before continuing.") .
@@ -680,7 +680,7 @@ sub upgrade() {
 }
 
 sub real_upgrade() {
-    $mdv_update_pid = fork_exec('mdkapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
+    $mdv_update_pid = fork_exec('omvapplet-upgrade-helper', "--new_distro_version=$new_distro->{version}",
                                 if_($::testing, '--testing'),
                                 if_($download_all, "--download-all=$download_dir"),
                                 if_($root, "--urpmi-root=$root"));
@@ -695,9 +695,9 @@ sub add_media() {
 
 sub installUpdates() {
     return if $mdv_update_pid;
-    log::explanations(N_("Launching MandrivaUpdate\n"));
+    log::explanations(N_("Launching Online Update\n"));
     gnome_shell_exit_overview();
-    my $program = find { -x "/usr/bin/$_" } qw(MageiaUpdate MandrivaUpdate);
+    my $program = find { -x "/usr/bin/$_" } qw(OnlineUpdate OpenMandrivaUpdate MageiaUpdate MandrivaUpdate);
     $mdv_update_pid = fork_exec($program, '--no-media-update', '--no-confirmation', '--no-splash',
                                 if_($root, "--urpmi-root=$root"));
     silentCheck(); gtkflush();
@@ -742,7 +742,7 @@ sub silentCheck() {
         # immediate exit, else forked gtk+ object destructors will badly catch up parent applet
         my $_safe = before_leaving {
             my $err = $@;
-            log::explanations("mdkapplet check crashed: $err ");
+            log::explanations("omvapplet check crashed: $err ");
             warn "Error: $err\n" . common::backtrace();
             POSIX::_exit(0);
         };
@@ -882,13 +882,13 @@ sub about_dialog() {
     my $ver = 1;                # automatically set from spec file
     my $url = $online_site;
     $url =~ s/^https:/http:/;
-    my $w = gtknew('AboutDialog', name => N("Mandriva Online %s", $ver),
-                   copyright => N("Copyright (C) %s by Mandriva", '2001-2010'),
+    my $w = gtknew('AboutDialog', name => N("Online Update %s", $ver),
+                   copyright => N("Copyright (C) %s by Mandriva\nCopyright (C) %s OpenMandriva", '2001-2010', '2013'),
                    license => join('', cat_('/usr/share/common-licenses/GPL')),
-                   icon => '/usr/share/icons/mini/mdkonline.png',
-                   comments => N("Mandriva Online gives access to Mandriva web services."),
+                   icon => '/usr/share/icons/mini/omvonline.png',
+                   comments => N("Provides access to the latest updates for your system."),
                    website => $url,
-                   website_label => N("Online WebSite"),
+                   website_label => N("Online Website"),
                    authors => 'Thierry Vignaud <vignaud@mandriva.com>',
                    artists => 'Hélène Durosini',
                    translator_credits =>
@@ -922,7 +922,7 @@ sub setState {
 
     if ($state{$state}{tt}[0] && $icon->isa('Gtk2::StatusIcon') && !$state{$state}{do_not_use_bubble}) {
         my $bubble = Gtk2::Notify->new(N("Warning"), formatAlaTeX(translate($state{$state}{tt}[0])) . "\n",
-                                                        '/usr/share/icons/mdkonline.png');
+                                                        '/usr/share/icons/omvonline.png');
         if ($state eq 'new_distribution') {
             $bubble->add_action('clicked', N("More Information"), \&upgrade);
             if ($sub_state eq 'updates') {
@@ -959,7 +959,7 @@ sub setState {
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("About..."))),
                                     activate => \&about_dialog));
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Updates Configuration"))), 
-                                    activate => sub { run_program::raw({ detach => 1 }, 'mdkapplet-config') }));
+                                    activate => sub { run_program::raw({ detach => 1 }, 'omvapplet-config') }));
     $menu->append(gtksignal_connect(gtkset_active($checkme = Gtk2::CheckMenuItem->new_with_label(N("Always launch on startup")), shouldStart()), toggled => sub { setAutoStart(uc(bool2text($checkme->get_active))) }));
     $checkme->show;
     $menu->append(gtksignal_connect(gtkshow(Gtk2::MenuItem->new_with_label(N("Quit"))), activate => sub { mainQuit() }));
@@ -1005,7 +1005,7 @@ sub is_restricted_media_configured {
 
 sub really_prepare_add_restricted() {
     $mdv_update_pid = run_program::raw({ detach => 1 }, 
-				       'mdkapplet-add-media-helper', 
+				       'omvapplet-add-media-helper', 
 				       $product_id->{version});
 }
 
@@ -1019,7 +1019,7 @@ sub prepare_add_restricted() {
           [
               get_banner(N("New medium available")),
               gtknew('Label_Left', text => 
-                       N("You use '%s' distribution and therefore have privileged access to additional software.",
+                       N("There is additional software available for '%s'.",
                          translate_product()) . "\n\n" .
                            N("Do you want to install this additional software repository?"), @common),
               gtknew('CheckButton', text => N("Do not ask me next time"), active_ref => \$warn_me),
@@ -1034,7 +1034,7 @@ sub prepare_add_restricted() {
 sub really_prepare_add_enterprise() {
     $mdv_update_pid = run_program::raw(
 	{ detach => 1 },
-	'mdkapplet-add-media-helper',
+	'omvapplet-add-media-helper',
 	join('', @$product_id{qw(type product version)})
 	);
 }
