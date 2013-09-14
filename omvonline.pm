@@ -110,7 +110,7 @@ sub get_distro_list_() {
     my $extra_path = $::testing || uc($config{TEST_DISTRO_UPGRADE}) eq 'YES' ? 'testing-' : '';
     my $list = 
       join('&',
-           "https://api.mandriva.com/distributions/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
+           "http://downloads.openmandriva.org/releases/$extra_path$type.$product_id->{arch}.list?product=$product_id->{product}",
            "version=$product_id->{version}",
            "mdkonline_version=$omvonline::version",
        );
