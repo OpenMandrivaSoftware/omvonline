@@ -55,7 +55,7 @@ foreach my $opt (@ARGV) {
 
 my $root = Rpmdrake::open_db::fast_open_urpmi_db()->{root};
 
-my $product_id = common::parse_LDAP_namespace_structure(cat_("$root/etc/product.id"));
+my $product_id = get_product_id();
 
 if (!$ENV{URPMI_IGNORESIZE}) {
     check_available_free_space('/usr', 800) &&
